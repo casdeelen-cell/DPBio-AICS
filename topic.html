@@ -34,6 +34,7 @@
 <script src="js/content.js"></script>
 <script src="js/links.js"></script>
 <script src="js/quizzes.js"></script>
+<script src="js/questionbank.js"></script>
 <script src="js/wordbank.js"></script>
 <script src="js/app.js"></script>
 <script>
@@ -215,6 +216,13 @@ function renderTopicPage() {
   quizSection.appendChild(quizContainer);
   main.appendChild(quizSection);
 
+  const qbSection = document.createElement("div");
+  qbSection.className = "quiz-section";
+  qbSection.innerHTML = "<h2>Practice questions</h2>";
+  const qbContainer = document.createElement("div");
+  qbSection.appendChild(qbContainer);
+  main.appendChild(qbSection);
+
   const sidebar = document.createElement("div");
   sidebar.className = "topic-sidebar";
 
@@ -234,9 +242,11 @@ function renderTopicPage() {
   root.appendChild(layout);
 
   buildQuiz(quizContainer, code);
+  buildQuestionBank(qbContainer, code);
 }
 
 renderTopicPage();
+enableTermTooltipTaps(document.getElementById("topic-content"));
 
 </script>
 </body>

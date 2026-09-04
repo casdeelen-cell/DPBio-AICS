@@ -107,9 +107,30 @@ function parseInlineMarkdown(text, code) {
       return t === word.toLowerCase() || t === normalized || t.replace(/s$/, "") === normalized;
     });
     if (hit) {
-      return '<strong class="term" title="' + escapeHtml(hit.definition) + '">' + word + "</strong>";
+      return '<strong class="term" data-tooltip="' + escapeHtml(hit.definition) + '">' + word + "</strong>";
     }
     return "<strong>" + word + "</strong>";
+  });
+}
+
+/* Lets tapping a term on touch devices show the tooltip too (hover alone
+   doesn't fire on touch). Tapping elsewhere dismisses it. Call this once
+   per page after content is rendered. */
+function enableTermTooltipTaps(root) {
+  root.addEventListener("click", function (e) {
+    const term = e.target.closest(".term");
+    document.querySelectorAll(".term.tooltip-active").forEach(function (el) {
+      if (el !== term) el.classList.remove("tooltip-active");
+    });
+    if (term) {
+      e.stopPropagation();
+      term.classList.toggle("tooltip-active");
+    }
+  });
+  document.addEventListener("click", function () {
+    document.querySelectorAll(".term.tooltip-active").forEach(function (el) {
+      el.classList.remove("tooltip-active");
+    });
   });
 }
 
@@ -174,10 +195,12 @@ function toSlidesEmbed(url) {
 
 /* ---------- quiz engine ---------- */
 
-function buildQuiz(container, code) {
-  const questions = (typeof QUIZZES !== "undefined" && QUIZZES[code]) || [];
-  if (!questions.length) {
-    container.innerHTML = '<p class="no-resources">No quiz for this topic yet.</p>';
+/* Renders an interactive multiple choice quiz from a plain array of
+   question objects: { q, options, correct, explanation }. Used for
+   both the quick quiz (quizzes.js) and the question bank (questionbank.js). */
+function buildQuizFromList(container, questions, emptyMessage) {
+  if (!questions || !questions.length) {
+    container.innerHTML = '<p class="no-resources">' + (emptyMessage || "Nothing here yet.") + "</p>";
     return;
   }
 
@@ -266,4 +289,29 @@ function buildQuiz(container, code) {
   }
 
   renderQuestion();
+}
+
+/* Quick quiz: your own lightweight questions from quizzes.js */
+function buildQuiz(container, code) {
+  const questions = (typeof QUIZZES !== "undefined" && QUIZZES[code]) || [];
+  buildQuizFromList(container, questions, "No quiz for this topic yet.");
+}
+
+/* Question bank: real exam-style questions, adapted from the IB
+   Questionbank, from questionbank.js. Renders its own attribution
+   line above the quiz so you never need to add it by hand. */
+function buildQuestionBank(container, code) {
+  const questions = (typeof QUESTIONBANK !== "undefined" && QUESTIONBANK[code]) || [];
+  if (!questions.length) {
+    container.innerHTML = '<p class="no-resources">No question bank questions for this topic yet.</p>';
+    return;
+  }
+  const attribution = document.createElement("div");
+  attribution.className = "qb-attribution";
+  attribution.textContent = "Adapted from IB Questionbank";
+  container.appendChild(attribution);
+
+  const quizArea = document.createElement("div");
+  container.appendChild(quizArea);
+  buildQuizFromList(quizArea, questions);
 }
