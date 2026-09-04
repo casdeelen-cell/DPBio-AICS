@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DP Biology Notes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-row">
+    <div>
+      <div class="site-title"><a href="index.html">DP Biology</a></div>
+      <div class="site-tag">notes, videos and revision, one syllabus statement at a time</div>
+    </div>
+  </div>
+</header>
+
+<div class="shell">
+
+  <div class="summary-bar" id="summary-bar"></div>
+
+  <input type="text" class="search-box" id="search-box" placeholder="Search a topic, e.g. A1.1 or water...">
+
+  <div id="units-container"></div>
+
+</div>
+
+<footer class="site-footer">
+  Built for personal revision. Notes, links and quizzes update by editing files in /js, see the README.
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/content.js"></script>
+<script src="js/links.js"></script>
+<script src="js/quizzes.js"></script>
+<script src="js/app.js"></script>
+<script>
+
+function renderSummary() {
+  const bar = document.getElementById("summary-bar");
+  const allCodes = UNITS.flatMap(u => u.topics);
+  const counts = { notstarted: 0, learning: 0, help: 0, understood: 0 };
+  allCodes.forEach(code => counts[getStatus(code)]++);
+
+  bar.innerHTML = `
+    <div class="item"><strong>${allCodes.length}</strong>&nbsp;topics</div>
+    <div class="item"><span class="status-dot understood"></span> ${counts.understood} understood</div>
+    <div class="item"><span class="status-dot learning"></span> ${counts.learning} learning</div>
+    <div class="item"><span class="status-dot help"></span> ${counts.help} need help</div>
+    <div class="item"><span class="status-dot notstarted"></span> ${counts.notstarted} not started</div>
+  `;
+}
+
+function renderUnits(filterText) {
+  const container = document.getElementById("units-container");
+  container.innerHTML = "";
+  const q = (filterText || "").trim().toLowerCase();
+
+  UNITS.forEach(unit => {
+    const topics = unit.topics.filter(code => {
+      if (!q) return true;
+      const title = topicTitle(code).toLowerCase();
+      return code.toLowerCase().includes(q) || title.includes(q);
+    });
+    if (!topics.length) return;
+
+    const block = document.createElement("div");
+    block.className = "unit-block";
+
+    const heading = document.createElement("div");
+    heading.className = "unit-heading";
+    heading.innerHTML = `<h2>${unit.name}</h2><div class="rule"></div>`;
+    block.appendChild(heading);
+
+    const grid = document.createElement("div");
+    grid.className = "topic-grid";
+
+    topics.forEach(code => {
+      const card = document.createElement("div");
+      card.className = "topic-card";
+
+      const top = document.createElement("div");
+      top.className = "topic-card-top";
+      top.innerHTML = `<span class="topic-code">${code}</span>` + (isHLTopic(code) ? '<span class="hl-badge">HL</span>' : "");
+      card.appendChild(top);
+
+      const link = document.createElement("a");
+      link.className = "topic-name";
+      link.href = "topic.html?code=" + encodeURIComponent(code);
+      link.textContent = topicTitle(code);
+      card.appendChild(link);
+
+      const progressEl = document.createElement("div");
+      card.appendChild(progressEl);
+      buildProgressControl(progressEl, code, { onChange: renderSummary });
+
+      grid.appendChild(card);
+    });
+
+    block.appendChild(grid);
+    container.appendChild(block);
+  });
+}
+
+renderSummary();
+renderUnits();
+
+document.getElementById("search-box").addEventListener("input", function (e) {
+  renderUnits(e.target.value);
+});
+
+</script>
+</body>
+</html>

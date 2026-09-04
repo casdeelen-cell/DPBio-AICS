@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic | DP Biology Notes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-row">
+    <div>
+      <div class="site-title"><a href="index.html">DP Biology</a></div>
+      <a href="index.html" class="back-link">&larr; back to all topics</a>
+    </div>
+  </div>
+</header>
+
+<div class="shell">
+  <div id="topic-content"></div>
+</div>
+
+<footer class="site-footer">
+  Built for personal revision. Notes, links and quizzes update by editing files in /js, see the README.
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/content.js"></script>
+<script src="js/links.js"></script>
+<script src="js/quizzes.js"></script>
+<script src="js/app.js"></script>
+<script>
+
+function getCodeFromURL() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get("code") || "";
+}
+
+function findUnitFor(code) {
+  return UNITS.find(u => u.topics.includes(code));
+}
+
+function renderTopicPage() {
+  const code = getCodeFromURL();
+  const root = document.getElementById("topic-content");
+
+  if (!code || !topicTitle(code)) {
+    root.innerHTML = "<p>No topic specified. Go back and pick one from the list.</p>";
+    return;
+  }
+
+  document.title = code + " " + topicTitle(code) + " | DP Biology Notes";
+  const unit = findUnitFor(code);
+
+  const header = document.createElement("div");
+  header.className = "topic-header";
+  header.innerHTML = `
+    <div class="eyebrow">${unit ? unit.name : ""}</div>
+    <h1>${code} &middot; ${topicTitle(code)} ${isHLTopic(code) ? '<span class="hl-badge">HL</span>' : ""}</h1>
+    <div class="topic-meta-row">
+      <div id="progress-control-large"></div>
+    </div>
+  `;
+  root.appendChild(header);
+  buildProgressControl(header.querySelector("#progress-control-large"), code, { large: true });
+
+  // ---- resources: slides / video / formative ----
+  const links = (typeof LINKS !== "undefined" && LINKS[code]) || {};
+  const resourceRow = document.createElement("div");
+  resourceRow.className = "resource-row";
+  let anyResource = false;
+
+  if (links.slides) {
+    anyResource = true;
+    const a = document.createElement("a");
+    a.className = "resource-btn";
+    a.href = links.slides.replace(/\/embed.*$/, "/edit");
+    a.target = "_blank";
+    a.rel = "noopener";
+    a.textContent = "Open slides";
+    resourceRow.appendChild(a);
+  }
+  if (links.video) {
+    anyResource = true;
+    const a = document.createElement("a");
+    a.className = "resource-btn";
+    a.href = links.video;
+    a.target = "_blank";
+    a.rel = "noopener";
+    a.textContent = "Watch video";
+    resourceRow.appendChild(a);
+  }
+  if (links.formative) {
+    anyResource = true;
+    const a = document.createElement("a");
+    a.className = "resource-btn";
+    a.href = links.formative;
+    a.target = "_blank";
+    a.rel = "noopener";
+    a.textContent = "Do the formative";
+    resourceRow.appendChild(a);
+  }
+  root.appendChild(resourceRow);
+
+  if (links.slides) {
+    const wrap = document.createElement("div");
+    wrap.className = "embed-wrap";
+    const iframe = document.createElement("iframe");
+    iframe.src = toSlidesEmbed(links.slides);
+    iframe.allowFullscreen = true;
+    wrap.appendChild(iframe);
+    root.appendChild(wrap);
+  }
+  if (links.video) {
+    const embedUrl = toYouTubeEmbed(links.video);
+    if (embedUrl) {
+      const wrap = document.createElement("div");
+      wrap.className = "embed-wrap";
+      const iframe = document.createElement("iframe");
+      iframe.src = embedUrl;
+      iframe.allowFullscreen = true;
+      wrap.appendChild(iframe);
+      root.appendChild(wrap);
+    }
+  }
+  if (!anyResource) {
+    const p = document.createElement("p");
+    p.className = "no-resources";
+    p.textContent = "No slides, video or formative linked yet for this topic. Add them in js/links.js.";
+    root.appendChild(p);
+  }
+
+  // ---- content sections ----
+  const sections = (typeof CONTENT !== "undefined" && CONTENT[code]) || [];
+  const contentWrap = document.createElement("div");
+
+  if (!sections.length) {
+    contentWrap.innerHTML = '<div class="empty-note">Notes for this topic are coming soon. Add them in js/content.js.</div>';
+  } else {
+    sections.forEach(section => {
+      const block = document.createElement("div");
+      block.className = "section-block";
+
+      const head = document.createElement("div");
+      head.className = "section-head";
+      head.innerHTML = `<span class="section-label">${section.label || ""}</span><h3>${section.heading}</h3>` +
+        (section.level ? `<span class="hl-badge" style="${section.level === 'SL' ? 'color:var(--forest);border-color:var(--forest);' : ''}">${section.level}</span>` : "");
+      block.appendChild(head);
+
+      if (section.image) {
+        const imgWrap = document.createElement("div");
+        imgWrap.className = "section-image";
+        imgWrap.innerHTML = `<img src="${section.image}" alt="${section.heading}" loading="lazy">`;
+        block.appendChild(imgWrap);
+      }
+
+      const textWrap = document.createElement("div");
+      textWrap.className = "section-text";
+      (section.text || "").split(/\n\n+/).forEach(para => {
+        const p = document.createElement("p");
+        p.textContent = para;
+        textWrap.appendChild(p);
+      });
+      block.appendChild(textWrap);
+
+      contentWrap.appendChild(block);
+    });
+  }
+  root.appendChild(contentWrap);
+
+  // ---- quiz ----
+  const quizSection = document.createElement("div");
+  quizSection.className = "quiz-section";
+  quizSection.innerHTML = "<h2>Quick quiz</h2>";
+  const quizContainer = document.createElement("div");
+  quizSection.appendChild(quizContainer);
+  root.appendChild(quizSection);
+  buildQuiz(quizContainer, code);
+}
+
+renderTopicPage();
+
+</script>
+</body>
+</html>
