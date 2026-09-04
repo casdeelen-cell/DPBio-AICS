@@ -12,9 +12,12 @@
 
 <header class="site-header">
   <div class="header-row">
-    <div>
-      <div class="site-title"><a href="index.html">DP Biology</a></div>
-      <a href="index.html" class="back-link">&larr; back to all topics</a>
+    <div class="header-title-group">
+      <img src="images/aics-logo.png" alt="Amsterdam International Community School" class="school-logo">
+      <div>
+        <div class="site-title"><a href="index.html">DP Biology</a></div>
+        <a href="index.html" class="back-link">&larr; back to all topics</a>
+      </div>
     </div>
   </div>
 </header>
@@ -31,6 +34,7 @@
 <script src="js/content.js"></script>
 <script src="js/links.js"></script>
 <script src="js/quizzes.js"></script>
+<script src="js/wordbank.js"></script>
 <script src="js/app.js"></script>
 <script>
 
@@ -41,6 +45,137 @@ function getCodeFromURL() {
 
 function findUnitFor(code) {
   return UNITS.find(u => u.topics.includes(code));
+}
+
+function renderResourceRow(root, code) {
+  const links = (typeof LINKS !== "undefined" && LINKS[code]) || {};
+  const row = document.createElement("div");
+  row.className = "resource-row";
+
+  // Slides
+  const slidesBtn = document.createElement("a");
+  if (links.slides) {
+    slidesBtn.className = "resource-btn";
+    slidesBtn.href = links.slides;
+    slidesBtn.target = "_blank";
+    slidesBtn.rel = "noopener";
+    slidesBtn.textContent = "Open slides";
+  } else {
+    slidesBtn.className = "resource-btn disabled";
+    slidesBtn.href = "#";
+    slidesBtn.textContent = "Slides not available yet";
+  }
+  row.appendChild(slidesBtn);
+
+  // Formative
+  const formBtn = document.createElement("a");
+  if (links.formative) {
+    formBtn.className = "resource-btn";
+    formBtn.href = links.formative;
+    formBtn.target = "_blank";
+    formBtn.rel = "noopener";
+    formBtn.textContent = "Do the formative";
+  } else {
+    formBtn.className = "resource-btn disabled";
+    formBtn.href = "#";
+    formBtn.textContent = "Formative not available yet";
+  }
+  row.appendChild(formBtn);
+
+  root.appendChild(row);
+
+  // Slides embed
+  if (links.slides) {
+    const wrap = document.createElement("div");
+    wrap.className = "embed-wrap";
+    const iframe = document.createElement("iframe");
+    iframe.src = toSlidesEmbed(links.slides);
+    iframe.allowFullscreen = true;
+    wrap.appendChild(iframe);
+    root.appendChild(wrap);
+  }
+
+  // Videos (one or more parts)
+  const videos = links.videos || [];
+  if (videos.length) {
+    const heading = document.createElement("h3");
+    heading.textContent = videos.length > 1 ? "Videos" : "Video";
+    heading.style.marginTop = "26px";
+    root.appendChild(heading);
+
+    const grid = document.createElement("div");
+    grid.className = "video-grid";
+    videos.forEach(v => {
+      const embedUrl = toYouTubeEmbed(v.url);
+      if (!embedUrl) return;
+      const item = document.createElement("div");
+      item.className = "video-item";
+      const label = document.createElement("div");
+      label.className = "video-label";
+      label.textContent = v.label || "Video";
+      item.appendChild(label);
+      const wrap = document.createElement("div");
+      wrap.className = "embed-wrap";
+      const iframe = document.createElement("iframe");
+      iframe.src = embedUrl;
+      iframe.allowFullscreen = true;
+      wrap.appendChild(iframe);
+      item.appendChild(wrap);
+      grid.appendChild(item);
+    });
+    root.appendChild(grid);
+  } else {
+    const p = document.createElement("p");
+    p.className = "no-resources";
+    p.textContent = "No video linked yet for this topic. Add one in js/links.js.";
+    root.appendChild(p);
+  }
+}
+
+function renderContentSections(root, code) {
+  const sections = (typeof CONTENT !== "undefined" && CONTENT[code]) || [];
+
+  if (!sections.length) {
+    root.innerHTML = '<div class="empty-note">Notes for this topic are coming soon. Add them in js/content.js.</div>';
+    return;
+  }
+
+  sections.forEach(section => {
+    const block = document.createElement("div");
+    block.className = "section-block";
+
+    const head = document.createElement("div");
+    head.className = "section-head";
+    head.innerHTML = `<span class="section-label">${section.label || ""}</span><h3>${section.heading}</h3>` +
+      (section.level ? `<span class="hl-badge" style="${section.level === 'SL' ? 'color:var(--forest);border-color:var(--forest);' : ''}">${section.level}</span>` : "");
+    block.appendChild(head);
+
+    if (section.image) {
+      const imgWrap = document.createElement("div");
+      imgWrap.className = "section-image";
+      imgWrap.innerHTML = `<img src="${section.image}" alt="${section.heading}" loading="lazy">` +
+        (section.imageCaption ? `<div class="caption">${section.imageCaption}</div>` : "");
+      block.appendChild(imgWrap);
+    }
+
+    const textWrap = document.createElement("div");
+    textWrap.className = "section-text";
+    (section.text || "").split(/\n\n+/).forEach(para => {
+      const p = document.createElement("p");
+      p.innerHTML = parseInlineMarkdown(para, code);
+      textWrap.appendChild(p);
+    });
+    block.appendChild(textWrap);
+
+    if (section.tip) {
+      const tipBox = document.createElement("div");
+      tipBox.className = "tip-box";
+      tipBox.innerHTML = `<span class="tip-label">${section.tip.label || "Tip"}</span>${section.tip.text}`;
+      block.appendChild(tipBox);
+    }
+
+    root.appendChild(block);
+  });
 }
 
 function renderTopicPage() {
@@ -60,124 +195,44 @@ function renderTopicPage() {
   header.innerHTML = `
     <div class="eyebrow">${unit ? unit.name : ""}</div>
     <h1>${code} &middot; ${topicTitle(code)} ${isHLTopic(code) ? '<span class="hl-badge">HL</span>' : ""}</h1>
-    <div class="topic-meta-row">
-      <div id="progress-control-large"></div>
-    </div>
   `;
   root.appendChild(header);
-  buildProgressControl(header.querySelector("#progress-control-large"), code, { large: true });
 
-  // ---- resources: slides / video / formative ----
-  const links = (typeof LINKS !== "undefined" && LINKS[code]) || {};
-  const resourceRow = document.createElement("div");
-  resourceRow.className = "resource-row";
-  let anyResource = false;
+  renderResourceRow(header, code);
 
-  if (links.slides) {
-    anyResource = true;
-    const a = document.createElement("a");
-    a.className = "resource-btn";
-    a.href = links.slides.replace(/\/embed.*$/, "/edit");
-    a.target = "_blank";
-    a.rel = "noopener";
-    a.textContent = "Open slides";
-    resourceRow.appendChild(a);
-  }
-  if (links.video) {
-    anyResource = true;
-    const a = document.createElement("a");
-    a.className = "resource-btn";
-    a.href = links.video;
-    a.target = "_blank";
-    a.rel = "noopener";
-    a.textContent = "Watch video";
-    resourceRow.appendChild(a);
-  }
-  if (links.formative) {
-    anyResource = true;
-    const a = document.createElement("a");
-    a.className = "resource-btn";
-    a.href = links.formative;
-    a.target = "_blank";
-    a.rel = "noopener";
-    a.textContent = "Do the formative";
-    resourceRow.appendChild(a);
-  }
-  root.appendChild(resourceRow);
+  // ---- two column layout: main content + sidebar ----
+  const layout = document.createElement("div");
+  layout.className = "topic-layout";
 
-  if (links.slides) {
-    const wrap = document.createElement("div");
-    wrap.className = "embed-wrap";
-    const iframe = document.createElement("iframe");
-    iframe.src = toSlidesEmbed(links.slides);
-    iframe.allowFullscreen = true;
-    wrap.appendChild(iframe);
-    root.appendChild(wrap);
-  }
-  if (links.video) {
-    const embedUrl = toYouTubeEmbed(links.video);
-    if (embedUrl) {
-      const wrap = document.createElement("div");
-      wrap.className = "embed-wrap";
-      const iframe = document.createElement("iframe");
-      iframe.src = embedUrl;
-      iframe.allowFullscreen = true;
-      wrap.appendChild(iframe);
-      root.appendChild(wrap);
-    }
-  }
-  if (!anyResource) {
-    const p = document.createElement("p");
-    p.className = "no-resources";
-    p.textContent = "No slides, video or formative linked yet for this topic. Add them in js/links.js.";
-    root.appendChild(p);
-  }
+  const main = document.createElement("div");
+  main.className = "topic-main";
+  renderContentSections(main, code);
 
-  // ---- content sections ----
-  const sections = (typeof CONTENT !== "undefined" && CONTENT[code]) || [];
-  const contentWrap = document.createElement("div");
-
-  if (!sections.length) {
-    contentWrap.innerHTML = '<div class="empty-note">Notes for this topic are coming soon. Add them in js/content.js.</div>';
-  } else {
-    sections.forEach(section => {
-      const block = document.createElement("div");
-      block.className = "section-block";
-
-      const head = document.createElement("div");
-      head.className = "section-head";
-      head.innerHTML = `<span class="section-label">${section.label || ""}</span><h3>${section.heading}</h3>` +
-        (section.level ? `<span class="hl-badge" style="${section.level === 'SL' ? 'color:var(--forest);border-color:var(--forest);' : ''}">${section.level}</span>` : "");
-      block.appendChild(head);
-
-      if (section.image) {
-        const imgWrap = document.createElement("div");
-        imgWrap.className = "section-image";
-        imgWrap.innerHTML = `<img src="${section.image}" alt="${section.heading}" loading="lazy">`;
-        block.appendChild(imgWrap);
-      }
-
-      const textWrap = document.createElement("div");
-      textWrap.className = "section-text";
-      (section.text || "").split(/\n\n+/).forEach(para => {
-        const p = document.createElement("p");
-        p.textContent = para;
-        textWrap.appendChild(p);
-      });
-      block.appendChild(textWrap);
-
-      contentWrap.appendChild(block);
-    });
-  }
-  root.appendChild(contentWrap);
-
-  // ---- quiz ----
   const quizSection = document.createElement("div");
   quizSection.className = "quiz-section";
   quizSection.innerHTML = "<h2>Quick quiz</h2>";
   const quizContainer = document.createElement("div");
   quizSection.appendChild(quizContainer);
-  root.appendChild(quizSection);
+  main.appendChild(quizSection);
+
+  const sidebar = document.createElement("div");
+  sidebar.className = "topic-sidebar";
+
+  const progressCard = document.createElement("div");
+  progressCard.className = "sidebar-card progress-card";
+  progressCard.innerHTML = "<h4>My progress</h4>";
+  const progressControlEl = document.createElement("div");
+  progressCard.appendChild(progressControlEl);
+  sidebar.appendChild(progressCard);
+  buildProgressControl(progressControlEl, code, { large: true });
+
+  buildWordbankPanel(sidebar, code);
+  buildFunFactPanel(sidebar, code);
+
+  layout.appendChild(main);
+  layout.appendChild(sidebar);
+  root.appendChild(layout);
+
   buildQuiz(quizContainer, code);
 }
 

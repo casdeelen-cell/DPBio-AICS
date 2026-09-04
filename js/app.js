@@ -55,8 +55,7 @@ function isHLTopic(code) {
 }
 
 /* Builds a 4-button progress control inside `container` for the given
-   topic code. Call refreshCallback (optional) whenever status changes,
-   useful for updating a summary count elsewhere on the page. */
+   topic code. */
 function buildProgressControl(container, code, opts) {
   opts = opts || {};
   container.innerHTML = "";
@@ -85,6 +84,72 @@ function buildProgressControl(container, code, opts) {
   });
 }
 
+/* ---------- text rendering: bold markup + wordbank tooltips ---------- */
+
+function escapeHtml(str) {
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+
+/* Turns **word** into <strong>, and if the word matches a wordbank
+   term for this topic (ignoring case and a trailing s), wraps it as
+   a tooltip-bearing term instead of a plain bold word. */
+function parseInlineMarkdown(text, code) {
+  const bank = (typeof WORDBANK !== "undefined" && WORDBANK[code]) || [];
+  const escaped = escapeHtml(text);
+
+  return escaped.replace(/\*\*(.+?)\*\*/g, function (match, word) {
+    const normalized = word.toLowerCase().replace(/s$/, "");
+    const hit = bank.find(function (entry) {
+      const t = entry.term.toLowerCase();
+      return t === word.toLowerCase() || t === normalized || t.replace(/s$/, "") === normalized;
+    });
+    if (hit) {
+      return '<strong class="term" title="' + escapeHtml(hit.definition) + '">' + word + "</strong>";
+    }
+    return "<strong>" + word + "</strong>";
+  });
+}
+
+/* Renders the word bank sidebar panel for a topic. */
+function buildWordbankPanel(container, code) {
+  const bank = (typeof WORDBANK !== "undefined" && WORDBANK[code]) || [];
+  if (!bank.length) {
+    container.innerHTML = "";
+    return;
+  }
+  const card = document.createElement("div");
+  card.className = "sidebar-card wordbank-card";
+  const title = document.createElement("h4");
+  title.textContent = "Word bank";
+  card.appendChild(title);
+
+  const list = document.createElement("dl");
+  list.className = "wordbank-list";
+  bank.forEach(function (entry) {
+    const dt = document.createElement("dt");
+    dt.textContent = entry.term;
+    const dd = document.createElement("dd");
+    dd.textContent = entry.definition;
+    list.appendChild(dt);
+    list.appendChild(dd);
+  });
+  card.appendChild(list);
+  container.appendChild(card);
+}
+
+/* Renders the "did you know" sidebar card, if a fact exists for this topic. */
+function buildFunFactPanel(container, code) {
+  const fact = (typeof FUN_FACTS !== "undefined" && FUN_FACTS[code]) || null;
+  if (!fact) return;
+  const card = document.createElement("div");
+  card.className = "sidebar-card fact-card";
+  card.innerHTML = '<h4>Did you know</h4><p>' + escapeHtml(fact) + "</p>";
+  container.appendChild(card);
+}
+
 /* ---------- link helpers ---------- */
 
 function toYouTubeEmbed(url) {
@@ -103,7 +168,8 @@ function toYouTubeEmbed(url) {
 function toSlidesEmbed(url) {
   if (!url) return null;
   if (url.includes("/embed")) return url;
-  return url.replace(/\/edit.*$/, "/embed?start=false&loop=false");
+  if (url.includes("/edit")) return url.replace(/\/edit.*$/, "/embed?start=false&loop=false");
+  return url.replace(/\/?$/, "/embed?start=false&loop=false");
 }
 
 /* ---------- quiz engine ---------- */

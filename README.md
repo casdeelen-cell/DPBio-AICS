@@ -18,22 +18,36 @@ biosite/
   js/app.js           shared logic (progress tracker, quiz engine, embeds)
 ```
 
-## The three files you'll actually edit
+## The files you'll actually edit
 
 **`js/links.js`** is the one you'll touch most. Add a Google Slides link,
-a YouTube link, and a Formative link for a topic and save the file. Push
-to GitHub and the live site updates itself, no other file needs to change.
+one or more YouTube links, and a Formative link for a topic and save the
+file. Push to GitHub and the live site updates itself, no other file
+needs to change.
 
-For slides, grab the normal "Share" link and just make sure it ends in
-`/edit` somewhere, the site converts it to an embeddable version
-automatically. For YouTube, any normal link works (`watch?v=...` or
-`youtu.be/...`), it gets converted to an embed automatically too.
+Videos are stored as a list, not a single link, because Sirius Revision
+often splits one topic into two or three shorter videos (D3.2 and C4.1
+are set up this way already as examples). Just add one object per video
+part. If a link is missing, the site doesn't hide the button, it shows
+it greyed out with "not available yet" so it's obvious what's still
+missing.
 
 **`js/content.js`** is where you write up each topic. Copy the pattern
-from an existing topic (A1.1 is fully filled in as an example) and add a
-new entry keyed by the topic code. Each topic is a list of sections, one
-per syllabus statement, with a heading and your notes. You can tag a
-section `level: "HL"` to get a small badge next to it.
+from an existing topic (A1.1, B2.1, D3.2 and C4.1 are fully filled in)
+and add a new entry keyed by the topic code. Each topic is a list of
+sections, one per syllabus statement, with:
+- a heading and your notes (wrap a word in `**like this**` to bold it)
+- an optional `level: "HL"` tag, shown as a small badge
+- an optional `image` and `imageCaption`
+- an optional `tip`, shown as a highlighted "Exam tip" or "Common
+  mistake" box next to that section
+
+**`js/wordbank.js`** holds the key term glossary shown in the sidebar of
+each topic page. If a bolded word in your notes matches a term here
+(case-insensitive), it automatically gets a dotted underline and shows
+the definition on hover or tap, no extra linking needed on your end.
+This file also holds `FUN_FACTS`, one short "did you know" line per
+topic for the sidebar.
 
 **`js/quizzes.js`** holds short multiple choice quizzes per topic, same
 pattern, copy an existing one.
@@ -94,9 +108,20 @@ rebuilds automatically within a minute or so.
 
 Four topics are fully written up as working examples, one from each
 unit: A1.1 (Water), B2.1 (Membranes and membrane transport), D3.2
-(Inheritance), and C4.1 (Populations and communities). Everything else
+(Inheritance), and C4.1 (Populations and communities). Each one has
+DP-level notes with bolded key terms, a wordbank, exam tip boxes,
+images, and Sirius Revision videos linked (verified real links, matched
+to Sirius Revision's own video titles for each topic). Everything else
 is on the site with correct titles and navigation, just waiting for you
-to fill in `content.js`, `links.js` and `quizzes.js`. The topic titles
-in `data.js` are reconstructed from the general 2025 IB Biology guide
-structure, worth a quick double check against your own syllabus outline
-in case your teacher phrases any of them slightly differently.
+to fill in `content.js`, `links.js`, `wordbank.js` and `quizzes.js`. The
+topic titles in `data.js` are reconstructed from the general 2025 IB
+Biology guide structure, worth a quick double check against your own
+syllabus outline in case your teacher phrases any of them slightly
+differently.
+
+## The school logo
+
+`images/aics-logo.png` is used in the header on both pages. If you ever
+need to swap it, just replace that file with the same filename and
+everything keeps working, or update the `src` in `index.html` and
+`topic.html` if you rename it.
