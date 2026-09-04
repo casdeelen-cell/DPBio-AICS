@@ -146,7 +146,7 @@ function renderUnits(filterText) {
 function renderStreak() {
   const streak = updateStreak();
   const chip = document.getElementById("streak-chip");
-  chip.innerHTML = `<span class="flame">🔥</span> <strong>${streak}</strong> day${streak === 1 ? "" : "s"} in a row`;
+  chip.innerHTML = `<strong>${streak}</strong> day${streak === 1 ? "" : "s"} in a row`;
 }
 
 function renderContinueChip() {

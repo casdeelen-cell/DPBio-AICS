@@ -154,11 +154,11 @@ function buildWordbankPanel(container, code) {
   const flashBtn = document.createElement("button");
   flashBtn.type = "button";
   flashBtn.className = "flashcard-toggle";
-  flashBtn.textContent = "🗂️ Practice as flashcards";
+  flashBtn.textContent = "Practice as flashcards";
   card.appendChild(flashBtn);
 
   function renderList() {
-    flashBtn.textContent = "🗂️ Practice as flashcards";
+    flashBtn.textContent = "Practice as flashcards";
     body.innerHTML = "";
     const list = document.createElement("dl");
     list.className = "wordbank-list";
