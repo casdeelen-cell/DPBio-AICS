@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulas &amp; Stats | DP Biology Notes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-row">
+    <div class="header-title-group">
+      <img src="images/aics-logo.png" alt="Amsterdam International Community School" class="school-logo">
+      <div>
+        <div class="site-title"><a href="index.html">DP Biology</a></div>
+        <a href="index.html" class="back-link">&larr; back to all topics</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="shell">
+
+  <div class="topic-header">
+    <div class="eyebrow">Reference</div>
+    <h1>Formulas &amp; stats</h1>
+  </div>
+
+  <div class="section-block" style="border-top:none;">
+    <div class="section-head"><span class="section-label">1</span><h3>Water potential</h3></div>
+    <div class="section-text">
+      <p>Water potential (&Psi;) is made up of two parts: solute potential and pressure potential.</p>
+      <p style="font-family: var(--serif); font-size: 18px; margin: 14px 0;">&Psi;<sub>w</sub> = &Psi;<sub>s</sub> + &Psi;<sub>p</sub></p>
+      <p>&Psi;<sub>w</sub> is water potential, &Psi;<sub>s</sub> is solute potential (always zero or negative, more solute makes it more negative), &Psi;<sub>p</sub> is pressure potential (usually positive in a walled plant cell, from turgor pressure pushing back against the cell wall). Rearrange this the same way you'd rearrange any equation if you're given two of the three values and asked for the third.</p>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-head"><span class="section-label">2</span><h3>Hardy-Weinberg equilibrium</h3></div>
+    <div class="section-text">
+      <p>Used to predict allele and genotype frequencies in a population that isn't evolving at a given gene.</p>
+      <p style="font-family: var(--serif); font-size: 18px; margin: 14px 0;">p + q = 1 &nbsp;&nbsp;&nbsp; p&sup2; + 2pq + q&sup2; = 1</p>
+      <p>p is the frequency of the dominant allele, q is the frequency of the recessive allele. p&sup2; is the frequency of homozygous dominant individuals, 2pq is heterozygous individuals, q&sup2; is homozygous recessive individuals. Common exam move: you're given the frequency of the recessive phenotype (q&sup2;), so take a square root to get q, then p = 1 - q.</p>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-head"><span class="section-label">3</span><h3>Mean, spread, and error bars</h3></div>
+    <div class="section-text">
+      <p>The <strong>mean</strong> is just the sum of your values divided by how many there are. <strong>Standard deviation</strong> tells you how spread out your data is around that mean, a small standard deviation means your repeats were consistent, a large one means they varied a lot. Most graphing tools and calculators will compute this for you, you don't need to do it by hand in an exam, but you do need to know what a large vs small value actually tells you about your data.</p>
+      <p>Error bars on a graph are usually showing standard deviation (or sometimes standard error) above and below the mean. If the error bars of two data points overlap a lot, that's a hint the difference between them might not be statistically significant, you'd need a proper test to confirm that though, not just eyeballing it.</p>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-head"><span class="section-label">4</span><h3>Choosing a statistical test</h3></div>
+    <div class="section-text">
+      <p>You're not expected to calculate these fully from scratch in most cases, but you do need to know which test fits which situation, and be able to interpret a given result (usually by comparing it to a critical value at p = 0.05).</p>
+    </div>
+    <div class="tip-box">
+      <span class="tip-label">t-test</span>
+      Use when comparing the <strong>means of two sets</strong> of continuous, roughly normally distributed data. Example: comparing the mean leaf length of plants grown in two different light conditions.
+    </div>
+    <div class="tip-box">
+      <span class="tip-label">Chi-squared test</span>
+      Use with <strong>categorical or count data</strong>, comparing observed results against expected results. Classic use case: comparing observed offspring ratios in a genetic cross against the ratio you predicted (e.g. 3:1).
+    </div>
+    <div class="tip-box">
+      <span class="tip-label">Spearman's rank correlation</span>
+      Use when checking whether <strong>two variables are correlated</strong>, without assuming a normal distribution. Example: is there a relationship between altitude and species diversity along a transect?
+    </div>
+    <div class="tip-box">
+      <span class="tip-label">Correlation is not causation</span>
+      Even a strong, statistically significant correlation only tells you two variables move together, not that one causes the other. Examiners specifically reward noting this when it's relevant.
+    </div>
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  Built for personal revision. Notes, links and quizzes update by editing files in /js, see the README.
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -154,11 +154,11 @@ function buildWordbankPanel(container, code) {
   const flashBtn = document.createElement("button");
   flashBtn.type = "button";
   flashBtn.className = "flashcard-toggle";
-  flashBtn.textContent = "Practice as flashcards";
+  flashBtn.textContent = "🗂️ Practice as flashcards";
   card.appendChild(flashBtn);
 
   function renderList() {
-    flashBtn.textContent = "Practice as flashcards";
+    flashBtn.textContent = "🗂️ Practice as flashcards";
     body.innerHTML = "";
     const list = document.createElement("dl");
     list.className = "wordbank-list";
@@ -247,6 +247,26 @@ function buildFunFactPanel(container, code) {
   card.className = "sidebar-card fact-card";
   card.innerHTML = '<h4>Did you know</h4><p>' + escapeHtml(fact) + "</p>";
   container.appendChild(card);
+}
+
+/* ---------- last visited topic ---------- */
+
+const LAST_VISITED_KEY = "bioLastVisitedV1";
+
+function setLastVisited(code) {
+  try {
+    localStorage.setItem(LAST_VISITED_KEY, code);
+  } catch (e) {
+    // storage unavailable, fail quietly
+  }
+}
+
+function getLastVisited() {
+  try {
+    return localStorage.getItem(LAST_VISITED_KEY);
+  } catch (e) {
+    return null;
+  }
 }
 
 /* ---------- streak counter ---------- */

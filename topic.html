@@ -19,6 +19,7 @@
         <a href="index.html" class="back-link">&larr; back to all topics</a>
       </div>
     </div>
+    <a href="formulas.html" class="back-link">Formulas &amp; stats &rarr;</a>
   </div>
 </header>
 
@@ -247,6 +248,7 @@ function renderTopicPage() {
 
 renderTopicPage();
 enableTermTooltipTaps(document.getElementById("topic-content"));
+if (getCodeFromURL()) setLastVisited(getCodeFromURL());
 
 </script>
 </body>

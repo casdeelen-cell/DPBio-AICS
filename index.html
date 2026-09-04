@@ -19,6 +19,7 @@
         <div class="site-tag">notes, videos and revision, one syllabus statement at a time</div>
       </div>
     </div>
+    <a href="formulas.html" class="back-link">Formulas &amp; stats &rarr;</a>
   </div>
 </header>
 
@@ -26,8 +27,11 @@
 
   <div class="top-actions-row">
     <div class="streak-chip" id="streak-chip"></div>
+    <a href="#" class="continue-chip" id="continue-chip" style="display:none;"></a>
     <button type="button" class="spin-btn" id="spin-btn">Quiz me on something</button>
   </div>
+
+  <div class="needs-help-panel" id="needs-help-panel"></div>
 
   <div class="summary-bar" id="summary-bar"></div>
 
@@ -126,6 +130,7 @@ function renderUnits(filterText) {
       buildProgressControl(progressEl, code, {
         onChange: function () {
           renderSummary();
+          renderNeedsHelp();
           renderUnits(document.getElementById("search-box").value);
         }
       });
@@ -144,7 +149,44 @@ function renderStreak() {
   chip.innerHTML = `<span class="flame">🔥</span> <strong>${streak}</strong> day${streak === 1 ? "" : "s"} in a row`;
 }
 
+function renderContinueChip() {
+  const code = getLastVisited();
+  const chip = document.getElementById("continue-chip");
+  if (!code || !topicTitle(code)) {
+    chip.style.display = "none";
+    return;
+  }
+  chip.style.display = "inline-flex";
+  chip.href = "topic.html?code=" + encodeURIComponent(code);
+  chip.innerHTML = `Continue: <strong>${code} ${topicTitle(code)}</strong> &rarr;`;
+}
+
+function renderNeedsHelp() {
+  const panel = document.getElementById("needs-help-panel");
+  const allCodes = UNITS.flatMap(u => u.topics);
+  const needHelp = allCodes.filter(code => getStatus(code) === "help");
+
+  if (!needHelp.length) {
+    panel.innerHTML = "";
+    return;
+  }
+
+  panel.innerHTML = `<h4>Topics you flagged as needing help</h4>`;
+  const list = document.createElement("div");
+  list.className = "needs-help-list";
+  needHelp.forEach(code => {
+    const a = document.createElement("a");
+    a.href = "topic.html?code=" + encodeURIComponent(code);
+    a.className = "needs-help-item";
+    a.innerHTML = `<span class="status-dot help"></span> ${code} &middot; ${topicTitle(code)}`;
+    list.appendChild(a);
+  });
+  panel.appendChild(list);
+}
+
 renderStreak();
+renderContinueChip();
+renderNeedsHelp();
 renderSummary();
 renderUnits();
 

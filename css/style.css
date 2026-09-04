@@ -297,6 +297,52 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 600; margin: 0 0 0.4em;
 .streak-chip .flame { font-size: 15px; }
 .streak-chip strong { font-family: var(--serif); color: var(--rust); }
 
+.continue-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--paper-raised);
+  border: 1px solid var(--forest);
+  border-radius: 20px;
+  padding: 7px 14px;
+  font-size: 13px;
+  color: var(--forest-deep);
+  text-decoration: none;
+}
+.continue-chip:hover { background: var(--forest); color: #fff; }
+.continue-chip strong { font-family: var(--serif); }
+
+/* ---------- needs-help panel ---------- */
+
+.needs-help-panel:empty { display: none; }
+.needs-help-panel {
+  margin-bottom: 24px;
+}
+.needs-help-panel h4 {
+  font-size: 14px;
+  color: var(--status-help);
+  margin: 0 0 10px;
+}
+.needs-help-list {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.needs-help-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: #FBF0EC;
+  border: 1px solid var(--status-help);
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 13px;
+  color: var(--ink);
+  text-decoration: none;
+}
+.needs-help-item:hover { background: var(--status-help); color: #fff; }
+.needs-help-item:hover .status-dot { background: #fff; }
+
 .spin-btn {
   display: inline-flex;
   align-items: center;
@@ -339,16 +385,17 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 600; margin: 0 0 0.4em;
 .flashcard-toggle {
   margin-top: 14px;
   width: 100%;
-  padding: 8px 10px;
-  background: transparent;
+  padding: 10px 10px;
+  background: var(--forest);
   border: 1px solid var(--forest);
-  color: var(--forest-deep);
+  color: #fff;
   border-radius: var(--radius);
   font-family: var(--sans);
-  font-size: 12.5px;
+  font-weight: 600;
+  font-size: 13px;
   cursor: pointer;
 }
-.flashcard-toggle:hover { background: var(--forest); color: #fff; }
+.flashcard-toggle:hover { background: var(--forest-deep); }
 
 .flashcard-wrap { margin-top: 10px; }
 
