@@ -134,7 +134,8 @@ function enableTermTooltipTaps(root) {
   });
 }
 
-/* Renders the word bank sidebar panel for a topic. */
+/* Renders the word bank sidebar panel for a topic, with a toggle into
+   a simple flip-through flashcard mode. */
 function buildWordbankPanel(container, code) {
   const bank = (typeof WORDBANK !== "undefined" && WORDBANK[code]) || [];
   if (!bank.length) {
@@ -147,17 +148,94 @@ function buildWordbankPanel(container, code) {
   title.textContent = "Word bank";
   card.appendChild(title);
 
-  const list = document.createElement("dl");
-  list.className = "wordbank-list";
-  bank.forEach(function (entry) {
-    const dt = document.createElement("dt");
-    dt.textContent = entry.term;
-    const dd = document.createElement("dd");
-    dd.textContent = entry.definition;
-    list.appendChild(dt);
-    list.appendChild(dd);
+  const body = document.createElement("div");
+  card.appendChild(body);
+
+  const flashBtn = document.createElement("button");
+  flashBtn.type = "button";
+  flashBtn.className = "flashcard-toggle";
+  flashBtn.textContent = "Practice as flashcards";
+  card.appendChild(flashBtn);
+
+  function renderList() {
+    flashBtn.textContent = "Practice as flashcards";
+    body.innerHTML = "";
+    const list = document.createElement("dl");
+    list.className = "wordbank-list";
+    bank.forEach(function (entry) {
+      const dt = document.createElement("dt");
+      dt.textContent = entry.term;
+      const dd = document.createElement("dd");
+      dd.textContent = entry.definition;
+      list.appendChild(dt);
+      list.appendChild(dd);
+    });
+    body.appendChild(list);
+  }
+
+  function renderFlashcards() {
+    flashBtn.textContent = "Back to list";
+    body.innerHTML = "";
+    let i = 0;
+    let flipped = false;
+
+    const wrap = document.createElement("div");
+    wrap.className = "flashcard-wrap";
+
+    const counter = document.createElement("div");
+    counter.className = "flashcard-counter";
+    wrap.appendChild(counter);
+
+    const faceCard = document.createElement("div");
+    faceCard.className = "flashcard";
+    wrap.appendChild(faceCard);
+
+    const nav = document.createElement("div");
+    nav.className = "flashcard-nav";
+    const prevBtn = document.createElement("button");
+    prevBtn.type = "button";
+    prevBtn.textContent = "Prev";
+    const nextBtn = document.createElement("button");
+    nextBtn.type = "button";
+    nextBtn.textContent = "Next";
+    nav.appendChild(prevBtn);
+    nav.appendChild(nextBtn);
+    wrap.appendChild(nav);
+
+    function render() {
+      const entry = bank[i];
+      counter.textContent = (i + 1) + " / " + bank.length;
+      faceCard.textContent = flipped ? entry.definition : entry.term;
+      faceCard.classList.toggle("flipped", flipped);
+    }
+
+    faceCard.addEventListener("click", function () {
+      flipped = !flipped;
+      render();
+    });
+    prevBtn.addEventListener("click", function () {
+      i = (i - 1 + bank.length) % bank.length;
+      flipped = false;
+      render();
+    });
+    nextBtn.addEventListener("click", function () {
+      i = (i + 1) % bank.length;
+      flipped = false;
+      render();
+    });
+
+    render();
+    body.appendChild(wrap);
+  }
+
+  let inFlashcardMode = false;
+  flashBtn.addEventListener("click", function () {
+    inFlashcardMode = !inFlashcardMode;
+    if (inFlashcardMode) renderFlashcards();
+    else renderList();
   });
-  card.appendChild(list);
+
+  renderList();
   container.appendChild(card);
 }
 
@@ -171,7 +249,50 @@ function buildFunFactPanel(container, code) {
   container.appendChild(card);
 }
 
-/* ---------- link helpers ---------- */
+/* ---------- streak counter ---------- */
+
+const STREAK_KEY = "bioStreakV1";
+
+/* Call once per page load (index.html only). Returns the current streak
+   count and updates it: same day = no change, consecutive day = +1,
+   gap of 2+ days = resets to 1. */
+function updateStreak() {
+  const today = new Date().toISOString().slice(0, 10);
+  let data;
+  try {
+    data = JSON.parse(localStorage.getItem(STREAK_KEY)) || {};
+  } catch (e) {
+    data = {};
+  }
+  if (data.lastDate === today) return data.streak || 1;
+
+  const yesterday = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
+  const streak = data.lastDate === yesterday ? (data.streak || 0) + 1 : 1;
+  data = { lastDate: today, streak: streak };
+  try {
+    localStorage.setItem(STREAK_KEY, JSON.stringify(data));
+  } catch (e) {
+    // storage unavailable, fail quietly
+  }
+  return streak;
+}
+
+/* ---------- random topic picker ---------- */
+
+/* Picks a random topic code, preferring ones that actually have a quiz
+   or question bank so "quiz me" never lands on an empty page if it can
+   help it. */
+function pickRandomTopic() {
+  if (typeof UNITS === "undefined") return null;
+  const all = UNITS.flatMap(function (u) { return u.topics; });
+  const withQuestions = all.filter(function (code) {
+    const hasQuiz = typeof QUIZZES !== "undefined" && QUIZZES[code] && QUIZZES[code].length;
+    const hasQB = typeof QUESTIONBANK !== "undefined" && QUESTIONBANK[code] && QUESTIONBANK[code].length;
+    return hasQuiz || hasQB;
+  });
+  const pool = withQuestions.length ? withQuestions : all;
+  return pool[Math.floor(Math.random() * pool.length)];
+}
 
 function toYouTubeEmbed(url) {
   if (!url) return null;

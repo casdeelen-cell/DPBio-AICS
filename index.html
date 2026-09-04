@@ -24,6 +24,11 @@
 
 <div class="shell">
 
+  <div class="top-actions-row">
+    <div class="streak-chip" id="streak-chip"></div>
+    <button type="button" class="spin-btn" id="spin-btn">Quiz me on something</button>
+  </div>
+
   <div class="summary-bar" id="summary-bar"></div>
 
   <input type="text" class="search-box" id="search-box" placeholder="Search a topic, e.g. A1.1 or water...">
@@ -81,6 +86,23 @@ function renderUnits(filterText) {
     heading.innerHTML = `<h2>${unit.name}</h2><div class="rule"></div>`;
     block.appendChild(heading);
 
+    const progressRow = document.createElement("div");
+    progressRow.className = "unit-heading";
+    progressRow.style.marginTop = "-6px";
+    const counts = { notstarted: 0, learning: 0, help: 0, understood: 0 };
+    unit.topics.forEach(code => counts[getStatus(code)]++);
+    const total = unit.topics.length;
+    const pct = n => (n / total) * 100;
+    progressRow.innerHTML = `
+      <div class="unit-progress-bar">
+        <span class="seg-understood" style="width:${pct(counts.understood)}%"></span>
+        <span class="seg-learning" style="width:${pct(counts.learning)}%"></span>
+        <span class="seg-help" style="width:${pct(counts.help)}%"></span>
+      </div>
+      <div class="unit-progress-label">${counts.understood}/${total} understood</div>
+    `;
+    block.appendChild(progressRow);
+
     const grid = document.createElement("div");
     grid.className = "topic-grid";
 
@@ -101,7 +123,12 @@ function renderUnits(filterText) {
 
       const progressEl = document.createElement("div");
       card.appendChild(progressEl);
-      buildProgressControl(progressEl, code, { onChange: renderSummary });
+      buildProgressControl(progressEl, code, {
+        onChange: function () {
+          renderSummary();
+          renderUnits(document.getElementById("search-box").value);
+        }
+      });
 
       grid.appendChild(card);
     });
@@ -111,8 +138,20 @@ function renderUnits(filterText) {
   });
 }
 
+function renderStreak() {
+  const streak = updateStreak();
+  const chip = document.getElementById("streak-chip");
+  chip.innerHTML = `<span class="flame">🔥</span> <strong>${streak}</strong> day${streak === 1 ? "" : "s"} in a row`;
+}
+
+renderStreak();
 renderSummary();
 renderUnits();
+
+document.getElementById("spin-btn").addEventListener("click", function () {
+  const code = pickRandomTopic();
+  if (code) window.location.href = "topic.html?code=" + encodeURIComponent(code);
+});
 
 document.getElementById("search-box").addEventListener("input", function (e) {
   renderUnits(e.target.value);

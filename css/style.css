@@ -272,6 +272,133 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 600; margin: 0 0 0.4em;
 }
 .search-box:focus { outline: none; border-color: var(--forest); }
 
+/* ---------- streak chip + quiz-me button ---------- */
+
+.top-actions-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.streak-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--paper-raised);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 7px 14px;
+  font-size: 13.5px;
+  color: var(--ink);
+}
+.streak-chip .flame { font-size: 15px; }
+.streak-chip strong { font-family: var(--serif); color: var(--rust); }
+
+.spin-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--forest);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  padding: 10px 18px;
+  font-family: var(--sans);
+  font-size: 14px;
+  cursor: pointer;
+}
+.spin-btn:hover { background: var(--forest-deep); }
+
+/* ---------- unit progress bar ---------- */
+
+.unit-progress-bar {
+  display: flex;
+  height: 7px;
+  border-radius: 4px;
+  overflow: hidden;
+  flex: 1;
+  min-width: 120px;
+  background: var(--line);
+}
+.unit-progress-bar span { display: block; height: 100%; }
+.unit-progress-bar .seg-understood { background: var(--status-understood); }
+.unit-progress-bar .seg-learning { background: var(--status-learning); }
+.unit-progress-bar .seg-help { background: var(--status-help); }
+
+.unit-progress-label {
+  font-size: 12px;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+/* ---------- flashcards ---------- */
+
+.flashcard-toggle {
+  margin-top: 14px;
+  width: 100%;
+  padding: 8px 10px;
+  background: transparent;
+  border: 1px solid var(--forest);
+  color: var(--forest-deep);
+  border-radius: var(--radius);
+  font-family: var(--sans);
+  font-size: 12.5px;
+  cursor: pointer;
+}
+.flashcard-toggle:hover { background: var(--forest); color: #fff; }
+
+.flashcard-wrap { margin-top: 10px; }
+
+.flashcard-counter {
+  font-size: 11.5px;
+  color: var(--ink-soft);
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+.flashcard {
+  min-height: 90px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: var(--paper);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 14px;
+  font-family: var(--serif);
+  font-size: 15px;
+  color: var(--ink);
+  cursor: pointer;
+  user-select: none;
+}
+.flashcard.flipped {
+  font-family: var(--sans);
+  font-size: 12.5px;
+  color: var(--ink-soft);
+  background: var(--paper-raised);
+}
+
+.flashcard-nav {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+.flashcard-nav button {
+  flex: 1;
+  padding: 7px;
+  border: 1px solid var(--line-strong);
+  background: transparent;
+  border-radius: var(--radius);
+  font-family: var(--sans);
+  font-size: 12.5px;
+  cursor: pointer;
+}
+.flashcard-nav button:hover { border-color: var(--forest); }
+
 /* ---------- topic page ---------- */
 
 .topic-header {
@@ -585,6 +712,28 @@ strong.term:hover::after, strong.term:hover::before,
 strong.term.tooltip-active::after, strong.term.tooltip-active::before {
   opacity: 1;
   visibility: visible;
+}
+
+.quiz-section.theme-quick .quiz-card { border-left: 3px solid var(--forest); }
+.quiz-section.theme-quick .quiz-next { background: var(--forest); border-color: var(--forest); }
+.quiz-section.theme-quick .quiz-option:hover { border-color: var(--forest); }
+.quiz-section.theme-quick .quiz-progress { color: var(--forest-deep); }
+
+.quiz-section.theme-qb .quiz-card { border-left: 3px solid var(--rust); background: #FBF3EC; }
+.quiz-section.theme-qb .quiz-next { background: var(--rust); border-color: var(--rust); }
+.quiz-section.theme-qb .quiz-option:hover { border-color: var(--rust); }
+.quiz-section.theme-qb .quiz-option.correct { border-color: var(--status-understood); background: #E4EFE6; }
+.quiz-section.theme-qb .quiz-option.incorrect { border-color: var(--status-help); background: #F3E4DF; }
+.quiz-section.theme-qb .quiz-progress { color: var(--rust); }
+.quiz-section.theme-qb .qb-attribution {
+  display: inline-block;
+  color: var(--rust);
+  border: 1px solid var(--rust);
+  border-radius: 20px;
+  padding: 2px 10px;
+  font-style: normal;
+  font-family: var(--sans);
+  font-size: 11.5px;
 }
 
 /* ---------- question bank section ---------- */

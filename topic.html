@@ -210,14 +210,14 @@ function renderTopicPage() {
   renderContentSections(main, code);
 
   const quizSection = document.createElement("div");
-  quizSection.className = "quiz-section";
+  quizSection.className = "quiz-section theme-quick";
   quizSection.innerHTML = "<h2>Quick quiz</h2>";
   const quizContainer = document.createElement("div");
   quizSection.appendChild(quizContainer);
   main.appendChild(quizSection);
 
   const qbSection = document.createElement("div");
-  qbSection.className = "quiz-section";
+  qbSection.className = "quiz-section theme-qb";
   qbSection.innerHTML = "<h2>Practice questions</h2>";
   const qbContainer = document.createElement("div");
   qbSection.appendChild(qbContainer);
