@@ -24,7 +24,8 @@ const WORDBANK = {
     { term: "Adhesion", definition: "The attraction between water molecules and a different polar or charged surface." },
     { term: "Transpiration", definition: "The loss of water vapour from a plant, mainly through the stomata of the leaves." },
     { term: "Specific heat capacity", definition: "The amount of energy needed to raise the temperature of a given mass of a substance by one degree." },
-    { term: "Solute", definition: "A substance that is dissolved in a solvent to form a solution." }
+    { term: "Solute", definition: "A substance that is dissolved in a solvent to form a solution." },
+    { term: "Habitable zone", definition: "The range of distances from a star where a planet's temperature could allow liquid water to exist." }
   ],
 
   "B2.1": [
@@ -66,7 +67,11 @@ const WORDBANK = {
     { term: "Solute potential", definition: "The component of water potential due to dissolved solute; always zero or negative." },
     { term: "Pressure potential", definition: "The component of water potential due to physical pressure, usually positive in a walled plant cell." },
     { term: "Turgor pressure", definition: "The outward pressure of the cell contents against the cell wall in a turgid (swollen) plant cell." },
-    { term: "Plasmolysis", definition: "The shrinking of a plant cell's protoplast away from its cell wall after water loss by osmosis." }
+    { term: "Plasmolysis", definition: "The shrinking of a plant cell's protoplast away from its cell wall after water loss by osmosis." },
+    { term: "Solvation", definition: "The interaction between water molecules and solute particles, pulling the solute into solution." },
+    { term: "Hypotonic", definition: "A solution with a lower solute concentration than the cell, causing net water entry by osmosis." },
+    { term: "Hypertonic", definition: "A solution with a higher solute concentration than the cell, causing net water loss by osmosis." },
+    { term: "Isotonic", definition: "A solution with the same solute concentration as the cell, causing no net water movement." }
   ],
 
   "B1.1": [
@@ -91,7 +96,10 @@ const WORDBANK = {
     { term: "Active site", definition: "The region of an enzyme, shaped to bind a specific substrate, where the reaction is catalysed." },
     { term: "Substrate", definition: "The molecule an enzyme acts on." },
     { term: "Denaturation", definition: "The breaking of bonds maintaining a protein's shape, usually caused by heat or extreme pH, which destroys its function." },
-    { term: "Activation energy", definition: "The minimum energy needed for a reaction to proceed; enzymes lower this." }
+    { term: "Activation energy", definition: "The minimum energy needed for a reaction to proceed; enzymes lower this." },
+    { term: "Induced fit", definition: "The subtle change in shape of an enzyme's active site as it binds a substrate, improving the fit." },
+    { term: "Intracellular enzyme", definition: "An enzyme that catalyses reactions inside the cell that produced it." },
+    { term: "Extracellular enzyme", definition: "An enzyme secreted out of the cell to catalyse reactions outside it." }
   ],
 
   "A1.2": [
@@ -99,7 +107,11 @@ const WORDBANK = {
     { term: "Phosphodiester bond", definition: "The bond linking the sugar of one nucleotide to the phosphate of the next." },
     { term: "Complementary base pairing", definition: "The specific pairing of bases across the two DNA strands: A with T, C with G." },
     { term: "Double helix", definition: "The twisted, ladder-like shape of the two-stranded DNA molecule." },
-    { term: "Antiparallel", definition: "Describes the two DNA strands running in opposite directions to each other." }
+    { term: "Antiparallel", definition: "Describes the two DNA strands running in opposite directions to each other." },
+    { term: "Purine", definition: "A larger, double-ringed nitrogenous base: adenine or guanine." },
+    { term: "Pyrimidine", definition: "A smaller, single-ringed nitrogenous base: cytosine, thymine, or uracil." },
+    { term: "Nucleosome", definition: "DNA wound around histone proteins, the basic packaging unit of chromatin." },
+    { term: "5' and 3' ends", definition: "The two chemically distinct ends of a DNA or RNA strand, which give it directionality." }
   ],
 
   "D1.1": [
@@ -107,7 +119,13 @@ const WORDBANK = {
     { term: "Helicase", definition: "The enzyme that unwinds the DNA double helix by breaking hydrogen bonds between bases." },
     { term: "DNA polymerase", definition: "The enzyme that builds a new DNA strand by adding complementary nucleotides." },
     { term: "Replication fork", definition: "The Y-shaped region where the DNA double helix is being unwound and copied." },
-    { term: "Primer", definition: "A short sequence that DNA polymerase needs before it can begin adding nucleotides." }
+    { term: "Primer", definition: "A short sequence that DNA polymerase needs before it can begin adding nucleotides." },
+    { term: "Polymerase chain reaction (PCR)", definition: "A laboratory technique that amplifies a specific region of DNA into millions of copies." },
+    { term: "Gel electrophoresis", definition: "A technique that separates DNA fragments by size using an electric field." },
+    { term: "Leading strand", definition: "The DNA strand synthesised continuously during replication." },
+    { term: "Lagging strand", definition: "The DNA strand synthesised discontinuously, in short fragments, during replication." },
+    { term: "Okazaki fragment", definition: "A short DNA fragment synthesised on the lagging strand during replication." },
+    { term: "DNA ligase", definition: "The enzyme that joins DNA fragments together by forming phosphodiester bonds." }
   ],
 
   "D2.1": [
@@ -116,7 +134,10 @@ const WORDBANK = {
     { term: "Cytokinesis", definition: "Division of the cytoplasm into two separate cells." },
     { term: "Chromatid", definition: "One of two identical copies of a chromosome, joined at the centromere after DNA replication." },
     { term: "Centromere", definition: "The region joining two sister chromatids together." },
-    { term: "Spindle fibres", definition: "Protein structures that pull chromatids apart during cell division." }
+    { term: "Spindle fibres", definition: "Protein structures that pull chromatids apart during cell division." },
+    { term: "Non-disjunction", definition: "The failure of chromosomes or chromatids to separate correctly during meiosis." },
+    { term: "Cell proliferation", definition: "The increase in cell number through repeated cell division." },
+    { term: "Cyclin", definition: "A protein whose rising and falling levels control progression through the cell cycle." }
   ],
 
   "B1.2": [
@@ -125,7 +146,11 @@ const WORDBANK = {
     { term: "Primary structure", definition: "The specific sequence of amino acids in a polypeptide chain." },
     { term: "Secondary structure", definition: "Local folding patterns, such as alpha helices and beta sheets, held by hydrogen bonds." },
     { term: "Tertiary structure", definition: "The overall three-dimensional shape of a single folded polypeptide." },
-    { term: "Quaternary structure", definition: "The structure formed when two or more polypeptide chains combine into one functional protein." }
+    { term: "Quaternary structure", definition: "The structure formed when two or more polypeptide chains combine into one functional protein." },
+    { term: "R group", definition: "The variable side chain of an amino acid that gives it distinct chemical properties." },
+    { term: "Essential amino acid", definition: "An amino acid the body cannot synthesise, which must come from the diet." },
+    { term: "Alpha helix", definition: "A coiled secondary protein structure held together by hydrogen bonds along the backbone." },
+    { term: "Beta pleated sheet", definition: "A folded, zig-zag secondary protein structure held together by hydrogen bonds." }
   ],
 
   "A2.1": [
@@ -133,7 +158,10 @@ const WORDBANK = {
     { term: "Protobiont", definition: "A simple, self-assembled structure with some cell-like properties, considered a step toward the first living cells." },
     { term: "Endosymbiotic theory", definition: "The theory that mitochondria and chloroplasts originated as free-living prokaryotes engulfed by a host cell." },
     { term: "Prokaryote", definition: "A cell with no nucleus and no membrane-bound organelles." },
-    { term: "Eukaryote", definition: "A cell with a true nucleus and membrane-bound organelles." }
+    { term: "Eukaryote", definition: "A cell with a true nucleus and membrane-bound organelles." },
+    { term: "RNA world hypothesis", definition: "The idea that RNA, capable of both storing information and catalysing reactions, was life's first genetic material." },
+    { term: "Last universal common ancestor (LUCA)", definition: "The most recent common ancestor of all current life on Earth." },
+    { term: "Hydrothermal vent", definition: "A deep-sea opening releasing mineral-rich, superheated water, a candidate environment for the origin of life." }
   ],
 
   "D1.2": [
@@ -157,7 +185,9 @@ const WORDBANK = {
     { term: "Eukaryote", definition: "A cell with a true nucleus and membrane-bound organelles." },
     { term: "Organelle", definition: "A specialised, usually membrane-bound structure within a cell with a distinct function." },
     { term: "Surface area to volume ratio", definition: "The ratio of a cell's surface area to its volume, which falls as cells get larger, limiting cell size." },
-    { term: "Resolution", definition: "The ability to distinguish two close points as separate; electron microscopes have far higher resolution than light microscopes." }
+    { term: "Resolution", definition: "The ability to distinguish two close points as separate; electron microscopes have far higher resolution than light microscopes." },
+    { term: "Cell differentiation", definition: "The process by which genetically identical cells become structurally and functionally specialised." },
+    { term: "Resolution", definition: "The ability to distinguish two close points as separate; far higher in electron microscopes than light microscopes." }
   ],
 
   "B2.2": [
@@ -165,7 +195,10 @@ const WORDBANK = {
     { term: "Endomembrane system", definition: "The interconnected system of organelles (ER, Golgi, vesicles) that make, modify, and transport proteins and lipids." },
     { term: "Vesicle", definition: "A small membrane-bound sac used to transport material between organelles or to the cell surface." },
     { term: "Lysosome", definition: "A vesicle containing digestive enzymes, used to break down waste, worn organelles, or engulfed material." },
-    { term: "Cristae", definition: "The folds of a mitochondrion's inner membrane, which increase surface area for respiration." }
+    { term: "Cristae", definition: "The folds of a mitochondrion's inner membrane, which increase surface area for respiration." },
+    { term: "Nuclear pore", definition: "A channel in the nuclear envelope regulating movement of molecules between nucleus and cytoplasm." },
+    { term: "Free ribosome", definition: "A ribosome in the cytoplasm, making proteins that function within the cytoplasm." },
+    { term: "Bound ribosome", definition: "A ribosome attached to the rough ER, making proteins for secretion or membranes." }
   ],
 
   "C1.2": [
@@ -174,7 +207,9 @@ const WORDBANK = {
     { term: "Electron transport chain", definition: "A series of proteins in the inner mitochondrial membrane that generates most of the ATP made in aerobic respiration." },
     { term: "ATP", definition: "Adenosine triphosphate, the molecule cells use as their immediate, usable energy currency." },
     { term: "Aerobic respiration", definition: "Respiration that requires oxygen and releases a large amount of ATP per glucose molecule." },
-    { term: "Anaerobic respiration", definition: "Respiration that occurs without oxygen, releasing much less ATP per glucose molecule." }
+    { term: "Anaerobic respiration", definition: "Respiration that occurs without oxygen, releasing much less ATP per glucose molecule." },
+    { term: "Link reaction", definition: "The step converting pyruvate to acetyl-CoA before the Krebs cycle, releasing carbon dioxide." },
+    { term: "Oxidative phosphorylation", definition: "ATP synthesis driven by the hydrogen ion gradient built by the electron transport chain." }
   ],
 
   "C1.3": [
@@ -183,7 +218,9 @@ const WORDBANK = {
     { term: "Calvin cycle", definition: "The light-independent reactions, which use ATP and reduced NADP to build organic molecules from CO2." },
     { term: "Carbon fixation", definition: "The incorporation of carbon dioxide into an organic molecule, catalysed by Rubisco." },
     { term: "Limiting factor", definition: "Whichever factor (light, CO2, or temperature) is currently holding back the rate of photosynthesis." },
-    { term: "Chlorophyll", definition: "The main pigment that absorbs light energy for photosynthesis." }
+    { term: "Chlorophyll", definition: "The main pigment that absorbs light energy for photosynthesis." },
+    { term: "Photosystem", definition: "A light-harvesting cluster of pigments in the thylakoid membrane that funnels energy to a reaction centre." },
+    { term: "Rubisco", definition: "The enzyme that catalyses carbon fixation in the Calvin cycle." }
   ]
 
 };

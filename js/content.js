@@ -28,7 +28,7 @@ const CONTENT = {
 
   "A1.1": [
     {
-      label: "1",
+      label: "A1.1.1",
       heading: "Water as a polar molecule",
       level: "SL",
       text: "Water's biological importance starts with its shape and its chemistry. A water molecule is bent at an angle of roughly 104.5 degrees, with two hydrogen atoms covalently bonded to a central oxygen. Oxygen has a higher **electronegativity** than hydrogen, so it pulls the shared electrons in each O-H bond closer to itself. This produces an uneven distribution of charge across the molecule: the oxygen end carries a partial negative charge and each hydrogen carries a partial positive charge.\n\nA molecule with this kind of unequal charge distribution is described as a **polar molecule**. It is worth being precise with terminology here: water is not ionic and does not carry a full charge, the polarity arises purely from unequal sharing of electrons within covalent bonds. Almost every property of water covered in this topic, its role as a solvent, its cohesion, its thermal behaviour, traces back to this single structural feature.",
@@ -37,13 +37,13 @@ const CONTENT = {
       tip: { label: "Exam tip", text: "Examiners distinguish between a covalent bond (within a water molecule, between O and H) and a hydrogen bond (between separate water molecules). Mixing these up is one of the most common errors on this topic." }
     },
     {
-      label: "2",
+      label: "A1.1.2",
       heading: "Hydrogen bonding",
       level: "SL",
       text: "Because each water molecule carries both a positive and a negative region, molecules can attract one another: the positive hydrogen of one molecule is drawn to the negative oxygen of a neighbouring molecule. This intermolecular attraction is called a **hydrogen bond**.\n\nA hydrogen bond is considerably weaker than a covalent bond, roughly one-twentieth of the strength, and each individual bond is short-lived, breaking and reforming on a picosecond timescale. What matters biologically is the cumulative effect: at any given moment, a water molecule in liquid water is hydrogen bonded to an average of about 3.4 other molecules, and this constant, dynamic network of bonds is what gives bulk water its unusual physical properties compared to similarly sized molecules."
     },
     {
-      label: "3",
+      label: "A1.1.3",
       heading: "Cohesion and its consequences",
       level: "SL",
       text: "**Cohesion** refers to the mutual attraction between molecules of the same substance. In water, cohesion arises directly from hydrogen bonding, and it has several consequences that are directly relevant to living systems.\n\nThe clearest example is water transport in the xylem of vascular plants. As water evaporates from the mesophyll cells of a leaf during **transpiration**, it is replaced by water pulled up from the xylem below. Because the water molecules in the xylem are hydrogen bonded to one another, they behave as a continuous, unbroken column, so the loss of water at the top of the plant creates a pull that is transmitted all the way down to the roots. This is the basis of the cohesion-tension theory of water transport, and it explains how trees move water to heights of over 100 metres without any active pumping mechanism.\n\nCohesion is also responsible for **surface tension**, the tendency of a water surface to behave like a stretched elastic sheet. This is strong enough to support the weight of small organisms, such as pond skaters, that would otherwise sink.",
@@ -51,23 +51,35 @@ const CONTENT = {
       imageCaption: "A water strider supported by surface tension, a direct consequence of cohesion between water molecules."
     },
     {
-      label: "4",
+      label: "A1.1.4",
       heading: "Adhesion",
       level: "SL",
       text: "**Adhesion** is the attraction between water molecules and a different polar or charged surface, rather than between water molecules themselves. Inside a xylem vessel, water adheres to the cellulose and lignin of the vessel walls, which helps counteract the downward pull of gravity on the water column.\n\nCohesion and adhesion act together to produce **capillary action**, the tendency of water to rise up narrow tubes. This is a measurable contributor to water movement in short plants and in the initial uptake of water from soil into root hairs, though for tall trees, transpiration pull dominates.",
       tip: { label: "Common mistake", text: "Cohesion is water sticking to water. Adhesion is water sticking to something else. Students frequently swap these two definitions under exam pressure, so it helps to have a fixed example memorised for each." }
     },
     {
-      label: "5",
+      label: "A1.1.5",
       heading: "Water as a solvent",
       level: "SL",
       text: "Polar and charged (ionic) substances tend to dissolve readily in water, because individual water molecules can surround a solute particle, with their negative oxygen oriented towards a positive ion or their positive hydrogens oriented towards a negative ion. This process, called hydration, effectively pulls the substance apart and disperses it through the solution.\n\nThis solvent property makes water the medium in which the great majority of metabolic reactions take place; enzymes, substrates and products are almost always dissolved in the aqueous cytoplasm. It is equally why blood plasma can transport glucose, amino acids, and ions around the body, and why the phloem of a plant can carry dissolved sucrose between source and sink tissues.\n\nNon-polar substances, such as lipids, do not dissolve in water. This is not a side note, it is the entire reason that lipid bilayers can function as membranes: a barrier that is impermeable to most polar and charged solutes is exactly what a cell needs to control its internal environment (see B2.1)."
     },
     {
-      label: "6",
+      label: "A1.1.6",
       heading: "Thermal properties and aquatic habitats",
       level: "HL",
       text: "The extensive hydrogen bonding in water also accounts for its thermal behaviour, which is relevant to the way organisms experience aquatic and terrestrial environments differently.\n\nWater has a high **specific heat capacity**: a relatively large amount of energy is required to raise its temperature, because much of the input energy goes into breaking hydrogen bonds rather than increasing the kinetic energy of the molecules. Large bodies of water therefore change temperature slowly, buffering aquatic organisms against the rapid daily and seasonal temperature swings that terrestrial organisms must cope with.\n\nWater also has a high latent heat of vaporisation, meaning evaporation removes a large amount of energy from the remaining liquid. This is the physical basis of cooling by sweating and by transpiration. Finally, hydrogen bonding causes ice to be less dense than liquid water, since the bonds hold molecules in a more open lattice arrangement when frozen. Ice therefore floats, insulating the liquid water beneath it and allowing aquatic life to persist under a frozen surface rather than the entire body of water freezing solid from the bottom up."
+    },
+    {
+      label: "A1.1.7",
+      heading: "Extraplanetary origin of water on Earth",
+      level: "HL",
+      text: "Earth's water is thought to have originated at least partly from beyond the planet itself, delivered by impacts from water-rich asteroids and comets during the early, heavily-bombarded history of the Solar System. That water was only retained once Earth's surface had cooled enough for water vapour to condense into liquid rather than escape back into space, and once gravity was sufficient to hold an atmosphere capable of maintaining the pressure and temperature conditions liquid water needs to persist."
+    },
+    {
+      label: "A1.1.8",
+      heading: "Water and the search for extraterrestrial life",
+      level: "HL",
+      text: "Because every known living system depends on liquid water, the search for life elsewhere in the universe is guided heavily by the search for water, astrobiologists describe this as a 'follow the water' strategy. This is also the reasoning behind the concept of a habitable zone (sometimes called the Goldilocks zone), the range of distances from a star within which a planet's temperature would allow water to exist as a liquid rather than permanently freezing or boiling away, used as a first filter when assessing whether a distant planet could plausibly support life."
     }
   ],
 
@@ -188,22 +200,40 @@ const CONTENT = {
 
   "D2.3": [
     {
-      label: "1",
+      label: "D2.3.1",
+      heading: "Solvation: water as the solvent",
+      level: "SL",
+      text: "**Solvation** is the interaction between water molecules and the particles of a dissolved solute, water molecules cluster around a solute particle, oriented by their own polarity, and effectively pull it into solution. This is why water is described as the 'universal solvent': its polarity lets it dissolve a very wide range of polar and charged substances, from salts to sugars, and is the basis for water's role as the medium for essentially all metabolic reactions."
+    },
+    {
+      label: "D2.3.2 / D2.3.3",
+      heading: "Osmosis: water movement between solutions",
+      level: "SL",
+      text: "Water moves passively from a region of lower solute concentration to a region of higher solute concentration across a partially permeable membrane, a special case of diffusion called **osmosis**. At the level of a whole cell, this means water will move into or out of a cell depending on how the solute concentration inside the cell compares to the solute concentration of the surrounding solution."
+    },
+    {
+      label: "D2.3.4-6",
+      heading: "How cells respond to hypotonic and hypertonic solutions",
+      level: "SL",
+      text: "A solution with a lower solute concentration than the cell is **hypotonic** to it, water moves in. A solution with a higher solute concentration is **hypertonic**, water moves out. A solution with the same solute concentration is isotonic, there is no net water movement.\n\nAn animal cell, having no cell wall, will swell and can burst in a hypotonic solution, and will shrink in a hypertonic one. A plant cell behaves differently because its cell wall resists expansion: in a hypotonic solution it swells only until **turgor pressure** builds up enough to stop further net water entry, becoming turgid rather than bursting, while in a hypertonic solution it undergoes **plasmolysis**, the protoplast shrinking away from the wall entirely."
+    },
+    {
+      label: "D2.3.7",
+      heading: "Medical applications of isotonic solutions",
+      level: "SL",
+      text: "Solutions used in medicine are generally kept isotonic to the cells they will contact, specifically to avoid the swelling or shrinking that a hypotonic or hypertonic solution would cause. Intravenous fluids given to patients are isotonic to blood plasma so red blood cells are not damaged, and organs prepared for transplant are bathed in an isotonic solution to keep their cells stable and undamaged during storage and transport."
+    },
+    {
+      label: "D2.3.8 / D2.3.9",
+      heading: "Water potential",
+      level: "HL",
+      text: "**Water potential** (&Psi;) is a more precise way of describing water's tendency to move, defined as the potential energy of water per unit volume. Its absolute value cannot be measured directly, so it is expressed relative to pure water at atmospheric pressure and 20&deg;C, which is assigned a water potential of zero, meaning every solution has a water potential at or below zero. Water always moves from a region of higher (less negative) water potential to a region of lower (more negative) water potential, this is simply a more quantitative restatement of the same osmosis rule covered at SL, but framed in terms of potential energy rather than concentration alone."
+    },
+    {
+      label: "D2.3.10",
       heading: "Solute potential and pressure potential",
-      level: "SL",
-      text: "**Water potential** (symbol &Psi;) is a measure of the tendency of water to move from one place to another, and it is made up of two components. **Solute potential** (&Psi;s) reflects how much solute is dissolved in the water, it is always zero or negative, and becomes more negative as more solute is added, since dissolved solute lowers water's tendency to move. **Pressure potential** (&Psi;p) reflects physical pressure, in a plant cell this is usually positive, generated by the protoplast pushing outward against the rigid cell wall.\n\nThe two combine as &Psi;w = &Psi;s + &Psi;p. Water always moves from a region of higher (less negative) water potential to a region of lower (more negative) water potential, this single rule governs osmosis at the whole-cell level, not just concentration gradients in isolation."
-    },
-    {
-      label: "2",
-      heading: "Osmosis in plant and animal cells",
-      level: "SL",
-      text: "When a plant cell is placed in a solution with a higher water potential than the cell itself, water moves in by osmosis, the protoplast swells and presses against the cell wall, and pressure potential rises until the cell becomes fully turgid. The rigid wall stops the cell from bursting the way an animal cell would in the same situation, since animal cells have no wall to resist the pressure.\n\nIf a plant cell is instead placed in a solution with a lower (more negative) water potential, water leaves the cell by osmosis, the protoplast shrinks and eventually pulls away from the cell wall entirely. This is called **plasmolysis**, and it is a useful sign, in a lab context, that a cell has been placed in a solution more concentrated than its own cytoplasm."
-    },
-    {
-      label: "3",
-      heading: "Turgor pressure and its uses",
-      level: "SL",
-      text: "**Turgor pressure** is the outward pressure exerted by the cell contents against the cell wall in a turgid cell. It is not just a side effect, plants rely on it directly: turgor pressure keeps non-woody stems and leaves rigid, and its loss is exactly what causes a plant to wilt when it has not been watered enough.\n\nTurgor changes are also actively used for movement in some cells, guard cells around a stoma open and close the pore by gaining or losing turgor pressure, which shifts their shape."
+      level: "HL",
+      text: "In a walled plant cell, water potential has two contributing components: **solute potential** (&Psi;s), which is always zero or negative and becomes more negative with more dissolved solute, and **pressure potential** (&Psi;p), the physical pressure of the protoplast pushing against the cell wall, usually positive in a turgid cell. The two combine as &Psi;w = &Psi;s + &Psi;p, which makes it possible to calculate any one of the three values given the other two, a common exam calculation."
     }
   ],
 
@@ -284,127 +314,313 @@ const CONTENT = {
 
   "C1.1": [
     {
-      label: "1",
-      heading: "Metabolism: anabolic and catabolic reactions",
+      label: "C1.1.1",
+      heading: "Enzymes as catalysts",
       level: "SL",
-      text: "**Metabolism** is the sum of all the chemical reactions happening inside an organism. These reactions fall into two broad categories. **Anabolic reactions** build larger molecules from smaller ones, using energy in the process, protein synthesis and glycogen formation are both anabolic. **Catabolic reactions** break larger molecules down into smaller ones, typically releasing energy, the oxidation of glucose during respiration is catabolic.\n\nAlmost every metabolic reaction, in either direction, is catalysed by a specific enzyme, without enzymes, most of these reactions would happen far too slowly to sustain life."
+      text: "An **enzyme** is a biological catalyst, it increases the rate of a chemical reaction without being consumed or permanently changed itself, and so can be used repeatedly. This is what allows reactions such as digestion, respiration, and photosynthesis to proceed fast enough to sustain life at normal body or environmental temperatures, reactions that would otherwise be far too slow to be biologically useful."
     },
     {
-      label: "2",
+      label: "C1.1.2",
+      heading: "The role of enzymes in metabolism",
+      level: "SL",
+      text: "**Metabolism** is the complex network of interdependent, interacting chemical reactions occurring within an organism. Because each enzyme is specific to a particular reaction, a cell needs a large number of different enzymes to run its metabolism, and by controlling which enzymes are active, and how active they are, at any given time, a cell can exert precise control over its own metabolic activity."
+    },
+    {
+      label: "C1.1.3",
+      heading: "Anabolic and catabolic reactions",
+      level: "SL",
+      text: "**Anabolic reactions** build larger molecules from smaller ones, examples include protein synthesis, glycogen formation, and photosynthesis, all condensation reactions that require an input of energy. **Catabolic reactions** break larger molecules into smaller ones, examples include the hydrolysis of macromolecules during digestion and the oxidation of glucose during respiration, both of which release energy."
+    },
+    {
+      label: "C1.1.4-7",
       heading: "Enzyme structure and the active site",
       level: "SL",
-      text: "An enzyme is a globular protein whose three-dimensional shape creates a pocket called the **active site**, shaped to bind a specific **substrate**. When the substrate binds, the enzyme lowers the **activation energy** needed for the reaction to proceed, allowing the reaction to happen much faster than it would otherwise.\n\nThe induced fit model describes how the active site is not a rigid, pre-formed shape, it subtly changes shape as the substrate binds, moulding around it slightly to improve the fit and strain particular bonds in the substrate, helping the reaction along."
+      text: "An enzyme is a globular protein whose folded three-dimensional structure creates an **active site**, a pocket shaped and chemically suited to bind a specific substrate. Substrate molecules collide with the enzyme through normal random molecular motion, and when a collision brings a substrate into the active site with the correct orientation, it binds. The active site is not a rigid lock, it subtly changes shape as the substrate binds, known as induced fit, improving the fit and helping to strain particular bonds in the substrate to drive the reaction forward. This close structural relationship between active site shape and substrate shape is exactly why an enzyme's specificity depends on its precise three-dimensional structure."
     },
     {
-      label: "3",
-      heading: "Temperature and pH effects on enzyme activity",
+      label: "C1.1.8",
+      heading: "Temperature, pH, and enzyme activity",
       level: "SL",
-      text: "Enzyme activity generally increases with temperature up to an optimum, since molecules move faster and collide more often. Beyond that optimum, activity drops sharply, because the enzyme begins to **denature**, the bonds holding its three-dimensional structure in place break, distorting the active site so the substrate no longer fits.\n\npH has a similar effect. Every enzyme has an optimum pH, often close to neutral, though some (like pepsin in the stomach) function best at extreme pH. Moving too far from that optimum in either direction disrupts the bonds maintaining the enzyme's shape and denatures it, just as excess heat does."
+      text: "Enzyme activity rises with temperature up to an optimum, since faster-moving molecules collide more often, but rises too far and the enzyme denatures, the bonds maintaining its three-dimensional shape break, distorting the active site so substrate can no longer bind properly. The same pattern applies to pH: every enzyme has an optimum, and moving too far from it in either direction disrupts the enzyme's structure and its activity falls away."
+    },
+    {
+      label: "C1.1.9 / C1.1.10",
+      heading: "Measuring reaction rate and activation energy",
+      level: "SL",
+      text: "The rate of an enzyme-catalysed reaction can be measured experimentally by tracking either the disappearance of substrate or the appearance of product over time, commonly by measuring a change in mass, volume, or colour. Enzymes work by lowering the **activation energy** needed for a reaction to proceed, the minimum energy input required to get the reaction started, which is why enzyme-catalysed reactions can occur readily at normal body or environmental temperatures where the uncatalysed reaction would barely happen at all."
+    },
+    {
+      label: "C1.1.11",
+      heading: "Intracellular and extracellular enzymes",
+      level: "HL",
+      text: "Intracellular enzymes catalyse reactions inside the cells that made them, glycolysis in the cytoplasm and the Krebs cycle in the mitochondria are both intracellular examples. Extracellular enzymes are secreted out of the cell to catalyse reactions outside it, chemical digestion in the gut, where enzymes like amylase and protease break down food outside any single cell, is the standard example."
+    },
+    {
+      label: "C1.1.12",
+      heading: "Metabolism generates heat",
+      level: "HL",
+      text: "No metabolic reaction converts energy with perfect efficiency, some energy is inevitably released as heat at each step of a metabolic pathway. Across the huge number of reactions happening simultaneously in an organism, this heat output adds up to a significant and unavoidable by-product of metabolism, and in endothermic animals this metabolically generated heat is actively used to help maintain a stable body temperature."
     }
   ],
 
   "A1.2": [
     {
-      label: "1",
-      heading: "Nucleotide structure",
+      label: "A1.2.1",
+      heading: "Nucleic acids as the genetic material",
       level: "SL",
-      text: "A **nucleotide** is the basic building block of nucleic acids, made of three parts: a phosphate group, a five-carbon sugar (deoxyribose in DNA, ribose in RNA), and a nitrogenous base. Nucleotides join together through condensation reactions between the phosphate of one nucleotide and the sugar of the next, forming a **phosphodiester bond**, this repeating sugar-phosphate backbone is what gives a strand of DNA or RNA its structural continuity."
+      text: "**Nucleic acids** are polymers built from nucleotide monomers, and there are two types, DNA and RNA. DNA is the genetic material of every living organism, it stores hereditary information that is copied and passed from cell to cell, and from parent to offspring, that every form of life uses the same basic molecule for this is itself strong evidence of a shared evolutionary origin."
     },
     {
-      label: "2",
+      label: "A1.2.2",
+      heading: "Components of a nucleotide",
+      level: "SL",
+      text: "A **nucleotide** has three parts: a five-carbon (pentose) sugar, a phosphate group attached to one side of the sugar, and a nitrogenous base attached to the other side. The sugar is deoxyribose in DNA and ribose in RNA, and this single difference in the sugar is part of what gives the two molecules their different chemical stability and roles."
+    },
+    {
+      label: "A1.2.3",
+      heading: "The sugar-phosphate backbone",
+      level: "SL",
+      text: "Nucleotides are linked by bonding the phosphate group of one nucleotide to the sugar of the next, building an alternating sugar-phosphate-sugar-phosphate **backbone** that runs the length of the strand. This backbone is structural rather than informational, it holds the nucleotides in their specific sequence but does not itself vary between genes, all the coded information is carried by the bases attached to it."
+    },
+    {
+      label: "A1.2.4",
+      heading: "Bases as the basis of a code",
+      level: "SL",
+      text: "Each nucleotide carries one of a small set of nitrogenous bases, adenine, cytosine, guanine, and either thymine (DNA only) or uracil (RNA only). The specific sequence of bases along a strand functions as a **code**: in the same way letters combine into words, a sequence of bases (read in groups of three, see D1.2) specifies the sequence of amino acids in a protein."
+    },
+    {
+      label: "A1.2.5",
+      heading: "Forming a nucleic acid polymer",
+      level: "SL",
+      text: "Individual nucleotides are joined into a nucleic acid polymer through condensation reactions: the phosphate group of one nucleotide bonds to the sugar of the next, releasing a water molecule each time, exactly the same condensation logic used to build carbohydrates and proteins (see B1.1 and B1.2), just with a different monomer."
+    },
+    {
+      label: "A1.2.6",
       heading: "The DNA double helix",
       level: "SL",
-      text: "DNA is made of two nucleotide strands wound into a **double helix**, held together by hydrogen bonds between bases on opposite strands. The pairing is not random, it follows **complementary base pairing**: adenine always pairs with thymine (two hydrogen bonds), and cytosine always pairs with guanine (three hydrogen bonds). This predictable pairing is what makes DNA replication and the reading of genetic information possible.\n\nThe two strands run in opposite directions, described as **antiparallel**, one strand runs 5' to 3', the other runs 3' to 5' alongside it. This antiparallel arrangement matters directly for how DNA polymerase works during replication (see D1.1)."
+      text: "DNA consists of two nucleotide strands wound into a **double helix**, held together by hydrogen bonds between bases on opposite strands, following strict **complementary base pairing**: adenine pairs with thymine, cytosine pairs with guanine. The two strands run in opposite directions to one another, described as antiparallel, which matters directly for how the molecule is copied (see D1.1) and read (see D1.2)."
     },
     {
-      label: "3",
-      heading: "DNA versus RNA",
-      level: "SL",
-      text: "RNA differs from DNA in three consistent ways: it uses the sugar ribose rather than deoxyribose, it is typically single-stranded rather than double-stranded, and it uses the base uracil in place of thymine. These differences are not incidental, RNA's single-stranded, more flexible structure suits its role as a short-lived working copy of genetic information (as in mRNA), rather than DNA's role as a stable, long-term store of it."
+      label: "A1.2.9",
+      heading: "The information capacity of DNA",
+      level: "HL",
+      text: "Because each position along a DNA strand can hold any one of four possible bases, the number of distinct sequences possible even in a short stretch of DNA is astronomically large, and grows exponentially with length. This gives DNA an effectively limitless capacity to store unique genetic information, more than enough to encode the full complexity of any known organism."
+    },
+    {
+      label: "A1.2.11",
+      heading: "Directionality of DNA and RNA",
+      level: "HL",
+      text: "Each strand of DNA or RNA has a chemical direction, one end (the 5' end) has an exposed phosphate group, the other (the 3' end) has an exposed sugar group. This directionality is not just a labelling convention, it determines which end an enzyme like DNA polymerase or RNA polymerase can add new nucleotides to, which is why replication and transcription always proceed in a fixed direction (see D1.1 and D1.2)."
+    },
+    {
+      label: "A1.2.12",
+      heading: "Purine-pyrimidine bonding and helix stability",
+      level: "HL",
+      text: "Adenine and guanine are purines (larger, double-ringed bases), while cytosine, thymine, and uracil are pyrimidines (smaller, single-ringed). Base pairing always occurs between one purine and one pyrimidine, which keeps the width of the double helix constant along its entire length, an important structural requirement for the molecule's overall stability."
+    },
+    {
+      label: "A1.2.13",
+      heading: "Nucleosome structure",
+      level: "HL",
+      text: "In eukaryotes, DNA does not float freely in the nucleus, it is wound around clusters of proteins called histones to form a **nucleosome**, the basic packaging unit of chromatin. This packaging is what allows an enormous length of DNA to be compacted to fit inside a nucleus, and the tightness of that packaging in a given region is also a way of controlling whether the genes in that region are accessible for transcription."
+    },
+    {
+      label: "A1.2.15",
+      heading: "Chargaff's data and complementary base pairing",
+      level: "HL",
+      text: "Before the double helix structure was known, Erwin Chargaff analysed DNA from many different species and found that, in every sample, the amount of adenine always closely matched the amount of thymine, and the amount of cytosine always closely matched the amount of guanine, even though the overall base composition varied between species. This pattern was a key piece of evidence pointing toward complementary base pairing, and was one of the observations Watson and Crick's model had to explain."
     }
   ],
 
   "D1.1": [
     {
-      label: "1",
+      label: "D1.1.1",
+      heading: "What DNA replication is for",
+      level: "SL",
+      text: "**DNA replication** is the process of producing exact copies of a cell's DNA. It happens before both mitosis and meiosis, and it is essential for reproduction, growth, and tissue replacement in multicellular organisms, every new cell needs its own complete, accurate copy of the genome."
+    },
+    {
+      label: "D1.1.2",
       heading: "Semi-conservative replication",
       level: "SL",
-      text: "DNA replication is described as **semi-conservative** because each new DNA molecule ends up with one original (parental) strand and one newly synthesised strand. This was confirmed experimentally by Meselson and Stahl, who used isotope labelling to show that after one round of replication, every DNA molecule was a hybrid of old and new material, ruling out models where the whole original molecule stayed intact or where all four strands mixed together randomly."
+      text: "DNA replication is **semi-conservative**: each resulting DNA molecule contains one original (parental) strand and one newly synthesised strand. This was confirmed experimentally by Meselson and Stahl using isotope labelling. Building the new strand directly against an original strand, using complementary base pairing, is what gives replication its high accuracy, the new strand's sequence is fully determined by the template it was copied from."
     },
     {
-      label: "2",
-      heading: "Unwinding and building the new strand",
+      label: "D1.1.3",
+      heading: "Helicase and DNA polymerase",
       level: "SL",
-      text: "Replication starts when the enzyme **helicase** unwinds the double helix by breaking the hydrogen bonds between base pairs, creating a Y-shaped **replication fork** and exposing two single strands to act as templates.\n\n**DNA polymerase** then builds a new complementary strand by adding free nucleotides opposite each template base, following the same base pairing rules as always (A with T, C with G). DNA polymerase can only add nucleotides in one direction (5' to 3'), which, combined with the antiparallel structure of DNA, is why one new strand is built continuously and the other is built in short, separate fragments that are later joined together."
+      text: "**Helicase** unwinds the double helix by breaking the hydrogen bonds between base pairs, exposing two single strands to act as templates. **DNA polymerase** then builds a new complementary strand by adding free nucleotides opposite each template base, following the same base-pairing rules used throughout DNA and RNA."
     },
     {
-      label: "3",
-      heading: "Accuracy of replication",
+      label: "D1.1.4 / D1.1.5",
+      heading: "PCR and gel electrophoresis",
       level: "SL",
-      text: "DNA polymerase does not just add nucleotides, it also proofreads as it goes, checking that each newly added base is correctly paired with its template base and removing it if not. This proofreading is why replication is remarkably accurate, errors slip through only very rarely, but on the occasions they do, and are not corrected, they become permanent mutations passed on to future generations of cells (see D1.3)."
+      text: "The **polymerase chain reaction (PCR)** is a laboratory technique that amplifies a specific region of DNA, repeatedly copying it using DNA polymerase to generate millions of copies from a tiny starting sample. **Gel electrophoresis** then separates DNA fragments by size, since DNA is negatively charged, fragments move toward a positive electrode through a gel matrix, and smaller fragments move faster and travel further.\n\nTogether, these two techniques underpin many practical applications: forensic DNA profiling, paternity testing, diagnosing genetic conditions, and detecting pathogens, all rely on amplifying a small DNA sample with PCR and then analysing the resulting fragments with gel electrophoresis."
+    },
+    {
+      label: "D1.1.6",
+      heading: "Directionality of DNA polymerase",
+      level: "HL",
+      text: "DNA polymerase can only add new nucleotides to the 3' end of an existing strand, meaning it always builds a new strand in the 5' to 3' direction. Because the two template strands are antiparallel (see A1.2), this single constraint has a major consequence for how replication actually proceeds along the two strands simultaneously (see D1.1.7)."
+    },
+    {
+      label: "D1.1.7",
+      heading: "Leading and lagging strands",
+      level: "HL",
+      text: "At the replication fork, one template strand allows DNA polymerase to synthesise the new strand continuously in the same direction the fork is opening, this is the leading strand. The other template strand runs in the opposite direction, so DNA polymerase must synthesise it discontinuously, in short sections called Okazaki fragments, each started separately and later joined together, this is the lagging strand."
+    },
+    {
+      label: "D1.1.8",
+      heading: "Enzymes of prokaryotic replication",
+      level: "HL",
+      text: "In prokaryotes, replication involves a specific division of labour between enzymes: **primase** lays down a short RNA primer to give DNA polymerase a starting point, **DNA polymerase III** carries out the bulk of new strand synthesis, **DNA polymerase I** replaces the RNA primers with DNA, and **DNA ligase** seals the remaining gaps between fragments (particularly on the lagging strand) by forming the final phosphodiester bonds."
+    },
+    {
+      label: "D1.1.9",
+      heading: "Proofreading and accuracy",
+      level: "HL",
+      text: "DNA polymerase does not just add nucleotides, it also proofreads as it goes, checking that each newly added base correctly pairs with its template base and removing it if not. This built-in proofreading is why replication is remarkably accurate, errors occur only very rarely, and on the occasions that do slip through uncorrected, they become permanent mutations (see D1.3)."
     }
   ],
 
   "D2.1": [
     {
-      label: "1",
-      heading: "The cell cycle",
+      label: "D2.1.1",
+      heading: "New cells from existing cells",
       level: "SL",
-      text: "The cell cycle is the ordered sequence a eukaryotic cell goes through between one division and the next. **Interphase** is by far the longest phase, during which the cell grows, carries out its normal functions, and replicates its DNA in preparation for division. This is followed by **mitosis**, nuclear division, and then **cytokinesis**, division of the cytoplasm into two separate cells.\n\nThe cell cycle is tightly regulated by checkpoints that verify conditions are right (such as DNA being fully and correctly replicated) before the cell is allowed to proceed to the next stage, loss of this regulation is a hallmark of cancer."
+      text: "New cells are produced only by the division of a pre-existing cell, described as the mother cell, into two daughter cells. This is a foundational idea in cell biology: it means every cell in your body, and every cell of every organism, can trace its lineage back through an unbroken chain of divisions."
     },
     {
-      label: "2",
-      heading: "The stages of mitosis",
+      label: "D2.1.2 / D2.1.3",
+      heading: "Cytokinesis in plant and animal cells",
       level: "SL",
-      text: "By the start of mitosis, each chromosome consists of two identical **chromatids**, joined at a **centromere**, produced by DNA replication in interphase. During prophase, chromosomes condense and become visible, and the nuclear envelope breaks down. In metaphase, chromosomes line up along the centre of the cell, attached to **spindle fibres**. In anaphase, the spindle fibres shorten and pull the sister chromatids apart to opposite poles of the cell. In telophase, two new nuclear envelopes form around each set of chromosomes, which then decondense."
+      text: "**Cytokinesis** is the division of the cytoplasm to form two separate cells, and it happens differently depending on cell type. In an animal cell, a contractile ring of actin and myosin filaments pinches the cell membrane inward until it splits in two. In a plant cell, vesicles carrying membrane and cell wall material assemble outward from the centre of the cell to build a new dividing wall.\n\nCytokinesis usually divides the cytoplasm equally, but not always, both daughter cells must receive at least one mitochondrion and any other organelle that can only arise from an existing one, but beyond that minimum, division can be unequal, as in yeast budding or human oogenesis, where one resulting cell receives far more cytoplasm than the other."
     },
     {
-      label: "3",
-      heading: "Cytokinesis and the purpose of mitosis",
+      label: "D2.1.4 / D2.1.5",
+      heading: "Roles and shared features of mitosis and meiosis",
       level: "SL",
-      text: "In animal cells, cytokinesis happens through a ring of actin and myosin filaments that contracts around the middle of the cell, pinching it into two. In plant cells, which have a rigid cell wall, a new cell plate is instead built outward from the centre by vesicles carrying membrane and wall material, eventually fusing with the existing wall to divide the cell.\n\nMitosis produces two genetically identical daughter cells, which makes it essential for growth, for repairing damaged tissue, and for asexual reproduction, but not for producing gametes, which instead requires meiosis (see D3.1)."
+      text: "**Mitosis** produces two genetically identical daughter nuclei and maintains the chromosome number, it underlies growth, tissue repair, and asexual reproduction. **Meiosis** halves the chromosome number and generates genetic diversity, it is specifically used to produce gametes. Despite their different outcomes, both processes share key features: both are preceded by DNA replication, and both involve chromosome condensation and movement organised by a spindle apparatus."
+    },
+    {
+      label: "D2.1.6 / D2.1.7",
+      heading: "The phases of mitosis",
+      level: "SL",
+      text: "In prophase, chromosomes condense and become visible, and the nuclear envelope breaks down. In metaphase, chromosomes line up along the cell's equator, attached to spindle fibres. In anaphase, spindle fibres shorten and pull sister chromatids apart to opposite poles. In telophase, two new nuclear envelopes form around each set of chromosomes. These stages can be identified directly from photomicrographs, based on the visible position and condensation state of the chromosomes."
+    },
+    {
+      label: "D2.1.8 / D2.1.9",
+      heading: "Meiosis as a reduction division",
+      level: "SL",
+      text: "Meiosis is described as a reduction division because it halves the chromosome number, taking a diploid cell through two successive divisions (meiosis I and meiosis II) to produce four haploid cells. In meiosis I, homologous chromosome pairs separate from each other, in meiosis II, sister chromatids separate, similarly to mitosis, this two-step process is what achieves the reduction from diploid to haploid."
+    },
+    {
+      label: "D2.1.10 / D2.1.11",
+      heading: "Non-disjunction and genetic diversity",
+      level: "SL",
+      text: "**Non-disjunction** is the failure of chromosomes (or chromatids) to separate correctly during meiosis, producing gametes with an abnormal chromosome number, in humans this can result in conditions such as Down syndrome (trisomy 21). Separately, meiosis actively generates genetic diversity through two mechanisms: crossing over between homologous chromosomes during meiosis I, which shuffles alleles between them, and the independent assortment of homologous pairs, which randomises which chromosome from each pair ends up in a given gamete."
+    },
+    {
+      label: "D2.1.12 / D2.1.13 / D2.1.14",
+      heading: "The cell cycle and interphase",
+      level: "SL",
+      text: "Multicellular organisms need continual **cell proliferation** for growth and to replace cells lost to normal wear or damage. This happens through the cell cycle, most of which is **interphase**, during which the cell grows, carries out its normal functions, and replicates its DNA, followed by mitosis and cytokinesis. Interphase is itself divided into sub-phases (growth, DNA synthesis, further growth) reflecting these different tasks happening in sequence before the cell is ready to divide."
+    },
+    {
+      label: "D2.1.15",
+      heading: "Cyclins and cell cycle control",
+      level: "HL",
+      text: "Progression through the cell cycle is controlled by proteins called **cyclins**, whose concentrations rise and fall at specific points in the cycle. Cyclins activate enzymes that trigger the next stage of the cycle only once conditions are right, this checkpoint system is what normally prevents a cell from dividing with damaged or incompletely replicated DNA, and its breakdown is a central feature of how cancer develops."
     }
   ],
 
   "B1.2": [
     {
-      label: "1",
-      heading: "Amino acids and peptide bonds",
+      label: "B1.2.1",
+      heading: "The generalised structure of an amino acid",
       level: "SL",
-      text: "An **amino acid** consists of a central carbon bonded to an amino group, a carboxyl group, a hydrogen atom, and a variable side chain (R group) that differs between the 20 amino acids and gives each its distinct chemical properties. Amino acids join through a condensation reaction between the carboxyl group of one and the amino group of the next, forming a **peptide bond** and releasing water. A chain of many amino acids linked this way is a polypeptide."
+      text: "Every **amino acid** shares the same basic structure: a central carbon atom bonded to an amino group, a carboxyl group, a hydrogen atom, and a variable side chain, the **R group**. All 20 amino acids used in proteins share this common core, it is only the R group that differs between them, and that variation is what gives amino acids their distinct chemical properties."
     },
     {
-      label: "2",
-      heading: "Levels of protein structure",
+      label: "B1.2.2",
+      heading: "Forming polypeptides by condensation",
       level: "SL",
-      text: "A protein's **primary structure** is simply the specific sequence of amino acids in the chain, determined directly by the gene that coded for it. This sequence folds into a **secondary structure**, local, repeating patterns such as alpha helices and beta pleated sheets, held together by hydrogen bonds along the backbone.\n\nThe overall three-dimensional shape of a single polypeptide, formed by further folding driven by interactions between the R groups, is its **tertiary structure**. Where a functional protein is made of more than one polypeptide chain bound together, that combined assembly is its **quaternary structure**, haemoglobin, made of four separate polypeptide chains, is a classic example."
+      text: "Amino acids join through a condensation reaction between the carboxyl group of one and the amino group of the next, forming a **peptide bond** and releasing a water molecule. Two linked amino acids form a dipeptide, and longer chains, formed the same way, one bond at a time, are called polypeptides."
     },
     {
-      label: "3",
-      heading: "Protein diversity and denaturation",
+      label: "B1.2.3",
+      heading: "Essential and non-essential amino acids",
       level: "SL",
-      text: "Because the R groups can combine in so many different ways, proteins take on an enormous range of shapes suited to very different jobs: enzymes catalyse reactions, structural proteins like collagen provide strength, transport proteins like haemoglobin carry molecules around the body, and antibodies recognise pathogens.\n\nA protein's function depends entirely on its precise shape, which is why excess heat or extreme pH can **denature** a protein: the bonds maintaining its secondary, tertiary, and quaternary structure break, the protein unfolds, and it usually loses its function permanently, even if the primary structure (the amino acid sequence itself) is left untouched."
+      text: "The human body can synthesise some amino acids itself from other molecules, these are non-essential. Others cannot be synthesised at all and must be obtained directly from the diet, these are essential amino acids. This is why dietary variety matters, particularly for anyone relying heavily on plant proteins, since no single plant source typically supplies every essential amino acid in sufficient quantity."
+    },
+    {
+      label: "B1.2.4",
+      heading: "The near-infinite variety of polypeptides",
+      level: "SL",
+      text: "With 20 different amino acids available and no restriction on the order or length in which they can be joined, the number of possible polypeptide sequences is enormous, even a short chain of just a few amino acids has hundreds of possible combinations, and chains can run to hundreds or thousands of amino acids long. This combinatorial variety is what allows proteins to take on such a wide diversity of forms and functions."
+    },
+    {
+      label: "B1.2.5",
+      heading: "Effect of pH and temperature on protein structure",
+      level: "SL",
+      text: "Every protein has an optimum pH and temperature range in which its structure, and therefore its function, is stable. Moving too far outside that range disrupts the weak bonds holding the protein's three-dimensional shape together, causing it to **denature**, unfold and lose its structure, usually irreversibly. Since most enzymes are proteins, denaturation is why extreme heat or pH so reliably destroys enzyme activity."
+    },
+    {
+      label: "B1.2.6",
+      heading: "Chemical diversity in R-groups",
+      level: "HL",
+      text: "R groups vary enormously in their chemistry, some are non-polar and hydrophobic, others are polar, and some are acidic or basic, carrying a charge at physiological pH. This chemical diversity in the R groups is the underlying reason protein form and function can be so varied, it is what allows different regions of a polypeptide to interact with each other, and with other molecules, in so many different ways."
+    },
+    {
+      label: "B1.2.7",
+      heading: "Primary structure determines conformation",
+      level: "HL",
+      text: "A protein's **primary structure**, the specific linear sequence of amino acids, ultimately determines its entire final three-dimensional shape (its conformation). Because folding is driven by interactions between the R groups along the chain, changing even a single amino acid in the sequence can alter how the chain folds, which is exactly why a single point mutation can sometimes have such a large effect on a protein's function (see D1.2)."
+    },
+    {
+      label: "B1.2.8",
+      heading: "Secondary structure: pleating and coiling",
+      level: "HL",
+      text: "A polypeptide's **secondary structure** consists of local, repeating folding patterns held together by hydrogen bonds along the backbone, an alpha helix, where the chain coils into a spiral, and a beta pleated sheet, where sections of the chain lie alongside each other in a folded, zig-zag arrangement. Most proteins contain a mix of both, along with less regular regions, distributed across the length of the chain."
     }
   ],
 
   "A2.1": [
     {
-      label: "1",
-      heading: "Conditions for the origin of life",
-      level: "SL",
-      text: "Early Earth's atmosphere is thought to have contained little or no free oxygen, along with gases such as methane, ammonia, hydrogen, and water vapour. Laboratory experiments, most famously the Miller-Urey experiment, showed that passing electrical sparks (simulating lightning) through a mixture of these gases could generate simple organic molecules, including amino acids, without any living cells involved, suggesting the basic building blocks of life could plausibly have formed spontaneously under early Earth conditions."
+      label: "A2.1.1",
+      heading: "Why the origin of the first cell is hard to explain",
+      level: "HL",
+      text: "Modern cell theory states that new cells only arise from pre-existing cells, which raises an obvious problem: it cannot explain how the very first cell came to exist, since there was no earlier cell for it to have come from. Explaining the origin of life therefore requires a different kind of explanation, one based on non-living chemistry gradually giving rise to something capable of the basic processes of life."
     },
     {
-      label: "2",
-      heading: "From molecules to the first cells",
-      level: "SL",
-      text: "Getting from simple organic molecules to a living cell requires, among other things, a boundary separating an internal chemical environment from the outside world. A **protobiont** is a simple, self-assembled structure, such as a lipid membrane enclosing a pool of molecules, that shows some cell-like properties (a boundary, some internal chemistry) without yet being fully alive. Protobionts are considered a plausible intermediate step between free-floating organic molecules and the first true, self-replicating cells."
+      label: "A2.1.2",
+      heading: "Conditions on early Earth",
+      level: "HL",
+      text: "Early Earth's atmosphere is thought to have contained little or no free oxygen, along with gases such as methane, ammonia, and water vapour, with volcanic activity and intense ultraviolet radiation providing energy for chemical reactions, since there was no ozone layer to block it. The Miller-Urey experiment showed that passing electrical discharges (simulating lightning) through a comparable gas mixture could generate simple organic molecules, including amino acids, without any living cells involved, demonstrating this kind of chemistry was at least plausible."
     },
     {
-      label: "3",
-      heading: "Endosymbiotic theory",
-      level: "SL",
-      text: "The **endosymbiotic theory** proposes that mitochondria and chloroplasts originated as free-living prokaryotic cells that were engulfed by a larger host cell, and instead of being digested, survived inside it in a mutually beneficial relationship that became permanent over evolutionary time.\n\nThis theory explains several otherwise puzzling features of these organelles: both have their own circular DNA (resembling a prokaryote's chromosome, not the linear DNA of a eukaryotic nucleus), both have their own ribosomes similar in size to prokaryotic ribosomes, and both are surrounded by a double membrane, consistent with one membrane from the original prokaryote and one from the host cell's engulfing vesicle."
+      label: "A2.1.5",
+      heading: "Spontaneous formation of vesicles",
+      level: "HL",
+      text: "Fatty acid molecules placed in water spontaneously coalesce into hollow spherical bilayers, forming simple vesicles, with no biological machinery required, purely as a consequence of their amphipathic chemistry (see B1.1). This step matters because it shows how a boundary separating an internal chemical environment from the surrounding water, a basic requirement for anything resembling a cell, could plausibly have arisen on its own from simple organic molecules."
+    },
+    {
+      label: "A2.1.6",
+      heading: "RNA as the presumed first genetic material",
+      level: "HL",
+      text: "RNA, rather than DNA, is generally presumed to have been the first genetic material, because RNA can both store information (like DNA) and catalyse chemical reactions (like an enzyme), a dual capability DNA does not have. This idea, sometimes called the RNA world hypothesis, offers a way for the very first self-replicating molecules to have functioned before more specialised molecules, DNA for storage and proteins for catalysis, took over those roles separately."
+    },
+    {
+      label: "A2.1.8",
+      heading: "Estimating the age of the first cells",
+      level: "HL",
+      text: "Scientists estimate how long ago the first cells, and the last universal common ancestor (LUCA) of all known life, existed using multiple independent approaches: the fossil record, geochemical evidence in ancient rocks, and molecular clock methods, which estimate elapsed time from the accumulated number of differences between the DNA or protein sequences of living species."
+    },
+    {
+      label: "A2.1.9",
+      heading: "Hydrothermal vents and the last universal common ancestor",
+      level: "HL",
+      text: "Several lines of evidence, including the metabolic chemistry shared broadly across the tree of life, point toward deep-sea hydrothermal vents as a plausible environment for the last universal common ancestor. Vents provide a continuous supply of chemical energy and mineral surfaces that could have catalysed early biochemical reactions, offering a stable, energy-rich setting quite different from the sunlit surface conditions once assumed necessary for life's origin."
     }
   ],
 
@@ -491,22 +707,52 @@ const CONTENT = {
 
   "A2.2": [
     {
-      label: "1",
-      heading: "Prokaryotic and eukaryotic cells",
+      label: "A2.2.1",
+      heading: "The cell as the basic unit of life",
       level: "SL",
-      text: "A **prokaryote** is a cell with no nucleus and no membrane-bound organelles, its DNA lies free in the cytoplasm as a single circular chromosome, and the cell is generally small and structurally simple (bacteria are the main example). A **eukaryote** has a true nucleus enclosing its DNA, along with a range of membrane-bound organelles that divide the cell into specialised compartments, and is typically much larger and more structurally complex than a prokaryotic cell."
+      text: "The **cell** is the smallest structural and functional unit capable of carrying out all the processes of life independently. This is a foundational part of cell theory: every living organism is made of one or more cells, and every life process, metabolism, growth, response, reproduction, happens at the cellular level, even in a large multicellular organism."
     },
     {
-      label: "2",
-      heading: "Key organelles in a eukaryotic cell",
+      label: "A2.2.4",
+      heading: "Features common to all cells",
       level: "SL",
-      text: "The nucleus houses the cell's DNA and controls gene expression. The endoplasmic reticulum, rough (studded with ribosomes, involved in protein synthesis) and smooth (involved in lipid synthesis), forms an extensive internal membrane network. The Golgi apparatus modifies, sorts, and packages proteins and lipids, often for export from the cell. Mitochondria carry out aerobic respiration to generate ATP. Each of these is an **organelle**, a specialised, usually membrane-bound structure with a distinct function within the cell."
+      text: "Despite their diversity, every cell shares a small set of common features: a plasma membrane separating the cell from its environment, cytoplasm in which chemical reactions take place, DNA carrying genetic information, and ribosomes for making proteins. These shared features are strong evidence that all cellular life shares a common evolutionary origin."
     },
     {
-      label: "3",
-      heading: "Why cells are small: surface area to volume ratio",
+      label: "A2.2.5 / A2.2.6",
+      heading: "Prokaryotic and eukaryotic cell structure",
       level: "SL",
-      text: "As a cell grows larger, its volume increases faster than its surface area, since volume scales with the cube of a cell's dimensions while surface area scales only with the square. This falling **surface area to volume ratio** limits how large a cell can get, because the cell membrane is what all nutrients, waste, and gases must cross, past a certain size, the surface area becomes too small relative to the volume of cytoplasm it needs to service, which is a major reason cells divide rather than simply growing indefinitely."
+      text: "A **prokaryotic** cell has no nucleus and no membrane-bound organelles, its DNA lies free in the cytoplasm as a single circular chromosome, and the cell is generally small and structurally simple. A **eukaryotic** cell has a true nucleus enclosing its DNA, along with a range of membrane-bound organelles dividing the cell into specialised compartments, and is typically much larger and more structurally complex."
+    },
+    {
+      label: "A2.2.7",
+      heading: "Life processes in unicellular organisms",
+      level: "SL",
+      text: "A unicellular organism must carry out every process needed for life, nutrition, respiration, excretion, response, and reproduction, within a single cell, since it has no other cells to divide the labour with. This places real constraints on how such a cell can be organised, and is part of why unicellular organisms tend to stay small, to keep their single cell's surface area sufficient for the exchange all these processes require."
+    },
+    {
+      label: "A2.2.8 / A2.2.9",
+      heading: "Diversity and atypical structures in eukaryotic cells",
+      level: "SL",
+      text: "Eukaryotic cells vary structurally between kingdoms, plant cells have a cellulose cell wall, chloroplasts, and a large central vacuole that animal cells lack, while fungal cells have a chitin cell wall rather than a cellulose one. Some eukaryotic cells are also atypical in more specific ways, for example phloem sieve tube elements and mature red blood cells both lack a nucleus, a specialisation that maximises internal space for their specific transport role (see B2.3)."
+    },
+    {
+      label: "A2.2.10 / A2.2.11",
+      heading: "Studying cells with microscopy",
+      level: "SL",
+      text: "Light microscopes allow living cells to be viewed, but their resolution is limited, fine internal detail below about 200 nanometres cannot be distinguished. Electron microscopes offer far higher resolution, revealing the internal structure of organelles in detail, but require cells to be fixed, dehydrated, and viewed in a vacuum, meaning only dead material can be examined. Both types of image need to be interpreted carefully, including drawing and correctly annotating structures from electron micrographs, a core practical skill for this topic."
+    },
+    {
+      label: "A2.2.12",
+      heading: "Origin of eukaryotic cells by endosymbiosis",
+      level: "HL",
+      text: "Mitochondria and chloroplasts are thought to have originated as free-living prokaryotic cells engulfed by a larger host cell, and instead of being digested, survived inside it as an internal symbiont, a relationship that became permanent over evolutionary time. This **endosymbiotic theory** explains otherwise puzzling features of these organelles: both have their own circular DNA and prokaryote-sized ribosomes, and both are enclosed by a double membrane, one layer from the original engulfed prokaryote, one from the host cell's engulfing vesicle."
+    },
+    {
+      label: "A2.2.13",
+      heading: "Cell differentiation",
+      level: "SL",
+      text: "**Cell differentiation** is the process by which genetically identical cells become structurally and functionally specialised, developing into the many distinct tissue types found in a multicellular organism. Since every cell in an organism carries the same DNA, differentiation happens through differences in which genes are actively expressed in each cell, not through any change to the DNA sequence itself (see D2.2)."
     }
   ],
 
@@ -515,19 +761,37 @@ const CONTENT = {
       label: "1",
       heading: "Why compartmentalise?",
       level: "SL",
-      text: "**Compartmentalisation** is the division of a eukaryotic cell into separate membrane-bound regions, each with its own internal chemical environment. This matters because a cell needs to run many reactions simultaneously, including reactions that would interfere with each other if left to happen in the same open space, or that need very different local conditions (such as pH) to work efficiently. Enclosing a set of enzymes and substrates within their own organelle keeps that reaction efficient and prevents it from being disrupted by, or disrupting, everything else happening in the cell."
+      text: "**Compartmentalisation** is the division of a eukaryotic cell into separate membrane-bound regions, each with its own internal chemical environment. This matters because a cell runs many reactions simultaneously, including some that would interfere with each other, or need very different local conditions (such as pH or enzyme concentration), enclosing a set of enzymes and substrates within their own organelle keeps that reaction efficient and isolated from everything else happening in the cell."
     },
     {
       label: "2",
-      heading: "The endomembrane system",
+      heading: "The nucleus",
       level: "SL",
-      text: "Several organelles work together as a connected system for making, modifying, and directing proteins and lipids: rough endoplasmic reticulum, where proteins destined for secretion or membranes are synthesised, feeds into the Golgi apparatus, where those proteins are chemically modified and sorted. Small membrane-bound sacs called **vesicles** bud off from one organelle and fuse with the next, physically transporting material through this pathway without it ever having to cross a membrane directly, ending either at the cell surface membrane for secretion, or at another organelle such as a lysosome."
+      text: "The nucleus is enclosed by a double membrane, the nuclear envelope, perforated by nuclear pores that regulate the movement of molecules (such as mRNA) between the nucleus and cytoplasm. Compartmentalising DNA inside the nucleus, separate from the ribosomes in the cytoplasm, is part of what allows transcription and translation to be controlled as distinct, separately regulated steps in eukaryotic gene expression."
     },
     {
       label: "3",
-      heading: "Mitochondria, chloroplasts, and lysosomes",
+      heading: "The endomembrane system",
       level: "SL",
-      text: "Mitochondria have a folded inner membrane, forming structures called **cristae**, which greatly increases the surface area available for the reactions of aerobic respiration. Chloroplasts have a comparable internal structure adapted for photosynthesis instead. Both organelles compartmentalise a multi-step energy pathway inside a dedicated double-membrane structure, keeping the relevant enzymes and intermediate molecules concentrated together.\n\nA **lysosome** is a vesicle packed with digestive enzymes, used to break down waste material, worn-out organelles, or material engulfed from outside the cell, keeping those enzymes safely contained rather than free in the cytoplasm, where they would otherwise damage the cell's own healthy components."
+      text: "Several organelles work together as a connected system for making, modifying, and directing proteins and lipids. Rough endoplasmic reticulum, where proteins destined for secretion or membranes are synthesised, feeds into the Golgi apparatus, where those proteins are chemically modified, sorted, and packaged. Small membrane-bound **vesicles** bud off from one organelle and fuse with the next, physically moving material through this pathway without it ever needing to cross a membrane directly."
+    },
+    {
+      label: "4",
+      heading: "Mitochondria and chloroplasts",
+      level: "SL",
+      text: "Mitochondria have a folded inner membrane, forming structures called **cristae**, which greatly increases the surface area available for the reactions of aerobic respiration (see C1.2). Chloroplasts have a comparable internal structure, thylakoid membranes stacked into grana, adapted for the reactions of photosynthesis (see C1.3) instead. Both organelles compartmentalise a multi-step energy pathway inside a dedicated double-membrane structure, keeping the relevant enzymes and intermediates concentrated together."
+    },
+    {
+      label: "5",
+      heading: "Lysosomes and vesicular digestion",
+      level: "SL",
+      text: "A **lysosome** is a vesicle packed with digestive enzymes, used to break down waste material, worn-out organelles, or material engulfed from outside the cell. Keeping these enzymes enclosed inside a lysosome, rather than free in the cytoplasm, protects the rest of the cell's own components from being digested."
+    },
+    {
+      label: "6",
+      heading: "Free and bound ribosomes",
+      level: "HL",
+      text: "Ribosomes are not membrane-bound organelles themselves, but their location matters: free ribosomes, floating in the cytoplasm, synthesise proteins that will stay and function within the cytoplasm, while ribosomes bound to the rough endoplasmic reticulum synthesise proteins destined for secretion, for insertion into a membrane, or for packaging into a lysosome. Which type of ribosome a given mRNA is translated on depends on a signal sequence at the start of the protein being made."
     }
   ],
 
@@ -536,19 +800,37 @@ const CONTENT = {
       label: "1",
       heading: "An overview of cell respiration",
       level: "SL",
-      text: "Cell respiration is the controlled release of energy from organic molecules (usually glucose) to produce **ATP**, the molecule cells use as their immediate, usable energy currency. In eukaryotes, aerobic respiration happens in stages: glycolysis in the cytoplasm, followed by the link reaction, the **Krebs cycle**, and the **electron transport chain**, all inside the mitochondrion. Each stage extracts a bit more of the energy originally stored in glucose, most of the ATP is actually generated at the final stage, the electron transport chain."
+      text: "Cell respiration is the controlled release of energy from organic molecules (usually glucose) to produce **ATP**, the molecule cells use as their immediate, usable energy currency. In eukaryotes, aerobic respiration happens in stages: **glycolysis** in the cytoplasm, followed by the link reaction, the **Krebs cycle**, and the **electron transport chain**, all inside the mitochondrion. Each stage extracts a little more of the energy originally stored in glucose, and most of the ATP is actually generated at the final stage, the electron transport chain."
     },
     {
       label: "2",
       heading: "Aerobic versus anaerobic respiration",
       level: "SL",
-      text: "**Aerobic respiration** requires oxygen as the final electron acceptor at the end of the electron transport chain, and it releases far more ATP per glucose molecule than anaerobic respiration does. **Anaerobic respiration** happens when oxygen is unavailable, and in human muscle cells this means glycolysis continues but pyruvate is converted to lactate instead of entering the mitochondrion, regenerating the NAD needed to keep glycolysis running, but yielding a much smaller amount of ATP overall, and only sustainable for a limited time before lactate build-up becomes a problem."
+      text: "**Aerobic respiration** requires oxygen as the final electron acceptor at the end of the electron transport chain, and releases far more ATP per glucose molecule than anaerobic respiration does. **Anaerobic respiration** happens when oxygen is unavailable, glycolysis continues, but in human muscle cells pyruvate is converted to lactate rather than entering the mitochondrion, regenerating the NAD needed to keep glycolysis running, but yielding a much smaller amount of ATP overall, and sustainable for only a limited time before lactate build-up becomes a problem."
     },
     {
       label: "3",
+      heading: "Glycolysis",
+      level: "SL",
+      text: "**Glycolysis** splits a six-carbon glucose molecule into two three-carbon pyruvate molecules, in a sequence of enzyme-catalysed reactions in the cytoplasm. It produces a small net yield of ATP directly, and also generates reduced NAD, which carries captured energy forward into later stages of aerobic respiration, or is regenerated by fermentation to lactate or ethanol when oxygen is unavailable."
+    },
+    {
+      label: "4",
       heading: "Measuring respiration rate",
       level: "SL",
-      text: "Respiration rate can be measured experimentally using a respirometer, a sealed chamber containing respiring organisms (such as germinating seeds) connected to a fluid-filled tube with a moving marker. Since respiration consumes oxygen and produces carbon dioxide in roughly similar volumes, a chemical like soda lime is included to absorb the CO2 produced, so that only the oxygen consumption causes a measurable pressure change, pulling the marker toward the respiring organisms and allowing the rate of oxygen uptake to be measured directly."
+      text: "Respiration rate can be measured experimentally using a respirometer, a sealed chamber containing respiring organisms (such as germinating seeds) connected to a fluid-filled tube with a moving marker. Since respiration consumes oxygen and produces carbon dioxide in roughly similar volumes, a chemical like soda lime is included to absorb the CO2 produced, so that only oxygen consumption causes a measurable pressure change, pulling the marker toward the respiring organisms and allowing the rate of oxygen uptake to be measured directly."
+    },
+    {
+      label: "5",
+      heading: "The link reaction and the Krebs cycle",
+      level: "HL",
+      text: "Before entering the Krebs cycle, each pyruvate molecule is converted to acetyl-CoA in the link reaction, releasing carbon dioxide and reducing more NAD. The **Krebs cycle** then fully oxidises the carbon skeleton, releasing the remaining carbon as carbon dioxide, while generating further reduced NAD and reduced FAD, along with a small direct yield of ATP, the reduced NAD and FAD produced here carry the bulk of glucose's original energy forward to the electron transport chain."
+    },
+    {
+      label: "6",
+      heading: "The electron transport chain and oxidative phosphorylation",
+      level: "HL",
+      text: "Reduced NAD and FAD deliver their electrons to a series of protein complexes in the inner mitochondrial membrane, the **electron transport chain**. As electrons pass along the chain, energy released is used to pump hydrogen ions across the inner membrane, building a concentration gradient. Those hydrogen ions then flow back through ATP synthase, driving the synthesis of large amounts of ATP, a process called oxidative phosphorylation, oxygen's role is to accept electrons at the very end of the chain, which is why aerobic respiration depends on it so heavily."
     }
   ],
 
@@ -557,27 +839,38 @@ const CONTENT = {
       label: "1",
       heading: "An overview of photosynthesis",
       level: "SL",
-      text: "Photosynthesis converts light energy into the chemical energy stored in glucose, using carbon dioxide and water as raw materials and releasing oxygen as a by-product. It happens in two linked stages inside the chloroplast: the light-dependent reactions, which capture light energy, and the light-independent reactions (the Calvin cycle), which use that captured energy to build organic molecules from carbon dioxide."
+      text: "Photosynthesis converts light energy into the chemical energy stored in glucose, using carbon dioxide and water as raw materials and releasing oxygen as a by-product. It happens in two linked stages inside the chloroplast: the light-dependent reactions, which capture light energy, and the light-independent reactions (the **Calvin cycle**), which use that captured energy to build organic molecules from carbon dioxide."
     },
     {
       label: "2",
       heading: "The light-dependent reactions",
       level: "SL",
-      text: "In the light-dependent reactions, **chlorophyll** and other pigments absorb light energy, which drives **photolysis**, the splitting of water molecules into oxygen (released as a waste product), hydrogen ions, and electrons. That captured energy is used to generate ATP and reduced NADP, both of which are then carried forward to power the light-independent reactions."
+      text: "In the light-dependent reactions, **chlorophyll** and other pigments absorb light energy, which drives **photolysis**, the splitting of water molecules into oxygen (released as a waste product), hydrogen ions, and electrons. That captured energy is used to generate ATP and reduced NADP, both of which are carried forward to power the light-independent reactions."
     },
     {
       label: "3",
       heading: "The light-independent reactions (Calvin cycle)",
       level: "SL",
-      text: "In the **Calvin cycle**, carbon dioxide is incorporated into an existing organic molecule in a process called **carbon fixation**, catalysed by the enzyme Rubisco. Using the ATP and reduced NADP supplied by the light-dependent reactions, this fixed carbon is progressively converted into glycerate-3-phosphate, then triose phosphate, some of which is used to regenerate the starting molecule (RuBP) so the cycle can continue, and some of which is exported to build glucose and other organic molecules the plant needs."
+      text: "In the Calvin cycle, carbon dioxide is incorporated into an existing organic molecule in a process called **carbon fixation**, catalysed by the enzyme Rubisco. Using the ATP and reduced NADP supplied by the light-dependent reactions, this fixed carbon is progressively converted into glycerate-3-phosphate, then triose phosphate, some of which regenerates the starting molecule (RuBP) so the cycle can continue, and some of which is exported to build glucose and other organic molecules the plant needs."
     },
     {
       label: "4",
       heading: "Limiting factors of photosynthesis",
       level: "SL",
-      text: "The rate of photosynthesis at any moment is constrained by whichever factor is currently in shortest supply relative to the others, a **limiting factor**. Light intensity, carbon dioxide concentration, and temperature are the three main limiting factors: increasing whichever one is currently most limiting will increase the rate, but increasing a factor that is not currently limiting will have little to no effect, since some other factor is now holding the rate back instead."
+      text: "The rate of photosynthesis at any moment is constrained by whichever factor is currently in shortest supply relative to the others, a **limiting factor**. Light intensity, carbon dioxide concentration, and temperature are the three main limiting factors, increasing whichever one is currently most limiting will increase the rate, but increasing a factor that is not currently limiting will have little to no effect, since some other factor is now holding the rate back instead."
+    },
+    {
+      label: "5",
+      heading: "Photosystems and the light-dependent reactions in detail",
+      level: "HL",
+      text: "Pigments are organised into **photosystems** embedded in the thylakoid membrane, each acting as a light-harvesting antenna that funnels absorbed energy to a reaction centre. Electrons excited by that energy pass along an electron transport chain, driving hydrogen ions across the thylakoid membrane to build a concentration gradient. Those hydrogen ions flow back through ATP synthase, producing ATP by chemiosmosis, a process closely paralleling the electron transport chain used in respiration (see C1.2)."
+    },
+    {
+      label: "6",
+      heading: "Factors affecting the rate in more depth",
+      level: "HL",
+      text: "Beyond simply identifying which factor is currently limiting, the relationship between each factor and photosynthetic rate can be analysed quantitatively, for example using graphs of rate against light intensity at different CO2 concentrations to identify exactly where the limiting factor shifts from one variable to another. This kind of graph interpretation, reading where a curve plateaus and reasoning about why, is a core applied skill for this topic."
     }
   ]
-
 };
 
