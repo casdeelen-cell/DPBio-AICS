@@ -221,7 +221,113 @@ const WORDBANK = {
     { term: "Chlorophyll", definition: "The main pigment that absorbs light energy for photosynthesis." },
     { term: "Photosystem", definition: "A light-harvesting cluster of pigments in the thylakoid membrane that funnels energy to a reaction centre." },
     { term: "Rubisco", definition: "The enzyme that catalyses carbon fixation in the Calvin cycle." }
-  ]
+  ],
+  "B2.3": [
+    { term: "Differentiation", definition: "The process by which an unspecialised cell becomes structurally and biochemically specialised for a particular role." },
+    { term: "Morphogen", definition: "A signalling chemical released from a source in the embryo that forms a concentration gradient, giving cells positional information." },
+    { term: "Stem cell", definition: "An unspecialised cell capable of self-renewal and of differentiating into one or more specialised cell types." },
+    { term: "Totipotent", definition: "Able to differentiate into any cell type, including extra-embryonic tissues such as the placenta." },
+    { term: "Pluripotent", definition: "Able to differentiate into any of the body's cell types, but not extra-embryonic tissue." },
+    { term: "Multipotent", definition: "Able to differentiate into a limited range of related cell types within one tissue lineage." },
+    { term: "Stem cell niche", definition: "A specific microenvironment that keeps stem cells in an undifferentiated, self-renewing state." },
+    { term: "Surface area to volume ratio", definition: "The amount of surface a cell has relative to its volume, which falls as a cell gets larger and limits exchange with its surroundings." },
+    { term: "Surfactant", definition: "A substance produced by type II pneumocytes that reduces surface tension in the alveoli, preventing them from collapsing." }
+  ],
+
+  "D2.2": [
+    { term: "Gene expression", definition: "The process by which the information in a gene affects the phenotype, usually via transcription and translation." },
+    { term: "Transcriptome", definition: "The complete set of genes transcribed into mRNA in a particular cell at a particular time." },
+    { term: "Proteome", definition: "The complete set of proteins produced by a particular cell." },
+    { term: "Transcription factor", definition: "A protein that binds to specific DNA sequences to regulate the transcription of a gene." },
+    { term: "Epigenesis", definition: "The process by which stable, heritable patterns of gene expression establish differentiated cell types without changing the DNA sequence." },
+    { term: "Epigenetic tag", definition: "A chemical marker, such as a methyl group, added to DNA or histones that influences gene expression." },
+    { term: "Epigenetic inheritance", definition: "A heritable change in gene expression that occurs without any change to the underlying DNA sequence." },
+    { term: "Genomic imprinting", definition: "A pattern in which a gene is expressed from only one parental copy, because its epigenetic tags survive reprogramming in the gametes." }
+  ],
+
+  "D1.3": [
+    { term: "Gene mutation", definition: "A change in the base sequence of DNA." },
+    { term: "Substitution", definition: "A mutation in which one nucleotide is replaced by another." },
+    { term: "Frameshift", definition: "A shift in the reading frame of mRNA caused by an insertion or deletion that is not a multiple of three nucleotides." },
+    { term: "Silent mutation", definition: "A mutation that changes a codon but not the amino acid it specifies." },
+    { term: "Missense mutation", definition: "A mutation that changes a codon to specify a different amino acid." },
+    { term: "Nonsense mutation", definition: "A mutation that changes a codon into a premature stop codon." },
+    { term: "Mutagen", definition: "A physical or chemical agent that increases the rate of mutation." },
+    { term: "Gene knockout", definition: "A technique for investigating gene function by deliberately disabling a gene." },
+    { term: "CRISPR-Cas9", definition: "A gene editing system, adapted from a bacterial antiviral defence, that uses a guide RNA to direct the Cas9 enzyme to cut DNA at a specific target sequence." },
+    { term: "Conserved sequence", definition: "A DNA sequence that remains almost identical across many species or over long evolutionary time." }
+  ],
+
+  "D3.1": [
+    { term: "Meiosis", definition: "Cell division that produces haploid gametes from a diploid parent cell, generating genetic variation." },
+    { term: "Independent assortment", definition: "The random separation of homologous chromosome pairs during meiosis I." },
+    { term: "Crossing over", definition: "The exchange of segments between homologous chromosomes during meiosis, increasing genetic variation." },
+    { term: "Fallopian tube", definition: "The tube connecting an ovary to the uterus, and the usual site of fertilisation." },
+    { term: "Follicle-stimulating hormone (FSH)", definition: "A pituitary hormone that stimulates the development of ovarian follicles." },
+    { term: "Luteinising hormone (LH)", definition: "A pituitary hormone whose surge triggers ovulation." },
+    { term: "Corpus luteum", definition: "The structure formed from a ruptured ovarian follicle, which secretes progesterone." },
+    { term: "Acrosome", definition: "A structure at the tip of a sperm cell containing enzymes that help it penetrate the egg." },
+    { term: "In vitro fertilisation (IVF)", definition: "A fertility treatment in which hormones are used to control egg production so eggs can be collected and fertilised outside the body." }
+  ],
+
+  "D3.2": [
+    { term: "Genotype", definition: "The combination of alleles an organism has inherited for a gene." },
+    { term: "Phenotype", definition: "The observable trait resulting from genotype and, often, environmental factors." },
+    { term: "Dominant allele", definition: "An allele that produces its phenotype whenever it is present." },
+    { term: "Recessive allele", definition: "An allele that only produces its phenotype when present in two copies." },
+    { term: "Phenotypic plasticity", definition: "The capacity of one genotype to produce different phenotypes in different environments." },
+    { term: "Single-nucleotide polymorphism (SNP)", definition: "A difference at a single base position in the DNA sequence, common across a population's genome." },
+    { term: "Codominance", definition: "A pattern in which both alleles of a heterozygote are fully expressed in the phenotype." },
+    { term: "Incomplete dominance", definition: "A pattern in which a heterozygote shows a phenotype intermediate between the two homozygous phenotypes." },
+    { term: "Sex-linked", definition: "Describes a gene carried on a sex chromosome, typically the X chromosome." },
+    { term: "Pedigree chart", definition: "A diagram tracing the presence of a trait across generations of a family." },
+    { term: "Polygenic", definition: "Controlled by the combined effect of many genes, often producing continuous variation." },
+    { term: "Dihybrid cross", definition: "A genetic cross tracking the inheritance of two unlinked genes at once." },
+    { term: "Locus", definition: "The fixed position of a gene on a chromosome." }
+  ],
+
+  "A3.1": [
+    { term: "Species", definition: "A group of organisms sharing common traits and, under the biological species concept, able to interbreed to produce fertile offspring." },
+    { term: "Binomial nomenclature", definition: "The two-part naming system for species, combining genus and species names." },
+    { term: "Genus", definition: "A group of closely related species, forming the first part of a binomial name." },
+    { term: "Karyotyping", definition: "The technique of classifying the chromosomes of a cell by number, length, banding pattern, and centromere position." },
+    { term: "Karyogram", definition: "The organised visual display of a cell's chromosomes produced by karyotyping." },
+    { term: "Genome", definition: "The entire set of genetic information carried by an organism." },
+    { term: "Whole genome sequencing", definition: "Determining the complete DNA sequence of an organism." },
+    { term: "Horizontal gene transfer", definition: "The movement of genetic material between organisms other than by reproduction, common in bacteria." },
+    { term: "Environmental DNA (eDNA)", definition: "Genetic material shed by organisms into their surroundings, used to detect which species are present in a habitat." },
+    { term: "Dichotomous key", definition: "An identification tool built from paired either/or statements about observable features." }
+  ],
+
+  "B4.1": [
+    { term: "Habitat", definition: "The place in which a community, species, population, or organism lives." },
+    { term: "Adaptation", definition: "An inherited trait that increases an organism's chance of survival and reproduction in its environment." },
+    { term: "Range of tolerance", definition: "The band of values of an abiotic factor within which a species can survive." },
+    { term: "Transect", definition: "A line laid across a habitat along which measurements are taken at regular intervals." },
+    { term: "Biome", definition: "A large-scale category of ecosystem defined by climate and characteristic vegetation and animal life." },
+    { term: "Convergent evolution", definition: "The independent evolution of similar traits in unrelated species facing similar selection pressures." }
+  ],
+
+  "D4.1": [
+    { term: "Natural selection", definition: "The process by which heritable traits that improve survival and reproduction become more common in a population over generations." },
+    { term: "Overproduction", definition: "The production of more offspring than the environment can support, leading to competition." },
+    { term: "Selection pressure", definition: "Any environmental factor causing differential survival and reproduction within a population." },
+    { term: "Fitness", definition: "An individual's combined survival value and reproductive potential." },
+    { term: "Heritable", definition: "Capable of being passed from parent to offspring via DNA." },
+    { term: "Sexual selection", definition: "A form of natural selection in which the advantage comes from increased mating success rather than survival." }
+  ],
+
+  "A4.1": [
+    { term: "Evolution", definition: "Change in the heritable characteristics of a population over time." },
+    { term: "Homologous structures", definition: "Structures with a similar underlying anatomy but different functions, indicating common ancestry." },
+    { term: "Analogous structures", definition: "Structures with similar functions but different evolutionary origins, arising from convergent evolution." },
+    { term: "Speciation", definition: "The process by which new species arise, requiring reproductive isolation between populations." },
+    { term: "Reproductive isolation", definition: "The inability of two populations to successfully interbreed." },
+    { term: "Allopatric speciation", definition: "Speciation driven by geographic isolation between populations." },
+    { term: "Sympatric speciation", definition: "Speciation occurring without geographic separation, e.g. via behavioural or temporal isolation." },
+    { term: "Adaptive radiation", definition: "The rapid evolution of many new species from a single ancestral species, each adapted to a different niche." },
+    { term: "Polyploidy", definition: "Carrying more than two complete sets of chromosomes, a mechanism of rapid speciation in plants." }
+  ],
 
 };
 
@@ -244,5 +350,13 @@ const FUN_FACTS = {
   "A2.2": "If a typical animal cell were scaled up to the size of a football stadium, a mitochondrion inside it would be roughly the size of a car.",
   "B2.2": "Lysosomes were nicknamed 'suicide bags' by their discoverer, since a ruptured lysosome can trigger the breakdown of the entire cell.",
   "C1.2": "Your body recycles its own body weight in ATP every single day, constantly making and breaking it down rather than storing large reserves.",
-  "C1.3": "The oxygen you're breathing right now was, at some point, released by photolysis in a photosynthesising organism."
+  "C1.3": "The oxygen you're breathing right now was, at some point, released by photolysis in a photosynthesising organism.",
+  "B2.3": "There are roughly 220 recognised specialised cell types in the human body, all descended from a single fertilised egg.",
+  "D2.2": "Identical twins share essentially the same DNA sequence at birth, but their epigenetic tags, and therefore their gene expression, drift apart measurably as they age.",
+  "D1.3": "CRISPR-Cas9 exists in nature as a bacterial immune system, bacteria use it to remember and destroy the DNA of viruses that infected their ancestors.",
+  "D3.1": "A single ejaculation contains tens of millions of sperm, yet typically only one ever fertilises the egg.",
+  "A3.1": "Humans and chimpanzees have different chromosome numbers, 46 versus 48, because two ancestral ape chromosomes fused end to end at some point in human evolutionary history to form human chromosome 2.",
+  "B4.1": "Cacti in the Americas and many euphorbias in Africa look strikingly alike despite having no close common ancestor, a textbook case of convergent evolution driven by nearly identical desert selection pressures.",
+  "D4.1": "Peacock tails, a favourite example of sexual selection, are metabolically costly and make their owners more visible to predators, yet persist because they measurably improve mating success.",
+  "A4.1": "Darwin's finches on the Galápagos are thought to have radiated from a single ancestral species into more than a dozen, each with a beak shaped for a different food source."
 };

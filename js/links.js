@@ -192,9 +192,84 @@ const LINKS = {
       { label: "C1.3 Photosynthesis", url: "https://www.youtube.com/watch?v=I6hn6eiF5bI" }
     ],
     formative: ""
+  },
+
+  "B2.3": {
+    slides: "",
+    videos: [
+      { label: "B2.3 Cell Specialisation", url: "https://www.youtube.com/watch?v=86EDjDREYbk" }
+    ],
+    formative: ""
+  },
+
+  "D2.2": {
+    slides: "",
+    videos: [
+      { label: "D2.2 HL Genetic Expression", url: "https://www.youtube.com/watch?v=0mHb3Y5Z4A4" }
+    ],
+    formative: ""
+  },
+
+  "D1.3": {
+    slides: "",
+    videos: [
+      { label: "D1.3 Mutations", url: "https://www.youtube.com/watch?v=HdM5tXf7M-E" }
+    ],
+    formative: ""
+  },
+
+  "D3.1": {
+    slides: "",
+    videos: [
+      { label: "D3.1 Plant Reproduction (Part 1)", url: "https://www.youtube.com/watch?v=s7fbzKjr7aM" },
+      { label: "D3.1 Human and Animal Reproduction (Part 2)", url: "https://www.youtube.com/watch?v=nnPd6FVpPvE" }
+    ],
+    formative: ""
+  },
+
+  "D3.2": {
+    slides: "",
+    videos: [
+      { label: "D3.2 Principles of Inheritance (Part 1)", url: "https://www.youtube.com/watch?v=YRCCuPvOA0s" },
+      { label: "D3.2 Analysis of Inheritance Patterns (Part 2)", url: "https://www.youtube.com/watch?v=63zX_oDU_P8" },
+      { label: "D3.2 Applications in Inheritance (Part 3)", url: "https://www.youtube.com/watch?v=TJgbnxKXvEk" }
+    ],
+    formative: ""
+  },
+
+  "A3.1": {
+    slides: "",
+    videos: [
+      { label: "A3.1 Genetic Diversity", url: "https://www.youtube.com/watch?v=zzDl_6eKg2c" }
+    ],
+    formative: ""
+  },
+
+  "B4.1": {
+    slides: "",
+    videos: [
+      { label: "B4.1 Adaptations to the Environment", url: "https://www.youtube.com/watch?v=dcr6HKLvRiM" }
+    ],
+    formative: ""
+  },
+
+  "D4.1": {
+    slides: "",
+    videos: [
+      { label: "D4.1 Natural Selection", url: "https://www.youtube.com/watch?v=Rg8TwlaJZFI" }
+    ],
+    formative: ""
+  },
+
+  "A4.1": {
+    slides: "",
+    videos: [
+      { label: "A4.1 Evolution and Speciation", url: "https://www.youtube.com/watch?v=lxVWFERge-I" }
+    ],
+    formative: ""
   }
 
   // Add the rest of your 40 topics down here the same way, e.g.:
-  // "D2.2": { slides: "", videos: [{ label: "D2.2 Gene Expression", url: "" }], formative: "" },
+  // "B4.2": { slides: "", videos: [{ label: "B4.2 Ecological Niches", url: "" }], formative: "" },
 
 };
