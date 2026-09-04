@@ -758,118 +758,130 @@ const CONTENT = {
 
   "B2.2": [
     {
-      label: "1",
-      heading: "Why compartmentalise?",
+      label: "B2.2.1",
+      heading: "What counts as an organelle",
       level: "SL",
-      text: "**Compartmentalisation** is the division of a eukaryotic cell into separate membrane-bound regions, each with its own internal chemical environment. This matters because a cell runs many reactions simultaneously, including some that would interfere with each other, or need very different local conditions (such as pH or enzyme concentration), enclosing a set of enzymes and substrates within their own organelle keeps that reaction efficient and isolated from everything else happening in the cell."
+      text: "An **organelle** is a discrete, separate subunit of a cell, adapted by its structure to perform one or more specific functions. The nucleus, vesicles, ribosomes, and the plasma membrane all count as organelles by this definition. The cell wall, cytoskeleton, and general cytoplasm do not, they lack a specific, discrete function of their own, and instead provide support or serve as the general matrix the rest of the cell operates within."
     },
     {
-      label: "2",
-      heading: "The nucleus",
+      label: "B2.2.2",
+      heading: "The advantage of compartmentalising the cytoplasm",
       level: "SL",
-      text: "The nucleus is enclosed by a double membrane, the nuclear envelope, perforated by nuclear pores that regulate the movement of molecules (such as mRNA) between the nucleus and cytoplasm. Compartmentalising DNA inside the nucleus, separate from the ribosomes in the cytoplasm, is part of what allows transcription and translation to be controlled as distinct, separately regulated steps in eukaryotic gene expression."
+      text: "Enclosing part of the cytoplasm inside its own organelle lets a cell concentrate specific enzymes and substrates in one place, increasing the efficiency of that particular reaction, while also isolating potentially harmful processes from the rest of the cell. Lysosomes illustrate this well: their digestive enzymes are kept safely contained rather than free in the cytoplasm, where they would damage the cell's own components. Phagocytic vacuoles apply the same principle to material engulfed from outside the cell, keeping it enclosed while it is broken down."
     },
     {
-      label: "3",
-      heading: "The endomembrane system",
+      label: "B2.2.3",
+      heading: "Separating the nucleus from the cytoplasm",
       level: "SL",
-      text: "Several organelles work together as a connected system for making, modifying, and directing proteins and lipids. Rough endoplasmic reticulum, where proteins destined for secretion or membranes are synthesised, feeds into the Golgi apparatus, where those proteins are chemically modified, sorted, and packaged. Small membrane-bound **vesicles** bud off from one organelle and fuse with the next, physically moving material through this pathway without it ever needing to cross a membrane directly."
+      text: "Keeping DNA inside the nucleus, physically separate from the ribosomes in the cytoplasm, gives a eukaryotic cell an advantage in controlling protein synthesis: transcription and translation become two distinct, separately regulated steps rather than one continuous process. This separation is part of what allows eukaryotic cells to modify and control an mRNA transcript (see D1.2) before it ever reaches a ribosome, a level of control prokaryotic cells, which lack this compartmentalisation, do not have."
     },
     {
-      label: "4",
-      heading: "Mitochondria and chloroplasts",
-      level: "SL",
-      text: "Mitochondria have a folded inner membrane, forming structures called **cristae**, which greatly increases the surface area available for the reactions of aerobic respiration (see C1.2). Chloroplasts have a comparable internal structure, thylakoid membranes stacked into grana, adapted for the reactions of photosynthesis (see C1.3) instead. Both organelles compartmentalise a multi-step energy pathway inside a dedicated double-membrane structure, keeping the relevant enzymes and intermediates concentrated together."
-    },
-    {
-      label: "5",
-      heading: "Lysosomes and vesicular digestion",
-      level: "SL",
-      text: "A **lysosome** is a vesicle packed with digestive enzymes, used to break down waste material, worn-out organelles, or material engulfed from outside the cell. Keeping these enzymes enclosed inside a lysosome, rather than free in the cytoplasm, protects the rest of the cell's own components from being digested."
-    },
-    {
-      label: "6",
-      heading: "Free and bound ribosomes",
+      label: "B2.2.4",
+      heading: "Mitochondrial structure and ATP production",
       level: "HL",
-      text: "Ribosomes are not membrane-bound organelles themselves, but their location matters: free ribosomes, floating in the cytoplasm, synthesise proteins that will stay and function within the cytoplasm, while ribosomes bound to the rough endoplasmic reticulum synthesise proteins destined for secretion, for insertion into a membrane, or for packaging into a lysosome. Which type of ribosome a given mRNA is translated on depends on a signal sequence at the start of the protein being made."
+      text: "The mitochondrion's structure closely matches its role in aerobic respiration (see C1.2). Its double membrane encloses a matrix containing the enzymes of the Krebs cycle at a high, useful concentration. Its inner membrane is folded into **cristae**, dramatically increasing the surface area available for the electron transport chain and ATP synthase. And the narrow intermembrane space between the two membranes allows a steep hydrogen ion gradient to build up quickly during chemiosmosis, exactly what's needed to drive efficient ATP synthesis."
     }
   ],
 
   "C1.2": [
     {
-      label: "1",
-      heading: "An overview of cell respiration",
+      label: "C1.2.1",
+      heading: "ATP as the energy currency of the cell",
       level: "SL",
-      text: "Cell respiration is the controlled release of energy from organic molecules (usually glucose) to produce **ATP**, the molecule cells use as their immediate, usable energy currency. In eukaryotes, aerobic respiration happens in stages: **glycolysis** in the cytoplasm, followed by the link reaction, the **Krebs cycle**, and the **electron transport chain**, all inside the mitochondrion. Each stage extracts a little more of the energy originally stored in glucose, and most of the ATP is actually generated at the final stage, the electron transport chain."
+      text: "**ATP** (adenosine triphosphate) is a nucleotide made of an adenine base, a ribose sugar, and three phosphate groups. Its structure makes it ideally suited as a cell's immediate energy currency: the bonds between its phosphate groups release a usable amount of energy when broken, small enough to be released in manageable amounts, but large enough to actually drive a reaction, and ATP can be regenerated and reused repeatedly rather than used up once."
     },
     {
-      label: "2",
-      heading: "Aerobic versus anaerobic respiration",
+      label: "C1.2.2 / C1.2.3",
+      heading: "What ATP is used for, and the ATP-ADP cycle",
       level: "SL",
-      text: "**Aerobic respiration** requires oxygen as the final electron acceptor at the end of the electron transport chain, and releases far more ATP per glucose molecule than anaerobic respiration does. **Anaerobic respiration** happens when oxygen is unavailable, glycolysis continues, but in human muscle cells pyruvate is converted to lactate rather than entering the mitochondrion, regenerating the NAD needed to keep glycolysis running, but yielding a much smaller amount of ATP overall, and sustainable for only a limited time before lactate build-up becomes a problem."
+      text: "ATP supplies energy for essentially every energy-requiring process in a cell: active transport across membranes, the synthesis of macromolecules (anabolism), and the movement of structures within or by the cell, from chromosome movement during division to whole-cell locomotion. Energy is released when ATP is hydrolysed to ADP and an inorganic phosphate, and that energy is put back in, regenerating ATP, when a phosphate group is reattached to ADP, this continuous interconversion between ATP and ADP is how energy is shuttled around a cell as needed."
     },
     {
-      label: "3",
-      heading: "Glycolysis",
+      label: "C1.2.4",
+      heading: "Cell respiration as an ATP-generating system",
       level: "SL",
-      text: "**Glycolysis** splits a six-carbon glucose molecule into two three-carbon pyruvate molecules, in a sequence of enzyme-catalysed reactions in the cytoplasm. It produces a small net yield of ATP directly, and also generates reduced NAD, which carries captured energy forward into later stages of aerobic respiration, or is regenerated by fermentation to lactate or ethanol when oxygen is unavailable."
+      text: "**Cell respiration** is the system of reactions that generates ATP by releasing the chemical energy stored in carbon compounds, typically glucose. Rather than releasing all of that energy in one uncontrolled step, respiration breaks it down into a sequence of smaller, enzyme-controlled reactions, which allows the energy to be captured efficiently, as ATP, rather than being lost as heat all at once."
     },
     {
-      label: "4",
-      heading: "Measuring respiration rate",
+      label: "C1.2.5",
+      heading: "Aerobic versus anaerobic respiration in humans",
       level: "SL",
-      text: "Respiration rate can be measured experimentally using a respirometer, a sealed chamber containing respiring organisms (such as germinating seeds) connected to a fluid-filled tube with a moving marker. Since respiration consumes oxygen and produces carbon dioxide in roughly similar volumes, a chemical like soda lime is included to absorb the CO2 produced, so that only oxygen consumption causes a measurable pressure change, pulling the marker toward the respiring organisms and allowing the rate of oxygen uptake to be measured directly."
+      text: "Aerobic respiration uses glucose and oxygen as substrates and produces carbon dioxide and water, taking place inside the mitochondria, and yields a large amount of ATP per glucose molecule. Anaerobic respiration in humans uses only glucose, produces lactate (along with some carbon dioxide and water), takes place in the cytoplasm, and yields far less ATP per glucose molecule, but can proceed without oxygen, useful for short, intense bursts of activity when oxygen delivery can't keep up with demand."
     },
     {
-      label: "5",
+      label: "C1.2.6",
+      heading: "Variables affecting the rate of cell respiration",
+      level: "SL",
+      text: "The rate of cell respiration is affected by variables including temperature (via its effect on enzyme activity), substrate availability, and oxygen availability (for the aerobic pathway specifically). These variables can be investigated experimentally, for example using a respirometer to measure oxygen consumption under different conditions, changing one variable at a time while keeping others constant."
+    },
+    {
+      label: "C1.2.7-9",
+      heading: "NAD, glycolysis, and regenerating NAD anaerobically",
+      level: "HL",
+      text: "**NAD** acts as a hydrogen carrier during respiration, becoming reduced NAD when it accepts hydrogen (with its electron) removed from a substrate during oxidation. In **glycolysis**, glucose is broken down, through a series of enzyme-catalysed steps in the cytoplasm, into two molecules of pyruvate, with a net yield of ATP and reduced NAD, this stage occurs whether or not oxygen is present.\n\nWhen oxygen is unavailable, reduced NAD cannot be reoxidised by the electron transport chain, so cells regenerate NAD another way: in humans, by converting pyruvate to lactate, which reoxidises reduced NAD back to NAD, allowing glycolysis, and its small ATP yield, to keep running anaerobically."
+    },
+    {
+      label: "C1.2.11 / C1.2.12",
       heading: "The link reaction and the Krebs cycle",
       level: "HL",
-      text: "Before entering the Krebs cycle, each pyruvate molecule is converted to acetyl-CoA in the link reaction, releasing carbon dioxide and reducing more NAD. The **Krebs cycle** then fully oxidises the carbon skeleton, releasing the remaining carbon as carbon dioxide, while generating further reduced NAD and reduced FAD, along with a small direct yield of ATP, the reduced NAD and FAD produced here carry the bulk of glucose's original energy forward to the electron transport chain."
+      text: "In the **link reaction**, pyruvate is transported into the mitochondrial matrix, oxidised, and decarboxylated (losing a carbon dioxide molecule), producing reduced NAD and a two-carbon acetyl group, which combines with coenzyme A to form acetyl-CoA.\n\nIn the **Krebs cycle**, the acetyl group is fully oxidised and decarboxylated across a cycle of reactions, releasing the remaining carbon as carbon dioxide, while generating a further yield of ATP, reduced NAD, and reduced FAD, molecules that carry the bulk of glucose's original energy forward to the electron transport chain."
     },
     {
-      label: "6",
-      heading: "The electron transport chain and oxidative phosphorylation",
+      label: "C1.2.16",
+      heading: "Oxygen as the terminal electron acceptor",
       level: "HL",
-      text: "Reduced NAD and FAD deliver their electrons to a series of protein complexes in the inner mitochondrial membrane, the **electron transport chain**. As electrons pass along the chain, energy released is used to pump hydrogen ions across the inner membrane, building a concentration gradient. Those hydrogen ions then flow back through ATP synthase, driving the synthesis of large amounts of ATP, a process called oxidative phosphorylation, oxygen's role is to accept electrons at the very end of the chain, which is why aerobic respiration depends on it so heavily."
+      text: "At the end of the electron transport chain, oxygen accepts the electrons (and hydrogen ions) that have passed along the chain, forming water. This is why aerobic respiration depends absolutely on oxygen, without a terminal acceptor to remove electrons at the end of the chain, the whole chain backs up and stops, which halts oxidative phosphorylation and the large ATP yield that depends on it."
     }
   ],
 
   "C1.3": [
     {
-      label: "1",
-      heading: "An overview of photosynthesis",
+      label: "C1.3.1",
+      heading: "Light energy becomes chemical energy",
       level: "SL",
-      text: "Photosynthesis converts light energy into the chemical energy stored in glucose, using carbon dioxide and water as raw materials and releasing oxygen as a by-product. It happens in two linked stages inside the chloroplast: the light-dependent reactions, which capture light energy, and the light-independent reactions (the **Calvin cycle**), which use that captured energy to build organic molecules from carbon dioxide."
+      text: "Photosynthesis transforms light energy into the chemical energy stored in the bonds of carbon compounds. This transformation matters far beyond the photosynthesising organism itself, it supplies, directly or indirectly, most of the chemical energy that powers life processes across an entire ecosystem, since nearly every food chain traces back to it (see C4.2)."
     },
     {
-      label: "2",
-      heading: "The light-dependent reactions",
+      label: "C1.3.2 / C1.3.3",
+      heading: "Converting carbon dioxide to glucose, and oxygen as a by-product",
       level: "SL",
-      text: "In the light-dependent reactions, **chlorophyll** and other pigments absorb light energy, which drives **photolysis**, the splitting of water molecules into oxygen (released as a waste product), hydrogen ions, and electrons. That captured energy is used to generate ATP and reduced NADP, both of which are carried forward to power the light-independent reactions."
+      text: "Photosynthesis converts carbon dioxide into glucose, using hydrogen obtained by splitting water molecules. The carbon and some oxygen atoms in the resulting glucose come from carbon dioxide, while the hydrogen comes from water. **Oxygen** is released as a by-product of that water-splitting step, not built into the glucose itself, this is true across plants, algae, and cyanobacteria, and it is the source of almost all atmospheric oxygen."
     },
     {
-      label: "3",
-      heading: "The light-independent reactions (Calvin cycle)",
+      label: "C1.3.4 / C1.3.5",
+      heading: "Photosynthetic pigments",
       level: "SL",
-      text: "In the Calvin cycle, carbon dioxide is incorporated into an existing organic molecule in a process called **carbon fixation**, catalysed by the enzyme Rubisco. Using the ATP and reduced NADP supplied by the light-dependent reactions, this fixed carbon is progressively converted into glycerate-3-phosphate, then triose phosphate, some of which regenerates the starting molecule (RuBP) so the cycle can continue, and some of which is exported to build glucose and other organic molecules the plant needs."
+      text: "Different pigments absorb different wavelengths of light, and **chromatography** can separate a mixture of pigments extracted from a leaf, allowing each one to be identified by how far it travels relative to the solvent, expressed as its Rf value. Pigments such as chlorophyll a, chlorophyll b, and carotenoids absorb strongly in the blue and red parts of the visible spectrum but reflect green light, which is why they appear green and why an absorption spectrum for photosynthetic pigments shows clear peaks in those regions."
     },
     {
-      label: "4",
-      heading: "Limiting factors of photosynthesis",
+      label: "C1.3.7 / C1.3.8",
+      heading: "Investigating limiting factors, and predicting future rates",
       level: "SL",
-      text: "The rate of photosynthesis at any moment is constrained by whichever factor is currently in shortest supply relative to the others, a **limiting factor**. Light intensity, carbon dioxide concentration, and temperature are the three main limiting factors, increasing whichever one is currently most limiting will increase the rate, but increasing a factor that is not currently limiting will have little to no effect, since some other factor is now holding the rate back instead."
+      text: "The effect of light intensity, carbon dioxide concentration, or temperature on photosynthetic rate can be investigated experimentally by varying one of these factors while controlling the others and measuring the resulting rate, testing a hypothesis about which factor is limiting under given conditions. This kind of experiment also has a real-world application: carbon dioxide enrichment experiments, exposing plants to elevated CO2 levels, are used to predict how photosynthesis rates might change as atmospheric CO2 continues to rise (see D4.3)."
     },
     {
-      label: "5",
-      heading: "Photosystems and the light-dependent reactions in detail",
+      label: "C1.3.9 / C1.3.10",
+      heading: "Photosystems",
       level: "HL",
-      text: "Pigments are organised into **photosystems** embedded in the thylakoid membrane, each acting as a light-harvesting antenna that funnels absorbed energy to a reaction centre. Electrons excited by that energy pass along an electron transport chain, driving hydrogen ions across the thylakoid membrane to build a concentration gradient. Those hydrogen ions flow back through ATP synthase, producing ATP by chemiosmosis, a process closely paralleling the electron transport chain used in respiration (see C1.2)."
+      text: "Pigments are organised into **photosystems**, structured arrays embedded in the thylakoid membrane. A single pigment molecule absorbing light on its own could not drive photosynthesis, the advantage of arranging many pigment molecules together in a photosystem is that it creates a much larger antenna for capturing light energy, which is then funnelled to a central reaction centre where the energy is actually put to use."
     },
     {
-      label: "6",
-      heading: "Factors affecting the rate in more depth",
+      label: "C1.3.12 / C1.3.14",
+      heading: "ATP production by chemiosmosis in the thylakoid",
       level: "HL",
-      text: "Beyond simply identifying which factor is currently limiting, the relationship between each factor and photosynthetic rate can be analysed quantitatively, for example using graphs of rate against light intensity at different CO2 concentrations to identify exactly where the limiting factor shifts from one variable to another. This kind of graph interpretation, reading where a curve plateaus and reasoning about why, is a core applied skill for this topic."
+      text: "The electrons released by photolysis pass along an electron transport chain in the thylakoid membrane, and the energy released is used to pump hydrogen ions into the thylakoid space, building a concentration gradient. Those hydrogen ions then flow back out through ATP synthase, driving ATP production by chemiosmosis, closely paralleling how ATP is made during respiration (see C1.2). This entire process, photolysis, electron transport, and chemiosmotic ATP synthesis, together with the reduction of NADP, all take place across the thylakoid membrane system."
+    },
+    {
+      label: "C1.3.15",
+      heading: "Carbon fixation by Rubisco",
+      level: "HL",
+      text: "**Rubisco** catalyses carbon fixation, combining carbon dioxide with the five-carbon molecule RuBP to produce glycerate-3-phosphate (GP). Rubisco works relatively slowly and becomes ineffective at low carbon dioxide concentrations, which is why chloroplasts contain such high concentrations of it, compensating for its inefficiency with sheer quantity, making Rubisco the most abundant enzyme on Earth."
+    },
+    {
+      label: "C1.3.16 / C1.3.17",
+      heading: "Completing the Calvin cycle",
+      level: "HL",
+      text: "Glycerate-3-phosphate (GP) is converted into triose phosphate (TP) using the ATP and reduced NADP generated by the light-dependent reactions. Most of that triose phosphate is used to regenerate RuBP, also using ATP, so the cycle can continue fixing more carbon dioxide, while the remainder is exported from the cycle to build glucose and other organic molecules the plant needs."
     }
   ]
 };

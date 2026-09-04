@@ -27,7 +27,10 @@
 const LINKS = {
 
   "A1.1": {
-    slides: "",
+    slides: [
+      { label: "Slides (Part 1)", url: "https://docs.google.com/presentation/d/1rJwpWMz0osN3kKGvAEzGcGFMESI4s6_S/edit?usp=sharing&ouid=108232791391393418876&rtpof=true&sd=true" },
+      { label: "Slides (Part 2)", url: "https://docs.google.com/presentation/d/1YQy9aqe7YV3tvhZdxuk3gDrje0JVS7Rs/edit?usp=sharing&ouid=108232791391393418876&rtpof=true&sd=true" }
+    ],
     videos: [
       { label: "A1.1 Properties of Water", url: "https://www.youtube.com/watch?v=1e8mbEeaIGU" }
     ],
@@ -59,9 +62,137 @@ const LINKS = {
       { label: "C4.1 Communities", url: "https://www.youtube.com/watch?v=4eMUCjxJOuI" }
     ],
     formative: ""
+  },
+
+  "D2.3": {
+    slides: [
+      { label: "Slides", url: "https://docs.google.com/presentation/d/1t2MrZcEWCG1jOaY9zCmDGYRFRkspV-9K/edit?usp=drive_link&ouid=108232791391393418876&rtpof=true&sd=true" }
+    ],
+    videos: [
+      { label: "D2.3 Water Movement", url: "https://www.youtube.com/watch?v=gmhw4Bkaif4" }
+    ],
+    formative: ""
+  },
+
+  "B1.1": {
+    slides: [
+      { label: "Slides", url: "https://docs.google.com/presentation/d/1BwfizuZz9_-dxXRt0Z6T-2XSsvMuVqgg/edit?usp=sharing&ouid=108232791391393418876&rtpof=true&sd=true" }
+    ],
+    videos: [
+      { label: "B1.1 Carbohydrates", url: "https://www.youtube.com/watch?v=eV--VWunHUU" },
+      { label: "B1.1 Lipids", url: "https://www.youtube.com/watch?v=-fzIaXjSrNo" }
+    ],
+    formative: ""
+  },
+
+  "C1.1": {
+    slides: [
+      { label: "Slides", url: "https://docs.google.com/presentation/d/1RdwvwwcxQ9EtuliIdVWVuzeB69WZCHVb/edit?usp=sharing&ouid=108232791391393418876&rtpof=true&sd=true" }
+    ],
+    videos: [
+      { label: "C1.1 Enzymes and Metabolism", url: "https://www.youtube.com/watch?v=fSuwI9bjgJs" }
+    ],
+    formative: ""
+  },
+
+  "A1.2": {
+    slides: [
+      { label: "Slides", url: "https://docs.google.com/presentation/d/1mzkYZD-DTOGpv9u9hZqYCfnq-CZVKJk0/edit?usp=sharing&ouid=108232791391393418876&rtpof=true&sd=true" }
+    ],
+    videos: [
+      { label: "A1.2 Structure of DNA and RNA", url: "https://www.youtube.com/watch?v=knN9csn2wC8" }
+    ],
+    formative: ""
+  },
+
+  "D1.1": {
+    slides: [
+      { label: "Slides", url: "https://docs.google.com/presentation/d/1Gku54JojbX_bzZ75jE7dictCYrYYDOF-/edit?usp=sharing&ouid=108232791391393418876&rtpof=true&sd=true" }
+    ],
+    videos: [
+      { label: "D1.1 DNA Replication", url: "https://www.youtube.com/watch?v=CSisaIHxAPk" }
+    ],
+    formative: ""
+  },
+
+  "D2.1": {
+    slides: [
+      { label: "Slides", url: "https://docs.google.com/presentation/d/1eSo5XonXbOAiSwPjXzEmY7OIee6Q2JkW/edit?usp=sharing&ouid=108232791391393418876&rtpof=true&sd=true" }
+    ],
+    videos: [
+      { label: "D2.1 Cell Division and Mitosis", url: "https://www.youtube.com/watch?v=i9XPl4ePyxU" }
+    ],
+    formative: ""
+  },
+
+  "B1.2": {
+    slides: [
+      { label: "Slides", url: "https://docs.google.com/presentation/d/1T9kTB9JXCdVVDhF2Q6WIlZkZk3scSJXN/edit?usp=sharing&ouid=108232791391393418876&rtpof=true&sd=true" }
+    ],
+    videos: [
+      { label: "B1.2 Proteins", url: "https://www.youtube.com/watch?v=7-i-VDkZuQs" }
+    ],
+    formative: ""
+  },
+
+  "A2.1": {
+    slides: [
+      { label: "Slides", url: "https://docs.google.com/presentation/d/1uvuorjJ9_zvbzjf6PxOgYa_XZ5u_QwP5/edit?usp=sharing&ouid=108232791391393418876&rtpof=true&sd=true" }
+    ],
+    videos: [],
+    formative: ""
+  },
+
+  "A2.2": {
+    slides: [
+      { label: "Slides", url: "https://docs.google.com/presentation/d/1nUnYmtAXcLhjfROBMDUTmAtu5JMVPoYN/edit?usp=sharing&ouid=108232791391393418876&rtpof=true&sd=true" }
+    ],
+    videos: [
+      { label: "A2.2 Cell Structures and Processes", url: "https://www.youtube.com/watch?v=E1rGTop1gg0" },
+      { label: "A2.2 Organelles and Drawing Cells", url: "https://www.youtube.com/watch?v=60Tcywmyr_s" }
+    ],
+    formative: ""
+  },
+
+  "B2.2": {
+    slides: [
+      { label: "Slides", url: "https://docs.google.com/presentation/d/1cTW6pt-g8iIZYq_R75b4Q-Vc2nB2JxHr/edit?usp=sharing&ouid=108232791391393418876&rtpof=true&sd=true" }
+    ],
+    videos: [
+      { label: "B2.2 Organelles and Compartmentalisation", url: "https://www.youtube.com/watch?v=xnEplUF0xO0" }
+    ],
+    formative: ""
+  },
+
+  "C1.2": {
+    slides: [
+      { label: "Slides", url: "https://docs.google.com/presentation/d/1kmyroyz_RIEghnMFz7xC8hIX84n-sFoL/edit?usp=sharing&ouid=108232791391393418876&rtpof=true&sd=true" }
+    ],
+    videos: [
+      { label: "C1.2 Cell Respiration", url: "https://www.youtube.com/watch?v=P8qMsVmrg-k" }
+    ],
+    formative: ""
+  },
+
+  "D1.2": {
+    slides: [
+      { label: "Slides", url: "https://docs.google.com/presentation/d/1gpl1gRT95VjphoXwLyb-jgiUhVvqaYkS/edit?usp=sharing&ouid=108232791391393418876&rtpof=true&sd=true" }
+    ],
+    videos: [],
+    formative: ""
+  },
+
+  "C1.3": {
+    slides: [
+      { label: "Slides", url: "https://docs.google.com/presentation/d/1QKmWHg0pBBrxPiAL4V0_drSMsgX0B6c0/edit?usp=sharing&ouid=108232791391393418876&rtpof=true&sd=true" }
+    ],
+    videos: [
+      { label: "C1.3 Photosynthesis", url: "https://www.youtube.com/watch?v=I6hn6eiF5bI" }
+    ],
+    formative: ""
   }
 
   // Add the rest of your 40 topics down here the same way, e.g.:
-  // "A1.2": { slides: "", videos: [{ label: "A1.2 Nucleic Acids", url: "" }], formative: "" },
+  // "D2.2": { slides: "", videos: [{ label: "D2.2 Gene Expression", url: "" }], formative: "" },
 
 };

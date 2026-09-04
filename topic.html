@@ -54,20 +54,31 @@ function renderResourceRow(root, code) {
   const row = document.createElement("div");
   row.className = "resource-row";
 
-  // Slides
-  const slidesBtn = document.createElement("a");
-  if (links.slides) {
-    slidesBtn.className = "resource-btn";
-    slidesBtn.href = links.slides;
-    slidesBtn.target = "_blank";
-    slidesBtn.rel = "noopener";
-    slidesBtn.textContent = "Open slides";
+  // Normalise slides to an array of {label, url}, supporting the old
+  // single-string format too, so nothing breaks for existing topics.
+  let slides = links.slides || [];
+  if (typeof slides === "string") {
+    slides = slides ? [{ label: "Slides", url: slides }] : [];
+  }
+
+  // Slides button(s)
+  if (slides.length) {
+    slides.forEach((s, i) => {
+      const slidesBtn = document.createElement("a");
+      slidesBtn.className = "resource-btn";
+      slidesBtn.href = s.url;
+      slidesBtn.target = "_blank";
+      slidesBtn.rel = "noopener";
+      slidesBtn.textContent = slides.length > 1 ? (s.label || "Open slides " + (i + 1)) : "Open slides";
+      row.appendChild(slidesBtn);
+    });
   } else {
+    const slidesBtn = document.createElement("a");
     slidesBtn.className = "resource-btn disabled";
     slidesBtn.href = "#";
     slidesBtn.textContent = "Slides not available yet";
+    row.appendChild(slidesBtn);
   }
-  row.appendChild(slidesBtn);
 
   // Formative
   const formBtn = document.createElement("a");
@@ -86,15 +97,29 @@ function renderResourceRow(root, code) {
 
   root.appendChild(row);
 
-  // Slides embed
-  if (links.slides) {
-    const wrap = document.createElement("div");
-    wrap.className = "embed-wrap";
-    const iframe = document.createElement("iframe");
-    iframe.src = toSlidesEmbed(links.slides);
-    iframe.allowFullscreen = true;
-    wrap.appendChild(iframe);
-    root.appendChild(wrap);
+  // Slides embed(s)
+  if (slides.length) {
+    const grid = document.createElement("div");
+    grid.className = "video-grid";
+    slides.forEach(s => {
+      const item = document.createElement("div");
+      item.className = "video-item";
+      if (slides.length > 1) {
+        const label = document.createElement("div");
+        label.className = "video-label";
+        label.textContent = s.label || "Slides";
+        item.appendChild(label);
+      }
+      const wrap = document.createElement("div");
+      wrap.className = "embed-wrap";
+      const iframe = document.createElement("iframe");
+      iframe.src = toSlidesEmbed(s.url);
+      iframe.allowFullscreen = true;
+      wrap.appendChild(iframe);
+      item.appendChild(wrap);
+      grid.appendChild(item);
+    });
+    root.appendChild(grid);
   }
 
   // Videos (one or more parts)
