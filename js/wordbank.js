@@ -77,7 +77,11 @@ const WORDBANK = {
     { term: "Polysaccharide", definition: "A long chain of many monosaccharides joined by glycosidic bonds." },
     { term: "Triglyceride", definition: "A lipid made of glycerol bonded to three fatty acid chains." },
     { term: "Saturated fatty acid", definition: "A fatty acid with no carbon-carbon double bonds, allowing tight packing and a solid state at room temperature." },
-    { term: "Unsaturated fatty acid", definition: "A fatty acid with one or more carbon-carbon double bonds, which kink the chain and usually keep it liquid at room temperature." }
+    { term: "Unsaturated fatty acid", definition: "A fatty acid with one or more carbon-carbon double bonds, which kink the chain and usually keep it liquid at room temperature." },
+    { term: "Alpha-glucose", definition: "A ring form of glucose whose 1-4 linkages produce coiled or branched chains, as in starch and glycogen." },
+    { term: "Beta-glucose", definition: "A ring form of glucose whose 1-4 linkages produce straight, unbranched chains, as in cellulose." },
+    { term: "Glycoprotein", definition: "A protein with attached carbohydrate chains, often used for cell-to-cell recognition." },
+    { term: "Adipose tissue", definition: "Tissue made largely of cells specialised for storing triglycerides, also used for thermal insulation." }
   ],
 
   "C1.1": [
@@ -139,7 +143,13 @@ const WORDBANK = {
     { term: "Anticodon", definition: "The three-base sequence on a tRNA molecule that pairs with a complementary codon on mRNA." },
     { term: "tRNA", definition: "A small RNA molecule that carries a specific amino acid to the ribosome during translation." },
     { term: "Ribosome", definition: "The organelle where translation takes place." },
-    { term: "Genetic code", definition: "The set of rules by which codons specify amino acids; degenerate and near-universal." }
+    { term: "Genetic code", definition: "The set of rules by which codons specify amino acids; degenerate and near-universal." },
+    { term: "Promoter", definition: "A DNA sequence just before a gene, where transcription factors and RNA polymerase must bind for transcription to begin." },
+    { term: "Transcription factor", definition: "A protein that binds to a promoter and helps recruit RNA polymerase to start transcription." },
+    { term: "Non-coding DNA", definition: "DNA that does not code for protein, but may regulate gene expression or be transcribed into functional RNA." },
+    { term: "Alternative splicing", definition: "Joining exons together in different combinations to produce multiple protein variants from one gene." },
+    { term: "Point mutation", definition: "A change to a single base in a DNA sequence, which may or may not change the resulting protein." },
+    { term: "Proteasome", definition: "A protein complex that breaks down unneeded or damaged proteins into amino acids for reuse." }
   ],
 
   "A2.2": [

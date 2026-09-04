@@ -209,22 +209,76 @@ const CONTENT = {
 
   "B1.1": [
     {
-      label: "1",
-      heading: "Monosaccharides and glycosidic bonds",
+      label: "B1.1.1",
+      heading: "Carbon's chemical versatility",
       level: "SL",
-      text: "A **monosaccharide** is a single sugar unit, such as glucose, fructose, or galactose, all with the general formula (CH2O)n. Two monosaccharides can be joined by a **condensation reaction**, which removes a water molecule and forms a **glycosidic bond** between them, producing a disaccharide. The reverse process, **hydrolysis**, adds a water molecule back in to break the glycosidic bond and split the disaccharide into its two monosaccharides again.\n\nThis condensation/hydrolysis pattern is not unique to carbohydrates, the same basic logic (bond formed by removing water, bond broken by adding water back) applies to how proteins and nucleic acids are built and broken down too."
+      text: "Carbon can form four stable covalent bonds, including with other carbon atoms, which lets it build long chains, branches, and rings. This single property is the reason carbon-based molecules can be so structurally diverse, and it is why carbon, rather than any other element, forms the backbone of every major class of biological macromolecule: carbohydrates, lipids, proteins, and nucleic acids."
     },
     {
-      label: "2",
-      heading: "Polysaccharides: structure suited to function",
+      label: "B1.1.2 / B1.1.3",
+      heading: "Condensation and hydrolysis",
       level: "SL",
-      text: "A **polysaccharide** is a long chain of many monosaccharides joined by glycosidic bonds, and different polysaccharides are structured for very different jobs. Starch, found in plants, is a mix of coiled, branched glucose chains, compact and good for energy storage. Glycogen, the animal equivalent, is even more highly branched, which allows glucose to be released quickly from many chain ends at once when energy is needed fast.\n\nCellulose, by contrast, is built from glucose chains that run in straight, parallel lines, cross-linked by hydrogen bonds into strong fibres, which is exactly what makes it suited to being a structural cell wall material rather than an energy store."
+      text: "Monomers are joined into a polymer through a **condensation reaction**, which forms a new covalent bond between two monomers and releases a water molecule as a by-product. The reverse process, **hydrolysis**, breaks that bond by adding a water molecule back in, splitting the polymer apart into its monomers again.\n\nThis same condensation/hydrolysis pattern builds and breaks down every major type of macromolecule, a **glycosidic bond** links monosaccharides, a peptide bond links amino acids (see B1.2), and a phosphodiester bond links nucleotides (see A1.2), the chemistry is the same, only the monomer changes."
     },
     {
-      label: "3",
-      heading: "Lipids: triglycerides",
+      label: "B1.1.4",
+      heading: "Form and function of monosaccharides",
       level: "SL",
-      text: "A **triglyceride** consists of a glycerol molecule bonded to three fatty acid chains, each joined by a condensation reaction. A **saturated fatty acid** has no carbon-carbon double bonds, so its chain is straight and can pack tightly with others, giving saturated fats a solid consistency at room temperature. An **unsaturated fatty acid** has one or more carbon-carbon double bonds, which introduce a kink in the chain, preventing tight packing, which is why unsaturated fats tend to be liquid (oils) at room temperature.\n\nCompared to carbohydrates, lipids store roughly twice as much energy per gram, and they are non-polar, so they do not dissolve in water, which is exactly why they are useful for waterproofing and for building membranes."
+      text: "A **monosaccharide** is a single sugar unit, such as glucose, fructose, or galactose, sharing the general formula (CH2O)n. In solution, glucose exists mainly as a six-membered ring, and that ring can close in two slightly different orientations depending on which side the hydroxyl group on carbon 1 ends up: **alpha-glucose** or **beta-glucose**. This small structural difference looks trivial, but it has major consequences: it is the entire reason starch and glycogen (built from alpha-glucose) end up as compact, coiled or branched molecules, while cellulose (built from beta-glucose) ends up as straight, rigid chains, see B1.1.5 and B1.1.6."
+    },
+    {
+      label: "B1.1.5",
+      heading: "Starch and glycogen as energy storage polysaccharides",
+      level: "SL",
+      text: "Starch (in plants) and glycogen (in animals) are both **polysaccharides** built from alpha-glucose monomers joined by 1-4 glycosidic bonds, which naturally makes the chain curl into a coil rather than lying flat. Starch is a mixture of amylose (an unbranched, tightly coiled chain) and amylopectin (branched, with occasional 1-6 glycosidic bonds roughly every 20-25 glucose units). Glycogen follows the same basic pattern as amylopectin but is far more heavily branched.\n\nThat branching is not incidental, more branch points mean more free ends, and each end is a place where glucose can be added or removed, so a highly branched molecule like glycogen can be built up or broken down for energy much faster than a less-branched one, exactly what an animal's fluctuating energy demands require."
+    },
+    {
+      label: "B1.1.6",
+      heading: "Cellulose: structure related to function",
+      level: "SL",
+      text: "Cellulose is built from **beta-glucose** monomers joined by 1-4 glycosidic bonds. Because of the way beta-glucose rings must rotate relative to each other to bond, each successive glucose unit is flipped upside down compared to the last, and the resulting chain comes out straight rather than coiled. Many of these straight chains then run in parallel and are cross-linked to one another by hydrogen bonds, bundling into strong microfibrils.\n\nThis is a direct structure-function relationship: a straight, hydrogen-bonded, fibrous molecule is mechanically strong under tension, which is exactly what is needed for cellulose's role as the main structural component of plant cell walls, and it is a completely different job from the compact, easily-mobilised energy storage role that the coiled, alpha-glucose polysaccharides (starch and glycogen) perform."
+    },
+    {
+      label: "B1.1.7",
+      heading: "Glycoproteins and cell recognition",
+      level: "SL",
+      text: "A glycoprotein is a protein with short carbohydrate chains attached, usually projecting from the outer surface of the cell membrane. These carbohydrate chains act like an identification tag: they let a cell be recognised by other cells and by the immune system, which is how the body distinguishes its own cells from foreign ones, and is also the molecular basis of the ABO blood group system, where the carbohydrate structure attached to red blood cell glycoproteins determines blood type."
+    },
+    {
+      label: "B1.1.8",
+      heading: "Hydrophobic properties of lipids",
+      level: "SL",
+      text: "Lipids are built mostly from carbon and hydrogen, with very few polar or charged groups, which makes them non-polar and hydrophobic, they do not dissolve in water. This single property underlies most of what lipids are used for biologically: forming a barrier that separates watery compartments (membranes), waterproofing surfaces, and storing energy in a form that does not carry the extra weight of associated water molecules the way stored carbohydrate does."
+    },
+    {
+      label: "B1.1.9",
+      heading: "Forming triglycerides and phospholipids",
+      level: "SL",
+      text: "A **triglyceride** forms when a glycerol molecule undergoes three separate condensation reactions, one with each of three fatty acid chains, releasing three water molecules in total. A phospholipid is built the same way but with only two fatty acid chains attached to glycerol, the third position instead carries a phosphate group, which is polar and gives the molecule a hydrophilic head alongside its two hydrophobic tails, the amphipathic property that makes membranes possible (see B2.1)."
+    },
+    {
+      label: "B1.1.10",
+      heading: "Saturated, monounsaturated, and polyunsaturated fatty acids",
+      level: "SL",
+      text: "A **saturated fatty acid** has no carbon-carbon double bonds, so its hydrocarbon tail is straight and packs tightly against neighbouring tails, giving saturated fats a solid consistency at room temperature. A monounsaturated fatty acid has exactly one carbon-carbon double bond, and a polyunsaturated fatty acid has two or more, each double bond puts a rigid kink in the chain that prevents tight packing, which is why increasingly unsaturated fats have progressively lower melting points and tend to be liquid oils at room temperature."
+    },
+    {
+      label: "B1.1.11",
+      heading: "Triglycerides in adipose tissue",
+      level: "SL",
+      text: "Triglycerides store roughly twice as much energy per gram as carbohydrates, and adipose tissue is largely made of cells specialised for storing them. Beyond energy storage, a layer of adipose tissue also acts as thermal insulation, reducing heat loss to the environment, which is especially important for endothermic animals living in cold conditions, such as marine mammals relying on blubber (see A1.1)."
+    },
+    {
+      label: "B1.1.12",
+      heading: "Formation of the phospholipid bilayer",
+      level: "HL",
+      text: "Because a phospholipid has a hydrophilic head and hydrophobic tails, placing phospholipids in water causes them to spontaneously arrange into a bilayer, heads facing outward into the water on both sides, tails facing inward, away from water, with no cellular machinery required to assemble it. This self-assembly, driven purely by the amphipathic structure of the molecule, is the physical basis of every biological membrane (see B2.1)."
+    },
+    {
+      label: "B1.1.13",
+      heading: "Non-polar steroids crossing the bilayer",
+      level: "HL",
+      text: "Steroid hormones, such as oestradiol and testosterone, are small and non-polar, which means they can diffuse directly through the hydrophobic core of a phospholipid bilayer without needing a channel or carrier protein. This is why steroid hormones can act on receptors located inside the cytoplasm or nucleus of a target cell, rather than only on receptors at the cell surface, unlike larger or polar signalling molecules (see B2.1 and C2.1)."
     }
   ],
 
@@ -356,22 +410,82 @@ const CONTENT = {
 
   "D1.2": [
     {
-      label: "1",
-      heading: "Transcription",
+      label: "D1.2.1-3",
+      heading: "Transcription: copying a gene into mRNA",
       level: "SL",
-      text: "**Transcription** is the process of copying a gene's DNA sequence into a complementary mRNA molecule. The enzyme RNA polymerase binds to the start of a gene, unwinds the DNA, and moves along the template strand, adding complementary RNA nucleotides (using uracil in place of thymine) to build a growing mRNA strand. Once transcription reaches the end of the gene, the mRNA molecule detaches and, in eukaryotes, moves out of the nucleus to the cytoplasm."
+      text: "**Transcription** is the synthesis of an RNA molecule using one strand of a gene's DNA as a template. RNA polymerase binds near the start of the gene, unwinds the double helix, and moves along the template strand, using **complementary base pairing** and hydrogen bonding to add matching RNA nucleotides, with uracil taking the place of thymine wherever the template has an adenine.\n\nCrucially, the DNA template itself is not used up or altered by this process, it separates temporarily, gets copied, and re-forms its double helix afterwards, remaining stable and available to be transcribed again, many times over, whenever that gene is next needed."
     },
     {
-      label: "2",
-      heading: "The genetic code",
+      label: "D1.2.4",
+      heading: "Transcription and the control of gene expression",
       level: "SL",
-      text: "The **genetic code** is read in **codons**, groups of three consecutive mRNA bases, each specifying a particular amino acid (or a stop signal). The code is described as degenerate because most amino acids are specified by more than one codon, and it is described as universal because, with only rare exceptions, the same codons specify the same amino acids in essentially every living organism, strong evidence for a shared evolutionary origin of life."
+      text: "Not every gene in a cell is transcribed at every moment, whether a particular gene is transcribed, and how often, is a major point of control over which proteins a cell actually produces. Because transcription is the very first step in turning a gene into a functioning protein, it is the stage at which gene expression is most commonly switched on or off, which is a large part of how genetically identical cells in one organism end up specialised into very different cell types."
     },
     {
-      label: "3",
-      heading: "Translation",
+      label: "D1.2.5-7",
+      heading: "Translation: mRNA, ribosomes, and tRNA",
       level: "SL",
-      text: "**Translation** is the process of building a polypeptide chain based on the sequence of codons in an mRNA molecule, carried out by a **ribosome**. Each **tRNA** molecule carries a specific amino acid at one end and has a three-base **anticodon** at the other, which binds to a complementary codon on the mRNA. As the ribosome moves along the mRNA, matching tRNAs deliver their amino acids in the correct order, and peptide bonds form between them, building the polypeptide one amino acid at a time until a stop codon is reached."
+      text: "**Translation** is the synthesis of a polypeptide using the sequence of an mRNA molecule as instructions, and it takes place at a **ribosome**. The mRNA carries the coded message as a sequence of **codons**, the ribosome provides the site where translation happens, and **tRNA** molecules physically deliver amino acids, each tRNA has an **anticodon** that binds to its complementary codon on the mRNA through the same base-pairing rules used elsewhere in molecular biology, which is what ensures the correct amino acid is added at each step."
+    },
+    {
+      label: "D1.2.8",
+      heading: "Degeneracy and universality of the genetic code",
+      level: "SL",
+      text: "The genetic code is degenerate, meaning most amino acids can be specified by more than one codon, which gives some protection against mutation, since a change to a codon's third base often still codes for the same amino acid. It is also (near-)universal, the same codons specify the same amino acids across virtually every living organism, strong evidence that all known life shares a common evolutionary origin, and the practical reason a human gene can be inserted into bacteria and still be read correctly."
+    },
+    {
+      label: "D1.2.9-10",
+      heading: "Reading the code, and elongation",
+      level: "SL",
+      text: "Given an mRNA sequence and a codon table, the corresponding amino acid sequence can be deduced directly, codon by codon, and vice versa. During the elongation stage of translation, the ribosome moves stepwise along the mRNA one codon at a time, at each step a new tRNA delivers its amino acid, a peptide bond forms between it and the growing chain, and the ribosome shifts forward to expose the next codon, repeating until a stop codon is reached."
+    },
+    {
+      label: "D1.2.11",
+      heading: "How a point mutation can affect the polypeptide",
+      level: "SL",
+      text: "A point mutation changes a single base in the DNA sequence, and because of degeneracy, that is not guaranteed to change the resulting protein, a substitution might land on a codon's third base and still code for the same amino acid (a silent mutation). But it can just as easily change the amino acid at that position (with effects ranging from negligible to severe, depending on the protein) or create a premature stop codon, which typically truncates the protein and destroys its function."
+    },
+    {
+      label: "D1.2.12",
+      heading: "Directionality: transcription and translation run 5' to 3'",
+      level: "SL",
+      text: "Both transcription and translation proceed in a consistent direction: RNA polymerase reads the DNA template 3' to 5' while building the new RNA strand 5' to 3', and the ribosome reads mRNA codons in the 5' to 3' direction as well. This directionality is not arbitrary, it is fixed by the chemistry of how new nucleotides can be added to a growing strand, the same underlying reason DNA replication has a leading and a lagging strand (see D1.1)."
+    },
+    {
+      label: "D1.2.13",
+      heading: "Promoters and transcription factors",
+      level: "HL",
+      text: "A **promoter** is a specific DNA sequence located just before the start of a gene. In eukaryotes, transcription does not begin until transcription factors first bind to the promoter, and it is that transcription factor-promoter complex that then recruits RNA polymerase to the gene, only once RNA polymerase is correctly positioned can transcription actually begin. This gives the cell a precise, gene-by-gene switch: whether the right transcription factors are present and able to bind determines whether a given gene gets transcribed at all."
+    },
+    {
+      label: "D1.2.14",
+      heading: "Roles of non-coding regions of DNA",
+      level: "HL",
+      text: "Only a small fraction of the human genome directly codes for protein, the rest is non-coding, but non-coding does not mean functionless. Non-coding regions include promoters and other regulatory sequences that control when and how strongly nearby genes are transcribed, sequences that get transcribed into functional RNA molecules that are never translated (such as tRNA and rRNA genes), and regions such as introns that are removed from a transcript before translation (see D1.2.15-16)."
+    },
+    {
+      label: "D1.2.15-16",
+      heading: "Post-transcriptional modification and alternative splicing",
+      level: "HL",
+      text: "In eukaryotes, a newly made mRNA transcript is modified before it leaves the nucleus, non-coding sections called introns are cut out, and the remaining coding sections, exons, are joined together, along with the addition of a protective cap and tail at each end.\n\nBecause exons can be joined together in more than one combination, a process called **alternative splicing**, a single gene can produce several different mRNA transcripts, and therefore several different protein variants, depending on which exons are included. This is a major reason the human genome can code for a far larger number of distinct proteins than it has genes."
+    },
+    {
+      label: "D1.2.17",
+      heading: "Initiation of translation",
+      level: "HL",
+      text: "Translation begins when the small ribosomal subunit binds to the mRNA and moves along it until it reaches a start codon (AUG). An initiator tRNA, carrying the amino acid methionine, then pairs with that start codon, and the large ribosomal subunit joins to complete the functional ribosome, only once this initiation complex has assembled correctly can the ribosome move into the elongation stage described in D1.2.10."
+    },
+    {
+      label: "D1.2.18",
+      heading: "Modifying polypeptides into their functional form",
+      level: "HL",
+      text: "A freshly translated polypeptide is not always the final, functional protein, many require further processing. Insulin is the standard example: it is first translated as a single longer polypeptide, pre-proinsulin, which is then cut and modified in stages, first to proinsulin, and then, once a central section is enzymatically removed, to the final, active insulin molecule made of two shorter polypeptide chains held together by disulfide bonds."
+    },
+    {
+      label: "D1.2.19",
+      heading: "Recycling amino acids: proteasomes",
+      level: "HL",
+      text: "Proteins do not last indefinitely, cells continually break down proteins that are damaged, misfolded, or no longer needed. A **proteasome** is a large protein complex that carries out this breakdown, unfolding a targeted protein and cutting it back down into individual amino acids, which the cell can then reuse to build new polypeptides, a form of recycling that reduces how many new amino acids the cell needs to obtain from scratch."
     }
   ],
 
