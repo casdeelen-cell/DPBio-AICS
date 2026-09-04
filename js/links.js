@@ -178,7 +178,9 @@ const LINKS = {
     slides: [
       { label: "Slides", url: "https://docs.google.com/presentation/d/1gpl1gRT95VjphoXwLyb-jgiUhVvqaYkS/edit?usp=sharing&ouid=108232791391393418876&rtpof=true&sd=true" }
     ],
-    videos: [],
+    videos: [
+      { label: "D1.2 Protein Synthesis", url: "https://www.youtube.com/watch?v=ybso-VivjF8" }
+    ],
     formative: ""
   },
 

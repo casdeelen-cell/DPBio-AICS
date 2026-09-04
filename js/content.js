@@ -215,6 +215,8 @@ const CONTENT = {
       label: "D2.3.4-6",
       heading: "How cells respond to hypotonic and hypertonic solutions",
       level: "SL",
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Turgor_pressure_on_plant_cells_diagram.svg",
+      imageCaption: "A plant cell in hypotonic, isotonic, and hypertonic solutions, showing turgid, normal, and plasmolysed states.",
       text: "A solution with a lower solute concentration than the cell is **hypotonic** to it, water moves in. A solution with a higher solute concentration is **hypertonic**, water moves out. A solution with the same solute concentration is isotonic, there is no net water movement.\n\nAn animal cell, having no cell wall, will swell and can burst in a hypotonic solution, and will shrink in a hypertonic one. A plant cell behaves differently because its cell wall resists expansion: in a hypotonic solution it swells only until **turgor pressure** builds up enough to stop further net water entry, becoming turgid rather than bursting, while in a hypertonic solution it undergoes **plasmolysis**, the protoplast shrinking away from the wall entirely."
     },
     {
@@ -260,6 +262,8 @@ const CONTENT = {
       label: "B1.1.5",
       heading: "Starch and glycogen as energy storage polysaccharides",
       level: "SL",
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/219_Three_Important_Polysaccharides-01.jpg",
+      imageCaption: "Amylose, amylopectin, glycogen, and cellulose, showing how alpha and beta glucose linkages give each a different shape.",
       text: "Starch (in plants) and glycogen (in animals) are both **polysaccharides** built from alpha-glucose monomers joined by 1-4 glycosidic bonds, which naturally makes the chain curl into a coil rather than lying flat. Starch is a mixture of amylose (an unbranched, tightly coiled chain) and amylopectin (branched, with occasional 1-6 glycosidic bonds roughly every 20-25 glucose units). Glycogen follows the same basic pattern as amylopectin but is far more heavily branched.\n\nThat branching is not incidental, more branch points mean more free ends, and each end is a place where glucose can be added or removed, so a highly branched molecule like glycogen can be built up or broken down for energy much faster than a less-branched one, exactly what an animal's fluctuating energy demands require."
     },
     {
@@ -335,6 +339,8 @@ const CONTENT = {
       label: "C1.1.4-7",
       heading: "Enzyme structure and the active site",
       level: "SL",
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Induced_fit_diagram_de.svg",
+      imageCaption: "The induced fit model: the active site subtly changes shape as the substrate binds.",
       text: "An enzyme is a globular protein whose folded three-dimensional structure creates an **active site**, a pocket shaped and chemically suited to bind a specific substrate. Substrate molecules collide with the enzyme through normal random molecular motion, and when a collision brings a substrate into the active site with the correct orientation, it binds. The active site is not a rigid lock, it subtly changes shape as the substrate binds, known as induced fit, improving the fit and helping to strain particular bonds in the substrate to drive the reaction forward. This close structural relationship between active site shape and substrate shape is exactly why an enzyme's specificity depends on its precise three-dimensional structure."
     },
     {
@@ -374,6 +380,8 @@ const CONTENT = {
       label: "A1.2.2",
       heading: "Components of a nucleotide",
       level: "SL",
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/DNA_molecular_structure,_showing_individual_nucleotides_and_bonds.jpg",
+      imageCaption: "The molecular structure of DNA, showing individual nucleotides linked into a sugar-phosphate backbone.",
       text: "A **nucleotide** has three parts: a five-carbon (pentose) sugar, a phosphate group attached to one side of the sugar, and a nitrogenous base attached to the other side. The sugar is deoxyribose in DNA and ribose in RNA, and this single difference in the sugar is part of what gives the two molecules their different chemical stability and roles."
     },
     {
@@ -449,6 +457,8 @@ const CONTENT = {
       label: "D1.1.3",
       heading: "Helicase and DNA polymerase",
       level: "SL",
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/DNA_replication_en.svg",
+      imageCaption: "The replication fork: helicase unwinds the double helix while DNA polymerase builds new strands.",
       text: "**Helicase** unwinds the double helix by breaking the hydrogen bonds between base pairs, exposing two single strands to act as templates. **DNA polymerase** then builds a new complementary strand by adding free nucleotides opposite each template base, following the same base-pairing rules used throughout DNA and RNA."
     },
     {
@@ -506,6 +516,8 @@ const CONTENT = {
       label: "D2.1.6 / D2.1.7",
       heading: "The phases of mitosis",
       level: "SL",
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Mitosis_Stages.svg",
+      imageCaption: "The stages of mitosis, from interphase through prophase, metaphase, anaphase, and telophase.",
       text: "In prophase, chromosomes condense and become visible, and the nuclear envelope breaks down. In metaphase, chromosomes line up along the cell's equator, attached to spindle fibres. In anaphase, spindle fibres shorten and pull sister chromatids apart to opposite poles. In telophase, two new nuclear envelopes form around each set of chromosomes. These stages can be identified directly from photomicrographs, based on the visible position and condensation state of the chromosomes."
     },
     {
@@ -581,6 +593,8 @@ const CONTENT = {
       label: "B1.2.8",
       heading: "Secondary structure: pleating and coiling",
       level: "HL",
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Levels_of_structural_organization_of_a_protein.svg",
+      imageCaption: "The four levels of protein structure: primary, secondary, tertiary, and quaternary.",
       text: "A polypeptide's **secondary structure** consists of local, repeating folding patterns held together by hydrogen bonds along the backbone, an alpha helix, where the chain coils into a spiral, and a beta pleated sheet, where sections of the chain lie alongside each other in a folded, zig-zag arrangement. Most proteins contain a mix of both, along with less regular regions, distributed across the length of the chain."
     }
   ],
@@ -596,6 +610,8 @@ const CONTENT = {
       label: "A2.1.2",
       heading: "Conditions on early Earth",
       level: "HL",
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Miller-Urey_experiment-en.svg",
+      imageCaption: "The Miller-Urey apparatus, used to test whether organic molecules could form under early Earth conditions.",
       text: "Early Earth's atmosphere is thought to have contained little or no free oxygen, along with gases such as methane, ammonia, and water vapour, with volcanic activity and intense ultraviolet radiation providing energy for chemical reactions, since there was no ozone layer to block it. The Miller-Urey experiment showed that passing electrical discharges (simulating lightning) through a comparable gas mixture could generate simple organic molecules, including amino acids, without any living cells involved, demonstrating this kind of chemistry was at least plausible."
     },
     {
@@ -641,6 +657,8 @@ const CONTENT = {
       label: "D1.2.5-7",
       heading: "Translation: mRNA, ribosomes, and tRNA",
       level: "SL",
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Ribosome_mRNA_translation_en.svg",
+      imageCaption: "A ribosome moving along mRNA, with tRNA molecules delivering amino acids to build the polypeptide chain.",
       text: "**Translation** is the synthesis of a polypeptide using the sequence of an mRNA molecule as instructions, and it takes place at a **ribosome**. The mRNA carries the coded message as a sequence of **codons**, the ribosome provides the site where translation happens, and **tRNA** molecules physically deliver amino acids, each tRNA has an **anticodon** that binds to its complementary codon on the mRNA through the same base-pairing rules used elsewhere in molecular biology, which is what ensures the correct amino acid is added at each step."
     },
     {
@@ -722,6 +740,8 @@ const CONTENT = {
       label: "A2.2.5 / A2.2.6",
       heading: "Prokaryotic and eukaryotic cell structure",
       level: "SL",
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Celltypes.svg",
+      imageCaption: "A eukaryotic cell (left) alongside a prokaryotic cell (right), drawn to comparable scale.",
       text: "A **prokaryotic** cell has no nucleus and no membrane-bound organelles, its DNA lies free in the cytoplasm as a single circular chromosome, and the cell is generally small and structurally simple. A **eukaryotic** cell has a true nucleus enclosing its DNA, along with a range of membrane-bound organelles dividing the cell into specialised compartments, and is typically much larger and more structurally complex."
     },
     {
@@ -779,6 +799,8 @@ const CONTENT = {
       label: "B2.2.4",
       heading: "Mitochondrial structure and ATP production",
       level: "HL",
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Mitochondrion_structure.svg",
+      imageCaption: "The structure of a mitochondrion, showing the folded inner membrane (cristae) and matrix.",
       text: "The mitochondrion's structure closely matches its role in aerobic respiration (see C1.2). Its double membrane encloses a matrix containing the enzymes of the Krebs cycle at a high, useful concentration. Its inner membrane is folded into **cristae**, dramatically increasing the surface area available for the electron transport chain and ATP synthase. And the narrow intermembrane space between the two membranes allows a steep hydrogen ion gradient to build up quickly during chemiosmosis, exactly what's needed to drive efficient ATP synthesis."
     }
   ],
@@ -788,6 +810,8 @@ const CONTENT = {
       label: "C1.2.1",
       heading: "ATP as the energy currency of the cell",
       level: "SL",
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Cellular_respiration_flowchart_(en).svg",
+      imageCaption: "An overview flowchart of cellular respiration, from glycolysis through to the electron transport chain.",
       text: "**ATP** (adenosine triphosphate) is a nucleotide made of an adenine base, a ribose sugar, and three phosphate groups. Its structure makes it ideally suited as a cell's immediate energy currency: the bonds between its phosphate groups release a usable amount of energy when broken, small enough to be released in manageable amounts, but large enough to actually drive a reaction, and ATP can be regenerated and reused repeatedly rather than used up once."
     },
     {
@@ -839,6 +863,8 @@ const CONTENT = {
       label: "C1.3.1",
       heading: "Light energy becomes chemical energy",
       level: "SL",
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Simple_photosynthesis_overview.svg",
+      imageCaption: "A simple overview of photosynthesis: light, water, and carbon dioxide in, glucose and oxygen out.",
       text: "Photosynthesis transforms light energy into the chemical energy stored in the bonds of carbon compounds. This transformation matters far beyond the photosynthesising organism itself, it supplies, directly or indirectly, most of the chemical energy that powers life processes across an entire ecosystem, since nearly every food chain traces back to it (see C4.2)."
     },
     {
