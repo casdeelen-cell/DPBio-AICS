@@ -103,23 +103,36 @@ accepted limitation, not a bug to fix unless asked.
 
 ## Current status (update this section as you go)
 
-As of the last session: **Unit 1 and Unit 2 fully complete** (notes,
-wordbank, quiz, videos, images, syllabus statements verified).
+As of the last session: **all 40 topics across Units 1-4 are complete**
+to the same standard — real syllabus statement numbers, deep notes,
+word bank, a verified Sirius video, and a quick quiz, every single one.
 
 Unit 1 (14 topics): A1.1, D2.3, B1.1, C1.1, A1.2, D1.1, D2.1, B1.2,
 A2.1, D1.2, A2.2, B2.2, C1.2, C1.3.
 
 Unit 2 (9 topics): B2.3, D2.2, D1.3, D3.1, D3.2, A3.1, B4.1, D4.1, A4.1.
-Notes/wordbank/quiz/videos/images done and syllabus statements verified
-against real IB sources. D2.2 (Gene expression) is entirely HL-only, so
-it's been added to `HL_ONLY_TOPICS` in `data.js`. Slides and formatives
-for all 9 Unit 2 topics are still blank, waiting on links from the user.
-Questionbank entries for Unit 2 also not yet added, waiting on PDF
-exports from the user's Questionbank subscription.
 
-Units 3 and 4 still need the same full treatment.
+Unit 3 (7 topics): B4.2, A3.2, D4.2, D4.3, C4.1, C4.2, A4.2.
 
-Open items carried over: A2.1 has no verified Sirius video (couldn't
-confirm one exists), and the induced-fit and Miller-Urey diagrams are
-German-labelled Wikimedia images (visually clear either way, but worth
-swapping for English versions if a cleaner one turns up).
+Unit 4 (10 topics): B2.1, D3.3, C3.1, B3.3, B3.1, B3.2, C2.2, C2.1,
+C3.2, A2.3.
+
+This session: did Unit 4 from scratch, **rewrote B2.1 and C4.1** (both
+had survived from an older, pre-statement-numbering style with generic
+"1, 2, 3" labels — now B2.1.1-B2.1.11 and C4.1.1-C4.1.22, matching the
+real IB guide), added C2.1 to `HL_ONLY_TOPICS` (it's entirely HL-only,
+like D2.2 and A3.2), found and added the previously-missing A2.1 video,
+and **filled in every remaining quick quiz gap across the whole site**
+(13 Unit 1 topics had none, plus all of Units 3-4's new topics).
+
+Slides and formatives are still blank across most of Units 2-4, still
+waiting on links from the user. Questionbank entries: Unit 1 complete;
+Unit 3 has some pre-existing adapted questions for
+A3.2/D4.2/D4.3/C4.2/A4.2 from an earlier session, not yet checked
+against the current notes for full alignment; Units 2 and 4 have none
+yet. All still waiting on further PDF exports from the user's
+Questionbank subscription where needed.
+
+Open items carried over: the induced-fit and Miller-Urey diagrams in
+Unit 1 are German-labelled Wikimedia images (visually clear either way,
+but worth swapping for English versions if a cleaner one turns up).

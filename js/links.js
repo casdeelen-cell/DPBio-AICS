@@ -261,15 +261,152 @@ const LINKS = {
     formative: ""
   },
 
+  "A2.1": {
+    slides: "",
+    videos: [
+      { label: "A2.1 HL Origin of Cells", url: "https://www.youtube.com/watch?v=QBfI2OTR8E0" }
+    ],
+    formative: ""
+  },
+
   "A4.1": {
     slides: "",
     videos: [
       { label: "A4.1 Evolution and Speciation", url: "https://www.youtube.com/watch?v=lxVWFERge-I" }
     ],
     formative: ""
+  },
+
+  "B4.2": {
+    slides: "",
+    videos: [
+      { label: "B4.2 Nutritional Niches (Part 1)", url: "https://www.youtube.com/watch?v=HJEx-HrnD1Q" },
+      { label: "B4.2 Adaptations to Niches (Part 2)", url: "https://www.youtube.com/watch?v=wwdATrl-OqE" }
+    ],
+    formative: ""
+  },
+
+  "A3.2": {
+    slides: "",
+    videos: [
+      { label: "A3.2 HL Classification and Cladistics", url: "https://www.youtube.com/watch?v=dEE6QzORgpM" }
+    ],
+    formative: ""
+  },
+
+  "D4.2": {
+    slides: "",
+    videos: [
+      { label: "D4.2 Stability (Part 1)", url: "https://www.youtube.com/watch?v=EAbp26IMxgE" },
+      { label: "D4.2 Sustainability (Part 2)", url: "https://www.youtube.com/watch?v=qDDfRW8CaVU" }
+    ],
+    formative: ""
+  },
+
+  "D4.3": {
+    slides: "",
+    videos: [
+      { label: "D4.3 Climate Change", url: "https://www.youtube.com/watch?v=EbVA2OfGsro" }
+    ],
+    formative: ""
+  },
+
+  "C4.2": {
+    slides: "",
+    videos: [
+      { label: "C4.2 Energy Flow Through Ecosystems (Part 1)", url: "https://www.youtube.com/watch?v=8vRkGP1JXuc" },
+      { label: "C4.2 Carbon Cycling (Part 2)", url: "https://www.youtube.com/watch?v=Oo5JnJP-XEw" }
+    ],
+    formative: ""
+  },
+
+  "A4.2": {
+    slides: "",
+    videos: [
+      { label: "A4.2 Conservation of Biodiversity", url: "https://www.youtube.com/watch?v=vKFwYBOsLY8" }
+    ],
+    formative: ""
+  },
+
+  "D3.3": {
+    slides: "",
+    videos: [
+      { label: "D3.3 Homeostasis", url: "https://www.youtube.com/watch?v=nKmXluCB6Js" }
+    ],
+    formative: ""
+  },
+
+  "B3.1": {
+    slides: "",
+    videos: [
+      { label: "B3.1 Gas Exchange in Animals (Part 1)", url: "https://www.youtube.com/watch?v=1OqMFq43spw" },
+      { label: "B3.1 Gas Exchange in Plants (Part 2)", url: "https://www.youtube.com/watch?v=M3Q2JHoX_hc" }
+    ],
+    formative: ""
+  },
+
+  "B3.2": {
+    slides: "",
+    videos: [
+      { label: "B3.2 Transport in Animals (Part 1)", url: "https://www.youtube.com/watch?v=wgBvMkybdyo" },
+      { label: "B3.2 Transport in Plants (Part 2)", url: "https://www.youtube.com/watch?v=AwgOrrrvGds" }
+    ],
+    formative: ""
+  },
+
+  "B3.3": {
+    slides: "",
+    videos: [
+      { label: "B3.3 HL Muscle Structure", url: "https://www.youtube.com/watch?v=wT6WhBTy7Hg" }
+    ],
+    formative: ""
+  },
+
+  "C2.2": {
+    slides: "",
+    videos: [
+      { label: "C2.2 Transmission Along Neurons (Part 1)", url: "https://www.youtube.com/watch?v=SkxA2sGI6GM" },
+      { label: "C2.2 Transmission Between Neurons (Part 2)", url: "https://www.youtube.com/watch?v=UJVGAqG2pBc" }
+    ],
+    formative: ""
+  },
+
+  "C2.1": {
+    slides: "",
+    videos: [
+      { label: "C2.1 HL Signalling Molecules and Receptors (Part 1)", url: "https://www.youtube.com/watch?v=7CjPaKhyPPs" },
+      { label: "C2.1 HL Signalling Mechanisms (Part 2)", url: "https://www.youtube.com/watch?v=gU9pamT_Y48" }
+    ],
+    formative: ""
+  },
+
+  "C3.2": {
+    slides: "",
+    videos: [
+      { label: "C3.2 Defence Against Disease", url: "https://www.youtube.com/watch?v=QMgzQZPqlKs" }
+    ],
+    formative: ""
+  },
+
+  "A2.3": {
+    slides: "",
+    videos: [
+      { label: "A2.3 HL Viruses", url: "https://www.youtube.com/watch?v=eQ8CIUbscE8" }
+    ],
+    formative: ""
+  },
+
+  "C3.1": {
+    slides: "",
+    videos: [
+      { label: "C3.1 Nervous System Integration (Part 1)", url: "https://www.youtube.com/watch?v=Y0ub4jfl7lE" },
+      { label: "C3.1 Hormone Integration (Part 2)", url: "https://www.youtube.com/watch?v=IEFMgsSBXR4" },
+      { label: "C3.1 HL Plant System Integration (Part 3)", url: "https://www.youtube.com/watch?v=La_3mb7pX7U" }
+    ],
+    formative: ""
   }
 
-  // Add the rest of your 40 topics down here the same way, e.g.:
-  // "B4.2": { slides: "", videos: [{ label: "B4.2 Ecological Niches", url: "" }], formative: "" },
+  // All 40 topics now have video entries. Slides and formatives are
+  // still blank across most of Units 2-4, waiting on links from you.
 
 };

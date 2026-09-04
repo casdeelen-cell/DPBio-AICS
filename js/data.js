@@ -77,4 +77,4 @@ const TOPIC_TITLES = {
 
 // Topic codes that are HL-only in the guide (whole topic, not just parts of it).
 // This just adds a small "HL" badge next to the topic name, it doesn't hide anything.
-const HL_ONLY_TOPICS = ["A2.1", "A2.3", "B3.3", "C3.1", "D2.2"];
+const HL_ONLY_TOPICS = ["A2.1", "A2.3", "B3.3", "C3.1", "D2.2", "A3.2", "C2.1"];

@@ -85,45 +85,69 @@ const CONTENT = {
 
   "B2.1": [
     {
-      label: "1",
-      heading: "The phospholipid bilayer",
+      label: "B2.1.1",
+      heading: "Lipid bilayers as the basis of membranes",
       level: "SL",
-      text: "Every biological membrane is built around a **phospholipid** bilayer, two layers of phospholipid molecules arranged tail to tail. A phospholipid has a polar, hydrophilic phosphate head and two non-polar, hydrophobic fatty acid tails. When phospholipids are placed in an aqueous environment, they spontaneously arrange themselves so the polar heads face outward, in contact with the water on either side of the membrane, and the non-polar tails cluster together, shielded from water in the interior of the bilayer.\n\nThis arrangement is thermodynamically favourable and requires no cellular machinery to assemble, it is a direct consequence of the amphipathic structure of phospholipids and their interaction with water. The result is a continuous, self-sealing barrier that separates the inside of a cell (or organelle) from its surroundings.",
+      text: "Every biological membrane is built around a **phospholipid bilayer**, two layers of phospholipid molecules arranged tail to tail. A phospholipid has a polar, hydrophilic phosphate head and two non-polar, hydrophobic fatty acid tails. When phospholipids are placed in an aqueous environment, they spontaneously arrange themselves so the polar heads face outward, in contact with the water on either side of the membrane, while the non-polar tails cluster together, shielded from water in the interior of the bilayer.\n\nThis arrangement is thermodynamically favourable and requires no cellular machinery to assemble, it is a direct consequence of the amphipathic structure of phospholipids and their interaction with water. The result is a continuous, self-sealing barrier that separates the inside of a cell, or an organelle, from its surroundings, and forms the structural foundation on which every other membrane function depends.",
       image: "https://commons.wikimedia.org/wiki/Special:FilePath/0302_Phospholipid_Bilayer.jpg",
       imageCaption: "A phospholipid bilayer: polar heads face the aqueous environment on both sides, non-polar tails face inward."
     },
     {
-      label: "2",
+      label: "B2.1.2 / B2.1.3",
+      heading: "Lipid bilayers as barriers, and simple diffusion",
+      level: "SL",
+      text: "The hydrophobic core of the bilayer gives membranes their selective, barrier-like permeability. Small, non-polar molecules, notably oxygen and carbon dioxide, can cross this hydrophobic core directly by **simple diffusion**, net movement from a region of higher concentration to a region of lower concentration, requiring no protein and no energy input, since it is driven entirely by the concentration gradient.\n\nLarger or more polar molecules, and especially ions, cannot cross the hydrophobic interior of the bilayer at any meaningful rate on their own, since their charge or size makes passage through the non-polar tails energetically unfavourable. This selective barrier property is exactly what allows a membrane to separate an internal chemical environment from the outside, and it is why almost all polar or charged substances require specific transport proteins to cross a membrane at all."
+    },
+    {
+      label: "B2.1.4",
+      heading: "Integral and peripheral proteins",
+      level: "SL",
+      text: "**Integral proteins** are embedded within the bilayer, often spanning it completely, with hydrophobic regions of the protein sitting alongside the hydrophobic fatty acid tails and hydrophilic regions projecting into the aqueous environment on either side. **Peripheral proteins** are attached only loosely to one face of the membrane, either bound to an integral protein, anchored by a short hydrocarbon chain, or held in place by the cytoskeleton, and can be removed more easily than integral proteins. Together, membrane proteins carry out much of the functional work of a membrane, including transport, enzymatic catalysis, receptor binding for cell signalling, and cell-to-cell recognition."
+    },
+    {
+      label: "B2.1.5",
+      heading: "Osmosis and aquaporins",
+      level: "SL",
+      text: "**Osmosis** is the diffusion of water specifically, across a partially permeable membrane, from a region of lower solute concentration to a region of higher solute concentration. Although water is a polar molecule, a small amount can cross the hydrophobic core of the bilayer directly, and this is substantially assisted in most cells by **aquaporins**, channel proteins specialised for rapid water transport, which are especially abundant in tissues, such as the kidney tubules, where large volumes of water need to cross membranes quickly."
+    },
+    {
+      label: "B2.1.6",
+      heading: "Channel proteins and facilitated diffusion",
+      level: "SL",
+      text: "**Facilitated diffusion** allows polar molecules and ions to cross a membrane despite the hydrophobic barrier of the bilayer, using specific **channel proteins** that form a hydrophilic pore across the membrane. Like simple diffusion, facilitated diffusion moves a substance down its concentration gradient and requires no direct energy input from the cell, the energy for movement comes entirely from the concentration gradient itself, but unlike simple diffusion, it depends on the presence of a specific channel protein, so it only occurs for substances that have a matching channel, and only at the rate that the available channels allow."
+    },
+    {
+      label: "B2.1.7",
+      heading: "Pump proteins and active transport",
+      level: "SL",
+      text: "**Active transport** moves a substance across a membrane against its concentration gradient, from a region of lower concentration to a region of higher concentration, which is thermodynamically unfavourable and therefore requires an input of energy, usually supplied directly by ATP hydrolysis. This is carried out by **pump proteins**, which bind a specific substance on one side of the membrane, undergo an energy-driven change in shape, and release that substance on the other side. Because each pump protein transfers one particular substance, active transport gives a cell precise control over the movement of specific ions or molecules, even against a concentration gradient that would otherwise drive them the opposite way."
+    },
+    {
+      label: "B2.1.8",
+      heading: "Selectivity in membrane permeability",
+      level: "SL",
+      text: "A membrane's overall permeability is described as **selective**, meaning it allows some substances to cross far more readily than others, rather than being either completely impermeable or freely permeable to everything. This selectivity arises from the combined effect of the hydrophobic bilayer core (which favours small, non-polar molecules) and the specific set of channel and pump proteins a particular membrane happens to contain (which determines which polar molecules and ions can cross, and at what rate, and in which direction). Because different cell types express different combinations of membrane proteins, membrane selectivity, and therefore what a cell can take up or exclude, varies considerably between tissues."
+    },
+    {
+      label: "B2.1.9",
+      heading: "Glycoproteins and glycolipids",
+      level: "SL",
+      text: "**Glycoproteins** and **glycolipids** are proteins and lipids, respectively, with short carbohydrate chains attached, found exclusively on the outer surface of the plasma membrane. These carbohydrate chains project outward into the extracellular environment and act as identifying markers, allowing cells to recognise one another, a function important in processes ranging from tissue formation and immune recognition of self versus non-self cells, to the specific docking of hormones, antibodies, and (in some cases) pathogens onto the surface of a target cell."
+    },
+    {
+      label: "B2.1.10",
       heading: "The fluid mosaic model",
       level: "SL",
-      text: "The **fluid mosaic model**, proposed by Singer and Nicolson in 1972, describes the arrangement and behaviour of membrane components. It is described as a mosaic because proteins, cholesterol, and glycolipids are embedded at different points and depths throughout the bilayer, producing a patchy, varied composition rather than a uniform sheet. It is described as fluid because individual phospholipids and proteins are not fixed in place, they can diffuse laterally within their own layer, giving the membrane flexibility and self-repairing properties.\n\n**Integral proteins** are embedded within the bilayer, often spanning it completely, while **peripheral proteins** are attached more loosely to just one face of the membrane. Membrane proteins carry out much of the functional work of a membrane, including transport, enzymatic catalysis, receptor binding for cell signalling, and cell-to-cell recognition."
+      text: "The **fluid mosaic model**, proposed by Singer and Nicolson in 1972, describes the overall arrangement and behaviour of membrane components. It is described as a mosaic because proteins, cholesterol, and glycolipids are embedded at different points and depths throughout the bilayer, producing a patchy, varied composition rather than a uniform sheet. It is described as fluid because individual phospholipids and proteins are not fixed rigidly in place, they can diffuse laterally within their own layer of the membrane, giving the membrane flexibility, self-sealing behaviour after minor damage, and the capacity to change shape as a cell moves or divides."
     },
     {
-      label: "3",
-      heading: "Simple diffusion and osmosis",
-      level: "SL",
-      text: "Small, non-polar molecules, notably oxygen and carbon dioxide, can cross the hydrophobic interior of the bilayer directly. This is **simple diffusion**: net movement from a region of higher concentration to a region of lower concentration, requiring no protein and no energy input, since it is driven entirely by the **concentration gradient**.\n\n**Osmosis** is the diffusion of water specifically, across a partially permeable membrane, from a region of lower solute concentration to a region of higher solute concentration. Although water is a polar molecule, small amounts can cross the bilayer directly, and this is substantially assisted in most cells by aquaporins, channel proteins specialised for water transport."
-    },
-    {
-      label: "4",
-      heading: "Facilitated diffusion",
-      level: "SL",
-      text: "Polar molecules and ions cannot cross the non-polar core of the bilayer at a biologically useful rate, so their movement depends on membrane proteins. **Facilitated diffusion** uses two classes of protein: channel proteins, which form a hydrophilic pore that allows specific ions or molecules through, and carrier proteins, which bind their target molecule and undergo a conformational change to move it across the membrane.\n\nCrucially, facilitated diffusion is still a form of **passive transport**: movement occurs down the concentration gradient, and no ATP is consumed, even though a protein is required to make the crossing possible."
-    },
-    {
-      label: "5",
-      heading: "Active transport",
-      level: "SL",
-      text: "When a substance needs to move against its concentration gradient, from a region of lower to higher concentration, energy input is required. This is **active transport**, and it is carried out by pump proteins that use ATP directly to drive a conformational change.\n\nThe sodium-potassium pump is the standard example: for each cycle, it moves three sodium ions out of the cell and two potassium ions in, both against their respective gradients, using the energy released from hydrolysing one molecule of ATP. This pump is essential for maintaining the resting membrane potential in neurons and for driving secondary active transport of other solutes, such as glucose reabsorption in the kidney nephron."
-    },
-    {
-      label: "6",
-      heading: "Bulk transport: endocytosis and exocytosis",
+      label: "B2.1.11",
+      heading: "Fatty acid composition and membrane fluidity",
       level: "HL",
-      text: "Some material is too large to cross a membrane through an individual protein, and instead requires bulk transport using vesicles. In **endocytosis**, a region of the membrane invaginates around extracellular material and pinches off to form an intracellular vesicle. In **exocytosis**, an intracellular vesicle moves to the membrane and fuses with it, releasing its contents to the exterior of the cell.\n\nBoth processes require energy and are essential for handling material too large for channel or carrier proteins, for example the secretion of protein hormones or neurotransmitters, or the uptake of large extracellular particles by phagocytic immune cells.",
-      tip: { label: "Exam tip", text: "When asked to compare passive and active transport, always state explicitly whether ATP is used and whether movement is with or against the concentration gradient. Vague answers that just say 'it needs energy' without naming ATP tend to lose marks." }
+      text: "The degree of membrane fluidity is influenced by the fatty acid composition of its phospholipids. Fatty acid tails containing one or more carbon-carbon double bonds are described as **unsaturated**, and these kinks in the tail prevent phospholipid molecules from packing tightly together, keeping the membrane more fluid, particularly at lower temperatures. **Saturated** fatty acid tails, with no double bonds, pack together more closely and produce a less fluid, more rigid membrane. Cholesterol, embedded within the bilayer alongside the phospholipids, has a moderating effect on fluidity, restraining excessive fluidity at higher temperatures while helping prevent the membrane from becoming too rigid at lower ones, keeping overall membrane fluidity within a functional range across a range of temperatures."
     }
   ],
+
 
   "D3.2": [
     {
@@ -171,32 +195,81 @@ const CONTENT = {
 
   "C4.1": [
     {
-      label: "1",
-      heading: "Populations and carrying capacity",
+      label: "C4.1.1",
+      heading: "Defining a population",
       level: "SL",
-      text: "A **population** is defined as all the organisms of one species living in the same area at the same time, capable of interbreeding. Populations do not grow indefinitely, they are constrained by the **carrying capacity** of their environment, the maximum population size that the available resources (food, space, water, shelter) can sustain over the long term.\n\nWhen a population is small relative to the available resources, growth is approximately exponential. As the population approaches carrying capacity, growth slows as resources become limiting, producing a **sigmoid growth curve**, an S-shaped pattern of rapid initial growth followed by a plateau.",
+      text: "A **population** is a group of interacting organisms of the same species living in the same area at the same time. Members of a population normally interbreed with one another, and it is this reproductive connection, rather than simple geographic proximity, that is used to distinguish one population of a species from a separate, reproductively isolated population of the same species living elsewhere."
+    },
+    {
+      label: "C4.1.2 / C4.1.3",
+      heading: "Estimating population size by random sampling",
+      level: "SL",
+      text: "Counting every individual in a population is rarely practical, so ecologists instead estimate population size using **random sampling**, examining a representative subset of a habitat and using it to infer the population as a whole. Randomness in where samples are taken is essential to avoid bias, if sampling locations are chosen non-randomly (for instance, always in the most convenient or most visibly populated spots), the resulting estimate will systematically over- or under-represent the true population.\n\nEven with proper randomisation, some **sampling error**, the difference between the estimate obtained and the true population size, is unavoidable, since a sample is never a perfect miniature of the whole population. For **quadrat sampling**, used to estimate the population size of sessile (non-moving) organisms such as most plants, a number of randomly placed quadrats of known area are used to count individuals, and the standard deviation of the counts per quadrat gives a measure of how evenly the population is distributed across the habitat."
+    },
+    {
+      label: "C4.1.4",
+      heading: "Capture-mark-release-recapture and the Lincoln index",
+      level: "SL",
+      text: "For motile (mobile) species, population size is instead commonly estimated using **capture-mark-release-recapture**: a sample of individuals is captured, marked in some harmless way, and released back into the population; after allowing time for the marked individuals to redistribute themselves randomly among the rest of the population, a second sample is captured and the proportion of marked individuals within it is recorded.\n\nThe **Lincoln index** uses this data to estimate total population size: population size = (number initially marked × total number recaptured) ÷ number of marked individuals recaptured. This method assumes, among other things, that the marked individuals mix fully and randomly back into the population, and that the marking itself does not affect an individual's survival or behaviour."
+    },
+    {
+      label: "C4.1.5 / C4.1.6",
+      heading: "Carrying capacity and negative feedback",
+      level: "SL",
+      text: "**Carrying capacity** is the maximum population size that a given environment can sustainably support over the long term, determined by the availability of limited resources such as food, water, space, and shelter. As a population approaches its carrying capacity, competition for these limited resources intensifies.\n\nPopulation size is regulated around the carrying capacity through **negative feedback**: as population density rises, density-dependent factors such as competition, predation, and disease transmission become more intense, reducing the population's growth rate and pushing it back down toward a sustainable level; conversely, if the population falls well below carrying capacity, reduced competition allows growth to accelerate again."
+    },
+    {
+      label: "C4.1.7 / C4.1.8",
+      heading: "Limiting factors and population growth models",
+      level: "SL",
+      text: "Factors that restrict population growth are classified as either **density-dependent**, having a proportionally larger effect as population density increases (such as food availability, disease, and predation), or **density-independent**, affecting a population by roughly the same degree regardless of its size (such as a sudden extreme weather event).\n\nPopulation growth can be modelled in two idealised forms. **Exponential growth** describes unrestricted growth under conditions of abundant resources and low competition, producing an ever-steepening curve. **Sigmoidal (logistic) growth** instead accounts for density-dependent limiting factors, producing an S-shaped curve that rises steeply while resources remain abundant, then levels off as the population approaches carrying capacity. Both are simplified models of real population dynamics, useful for understanding general patterns but rarely capturing the full complexity of a real ecosystem.",
       image: "https://commons.wikimedia.org/wiki/Special:FilePath/Logistic_Carrying_Capacity.svg",
       imageCaption: "A sigmoid (S-shaped) population growth curve levelling off at the carrying capacity, K."
     },
     {
-      label: "2",
-      heading: "Limiting factors",
+      label: "C4.1.9",
+      heading: "Intraspecific competition and cooperation",
       level: "SL",
-      text: "Factors that restrict population growth are called **limiting factors**, and they fall into two categories. Density-dependent factors, such as food availability, disease transmission, and predation, have a proportionally larger effect as population density increases, and are what actually produce the levelling-off seen in a sigmoid growth curve. Density-independent factors, such as a sudden extreme weather event, affect a population regardless of how many individuals are present."
+      text: "Members of the same population compete with one another for the same limited resources, since they share identical needs, this **intraspecific competition** is generally more intense than competition between different species, and it is the primary density-dependent mechanism that limits a population's growth as it approaches carrying capacity. Some species also show **intraspecific cooperation**, such as cooperative hunting or communal defence against predators, which can improve the survival and reproductive success of individuals within a group beyond what they could achieve alone, even while those same individuals continue to compete with one another for other resources."
     },
     {
-      label: "3",
-      heading: "Interspecific relationships",
+      label: "C4.1.10",
+      heading: "Communities",
       level: "SL",
-      text: "Species within a community interact in several recurring, classifiable ways.\n\nIn **competition**, two species require the same limited resource, and both are disadvantaged by the interaction. In predation, one species (the predator) consumes another (the prey), benefiting at the prey's expense. In **mutualism**, both interacting species benefit, as in the relationship between a flowering plant and its pollinator. In parasitism, one species benefits at the sustained expense of a host, typically without killing it outright, distinguishing it from predation."
+      text: "A **community** consists of all the populations of different species that live and interact within a given area, encompassing every layer of interaction, from competition and predation to mutualism, that connects species to one another and, collectively, drives how the ecosystem as a whole functions."
     },
     {
-      label: "4",
-      heading: "Communities and ecological niches",
+      label: "C4.1.11 / C4.1.12 / C4.1.13",
+      heading: "Categories of interspecific interaction",
       level: "SL",
-      text: "A **community** comprises all the populations of different species that live and interact within a given area. Within a community, each species occupies a **niche**, its functional role, encompassing its resource use, habitat, and interactions with other species.\n\nThe competitive exclusion principle states that two species cannot occupy an identical niche indefinitely within the same community, since they would be in direct, total competition for every resource, and one would eventually be excluded. This principle explains why closely related species coexisting in the same habitat typically show niche differentiation, partitioning resources in slightly different ways rather than competing directly."
+      text: "Species within a community interact in several distinct, classifiable ways, each with different ecological significance. In **competition**, two species require the same limited resource, and both are disadvantaged. In **predation**, one species (the predator) kills and consumes another (the prey), benefiting at the prey's expense. In **herbivory**, an animal consumes a plant, benefiting at the plant's expense without necessarily killing it outright. In **parasitism**, one species benefits at the sustained expense of a host, typically without killing it, distinguishing it from predation; **pathogenicity** is a related case in which a microorganism causes disease in a host. In **mutualism**, both interacting species benefit, as in the relationship between a flowering plant and its pollinator.\n\nThese interactions matter ecologically because they shape which species can coexist in a community, how energy and resources flow through it, and how stable the community is overall, removing or introducing a single strongly interacting species can have consequences that cascade through many others."
+    },
+    {
+      label: "C4.1.14 / C4.1.15",
+      heading: "Invasive species",
+      level: "SL",
+      text: "An **invasive species** is one introduced, whether deliberately or accidentally, to an area outside its native range, where it establishes itself and causes ecological or economic harm, often by outcompeting, preying on, or otherwise disrupting native (endemic) species that have no prior evolutionary experience of it. Human activity is the principal driver behind the introduction and spread of most invasive species, through routes including global trade and transport, the deliberate introduction of species for agriculture or pest control, and the accidental release of pets or garden species into the wild."
+    },
+    {
+      label: "C4.1.16 / C4.1.17 / C4.1.18 / C4.1.19",
+      heading: "Testing for interspecific competition using chi-squared",
+      level: "SL",
+      text: "Whether two species are actually competing for the same resources in a habitat can be tested statistically, for instance by comparing how often the two species are found together in the same sampling location against how often that would be expected purely by chance if they were distributed independently of one another.\n\nThe **chi-squared test** is commonly used for this purpose: it compares observed frequencies (from field sampling) against the frequencies expected under a null hypothesis of no association between the two species, producing a test statistic that can be compared against a critical value to determine whether any observed association is statistically significant, or better explained by random chance. As with any statistical test, the chi-squared test has limitations, including the general requirement for reasonably large sample and expected-frequency sizes to give a reliable result, so its conclusions should be evaluated critically rather than accepted automatically."
+    },
+    {
+      label: "C4.1.20 / C4.1.21",
+      heading: "Predator-prey dynamics and top-down versus bottom-up control",
+      level: "SL",
+      text: "Predator and prey populations frequently show cyclical fluctuations over time, since a rise in prey numbers provides more food for predators, allowing the predator population to grow, which in turn increases predation pressure and drives prey numbers back down, followed by a corresponding decline in predators once prey become scarce; the long-term Canada lynx and snowshoe hare population data is a well-documented real-world case study of this pattern.\n\nCommunities can be regulated by **top-down control**, in which predators limit the abundance of species lower in the food chain (as famously seen with sea otters controlling sea urchin populations in kelp forests), or by **bottom-up control**, in which the availability of resources such as nutrients or primary producers limits the abundance of species higher up the food chain; real communities are often shaped by some combination of both forms of control operating together."
+    },
+    {
+      label: "C4.1.22",
+      heading: "Allelopathy and antibiotic secretion as competitive strategies",
+      level: "SL",
+      text: "Some organisms gain a competitive advantage not through direct resource competition but by chemically suppressing their competitors. **Allelopathy**, seen in some plants, involves releasing chemical compounds into the surrounding soil that inhibit the germination or growth of competing plant species nearby, effectively reducing competition for light, water, and nutrients before it can occur. **Antibiotic secretion**, seen in some fungi and bacteria, serves an analogous function in the microbial world, releasing compounds that kill or inhibit competing microorganisms in the immediate vicinity, securing resources and space for the producing organism."
     }
   ],
+
 
   "D2.3": [
     {
@@ -1389,6 +1462,772 @@ const CONTENT = {
       heading: "Hybridisation and polyploidy in speciation",
       level: "HL",
       text: "While reproductive isolation usually builds up gradually, some new species, particularly in plants, can arise essentially instantly through **hybridisation** combined with **polyploidy**. When two different species interbreed, the resulting hybrid often carries mismatched sets of chromosomes that cannot pair correctly during meiosis, making it sterile. However, if a chromosome-doubling error occurs in that hybrid, producing a cell with two complete matching sets of chromosomes from each parent species, the resulting **polyploid** offspring can undergo meiosis normally and is fertile, but is now reproductively isolated from both original parent species, since crossing back to either produces offspring with an uneven, unpairable chromosome number. This abrupt mechanism has been an important route to new species in the evolutionary history of many crop plants, including bread wheat."
+    }
+  ],
+  "B4.2": [
+    {
+      label: "B4.2.1",
+      heading: "Biotic and abiotic interactions",
+      level: "SL",
+      text: "An organism's growth, survival, and reproduction are shaped by both biotic and abiotic interactions with its surroundings. Biotic interactions involve other living organisms: feeding relationships such as predation and competition, provision of shelter, and relationships with parasites or mutualistic partners. Abiotic interactions involve the non-living environment: water availability, sunlight, soil type, pH, and temperature. How a species obtains its food, one particularly important biotic interaction, forms the basis for the categories of nutrition covered throughout this topic."
+    },
+    {
+      label: "B4.2.2",
+      heading: "Obligate anaerobes, facultative anaerobes, and obligate aerobes",
+      level: "SL",
+      text: "Organisms differ in their relationship with oxygen. **Obligate aerobes** require oxygen for cell respiration and cannot survive without it. **Obligate anaerobes** cannot tolerate oxygen at all, and in many cases oxygen is directly toxic to them, restricting them to oxygen-free environments such as deep sediment or the gut. **Facultative anaerobes** are more flexible: they can respire aerobically when oxygen is available, generating far more ATP per glucose molecule, but can switch to anaerobic respiration or fermentation when it is not, allowing them to survive in a wider range of habitats than either of the other two groups."
+    },
+    {
+      label: "B4.2.3 / B4.2.4 / B4.2.5",
+      heading: "Modes of nutrition: autotrophs, heterotrophs, and archaea",
+      level: "SL",
+      text: "**Photosynthesis** is the mode of nutrition in plants, algae, and several groups of photosynthetic prokaryotes (photoautotrophs): carbon dioxide and water are converted into organic molecules using light energy, making these organisms self-sufficient producers rather than consumers of pre-made organic matter.\n\nHeterotrophic organisms instead obtain their organic matter from other organisms, through several distinct strategies. **Holozoic nutrition** involves ingesting solid or liquid food, then digesting, absorbing, and assimilating it internally, the strategy used by most animals. **Mixotrophic nutrition** combines autotrophic and heterotrophic strategies in a single organism, as in Euglena, which can photosynthesise in light but ingest food particles when light is unavailable. **Saprotrophic nutrition**, used by many fungi and some bacteria, involves secreting digestive enzymes onto external organic matter and then absorbing the resulting breakdown products, effectively digesting food outside the body.\n\n**Archaea** show an unusually diverse range of nutritional strategies among prokaryotes, including using light, or the oxidation of a wide variety of inorganic or organic compounds, as an energy source, reflecting the extreme and varied environments many archaea inhabit."
+    },
+    {
+      label: "B4.2.6 / B4.2.7",
+      heading: "Dentition, diet, and inferring diet from anatomy",
+      level: "SL",
+      text: "Within the hominid family, dentition reflects diet. Omnivorous species tend to have a mixture of tooth types, sharper incisors and canines alongside flatter molars, suited to a varied diet including both plant and animal material, while more herbivorous species show heavier wear and larger, flatter molars adapted for grinding fibrous plant tissue.\n\nBecause dentition and jaw structure are so closely tied to diet, they can be used to infer the probable diet of extinct hominid species from fossil remains alone, comparing tooth size, shape, and wear patterns to those of living species with known diets."
+    },
+    {
+      label: "B4.2.8 / B4.2.9",
+      heading: "Herbivore, predator, and prey adaptations",
+      level: "SL",
+      text: "Herbivores have evolved adaptations for efficiently harvesting and digesting plant material, such as specialised grinding teeth and, in many cases, gut microorganisms capable of breaking down cellulose, which the herbivore's own enzymes cannot digest. Plants, in turn, have evolved defences against herbivory, including physical deterrents like thorns and tough or spiny leaves, and chemical deterrents like toxic or bitter-tasting compounds.\n\nPredators show adaptations for finding, catching, and killing prey, such as acute senses, speed, camouflage for stalking, and specialised killing structures like claws or venom. Prey species show a corresponding set of adaptations for resisting predation, including camouflage, alarm calls, defensive group behaviour, and rapid escape responses.",
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Sea otter.jpg",
+      imageCaption: "Sea otters are a keystone predator in Pacific kelp forests, controlling sea urchin populations that would otherwise overgraze the kelp."
+    },
+    {
+      label: "B4.2.10",
+      heading: "Plant adaptations for harvesting light",
+      level: "SL",
+      text: "Because light availability is often the limiting factor for photosynthesis, plants show a range of structural adaptations for capturing it efficiently. These include broad, thin leaves that maximise surface area relative to the plant's investment in tissue, leaf arrangements that minimise self-shading between leaves on the same plant, and, in forest species competing for light beneath a closed canopy, rapid vertical growth or climbing habits that let a plant reach brighter conditions higher up."
+    },
+    {
+      label: "B4.2.11 / B4.2.12",
+      heading: "Fundamental and realised niches",
+      level: "SL",
+      text: "The **fundamental niche** of a species is the full range of environmental conditions and resources it could theoretically exploit, based purely on its adaptations and physiological tolerance, in the total absence of competitors or predators. The **realised niche** is the narrower portion of that fundamental niche a species actually occupies in practice, once biotic interactions such as competition and predation from other species are taken into account.\n\nThe realised niche is therefore always equal to or smaller than the fundamental niche, since real ecosystems are never free of competing or interacting species."
+    },
+    {
+      label: "B4.2.13",
+      heading: "Competitive exclusion",
+      level: "SL",
+      text: "The **competitive exclusion principle** states that two species with heavily overlapping fundamental niches, competing intensely for the same limited resource, cannot coexist indefinitely in the same location. Over time, one of two outcomes typically results: the superior competitor drives the other to local extinction, or the two species diverge, each restricted to a smaller, non-overlapping portion of its fundamental niche, reducing the competition between them. This principle is closely connected to the uniqueness of ecological niches: in a stable community, no two species persist while occupying exactly the same realised niche."
+    }
+  ],
+
+  "A3.2": [
+    {
+      label: "A3.2.1",
+      heading: "Why classification is needed",
+      level: "HL",
+      text: "Classification is needed because of the sheer diversity of life on Earth, millions of described species and likely many more undiscovered. Organising this diversity into a structured system makes it possible to communicate about organisms precisely, to identify unknown organisms by comparing them against known groups, and to make broader, generalisable predictions about an organism's biology based on the group it belongs to, rather than starting from scratch with every individual species."
+    },
+    {
+      label: "A3.2.2",
+      heading: "Difficulties with the traditional taxonomic hierarchy",
+      level: "HL",
+      text: "The traditional hierarchy of taxa (kingdom, phylum, class, order, family, genus, species) was originally built on visible, morphological similarities between organisms. This approach does not always correspond to true evolutionary relationships: organisms can resemble each other due to convergent evolution rather than shared ancestry, and important genetic or biochemical differences can be entirely invisible in external morphology, meaning the traditional hierarchy can group together, or separate, species in ways that don't reflect how closely related they actually are."
+    },
+    {
+      label: "A3.2.3 / A3.2.4",
+      heading: "Classification by evolutionary relationships, and clades",
+      level: "HL",
+      text: "Basing classification on evolutionary relationships, rather than superficial similarity, has the advantage of grouping organisms in a way that reflects their actual shared ancestry, making classification more biologically meaningful and more stable as new evidence emerges. A **clade** is the basic unit of this approach: a group consisting of a common ancestor and all of its descendants, and no others, an organising principle drawn from the field of cladistics, developed by the German zoologist Willi Hennig."
+    },
+    {
+      label: "A3.2.5",
+      heading: "The molecular clock",
+      level: "HL",
+      text: "Differences between the DNA or protein sequences of two species tend to accumulate gradually over time as mutations arise and, in many cases, persist. Because of this, the degree of sequence difference between two species can be used to estimate how long ago they diverged from a shared common ancestor, an approach known as the **molecular clock**. This method only gives an estimate rather than an exact date, since mutation rates are influenced by factors including generation time, population size, and the intensity of selective pressure on the sequence in question, all of which can vary between lineages."
+    },
+    {
+      label: "A3.2.6 / A3.2.7",
+      heading: "Constructing and interpreting cladograms",
+      level: "HL",
+      text: "A **cladogram** is a branching diagram representing the evolutionary relationships between a group of organisms, constructed by comparing base sequences of genes or amino acid sequences of proteins across the species involved: species with more similar sequences are placed closer together on the diagram. Each branch point, or **node**, represents a hypothetical common ancestor at which two lineages diverged, and the point furthest back is the **root**, representing the most recent common ancestor of every organism included in the diagram.\n\nReading a cladogram allows evolutionary relationships to be deduced directly: any two species sharing a more recent node are more closely related than either is to a species sharing only an earlier, more distant node."
+    },
+    {
+      label: "A3.2.8",
+      heading: "Using cladistics to test classification",
+      level: "HL",
+      text: "Cladistic analysis can be used to check whether an existing classification, often built originally on visible morphological features, actually reflects true evolutionary relationships. A well-documented case involves the figwort family (Scrophulariaceae), traditionally classified by floral features such as how petals are arranged in the bud. DNA sequence analysis in the 1990s revealed that this traditional grouping was not monophyletic, meaning it did not consist of a common ancestor and all its descendants, some included species belonged on entirely separate evolutionary branches, and the classification was subsequently revised in light of this molecular evidence."
+    },
+    {
+      label: "A3.2.9",
+      heading: "The three-domain system",
+      level: "HL",
+      text: "Prior to the late twentieth century, prokaryotes were generally treated as a single group. Working with rRNA base sequence data, the microbiologist Carl Woese compared the small ribosomal subunit sequences of typical bacteria against those of methanogens, organisms previously classified simply as unusual bacteria. He found substantial, systematic sequence differences between the two groups, differences at least as large as those separating bacteria from eukaryotes, providing strong evidence that methanogens (and related organisms) actually belong to an entirely separate evolutionary domain. This evidence led to the now widely accepted three-domain system of classification: **Bacteria**, **Archaea**, and **Eukarya**."
+    }
+  ],
+  "D4.2": [
+    {
+      label: "D4.2.1",
+      heading: "Ecosystem stability",
+      level: "SL",
+      text: "**Ecosystem stability** describes the capacity of an ecosystem to persist over long periods of time, maintaining its characteristic structure and function despite ongoing minor fluctuations. Some ecosystems provide dramatic evidence of this: certain forest and desert ecosystems show evidence of persisting largely undisturbed for millions of years, indicating that a stable ecosystem is not a static, unchanging system, but one whose internal processes consistently return it toward the same overall balance."
+    },
+    {
+      label: "D4.2.2",
+      heading: "Factors affecting stability and tipping points",
+      level: "SL",
+      text: "Ecosystem stability depends on a continuous supply of energy, effective recycling of nutrients, sufficient genetic diversity within populations to allow adaptation to change, and climatic variables remaining within the tolerance ranges of the resident species. When one or more of these factors is pushed too far, an ecosystem can reach a **tipping point**: a threshold beyond which the system shifts rapidly and, often, irreversibly into a fundamentally different state.\n\nDeforestation of the Amazon rainforest is widely discussed as a potential real-world example. The rainforest itself generates a substantial share of its own rainfall, through the release of water vapour by transpiration across a very large forested area. Beyond some uncertain threshold of forest loss, this self-sustaining cycle of rainfall could break down, potentially triggering a shift of large areas of the remaining forest toward a drier, savanna-like ecosystem."
+    },
+    {
+      label: "D4.2.3",
+      heading: "Using models to study ecosystem stability",
+      level: "SL",
+      text: "Because manipulating real, large-scale ecosystems experimentally is rarely practical or ethical, ecologists often use **mesocosms**, small-scale, controlled model ecosystems, to investigate how particular variables affect stability. Sealed glass mesocosms are especially useful because they can be arranged so that no matter enters or leaves, isolating the system while still permitting the exchange of energy (for instance as light or heat) with the outside, allowing researchers to observe how internal nutrient cycling and species interactions play out under fully controlled conditions."
+    },
+    {
+      label: "D4.2.4",
+      heading: "Keystone species",
+      level: "SL",
+      text: "A **keystone species** is a species whose impact on the structure and stability of its community is disproportionately large relative to its own numerical abundance. Removing a keystone species from an ecosystem, whether through hunting, habitat loss, or disease, can trigger disproportionate knock-on effects throughout the food web, potentially destabilising or collapsing the wider ecosystem even though the keystone species itself made up only a small fraction of the total biomass present."
+    },
+    {
+      label: "D4.2.5 / D4.2.6",
+      heading: "Sustainable harvesting and sustainable agriculture",
+      level: "SL",
+      text: "Harvesting a natural resource, whether timber, fish, or wild game, is sustainable only if it is removed no faster than the population or ecosystem can naturally replace it; harvesting beyond this rate causes long-term decline and, potentially, ecosystem collapse.\n\nThe sustainability of agriculture depends on several interacting factors: the rate of soil erosion, the leaching of nutrients out of the soil, the ongoing supply of fertilisers and other inputs needed to maintain yields, pollution caused by agrochemicals, and the overall carbon footprint of agricultural practices, including land clearance, fertiliser production, and machinery use."
+    },
+    {
+      label: "D4.2.7 / D4.2.8",
+      heading: "Eutrophication and biomagnification",
+      level: "SL",
+      text: "**Eutrophication** occurs when nitrogen and phosphate fertilisers leach out of agricultural soil into nearby aquatic or marine ecosystems, providing an excess supply of nutrients that triggers explosive algal growth. When the resulting algal bloom eventually dies, its decomposition by bacteria consumes large quantities of dissolved oxygen, sharply raising the **biochemical oxygen demand** of the water and often causing the die-off of fish and other oxygen-dependent organisms.\n\n**Biomagnification** is a separate, though related, problem: certain persistent pollutants, such as the pesticide DDT and the heavy metal mercury, accumulate in the tissues of organisms and become progressively more concentrated at each successive trophic level, since each consumer eats many prey organisms' worth of accumulated toxin without being able to break it down or excrete it efficiently. Top predators in a food chain can therefore end up carrying dangerously high toxin loads even when the toxin's concentration in the environment itself is comparatively low."
+    },
+    {
+      label: "D4.2.9",
+      heading: "Microplastic and macroplastic pollution",
+      level: "SL",
+      text: "Plastics persist for a very long time in the natural environment because they are largely non-biodegradable, resistant to the microbial breakdown that recycles most natural organic matter. **Macroplastic** debris, from fishing gear to packaging, can entangle or be ingested by marine animals, sometimes causing fatal injury or starvation. Over time, larger plastic items also physically break down into **microplastics**, tiny fragments that are now widespread throughout marine and freshwater ecosystems, are ingested across many levels of the food chain, and whose long-term ecological and health effects are still an active area of research."
+    },
+    {
+      label: "D4.2.10",
+      heading: "Rewilding",
+      level: "SL",
+      text: "**Rewilding** is a conservation strategy aimed at restoring natural ecological processes and self-regulating ecosystems, rather than managing a habitat toward one fixed, human-defined target state. Rewilding projects often focus on reintroducing keystone species, particularly large carnivores, whose presence can trigger a cascade of beneficial changes throughout the wider food web, alongside re-establishing connected corridors of habitat that allow species to move and recolonise areas naturally."
+    },
+    {
+      label: "D4.2.11 / D4.2.12",
+      heading: "Ecological succession and primary succession",
+      level: "SL",
+      text: "**Ecological succession** is the gradual, directional change in the species composition of a community over time, typically driven by the way earlier colonising species alter the local environment, making conditions more favourable for a different set of species to establish. **Primary succession** begins on newly formed, previously lifeless substrate, such as bare rock exposed after a volcanic eruption or the retreat of a glacier, with no pre-existing soil. It starts with hardy pioneer species, often lichens and mosses, that can tolerate the harsh initial conditions and gradually break down rock and accumulate organic matter, slowly building the soil needed to support the more complex plant and animal communities that follow."
+    },
+    {
+      label: "D4.2.13 / D4.2.14",
+      heading: "Cyclical succession, climax communities, and arrested succession",
+      level: "SL",
+      text: "Not every successional sequence proceeds toward a single stable endpoint. **Cyclical succession** occurs where a community repeatedly cycles through a recurring sequence of stages, often driven by a regular disturbance such as periodic fire or storm damage, rather than settling permanently into one final state.\n\nWhere succession does progress toward a stable, self-sustaining endpoint, that final stage is called the **climax community**, a community that persists indefinitely under the prevailing local conditions unless significantly disturbed. **Arrested succession** occurs when some persistent factor, such as sustained grazing pressure or repeated human disturbance, prevents a community from ever progressing to what would otherwise be its natural climax state, holding it instead at an earlier successional stage."
+    }
+  ],
+
+  "D4.3": [
+    {
+      label: "D4.3.1",
+      heading: "Anthropogenic causes of climate change",
+      level: "SL",
+      text: "**Anthropogenic climate change** refers to long-term shifts in global climate patterns driven by human activity, principally through the release of greenhouse gases such as carbon dioxide and methane. Major sources include the combustion of fossil fuels for energy and transport, deforestation (which both releases stored carbon and reduces the capacity for future carbon absorption), and agricultural practices, including livestock farming, which is a substantial source of methane."
+    },
+    {
+      label: "D4.3.2",
+      heading: "Positive feedback cycles in global warming",
+      level: "SL",
+      text: "A **positive feedback cycle** occurs when an initial change triggers further changes that amplify the original effect, rather than counteracting it. Several such cycles operate in global warming. Melting Arctic ice reduces the reflective (high-albedo) white surface area of the planet, so more solar energy is absorbed rather than reflected back into space, driving further warming and further ice loss. Thawing permafrost releases previously locked-in methane and carbon dioxide, both of which contribute to additional warming, which in turn thaws more permafrost. These feedback loops mean that once climate change begins to accelerate certain physical processes, the resulting warming can itself become self-reinforcing."
+    },
+    {
+      label: "D4.3.3",
+      heading: "Boreal forests as a tipping point",
+      level: "SL",
+      text: "Boreal forests, the vast coniferous forests of the northern hemisphere, have historically acted as a significant net carbon sink, absorbing more carbon through growth than they release through decomposition and natural disturbance. As the climate warms, however, increased frequency and severity of wildfires, along with insect outbreaks and heat stress, threaten to shift some boreal forest regions from net carbon accumulation to net carbon loss, representing a potential tipping point at which a system that has long helped moderate atmospheric CO2 instead begins actively adding to it."
+    },
+    {
+      label: "D4.3.4",
+      heading: "Melting polar ice",
+      level: "SL",
+      text: "Polar ice loss takes two physically distinct forms with different consequences. The melting of **landfast ice** and **sea ice**, ice that forms from frozen seawater and is already floating in the ocean, does not by itself raise sea level, since the ice was already displacing its own weight in water. It does, however, dramatically alter polar marine habitats, reducing the platforms that species such as polar bears and seals depend on for hunting, resting, and breeding, and reducing the reflective ice surface that helps keep polar regions cool."
+    },
+    {
+      label: "D4.3.5",
+      heading: "Effects on ocean currents and nutrient distribution",
+      level: "SL",
+      text: "Ocean currents are driven partly by differences in water temperature and salinity, and climate change is disrupting both. Melting freshwater ice reduces the salinity, and warming reduces the density, of surface polar waters, weakening the sinking of dense water that helps drive large-scale ocean circulation patterns. Because ocean currents also redistribute dissolved nutrients around the globe, for example bringing nutrient-rich deep water to the surface through upwelling in some regions, disrupting these currents can significantly alter the productivity and distribution of marine ecosystems far from the poles themselves."
+    },
+    {
+      label: "D4.3.6",
+      heading: "Range shifts and coral reefs",
+      level: "SL",
+      text: "As regional climates warm, many temperate species are shifting their geographic range toward higher latitudes or higher altitudes, tracking the climatic conditions to which they are adapted; this range shift can bring previously separated species into new contact and competition, and can leave species unable to shift fast enough stranded in increasingly unsuitable conditions.\n\nCoral reefs are especially vulnerable to warming because reef-building corals live close to the upper limit of their thermal tolerance already. Even small, sustained increases in sea temperature can trigger **coral bleaching**, the loss of the symbiotic, photosynthetic algae that corals depend on for most of their energy, and repeated or prolonged bleaching events can kill coral colonies outright, threatening the exceptionally high biodiversity that reef ecosystems support."
+    },
+    {
+      label: "D4.3.7",
+      heading: "Carbon sequestration strategies",
+      level: "SL",
+      text: "Restoring and expanding vegetation is one of the main approaches to actively removing carbon dioxide from the atmosphere. **Afforestation** (establishing forest on land that was not previously forested) and **forest regeneration** (allowing or assisting degraded forest to regrow) both increase the amount of carbon stored in living biomass over time. **Restoration of peat-forming wetlands** is also significant, since waterlogged, low-oxygen peat conditions slow decomposition dramatically, allowing peatlands to store carbon that has accumulated over thousands of years, carbon that is released rapidly back into the atmosphere if the peatland is drained."
+    },
+    {
+      label: "D4.3.8",
+      heading: "Phenology and climate change",
+      level: "SL",
+      text: "**Phenology** is the study of the timing of recurring biological events, such as flowering, migration, breeding, and leaf emergence, in relation to seasonal and climatic conditions. Climate change is disrupting many of these long-established phenological patterns, causing events like spring flowering or bird migration to shift earlier or later than in the past. Where interacting species (such as a flowering plant and its pollinator) shift their timing at different rates, this disruption can create a damaging **mismatch**, reducing reproductive success for one or both species involved."
+    },
+    {
+      label: "D4.3.9",
+      heading: "Climate change and insect life cycles",
+      level: "SL",
+      text: "Many insect species have life cycles whose speed and number of generations per year depend heavily on ambient temperature. As regional climates warm, some insect species are able to complete an additional generation within a single year that would not previously have been possible, effectively increasing their population growth rate. Where the insects concerned are agricultural pests or disease vectors, this increase in the number of life cycles per year can have significant knock-on consequences for crop damage or disease transmission."
+    },
+    {
+      label: "D4.3.10",
+      heading: "Evolution as a consequence of climate change",
+      level: "SL",
+      text: "Climate change functions as a powerful, ongoing selection pressure, and populations able to draw on sufficient heritable variation may evolve in response to it over successive generations, favouring individuals with traits such as greater heat tolerance, altered breeding timing, or shifted range preferences. However, this evolutionary response depends heavily on how quickly a population can adapt relative to the pace of climate change itself; species with long generation times, small population sizes, or limited genetic variation are at much greater risk of being unable to adapt quickly enough, making extinction a more likely outcome than adaptation for many such species."
+    }
+  ],
+  "C4.2": [
+    {
+      label: "C4.2.1",
+      heading: "Ecosystems as open systems",
+      level: "SL",
+      text: "An **ecosystem** functions as an **open system**: both energy and matter can enter and leave it freely, in contrast to a closed system, in which only energy can cross the boundary while matter remains fixed inside. Energy typically enters an ecosystem as sunlight and eventually leaves as heat, while matter, in the form of chemical elements such as carbon, nitrogen, and water, continuously cycles both within the ecosystem and between it and the wider environment, through processes including nutrient cycling, migration, and erosion."
+    },
+    {
+      label: "C4.2.2 / C4.2.3",
+      heading: "Sunlight and the flow of energy through food chains",
+      level: "SL",
+      text: "Sunlight is the principal energy source that sustains the great majority of ecosystems, captured by photosynthetic organisms and converted into the chemical energy of organic molecules. (Notable exceptions include ecosystems around deep-sea hydrothermal vents and in some caves, which instead rely on chemosynthesis or on organic matter and detritus imported from elsewhere.)\n\nOnce fixed by autotrophs, chemical energy flows through a **food chain** as one organism is consumed by the next: from autotrophs (producers), to primary consumers that eat them, to secondary and higher-level consumers. At each feeding step, energy is transferred from prey to predator by ingestion, absorption, and use of the prey's stored chemical energy."
+    },
+    {
+      label: "C4.2.4",
+      heading: "Food chains and food webs",
+      level: "SL",
+      text: "A **food chain** represents a single, linear sequence of feeding relationships, while a **food web** is a more realistic, interconnected diagram showing the many overlapping feeding relationships present within an actual community, since most consumers feed on more than one type of prey and are themselves eaten by more than one type of predator. Constructing an accurate food web for a community requires identifying the full range of feeding relationships between its member species, not just a single representative pathway."
+    },
+    {
+      label: "C4.2.5",
+      heading: "Decomposers and nutrient cycling",
+      level: "SL",
+      text: "**Decomposers**, principally fungi and bacteria, obtain their energy from the carbon compounds present in the organic matter of dead organisms and waste products. In breaking this material down, decomposers release the mineral nutrients it contains back into the surrounding soil or water in inorganic form, making those nutrients available again for uptake by autotrophs. This recycling role makes decomposers essential to the ongoing functioning of nutrient cycles within any ecosystem, without them, nutrients would remain permanently locked up in dead organic matter rather than being made available for new generations of organisms."
+    },
+    {
+      label: "C4.2.6 / C4.2.7 / C4.2.8",
+      heading: "Autotrophs, heterotrophs, and their energy sources",
+      level: "SL",
+      text: "**Autotrophs** synthesise the carbon compounds they need from simple inorganic starting materials, using an external energy source, they do not depend on consuming other organisms for their organic matter. **Photoautotrophs** use light as this external energy source; **chemoautotrophs** instead use the energy released by the oxidation of inorganic substances, an important strategy for some prokaryotes living in environments without light, such as the deep ocean.\n\n**Heterotrophs**, by contrast, cannot synthesise their own carbon compounds from inorganic starting materials, and instead obtain the carbon compounds they require directly from other organisms, whether by predation, herbivory, or decomposition."
+    },
+    {
+      label: "C4.2.9",
+      heading: "Cell respiration as the shared energy-release process",
+      level: "SL",
+      text: "Regardless of how an organism obtains its carbon compounds, both autotrophs and heterotrophs release usable energy from those compounds by the same underlying process: **cell respiration**, the oxidation of carbon compounds (most often glucose) to produce ATP. This shared metabolic process is what ultimately links every organism in an ecosystem, whatever their nutritional strategy, to the same fundamental chemistry of energy release."
+    },
+    {
+      label: "C4.2.10 / C4.2.11",
+      heading: "Trophic levels and energy pyramids",
+      level: "SL",
+      text: "**Trophic levels** classify organisms according to their position in a food chain. Autotrophs occupy trophic level 1; primary consumers (typically herbivores) occupy trophic level 2; secondary consumers occupy trophic level 3; and tertiary consumers, often top predators, occupy trophic level 4. Some organisms feed at more than one trophic level depending on what they eat at a given time.\n\nAn **energy pyramid** is a diagram representing the amount of energy present at each trophic level of a food chain, typically measured in kilojoules per square metre per year (kJ m-2 yr-1). Because energy is progressively lost at each step (see C4.2.12), energy pyramids are almost always widest at the base and narrow sharply toward the top."
+    },
+    {
+      label: "C4.2.12 / C4.2.13",
+      heading: "Energy loss between trophic levels",
+      level: "SL",
+      text: "The total energy available decreases substantially at each successive trophic level, roughly 90% of the energy present at one level is typically lost before it reaches the next, meaning only about 10% is transferred onward on average. This large loss happens for several reasons: a significant amount of chemical energy is converted to heat and lost to the environment through cell respiration in both autotrophs and heterotrophs, some ingested material (such as bone, fur, or fibrous plant matter) is indigestible and passes through without being absorbed, and not every organism at one trophic level is actually consumed by the next before it dies and decomposes. This substantial, unavoidable heat loss at every stage is the fundamental reason why food chains rarely extend beyond four or five trophic levels, there simply isn't enough energy left to support a further level of consumers."
+    },
+    {
+      label: "C4.2.14 / C4.2.15",
+      heading: "Primary productivity",
+      level: "SL",
+      text: "**Primary productivity** is the rate at which producers convert light energy into the chemical energy of new organic matter (biomass) within an ecosystem. **Gross primary productivity** is the total rate of this conversion, while **net primary productivity** is what remains after subtracting the energy producers themselves use up through their own cell respiration, and it is this net figure that represents the energy actually available to be passed on to primary consumers.\n\nPrimary productivity is affected by factors including light intensity and duration, temperature, water and nutrient availability, and carbon dioxide concentration, any of which can act as a limiting factor holding productivity below its maximum potential rate in a given ecosystem.",
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Carbon cycle-cute diagram.svg",
+      imageCaption: "The carbon cycle: the movement of carbon between the atmosphere, living organisms, and long-term storage in rock, fossil fuels, and the ocean."
+    },
+    {
+      label: "C4.2.16 / C4.2.17",
+      heading: "The carbon cycle, deforestation, and combustion",
+      level: "SL",
+      text: "The **carbon cycle** describes the continuous movement of carbon between the atmosphere (mainly as CO2), living organisms (via photosynthesis and respiration), the ocean, and long-term storage in rock, sediment, and fossil fuels. Forests act as a major carbon sink, storing large quantities of carbon in living biomass and soil; **deforestation** disrupts this cycle in two ways at once, directly releasing stored carbon (often through burning) and permanently reducing the ecosystem's ongoing capacity to absorb further CO2 through photosynthesis.\n\n**Combustion** of fossil fuels and biomass releases carbon that had, in the case of fossil fuels, been locked away in long-term geological storage for millions of years, on a timescale far faster than the natural processes that originally sequestered it, which is the principal reason atmospheric CO2 concentration has risen so sharply since industrialisation began."
+    },
+    {
+      label: "C4.2.18",
+      heading: "The Keeling Curve",
+      level: "SL",
+      text: "The **Keeling Curve**, based on continuous atmospheric CO2 measurements taken at the Mauna Loa Observatory in Hawaii since 1958, shows two overlaid trends. In the short term, atmospheric CO2 concentration oscillates in a regular annual cycle, falling during the northern hemisphere's growing season as increased photosynthesis draws CO2 down, and rising again over its winter as photosynthesis slows while respiration and decomposition continue. Superimposed on this seasonal oscillation is a clear, steady long-term upward trend, providing some of the most direct and continuous evidence available of the rising atmospheric CO2 concentration driven by human activity."
+    },
+    {
+      label: "C4.2.19 / C4.2.20",
+      heading: "Why photosynthesis, respiration, and matter cycling sustain life",
+      level: "SL",
+      text: "Photosynthesis and aerobic cell respiration together sustain essentially all complex life on Earth: photosynthesis captures light energy and converts it into the chemical energy of organic molecules while releasing oxygen, and aerobic respiration then releases that stored chemical energy using the very oxygen photosynthesis produced, while regenerating the carbon dioxide photosynthesis needs as a raw material. Each process depends on the products of the other, forming a self-sustaining global cycle.\n\nThe cycling of matter, of carbon, nitrogen, water, and other essential elements, is equally fundamental to ecosystem function, since the total quantity of these elements on Earth is essentially fixed. Without continuous recycling by decomposers and other processes, elements would eventually become locked up in dead organic matter or waste products, and life as we know it, dependent on a continuous supply of these elements, could not be sustained indefinitely."
+    }
+  ],
+
+  "A4.2": [
+    {
+      label: "A4.2.1",
+      heading: "The levels of biodiversity",
+      level: "SL",
+      text: "**Biodiversity** is the variety of life in all its forms, levels, and combinations, and it is typically considered at three distinct levels. **Ecosystem diversity** refers to the range of different habitats or ecosystems present within a given area. **Species diversity** refers to the number of different species present in a community, along with their relative abundance (species evenness). **Genetic diversity** refers to the range of genetic variation, the size of the overall gene pool, present within a species or population, and it matters because a population with greater genetic diversity is generally better able to withstand environmental change, since at least some individuals are more likely to carry alleles suited to the new conditions."
+    },
+    {
+      label: "A4.2.2",
+      heading: "Current versus past levels of biodiversity",
+      level: "SL",
+      text: "Although millions of species have been formally discovered, named, and described, taxonomists agree that a great many more remain undiscovered, particularly among insects, fungi, and marine microorganisms. Evidence from the fossil record suggests that, despite five previous mass extinction events in Earth's history, there are currently more species alive today than at any point in the past. Comparisons of this kind depend partly on classification choices, taxonomists who recognise more species within a group ('splitters') will report different diversity figures from those who lump more variation into fewer species ('lumpers'), a reminder that classification itself involves a degree of interpretation."
+    },
+    {
+      label: "A4.2.3 / A4.2.4",
+      heading: "Causes of anthropogenic species extinction",
+      level: "SL",
+      text: "The current, ongoing wave of extinctions is overwhelmingly driven by human activity, rather than the natural background rate of extinction seen through most of evolutionary history, and is sometimes referred to as the sixth mass extinction. Habitat destruction, overexploitation (overhunting or overfishing), pollution, the introduction of invasive species, and climate change are among the principal anthropogenic drivers.\n\nCase studies illustrate the range of these causes: the extinction of the North Island giant moa (Dinornis novaezealandiae) in New Zealand exemplifies the loss of large-bodied terrestrial animals (megafauna) through overhunting, while the extinction of the Caribbean monk seal (Neomonachus tropicalis) illustrates the loss of a marine species, driven by a combination of hunting and habitat disturbance."
+    },
+    {
+      label: "A4.2.5 / A4.2.6",
+      heading: "Causes of ecosystem loss",
+      level: "SL",
+      text: "Beyond the loss of individual species, entire ecosystems can be lost or severely degraded, again driven predominantly by human activity: land clearance for agriculture or urban development, resource extraction, and pollution are among the major direct and indirect causes. The large-scale clearance of mixed dipterocarp forest in Southeast Asia, much of it converted to agricultural land, including oil palm plantations, is a well-documented case study of ecosystem loss on a substantial regional scale."
+    },
+    {
+      label: "A4.2.7 / A4.2.8",
+      heading: "Evidence for, and causes of, the biodiversity crisis",
+      level: "SL",
+      text: "Evidence for a global biodiversity crisis is drawn from multiple independent sources: long-term population monitoring data showing widespread declines across many taxonomic groups, the fossil record's comparison of current versus historical extinction rates, and assessments such as the IUCN Red List, which tracks the conservation status of individual species over time. Taken together, this evidence consistently points toward extinction rates far higher than the natural, pre-human background rate.\n\nThe underlying causes of this crisis are broadly the same anthropogenic factors responsible for individual species extinctions and ecosystem loss: habitat destruction and fragmentation, overexploitation, pollution, invasive species, and climate change, often acting in combination rather than in isolation, which makes the crisis considerably harder to address than any single cause would be alone."
+    },
+    {
+      label: "A4.2.9",
+      heading: "Approaches to conserving biodiversity",
+      level: "SL",
+      text: "Biodiversity conservation relies on a range of complementary strategies. **In situ conservation** protects species within their natural habitat, for example through protected areas, nature reserves, and habitat corridors that allow populations to move and interbreed; this is generally the preferred approach, since it maintains natural ecological interactions and evolutionary processes. **Ex situ conservation** preserves species outside their natural habitat, for example through captive breeding programmes, zoos, botanical gardens, and seed banks, providing a safeguard for species that are too critically endangered, or whose habitat is too degraded, for in situ measures to be sufficient on their own.\n\n**Rewilding** (see D4.2.10) has also become an increasingly prominent conservation strategy, aiming to restore self-sustaining natural processes rather than actively managing a habitat toward a fixed target state."
+    }
+  ],
+  "D3.3": [
+    {
+      label: "D3.3.1",
+      heading: "Homeostasis: maintaining the internal environment",
+      level: "SL",
+      text: "**Homeostasis** is the maintenance of a stable internal environment despite fluctuations in the external environment, achieved by keeping key physiological variables within narrow, preset limits. In humans, the variables maintained this way include body temperature, blood glucose concentration, blood pH, and blood osmotic concentration (water balance). Homeostasis matters because the enzymes and structures that keep cells and tissues functioning are only stable within a fairly narrow physiological range, drifting outside that range can rapidly impair function or cause damage."
+    },
+    {
+      label: "D3.3.2",
+      heading: "Negative feedback loops",
+      level: "SL",
+      text: "Homeostasis is maintained almost entirely through **negative feedback**: a mechanism in which a deviation from the set point triggers a response that counteracts that deviation, pushing the variable back toward its normal range. If a variable rises above its set point, negative feedback works to lower it; if it falls below, negative feedback works to raise it. This self-correcting property is exactly why negative, rather than positive, feedback is the basis of homeostatic control: positive feedback would instead amplify any deviation, driving the variable further away from stability."
+    },
+    {
+      label: "D3.3.3 / D3.3.4",
+      heading: "Blood glucose regulation and diabetes",
+      level: "SL",
+      text: "Blood glucose concentration is regulated by two antagonistic hormones secreted by endocrine cells in the pancreas. When blood glucose rises, for instance after a meal, **insulin** is secreted, which stimulates cells throughout the body, particularly liver and muscle cells, to take up glucose from the blood and store it as glycogen, lowering blood glucose back toward the set point. When blood glucose falls, for instance during fasting or exercise, **glucagon** is secreted, which stimulates the breakdown of stored glycogen back into glucose, raising blood glucose again. Both hormones travel through the bloodstream to reach target cells throughout the body.\n\n**Type 1 diabetes** results from the autoimmune destruction of the insulin-secreting cells of the pancreas, so the body produces little or no insulin and blood glucose cannot be properly regulated; it is typically managed with regular insulin injections. **Type 2 diabetes** develops when target cells become progressively less responsive to insulin (insulin resistance), often associated with excess body weight and reduced physical activity, so blood glucose remains chronically elevated even though insulin is still produced; it is often managed with dietary changes, exercise, and medication."
+    },
+    {
+      label: "D3.3.5 / D3.3.6",
+      heading: "Thermoregulation",
+      level: "SL",
+      text: "Body temperature is monitored by thermoreceptors in the skin and in the hypothalamus itself, which detect deviations from the set point and relay this information to the hypothalamus, the central coordinating centre for thermoregulation, working with the pituitary gland to trigger the appropriate hormonal and neural responses.\n\nWhen body temperature rises above the set point, the responses include **vasodilation** (widening of blood vessels near the skin surface, increasing heat loss by radiation) and increased sweating, which cools the skin as sweat evaporates. When body temperature falls below the set point, responses include **vasoconstriction** (narrowing of skin blood vessels, reducing heat loss), shivering (rapid, involuntary muscle contraction that generates heat), and increased secretion of **thyroxine**, which raises the metabolic rate and therefore heat production. Adipose tissue also acts as an insulating layer that reduces heat loss overall. Birds and mammals maintain body temperature through both these physiological mechanisms and behavioural strategies, such as seeking shade or shelter."
+    },
+    {
+      label: "D3.3.7 / D3.3.8",
+      heading: "Osmoregulation and the kidney",
+      level: "SL",
+      text: "**Excretion** is the removal of metabolic waste products from the body, while **osmoregulation** is the regulation of the water and solute balance of body fluids, keeping their osmotic concentration within a stable range; these are related but distinct processes that both occur largely in the kidney.\n\nEach **nephron**, the functional unit of the kidney, begins at the **glomerulus**, a knot of capillaries where blood pressure forces water, ions, glucose, and urea (but not blood cells or large proteins) out of the blood and into the surrounding **Bowman's capsule**, a process called ultrafiltration. The resulting filtrate then passes into the **proximal convoluted tubule**, where useful substances, including all of the filtered glucose and much of the water and ions, are selectively reabsorbed back into the blood, leaving mostly water, urea, and excess ions in the tubule to continue toward excretion."
+    },
+    {
+      label: "D3.3.9 / D3.3.10",
+      heading: "The loop of Henle and collecting duct",
+      level: "SL",
+      text: "The **loop of Henle** establishes a steep concentration gradient of solutes in the surrounding kidney tissue, becoming progressively more concentrated toward the base of the loop, deep in the medulla of the kidney. This gradient is what ultimately allows the kidney to produce urine more concentrated than blood plasma, an essential adaptation for conserving water.\n\nThe **collecting duct** runs back down through this concentration gradient, and its permeability to water is under hormonal control: when the body needs to conserve water, antidiuretic hormone increases the permeability of the collecting duct walls, allowing more water to be reabsorbed by osmosis into the surrounding, more concentrated tissue, producing a smaller volume of more concentrated urine. When the body has excess water, this permeability is reduced, and a larger volume of more dilute urine is produced instead."
+    },
+    {
+      label: "D3.3.11",
+      heading: "Changes in blood supply during activity",
+      level: "HL",
+      text: "The distribution of blood flow to different organs changes according to their activity level at any given moment, redirecting the body's limited cardiac output to where it is most needed. During vigorous exercise, blood vessels supplying skeletal muscle dilate, increasing blood flow to meet the muscles' increased demand for oxygen and glucose, while blood vessels supplying organs with temporarily lower priority, such as the digestive system, constrict, reducing blood flow there. This redistribution is coordinated by the nervous system and by local chemical signals released from active tissues, and it reverses once activity levels return to normal."
+    }
+  ],
+
+  "B3.1": [
+    {
+      label: "B3.1.1",
+      heading: "Why gas exchange is needed",
+      level: "SL",
+      text: "**Gas exchange** is a vital function in all organisms, allowing oxygen to be taken up for aerobic cell respiration and carbon dioxide to be removed as a waste product. As an organism increases in size, this becomes progressively more challenging: surface area to volume ratio decreases with increasing size, while the distance from the body's interior to its exterior increases, meaning simple diffusion across the outer body surface alone becomes insufficient to meet a larger organism's respiratory demands. This is why larger, more complex organisms require specialised gas-exchange surfaces, structures dedicated to maximising the rate of gas exchange."
+    },
+    {
+      label: "B3.1.2 / B3.1.3",
+      heading: "Properties of exchange surfaces and maintaining concentration gradients",
+      level: "SL",
+      text: "Effective gas-exchange surfaces share four key properties: they are **permeable** to respiratory gases, **thin** (often only a single cell layer), to minimise diffusion distance, **moist**, since gases must dissolve before they can diffuse across a cell membrane, and possess a **large surface area** relative to the volume of the organism they serve.\n\nA concentration gradient must also be actively maintained across the exchange surface, or diffusion would slow and eventually stop as the gases on either side equilibrated. Animals achieve this through a dense network of blood vessels carrying blood continuously past the exchange surface, combined with **ventilation**, moving fresh air (in lungs) or water (in gills) across the opposite side of that same surface, so that a steep gradient is constantly renewed on both sides."
+    },
+    {
+      label: "B3.1.4 / B3.1.5 / B3.1.6",
+      heading: "Mammalian lungs and ventilation",
+      level: "SL",
+      text: "The mammalian lung is adapted for efficient gas exchange through **alveoli**, millions of tiny air sacs that together provide an enormous surface area, each surrounded by a dense capillary network and lined by an extremely thin epithelium just one cell thick, keeping the diffusion distance between air and blood minimal, further reduced by a moist surfactant layer that also prevents the alveoli from collapsing.\n\n**Ventilation**, the physical movement of air into and out of the lungs, is driven by the diaphragm and intercostal muscles: during inspiration, the diaphragm contracts and flattens while the external intercostal muscles pull the ribcage up and outward, increasing thoracic volume and drawing air in; during expiration, these muscles relax (or, during forced exhalation, the internal intercostal and abdominal muscles actively contract) reducing thoracic volume and pushing air out. Lung function can be assessed by measuring **lung volumes**, including tidal volume (the amount of air moved in a normal breath) and vital capacity (the maximum volume that can be exhaled after a maximum inhalation)."
+    },
+    {
+      label: "B3.1.7 / B3.1.8",
+      heading: "Leaf adaptations for gas exchange",
+      level: "SL",
+      text: "Leaves are adapted for gas exchange (and for balancing this against water conservation) through several structural features: a waxy cuticle that reduces water loss from the leaf surface, a transparent epidermis that admits light while offering some protection, air spaces within the spongy mesophyll layer that allow gases to diffuse freely to and from the photosynthesising cells, and **stomata**, pores in the lower epidermis flanked by guard cells, which can open or close to regulate gas exchange and water loss. A transverse section of a dicotyledonous leaf typically shows, from top to bottom, the upper epidermis, the tightly packed palisade mesophyll (specialised for light capture), the more loosely arranged spongy mesophyll with its air spaces, and the lower epidermis containing most of the stomata."
+    },
+    {
+      label: "B3.1.9 / B3.1.10",
+      heading: "Transpiration and stomatal density",
+      level: "SL",
+      text: "**Transpiration** is the loss of water vapour from a plant, occurring mainly through open stomata as a side effect of gas exchange for photosynthesis. Its rate is influenced by several abiotic factors: higher light intensity and temperature increase transpiration (by causing more stomata to open and by increasing evaporation), higher humidity reduces it (by lowering the water vapour concentration gradient between leaf and air), and wind can increase it by continually removing the humid air layer that would otherwise accumulate just outside the stomata.\n\n**Stomatal density**, the number of stomata per unit area of leaf surface, can be determined experimentally, for instance from a nail varnish or clear tape impression of the leaf surface examined under a microscope, and it varies between species and even between the upper and lower leaf surfaces, generally reflecting a balance between the plant's need for gas exchange and its need to limit water loss."
+    },
+    {
+      label: "B3.1.11",
+      heading: "Foetal and adult haemoglobin",
+      level: "HL",
+      text: "**Foetal haemoglobin** has a structurally different composition from adult haemoglobin, giving it a higher affinity for oxygen. This is functionally important because the foetus must extract oxygen from its mother's blood across the placenta, where the maternal blood itself has already released some oxygen; foetal haemoglobin's higher affinity ensures the foetus can still successfully draw oxygen away from the maternal circulation despite the comparatively lower oxygen concentration available to it, before switching to adult haemoglobin after birth."
+    },
+    {
+      label: "B3.1.12 / B3.1.13",
+      heading: "The Bohr shift and oxygen dissociation curves",
+      level: "HL",
+      text: "An **oxygen dissociation curve** plots the percentage saturation of haemoglobin with oxygen against the partial pressure of oxygen, and it has a characteristic S-shape (sigmoidal), reflecting how haemoglobin's affinity for oxygen changes as each of its four binding sites becomes occupied.\n\nThe **Bohr shift** describes how this curve shifts to the right in the presence of higher carbon dioxide concentration (and correspondingly lower pH), meaning haemoglobin's affinity for oxygen decreases under these conditions. This is functionally significant in actively respiring tissue: cells that are respiring rapidly produce more carbon dioxide, which locally shifts the curve rightward and causes haemoglobin passing through that tissue to release its oxygen more readily, delivering more oxygen exactly where cell respiration is creating the greatest demand for it."
+    }
+  ],
+  "B3.2": [
+    {
+      label: "B3.2.1",
+      heading: "Capillary adaptations for exchange",
+      level: "SL",
+      text: "**Capillaries** are the site where materials are actually exchanged between blood and surrounding tissue, and their structure reflects this role: a very small lumen diameter and extensive branching together provide a huge total surface area for exchange, walls just one cell thick minimise diffusion distance, and many capillaries have small pores called **fenestrations** that allow particularly rapid exchange of water and small solutes where it is needed most, such as in the kidney."
+    },
+    {
+      label: "B3.2.2 / B3.2.3 / B3.2.5",
+      heading: "Arteries and veins",
+      level: "SL",
+      text: "**Arteries** carry blood away from the heart, generally at high pressure, and their walls reflect this: thick layers of muscle and elastic tissue allow arteries to withstand this pressure and to expand and recoil with each heartbeat, smoothing the flow of blood into a steadier stream by the time it reaches the capillaries. **Veins** carry blood back toward the heart, at much lower pressure, so their walls are considerably thinner with less muscle and elastic tissue, and their lumen is proportionally wider; because the pressure driving venous return is so low, veins rely on one-way **valves** to prevent backflow, along with compression from surrounding skeletal muscle activity to help push blood back toward the heart.",
+      tip: { label: "Exam tip", text: "In micrographs, distinguish arteries from veins by relative wall thickness compared to lumen size: arteries have thick walls and a comparatively narrow lumen, veins have thin walls and a wider lumen, sometimes with a visible valve." }
+    },
+    {
+      label: "B3.2.4 / B3.2.6",
+      heading: "Pulse rate and coronary artery occlusion",
+      level: "SL",
+      text: "**Pulse rate** can be measured by feeling an artery, most commonly the carotid or radial pulse, close to the body's surface, or using digital sensors; comparing traditional manual counting with digital heart rate monitors is a useful way to assess the accuracy of different measurement methods.\n\nThe **coronary arteries** supply the heart muscle itself with oxygenated blood. **Occlusion** (blockage) of a coronary artery, most often caused by the build-up of fatty plaques within the artery wall, restricts blood flow to part of the heart muscle, and if severe or sudden enough, can cause a heart attack, the death of the oxygen-starved heart tissue. Epidemiological data linking risk factors such as diet, smoking, and physical inactivity to rates of coronary heart disease are assessed using correlation coefficients, which quantify the strength of a relationship between variables, though correlation alone does not establish causation."
+    },
+    {
+      label: "B3.2.7 / B3.2.6 (plant transport)",
+      heading: "Water transport in the xylem",
+      level: "SL",
+      text: "Water moves from the roots to the leaves through the **xylem**, driven ultimately by transpiration: as water evaporates from the mesophyll cells inside a leaf and diffuses out through open stomata, it pulls more water up behind it, since the water column inside the xylem is held together by cohesion between water molecules (hydrogen bonding) and by adhesion to the xylem walls, allowing tension generated at the top of the plant to be transmitted all the way down to the roots.\n\nXylem vessels are adapted for this role: they are formed from dead cells joined end to end into continuous, hollow tubes, with no cytoplasm or cross-walls to obstruct the flow of water, and their walls are strengthened and waterproofed with lignin, which also helps the vessel resist collapsing under the tension generated by transpiration pull. A transverse section of a dicotyledonous stem or root shows the characteristic arrangement of xylem and phloem tissue, in a stem these vascular bundles are typically arranged in a ring nearer the outside, while in a root they are typically found in a central, star-shaped arrangement."
+    },
+    {
+      label: "B3.2.7 / B3.2.8 / B3.2.9",
+      heading: "Tissue fluid, plasma, and the lymphatic system",
+      level: "SL",
+      text: "As blood passes through capillaries, blood pressure forces plasma, minus large proteins and blood cells, out through the capillary walls to form **tissue fluid**, which bathes the body's cells directly and is the medium through which they actually exchange nutrients and wastes with the blood. Most of this tissue fluid is reabsorbed back into the capillaries further along, drawn back in partly by the osmotic effect of proteins remaining in the plasma. **Plasma** therefore differs from tissue fluid mainly in containing a substantially higher concentration of large plasma proteins, which are largely too big to cross the capillary wall.\n\nNot all tissue fluid is reabsorbed directly into capillaries; the remainder is drained into a separate network of **lymph vessels**, forming **lymph**, which is eventually returned to the bloodstream near the heart, providing an essential overflow route that prevents excess fluid from accumulating in tissues."
+    },
+    {
+      label: "B3.2.10 / B3.2.11",
+      heading: "Single versus double circulation and the mammalian heart",
+      level: "SL",
+      text: "Bony fish have a **single circulation**: blood passes through the heart once per full circuit of the body, travelling from heart to gills to body tissues and back to the heart, meaning blood pressure has already dropped considerably by the time it reaches the body tissues after passing through the narrow capillaries of the gills. Mammals instead have a **double circulation**: blood passes through the heart twice per circuit, once to be pumped to the lungs and back (the pulmonary circulation), and once to be pumped to the rest of the body and back (the systemic circulation), which allows blood to be re-pressurised between the two circuits and delivers oxygenated blood to body tissues at a considerably higher, more effective pressure.\n\nThe mammalian heart's structure supports this: the muscular wall of the left ventricle, which must generate the high pressure needed to pump blood around the entire systemic circuit, is considerably thicker than that of the right ventricle, which only needs to pump blood the shorter distance to the lungs. One-way valves within the heart prevent backflow between chambers, ensuring blood moves in only one direction through the double circulation."
+    }
+  ],
+
+  "B3.3": [
+    {
+      label: "B3.3.1",
+      heading: "Movement as a feature of life",
+      level: "HL",
+      text: "Movement takes different forms across the diversity of life. **Motile** organisms, from bacteria propelled by flagella to animals using muscular systems, can actively relocate using their own metabolic energy. Even **sessile** organisms, those fixed in one location, such as most plants, typically still show movement in some form, for instance the directional growth of a shoot toward light. Comparing a motile and a sessile species highlights that movement, broadly defined, is close to a universal feature of living organisms, even if locomotion (moving the whole body from place to place) is not."
+    },
+    {
+      label: "B3.3.2 / B3.3.3",
+      heading: "Sarcomere structure and the sliding filament model",
+      level: "HL",
+      text: "Skeletal muscle fibres are packed with parallel protein filaments organised into repeating contractile units called **sarcomeres**, arranged end to end along each myofibril. A sarcomere contains thin **actin** filaments and thick **myosin** filaments, whose overlapping, alternating arrangement produces the characteristic banded appearance of skeletal muscle under the microscope.\n\nContraction occurs according to the **sliding filament model**: myosin heads, powered by ATP hydrolysis, attach to exposed binding sites on the actin filaments, forming cross-bridges, and each cross-bridge then bends, pulling the actin filament inward toward the centre of the sarcomere before detaching (a step that itself requires ATP) and repeating the cycle. Critically, neither the actin nor the myosin filaments themselves shorten, the sarcomere shortens because the two sets of filaments slide past one another, pulling the ends of the sarcomere closer together.",
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Sarcomere.gif",
+      imageCaption: "A sarcomere: the repeating contractile unit of a myofibril, containing overlapping actin and myosin filaments."
+    },
+    {
+      label: "B3.3.4",
+      heading: "Titin and antagonistic muscles",
+      level: "HL",
+      text: "**Titin**, an enormous elastic protein spanning half of each sarcomere, helps the sarcomere recoil back to its resting length after contraction and prevents it from being stretched beyond its functional limit. Because muscle tissue can only actively generate force by contracting, never by actively extending, movement at a joint requires **antagonistic muscle pairs** working in opposition, one muscle contracts to produce movement in one direction while its antagonist relaxes, and vice versa for the opposite movement, the biceps and triceps at the elbow being the classic example."
+    },
+    {
+      label: "B3.3.5",
+      heading: "Motor units",
+      level: "HL",
+      text: "A **motor unit** consists of a single motor neuron together with every muscle fibre it connects to and controls via neuromuscular junctions. When that motor neuron fires, every muscle fibre within its motor unit contracts together. Motor units vary considerably in size: units controlling fine, precise movements (such as those in the fingers or around the eyes) tend to contain very few muscle fibres per neuron, allowing finely graded control, while units controlling powerful but less precise movements (such as those in the thigh) can contain many hundreds of fibres per neuron."
+    },
+    {
+      label: "B3.3.6 / B3.3.7",
+      heading: "Skeletons, joints, and range of motion",
+      level: "HL",
+      text: "Skeletons serve muscles in two related ways: as an anchorage point that muscles pull against, and as a system of rigid levers that translates muscle contraction into movement at a joint. Arthropods have an external **exoskeleton**, while vertebrates have an internal **endoskeleton**, but both provide this same essential anchorage and leverage function.\n\nAt a typical **synovial joint**, such as the human hip, the ends of the bones (the femur and pelvis, in this case) are capped with smooth cartilage and enclosed within a fluid-filled capsule; the **synovial fluid** lubricates the joint and reduces friction, while surrounding **ligaments** connect bone to bone, stabilising the joint, and **tendons** connect muscle to bone, transmitting the muscle's pulling force to produce movement. The **range of motion** of a joint, how far it can move in different directions, can be measured and compared across different planes of movement using image analysis or a goniometer."
+    },
+    {
+      label: "B3.3.8",
+      heading: "Adaptations for swimming in marine mammals",
+      level: "HL",
+      text: "Marine mammals such as dolphins and seals show clear structural adaptations for efficient movement through water. A **streamlined** body shape, smooth and tapered, minimises drag as the animal moves through the denser medium of water compared to air. Limbs are modified into flippers, used primarily for steering and stability rather than propulsion, while a horizontally oriented, powerful fluked tail provides the main thrust, moved up and down (rather than side to side, as in fish) by strong dorsal and ventral muscles."
+    }
+  ],
+  "C2.2": [
+    {
+      label: "C2.2.1 / C2.2.2",
+      heading: "Neuron structure",
+      level: "SL",
+      text: "A **neuron** consists of a cell body (containing the nucleus and cytoplasm), from which elongated nerve fibres of varying length project. **Dendrites** are typically multiple, shorter, branched fibres that receive incoming signals from other neurons or from sensory receptors and conduct them toward the cell body. The **axon** is typically a single, much longer fibre that conducts an electrical impulse away from the cell body toward its target, ending in axon terminals that pass the signal on to the next cell."
+    },
+    {
+      label: "C2.2.3 / C2.2.4",
+      heading: "Resting potential and the nerve impulse",
+      level: "SL",
+      text: "A resting neuron maintains a **resting potential** across its plasma membrane, with the inside of the cell around -70 mV relative to the outside, maintained by the sodium-potassium pump, which uses ATP to actively transport three sodium ions out of the cell for every two potassium ions pumped in, alongside large negatively charged organic ions trapped inside the cell.\n\nA **nerve impulse (action potential)** is a temporary, self-propagating reversal of this membrane potential that travels along the length of a nerve fibre. The speed at which it travels varies considerably: impulses travel faster along axons of greater diameter (which offer less internal resistance to current flow), and, in vertebrates, faster along myelinated fibres than unmyelinated ones of the same diameter."
+    },
+    {
+      label: "C2.2.5 / C2.2.6 / C2.2.7",
+      heading: "Synapses and neurotransmitter release",
+      level: "SL",
+      text: "A **synapse** is a junction between two neurons, or between a neuron and an effector cell such as a muscle fibre, across which a signal can pass in only one direction. When an action potential reaches the end of the presynaptic neuron, it triggers the opening of voltage-gated calcium channels; the resulting influx of calcium ions causes vesicles containing **neurotransmitter** to fuse with the presynaptic membrane and release their contents into the narrow synaptic cleft by exocytosis.\n\nThe released neurotransmitter (such as acetylcholine) diffuses across the cleft and binds to specific transmembrane receptors on the postsynaptic membrane, causing ion channels to open. If this produces a net influx of positive ions, the postsynaptic membrane becomes less negative, an **excitatory postsynaptic potential**, which, if large enough, can trigger a new action potential in the postsynaptic cell."
+    },
+    {
+      label: "C2.2.8 / C2.2.9 / C2.2.10",
+      heading: "Depolarisation, repolarisation, and propagation",
+      level: "SL",
+      text: "During an action potential, voltage-gated sodium channels open in response to an initial stimulus, allowing sodium ions to rush into the cell and rapidly reversing the membrane potential from negative to positive, called **depolarisation**. Sodium channels then close and voltage-gated potassium channels open, allowing potassium ions to flow out of the cell and restoring the negative resting potential, called **repolarisation** (often briefly overshooting to a slightly more negative level before settling back to rest).\n\nThis local depolarisation triggers depolarisation in the immediately adjacent section of membrane, propagating the action potential as a travelling wave along the length of the axon, moving in only one direction because the section of membrane just behind the impulse remains temporarily unable to fire again (its refractory period)."
+    },
+    {
+      label: "C2.2.11 / C2.2.12 / C2.2.13",
+      heading: "Measuring neural activity with an oscilloscope",
+      level: "SL",
+      text: "Action potential propagation, moving rapidly and repeatedly along a nerve fibre, is what allows information to be encoded and transmitted through the nervous system; more intense stimuli are generally represented not by larger action potentials (which are all-or-nothing, always the same size), but by a higher frequency of action potentials fired in sequence.\n\nAn **oscilloscope** displays how electrical potential changes over time, and is a standard tool for studying and measuring neural activity, allowing resting potentials and the characteristic rapid depolarisation-repolarisation spike of an action potential to be directly visualised and measured, including the amplitude and duration of the signal."
+    },
+    {
+      label: "C2.2.14",
+      heading: "Saltatory conduction",
+      level: "SL",
+      text: "In myelinated axons, the fatty **myelin sheath** electrically insulates most of the axon's length, so depolarisation only occurs at the small, exposed gaps between adjacent myelinated sections, called nodes of Ranvier. Rather than propagating continuously along the entire membrane, the action potential effectively jumps from node to node, a process called **saltatory conduction**, which is considerably faster and more energy-efficient than continuous conduction along an equivalent unmyelinated fibre, since far fewer ion channels need to open along the way."
+    },
+    {
+      label: "C2.2.18 / C2.2.19",
+      heading: "Summation and pain perception",
+      level: "HL",
+      text: "A single postsynaptic neuron often receives input from many different presynaptic neurons simultaneously, and whether it fires its own action potential depends on the combined, all-or-nothing outcome of all these interacting inputs, a process called **summation**: multiple excitatory inputs arriving close together in time or space can combine to push the postsynaptic membrane over its firing threshold, even if no single input alone would have been sufficient.\n\nPain is detected by free nerve endings in the skin, called nociceptors, which have membrane channels for positively charged ions that open in response to potentially damaging stimuli, including high temperature, acidity, or specific chemicals such as capsaicin, the compound responsible for the sensation of heat in chilli peppers."
+    },
+    {
+      label: "C2.2.20 / C2.2.21",
+      heading: "From ion channels to consciousness",
+      level: "HL",
+      text: "When a nociceptor's ion channels open in response to a painful stimulus, the resulting influx of positively charged ions depolarises the nerve ending until it reaches the threshold potential, triggering the propagation of a nerve impulse toward the central nervous system, exactly the same fundamental mechanism that underlies all neural signalling, just triggered by a different type of stimulus.\n\n**Consciousness** itself is understood, at the biological level, as an emergent property arising from the coordinated interaction of enormous numbers of individual neurons across the brain, rather than being a special property of any single neuron or brain region in isolation; no individual neuron is 'conscious', but their interaction, at sufficient scale and complexity, gives rise to what we experience as conscious awareness."
+    }
+  ],
+
+  "C2.1": [
+    {
+      label: "C2.1.1",
+      heading: "Ligands and receptors",
+      level: "HL",
+      text: "A **ligand** is a signalling chemical that binds to a specific site on a **receptor**, a protein whose binding site is shaped to recognise that particular ligand with high specificity. This ligand-receptor interaction is the basis of essentially all chemical signalling between cells: one cell releases a ligand, and only cells bearing the matching receptor will detect and respond to it, which is what allows the same signalling molecule circulating throughout the body to affect only specific target cells rather than every cell it encounters."
+    },
+    {
+      label: "C2.1.2",
+      heading: "Signal transduction",
+      level: "HL",
+      text: "**Signal transduction** is the sequence of steps, often involving a cascade of intracellular protein interactions, that converts the initial event of a ligand binding to its receptor into a specific cellular response, such as a change in gene transcription or the opening of an ion channel. Because a single receptor-binding event can trigger a multi-step, amplifying cascade inside the cell, a very small quantity of ligand can sometimes produce a large, coordinated cellular response."
+    },
+    {
+      label: "C2.1.3 / C2.1.4",
+      heading: "Quorum sensing and bioluminescence in bacteria",
+      level: "HL",
+      text: "**Quorum sensing** is a form of chemical signalling used by bacteria to detect their own population density: individual bacterial cells continuously release a signalling molecule, and once its concentration in the surrounding environment rises high enough, indicating a sufficiently large local population, the bacteria coordinate a collective behavioural change.\n\nThe marine bacterium Vibrio fischeri provides a well-studied example: individual cells produce very little light, but once quorum sensing detects a high enough population density, typically when the bacteria are living symbiotically within a host organism's light organ, the whole population switches on **bioluminescence** simultaneously, a coordinated response that would be far less effective, and more costly, if attempted by a single isolated cell."
+    },
+    {
+      label: "C2.1.5 / C2.1.6",
+      heading: "Categories and distance-based types of signalling",
+      level: "HL",
+      text: "Animal signalling chemicals fall into several functional categories: **hormones**, secreted into the blood and carried to distant target cells; **neurotransmitters**, released at synapses to signal directly across a very short gap to an adjacent cell; **cytokines**, small proteins mainly involved in coordinating immune responses; and **calcium ions**, which act as an intracellular signal in many contexts, including muscle contraction and neurotransmitter release.\n\nSignalling can also be categorised by the distance it travels: **autocrine** signalling, where a cell signals to itself; **paracrine** signalling, where a chemical diffuses a short distance to affect nearby cells; and **endocrine** signalling, where a hormone travels a long distance through the bloodstream to reach distant target cells."
+    },
+    {
+      label: "C2.1.7",
+      heading: "Hormones versus neurotransmitters",
+      level: "HL",
+      text: "Hormones and neurotransmitters differ in both structure and function despite both being signalling chemicals. Structurally, hormones are chemically diverse, including amine, peptide, and steroid hormones, while neurotransmitters are typically smaller molecules such as amino acid derivatives. Functionally, hormones are secreted into the bloodstream and produce comparatively slow-onset but often longer-lasting effects on distant target cells, while neurotransmitters act almost instantly but only very briefly, over the extremely short distance of a synaptic cleft, before being broken down or reabsorbed."
+    },
+    {
+      label: "C2.1.11 / C2.1.12",
+      heading: "Transmembrane receptors and signal initiation",
+      level: "HL",
+      text: "Many signalling molecules, particularly larger or more polar ones that cannot cross the plasma membrane, bind to **transmembrane receptors** on the cell surface. Insulin is a well-studied example: it binds to a receptor spanning the plasma membrane, triggering the receptor's own tyrosine kinase activity, which phosphorylates target proteins inside the cell, initiating a signalling cascade that ultimately causes vesicles containing glucose transporter proteins to move to and fuse with the plasma membrane, increasing the cell's capacity to take up glucose."
+    },
+    {
+      label: "C2.1.13",
+      heading: "Intracellular receptors and steroid hormones",
+      level: "HL",
+      text: "Steroid hormones, such as oestradiol, progesterone, and testosterone, are small and lipid-soluble enough to diffuse directly across the plasma membrane, so they instead bind to **intracellular receptors** inside the target cell. Once activated by the bound hormone, these receptors move into the nucleus and bind directly to specific DNA sequences, promoting (or in some cases repressing) the transcription of particular genes, meaning steroid hormones typically act by directly altering gene expression, rather than through a membrane-based signalling cascade."
+    },
+    {
+      label: "C2.1.15 / C2.1.16 / C2.1.17",
+      heading: "Feedback in cell signalling",
+      level: "HL",
+      text: "Cell signalling pathways can be shaped by feedback in either direction. **Positive feedback** amplifies the initial response, useful in situations, such as the LH surge that triggers ovulation, where a rapid, decisive, self-reinforcing change is needed. **Negative feedback** dampens or inhibits the signalling response, useful for keeping a system within a stable, controlled range rather than allowing a response to run away unchecked.\n\nProper cellular function generally depends on an appropriate balance of both: pure positive feedback, unopposed, would drive a response to an extreme and potentially harmful degree, while pure negative feedback alone would be unable to produce the rapid, decisive switches that some biological processes require."
+    }
+  ],
+  "C3.2": [
+    {
+      label: "C3.2.1",
+      heading: "Categories of pathogens",
+      level: "SL",
+      text: "A **pathogen** is any agent capable of causing disease in another organism. The major categories are bacteria, viruses, fungi, protists, and (in some classifications) parasitic worms, each with a distinct structure and mode of causing harm. Historically, the recognition that specific pathogens, rather than 'bad air' (miasma), cause disease was a major turning point in medicine; John Snow's investigation of a nineteenth-century London cholera outbreak, tracing cases back to a single contaminated water pump, and Ignaz Semmelweis's observation that handwashing dramatically reduced childbed fever in maternity wards, are both classic examples of careful epidemiological observation building the foundations of modern germ theory, well before the responsible microorganisms could be directly seen or identified."
+    },
+    {
+      label: "C3.2.2 / C3.2.3",
+      heading: "Skin, mucous membranes, and blood clotting",
+      level: "SL",
+      text: "The **skin** and **mucous membranes** form the body's primary, non-specific line of defence against pathogens. Skin acts as a tough physical barrier, further reinforced chemically by sebum, which maintains an acidic surface pH that inhibits the growth of many bacteria. Mucous membranes, lining vulnerable, moist openings such as the airways and digestive tract, secrete mucus containing the enzyme **lysozyme**, which damages bacterial cell walls, and trap pathogens so they can be swept away by ciliary action or destroyed by stomach acid.\n\nWhen the skin is breached, **blood clotting** rapidly seals the wound: platelets aggregate at the site of damage and release clotting factors that trigger a cascade of reactions converting the soluble plasma protein fibrinogen into insoluble fibrin, which forms a mesh that traps blood cells and platelets into a stable clot, both stemming blood loss and blocking a potential entry route for pathogens."
+    },
+    {
+      label: "C3.2.4",
+      heading: "Innate versus adaptive immunity",
+      level: "SL",
+      text: "The **innate immune system** provides a fast, non-specific response that is present from birth and does not change or improve with repeated exposure to the same pathogen. The **adaptive immune system** provides a slower to develop, but highly specific, response, tailored to a particular pathogen, and it retains immunological memory, meaning a second exposure to the same pathogen triggers a much faster, stronger response than the first."
+    },
+    {
+      label: "C3.2.5",
+      heading: "Phagocytes",
+      level: "SL",
+      text: "**Phagocytes**, a category of white blood cell including macrophages and neutrophils, are a key component of innate immunity. They move through tissues toward sites of infection, recognise pathogens using receptors that detect general, non-self molecular patterns, and engulf them by phagocytosis, drawing the pathogen into an internal vacuole that then fuses with a lysosome, whose digestive enzymes destroy the pathogen. Because this recognition is based on broad, shared pathogen features rather than a pathogen-specific match, phagocytes can respond immediately to a wide range of pathogens without any prior exposure."
+    },
+    {
+      label: "C3.2.6 / C3.2.7",
+      heading: "Lymphocytes, antigens, and antibodies",
+      level: "SL",
+      text: "**Lymphocytes**, a category of white blood cell that includes both B-lymphocytes and T-lymphocytes, drive the adaptive immune response, which is specific to particular pathogens and improves with repeated exposure. Each lymphocyte recognises one specific **antigen**, a molecule, usually a protein on a pathogen's surface, that the immune system identifies as foreign.\n\nWhen an antigen is recognised, it triggers the production of **antibodies**, proteins that bind specifically to that antigen, marking the pathogen for destruction or directly neutralising it (for instance by blocking it from entering host cells)."
+    },
+    {
+      label: "C3.2.8 / C3.2.9",
+      heading: "T-lymphocyte activation and antibody production",
+      level: "SL",
+      text: "**Helper T-cells** play a coordinating role in the adaptive response: once activated by recognising a specific antigen (often presented to them by a phagocyte that has already engulfed and processed the pathogen), helper T-cells release signalling chemicals that in turn activate other T-lymphocytes and B-lymphocytes carrying receptors for the same antigen, effectively selecting and mobilising exactly the immune cells needed to combat that particular pathogen.\n\nOnce activated, **B-lymphocytes** divide rapidly and differentiate into plasma cells, which manufacture and secrete large quantities of antibody specific to the triggering antigen, sufficient to circulate through the bloodstream and mount an effective, body-wide response against the pathogen."
+    },
+    {
+      label: "C3.2.10",
+      heading: "Memory cells and lasting immunity",
+      level: "SL",
+      text: "Alongside the antibody-producing plasma cells, some activated B- and T-lymphocytes instead become long-lived **memory cells**, which persist in the body long after an infection has been cleared. If the same pathogen is encountered again, these memory cells allow a far faster and stronger secondary immune response than the original, first exposure, often clearing the pathogen before it causes any noticeable symptoms at all, this is the underlying basis of long-term, lasting immunity to a previously encountered disease."
+    },
+    {
+      label: "C3.2.11 / C3.2.12",
+      heading: "HIV and its effect on the immune system",
+      level: "SL",
+      text: "**HIV (human immunodeficiency virus)** is transmitted primarily through unprotected sexual contact, exposure to infected blood (for example through shared needles), and from mother to child during pregnancy, birth, or breastfeeding. HIV specifically infects and progressively destroys helper T-cells, the very cells that coordinate the wider adaptive immune response.\n\nAs helper T-cell numbers decline over the course of untreated infection, the immune system becomes progressively less able to mount effective responses against other pathogens, eventually resulting in **AIDS (acquired immunodeficiency syndrome)**, a stage marked by vulnerability to infections and cancers that a healthy immune system would normally control without difficulty."
+    },
+    {
+      label: "C3.2.13 / C3.2.14",
+      heading: "Antibiotics and bacterial resistance",
+      level: "SL",
+      text: "**Antibiotics** control bacterial infections by targeting structures or processes specific to bacterial cells, such as bacterial cell wall synthesis or bacterial ribosomes, which is why antibiotics are effective against bacteria but have no effect on viruses, which lack these bacterial-specific structures altogether.\n\n**Antibiotic resistance** arises through natural selection: within any large bacterial population, occasional mutations may confer partial or full resistance to a given antibiotic. Antibiotic use kills susceptible bacteria but leaves resistant individuals to survive and reproduce, so the proportion of resistant bacteria in the population rises over successive generations, especially where antibiotics are used inappropriately or a course is not completed in full."
+    },
+    {
+      label: "C3.2.15",
+      heading: "Zoonotic diseases",
+      level: "SL",
+      text: "A **zoonotic disease** is one that is transmitted from a non-human animal host to humans, either through direct contact, consumption of animal products, or via an intermediate vector such as a mosquito or tick. Zoonotic transmission is a significant and ongoing source of emerging human infectious diseases, since a pathogen well-adapted to one host species can sometimes acquire, through mutation, the ability to infect and spread between humans as well."
+    },
+    {
+      label: "C3.2.16 / C3.2.17 / C3.2.18",
+      heading: "Vaccines and herd immunity",
+      level: "SL",
+      text: "A **vaccine** stimulates the adaptive immune system to produce antibodies and, crucially, memory cells against a specific pathogen, without the vaccinated individual having to experience the actual disease first, typically by exposing the immune system to a harmless or inactivated form of the pathogen's antigens. This means a vaccinated individual can mount a fast, effective secondary-style response if they are later exposed to the real pathogen.\n\n**Herd immunity** arises when a sufficiently high proportion of a population is immune, either through vaccination or prior infection, that the pathogen can no longer sustain a chain of transmission through the population, indirectly protecting even those individuals who are not themselves immune. Data from the COVID-19 pandemic, including vaccination coverage, case numbers, and hospitalisation rates over time, provides an extensively documented real-world case study of these principles, from the emergence and rapid spread of a novel pathogen through to the population-level effects of a large-scale vaccination campaign."
+    }
+  ],
+
+  "A2.3": [
+    {
+      label: "A2.3.1",
+      heading: "Structural features common to viruses",
+      level: "HL",
+      text: "Despite their diversity, viruses share several defining structural features. They are extremely small, generally between about 20 and 300 nanometres, small enough to enter the host cells they depend on, and they do not grow, remaining a fixed size throughout their existence rather than increasing gradually the way a cell does. Every virus carries genetic material in the form of nucleic acid, following the same universal genetic code used by cellular life, enclosed within a protective protein shell called a **capsid**. Critically, viruses lack cytoplasm and possess few or no enzymes of their own, relying almost entirely on a host cell's metabolic machinery to replicate, which is one of the central reasons viruses are not classified as living cells."
+    },
+    {
+      label: "A2.3.2",
+      heading: "Diversity of viral structures",
+      level: "HL",
+      text: "Viral genetic material shows considerable diversity: it may be DNA or RNA, circular or linear, and single-stranded or double-stranded. Among single-stranded RNA viruses, further variation exists in how that genome is used: positive-sense RNA viruses can be translated directly as if it were mRNA, negative-sense RNA viruses must first be transcribed into a complementary, usable mRNA strand, and retroviruses use the enzyme reverse transcriptase to convert their RNA genome into DNA, which is then transcribed to produce mRNA. Some viruses are also enclosed within an additional lipid **envelope**, derived from the host cell's own membrane, which can assist the virus in attaching to and entering a new host cell."
+    },
+    {
+      label: "A2.3.3",
+      heading: "The lytic cycle",
+      level: "HL",
+      text: "In the **lytic cycle**, a virus attaches to a susceptible host cell and injects, or is taken up along with, its genetic material. The host cell's own machinery is then hijacked to replicate the viral genome and manufacture viral proteins, which self-assemble into large numbers of new virus particles. Once enough new viruses have been produced, the host cell typically ruptures (lyses), releasing the new viral particles to go on and infect further host cells, a cycle that can proceed rapidly and destructively through a population of susceptible cells."
+    },
+    {
+      label: "A2.3.4",
+      heading: "The lysogenic cycle",
+      level: "HL",
+      text: "In the **lysogenic cycle**, rather than immediately replicating and destroying the host cell, the viral genetic material instead becomes integrated into the host cell's own genome, where it is termed a **prophage** (in the case of a bacteria-infecting virus, or bacteriophage). In this integrated state, the viral genome is simply replicated alongside the host's own DNA every time the host cell divides, remaining dormant and largely undetected, sometimes for very many generations, until a triggering event (such as cellular stress) causes it to excise itself from the host genome and switch into the lytic cycle, resuming active viral replication."
+    },
+    {
+      label: "A2.3.5",
+      heading: "Evidence for multiple origins of viruses",
+      level: "HL",
+      text: "Because viruses are so structurally and genetically diverse, and because a virus absolutely requires a host cell to replicate, meaning viruses could not have arisen before cellular life existed, most evidence points toward viruses having originated multiple times independently, rather than from a single common viral ancestor. Proposed origins include fragments of cellular genetic material that gained the ability to move between cells and replicate somewhat independently, and once free-living cellular organisms that became simplified over evolutionary time through a parasitic lifestyle, progressively losing structures they no longer needed once they came to depend entirely on a host cell's machinery."
+    },
+    {
+      label: "A2.3.6",
+      heading: "Rapid evolution in viruses",
+      level: "HL",
+      text: "Viruses, particularly RNA viruses, tend to evolve unusually rapidly, for several compounding reasons: their replication machinery frequently lacks the proofreading and error-correction mechanisms of cellular DNA replication, so mutations accumulate quickly; their replication cycles are often extremely short, allowing many generations, and therefore many opportunities for mutation and selection, to occur in a short span of time; and viral populations within a single infected host can be enormous. This rapid evolutionary capacity is why influenza and other RNA viruses can change so quickly, evading a host's existing immunity and periodically necessitating updated vaccines."
+    }
+  ],
+  "C3.1": [
+    {
+      label: "C3.1.1 / C3.1.2",
+      heading: "Why integration matters, and the hierarchy of organisation",
+      level: "HL",
+      text: "A multicellular organism only functions successfully if its many specialised parts work together in a coordinated way, rather than each acting independently, this coordination between subsystems is what **integration** refers to. This is reflected in the **hierarchy of biological organisation**: individual cells combine to form tissues, tissues combine to form organs, and organs combine to form organ systems (such as the nervous, endocrine, circulatory, and digestive systems), which together make up the whole organism. Each level in this hierarchy can display **emergent properties**, characteristics not present at the lower level alone, that only arise from the coordinated interaction of the parts below it; a cheetah's ability to sprint at high speed, for instance, emerges from the integration of its nervous, skeletal, and muscular systems working together, not from any one of those systems alone."
+    },
+    {
+      label: "C3.1.3",
+      heading: "Nervous versus endocrine signalling",
+      level: "HL",
+      text: "The **nervous system** and **endocrine system** are the two principal means by which an animal body integrates and coordinates its organ systems, and they differ substantially in how they operate. Nervous signalling is electrical and chemical, extremely fast, and delivers a signal to a precise, specific target via a direct physical connection (a nerve fibre) to a synapse, but the resulting effect is typically brief. Endocrine signalling is purely chemical, comparatively slow to take effect since hormones must travel through the bloodstream, and reaches any tissue with the appropriate receptor rather than one single, precisely wired target, but its effects tend to be longer lasting."
+    },
+    {
+      label: "C3.1.4 / C3.1.5",
+      heading: "The brain and spinal cord",
+      level: "HL",
+      text: "The **brain** functions as the body's central information-integration organ, combining input from many different sources, including sensory information from around the body, and coordinating the appropriate voluntary and involuntary responses; its cerebral hemispheres are largely responsible for conscious processing, sensory perception, and voluntary motor control.\n\nThe **spinal cord** serves as an integrating centre in its own right for many unconscious, automatic processes, most notably **reflex arcs**, in which a rapid, protective response (such as withdrawing a hand from a painful stimulus) can be triggered and executed at the level of the spinal cord alone, without needing to wait for signals to travel all the way to the brain and back, considerably speeding up the response to a potentially dangerous stimulus."
+    },
+    {
+      label: "C3.1.6 / C3.1.7 / C3.1.8",
+      heading: "Sensory and motor neurons, and the pain reflex arc",
+      level: "HL",
+      text: "**Sensory neurons** carry information from receptors toward the central nervous system (the spinal cord and brain), while **motor neurons** carry signals in the opposite direction, from the central nervous system out to effectors such as muscles or glands. **Nerves** are simply bundles of many individual nerve fibres, from both sensory and motor neurons, running together within a shared protective sheath.\n\nThe **pain reflex arc** is a well-studied example of an involuntary response: a painful stimulus activates a sensory neuron, which synapses directly with a motor neuron within the spinal cord (often via a small connecting relay neuron), and that motor neuron activates a skeletal muscle as the effector, producing a rapid, protective muscular withdrawal response before the sensation of pain has even fully registered at a conscious level in the brain."
+    },
+    {
+      label: "C3.1.9",
+      heading: "The cerebellum",
+      level: "HL",
+      text: "The **cerebellum**, a distinct structure at the rear base of the brain, plays a central role in coordinating skeletal muscle contraction and maintaining balance. It integrates sensory information about the body's current position and movement with the motor commands being issued elsewhere in the brain, fine-tuning those commands to produce smooth, well-coordinated, balanced movement, rather than initiating movement itself."
+    },
+    {
+      label: "C3.1.10 / C3.1.11",
+      heading: "Melatonin, circadian rhythms, and epinephrine",
+      level: "HL",
+      text: "**Melatonin**, secreted by the pineal gland largely in response to darkness, helps regulate **circadian rhythms**, the roughly 24-hour internal cycles that govern sleep-wake patterns and a range of other physiological processes; melatonin secretion rises in the evening as light levels fall, promoting sleep onset, and falls again with morning light exposure.\n\n**Epinephrine (adrenaline)**, secreted by the adrenal glands, coordinates the body's rapid 'fight or flight' response to a perceived threat or stressor, producing widespread, near-simultaneous effects across multiple organ systems at once, including increased heart rate and blood pressure, redirection of blood flow toward skeletal muscle, and release of glucose from liver glycogen stores, illustrating hormonal signalling's capacity to integrate a coordinated, whole-body response very rapidly when the situation demands it."
+    },
+    {
+      label: "C3.1.12 / C3.1.13",
+      heading: "Auxin and plant tropisms",
+      level: "HL",
+      text: "Plants achieve their own form of system integration using chemical signals called **phytohormones**, of which **auxin** is the best studied. Auxin is synthesised mainly in the growing shoot tip and stimulates cell elongation in the tissue just behind it. When a shoot is illuminated unevenly, auxin is redistributed toward the shaded side, causing cells there to elongate faster than those on the illuminated side, and the shoot bends toward the light, a response called **phototropism**. Auxin similarly mediates **gravitropism**, the directional growth response to gravity, causing roots to grow downward and shoots to grow upward.",
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Heliotropism 1.jpg",
+      imageCaption: "Phototropism: differential auxin distribution causes a shoot to bend toward a light source."
+    },
+    {
+      label: "C3.1.14",
+      heading: "Auxin efflux carriers",
+      level: "HL",
+      text: "The directional movement of auxin through plant tissue, essential for tropic responses to be correctly oriented, is achieved using **auxin efflux carriers (PIN proteins)**, transport proteins embedded asymmetrically in the plasma membrane of cells along the auxin transport pathway. Because these carrier proteins are consistently positioned on one particular side of each cell, auxin is actively pumped out of cells in a single, consistent direction, maintaining a directional flow, and a resulting concentration gradient, of auxin across a tissue rather than the hormone simply diffusing evenly in every direction."
     }
   ],
 };

@@ -400,4 +400,897 @@ const QUIZZES = {
     }
   ],
 
+  "B4.2": [
+    {
+      q: "A bacterium can respire aerobically when oxygen is present but switches to fermentation when it isn't. What is it?",
+      options: ["An obligate aerobe", "An obligate anaerobe", "A facultative anaerobe", "A chemoautotroph"],
+      correct: 2,
+      explanation: "Facultative anaerobes can use aerobic respiration when oxygen is available but switch to anaerobic pathways when it's not."
+    },
+    {
+      q: "Euglena can photosynthesise in light but ingest food particles in the dark. What type of nutrition is this?",
+      options: ["Holozoic", "Saprotrophic", "Mixotrophic", "Chemoautotrophic"],
+      correct: 2,
+      explanation: "Mixotrophic nutrition combines autotrophic and heterotrophic strategies in a single organism, as seen in Euglena."
+    },
+    {
+      q: "A species' fundamental niche is larger than its realised niche mainly because the realised niche accounts for...",
+      options: ["Abiotic tolerance only", "Competition and predation from other species", "Genetic diversity", "Its taxonomic classification"],
+      correct: 1,
+      explanation: "The realised niche is the fundamental niche narrowed down by biotic interactions like competition and predation."
+    }
+  ],
+
+  "A3.2": [
+    {
+      q: "Why can the traditional taxonomic hierarchy sometimes fail to reflect true evolutionary relationships?",
+      options: [
+        "It was built on molecular data alone",
+        "It was originally based on visible morphology, which can result from convergent evolution rather than shared ancestry",
+        "It never considers physical traits",
+        "It's identical to cladistics"
+      ],
+      correct: 1,
+      explanation: "Morphological similarity can arise from convergent evolution, so a classification based purely on appearance doesn't always match true ancestry."
+    },
+    {
+      q: "What does a node on a cladogram represent?",
+      options: ["A single living species", "A hypothetical common ancestor where lineages diverged", "The root of the whole tree only", "A mutation event"],
+      correct: 1,
+      explanation: "Each node marks a branch point representing a hypothetical common ancestor shared by the lineages that follow it."
+    },
+    {
+      q: "Carl Woese's rRNA sequence comparisons led to which major classification change?",
+      options: ["Merging plants and fungi", "Splitting prokaryotes into two separate domains, Bacteria and Archaea", "Removing viruses from classification", "Creating the genus category"],
+      correct: 1,
+      explanation: "Woese's rRNA evidence showed methanogens were as genetically distinct from typical bacteria as bacteria are from eukaryotes, leading to the three-domain system."
+    }
+  ],
+
+  "D4.2": [
+    {
+      q: "What defines a keystone species?",
+      options: [
+        "The most numerous species in an ecosystem",
+        "A species with a disproportionately large impact on ecosystem structure relative to its abundance",
+        "Any apex predator",
+        "A species found only in stable ecosystems"
+      ],
+      correct: 1,
+      explanation: "A keystone species has an outsized effect on its community structure despite often being a small fraction of total biomass."
+    },
+    {
+      q: "Why does eutrophication often lead to fish die-offs?",
+      options: [
+        "Excess nutrients directly poison fish",
+        "Algal bloom decomposition consumes dissolved oxygen, raising biochemical oxygen demand",
+        "Fertiliser changes water pH instantly",
+        "It has no effect on oxygen levels"
+      ],
+      correct: 1,
+      explanation: "When the resulting algal bloom dies and decomposes, bacteria consume large amounts of dissolved oxygen, depleting it for fish."
+    },
+    {
+      q: "In primary succession on bare rock, which organisms typically colonise first?",
+      options: ["Large trees", "Lichens and mosses", "Grazing mammals", "Coral"],
+      correct: 1,
+      explanation: "Pioneer species like lichens and mosses can tolerate harsh, soil-free conditions and begin building organic matter."
+    }
+  ],
+
+  "D4.3": [
+    {
+      q: "Melting Arctic sea ice reduces the reflectivity of the planet, causing more solar energy absorption and further warming. This is an example of...",
+      options: ["A negative feedback cycle", "A positive feedback cycle", "Carbon sequestration", "Ecological succession"],
+      correct: 1,
+      explanation: "The initial warming (ice melt) drives further warming (more heat absorption), amplifying the original change — a positive feedback cycle."
+    },
+    {
+      q: "Why doesn't melting sea ice directly raise sea level, unlike melting land ice?",
+      options: [
+        "Sea ice is much colder than land ice",
+        "Sea ice was already floating and displacing its own weight in water",
+        "Sea ice contains no water",
+        "Sea ice melts into a different substance"
+      ],
+      correct: 1,
+      explanation: "Floating ice already displaces an equivalent volume of water, so its melting doesn't add net volume to the ocean."
+    },
+    {
+      q: "A mismatch between a flowering plant's bloom time and its pollinator's active period, caused by climate change, is an example of a disrupted...",
+      options: ["Food web", "Trophic level", "Phenological pattern", "Carbon sink"],
+      correct: 2,
+      explanation: "Phenology is the study of timing of biological events, and climate change can shift these timings unevenly between interacting species."
+    }
+  ],
+
+  "C4.2": [
+    {
+      q: "Roughly what percentage of energy is typically lost between one trophic level and the next?",
+      options: ["10%", "50%", "90%", "99%"],
+      correct: 2,
+      explanation: "About 90% of energy is lost at each trophic transfer, mainly through respiration heat loss and undigested material, leaving roughly 10% passed on."
+    },
+    {
+      q: "What is the key difference between gross and net primary productivity?",
+      options: [
+        "Net productivity ignores respiration",
+        "Net productivity subtracts the producers' own respiration from gross productivity",
+        "Gross productivity is always smaller",
+        "They are the same measurement"
+      ],
+      correct: 1,
+      explanation: "Net primary productivity is what remains after producers use some of their captured energy for their own respiration."
+    },
+    {
+      q: "The Keeling Curve's regular yearly zig-zag pattern is mainly caused by...",
+      options: [
+        "Random measurement error",
+        "Seasonal changes in photosynthesis in the northern hemisphere",
+        "Ocean current shifts",
+        "Volcanic eruptions"
+      ],
+      correct: 1,
+      explanation: "CO2 falls during the northern hemisphere's growing season as photosynthesis increases, then rises again over winter."
+    }
+  ],
+
+  "A4.2": [
+    {
+      q: "A population with high genetic diversity is generally better able to withstand environmental change because...",
+      options: [
+        "It has more individuals",
+        "At least some individuals are likely to carry alleles suited to the new conditions",
+        "Genetic diversity increases reproduction rate directly",
+        "It reduces predation"
+      ],
+      correct: 1,
+      explanation: "Greater genetic diversity increases the chance that some individuals already carry traits suited to changing conditions."
+    },
+    {
+      q: "Captive breeding programmes and seed banks are examples of...",
+      options: ["In situ conservation", "Ex situ conservation", "Rewilding", "Biomagnification control"],
+      correct: 1,
+      explanation: "Ex situ conservation preserves species outside their natural habitat, such as in zoos, seed banks, or breeding programmes."
+    },
+    {
+      q: "Why do 'splitters' and 'lumpers' report different numbers of species in the same group of organisms?",
+      options: [
+        "They study different organisms entirely",
+        "Classification involves interpretation, and they draw species boundaries differently from the same evidence",
+        "One group uses outdated data",
+        "It only applies to extinct species"
+      ],
+      correct: 1,
+      explanation: "Classifying variation into species categories involves a degree of interpretation, so different taxonomists can reach different conclusions from the same data."
+    }
+  ],
+
+  "D3.3": [
+    {
+      q: "Why is negative feedback, rather than positive feedback, the basis of homeostatic control?",
+      options: ["Negative feedback amplifies changes", "Negative feedback counteracts a deviation, returning a variable to its set point", "Positive feedback is faster", "They are the same mechanism"],
+      correct: 1,
+      explanation: "Negative feedback counteracts deviations from the set point in either direction, which is exactly what's needed to keep a variable stable."
+    },
+    {
+      q: "What is the key physiological difference between type 1 and type 2 diabetes?",
+      options: [
+        "Type 1 involves insulin resistance, type 2 involves no insulin production",
+        "Type 1 involves little or no insulin production, type 2 involves reduced target-cell sensitivity to insulin",
+        "They are the same condition with different names",
+        "Type 2 only affects blood pH, not glucose"
+      ],
+      correct: 1,
+      explanation: "Type 1 diabetes results from autoimmune destruction of insulin-producing cells; type 2 results from cells becoming less responsive to insulin, even though it's still produced."
+    },
+    {
+      q: "What happens in the kidney's glomerulus?",
+      options: ["Selective reabsorption of glucose", "Ultrafiltration of blood into the Bowman's capsule", "Production of antidiuretic hormone", "Blood clotting"],
+      correct: 1,
+      explanation: "Blood pressure forces water, ions, glucose, and urea out of glomerular capillaries into the Bowman's capsule, the first step of urine formation."
+    }
+  ],
+
+  "B3.1": [
+    {
+      q: "Why does gas exchange become more challenging as an organism increases in size?",
+      options: [
+        "Larger organisms need less oxygen",
+        "Surface area to volume ratio decreases and diffusion distance increases with size",
+        "Larger organisms have thicker skin only",
+        "Size has no effect on gas exchange"
+      ],
+      correct: 1,
+      explanation: "As size increases, SA:V ratio falls and the distance from the body's centre to its exterior grows, both of which make simple diffusion across the outer surface insufficient."
+    },
+    {
+      q: "What does the Bohr shift describe?",
+      options: [
+        "A leftward shift in the oxygen dissociation curve with higher CO2",
+        "A rightward shift in the oxygen dissociation curve with higher CO2, lowering haemoglobin's oxygen affinity",
+        "A change in haemoglobin's structure over evolutionary time",
+        "The effect of altitude on lung volume"
+      ],
+      correct: 1,
+      explanation: "Higher CO2 (and lower pH) shifts the curve right, reducing haemoglobin's affinity for oxygen so it releases more oxygen to actively respiring tissue."
+    },
+    {
+      q: "Why does foetal haemoglobin have a higher oxygen affinity than adult haemoglobin?",
+      options: [
+        "To allow the foetus to draw oxygen from maternal blood that has already released some oxygen",
+        "Because foetal blood is warmer",
+        "It doesn't — they have identical affinity",
+        "To reduce the foetus's oxygen requirements"
+      ],
+      correct: 0,
+      explanation: "The higher affinity lets foetal haemoglobin successfully extract oxygen from maternal blood across the placenta despite its lower oxygen concentration."
+    }
+  ],
+
+  "B3.2": [
+    {
+      q: "Why do capillary walls consist of just a single layer of cells?",
+      options: ["To save the body energy", "To minimise diffusion distance for exchange with tissue", "Because they carry no blood cells", "To increase blood pressure"],
+      correct: 1,
+      explanation: "A thin, single-cell-layer wall minimises the diffusion distance between blood and the surrounding tissue fluid, maximising exchange efficiency."
+    },
+    {
+      q: "What is the main functional advantage of double circulation over single circulation?",
+      options: [
+        "It uses less energy",
+        "Blood can be re-pressurised between the pulmonary and systemic circuits, delivering oxygenated blood at higher pressure",
+        "It requires a smaller heart",
+        "It eliminates the need for valves"
+      ],
+      correct: 1,
+      explanation: "Passing through the heart twice per circuit lets blood be repressurised after the lungs, so it reaches body tissues at a much higher, more effective pressure than in single circulation."
+    },
+    {
+      q: "What force pulls water up through the xylem from roots to leaves?",
+      options: ["Active transport by xylem cells", "Root pressure alone", "Tension generated by transpiration, transmitted via cohesion between water molecules", "Gravity"],
+      correct: 2,
+      explanation: "As water evaporates from leaf mesophyll during transpiration, cohesion between water molecules transmits the resulting tension all the way down the xylem to the roots."
+    }
+  ],
+
+  "B3.3": [
+    {
+      q: "During muscle contraction, what actually shortens?",
+      options: [
+        "The actin filaments themselves",
+        "The myosin filaments themselves",
+        "Neither filament shortens — the sarcomere shortens as they slide past each other",
+        "The titin protein only"
+      ],
+      correct: 2,
+      explanation: "In the sliding filament model, actin and myosin filaments slide past one another without changing length themselves; it's this sliding that shortens the sarcomere."
+    },
+    {
+      q: "Why must muscles work in antagonistic pairs?",
+      options: [
+        "Because muscle tissue can only actively generate force by contracting, not by extending",
+        "To conserve ATP",
+        "Because a single muscle cannot attach to bone",
+        "It's not necessary — most muscles work alone"
+      ],
+      correct: 0,
+      explanation: "Since muscle can only actively pull (contract), moving a joint in two directions requires two opposing muscles, each pulling for its own direction."
+    },
+    {
+      q: "What defines a motor unit?",
+      options: ["A single muscle fibre alone", "A motor neuron together with all the muscle fibres it controls", "A whole muscle group", "A type of joint"],
+      correct: 1,
+      explanation: "A motor unit is one motor neuron plus every muscle fibre it connects to; all those fibres contract together whenever that neuron fires."
+    }
+  ],
+
+  "C2.2": [
+    {
+      q: "What maintains a neuron's resting potential?",
+      options: [
+        "Passive diffusion of sodium and potassium alone",
+        "The sodium-potassium pump, actively transporting 3 Na+ out for every 2 K+ in",
+        "Calcium channels",
+        "Myelin sheath insulation"
+      ],
+      correct: 1,
+      explanation: "The sodium-potassium pump uses ATP to maintain the resting potential by moving more positive charge out of the cell than it brings in."
+    },
+    {
+      q: "What makes saltatory conduction faster than continuous conduction?",
+      options: [
+        "The action potential jumps between exposed nodes of Ranvier rather than firing continuously along the whole membrane",
+        "Myelinated axons are always shorter",
+        "Sodium channels open more slowly in myelinated axons",
+        "It isn't actually faster"
+      ],
+      correct: 0,
+      explanation: "Myelin insulates most of the axon, so depolarisation only needs to occur at the nodes, letting the impulse 'jump' between them much faster than continuous propagation."
+    },
+    {
+      q: "What is summation in the context of postsynaptic neurons?",
+      options: [
+        "The total number of neurons in the brain",
+        "The combined effect of multiple synaptic inputs determining whether a postsynaptic neuron fires",
+        "The sum of all ion channel types",
+        "A method for measuring nerve conduction speed"
+      ],
+      correct: 1,
+      explanation: "A postsynaptic neuron often integrates many simultaneous inputs, and whether it reaches threshold depends on their combined, summed effect."
+    }
+  ],
+
+  "C2.1": [
+    {
+      q: "What is quorum sensing?",
+      options: [
+        "A method bacteria use to detect and respond to their own population density via chemical signalling",
+        "A type of antibiotic resistance",
+        "The process of cell division in bacteria",
+        "A vaccine mechanism"
+      ],
+      correct: 0,
+      explanation: "Bacteria release a signalling molecule continuously; once its concentration is high enough (indicating high population density), the population coordinates a collective response."
+    },
+    {
+      q: "Why do steroid hormones use intracellular receptors rather than transmembrane receptors?",
+      options: [
+        "They are too large to be made at all",
+        "They are small and lipid-soluble enough to diffuse directly across the plasma membrane",
+        "They only work on plant cells",
+        "They cannot bind to any receptor"
+      ],
+      correct: 1,
+      explanation: "Being lipid-soluble, steroid hormones can cross the membrane directly and bind receptors inside the cell, which then act on DNA to affect transcription."
+    },
+    {
+      q: "What's the difference between paracrine and endocrine signalling?",
+      options: [
+        "Paracrine signals travel a short distance to nearby cells; endocrine signals travel through the bloodstream to distant cells",
+        "They are identical",
+        "Endocrine signalling only occurs in plants",
+        "Paracrine signalling requires no receptor"
+      ],
+      correct: 0,
+      explanation: "Paracrine signalling acts locally by diffusion to nearby cells; endocrine signalling uses the bloodstream to reach cells throughout the body."
+    }
+  ],
+
+  "C3.2": [
+    {
+      q: "What is the key functional difference between innate and adaptive immunity?",
+      options: [
+        "Innate immunity is specific and slow; adaptive is fast and non-specific",
+        "Innate immunity is fast and non-specific; adaptive immunity is specific and builds immunological memory",
+        "They are the same system",
+        "Only adaptive immunity involves phagocytes"
+      ],
+      correct: 1,
+      explanation: "Innate immunity responds immediately but non-specifically; adaptive immunity is slower to develop but pathogen-specific and retains memory for faster future responses."
+    },
+    {
+      q: "Why are antibiotics ineffective against viral infections?",
+      options: [
+        "Viruses are too small for antibiotics to reach",
+        "Antibiotics target structures/processes specific to bacterial cells, which viruses lack",
+        "Viruses are resistant to all chemicals",
+        "Antibiotics only work on humans"
+      ],
+      correct: 1,
+      explanation: "Antibiotics target bacteria-specific features like cell walls or bacterial ribosomes; viruses don't have these structures, so antibiotics have no effect on them."
+    },
+    {
+      q: "How does herd immunity protect unvaccinated individuals?",
+      options: [
+        "It doesn't protect them at all",
+        "When enough of the population is immune, the pathogen can't sustain a transmission chain, indirectly protecting non-immune individuals",
+        "It only works if 100% of the population is vaccinated",
+        "It targets the pathogen directly"
+      ],
+      correct: 1,
+      explanation: "Once enough of a population is immune, a pathogen struggles to find enough susceptible hosts to keep spreading, indirectly protecting those who aren't immune."
+    }
+  ],
+
+  "A2.3": [
+    {
+      q: "What happens to a host cell at the end of the lytic cycle?",
+      options: ["It becomes dormant", "It typically ruptures (lyses), releasing new virus particles", "It divides normally", "It becomes immune to further infection"],
+      correct: 1,
+      explanation: "In the lytic cycle, once enough new viruses have been assembled, the host cell usually bursts, releasing them to infect further cells."
+    },
+    {
+      q: "What distinguishes the lysogenic cycle from the lytic cycle?",
+      options: [
+        "Lysogenic viruses never replicate",
+        "In the lysogenic cycle, viral DNA integrates into the host genome and stays dormant as a prophage before eventually switching to the lytic cycle",
+        "Lysogenic viruses only infect plants",
+        "There is no difference"
+      ],
+      correct: 1,
+      explanation: "In lysogeny, viral genetic material integrates into the host's genome and replicates passively with it, until a trigger causes it to switch to active lytic replication."
+    },
+    {
+      q: "Why do RNA viruses tend to evolve especially rapidly?",
+      options: [
+        "They have very long generation times",
+        "Their replication often lacks proofreading, generation times are short, and viral populations are huge",
+        "RNA is a more stable molecule than DNA",
+        "They don't evolve rapidly compared to bacteria"
+      ],
+      correct: 1,
+      explanation: "A combination of error-prone replication, rapid generation turnover, and huge population sizes lets mutations accumulate and spread quickly in RNA virus populations."
+    }
+  ],
+
+  "C3.1": [
+    {
+      q: "What is an emergent property, in the context of biological organisation?",
+      options: [
+        "A property visible only under a microscope",
+        "A characteristic that arises from the interaction of parts at a lower level, not present in any single part alone",
+        "Any newly discovered gene",
+        "A property unique to plants"
+      ],
+      correct: 1,
+      explanation: "Emergent properties, like a cheetah's sprinting ability, arise only from the coordinated interaction of multiple systems, not from any one system in isolation."
+    },
+    {
+      q: "Why can a pain reflex arc trigger a response before you consciously feel pain?",
+      options: [
+        "Pain signals never reach the brain",
+        "The reflex arc is coordinated at the spinal cord, bypassing the need to wait for brain processing",
+        "Reflexes are slower than conscious responses",
+        "Pain receptors are located in the spinal cord itself"
+      ],
+      correct: 1,
+      explanation: "Reflex arcs are wired through the spinal cord directly, allowing a rapid protective response before the signal has even finished reaching and registering in the brain."
+    },
+    {
+      q: "How does uneven light exposure cause a shoot to bend toward light (phototropism)?",
+      options: [
+        "Auxin is redistributed to the shaded side, causing faster cell elongation there",
+        "Auxin is destroyed on the illuminated side",
+        "The shoot physically twists using muscle-like tissue",
+        "Chlorophyll pulls the shoot toward light directly"
+      ],
+      correct: 0,
+      explanation: "Auxin accumulates on the shaded side, stimulating greater cell elongation there than on the illuminated side, which bends the shoot toward the light."
+    }
+  ],
+
+  "D2.3": [
+    {
+      q: "A plant cell is placed in a hypertonic solution. What happens?",
+      options: ["It swells and may burst", "Water leaves the cell by osmosis, causing plasmolysis", "Nothing changes", "The cell wall dissolves"],
+      correct: 1,
+      explanation: "In a hypertonic solution, water leaves the cell by osmosis down its water potential gradient, causing the cell membrane to pull away from the wall (plasmolysis)."
+    },
+    {
+      q: "Why are isotonic solutions used for intravenous fluids in medicine?",
+      options: [
+        "They are cheaper to produce",
+        "They match the solute concentration of blood, preventing red blood cells from swelling or shrinking",
+        "They contain no water at all",
+        "They speed up clotting"
+      ],
+      correct: 1,
+      explanation: "An isotonic solution has the same water potential as blood plasma, so red blood cells neither gain nor lose water when it's infused."
+    },
+    {
+      q: "Water potential is the sum of which two components?",
+      options: ["Osmotic potential and turgor", "Solute potential and pressure potential", "pH and temperature", "Diffusion rate and concentration"],
+      correct: 1,
+      explanation: "Water potential combines solute potential (always negative or zero, from dissolved solutes) and pressure potential (from physical pressure, e.g. cell wall pushing back)."
+    }
+  ],
+
+  "B1.1": [
+    {
+      q: "What reaction joins two monosaccharides together, releasing water?",
+      options: ["Hydrolysis", "Condensation", "Oxidation", "Phosphorylation"],
+      correct: 1,
+      explanation: "Condensation reactions join monomers together while releasing a water molecule; hydrolysis is the reverse, breaking bonds by adding water."
+    },
+    {
+      q: "Why is cellulose an effective structural material in plant cell walls, unlike starch?",
+      options: [
+        "Cellulose is soluble in water",
+        "Cellulose's straight, hydrogen-bonded chains form strong fibres, unlike starch's coiled storage structure",
+        "Cellulose is a lipid, not a carbohydrate",
+        "Starch and cellulose have identical structures"
+      ],
+      correct: 1,
+      explanation: "Cellulose's unbranched chains held by hydrogen bonds form rigid microfibrils suited to structural support, very different from starch's compact, coiled storage form."
+    },
+    {
+      q: "What structural feature allows phospholipids to spontaneously form a bilayer in water?",
+      options: [
+        "They are entirely hydrophobic",
+        "They are amphipathic, with a hydrophilic head and hydrophobic tails",
+        "They are entirely hydrophilic",
+        "They contain no fatty acids"
+      ],
+      correct: 1,
+      explanation: "The amphipathic nature of phospholipids drives spontaneous self-assembly into a bilayer, heads facing water, tails shielded from it."
+    }
+  ],
+
+  "C1.1": [
+    {
+      q: "How do enzymes increase the rate of a reaction?",
+      options: [
+        "By increasing the temperature of the reaction",
+        "By lowering the activation energy needed for the reaction to proceed",
+        "By being consumed in the reaction",
+        "By changing the products formed"
+      ],
+      correct: 1,
+      explanation: "Enzymes provide an alternative reaction pathway with lower activation energy, without being used up themselves."
+    },
+    {
+      q: "What typically happens to enzyme activity at temperatures well above its optimum?",
+      options: [
+        "Activity increases indefinitely",
+        "The enzyme denatures, losing its functional shape and activity",
+        "Nothing changes",
+        "The enzyme becomes more specific"
+      ],
+      correct: 1,
+      explanation: "Excess heat disrupts the bonds maintaining an enzyme's tertiary structure, denaturing it and destroying its active site."
+    },
+    {
+      q: "What's the difference between intracellular and extracellular enzymes?",
+      options: [
+        "Extracellular enzymes work inside cells only",
+        "Intracellular enzymes act within the cell that made them; extracellular enzymes are secreted to act outside the cell",
+        "There is no difference",
+        "Intracellular enzymes cannot be denatured"
+      ],
+      correct: 1,
+      explanation: "Intracellular enzymes catalyse reactions inside the cell; extracellular enzymes, like digestive enzymes, are secreted to act outside it."
+    }
+  ],
+
+  "A1.2": [
+    {
+      q: "What are the three components of a single nucleotide?",
+      options: ["A sugar, a phosphate, and a base", "Two sugars and a phosphate", "A protein and two bases", "A lipid and a sugar"],
+      correct: 0,
+      explanation: "Each nucleotide consists of a pentose sugar, a phosphate group, and a nitrogenous base."
+    },
+    {
+      q: "In DNA base pairing, which bases pair together?",
+      options: ["A with G, C with T", "A with T, C with G", "A with C, G with T", "All bases pair with each other equally"],
+      correct: 1,
+      explanation: "Complementary base pairing follows adenine-thymine and cytosine-guanine, matching purines to pyrimidines with the right hydrogen bonding pattern."
+    },
+    {
+      q: "How does DNA achieve such a high information capacity?",
+      options: [
+        "Through a huge alphabet of different bases",
+        "Through the enormous number of possible sequences from just 4 bases arranged over millions of positions",
+        "Through variable sugar types",
+        "DNA doesn't actually store much information"
+      ],
+      correct: 1,
+      explanation: "Even with just 4 possible bases at each position, a long sequence has an astronomically large number of possible combinations, giving DNA immense information capacity."
+    }
+  ],
+
+  "D1.1": [
+    {
+      q: "What does 'semi-conservative' mean in the context of DNA replication?",
+      options: [
+        "Only half the DNA is replicated",
+        "Each new DNA molecule consists of one original (parental) strand and one newly synthesised strand",
+        "DNA replication only happens some of the time",
+        "Both strands of the new DNA are newly synthesised"
+      ],
+      correct: 1,
+      explanation: "Semi-conservative replication means each daughter molecule retains one original template strand paired with one newly made strand."
+    },
+    {
+      q: "Why does DNA replication produce a leading strand and a lagging strand?",
+      options: [
+        "DNA polymerase can only synthesise DNA in the 5' to 3' direction, but the two template strands run in opposite directions",
+        "One strand is replicated by a different enzyme entirely",
+        "The lagging strand is not actually copied",
+        "This only happens in prokaryotes"
+      ],
+      correct: 0,
+      explanation: "Because DNA polymerase only adds nucleotides 5' to 3' and the double helix is antiparallel, one strand is synthesised continuously (leading) and the other in fragments (lagging)."
+    },
+    {
+      q: "What is the main purpose of PCR (polymerase chain reaction)?",
+      options: [
+        "To separate DNA fragments by size",
+        "To amplify a specific DNA sequence into millions of copies",
+        "To sequence an entire genome directly",
+        "To destroy unwanted DNA"
+      ],
+      correct: 1,
+      explanation: "PCR uses repeated heating/cooling cycles with DNA polymerase to exponentially amplify a targeted DNA sequence."
+    }
+  ],
+
+  "D2.1": [
+    {
+      q: "What is the key functional difference between mitosis and meiosis?",
+      options: [
+        "Mitosis produces genetically varied cells; meiosis produces identical cells",
+        "Mitosis produces two genetically identical diploid cells; meiosis produces four genetically varied haploid cells",
+        "They are the same process",
+        "Meiosis only occurs in plants"
+      ],
+      correct: 1,
+      explanation: "Mitosis is for growth/repair and preserves the chromosome number and genetic content; meiosis halves the chromosome number and generates genetic variation for gametes."
+    },
+    {
+      q: "What is non-disjunction?",
+      options: [
+        "The normal separation of chromosomes during division",
+        "The failure of chromosomes to separate properly during meiosis, leading to gametes with abnormal chromosome numbers",
+        "A type of mitotic checkpoint",
+        "The joining of two separate cells"
+      ],
+      correct: 1,
+      explanation: "Non-disjunction is an error where chromosomes fail to separate correctly, resulting in gametes with too many or too few chromosomes."
+    },
+    {
+      q: "What role do cyclins play in the cell cycle?",
+      options: [
+        "They form the spindle fibres",
+        "They regulate progression through the cell cycle by activating enzymes at specific checkpoints",
+        "They are structural components of chromosomes",
+        "They have no functional role"
+      ],
+      correct: 1,
+      explanation: "Cyclins bind to and activate cyclin-dependent kinases, driving the cell through checkpoints and ensuring the cycle progresses in the correct order."
+    }
+  ],
+
+  "B1.2": [
+    {
+      q: "What determines the properties of a specific amino acid?",
+      options: ["The central carbon atom", "The variable R-group attached to the central carbon", "The amino group only", "The carboxyl group only"],
+      correct: 1,
+      explanation: "All amino acids share the same core structure; it's the R-group that varies and gives each amino acid its distinct chemical properties."
+    },
+    {
+      q: "How does a protein's primary structure influence its final shape?",
+      options: [
+        "It has no influence at all",
+        "The sequence of amino acids determines the pattern of interactions (bonds) that fold the protein into its specific conformation",
+        "Only the first amino acid matters",
+        "Primary structure only affects colour"
+      ],
+      correct: 1,
+      explanation: "The specific sequence of amino acids dictates which bonds and interactions form between R-groups, which in turn determines the protein's overall 3D shape."
+    },
+    {
+      q: "Why can extreme pH denature a protein?",
+      options: [
+        "It has no effect on protein structure",
+        "It disrupts the ionic and hydrogen bonds maintaining the protein's folded structure",
+        "It only affects the primary structure",
+        "It changes the amino acid sequence directly"
+      ],
+      correct: 1,
+      explanation: "Extreme pH alters the charge on R-groups, disrupting the bonds (ionic, hydrogen) that hold the protein's specific 3D shape together."
+    }
+  ],
+
+  "A2.1": [
+    {
+      q: "Why is the origin of the first cell difficult to study directly?",
+      options: [
+        "It happened too recently to leave evidence",
+        "It occurred billions of years ago and left no direct fossil evidence of the process itself",
+        "Scientists aren't interested in the question",
+        "Cells cannot be studied using modern techniques"
+      ],
+      correct: 1,
+      explanation: "The origin of life happened around 3.5-4 billion years ago, and the transitional stages left no fossils, so it must be studied indirectly through modern chemistry and modelling."
+    },
+    {
+      q: "Why is RNA hypothesised to have been the first genetic material rather than DNA?",
+      options: [
+        "RNA cannot store information",
+        "RNA can both store genetic information and catalyse reactions, potentially performing both roles before DNA and proteins evolved separately",
+        "DNA existed before RNA",
+        "RNA is more stable than DNA"
+      ],
+      correct: 1,
+      explanation: "RNA's dual capability, as both an information carrier and a catalyst (ribozyme), makes it a plausible single molecule for early self-replicating systems."
+    },
+    {
+      q: "What evidence points to hydrothermal vents as a possible location for the origin of life?",
+      options: [
+        "They provide a stable, nutrient-rich, chemically active environment relevant to the last universal common ancestor",
+        "They are the only place on Earth with water",
+        "They are too hot for any chemistry to occur",
+        "They only formed very recently"
+      ],
+      correct: 0,
+      explanation: "Hydrothermal vents provide chemical gradients, minerals, and energy sources that could have supported the chemistry needed for the earliest cells."
+    }
+  ],
+
+  "D1.2": [
+    {
+      q: "What is transcription?",
+      options: [
+        "The conversion of mRNA into a polypeptide",
+        "The copying of a gene's DNA sequence into a complementary mRNA molecule",
+        "The replication of an entire chromosome",
+        "The breakdown of proteins"
+      ],
+      correct: 1,
+      explanation: "Transcription is the synthesis of mRNA using one strand of DNA as a template."
+    },
+    {
+      q: "Why is the genetic code described as 'degenerate'?",
+      options: [
+        "It only codes for a few amino acids",
+        "Most amino acids are specified by more than one codon",
+        "It changes between species",
+        "It cannot be read accurately"
+      ],
+      correct: 1,
+      explanation: "Since there are 64 possible codons but only 20 amino acids, most amino acids have multiple codons that code for them — this redundancy is called degeneracy."
+    },
+    {
+      q: "What is the role of tRNA in translation?",
+      options: [
+        "It forms the ribosome structure",
+        "It carries specific amino acids to the ribosome and matches them to the mRNA codon via its anticodon",
+        "It directly copies DNA",
+        "It has no role in translation"
+      ],
+      correct: 1,
+      explanation: "Each tRNA carries a specific amino acid and has an anticodon that base-pairs with the corresponding mRNA codon, ensuring the correct amino acid sequence."
+    }
+  ],
+
+  "A2.2": [
+    {
+      q: "What structural features are common to all cells?",
+      options: [
+        "A nucleus, mitochondria, and chloroplasts",
+        "A plasma membrane, cytoplasm, ribosomes, and DNA as genetic material",
+        "A cell wall and large central vacuole",
+        "Multiple nuclei"
+      ],
+      correct: 1,
+      explanation: "Despite huge diversity, all cells share a plasma membrane, cytoplasm, ribosomes, and DNA — these are the universal features of cellular life."
+    },
+    {
+      q: "What is the key structural difference between prokaryotic and eukaryotic cells?",
+      options: [
+        "Prokaryotes have a membrane-bound nucleus; eukaryotes don't",
+        "Eukaryotes have a membrane-bound nucleus and membrane-bound organelles; prokaryotes lack both",
+        "There is no meaningful difference",
+        "Prokaryotes are always larger than eukaryotic cells"
+      ],
+      correct: 1,
+      explanation: "The defining distinction is the presence (eukaryotes) or absence (prokaryotes) of a membrane-bound nucleus and other membrane-bound organelles."
+    },
+    {
+      q: "What does the endosymbiotic theory propose about the origin of mitochondria and chloroplasts?",
+      options: [
+        "They evolved from parts of the plasma membrane",
+        "They originated as free-living prokaryotes that were engulfed by a host cell and became permanent internal symbionts",
+        "They are not related to any prokaryotic ancestor",
+        "They formed spontaneously from RNA"
+      ],
+      correct: 1,
+      explanation: "Endosymbiotic theory holds that mitochondria and chloroplasts descend from free-living bacteria engulfed by an ancestral host cell, evidenced by their own DNA and double membranes."
+    }
+  ],
+
+  "B2.2": [
+    {
+      q: "What is an organelle?",
+      options: [
+        "Any structure inside a cell, membrane-bound or not",
+        "A specialised, membrane-bound structure within a eukaryotic cell that performs a specific function",
+        "Only the nucleus",
+        "A type of protein"
+      ],
+      correct: 1,
+      explanation: "Organelles are membrane-bound compartments within eukaryotic cells, each carrying out a distinct specialised function."
+    },
+    {
+      q: "What is the main advantage of compartmentalising the cytoplasm into organelles?",
+      options: [
+        "It makes the cell larger",
+        "It allows incompatible or specialised chemical processes to occur simultaneously in separate, controlled environments",
+        "It has no functional advantage",
+        "It reduces the number of enzymes needed"
+      ],
+      correct: 1,
+      explanation: "Compartmentalisation lets a cell maintain different chemical conditions in different organelles, allowing processes that might otherwise interfere with each other to occur simultaneously."
+    },
+    {
+      q: "Why does the mitochondrion have a highly folded inner membrane (cristae)?",
+      options: [
+        "To reduce its surface area",
+        "To increase surface area for the proteins involved in ATP production",
+        "To store DNA",
+        "It has no functional significance"
+      ],
+      correct: 1,
+      explanation: "Cristae dramatically increase the inner membrane's surface area, accommodating more of the electron transport chain proteins involved in ATP synthesis."
+    }
+  ],
+
+  "C1.2": [
+    {
+      q: "Why is ATP described as the 'energy currency' of the cell?",
+      options: [
+        "It stores energy for years at a time",
+        "It's a small, universal molecule that's readily made, used, and regenerated to transfer energy for immediate cellular use",
+        "It's the only energy molecule in cells",
+        "It cannot be broken down"
+      ],
+      correct: 1,
+      explanation: "ATP is rapidly made and broken down to shuttle usable energy to wherever a cell needs it, rather than being a long-term energy store."
+    },
+    {
+      q: "What is the key difference between aerobic and anaerobic respiration in humans?",
+      options: [
+        "Anaerobic respiration produces far more ATP per glucose molecule",
+        "Aerobic respiration requires oxygen and yields much more ATP; anaerobic respiration doesn't require oxygen but yields far less ATP",
+        "They produce identical amounts of ATP",
+        "Aerobic respiration doesn't involve glucose"
+      ],
+      correct: 1,
+      explanation: "Aerobic respiration, using oxygen, releases far more energy per glucose molecule than anaerobic respiration (fermentation), which yields much less ATP."
+    },
+    {
+      q: "What is the role of oxygen in aerobic respiration?",
+      options: [
+        "It's a raw material for glycolysis",
+        "It acts as the final electron acceptor at the end of the electron transport chain",
+        "It has no specific role",
+        "It directly produces glucose"
+      ],
+      correct: 1,
+      explanation: "Oxygen accepts electrons at the end of the electron transport chain, combining with hydrogen ions to form water, which keeps the chain running."
+    }
+  ],
+
+  "C1.3": [
+    {
+      q: "What is the overall role of light-dependent reactions in photosynthesis?",
+      options: [
+        "To fix carbon dioxide into glucose",
+        "To capture light energy and use it to produce ATP and reduced NADP",
+        "To release oxygen from glucose",
+        "To break down starch"
+      ],
+      correct: 1,
+      explanation: "The light-dependent reactions capture light energy, split water (releasing oxygen), and generate ATP and reduced NADP for use in the Calvin cycle."
+    },
+    {
+      q: "What enzyme catalyses carbon fixation in the Calvin cycle?",
+      options: ["ATP synthase", "Rubisco", "DNA polymerase", "Catalase"],
+      correct: 1,
+      explanation: "Rubisco catalyses the combination of CO2 with RuBP, the first step of carbon fixation in the Calvin cycle."
+    },
+    {
+      q: "Why might light intensity, CO2 concentration, or temperature each act as a limiting factor for photosynthesis?",
+      options: [
+        "They never actually limit photosynthesis",
+        "Whichever of these factors is in shortest supply relative to the plant's needs will cap the overall rate of photosynthesis",
+        "Only light intensity ever matters",
+        "Photosynthesis doesn't depend on any external factors"
+      ],
+      correct: 1,
+      explanation: "The rate of photosynthesis is capped by whichever necessary factor (light, CO2, or temperature) is furthest below what's needed — the limiting factor principle."
+    }
+  ],
+
 };

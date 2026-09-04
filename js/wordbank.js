@@ -328,6 +328,150 @@ const WORDBANK = {
     { term: "Adaptive radiation", definition: "The rapid evolution of many new species from a single ancestral species, each adapted to a different niche." },
     { term: "Polyploidy", definition: "Carrying more than two complete sets of chromosomes, a mechanism of rapid speciation in plants." }
   ],
+  "B4.2": [
+    { term: "Obligate aerobe", definition: "An organism that requires oxygen for cell respiration and cannot survive without it." },
+    { term: "Obligate anaerobe", definition: "An organism that cannot tolerate oxygen, often because it is directly toxic to them." },
+    { term: "Facultative anaerobe", definition: "An organism that can respire aerobically or anaerobically depending on oxygen availability." },
+    { term: "Holozoic nutrition", definition: "A mode of heterotrophic nutrition involving ingestion, digestion, absorption, and assimilation of food." },
+    { term: "Mixotrophic nutrition", definition: "A mode of nutrition combining autotrophic and heterotrophic strategies in a single organism." },
+    { term: "Saprotrophic nutrition", definition: "A mode of nutrition involving secretion of digestive enzymes onto external organic matter, followed by absorption of the products." },
+    { term: "Fundamental niche", definition: "The full range of conditions and resources a species could theoretically exploit in the absence of competitors." },
+    { term: "Realised niche", definition: "The narrower niche a species actually occupies once competition and predation are taken into account." },
+    { term: "Competitive exclusion", definition: "The principle that two species with heavily overlapping niches cannot coexist indefinitely." }
+  ],
+
+  "A3.2": [
+    { term: "Clade", definition: "A group consisting of a common ancestor and all of its descendants, and no others." },
+    { term: "Molecular clock", definition: "A method estimating time since divergence from the accumulation of sequence differences between species." },
+    { term: "Cladogram", definition: "A branching diagram representing evolutionary relationships, built from sequence comparisons." },
+    { term: "Node", definition: "A branch point in a cladogram representing a hypothetical common ancestor." },
+    { term: "Monophyletic", definition: "Describes a group consisting of a common ancestor and all of its descendants." },
+    { term: "Domain", definition: "The highest level of biological classification; Bacteria, Archaea, and Eukarya." }
+  ],
+
+  "D4.2": [
+    { term: "Ecosystem stability", definition: "The capacity of an ecosystem to persist over long periods despite ongoing minor fluctuations." },
+    { term: "Tipping point", definition: "A threshold beyond which a system shifts rapidly, and often irreversibly, into a different state." },
+    { term: "Mesocosm", definition: "A small-scale, controlled model ecosystem used to study ecological processes." },
+    { term: "Keystone species", definition: "A species whose impact on community structure is disproportionately large relative to its abundance." },
+    { term: "Eutrophication", definition: "Nutrient enrichment of water, often from fertiliser leaching, that triggers algal blooms and oxygen depletion." },
+    { term: "Biomagnification", definition: "The increasing concentration of a persistent pollutant at each successive trophic level." },
+    { term: "Rewilding", definition: "A conservation strategy restoring natural ecological processes, often via keystone species reintroduction." },
+    { term: "Ecological succession", definition: "The gradual, directional change in a community's species composition over time." },
+    { term: "Climax community", definition: "The stable, self-sustaining endpoint of ecological succession." }
+  ],
+
+  "D4.3": [
+    { term: "Anthropogenic climate change", definition: "Long-term shifts in global climate driven by human activity, chiefly greenhouse gas emissions." },
+    { term: "Positive feedback cycle", definition: "A cycle in which an initial change triggers further changes that amplify the original effect." },
+    { term: "Coral bleaching", definition: "The loss of symbiotic algae from corals under heat stress, often leading to coral death." },
+    { term: "Phenology", definition: "The study of the timing of recurring biological events in relation to climate." },
+    { term: "Carbon sequestration", definition: "The capture and long-term storage of atmospheric carbon, e.g. in forests or peatlands." }
+  ],
+
+  "C4.2": [
+    { term: "Trophic level", definition: "An organism's position in a food chain, based on how it obtains its energy." },
+    { term: "Energy pyramid", definition: "A diagram representing the energy present at each trophic level of a food chain." },
+    { term: "Primary productivity", definition: "The rate at which producers convert light energy into new organic matter." },
+    { term: "Gross primary productivity", definition: "The total rate of energy conversion by producers, before their own respiration is subtracted." },
+    { term: "Net primary productivity", definition: "The energy remaining after producers' own respiration is subtracted from gross primary productivity." },
+    { term: "Keeling Curve", definition: "The long-term record of atmospheric CO2 concentration measured at Mauna Loa since 1958." },
+    { term: "Chemoautotroph", definition: "An organism that synthesises organic molecules using energy from the oxidation of inorganic compounds." }
+  ],
+
+  "A4.2": [
+    { term: "Biodiversity", definition: "The variety of life in all its forms, levels, and combinations." },
+    { term: "Genetic diversity", definition: "The range of genetic variation present within a species or population." },
+    { term: "IUCN Red List", definition: "A global inventory tracking the conservation status of species." },
+    { term: "In situ conservation", definition: "Conservation of species within their natural habitat." },
+    { term: "Ex situ conservation", definition: "Conservation of species outside their natural habitat, e.g. captive breeding or seed banks." }
+  ],
+  "D3.3": [
+    { term: "Homeostasis", definition: "The maintenance of a stable internal environment despite external fluctuations." },
+    { term: "Negative feedback", definition: "A mechanism where a deviation from the set point triggers a response that counteracts it." },
+    { term: "Insulin", definition: "A pancreatic hormone that lowers blood glucose by stimulating its uptake and storage as glycogen." },
+    { term: "Glucagon", definition: "A pancreatic hormone that raises blood glucose by stimulating glycogen breakdown." },
+    { term: "Vasodilation", definition: "Widening of blood vessels near the skin, increasing heat loss." },
+    { term: "Vasoconstriction", definition: "Narrowing of blood vessels near the skin, reducing heat loss." },
+    { term: "Glomerulus", definition: "A knot of capillaries in the kidney where blood pressure forces fluid into the Bowman's capsule." },
+    { term: "Osmoregulation", definition: "The regulation of the water and solute balance of body fluids." }
+  ],
+
+  "B3.1": [
+    { term: "Gas exchange", definition: "The diffusion of respiratory gases across a specialised exchange surface." },
+    { term: "Ventilation", definition: "The physical movement of air (or water) across a gas-exchange surface." },
+    { term: "Alveoli", definition: "Tiny air sacs in the lungs where gas exchange occurs, surrounded by capillaries." },
+    { term: "Stomata", definition: "Pores in a leaf's epidermis, flanked by guard cells, that regulate gas exchange and water loss." },
+    { term: "Transpiration", definition: "The loss of water vapour from a plant, mainly through open stomata." },
+    { term: "Bohr shift", definition: "The rightward shift of the oxygen dissociation curve at higher CO2 concentration, lowering haemoglobin's oxygen affinity." },
+    { term: "Oxygen dissociation curve", definition: "A graph of haemoglobin oxygen saturation against oxygen partial pressure." }
+  ],
+
+  "B3.2": [
+    { term: "Capillary", definition: "The smallest blood vessel, with a thin wall of a single cell layer, where exchange with tissue occurs." },
+    { term: "Tissue fluid", definition: "Fluid forced out of capillaries by blood pressure, bathing the body's cells." },
+    { term: "Lymph", definition: "Excess tissue fluid drained into lymph vessels and returned to the bloodstream." },
+    { term: "Single circulation", definition: "A circulatory system where blood passes through the heart once per full circuit of the body." },
+    { term: "Double circulation", definition: "A circulatory system where blood passes through the heart twice per circuit, once to the lungs and once to the body." },
+    { term: "Xylem", definition: "Plant vascular tissue formed from dead, lignified cells that transports water from roots to leaves." }
+  ],
+
+  "B3.3": [
+    { term: "Sarcomere", definition: "The repeating contractile unit of a myofibril, containing overlapping actin and myosin filaments." },
+    { term: "Sliding filament model", definition: "The model in which actin and myosin filaments slide past each other to shorten a sarcomere." },
+    { term: "Titin", definition: "An elastic protein in the sarcomere that aids recoil and prevents overstretching." },
+    { term: "Antagonistic muscles", definition: "Muscle pairs that work in opposition, since muscle can only actively contract, not extend." },
+    { term: "Motor unit", definition: "A motor neuron together with all the muscle fibres it controls." },
+    { term: "Synovial joint", definition: "A joint with a fluid-filled capsule allowing smooth, lubricated movement between bones." }
+  ],
+
+  "C2.2": [
+    { term: "Resting potential", definition: "The stable electrical potential difference across a neuron's membrane at rest, around -70 mV." },
+    { term: "Action potential", definition: "A temporary, self-propagating reversal of membrane potential that travels along a nerve fibre." },
+    { term: "Depolarisation", definition: "The rapid change in membrane potential from negative to positive during an action potential." },
+    { term: "Synapse", definition: "A junction between two neurons, or a neuron and an effector, across which signals pass in one direction." },
+    { term: "Neurotransmitter", definition: "A chemical released from a presynaptic neuron that signals across a synapse." },
+    { term: "Saltatory conduction", definition: "The jumping of an action potential between nodes of Ranvier along a myelinated axon." },
+    { term: "Summation", definition: "The combined effect of multiple synaptic inputs on whether a postsynaptic neuron fires." }
+  ],
+
+  "C2.1": [
+    { term: "Ligand", definition: "A signalling chemical that binds to a specific site on a receptor." },
+    { term: "Signal transduction", definition: "The sequence of steps converting receptor binding into a specific cellular response." },
+    { term: "Quorum sensing", definition: "Chemical signalling bacteria use to detect and respond to their own population density." },
+    { term: "Autocrine signalling", definition: "Signalling where a cell releases a ligand that acts on itself." },
+    { term: "Paracrine signalling", definition: "Signalling where a ligand diffuses a short distance to affect nearby cells." },
+    { term: "Endocrine signalling", definition: "Signalling where a hormone travels through the bloodstream to distant target cells." },
+    { term: "Transmembrane receptor", definition: "A receptor spanning the plasma membrane, binding ligands that cannot cross it directly." }
+  ],
+
+  "C3.2": [
+    { term: "Pathogen", definition: "Any agent capable of causing disease in another organism." },
+    { term: "Lysozyme", definition: "An enzyme in mucus that damages bacterial cell walls." },
+    { term: "Phagocyte", definition: "A white blood cell that engulfs and digests pathogens as part of innate immunity." },
+    { term: "Antigen", definition: "A molecule the immune system identifies as foreign, triggering an immune response." },
+    { term: "Antibody", definition: "A protein that binds specifically to an antigen, marking or neutralising a pathogen." },
+    { term: "Memory cell", definition: "A long-lived lymphocyte that enables a faster secondary immune response." },
+    { term: "Herd immunity", definition: "Population-level protection arising when enough individuals are immune to stop pathogen transmission." }
+  ],
+
+  "A2.3": [
+    { term: "Capsid", definition: "The protein shell that encloses a virus's genetic material." },
+    { term: "Lytic cycle", definition: "A viral replication cycle that destroys the host cell to release new viruses." },
+    { term: "Lysogenic cycle", definition: "A viral replication cycle where viral DNA integrates into the host genome and stays dormant." },
+    { term: "Prophage", definition: "Viral genetic material integrated into a host bacterium's genome during the lysogenic cycle." },
+    { term: "Retrovirus", definition: "An RNA virus that uses reverse transcriptase to convert its genome into DNA." }
+  ],
+
+  "C3.1": [
+    { term: "Emergent property", definition: "A characteristic that arises from the interaction of parts, not present in any part alone." },
+    { term: "Reflex arc", definition: "A rapid, involuntary response pathway that can be coordinated at the spinal cord alone." },
+    { term: "Cerebellum", definition: "A brain structure that coordinates skeletal muscle contraction and balance." },
+    { term: "Melatonin", definition: "A hormone that helps regulate circadian rhythms, secreted in response to darkness." },
+    { term: "Auxin", definition: "A plant hormone that stimulates cell elongation and mediates tropic responses." },
+    { term: "Phototropism", definition: "Directional growth of a plant in response to light." },
+    { term: "Auxin efflux carrier", definition: "A membrane transport protein (PIN protein) that directionally pumps auxin out of cells." }
+  ],
 
 };
 
@@ -358,5 +502,20 @@ const FUN_FACTS = {
   "A3.1": "Humans and chimpanzees have different chromosome numbers, 46 versus 48, because two ancestral ape chromosomes fused end to end at some point in human evolutionary history to form human chromosome 2.",
   "B4.1": "Cacti in the Americas and many euphorbias in Africa look strikingly alike despite having no close common ancestor, a textbook case of convergent evolution driven by nearly identical desert selection pressures.",
   "D4.1": "Peacock tails, a favourite example of sexual selection, are metabolically costly and make their owners more visible to predators, yet persist because they measurably improve mating success.",
-  "A4.1": "Darwin's finches on the Galápagos are thought to have radiated from a single ancestral species into more than a dozen, each with a beak shaped for a different food source."
+  "A4.1": "Darwin's finches on the Galápagos are thought to have radiated from a single ancestral species into more than a dozen, each with a beak shaped for a different food source.",
+  "B4.2": "Euglena, a single-celled organism, can switch between photosynthesising like a plant and hunting food like an animal, depending on whether light is available.",
+  "A3.2": "Carl Woese's rRNA comparisons in the 1970s revealed that some 'bacteria' were genetically about as different from true bacteria as bacteria are from humans, leading to the creation of an entirely new domain of life, Archaea.",
+  "D4.2": "Some plastic items can take over 500 years to break down in the environment, and even then they fragment into microplastics rather than truly disappearing.",
+  "D4.3": "The Keeling Curve, running continuously since 1958, both zig-zags with the seasons as northern hemisphere plants breathe in and out each year, and climbs steadily upward, a live record of humanity's effect on the atmosphere.",
+  "C4.2": "Only around 10% of the energy at one trophic level typically makes it to the next, which is part of why food chains rarely have more than four or five links.",
+  "A4.2": "The IUCN Red List currently assesses the extinction risk of well over 150,000 species, and that's still only a fraction of Earth's estimated total.",
+  "D3.3": "A healthy kidney filters your entire blood volume roughly 40 times a day, reabsorbing over 99% of the water it initially filters.",
+  "B3.1": "Human lungs contain around 300-500 million alveoli, which together give an internal gas-exchange surface roughly the size of a tennis court.",
+  "B3.2": "An adult human's blood vessels, laid end to end, would stretch roughly 100,000 kilometres, about two and a half times around the Earth.",
+  "B3.3": "A single muscle contraction involves millions of cross-bridge cycles happening simultaneously across countless sarcomeres, all within a fraction of a second.",
+  "C2.2": "A nerve impulse can travel at speeds up to about 120 metres per second in the fastest myelinated human axons, nearly 250 mph.",
+  "C2.1": "Bacteria 'talking' to each other via quorum sensing was only properly recognised in the 1970s, discovered through the glowing bacteria that colonise the light organs of certain squid.",
+  "C3.2": "A single sneeze can launch thousands of droplets containing pathogens at speeds of over 150 km/h.",
+  "A2.3": "Bacteriophages, viruses that infect bacteria, are thought to be the most abundant biological entities on Earth, with an estimated 10^31 of them in existence.",
+  "C3.1": "Plants have no nervous system at all, yet a shoot can reorient itself toward light within hours, purely through the redistribution of a single hormone, auxin."
 };
