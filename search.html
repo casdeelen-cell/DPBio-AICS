@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search | DP Biology Notes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-row">
+    <div class="header-title-group">
+      <img src="images/aics-logo.png" alt="Amsterdam International Community School" class="school-logo">
+      <div>
+        <div class="site-title"><a href="index.html">DP Biology</a></div>
+        <a href="index.html" class="back-link">&larr; back to all topics</a>
+      </div>
+    </div>
+    <nav class="header-nav">
+      <a href="terms.html" class="back-link">Command terms &rarr;</a>
+      <a href="checklist.html" class="back-link">Checklist &rarr;</a>
+      <a href="formulas.html" class="back-link">Formulas &amp; stats &rarr;</a>
+    </nav>
+  </div>
+</header>
+
+<div class="shell">
+
+  <div class="topic-header">
+    <div class="eyebrow">Reference</div>
+    <h1>Search everything</h1>
+    <p class="page-intro">One search box across your notes, word bank, practice questions, and Paper 2 sets, so you don't need to remember which topic something lives under.</p>
+  </div>
+
+  <input type="text" class="search-box" id="global-search" placeholder="Search for a term, keyword, or concept, e.g. osmosis or nervous system...">
+
+  <div id="results-container"></div>
+
+</div>
+
+<footer class="site-footer">
+  Built for personal revision. Notes, links and quizzes update by editing files in /js, see the README.
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/content.js"></script>
+<script src="js/wordbank.js"></script>
+<script src="js/questionbank.js"></script>
+<script src="js/paper2.js"></script>
+<script src="js/commandterms.js"></script>
+<script src="js/app.js"></script>
+<script>
+
+/* Build a flat search index once on load. Each entry:
+   { type, code, topicTitle, heading, snippetSource, link } */
+function buildSearchIndex() {
+  const index = [];
+
+  // Topic titles themselves
+  Object.keys(TOPIC_TITLES).forEach(code => {
+    index.push({
+      type: "Topic",
+      code: code,
+      topicTitle: TOPIC_TITLES[code],
+      heading: code + " \u00b7 " + TOPIC_TITLES[code],
+      text: code + " " + TOPIC_TITLES[code],
+      link: "topic.html?code=" + code
+    });
+  });
+
+  // Notes sections
+  if (typeof CONTENT !== "undefined") {
+    Object.keys(CONTENT).forEach(code => {
+      CONTENT[code].forEach(section => {
+        index.push({
+          type: "Notes",
+          code: code,
+          topicTitle: topicTitle(code),
+          heading: (section.label ? section.label + " \u00b7 " : "") + section.heading,
+          text: section.heading + " " + (section.text || "").replace(/\*\*/g, ""),
+          link: "topic.html?code=" + code + (section.label ? "#" + section.label : "")
+        });
+      });
+    });
+  }
+
+  // Word bank terms
+  if (typeof WORDBANK !== "undefined") {
+    Object.keys(WORDBANK).forEach(code => {
+      WORDBANK[code].forEach(entry => {
+        index.push({
+          type: "Word bank",
+          code: code,
+          topicTitle: topicTitle(code),
+          heading: entry.term,
+          text: entry.term + " " + entry.definition,
+          link: "topic.html?code=" + code
+        });
+      });
+    });
+  }
+
+  // Practice questions (MCQ)
+  if (typeof QUESTIONBANK !== "undefined") {
+    Object.keys(QUESTIONBANK).forEach(code => {
+      QUESTIONBANK[code].forEach(q => {
+        index.push({
+          type: "Practice question",
+          code: code,
+          topicTitle: topicTitle(code),
+          heading: q.q.length > 90 ? q.q.slice(0, 90) + "\u2026" : q.q,
+          text: q.q + " " + q.options.join(" ") + " " + q.explanation,
+          link: "topic.html?code=" + code + "#practice-questions-section"
+        });
+      });
+    });
+  }
+
+  // Paper 2 sets
+  if (typeof PAPER2 !== "undefined") {
+    Object.keys(PAPER2).forEach(code => {
+      PAPER2[code].forEach(set => {
+        const partsText = set.parts.map(p => p.prompt + " " + p.guidance).join(" ");
+        index.push({
+          type: "Paper 2",
+          code: code,
+          topicTitle: topicTitle(code),
+          heading: set.context ? (set.context.length > 90 ? set.context.slice(0, 90) + "\u2026" : set.context) : set.parts[0].prompt.slice(0, 90),
+          text: (set.context || "") + " " + partsText,
+          link: "topic.html?code=" + code + "#paper2-section"
+        });
+      });
+    });
+  }
+
+  // Command terms
+  if (typeof COMMAND_TERMS !== "undefined") {
+    COMMAND_TERMS.forEach(tier => {
+      tier.terms.forEach(t => {
+        index.push({
+          type: "Command term",
+          code: null,
+          topicTitle: null,
+          heading: t.term,
+          text: t.term + " " + t.official + " " + t.plain,
+          link: "terms.html"
+        });
+      });
+    });
+  }
+
+  return index;
+}
+
+const SEARCH_INDEX = buildSearchIndex();
+
+function snippetAround(text, q, radius) {
+  const lower = text.toLowerCase();
+  const idx = lower.indexOf(q.toLowerCase());
+  if (idx === -1) return text.slice(0, radius * 2) + (text.length > radius * 2 ? "\u2026" : "");
+  const start = Math.max(0, idx - radius);
+  const end = Math.min(text.length, idx + q.length + radius);
+  let snippet = text.slice(start, end);
+  if (start > 0) snippet = "\u2026" + snippet;
+  if (end < text.length) snippet = snippet + "\u2026";
+  return snippet;
+}
+
+function highlightMatch(text, q) {
+  if (!q) return text;
+  const idx = text.toLowerCase().indexOf(q.toLowerCase());
+  if (idx === -1) return text;
+  return text.slice(0, idx) + "<mark>" + text.slice(idx, idx + q.length) + "</mark>" + text.slice(idx + q.length);
+}
+
+const TYPE_ORDER = ["Topic", "Notes", "Word bank", "Practice question", "Paper 2", "Command term"];
+
+function renderResults(query) {
+  const container = document.getElementById("results-container");
+  container.innerHTML = "";
+  const q = (query || "").trim();
+  if (q.length < 2) {
+    container.innerHTML = '<p class="no-resources">Type at least two characters to search.</p>';
+    return;
+  }
+
+  const qLower = q.toLowerCase();
+  const matches = SEARCH_INDEX.filter(entry => entry.text.toLowerCase().includes(qLower));
+
+  if (!matches.length) {
+    container.innerHTML = '<p class="no-resources">No results for "' + q + '".</p>';
+    return;
+  }
+
+  const grouped = {};
+  matches.forEach(m => {
+    grouped[m.type] = grouped[m.type] || [];
+    grouped[m.type].push(m);
+  });
+
+  const MAX_PER_TYPE = 12;
+
+  TYPE_ORDER.forEach(type => {
+    const group = grouped[type];
+    if (!group || !group.length) return;
+
+    const block = document.createElement("div");
+    block.className = "search-group";
+
+    const heading = document.createElement("div");
+    heading.className = "search-group-heading";
+    heading.textContent = type + " (" + group.length + (group.length > MAX_PER_TYPE ? ", showing " + MAX_PER_TYPE : "") + ")";
+    block.appendChild(heading);
+
+    group.slice(0, MAX_PER_TYPE).forEach(entry => {
+      const item = document.createElement("a");
+      item.className = "search-result";
+      item.href = entry.link;
+
+      const topLine = document.createElement("div");
+      topLine.className = "search-result-top";
+      topLine.innerHTML = highlightMatch(entry.heading, q) + (entry.code ? '<span class="search-result-code">' + entry.code + (entry.topicTitle ? " \u00b7 " + entry.topicTitle : "") + '</span>' : "");
+      item.appendChild(topLine);
+
+      const snippet = document.createElement("div");
+      snippet.className = "search-result-snippet";
+      snippet.innerHTML = highlightMatch(snippetAround(entry.text, q, 70), q);
+      item.appendChild(snippet);
+
+      block.appendChild(item);
+    });
+
+    container.appendChild(block);
+  });
+}
+
+const searchBox = document.getElementById("global-search");
+searchBox.addEventListener("input", () => renderResults(searchBox.value));
+
+// Support ?q= in the URL so other pages can link straight to a search
+const params = new URLSearchParams(window.location.search);
+const initialQuery = params.get("q") || "";
+if (initialQuery) {
+  searchBox.value = initialQuery;
+  renderResults(initialQuery);
+} else {
+  renderResults("");
+}
+
+</script>
+</body>
+</html>

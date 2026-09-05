@@ -19,7 +19,12 @@
         <a href="index.html" class="back-link">&larr; back to all topics</a>
       </div>
     </div>
-    <a href="formulas.html" class="back-link">Formulas &amp; stats &rarr;</a>
+    <nav class="header-nav">
+      <a href="terms.html" class="back-link">Command terms &rarr;</a>
+      <a href="search.html" class="back-link">Search &rarr;</a>
+      <a href="checklist.html" class="back-link">Checklist &rarr;</a>
+      <a href="formulas.html" class="back-link">Formulas &amp; stats &rarr;</a>
+    </nav>
   </div>
 </header>
 
@@ -171,6 +176,7 @@ function renderContentSections(root, code) {
   sections.forEach(section => {
     const block = document.createElement("div");
     block.className = "section-block";
+    if (section.label) block.id = section.label;
 
     const head = document.createElement("div");
     head.className = "section-head";
@@ -238,6 +244,7 @@ function renderTopicPage() {
 
   const quizSection = document.createElement("div");
   quizSection.className = "quiz-section theme-quick";
+  quizSection.id = "quick-quiz-section";
   quizSection.innerHTML = "<h2>Quick quiz</h2>";
   const quizContainer = document.createElement("div");
   quizSection.appendChild(quizContainer);
@@ -245,6 +252,7 @@ function renderTopicPage() {
 
   const qbSection = document.createElement("div");
   qbSection.className = "quiz-section theme-qb";
+  qbSection.id = "practice-questions-section";
   qbSection.innerHTML = "<h2>Practice questions</h2><p class=\"section-subnote\">Multiple choice, Paper 1 style.</p>";
   const qbContainer = document.createElement("div");
   qbSection.appendChild(qbContainer);
@@ -252,6 +260,7 @@ function renderTopicPage() {
 
   const p2Section = document.createElement("div");
   p2Section.className = "quiz-section theme-p2";
+  p2Section.id = "paper2-section";
   p2Section.innerHTML = "<h2>Paper 2 &amp; extended response</h2><p class=\"section-subnote\">Longer, data-based and free-response questions. Write your own answer, then reveal the guidance.</p>";
   const p2Container = document.createElement("div");
   p2Section.appendChild(p2Container);
@@ -283,6 +292,16 @@ function renderTopicPage() {
 renderTopicPage();
 enableTermTooltipTaps(document.getElementById("topic-content"));
 if (getCodeFromURL()) setLastVisited(getCodeFromURL());
+
+if (window.location.hash) {
+  const target = document.getElementById(window.location.hash.slice(1));
+  if (target) {
+    setTimeout(() => {
+      target.scrollIntoView({ behavior: "smooth", block: "center" });
+      target.classList.add("search-highlight");
+    }, 80);
+  }
+}
 
 </script>
 </body>

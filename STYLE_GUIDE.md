@@ -136,23 +136,62 @@ throughout this project. Three Paper 2 sets (A2.1, D3.1, D4.2) are
 original questions written in the same style, since the source docx
 didn't cover those topics in extended-response format.
 
-## Design and tone
+## Reference pages: command terms, search, checklist
 
-- Visual style: warm paper background, forest green as primary accent,
-  rust/ochre for HL badges and the Questionbank section, moss green for
-  the Paper 2 practice section, Fraunces (serif) for headings, Inter
-  (sans) for body text. Lab-notebook feel, not generic SaaS.
-- **No emoji anywhere on the site.** This was explicitly requested,
-  don't reintroduce them (streak counter, buttons, anything).
-- Quick quiz (`quizzes.js`), Practice questions (`questionbank.js`),
-  and Paper 2 practice (`paper2.js`)
-  are three separate, visually distinct sections. Don't merge them.
+Three cross-cutting pages, separate from the per-topic content, added
+in the session after the Paper 2 build. Each is linked from a
+`.header-nav` row in the header, present on every page (index, topic,
+formulas, and the three pages themselves).
+
+**`terms.html` + `js/commandterms.js`** — the full IB command term
+glossary (official definitions, sourced from the IB's own command
+term list, not paraphrased) plus a plain-English translation for each,
+grouped into the three official tiers (knowledge/comprehension,
+application/analysis, synthesis/evaluation). Also includes a
+"commonly confused pairs" section (describe vs explain, compare vs
+contrast vs distinguish, discuss vs evaluate vs to what extent, state
+vs outline vs list, draw vs sketch vs label vs annotate) — this content
+came directly from the user, not written by Claude, and should be
+preserved as-is if this page is ever revised. Has a live filter box
+(`COMMAND_TERMS` array, filtered client-side, no backend). If the IB
+revises its command term list, update `js/commandterms.js` directly —
+same file format note at the top of that file explains the shape.
+
+**`search.html`** — a single search box that flattens `CONTENT`,
+`WORDBANK`, `QUESTIONBANK`, `PAPER2`, and `COMMAND_TERMS` into one
+client-side index (`buildSearchIndex()`, runs once on page load, no
+persistence needed since the underlying data files rarely change size
+enough to matter). Results are grouped by type with a highlighted
+match snippet. Notes results deep-link to the exact syllabus statement
+using the section's `label` as an anchor ID (`topic.html?code=X#A1.1.1`
+style) — this only works because `renderContentSections()` in
+`topic.html` sets `block.id = section.label`, so if that ever gets
+refactored, check the anchor linking still works. Practice question
+and Paper 2 results link to the relevant section on the topic page
+(`#practice-questions-section` / `#paper2-section`) rather than a
+specific question, since both of those render one question at a time
+rather than a scrollable list.
+
+**`checklist.html`** — a flat tick-list of all 332 individual syllabus
+statements (`CONTENT[code][i].label` + `.heading`) across all four
+units, deliberately separate from the existing per-topic
+understanding tracker (`STORAGE_KEY = "bioProgressV1"` in `app.js`).
+The distinction matters: the existing tracker is about how well a
+topic is understood; this one is a basic coverage checklist, "have I
+even been through this specific statement". Uses its own localStorage
+key (`bioChecklistV1`) so the two never collide. Has filters to hide
+already-checked items and/or HL-only content, plus a reset button.
+If a topic has no `CONTENT` entry yet, its statements simply don't
+appear here (same "not yet written" convention as the rest of the
+site) rather than showing a placeholder row.
 
 ## Progress tracking
 
-Understanding-status tracking (`localStorage`) is per-device, per-
-browser, genuinely private, and does not sync anywhere. This is a known,
-accepted limitation, not a bug to fix unless asked.
+Understanding-status tracking (`localStorage`, key `bioProgressV1`) is
+per-device, per-browser, genuinely private, and does not sync anywhere.
+This is a known, accepted limitation, not a bug to fix unless asked.
+The syllabus checklist (`bioChecklistV1`, see above) is a separate,
+independent localStorage key with the same per-device limitation.
 
 ## Current status (update this section as you go)
 
@@ -170,48 +209,70 @@ Unit 3 (7 topics): B4.2, A3.2, D4.2, D4.3, C4.1, C4.2, A4.2.
 Unit 4 (10 topics): B2.1, D3.3, C3.1, B3.3, B3.1, B3.2, C2.2, C2.1,
 C3.2, A2.3.
 
-This session: did Unit 4 from scratch, **rewrote B2.1 and C4.1** (both
-had survived from an older, pre-statement-numbering style with generic
-"1, 2, 3" labels — now B2.1.1-B2.1.11 and C4.1.1-C4.1.22, matching the
-real IB guide), added C2.1 to `HL_ONLY_TOPICS` (it's entirely HL-only,
-like D2.2 and A3.2), found and added the previously-missing A2.1 video,
-and **filled in every remaining quick quiz gap across the whole site**
-(13 Unit 1 topics had none, plus all of Units 3-4's new topics).
-
 Slides and formatives are still blank across most of Units 2-4, still
 waiting on links from the user.
 
-**This session (Word docx import, Paper 2 feature build):** processed
-three Word docx exports (270 real exam questions total: 210 Paper 1A
-MCQ, 24 Paper 1B, 36 Paper 2) into the site. Questionbank (`js/
-questionbank.js`) is now complete and non-empty for **every one of the
-40 topics** — the three that had zero questions before this session
-(B4.2, C3.1, D2.2) are now covered — for a total of 252 questions, up
-from 94. Built a brand-new **Paper 2 practice section**
-(`js/paper2.js` + `buildPaper2()` in `app.js` + a new section in
+**Session before last (Word docx import, Paper 2 feature build):**
+processed three Word docx exports (270 real exam questions total: 210
+Paper 1A MCQ, 24 Paper 1B, 36 Paper 2) into the site. Questionbank
+(`js/questionbank.js`) is complete and non-empty for **every one of
+the 40 topics** — the three that had zero questions before that
+session (B4.2, C3.1, D2.2) are now covered — for a total of 252
+questions, up from 94. Built a **Paper 2 practice section**
+(`js/paper2.js` + `buildPaper2()` in `app.js` + a section in
 `topic.html`, styled with the `--moss` accent) for the extended-response
 Paper 1B/2 material that doesn't fit the MCQ format: 41 question sets
 (106 sub-parts total) across all 40 topics, self-marked with a
 "Show guidance" reveal per part rather than multiple-choice options.
-See the "Paper 2 practice" section above for the full file format and
-rendering details.
+
+**This session (reference pages):** built three new cross-cutting
+pages — `terms.html` (command term glossary with official IB
+definitions + plain-English translations + commonly-confused-pairs
+callouts), `search.html` (cross-topic search across notes, word bank,
+both practice sections, and the command term glossary), and
+`checklist.html` (a flat tick-list of all 332 syllabus statements,
+separate from the per-topic understanding tracker). Added a shared
+`.header-nav` to every page's header linking between all of these.
+Added anchor IDs to each notes section (`block.id = section.label` in
+`topic.html`) so search results can deep-link to the exact statement,
+with a brief highlight-fade animation on arrival. See "Reference
+pages" section above for full details on each.
+
+**Ideas raised but not yet built, worth considering for a future
+session:** a timed mixed mock-exam mode (random MCQs and/or a couple
+of Paper 2 sets back-to-back, single visible timer, closer to real
+exam conditions than the current topic-by-topic drilling); a distinct
+"common mistakes" callout box type on topic pages (separate from the
+existing exam-tip box) for well-known IB gotchas at the content level,
+not just the command-term level; an HL/SL filter toggle on the
+homepage topic list itself (the checklist page already has one, the
+homepage doesn't).
 
 Open items carried over: the Miller-Urey diagram in Unit 1 is a
 German-labelled Wikimedia image (visually clear either way, but worth
-swapping for an English version if a cleaner one turns up). The
-induced-fit enzyme diagram was fixed this session (now English).
+swapping for an English version if a cleaner one turns up). A handful
+of source MCQs (from the docx import session) presented their answer
+options only as an image rather than as text; since the image content
+couldn't be reliably transcribed, these were replaced with newly
+written questions testing the same concept rather than attempting to
+guess the original options — worth a spot check against the original
+docx if perfect fidelity to those specific questions matters. The
+Paper 2 section currently shows one straight list of parts per
+question set with no partial-credit tracking or score total; a future
+pass could add a lightweight self-assessment (e.g. "did you get this
+part roughly right?" per part) if that would be useful.
 
-Open items from this session: a handful of source MCQs presented their
-answer options only as an image (a table or diagram) rather than as
-text; since the image content couldn't be reliably transcribed, these
-were replaced with newly written questions testing the same concept
-rather than attempting to guess the original options — worth a spot
-check against the original PDFs if perfect fidelity to those specific
-questions matters. The Paper 2 section currently shows one straight
-list of parts per question set with no partial-credit tracking or
-score total; a future pass could add a lightweight self-assessment
-(e.g. "did you get this part roughly right?" per part) if that would
-be useful.
+## Design and tone
+
+- Visual style: warm paper background, forest green as primary accent,
+  rust/ochre for HL badges and the Questionbank section, moss green for
+  the Paper 2 practice section, Fraunces (serif) for headings, Inter
+  (sans) for body text. Lab-notebook feel, not generic SaaS.
+- **No emoji anywhere on the site.** This was explicitly requested,
+  don't reintroduce them (streak counter, buttons, anything).
+- Quick quiz (`quizzes.js`), Practice questions (`questionbank.js`),
+  and Paper 2 practice (`paper2.js`)
+  are three separate, visually distinct sections. Don't merge them.
 
 ## Images and diagrams
 

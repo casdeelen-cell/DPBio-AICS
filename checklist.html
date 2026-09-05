@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Syllabus Checklist | DP Biology Notes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-row">
+    <div class="header-title-group">
+      <img src="images/aics-logo.png" alt="Amsterdam International Community School" class="school-logo">
+      <div>
+        <div class="site-title"><a href="index.html">DP Biology</a></div>
+        <a href="index.html" class="back-link">&larr; back to all topics</a>
+      </div>
+    </div>
+    <nav class="header-nav">
+      <a href="terms.html" class="back-link">Command terms &rarr;</a>
+      <a href="search.html" class="back-link">Search &rarr;</a>
+      <a href="formulas.html" class="back-link">Formulas &amp; stats &rarr;</a>
+    </nav>
+  </div>
+</header>
+
+<div class="shell">
+
+  <div class="topic-header">
+    <div class="eyebrow">Reference</div>
+    <h1>Syllabus checklist</h1>
+    <p class="page-intro">A tick-list of every individual syllabus statement across all four units, separate from the "understood / learning / need help" tracker on each topic page. That tracker is about how well you know a topic; this is about basic coverage, have you actually been through this exact statement at all. Saved on this device only, same as the rest of your progress.</p>
+  </div>
+
+  <div class="checklist-summary" id="checklist-summary"></div>
+
+  <div class="checklist-controls">
+    <label class="checklist-filter">
+      <input type="checkbox" id="hide-checked-toggle">
+      Hide statements I've already checked off
+    </label>
+    <label class="checklist-filter">
+      <input type="checkbox" id="hide-hl-toggle">
+      Hide HL-only content
+    </label>
+    <button type="button" class="p2-nav-btn" id="reset-checklist-btn">Reset all</button>
+  </div>
+
+  <div id="checklist-container"></div>
+
+</div>
+
+<footer class="site-footer">
+  Built for personal revision. Notes, links and quizzes update by editing files in /js, see the README.
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/content.js"></script>
+<script src="js/app.js"></script>
+<script>
+
+const CHECKLIST_KEY = "bioChecklistV1";
+
+function loadChecklist() {
+  try {
+    return JSON.parse(localStorage.getItem(CHECKLIST_KEY)) || {};
+  } catch (e) {
+    return {};
+  }
+}
+
+function saveChecklist(data) {
+  localStorage.setItem(CHECKLIST_KEY, JSON.stringify(data));
+}
+
+let checklistData = loadChecklist();
+
+function isChecked(code, label) {
+  return !!(checklistData[code] && checklistData[code][label]);
+}
+
+function setChecked(code, label, value) {
+  checklistData[code] = checklistData[code] || {};
+  checklistData[code][label] = value;
+  saveChecklist(checklistData);
+}
+
+function allStatements() {
+  const list = [];
+  UNITS.forEach(unit => {
+    unit.topics.forEach(code => {
+      const sections = (typeof CONTENT !== "undefined" && CONTENT[code]) || [];
+      sections.forEach(section => {
+        list.push({
+          unit: unit.name,
+          code: code,
+          label: section.label || section.heading,
+          heading: section.heading,
+          level: section.level || (isHLTopic(code) ? "HL" : "SL")
+        });
+      });
+    });
+  });
+  return list;
+}
+
+const STATEMENTS = allStatements();
+
+function renderSummary() {
+  const summary = document.getElementById("checklist-summary");
+  const total = STATEMENTS.length;
+  const checkedCount = STATEMENTS.filter(s => isChecked(s.code, s.label)).length;
+  const pct = total ? Math.round((checkedCount / total) * 100) : 0;
+  summary.innerHTML = `
+    <div class="checklist-summary-numbers"><strong>${checkedCount}</strong> of <strong>${total}</strong> statements checked off (${pct}%)</div>
+    <div class="checklist-progress-track"><div class="checklist-progress-fill" style="width:${pct}%"></div></div>
+  `;
+}
+
+function renderChecklist() {
+  const container = document.getElementById("checklist-container");
+  container.innerHTML = "";
+  const hideChecked = document.getElementById("hide-checked-toggle").checked;
+  const hideHL = document.getElementById("hide-hl-toggle").checked;
+
+  UNITS.forEach(unit => {
+    const unitStatements = STATEMENTS.filter(s => s.unit === unit.name);
+    const visibleStatements = unitStatements.filter(s => {
+      if (hideHL && s.level === "HL") return false;
+      if (hideChecked && isChecked(s.code, s.label)) return false;
+      return true;
+    });
+    if (!visibleStatements.length) return;
+
+    const block = document.createElement("div");
+    block.className = "unit-block";
+
+    const unitChecked = unitStatements.filter(s => isChecked(s.code, s.label)).length;
+    const heading = document.createElement("div");
+    heading.className = "unit-heading";
+    heading.innerHTML = `<h2>${unit.name}</h2><div class="rule"></div><span class="checklist-unit-count">${unitChecked}/${unitStatements.length}</span>`;
+    block.appendChild(heading);
+
+    // group by topic within the unit
+    const byTopic = {};
+    visibleStatements.forEach(s => {
+      byTopic[s.code] = byTopic[s.code] || [];
+      byTopic[s.code].push(s);
+    });
+
+    unit.topics.forEach(code => {
+      const stmts = byTopic[code];
+      if (!stmts || !stmts.length) return;
+
+      const topicBlock = document.createElement("div");
+      topicBlock.className = "checklist-topic-block";
+
+      const topicHead = document.createElement("div");
+      topicHead.className = "checklist-topic-head";
+      topicHead.innerHTML = `<a href="topic.html?code=${code}">${code} &middot; ${topicTitle(code)}</a>${isHLTopic(code) ? ' <span class="hl-badge">HL</span>' : ""}`;
+      topicBlock.appendChild(topicHead);
+
+      stmts.forEach(s => {
+        const row = document.createElement("label");
+        row.className = "checklist-row";
+        const cb = document.createElement("input");
+        cb.type = "checkbox";
+        cb.checked = isChecked(s.code, s.label);
+        cb.addEventListener("change", () => {
+          setChecked(s.code, s.label, cb.checked);
+          renderSummary();
+          if (hideChecked) renderChecklist();
+        });
+        row.appendChild(cb);
+        const text = document.createElement("span");
+        text.innerHTML = (s.label ? `<span class="checklist-label">${s.label}</span> ` : "") + s.heading +
+          (s.level === "HL" ? ' <span class="hl-badge small">HL</span>' : "");
+        row.appendChild(text);
+        topicBlock.appendChild(row);
+      });
+
+      block.appendChild(topicBlock);
+    });
+
+    container.appendChild(block);
+  });
+
+  if (!container.children.length) {
+    container.innerHTML = '<p class="no-resources">Nothing to show, adjust the filters above.</p>';
+  }
+}
+
+document.getElementById("hide-checked-toggle").addEventListener("change", renderChecklist);
+document.getElementById("hide-hl-toggle").addEventListener("change", renderChecklist);
+document.getElementById("reset-checklist-btn").addEventListener("click", () => {
+  if (!confirm("Clear every checked statement? This can't be undone.")) return;
+  checklistData = {};
+  saveChecklist(checklistData);
+  renderSummary();
+  renderChecklist();
+});
+
+renderSummary();
+renderChecklist();
+
+</script>
+</body>
+</html>

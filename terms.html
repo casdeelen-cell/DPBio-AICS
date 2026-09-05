@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Command Terms | DP Biology Notes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-row">
+    <div class="header-title-group">
+      <img src="images/aics-logo.png" alt="Amsterdam International Community School" class="school-logo">
+      <div>
+        <div class="site-title"><a href="index.html">DP Biology</a></div>
+        <a href="index.html" class="back-link">&larr; back to all topics</a>
+      </div>
+    </div>
+    <nav class="header-nav">
+      <a href="search.html" class="back-link">Search &rarr;</a>
+      <a href="checklist.html" class="back-link">Checklist &rarr;</a>
+      <a href="formulas.html" class="back-link">Formulas &amp; stats &rarr;</a>
+    </nav>
+  </div>
+</header>
+
+<div class="shell">
+
+  <div class="topic-header">
+    <div class="eyebrow">Reference</div>
+    <h1>Command terms</h1>
+    <p class="page-intro">Every command term IB uses in exam questions, grouped by how much depth it wants. Misreading a command term is one of the most common, most avoidable ways to lose marks, if the question says "explain" and you only "describe", you get half the marks even with correct biology.</p>
+  </div>
+
+  <input type="text" class="search-box" id="term-search" placeholder="Search a command term, e.g. explain or evaluate...">
+
+  <div id="tiers-container"></div>
+
+  <div class="mistakes-section">
+    <h2>Commonly confused pairs</h2>
+    <p class="page-intro">A handful of term groups cause most of the trouble. Worth knowing cold before exam season.</p>
+    <div id="mistakes-container"></div>
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  Built for personal revision. Notes, links and quizzes update by editing files in /js, see the README.
+</footer>
+
+<script src="js/commandterms.js"></script>
+<script>
+
+function highlightMatch(text, q) {
+  if (!q) return text;
+  const idx = text.toLowerCase().indexOf(q.toLowerCase());
+  if (idx === -1) return text;
+  return text.slice(0, idx) + "<mark>" + text.slice(idx, idx + q.length) + "</mark>" + text.slice(idx + q.length);
+}
+
+function renderTiers(filterText) {
+  const container = document.getElementById("tiers-container");
+  container.innerHTML = "";
+  const q = (filterText || "").trim().toLowerCase();
+
+  COMMAND_TERMS.forEach(tier => {
+    const terms = tier.terms.filter(t => !q || t.term.toLowerCase().includes(q) || t.plain.toLowerCase().includes(q) || t.official.toLowerCase().includes(q));
+    if (!terms.length) return;
+
+    const block = document.createElement("div");
+    block.className = "term-tier-block";
+
+    const heading = document.createElement("div");
+    heading.className = "unit-heading";
+    heading.innerHTML = `<h2>Tier ${tier.tier} &middot; ${tier.tierName}</h2><div class="rule"></div>`;
+    block.appendChild(heading);
+
+    const note = document.createElement("p");
+    note.className = "page-intro";
+    note.style.marginTop = "-8px";
+    note.textContent = tier.tierNote;
+    block.appendChild(note);
+
+    const grid = document.createElement("div");
+    grid.className = "term-grid";
+
+    terms.forEach(t => {
+      const card = document.createElement("div");
+      card.className = "term-card tier-" + tier.tier;
+      card.innerHTML = `
+        <div class="term-name">${highlightMatch(t.term, q)}</div>
+        <div class="term-official"><span class="term-label">IB definition</span>${highlightMatch(t.official, q)}</div>
+        <div class="term-plain"><span class="term-label">In plain English</span>${highlightMatch(t.plain, q)}</div>
+      `;
+      grid.appendChild(card);
+    });
+
+    block.appendChild(grid);
+    container.appendChild(block);
+  });
+
+  if (q && !container.children.length) {
+    container.innerHTML = '<p class="no-resources">No command terms match "' + filterText + '".</p>';
+  }
+}
+
+function renderMistakes() {
+  const container = document.getElementById("mistakes-container");
+  container.innerHTML = "";
+  MISTAKES.forEach(m => {
+    const card = document.createElement("div");
+    card.className = "mistake-card";
+    const heading = document.createElement("div");
+    heading.className = "mistake-title";
+    heading.textContent = m.title;
+    card.appendChild(heading);
+    m.body.split(/\n\n+/).forEach(para => {
+      const p = document.createElement("p");
+      p.textContent = para;
+      card.appendChild(p);
+    });
+    container.appendChild(card);
+  });
+}
+
+const searchBox = document.getElementById("term-search");
+searchBox.addEventListener("input", () => renderTiers(searchBox.value));
+
+renderTiers("");
+renderMistakes();
+
+</script>
+</body>
+</html>
