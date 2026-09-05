@@ -185,6 +185,70 @@ If a topic has no `CONTENT` entry yet, its statements simply don't
 appear here (same "not yet written" convention as the rest of the
 site) rather than showing a placeholder row.
 
+## Mock exam (`mock.html`)
+
+Built once all planned docx batches were in (see status log below for
+the point this happened). Generates a randomised, timed mock exam
+modelled on the real IB Biology exam structure, drawing from the now-
+complete `questionbank.js` and `paper2.js` pools.
+
+**Structure, matched to the real exam:** SL sits 30 multiple-choice
+questions (1 mark each); HL sits 40. Rather than trying to replicate
+IB's actual Paper 1 : Paper 2 mark ratio (real IB weights Paper 2 more
+heavily than Paper 1), the user explicitly asked for a 50/50 split by
+marks, so the Paper 2 portion is sized to match the MCQ portion: 30
+marks of Paper 2 content at SL, 40 at HL. `MOCK_CONFIG` in `mock.html`
+holds these numbers (`mcqCount`, `p2MarksTarget`, `minutes`) — change
+them there if the target ratio or timing should ever be revisited.
+Timings (90 min SL, 120 min HL) are original estimates for this
+smaller/rebalanced mock, not copied from the real exam's actual
+durations.
+
+**Topic selection (the main feature the user wanted):** a checkbox
+grid of all 40 topics, grouped by unit like `checklist.html`, with
+"Select all" / "Clear all" shortcuts. Selecting SL disables (greys
+out, doesn't just hide) the 7 `HL_ONLY_TOPICS`, since those topics
+aren't in the SL syllabus at all; switching back to HL re-enables
+them. A live availability note shows how many MCQs/Paper 2 marks
+exist for the current topic selection, since a narrow selection (e.g.
+just "Water" and "Proteins") may not have enough questions to hit the
+full 30/40 target — in that case the exam simply uses everything
+available rather than erroring or padding with unrelated content.
+
+**Random selection logic:** `pickMCQs()` pools every question from
+`QUESTIONBANK` across the selected topics, shuffles, and takes the
+first N. `pickP2Sets()` does the same shuffle-and-take approach but
+accumulates whole Paper 2 *sets* (never splits a set's parts across
+different exams) until the running mark total reaches or just exceeds
+the target — this means the Paper 2 section can slightly overshoot the
+target mark count (e.g. 36 marks when the target was 30), which is
+expected and fine, not a bug, since sets come in different sizes and
+can't be split.
+
+**Self-marking flow:** MCQs are graded automatically on "Finish exam"
+(straight comparison against `correct`). Paper 2 has no auto-grading,
+since these are free-response — instead, each part gets a textarea
+during the exam (optional, just for the student's own reference) and,
+on the results screen, reveals the same `guidance` text used elsewhere
+on the site alongside a 0-to-max-marks slider so the student can
+self-score each part; sliders sum live into the Paper 2 total shown in
+the results summary at the top of the page.
+
+**History:** every finished mock is saved to `localStorage` under
+`bioMockHistoryV1` (separate key from the progress tracker and
+checklist, same pattern) — date, level, topic count, and both scores.
+The Paper 2 score in a saved entry updates live as the student moves
+self-mark sliders after finishing, so the history reflects their final
+self-assessment, not just the MCQ score at the moment they clicked
+finish. Shown as a simple table on the setup screen when history
+exists. No cap beyond keeping the most recent 20 attempts.
+
+Tested end to end with Playwright: topic filtering, SL/HL switching
+and the resulting HL-only topic gating, the full answer → finish →
+review → self-mark → live score update loop, and a full site
+regression sweep (all 40 topic pages plus every reference page) — zero
+console errors throughout.
+
 ## Progress tracking
 
 Understanding-status tracking (`localStorage`, key `bioProgressV1`) is
@@ -305,13 +369,73 @@ replacement). Halfway point reached. The user has been told they can
 start the mock-exam mode build once all batches are confirmed in, per
 the long-term plan noted above.
 
+**This session (docx batch 4 of ~6, everything_12/13/14):** all three
+files were valid, non-empty docx and processed normally via pandoc (90
+questions each, 270 total: 181 Paper 1A MCQ, 6 Paper 1B, 83 Paper 2).
+After deduplicating repeats across SL/HL/timezone variants, got 178
+unique MCQs, classified across 34 of the 40 topics, and paraphrased
+into `questionbank.js`. For Paper 2, selected 22 of the cleanest
+candidates from the 89 available open-ended items (a large share of
+this batch's source material was genuinely excellent, plain
+command-term prompts like "outline the endosymbiotic theory" or
+"explain transcription" with little to no graph/image dependency,
+more usable material proportionally than some earlier batches) and
+paraphrased them into `paper2.js`, again favouring depth on topics
+already covered over forcing coverage of brand-new gaps, since all 40
+topics have had at least one Paper 2 set since batch 1. Running totals
+after this session: **703 MCQs** in `questionbank.js`, **114 question
+sets / 219 sub-parts** in `paper2.js`, both across all 40 topics. Full
+headless-browser regression test passed across every topic page and
+all three reference pages, zero console errors.
+
+**Updated file count:** 12 of the ~18 planned source files have now
+been processed (everything_4 through everything_14, skipping the empty
+everything_9.docx but including its PDF replacement). Two-thirds of
+the way through the user's planned batches.
+
+**This session (docx batch 5, everything_15/16/17 — final batch):**
+the user confirmed this was the last batch of source files. All three
+were valid, non-empty docx and processed normally via pandoc (240
+questions total: 185 Paper 1A MCQ, 55 Paper 2). After deduplicating
+repeats across SL/HL/timezone variants (this batch had heavy overlap
+— 185 MCQs collapsed to just 111 unique), classified across 33 of the
+40 topics and paraphrased into `questionbank.js`. For Paper 2, drafted
+14 new sets from the 55 available open-ended items (again clean,
+low-image-dependency source material: hormone action, cardiovascular
+disease/ECG, tRNA structure, PCR, meiosis and variation, cellulose
+structure, endosymbiosis, natural selection, excretion). Running
+totals after this session, **and now final totals for the whole
+project**: **812 MCQs** in `questionbank.js`, **128 question sets /
+250 sub-parts** in `paper2.js`, both across all 40 topics. Full
+headless-browser regression test passed across every topic page and
+all three reference pages, zero console errors.
+
+**Project status: all planned source files have now been processed**
+(everything_4 through everything_17, 16 files total, skipping the
+empty everything_9.docx but including its PDF replacement — the user
+confirmed everything_15/16/17 was the final batch). The Questionbank
+and Paper 2 sections are now built out to their full planned scope.
+
+**This session (mock exam):** built `mock.html`, the timed mixed
+mock-exam mode planned since the docx-import sessions. Full details
+under "Mock exam" above. In short: SL/HL toggle (30 vs 40 MCQ, matching
+the real exam's Paper 1A question count), a 50/50 MCQ-to-Paper-2 mark
+split (the user's explicit request, not a copy of IB's actual Paper 1
+: Paper 2 weighting), and — the feature the user was most excited
+about — full topic selection, so a student can generate a mock exam
+restricted to just a few chosen topics (e.g. "just protein, DNA,
+homeostasis and water") rather than always pulling from the whole
+syllabus. Self-marked results screen with live score updates, past-
+attempt history in localStorage. Tested end to end, zero console
+errors. This closes out the "timed mock-exam mode" item that had been
+sitting in the ideas list since the docx-import sessions.
+
 **Ideas raised but not yet built, worth considering for a future
-session:** the timed mock-exam mode described above (once all docx
-batches are in); a distinct "common mistakes" callout box type on
-topic pages (separate from the existing exam-tip box) for well-known
-IB gotchas at the content level, not just the command-term level; an
+session:** a distinct "common mistakes" callout box type on topic
+pages (separate from the existing exam-tip box) for well-known IB
+gotchas at the content level, not just the command-term level; an
 HL/SL filter toggle on the homepage topic list itself (the checklist
-page already has one, the homepage doesn't).
+page and now the mock exam page both have one, the homepage doesn't).
 
 Open items carried over: the Miller-Urey diagram in Unit 1 is a
 German-labelled Wikimedia image (visually clear either way, but worth

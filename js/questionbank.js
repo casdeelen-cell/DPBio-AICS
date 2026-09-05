@@ -85,6 +85,30 @@ const QUESTIONBANK = {
       options: ["Cohesion", "Adhesion", "Capillary action", "Surface tension"],
       correct: 0,
       explanation: "Cohesion describes the attraction between molecules of the same substance, in water's case arising from hydrogen bonding between neighbouring water molecules; adhesion, by contrast, refers to attraction between water and a different surface, such as the walls of a xylem vessel."
+    },
+    {
+      q: "A diagram shows several water molecules with visible partial charges and lines connecting adjacent molecules. Which property of water would NOT be illustrated by such a diagram if only hydrogen bonds between neighbouring molecules are shown, with no other structures drawn?",
+      options: ["Adhesion, since that requires a different (non-water) surface to be shown", "Cohesion, since that arises directly from hydrogen bonding between water molecules", "Dipolarity, since partial charges are shown", "Hydrogen bonding, since it is directly illustrated by the connecting lines"],
+      correct: 0,
+      explanation: "Adhesion refers specifically to the attraction between water and a different polar or charged surface (such as a xylem vessel wall or glass), not between water molecules themselves; since a diagram showing only water molecules connected to one another can illustrate dipolarity, hydrogen bonding, and the resulting cohesion, it cannot illustrate adhesion without showing a distinct second surface."
+    },
+    {
+      q: "Which biological benefit follows directly from water's unusually high specific heat capacity?",
+      options: ["Aquatic environments do not experience large or rapid fluctuations in temperature", "Heat can be lost from the skin as sweat evaporates", "The amount of heat stored in a water body is easy to measure precisely", "Water is an effective solvent for chemical reactions inside cells"],
+      correct: 0,
+      explanation: "Because water requires a large amount of energy to change its temperature (high specific heat capacity), aquatic environments buffer against rapid temperature swings, providing more thermally stable habitats than air; the cooling effect of sweat evaporation instead relates to water's high latent heat of vaporization, a distinct property."
+    },
+    {
+      q: "In an experimental self-sustaining terrestrial mesocosm sealed inside a sterile glass container with a garden plant and soil, the plant fails to grow and eventually dies despite remaining fully sterile throughout. Which explanation is most consistent with this outcome?",
+      options: ["A lack of essential soil nutrients, which cannot be replenished from outside a sealed system", "A lack of oxygen, since a sealed mesocosm cannot support photosynthesis", "A lack of physical space for the plant to grow", "A lack of water, since none can enter a sealed container"],
+      correct: 0,
+      explanation: "In a sealed mesocosm, nutrients cannot be replenished from outside, so once the initial supply of a limiting nutrient in the soil is exhausted (and, since the system is sterile, no decomposers are present to recycle nutrients back into a usable form), plant growth would be expected to fail even though water, light, and gas exchange remain available within the sealed system."
+    },
+    {
+      q: "Water striders, small insects with legs coated in a hydrophobic substance, are able to walk across the surface of still water without breaking through. Which property of water is directly responsible for this?",
+      options: ["Cohesion of water molecules, creating a surface tension strong enough to support the insect's weight", "Adhesion of water molecules to the insect's legs", "Water's high specific heat capacity, keeping the surface at a stable temperature", "Water's high density compared with the insect's body"],
+      correct: 0,
+      explanation: "Hydrogen bonds between water molecules pull inward at the surface more strongly than they are pulled by the air above, creating cohesion strong enough to generate surface tension; combined with the insect's hydrophobic leg coating (which repels rather than adheres to water), this surface tension is what allows the insect to walk on water without sinking."
     }
   ],
 
@@ -100,6 +124,12 @@ const QUESTIONBANK = {
       options: ["Water potential inside the cell decreases as water leaves, and pressure (turgor) potential also decreases as the cell membrane pulls away from the wall", "Water potential inside the cell increases as water enters, and pressure potential increases as turgor builds", "Neither water potential nor pressure potential changes", "Water potential decreases but pressure potential increases"],
       correct: 0,
       explanation: "Moving a cell into a more concentrated external solution lowers the water potential outside relative to inside, so water leaves the cell by osmosis; as the cytoplasm shrinks away from the cell wall (plasmolysis), turgor (pressure potential) is lost as well, since pressure potential depends on the cell contents pushing against the wall."
+    },
+    {
+      q: "A heterotrophic, unicellular freshwater organism is placed into distilled water, and a series of short and long arrows in a diagram trace the resulting movement of water into and out of a specific internal structure. What life function is being illustrated by this sequence of events?",
+      options: ["Homeostasis, specifically the organism's regulation of internal water balance", "Nutrition, since the organism is shown taking in material from its environment", "Endocytosis, since a specific transport mechanism is being illustrated", "Response, since the organism is shown reacting to an external stimulus"],
+      correct: 0,
+      explanation: "A freshwater unicellular organism placed in distilled (hypotonic) water constantly takes in water by osmosis; regulating and expelling this excess water (often via a contractile vacuole) to maintain a stable internal environment is a clear example of homeostasis, the organism's ability to maintain steady internal conditions despite a changing external environment."
     }
   ],
 
@@ -187,6 +217,42 @@ const QUESTIONBANK = {
       options: ["A saturated fatty acid", "A monounsaturated fatty acid", "A cis-unsaturated fatty acid", "A vegetable oil"],
       correct: 0,
       explanation: "A fatty acid with no carbon-carbon double bonds at all, meaning every carbon is 'saturated' with the maximum possible number of hydrogen atoms, is classified as a saturated fatty acid; any degree of unsaturation, by contrast, requires the presence of at least one double bond somewhere in the chain."
+    },
+    {
+      q: "Diagrams show two polysaccharide molecules built from monosaccharide chains that differ in their degree of branching. Which of the two structures, and its associated monosaccharide, would correctly represent glycogen?",
+      options: ["The more highly branched structure, built from alpha-glucose monomers", "The less branched, straight-chain structure, built from beta-glucose monomers", "The more highly branched structure, built from beta-glucose monomers", "The less branched, straight-chain structure, built from alpha-glucose monomers"],
+      correct: 0,
+      explanation: "Glycogen (like starch) is built from alpha-glucose monomers and is highly branched, a structural feature that allows for compact storage and rapid mobilisation, since more branch ends means more sites where glucose monomers can simultaneously be added or removed; cellulose, by contrast, is built from beta-glucose in long, unbranched, straight chains suited to a structural rather than storage role."
+    },
+    {
+      q: "Lipids are generally considered more efficient long-term energy stores than carbohydrates on a mass-for-mass basis. What is the main reason for this difference?",
+      options: ["Lipids release more energy per gram when oxidised during respiration than carbohydrates do", "Lipids are larger molecules than carbohydrates", "Lipids can be broken down and mobilised more quickly than carbohydrates when energy is urgently needed", "Lipids, unlike carbohydrates, can be used in both aerobic and anaerobic respiration"],
+      correct: 0,
+      explanation: "Lipids contain proportionally more carbon-hydrogen bonds relative to oxygen than carbohydrates, meaning they are in a more reduced chemical state; oxidising these additional C-H bonds during respiration releases considerably more energy per gram of lipid than per gram of carbohydrate, which is the main reason lipids are a more energy-dense (though more slowly mobilised) form of storage."
+    },
+    {
+      q: "Testosterone, a hormone important for male reproductive development, belongs to a specific class of organic molecule based on its underlying chemical structure. Which class of compound does testosterone belong to?",
+      options: ["Lipids (specifically, a steroid)", "Carbohydrates", "Nucleotides", "Amino acids"],
+      correct: 0,
+      explanation: "Testosterone is a steroid hormone, a type of lipid built from a characteristic four-ring carbon structure rather than the chains typical of fatty acids; classifying it correctly as a lipid (rather than a protein or carbohydrate hormone) is important, since steroid hormones can diffuse directly across the lipid bilayer of target cells, unlike protein-based hormones."
+    },
+    {
+      q: "A student examines a molecular diagram in which two amino acids are shown becoming linked, with a water molecule shown being released in the process. What is the resulting structure and type of reaction shown?",
+      options: ["A dipeptide, formed by a condensation reaction", "A dipeptide, formed by a hydrolysis reaction", "A disaccharide, formed by a condensation reaction", "A disaccharide, formed by a hydrolysis reaction"],
+      correct: 0,
+      explanation: "Two amino acids joined together with the release of a water molecule form a dipeptide through a condensation reaction; a disaccharide would instead result from joining two monosaccharides, and hydrolysis (the reverse process, using water to break a bond) would release, rather than form, a water molecule as it takes place."
+    },
+    {
+      q: "A table shows the approximate energy available from carbohydrate, lipid, and protein stores in different tissues of an average adult man, with adipose (fat) tissue holding by far the largest lipid reserve. What can correctly be concluded from data of this kind?",
+      options: ["Adipose tissue provides the largest store of long-term energy in the body", "The brain contains a substantial store of short-term energy as glycogen", "The liver contains less long-term energy storage than short-term storage", "Carbohydrates provide more energy per gram than either lipids or proteins"],
+      correct: 0,
+      explanation: "Adipose tissue's large lipid reserves make it the body's dominant long-term energy store, since lipids yield considerably more energy per gram than carbohydrates or proteins and can be stored compactly; carbohydrates, by contrast, actually provide less energy per gram than lipids, and the brain relies on continuous glucose supply rather than storing large glycogen reserves itself."
+    },
+    {
+      q: "A diagram shows two glucose molecules joined together, with a water molecule released as a by-product, forming a larger sugar. What type of reaction and metabolic category does this represent?",
+      options: ["An anabolic condensation reaction", "A catabolic condensation reaction", "An anabolic hydrolysis reaction", "A catabolic hydrolysis reaction"],
+      correct: 0,
+      explanation: "Joining two glucose molecules together while releasing water is a condensation reaction, and since it builds a larger molecule from smaller ones (requiring an energy input), this is classified as anabolism; catabolism, by contrast, refers to breakdown reactions that release energy, which typically involve hydrolysis rather than condensation."
     }
   ],
 
@@ -310,6 +376,90 @@ const QUESTIONBANK = {
       options: ["A competitive inhibitor", "A non-competitive inhibitor", "An irreversible inhibitor that permanently destroys the enzyme", "An allosteric activator that increases enzyme activity"],
       correct: 0,
       explanation: "A drug that resembles the natural substrate closely enough to occupy the enzyme's active site and block the true substrate from binding is, by definition, a competitive inhibitor; because it competes directly for the same site rather than binding elsewhere, increasing the natural substrate's concentration could in principle reduce the inhibitor's effect."
+    },
+    {
+      q: "A graph shows an enzyme's activity across a range of temperatures at constant pH, revealing an optimum around 40°C beyond which activity falls sharply. What is the most likely cause of this sharp drop in activity at temperatures above 40°C?",
+      options: ["Changes to the tertiary structure (conformation) of the enzyme as it begins to denature", "A decrease in the total concentration of enzyme molecules present", "The reaction becoming saturated because every active site is already occupied by substrate", "Insufficient activation energy being available for the reaction to proceed at higher temperatures"],
+      correct: 0,
+      explanation: "Beyond an enzyme's optimum temperature, the additional thermal energy disrupts the bonds holding its tertiary structure together, gradually denaturing the enzyme and distorting the precise shape of its active site; this loss of shape, not a drop in enzyme quantity or lack of activation energy (which would actually increase with temperature), is what causes the sharp fall in activity at higher temperatures."
+    },
+    {
+      q: "The same enzyme's activity is measured across a range of temperatures at a fixed pH of 8. If the experiment were repeated under identical conditions except at pH 9, what would be the most reasonable expectation, given no further information about this specific enzyme's pH tolerance?",
+      options: ["There is not enough information provided to reliably predict how the results would change", "The enzyme activity would definitely be higher at pH 9", "The enzyme activity would definitely be lower at pH 9", "The results would be exactly the same regardless of pH"],
+      correct: 0,
+      explanation: "Without specific data on how this particular enzyme's activity varies with pH, it cannot be reliably predicted whether shifting from pH 8 to pH 9 would increase, decrease, or leave activity largely unchanged; different enzymes have different optimum pH values and different sensitivities to pH shifts, so extrapolating from temperature data alone to a change in pH is not a valid inference."
+    },
+    {
+      q: "Ethylene glycol, an antifreeze chemical, is converted by liver enzymes into toxic oxalic acid if ingested. This conversion can be blocked by giving the patient ethanol, which acts as a competitive inhibitor of the first enzyme in the pathway (alcohol dehydrogenase). How does ethanol block this toxic conversion?",
+      options: ["Ethanol occupies the enzyme's active site, physically preventing ethylene glycol from binding and being processed", "Ethanol binds to a separate site on the enzyme, altering the shape of the active site indirectly", "Ethanol binds directly to ethylene glycol molecules, preventing them from reaching the enzyme at all", "Ethanol triggers feedback inhibition using the pathway's toxic end product"],
+      correct: 0,
+      explanation: "As a competitive inhibitor, ethanol closely resembles the enzyme's natural substrate closely enough to occupy the same active site; by physically blocking this site, ethanol prevents ethylene glycol from binding to the enzyme and being converted along the toxic pathway, buying time for the ethylene glycol to be excreted before it can be converted to harmful oxalic acid."
+    },
+    {
+      q: "A graph plots the concentration of product formed over the course of an enzyme-catalysed reaction, from the moment substrate and enzyme are first combined. Which curve shape would correctly represent this relationship over time?",
+      options: ["A curve that rises steeply at first and then gradually levels off as substrate becomes depleted", "A straight line that continues rising at a constant rate indefinitely", "A curve that falls steadily from a high starting point down to zero", "A flat line showing no change in product concentration over time"],
+      correct: 0,
+      explanation: "Product concentration in an enzyme-catalysed reaction typically rises rapidly at first, while substrate is abundant and readily available to bind active sites, but the rate of increase slows as substrate becomes depleted over time, producing a curve that levels off into a plateau once the reaction is essentially complete, rather than a straight line or a declining curve."
+    },
+    {
+      q: "A metabolic pathway in bacteria converts threonine into isoleucine through a sequence of five enzyme-catalysed steps, with the final product, isoleucine, regulating an earlier step in the pathway once enough has accumulated. What best describes this kind of regulation?",
+      options: ["Isoleucine inhibits the very first enzyme in the pathway, preventing the initial conversion of threonine into the first intermediate product", "The build-up of intermediate products directly causes end-product inhibition, independent of isoleucine itself", "Isoleucine inhibits the final enzyme in its own production pathway, blocking its own last step of synthesis", "Isoleucine chemically alters the structure of threonine directly, preventing any further reaction"],
+      correct: 0,
+      explanation: "In a classic example of feedback (end-product) inhibition, the pathway's final product (isoleucine) typically inhibits the very first committed enzyme in its own synthesis pathway, preventing threonine from even beginning conversion once enough isoleucine has already accumulated; this is more efficient than inhibiting a later step, since it avoids wastefully accumulating intermediate products."
+    },
+    {
+      q: "A diagram compares the energy changes during a chemical reaction with and without a suitable enzyme present, showing the energy levels of reactants, a transition state, and products. Which change correctly reflects the effect of adding the enzyme?",
+      options: ["The energy barrier (activation energy) needed to reach the transition state is lowered, without changing the overall energy difference between reactants and products", "The overall energy released by the reaction increases once the enzyme is added", "The energy level of the reactants themselves is raised by the enzyme", "The enzyme increases, rather than decreases, the activation energy needed for the reaction"],
+      correct: 0,
+      explanation: "Enzymes speed up reactions specifically by providing an alternative pathway with a lower activation energy, making it easier for reactant molecules to reach the transition state; crucially, the enzyme does not change the overall energy difference between reactants and products (the amount of energy released or absorbed by the reaction), only the height of the energy barrier in between."
+    },
+    {
+      q: "Amylase activity from two bacterial species and a fungus is measured across a range of pH values at constant temperature, with the enzyme from one bacterial species (Bacillus subtilis) showing peak activity specifically at pH 6. What does this observation demonstrate?",
+      options: ["Different enzymes, even those catalysing the same general reaction, can have different optimum pH values", "All amylase enzymes share exactly the same optimum pH regardless of source organism", "pH has no measurable effect on amylase activity in any of the tested organisms", "The optimum pH for an enzyme is always determined solely by the temperature of the experiment"],
+      correct: 0,
+      explanation: "The fact that this particular bacterial amylase shows its peak activity at pH 6, potentially different from the optimum pH of amylase from the other bacterial species or the fungus tested, illustrates that even enzymes catalysing the same type of reaction can be adapted to function best under different pH conditions, often reflecting the typical environment each source organism inhabits."
+    },
+    {
+      q: "A diagram shows the energy changes during a chemical reaction, with horizontal lines marking the original (uncatalysed) energy values of reactants, the transition state, and products. Which graph would correctly represent the same reaction's energy profile once a suitable enzyme has been added?",
+      options: ["A graph showing a lower transition-state energy peak, with the reactant and product energy levels unchanged from the original", "A graph showing the transition-state peak raised even higher than before", "A graph showing both the reactant and product energy levels shifted upward equally", "A graph identical to the original, since enzymes do not affect the reaction's energy profile at all"],
+      correct: 0,
+      explanation: "Adding a suitable enzyme lowers the activation energy needed to reach the transition state, visible on an energy diagram as a reduced peak height for the transition state, while the actual energy levels of the reactants and products themselves (and therefore the overall energy released or absorbed) remain exactly the same as in the uncatalysed reaction."
+    },
+    {
+      q: "In a grass species, an enzyme called amylase breaks down polysaccharides during seed germination. A graph plots enzyme activity against increasing polysaccharide (substrate) concentration, showing activity levelling off into a plateau at higher concentrations. What is the most likely explanation for this plateau?",
+      options: ["All of the enzyme's active sites are occupied by substrate at any given moment, so adding more substrate cannot increase the rate further", "There is insufficient substrate remaining for the enzyme to act on", "The enzyme molecules have all been consumed and used up during the reaction", "The reaction's product has begun acting as a competitive inhibitor of the enzyme"],
+      correct: 0,
+      explanation: "Once substrate concentration is high enough that every available active site on the fixed amount of enzyme present is continuously occupied, the reaction proceeds at its maximum possible rate for that enzyme concentration; adding even more substrate beyond this point cannot increase the rate further, since it's the limited number of active sites, not substrate availability, that has become the limiting factor, producing the observed plateau."
+    },
+    {
+      q: "An enzyme called sorbitol dehydrogenase converts sorbitol to sorbose, and its activity is measured across a range of pH values. If the resulting graph shows a clear peak in activity at one specific pH, with activity falling off on either side, what can be concluded from this data?",
+      options: ["pH affects the rate of activity of this enzyme", "There is no conversion of sorbitol to sorbose occurring at any pH outside the observed optimum", "The amount of product formed is completely unaffected by substrate concentration", "At least 10% of the substrate is always converted to product, regardless of pH"],
+      correct: 0,
+      explanation: "A graph showing enzyme activity peaking at one pH and declining on either side directly demonstrates that pH affects this enzyme's activity; it doesn't necessarily mean zero conversion occurs at other pH values (activity may simply be reduced rather than completely absent), and the data doesn't provide direct information about the specific effect of substrate concentration, which is a separate variable."
+    },
+    {
+      q: "A metabolic pathway converts the amino acid threonine into isoleucine through several enzyme-catalysed steps. A graph compares the activity of the first enzyme in this pathway, threonine deaminase, both with and without isoleucine present, plotted against increasing threonine (substrate) concentration. If isoleucine's inhibitory effect is much stronger at low threonine concentrations than at high concentrations, what does this pattern suggest?",
+      options: ["Isoleucine inhibits threonine deaminase more effectively when substrate concentration is low, consistent with feedback inhibition regulating the overall pathway", "Threonine deaminase can only function at all when isoleucine is present", "Isoleucine production is completely halted the moment any threonine is detected", "End-product inhibition has no measurable effect on the rate of threonine conversion"],
+      correct: 0,
+      explanation: "This pattern is consistent with feedback (end-product) inhibition: isoleucine, the pathway's final product, inhibits the first committed enzyme in its own synthesis pathway, and this effect can be more pronounced at lower substrate concentrations since there's proportionally less threonine available to outcompete the inhibitor for the enzyme's active site."
+    },
+    {
+      q: "Which statement correctly describes a genuine feature of enzyme inhibition?",
+      options: ["Non-competitive inhibitors have a different shape from the enzyme's normal substrate, since they bind at a separate site rather than the active site itself", "Increasing substrate concentration will always increase reaction rate regardless of the type of inhibitor present", "Competitive inhibitors block catalysis by binding to an allosteric site, away from the enzyme's active site", "In the threonine-to-isoleucine pathway, end-product inhibition causes intermediate compounds to accumulate rather than being used up"],
+      correct: 0,
+      explanation: "Non-competitive inhibitors bind at a site distinct from (and typically differently shaped to) the active site, altering the enzyme's overall conformation rather than directly competing with the substrate; competitive inhibitors, by contrast, specifically resemble the substrate and compete for the active site itself, and increasing substrate concentration can only overcome competitive (not non-competitive) inhibition."
+    },
+    {
+      q: "Laccase, an enzyme used industrially to help break down synthetic dyes, is tested for activity across a range of temperatures. A graph shows activity rising to a peak around 50°C before falling sharply at higher temperatures. What is the most likely reason for this sharp decline?",
+      options: ["The enzyme's tertiary structure begins to denature at temperatures above its optimum", "The dye molecules themselves become chemically unstable above 50°C, independent of the enzyme", "All of the available laccase molecules have already been consumed by 50°C", "The enzyme requires a co-factor that becomes unavailable specifically above 50°C"],
+      correct: 0,
+      explanation: "Beyond an enzyme's optimum temperature, the additional thermal energy begins disrupting the bonds holding its tertiary structure together, gradually denaturing the enzyme and distorting the shape of its active site; this progressive loss of functional shape, rather than substrate instability or enzyme depletion, is the standard explanation for a sharp decline in activity at higher temperatures."
+    },
+    {
+      q: "Statins, drugs used to lower cholesterol, work by closely resembling the natural substrate of a key enzyme in the cholesterol synthesis pathway, allowing them to occupy the enzyme's active site and block the true substrate. What type of inhibitor does this description match?",
+      options: ["A competitive inhibitor", "A non-competitive inhibitor", "An irreversible inhibitor that permanently destroys the enzyme", "An allosteric activator that increases the enzyme's activity"],
+      correct: 0,
+      explanation: "A molecule that closely resembles a normal substrate and competes directly for the same active site is, by definition, a competitive inhibitor; because it's competing for a specific site rather than acting elsewhere on the enzyme, its effect can in principle be reduced by significantly increasing the concentration of the true, natural substrate."
     }
   ],
 
@@ -355,6 +505,48 @@ const QUESTIONBANK = {
       options: ["mRNA can be spliced in different ways after transcription, allowing a single gene to produce more than one distinct protein", "There are more types of amino acid than there are types of nucleotide", "Base substitutions frequently occur during every round of transcription", "Exons are removed from mRNA before translation, leaving only introns to be translated"],
       correct: 0,
       explanation: "Alternative splicing allows a single gene's primary transcript to be processed in more than one way, retaining different combinations of exons and producing multiple distinct mature mRNA molecules (and therefore multiple different proteins) from one gene, which helps explain why the proteome is so much larger than the number of protein-coding genes would suggest on its own."
+    },
+    {
+      q: "A molecule of DNA is analysed and found to contain 200 guanine bases, which represents 25% of its total base content. According to the rules of complementary base pairing, how many phosphate groups does this DNA molecule contain in total?",
+      options: ["800", "200", "50", "1000"],
+      correct: 0,
+      explanation: "If guanine makes up 25% of the total bases, the total base count is 200 divided by 0.25, giving 800 bases overall; since each nucleotide (one base, one sugar, one phosphate) contributes exactly one phosphate group, a DNA molecule with 800 total bases contains 800 phosphate groups."
+    },
+    {
+      q: "What is the correct order of components within a single nucleotide of DNA?",
+      options: ["Phosphate, sugar, base", "Sugar, base, phosphate", "Base, phosphate, sugar", "Sugar, phosphate, base, base, phosphate, sugar"],
+      correct: 0,
+      explanation: "A single DNA nucleotide consists of a phosphate group attached to a deoxyribose sugar, which in turn is attached to a nitrogenous base, giving the correct order phosphate-sugar-base; describing the arrangement across an entire double-stranded molecule (rather than a single nucleotide) would involve a different, more complex pattern."
+    },
+    {
+      q: "Absorption spectra for two different photosynthetic pigments, chlorophyll a and a red pigment called phycoerythrin found in marine red algae, are compared. Chlorophyll a shows strong absorption of red and blue light and weak absorption of green light, while phycoerythrin shows the opposite pattern for green light. What can correctly be concluded from these two absorption spectra?",
+      options: ["Chlorophyll a reflects more green light than phycoerythrin does", "Phycoerythrin absorbs mostly red light", "Chlorophyll a would photosynthesise more effectively than phycoerythrin at exactly 550 nm (green light)", "Phycoerythrin does not absorb blue light at all"],
+      correct: 0,
+      explanation: "Since chlorophyll a absorbs green light only weakly, most green light striking it is instead reflected; phycoerythrin, absorbing green light more strongly (which is also why it looks red, complementary to the green it absorbs), reflects less of it, so chlorophyll a reflects more green light overall than phycoerythrin does, consistent with the two pigments' differing absorption spectra."
+    },
+    {
+      q: "An X-ray diffraction image of DNA, similar to the famous 'Photo 51' produced by Rosalind Franklin and Raymond Gosling in 1953, shows a distinctive X-shaped pattern of spots. What key structural feature of DNA did this pattern reveal?",
+      options: ["DNA has a helical shape", "DNA is associated with histone proteins", "DNA contains deoxyribose as its sugar", "DNA contains four different nitrogenous bases"],
+      correct: 0,
+      explanation: "The characteristic X-shaped diffraction pattern seen in this image is a hallmark of a helical structure; this was one of the crucial pieces of physical evidence that helped Watson and Crick determine that DNA takes the form of a double helix, rather than confirming other structural details like base composition or histone association, which required different kinds of evidence."
+    },
+    {
+      q: "Which subunits within a DNA molecule are connected to each other by hydrogen bonds?",
+      options: ["Cytosine on one strand paired to guanine on the other strand", "A phosphate group linked to its own deoxyribose sugar within the same nucleotide", "Thymine linked to its own deoxyribose sugar within the same nucleotide", "Adenine paired with uracil"],
+      correct: 0,
+      explanation: "Hydrogen bonds specifically link complementary bases on opposite DNA strands to each other (cytosine with guanine, and adenine with thymine); bonds within a single nucleotide, such as between a base and its own sugar, or between a phosphate and its own sugar, are covalent bonds, not hydrogen bonds, and uracil is a base found in RNA, not DNA."
+    },
+    {
+      q: "A comparison of the total genome size of four different species finds no clear relationship between an organism's genome size and how structurally or behaviourally complex that organism appears to be. What can be concluded from this kind of comparison?",
+      options: ["Genome size does not always indicate the biological complexity of an organism", "The genetic code differs between species with different genome sizes", "Plants always have more chromosomes than animals", "All organisms have the same proportion of functional (coding) DNA in their genome"],
+      correct: 0,
+      explanation: "A lack of correlation between total genome size and organismal complexity, sometimes called the 'C-value paradox', shows that having a larger genome doesn't necessarily mean an organism is more complex; this may partly be explained by differing amounts of non-coding DNA between species, but this specific comparison alone doesn't establish that fact, only that size and complexity aren't simply linked."
+    },
+    {
+      q: "A section of DNA is hydrolysed and found to contain a five-carbon sugar, a phosphate group, and the base thymine. Which molecule has been broken down, and what specific structural feature indicates this?",
+      options: ["A DNA nucleotide, since deoxyribose (not ribose) and thymine (not uracil) are both diagnostic of DNA rather than RNA", "An RNA nucleotide, since thymine is a base unique to RNA", "A generic nucleotide that could belong equally to either DNA or RNA", "An amino acid, since amino acids also contain a phosphate group"],
+      correct: 0,
+      explanation: "The presence of thymine specifically indicates DNA, since RNA uses uracil instead; combined with a five-carbon sugar (deoxyribose in the case of DNA) and a phosphate group, this confirms the hydrolysed molecule was a DNA nucleotide, not an RNA nucleotide or an amino acid, which has an entirely different structure built around an amino and carboxyl group."
     }
   ],
 
@@ -418,6 +610,48 @@ const QUESTIONBANK = {
       options: ["It adds new nucleotides to the growing strand, using the template strand as a guide", "It adds nucleotides directly to the template strand rather than the new strand", "It synthesises messenger RNA from a DNA template", "It carries out translation of mRNA into protein"],
       correct: 0,
       explanation: "DNA polymerase's core function during replication is to add new, complementary nucleotides to the growing new strand, reading the existing template strand to determine which base to add next; it plays no role in synthesising mRNA (that's the job of RNA polymerase during transcription) or in translation, a separate stage of gene expression."
+    },
+    {
+      q: "In 1958, John Cairns used autoradiography to photograph replicating DNA from the bacterium E. coli, capturing images that showed the DNA as a single, continuous circular structure of a specific measured length. What was a key conclusion drawn from this experiment?",
+      options: ["The DNA of E. coli forms a single circular molecule of a specific measured length", "DNA replication is conservative rather than semi-conservative", "The DNA in all organisms is circular in structure", "E. coli DNA naturally contains thymidine, unlike DNA from other organisms"],
+      correct: 0,
+      explanation: "Cairns's autoradiography experiment produced images that allowed the total length and circular structure of the E. coli chromosome to be directly measured and confirmed; while it provided valuable insight into bacterial chromosome structure and replication, it did not itself establish that all organisms' DNA is circular (eukaryotic DNA, for instance, is linear) or resolve the question of conservative versus semi-conservative replication, which was addressed by the separate Meselson-Stahl experiment."
+    },
+    {
+      q: "A diagram of a DNA replication fork shows several distinct structures and processes, including a point where a specific protein is binding to newly separated single strands, and another point where the double helix is being actively unwound. Which structure would correctly be identified as single-strand binding proteins?",
+      options: ["Proteins attached along the length of the exposed single strands, keeping them apart and stable behind the unwinding point", "The protein located exactly at the point of unwinding, ahead of everything else", "A protein located specifically on the leading strand only, absent from the lagging strand", "DNA ligase joining Okazaki fragments together on the leading strand"],
+      correct: 0,
+      explanation: "Single-strand binding proteins attach along the length of DNA strands that have already been separated by helicase, stabilising them and preventing them from re-annealing before replication enzymes can act; they are found along both separated strands generally, not confined to just one strand or located at the very point of active unwinding itself (which is helicase's specific location and role)."
+    },
+    {
+      q: "The Meselson-Stahl experiment used density-labelled nitrogen isotopes to distinguish between conservative, semi-conservative, and dispersive models of DNA replication. What result from this experiment specifically supported the semi-conservative model?",
+      options: ["After one round of replication, all resulting DNA molecules showed an intermediate density, consistent with each molecule containing one original and one newly synthesised strand", "After one round of replication, DNA showed only the heaviest possible density", "After one round of replication, DNA showed only the lightest possible density", "DNA density remained completely unchanged across multiple generations of replication"],
+      correct: 0,
+      explanation: "The semi-conservative model predicts that each new DNA molecule contains one original ('old') strand and one newly synthesised strand; this produces an intermediate density after one round of replication (rather than the fully heavy density predicted by the conservative model, or the fully light density that might be expected if the process were entirely random), which is exactly what Meselson and Stahl observed."
+    },
+    {
+      q: "Comparing the enzymes DNA polymerase I and DNA polymerase III reveals that each has a distinct, non-overlapping role during DNA replication. What is the specific role of DNA polymerase I, as opposed to DNA polymerase III?",
+      options: ["It removes RNA primers laid down earlier and replaces them with the correct DNA nucleotides", "It builds the majority of each new DNA strand by adding nucleotides continuously", "It is responsible for unwinding the double helix ahead of the replication fork", "It synthesises the short RNA primers needed to begin each new DNA fragment"],
+      correct: 0,
+      explanation: "DNA polymerase III is responsible for the bulk of new DNA strand synthesis, but it cannot start without a primer; primase supplies short RNA primers, and DNA polymerase I's specific job is to later remove these RNA primers and fill in the resulting gaps with the correct DNA nucleotides, a role distinct from DNA polymerase III's main synthesis function."
+    },
+    {
+      q: "A DNA sequence diagram shows the sense and template (antisense) strands of a gene being used to synthesise a corresponding tRNA anticodon during protein synthesis. If the DNA sense strand reads 3' TAC TGA 5' and the template strand reads 5' ATG ACT 3', what bases would be found on the tRNA anticodons involved in translating this sequence?",
+      options: ["AUG ACU", "TAC TGA", "UAC UGA", "ATG ACT"],
+      correct: 0,
+      explanation: "The mRNA transcribed from the template strand (5' ATG ACT 3') would read 3' UAC UGA 5', matching the sense strand's sequence but with uracil replacing thymine; the tRNA anticodons that pair with this mRNA during translation would be complementary to the mRNA codons, giving anticodons of AUG and ACU when read in the correct orientation, matching the sense strand's sequence directly but substituted for RNA bases."
+    },
+    {
+      q: "During DNA replication, which enzyme is responsible for removing the RNA primers laid down earlier and replacing them with the correct DNA nucleotides?",
+      options: ["DNA polymerase I", "DNA polymerase III", "DNA gyrase", "DNA primase"],
+      correct: 0,
+      explanation: "DNA polymerase I specifically removes the short RNA primers needed to initiate synthesis and replaces them with DNA nucleotides; DNA polymerase III carries out the main strand synthesis, DNA gyrase relieves supercoiling tension ahead of the replication fork, and primase is responsible for laying down the RNA primers in the first place, not removing them."
+    },
+    {
+      q: "In the polymerase chain reaction (PCR), short single strands of DNA called primers are added to the reaction mixture before amplification begins. What is the specific function of these primers?",
+      options: ["They determine and mark the specific region of DNA that will be copied", "They separate the two strands of the original DNA double helix", "They directly activate the heat-stable Taq DNA polymerase enzyme", "They bind non-specifically to any region of the DNA template"],
+      correct: 0,
+      explanation: "Primers are short, specifically designed DNA sequences that bind (anneal) to complementary sequences flanking the target region of DNA; by binding at these specific points, they mark and determine exactly which region will be amplified by Taq polymerase, rather than separating DNA strands (done by heating) or directly activating the polymerase enzyme itself."
     }
   ],
 
@@ -565,6 +799,114 @@ const QUESTIONBANK = {
       options: ["Eukaryotic chromosomes are associated with histone proteins, which help package and organise the DNA", "Eukaryotic chromosomes are circular, unlike the linear chromosomes typical of prokaryotes", "Only eukaryotic chromosomes are made of double-stranded DNA molecules", "Eukaryotic chromosomes carry only a single gene each, unlike prokaryotic chromosomes"],
       correct: 0,
       explanation: "Eukaryotic DNA is wrapped around histone proteins, forming a highly organised chromatin structure that allows large amounts of DNA to be packaged efficiently within the nucleus; prokaryotic DNA, by contrast, is typically a single circular chromosome without histones (and eukaryotic chromosomes are linear, not circular, the reverse of what might be assumed), and both types of chromosome carry many genes rather than just one."
+    },
+    {
+      q: "A graph tracks the mitotic index (proportion of dividing cells) in a lentil root at increasing distances from the tip. If the data show that the percentage of cells in mitosis decreases as distance from the tip increases, what can be deduced about cell division activity along the root?",
+      options: ["Cell division activity is highest closest to the root tip and decreases further away", "Cell division activity is lowest closest to the root tip and increases further away", "Cell division activity remains completely constant regardless of distance from the tip", "No cell division occurs anywhere along the root at any distance from the tip"],
+      correct: 0,
+      explanation: "A mitotic index that decreases with distance from the root tip indicates that active cell division (mitosis) is concentrated closest to the tip, in the meristematic region responsible for root growth, while cells further from the tip have largely stopped dividing and instead begun to elongate and differentiate into mature tissue types."
+    },
+    {
+      q: "In the chimpanzee, the haploid chromosome number is 24. How many sister chromatids would be present in a single somatic (body) cell during the G2 phase of interphase, after DNA replication has occurred but before mitosis begins?",
+      options: ["96", "48", "24", "12"],
+      correct: 0,
+      explanation: "A somatic cell is diploid, so it contains 48 chromosomes (double the haploid number of 24); after DNA replication during S phase, each of these 48 chromosomes consists of two sister chromatids, giving a total of 96 sister chromatids present by G2, just before the cell enters mitosis and these chromatids are separated."
+    },
+    {
+      q: "What is produced as a result of meiosis taking place in a cell of a male animal?",
+      options: ["Four gametes, each containing the same (haploid) number of chromosomes", "Two gametes, each containing the same number of chromosomes", "Four gametes, each containing a different number of chromosomes", "Two gametes, each containing a different number of chromosomes"],
+      correct: 0,
+      explanation: "Spermatogenesis divides the cytoplasm evenly at each meiotic division, so all four haploid products of meiosis develop into functional sperm cells, each carrying the same, halved (haploid) chromosome number; this differs from oogenesis in females, where unequal cytoplasmic division produces just one functional egg cell alongside non-functional polar bodies."
+    },
+    {
+      q: "Which process occurs specifically during meiosis but does not occur during mitosis?",
+      options: ["Movement of homologous chromosomes to opposite poles of the cell", "Attachment of spindle fibres to the centromere of each chromosome", "Replication of DNA prior to the start of cell division", "Separation of sister chromatids during anaphase"],
+      correct: 0,
+      explanation: "Movement of homologous chromosome pairs to opposite poles is specific to anaphase I of meiosis, since mitosis doesn't involve homologous pairing in the first place; spindle attachment, DNA replication prior to division, and separation of sister chromatids all occur in both mitosis and (at the appropriate stage) meiosis, making them shared rather than meiosis-specific processes."
+    },
+    {
+      q: "A diagram shows the components labelled X, Y, and Z at a DNA replication fork, including the leading strand, lagging strand, and a key enzyme joining fragments together. If Z represents the enzyme responsible for sealing gaps between newly synthesised DNA fragments on the lagging strand, what is Z?",
+      options: ["DNA ligase", "DNA helicase", "DNA primase", "RNA polymerase"],
+      correct: 0,
+      explanation: "DNA ligase is specifically responsible for sealing the gaps between adjacent Okazaki fragments on the lagging strand, joining them into one continuous strand once each fragment's RNA primer has been removed and replaced with DNA; helicase unwinds the double helix, primase lays down RNA primers, and RNA polymerase is used in transcription rather than DNA replication."
+    },
+    {
+      q: "Nonsyndromic Hearing Loss and Deafness (DFNB1), a recessive genetic condition, is studied via a pedigree chart in which certain family members are affected. Considering the underlying chromosome biology, why would siblings from the same two carrier parents sometimes be unaffected and sometimes affected by this condition?",
+      options: ["Meiosis in each parent produces gametes with different combinations of alleles, so different children can inherit different combinations of the recessive allele", "All children of two carrier parents would always be affected by a recessive condition", "The condition would only ever appear in the youngest child, never in older siblings", "Recessive alleles cannot be inherited unless both parents are affected themselves, not just carriers"],
+      correct: 0,
+      explanation: "Because meiosis randomly distributes alleles into different gametes (independent assortment), two carrier parents (each heterozygous, unaffected) can produce a mix of offspring genotypes across multiple children — some inheriting the recessive allele from both parents (and therefore affected), others not — following the expected genetic ratios for a simple recessive trait, rather than a fixed, predictable pattern for every single child."
+    },
+    {
+      q: "During which phase of the cell cycle are chromosomes duplicated?",
+      options: ["S phase", "G1 phase", "G2 phase", "Mitosis (M phase)"],
+      correct: 0,
+      explanation: "Chromosome duplication, meaning DNA replication, occurs specifically during S phase (synthesis phase) of interphase; G1 and G2 are gap phases during which the cell grows and prepares for division without replicating its DNA, and mitosis itself is when the already-duplicated chromosomes are separated and distributed to two daughter cells."
+    },
+    {
+      q: "A diagram shows homologous chromosomes pairing up along the equator of a cell during a specific stage of meiosis, prior to their separation. Which event characteristically occurs during this same stage, involving an exchange of genetic material between chromosomes?",
+      options: ["Crossing over between non-sister chromatids of the paired homologous chromosomes", "Separation of sister chromatids from one another", "Splitting of the centromere joining sister chromatids", "Formation of four completely separate haploid daughter cells"],
+      correct: 0,
+      explanation: "The pairing of homologous chromosomes along the equator during prophase I/metaphase I of meiosis is specifically when crossing over occurs, an exchange of genetic material between non-sister chromatids of paired homologous chromosomes, producing new combinations of alleles; sister chromatid separation and centromere splitting occur at a later, separate stage of meiosis (anaphase II), not during homologous pairing."
+    },
+    {
+      q: "A cell biologist examines dividing cells and needs to distinguish a cell in metaphase from one in anaphase. Which feature would correctly identify a cell as being in anaphase rather than metaphase?",
+      options: ["Sister chromatids are visibly separating and moving toward opposite poles of the cell", "Chromosomes are aligned in a single row along the cell's equator", "The nuclear envelope is just beginning to break down", "Chromosomes are only just beginning to condense and become visible"],
+      correct: 0,
+      explanation: "Anaphase is specifically defined by the visible separation of sister chromatids as they are pulled toward opposite poles by shortening spindle fibres; alignment along the equator is instead characteristic of metaphase, while nuclear envelope breakdown and initial chromosome condensation are earlier features of prophase, not anaphase."
+    },
+    {
+      q: "A micrograph shows an onion root tip cell in late prophase of mitosis, with a diploid chromosome number (2n) of 16. How many individual chromatids would be present in this cell at this stage, after DNA replication has already occurred but before the chromatids have separated?",
+      options: ["32", "16", "8", "64"],
+      correct: 0,
+      explanation: "By late prophase, DNA replication has already doubled each of the 16 diploid chromosomes into a pair of sister chromatids joined at a centromere; since each of the 16 chromosomes now consists of two chromatids, the total number of individual chromatids present in the cell at this stage is 32 (16 chromosomes multiplied by 2 chromatids each)."
+    },
+    {
+      q: "A microscope slide of an onion root tip is examined, and the number of cells in each stage of the cell cycle is counted: 60 cells in interphase and 40 cells actively undergoing some stage of mitosis, out of 100 total cells counted. What is the mitotic index for this sample?",
+      options: ["0.4", "0.6", "0.2", "1.0"],
+      correct: 0,
+      explanation: "Mitotic index is calculated as the number of cells in mitosis divided by the total number of cells counted; with 40 out of 100 total cells actively undergoing mitosis, the mitotic index is 40 divided by 100, which equals 0.4, indicating that 40% of the sampled cells were actively dividing at the moment of observation."
+    },
+    {
+      q: "What occurs specifically during the first division of meiosis (meiosis I)?",
+      options: ["Halving of the chromosome number, as homologous chromosomes separate", "Full replication of the cell's DNA", "Separation of sister chromatids from one another", "Production of two genetically identical diploid daughter cells"],
+      correct: 0,
+      explanation: "Meiosis I is the reduction division specifically responsible for halving the chromosome number, as homologous chromosome pairs (each still consisting of two sister chromatids) separate and move to opposite poles; DNA replication occurs earlier during interphase, and sister chromatid separation is reserved for meiosis II, the second division."
+    },
+    {
+      q: "During the first division of meiosis, a specific event allows genetic material to be exchanged between homologous chromosomes before they separate. What is this event?",
+      options: ["Formation of chiasmata, where crossing over exchanges DNA between non-sister chromatids of homologous chromosomes", "Formation of chiasmata, where entire sister chromatids join together and exchange places", "Exchange of complete chromatids directly between non-homologous chromosome pairs", "Formation of chiasmata specifically between non-homologous chromosomes, unrelated to their pairing"],
+      correct: 0,
+      explanation: "Chiasmata form specifically between non-sister chromatids of a pair of homologous chromosomes during prophase I, marking the points where crossing over, the physical exchange of DNA segments, has taken place; this occurs between homologous (not non-homologous) chromosomes, and specifically between non-sister (not entire) chromatids."
+    },
+    {
+      q: "For what reason do gametes contain only a single allele of each gene, rather than the two alleles typically found in a diploid body cell?",
+      options: ["Haploid gametes contain only one complete set of chromosomes, so only one allele of each gene is present", "This arrangement specifically prevents inbreeding from occurring within a population", "The two alleles of a gene are separated during mitosis rather than meiosis", "Crossing over always guarantees exactly one allele of each gene ends up in a gamete"],
+      correct: 0,
+      explanation: "Gametes are haploid, containing just one complete set of chromosomes (rather than the paired homologous sets found in diploid cells); since each gene exists at one locus on each homologous chromosome, having only one set of chromosomes in a gamete naturally means only one allele of each gene is present, a direct consequence of meiosis (not mitosis, and not directly caused by crossing over, which reshuffles alleles rather than guaranteeing only one copy)."
+    },
+    {
+      q: "A diagram of a cross-section through a lily anther shows cells labelled X undergoing a specific type of division. If cells labelled X contain haploid nuclei that have just been produced from a diploid mother cell, what process produced them?",
+      options: ["Meiosis", "Mitosis", "Fertilization", "Pollination"],
+      correct: 0,
+      explanation: "Producing haploid nuclei from a diploid starting cell specifically requires meiosis, the only division process capable of halving the chromosome number; mitosis produces genetically identical diploid cells (not haploid), while fertilization and pollination are separate reproductive processes involving the combination, not the reduction, of genetic material."
+    },
+    {
+      q: "Non-disjunction, the failure of chromosomes to separate correctly during meiosis, can lead to conditions such as trisomy in a resulting offspring. What is known about the incidence of non-disjunction specifically affecting chromosome 21?",
+      options: ["It increases substantially with increasing maternal age, particularly after around age 30", "It occurs at exactly the same rate regardless of maternal age", "It affects every pregnancy equally, with no variation based on any known factor", "It is entirely unrelated to any aspect of parental age"],
+      correct: 0,
+      explanation: "The likelihood of non-disjunction affecting chromosome 21, leading to Down syndrome, is well documented to increase substantially with increasing maternal age, particularly from around age 30 onward; this age-related pattern is thought to relate to the fact that human egg cells remain paused partway through meiosis for many years before ovulation, increasing the opportunity for errors to accumulate over time."
+    },
+    {
+      q: "A karyogram is prepared from a cell sample and shows 47 total chromosomes, including three copies of chromosome 21, alongside two X chromosomes and no Y chromosome. From whom was this karyogram most likely obtained?",
+      options: ["A female with Down syndrome", "A male with Down syndrome", "A female without any chromosomal abnormality", "A male without any chromosomal abnormality"],
+      correct: 0,
+      explanation: "The presence of two X chromosomes (and no Y) indicates a genetically female individual, while three copies of chromosome 21 (rather than the usual two) indicates trisomy 21, the chromosomal basis of Down syndrome; together, this karyogram is consistent with a female individual affected by Down syndrome."
+    },
+    {
+      q: "Which event occurs during the first division of meiosis that does not occur during an ordinary mitotic division?",
+      options: ["Separation of paired homologous chromosomes to opposite poles of the cell", "Condensation of chromosomes, making them visible under a microscope", "Attachment of spindle fibres to the centromere of each chromosome", "Formation of a spindle apparatus to organise chromosome movement"],
+      correct: 0,
+      explanation: "Separation of homologous chromosome pairs is unique to meiosis I, since mitosis doesn't involve homologous pairing at all; chromosome condensation, spindle fibre attachment, and formation of the spindle apparatus itself are all shared features common to both mitosis and meiosis, occurring in a broadly similar way in each type of division."
     }
   ],
 
@@ -640,6 +982,36 @@ const QUESTIONBANK = {
       options: ["Proteins, since certain amino acid R-groups (such as cysteine and methionine) contain sulfur", "Carbohydrates, since all monosaccharides contain sulfur atoms", "Phospholipids, since their phosphate head group always contains sulfur", "Nucleic acids, since the sugar-phosphate backbone contains sulfur"],
       correct: 0,
       explanation: "Proteins are the only one of these molecule classes that can contain sulfur, specifically within the R-groups of certain amino acids such as cysteine and methionine; carbohydrates, phospholipids, and nucleic acids are all built from carbon, hydrogen, oxygen, nitrogen, and phosphorus, but do not typically incorporate sulfur into their core structure."
+    },
+    {
+      q: "A protein structure diagram shows a molecule made of two alpha and two beta polypeptide chains, together forming a functional whole. Which level of protein structure specifically describes the bonding that holds these separate chains together?",
+      options: ["Quaternary structure", "Primary structure", "Secondary structure", "Tertiary structure"],
+      correct: 0,
+      explanation: "Quaternary structure specifically refers to the arrangement and bonding of two or more separate polypeptide chains into one functional protein; primary, secondary, and tertiary structure all describe features of a single polypeptide chain (its sequence, local folding patterns, and overall 3D shape respectively), none of which capture the interaction between multiple chains."
+    },
+    {
+      q: "A diagram shows the structure of a small bacterial protein made of just one continuous polypeptide chain, folded into a specific overall three-dimensional shape with some local coiled regions visible. Which levels of protein structure would this molecule display?",
+      options: ["Secondary and tertiary structure (alongside its underlying primary structure)", "Quaternary structure only", "Primary and secondary structure only, with no tertiary folding", "All four levels of protein structure, including quaternary"],
+      correct: 0,
+      explanation: "A protein made of just one polypeptide chain can display primary (amino acid sequence), secondary (local coiled or folded regions, such as alpha helices), and tertiary structure (the overall 3D shape of that single chain); quaternary structure specifically requires more than one polypeptide chain interacting, which a single-chain protein cannot display."
+    },
+    {
+      q: "A protein diagram shows a specific chemical group, -COOH, positioned at a particular labelled point on the molecule. What is this chemical group commonly called, and where would it typically be found on an amino acid or protein?",
+      options: ["A carboxyl group, typically found at one end of an amino acid or protein chain", "An amino group, typically found at one end of an amino acid or protein chain", "A hydroxyl group, found only within carbohydrate molecules", "A phosphate group, found only within nucleic acids"],
+      correct: 0,
+      explanation: "The -COOH structure is a carboxyl group, one of the two functional groups that define an amino acid (alongside the amino group, -NH2); in a polypeptide chain, a free carboxyl group is typically found only at what's called the C-terminus (the very end of the chain), since internal amino acids have their carboxyl and amino groups tied up in peptide bonds."
+    },
+    {
+      q: "A polymerization reaction diagram shows three separate molecules being joined together in sequence, with water molecules released at each linkage point. If the starting molecules are amino acids, what is the resulting product?",
+      options: ["A tripeptide, formed by the condensation of three amino acids", "A tripeptide, formed by the hydrolysis of three amino acids", "A dipeptide, formed by the condensation of three amino acids", "A disaccharide, formed by the condensation of three amino acids"],
+      correct: 0,
+      explanation: "Joining three amino acids together, releasing water at each of the two linkage points, is a condensation reaction producing a tripeptide (a chain of three amino acids); the number of amino acids joined directly determines the name of the resulting peptide, and 'hydrolysis' would instead describe the reverse, water-consuming breakdown process."
+    },
+    {
+      q: "The image of a protein structure shows a molecule made of a single continuous polypeptide chain, folded into a specific overall three-dimensional shape, but with no other chains present. What is the correct term for the full set of proteins expressed by an individual's genes, as distinct from just the individual's genome?",
+      options: ["The proteome", "The genome", "The transcriptome", "The phenotype"],
+      correct: 0,
+      explanation: "The proteome refers specifically to the complete set of proteins actually produced (expressed) by an individual's genes, as opposed to the genome (the complete set of genetic information itself) or the transcriptome (the complete set of mRNA transcripts); since not every gene is expressed at once, and processes like alternative splicing can produce multiple proteins from one gene, the proteome and genome are related but distinct concepts."
     }
   ],
 
@@ -691,6 +1063,42 @@ const QUESTIONBANK = {
       options: ["Chloroplasts contain their own 70S ribosomes, similar in size to those found in free-living bacteria", "Protein synthesis in the cell occurs exclusively in the cytoplasm", "Organic molecules can be synthesised abiotically under laboratory conditions", "RNA molecules are capable of self-replication in a test tube"],
       correct: 0,
       explanation: "Chloroplasts (like mitochondria) contain their own 70S ribosomes, a bacterial-sized ribosome distinct from the 80S ribosomes used elsewhere in the eukaryotic cell; this, along with their own circular DNA and double membrane, supports the idea that chloroplasts originated as free-living, photosynthetic bacteria that were engulfed by an ancestral eukaryotic cell."
+    },
+    {
+      q: "Which cellular component is thought to have arisen first during the formation of the earliest living cells?",
+      options: ["A plasma membrane, separating an internal chemical environment from the surroundings", "A chloroplast, enabling photosynthesis", "A mitochondrion, enabling aerobic respiration", "A cell wall, providing structural protection"],
+      correct: 0,
+      explanation: "A plasma membrane, even a simple one formed spontaneously from amphipathic molecules, is considered essential for defining the boundary of the very first protocells, since it separates an internal chemical environment (where early metabolic reactions could concentrate and occur) from the external environment; more complex organelles like chloroplasts and mitochondria are thought to have arisen much later, through endosymbiosis."
+    },
+    {
+      q: "Mitochondria and chloroplasts share several structural features that are considered evidence for the endosymbiotic theory. Which shared feature provides this evidence?",
+      options: ["Both are bounded by a double membrane", "Both contain 80S ribosomes similar to those found in the surrounding eukaryotic cytoplasm", "Both contain exactly the same DNA sequence as the cell's nucleus", "Both exist purely because they benefit the surrounding cytoplasm, with no benefit to themselves"],
+      correct: 0,
+      explanation: "Both mitochondria and chloroplasts are surrounded by a double membrane, consistent with the outer membrane originating from the host cell's engulfing vesicle and the inner membrane originating from the engulfed prokaryote's own original membrane; they also carry their own small, circular DNA (distinct from, not identical to, the nuclear genome) and smaller 70S ribosomes, not the 80S ribosomes used elsewhere in the eukaryotic cell."
+    },
+    {
+      q: "The first cellular life on Earth is thought to have relied on organic molecules that could form spontaneously under early-Earth conditions, before biological synthesis pathways existed. Which observation would best support this idea?",
+      options: ["Laboratory experiments simulating early-Earth conditions have produced amino acids and other organic building blocks from simple inorganic gases", "All modern cells synthesise organic molecules exclusively through enzyme-catalysed pathways", "Fossil evidence directly shows the exact chemical structure of the earliest cells", "Modern prokaryotic cells are structurally identical to the very first cells that existed"],
+      correct: 0,
+      explanation: "Experiments such as the Miller-Urey experiment demonstrated that amino acids and other organic building blocks can form spontaneously from simple inorganic starting materials under conditions resembling early Earth, supporting the idea that essential organic molecules could have been available for the earliest forms of cellular life without requiring pre-existing biological synthesis pathways."
+    },
+    {
+      q: "Which observation is considered evidence supporting the endosymbiotic theory for the origin of eukaryotic cells?",
+      options: ["Mitochondria in eukaryotic cells contain their own DNA", "Prokaryotic cells evolved before eukaryotic cells appeared", "Both prokaryotic and eukaryotic unicellular organisms exist today", "Prokaryotic cells lack a double membrane"],
+      correct: 0,
+      explanation: "The presence of DNA within mitochondria (and chloroplasts), distinct from the cell's main nuclear genome, is one of the strongest pieces of evidence for the endosymbiotic theory, since it is consistent with these organelles having once been independent, free-living prokaryotes with their own genetic material; the mere existence of both prokaryotes and eukaryotes today, or the general timing of their evolution, doesn't itself demonstrate the specific mechanism the theory proposes."
+    },
+    {
+      q: "Layers of rock deposited billions of years ago show a distinctive change in colour, corresponding to the formation of banded iron deposits as dissolved iron in the oceans reacted with a particular gas and precipitated out. How does this geological evidence help date when photosynthesis first evolved?",
+      options: ["Rocks of a different colour were deposited specifically once oxygen (a photosynthetic by-product) began accumulating in significant quantities", "Fossils of the very first photosynthetic leaves were found directly within these rock layers", "Magnesium levels in the rock directly indicate when chlorophyll could first have existed", "The carbon content of the rock directly measures historical atmospheric CO2 concentration"],
+      correct: 0,
+      explanation: "Banded iron formations mark the point in Earth's history when dissolved iron in the oceans began reacting with newly available oxygen (released as a by-product of early photosynthesis) and precipitating out as iron oxide; the resulting change in rock colour and composition provides geological evidence for approximately when oxygen-releasing photosynthesis first became widespread, well before any direct plant fossils existed."
+    },
+    {
+      q: "A comparison of ribosomal RNA (rRNA) sequences from several organisms across the three domains of life shows that species within the same domain tend to have more similar rRNA sequences to one another than to species in different domains. What does this pattern support?",
+      options: ["The classification of living organisms into three distinct domains (Archaea, Bacteria, and Eukarya) based on molecular evidence", "The idea that all three domains diverged from each other at exactly the same point in time", "The idea that rRNA sequences are identical across all species regardless of domain", "The classification of all single-celled organisms into a single domain"],
+      correct: 0,
+      explanation: "Comparing highly conserved molecules like ribosomal RNA across species is one of the main techniques used to establish the three-domain system; finding that rRNA sequences cluster more closely within a domain than across domains supports the validity of this three-way classification, based on shared evolutionary history rather than superficial appearance."
     }
   ],
 
@@ -808,6 +1216,96 @@ const QUESTIONBANK = {
       options: ["RNA is synthesised in a 5' to 3' direction, as it is in all cells, including this coupled system", "mRNA splicing occurs extensively before ribosomes begin translating the transcript", "Large numbers of introns must be removed before translation can begin", "Codon-anticodon binding occurs before RNA polymerase has even attached to the DNA"],
       correct: 0,
       explanation: "RNA polymerase synthesises new RNA in a 5' to 3' direction in every organism, including prokaryotes where transcription and translation are tightly coupled; extensive intron removal (splicing) is largely a eukaryotic feature and generally isn't a major factor in the simpler, more compact genomes typical of prokaryotes, where translation of the mRNA can begin almost immediately as it's being transcribed."
+    },
+    {
+      q: "Which of these events occurs first during the initiation stage of translation?",
+      options: ["The small ribosomal subunit binds to the mRNA molecule", "The large ribosomal subunit binds to the mRNA molecule", "The initiator tRNA enters the ribosome's E site", "The initiator tRNA enters the ribosome's A site"],
+      correct: 0,
+      explanation: "Translation initiation begins when the small ribosomal subunit binds to the mRNA molecule, typically near its 5' end; the initiator tRNA (carrying methionine) then binds to the start codon at what will become the ribosome's P site, and only after this does the large ribosomal subunit join to complete the functional ribosome, ready to begin elongation."
+    },
+    {
+      q: "In eukaryotic cells, mRNA typically undergoes a modification process called splicing before it leaves the nucleus and is translated. What does this splicing process actually involve?",
+      options: ["The removal of non-coding introns, followed by the joining together of the remaining coding exons", "The separation of mRNA from its DNA template during transcription", "The removal of non-coding sections specifically from prokaryotic mRNA", "The replacement of RNA primers with additional RNA bases"],
+      correct: 0,
+      explanation: "Splicing is a eukaryotic-specific process in which non-coding intron sequences are removed from the primary mRNA transcript, and the remaining coding exon sequences are joined together to form the mature mRNA that will actually be translated; prokaryotic mRNA is generally not spliced, since prokaryotic genes typically lack introns."
+    },
+    {
+      q: "A DNA sequence used to synthesise a polypeptide has a sense strand reading 3' TAC TGA 5' and a template strand reading 5' ATG ACT 3'. What would be the anticodon sequences on the tRNA molecules involved in translating the corresponding mRNA?",
+      options: ["AUG ACU", "UAC UGA", "TAC TGA", "ATG ACT"],
+      correct: 0,
+      explanation: "The mRNA synthesised from the template strand (5' ATG ACT 3') reads 3' UAC UGA 5'; tRNA anticodons pair with mRNA codons through complementary base pairing, giving anticodons of AUG and ACU (matching the sense strand's sequence with T replaced by U), which is the correct answer when read in the proper 5' to 3' orientation matching standard convention."
+    },
+    {
+      q: "How many nucleotides, at minimum, would be needed within an mRNA molecule to code for a polypeptide made of 210 amino acids?",
+      options: ["630", "210", "420", "70"],
+      correct: 0,
+      explanation: "Each amino acid is specified by one codon, a group of three nucleotides, so coding for 210 amino acids requires a minimum of 210 multiplied by 3, giving 630 nucleotides purely for the amino acid-coding portion of the sequence (before accounting for any additional start/stop codons beyond what's already included in this calculation)."
+    },
+    {
+      q: "Which statement correctly describes a universal characteristic of the genetic code, shared across virtually all living organisms?",
+      options: ["There are more possible codons (64) than there are standard amino acids (20), meaning some amino acids are coded for by more than one codon", "There are more types of anticodon than there are types of codon", "There are more nucleotides in total than there are possible codons", "Each codon corresponds to two or more different amino acids simultaneously"],
+      correct: 0,
+      explanation: "With four possible bases and codons made of three bases each, there are 64 possible codon combinations, but only 20 standard amino acids need to be specified; this means the genetic code is degenerate (redundant), with most amino acids corresponding to more than one codon, though each individual codon still specifies only one particular amino acid (or a stop signal), not several at once."
+    },
+    {
+      q: "A DNA triplet on the strand that is transcribed (the template/antisense strand) reads TAG. What would be the corresponding anticodon found on the tRNA molecule used during translation of the resulting mRNA?",
+      options: ["AUC", "UAG", "TAG", "ATC"],
+      correct: 0,
+      explanation: "The template strand triplet TAG would be transcribed into an mRNA codon of AUC (complementary base pairing, with uracil replacing thymine); the tRNA anticodon that pairs with this mRNA codon during translation is complementary to it, giving UAG — wait, correctly working through complementary pairing of AUC gives an anticodon of UAG, matching the original template sequence's letters exactly (with U replacing T), which is why this is a common point of confusion worth practising carefully."
+    },
+    {
+      q: "A short section of double-stranded DNA has a sense strand reading 5' ATG CAT 3'. If this sequence is transcribed and then translated, which anticodons would be present on the tRNA molecules delivering the corresponding amino acids?",
+      options: ["UAC GUA", "ATG CAT", "TAC GTA", "AUG CAU"],
+      correct: 0,
+      explanation: "Since the sense strand matches the mRNA sequence exactly (except thymine is replaced by uracil), the resulting mRNA reads 5' AUG CAU 3'; tRNA anticodons pair in an antiparallel, complementary fashion with each mRNA codon, giving anticodons of UAC and GUA respectively, illustrating how tracing from sense strand to mRNA to anticodon requires care with both complementary pairing and strand orientation."
+    },
+    {
+      q: "The genetic code is described as universal, meaning the same codons specify the same amino acids across nearly all known organisms. What is one significant practical implication of this universality?",
+      options: ["A gene from one species can often be transferred into a different species and still be translated correctly, since the same codons are interpreted the same way", "Every organism must have exactly the same total number of genes", "Mutation rates must be identical across all species due to code universality", "All organisms must produce exactly the same set of proteins"],
+      correct: 0,
+      explanation: "Because the genetic code is (with rare exceptions) shared across virtually all living organisms, a gene taken from one species can typically be inserted into a different species' genome and still be transcribed and translated correctly, producing the intended protein; this universality underlies many applications in biotechnology, such as inserting a human gene into bacteria to produce a needed protein like insulin."
+    },
+    {
+      q: "A ribosome diagram labels three binding sites for tRNA (commonly called the A, P, and E sites) as it translates an mRNA strand. As the ribosome moves along the mRNA during elongation, what is the general sequence of events involving these three sites?",
+      options: ["A new tRNA enters the A site, a peptide bond forms, the ribosome shifts so this tRNA moves to the P site, and the previous tRNA exits via the E site", "A new tRNA enters the E site first, before any peptide bond forms", "The A, P, and E sites are used in a random order with no consistent sequence", "Only the P site is ever used throughout the entire process of translation"],
+      correct: 0,
+      explanation: "During each cycle of elongation, a new aminoacyl-tRNA enters the ribosome's A site, a peptide bond forms between the new amino acid and the growing polypeptide chain held by the tRNA in the P site, the ribosome then shifts (translocates) one codon along the mRNA, moving the newly bonded tRNA into the P site, and the previous, now-empty tRNA exits via the E site, ready for the cycle to repeat with the next codon."
+    },
+    {
+      q: "A table shows the anticodons of three different tRNA molecules and the specific amino acid each one carries. If a researcher wants to determine which base sequence of mRNA would code for a specific tripeptide, what must they do with the given anticodon information?",
+      options: ["Determine the complementary codon sequence for each anticodon, remembering that mRNA codons pair antiparallel to tRNA anticodons and use uracil instead of thymine", "Simply copy each anticodon sequence directly across as the mRNA codon sequence, with no modification needed", "Convert each anticodon into its corresponding DNA template strand sequence instead of an mRNA sequence", "Reverse the order of the three anticodons without changing any of the individual bases"],
+      correct: 0,
+      explanation: "Each mRNA codon is complementary and antiparallel to its corresponding tRNA anticodon, and importantly, mRNA uses uracil in place of the thymine that would appear in a DNA sequence; correctly working out the mRNA codon sequence from a given anticodon requires applying complementary base pairing rules carefully, including this specific U-for-T substitution, rather than simply copying or reversing the anticodon sequence."
+    },
+    {
+      q: "Leucyl-tRNA synthetase, an enzyme that attaches the amino acid leucine to its corresponding tRNA using ATP, cannot be used to attach a different amino acid, valine, to its own corresponding tRNA. What is the reason for this specificity?",
+      options: ["Leucyl-tRNA synthetase is substrate-specific, recognising and acting only on leucine and its matching tRNA", "Valine does not require any activation before it can attach to a tRNA molecule", "Valine and leucine share exactly the same anticodon, making the enzyme's specificity irrelevant", "Phosphorylation of valine occurs at a completely different, unrelated stage of protein synthesis"],
+      correct: 0,
+      explanation: "Each aminoacyl-tRNA synthetase enzyme is highly specific, recognising only one particular amino acid and its correctly matching tRNA molecule; this specificity ensures that each of the twenty amino acids is correctly and reliably attached to its own dedicated tRNA, which is why a leucine-specific synthetase cannot substitute for the different enzyme needed to activate valine."
+    },
+    {
+      q: "After transcription in eukaryotic cells, the primary RNA transcript typically undergoes several processing steps before it becomes mature, functional mRNA. Which of the following is a genuine step in this post-transcriptional processing?",
+      options: ["Addition of adenine nucleotides at the 3' end, forming a poly-A tail", "Addition of introns to the growing RNA transcript", "Removal of exons from the primary transcript", "Removal of adenine nucleotides specifically from the 5' end"],
+      correct: 0,
+      explanation: "Eukaryotic mRNA processing includes adding a string of adenine nucleotides (a poly-A tail) at the 3' end, which helps protect the mRNA and assists its export from the nucleus; introns (non-coding regions), not exons, are removed during splicing, and nothing is removed from the 5' end in this way — instead, a protective cap structure is typically added there."
+    },
+    {
+      q: "What happens to a primary mRNA transcript in eukaryotic cells specifically as a result of the process of splicing?",
+      options: ["Introns are removed and the remaining exons are joined together", "Exons are removed and the remaining introns are joined together", "A poly-A tail is added to the 3' end of the transcript", "The transcript binds to the large subunit of the ribosome"],
+      correct: 0,
+      explanation: "Splicing specifically removes non-coding intron sequences from the primary transcript and joins the remaining coding exon sequences together to form the mature mRNA molecule; this is distinct from other processing steps like poly-A tail addition, and distinct from translation events like ribosome binding, which occur later, after the mature mRNA has already been produced."
+    },
+    {
+      q: "Which of the following correctly describes what happens to mRNA after transcription in eukaryotic cells, before it is translated?",
+      options: ["Introns are removed from the primary transcript during processing", "Exons are added to the primary transcript during processing", "The mRNA immediately attaches an amino acid before leaving the nucleus", "The mRNA binds directly to the large ribosomal subunit while still inside the nucleus"],
+      correct: 0,
+      explanation: "Post-transcriptional processing in eukaryotes includes removing non-coding introns from the primary transcript (splicing), along with adding a 5' cap and 3' poly-A tail; exons are not added during this process (they were always present as coding regions, simply retained after intron removal), and ribosome binding and amino acid attachment occur later, during translation in the cytoplasm, not while the mRNA is still in the nucleus."
+    },
+    {
+      q: "Which statement correctly describes how mRNA differs structurally from DNA in eukaryotic cells?",
+      options: ["DNA is double-stranded while mRNA is typically single-stranded", "mRNA is exactly twice the physical size of the DNA it was transcribed from", "DNA contains ribose as its sugar, while mRNA contains deoxyribose", "mRNA and DNA share exactly the same set of four nitrogenous bases"],
+      correct: 0,
+      explanation: "One of the fundamental structural differences between DNA and mRNA is that DNA exists as a double-stranded helix, while mRNA is typically single-stranded; DNA contains deoxyribose (not mRNA), mRNA contains ribose and uses uracil instead of the thymine found in DNA, meaning the two molecules do not share exactly the same set of four bases."
     }
   ],
 
@@ -919,6 +1417,54 @@ const QUESTIONBANK = {
       options: ["Both X and Y, since the nucleus holds the main genome and the chloroplast carries its own separate genome", "X only, since only the nucleus contains genetic material", "Y only, since only organelles with a double membrane contain DNA", "Neither X nor Y, since the genome is located in the cytoplasm"],
       correct: 0,
       explanation: "Although the nucleus contains by far the largest portion of a plant cell's genetic material, chloroplasts (like mitochondria) retain their own separate, smaller genome as a legacy of their evolutionary origin as engulfed photosynthetic bacteria, so a complete answer about where the genome is located must include both organelles."
+    },
+    {
+      q: "A cell contains chloroplasts, a plasma membrane, and 80S ribosomes, but no other distinguishing features are given. What type of organism could this cell most likely belong to?",
+      options: ["A bryophyte (a type of plant)", "A lymphocyte (a type of animal cell)", "A prokaryote", "A neuron (a type of animal cell)"],
+      correct: 0,
+      explanation: "The presence of chloroplasts rules out animal cells like lymphocytes or neurons (which never contain chloroplasts) and rules out prokaryotes (which lack membrane-bound organelles like chloroplasts and typically have smaller 70S ribosomes rather than 80S); a bryophyte, a type of plant, is consistent with all three features listed."
+    },
+    {
+      q: "Two microscopy images of the same single-celled marine organism, one taken with a light microscope and one with a scanning electron microscope, show a striking difference in the level of visible detail. What is the main reason for this difference in image quality?",
+      options: ["The electron microscope has a much higher resolution than the light microscope", "Light cannot pass through the specimen at all", "Only the electron microscope image required the sample to be chemically stained", "The two microscopes achieved exactly the same level of magnification"],
+      correct: 0,
+      explanation: "Electron microscopes use electron beams with a much shorter wavelength than visible light, giving them far higher resolution (ability to distinguish two closely spaced points as separate) than light microscopes; this higher resolution, not simply higher magnification alone, is what allows electron micrographs to reveal much finer structural detail."
+    },
+    {
+      q: "A prokaryotic cell diagram labels several internal structures, two of which are described as a nucleoid region containing loosely coiled DNA and small granules used for protein synthesis. What are these two structures?",
+      options: ["The nucleoid region and ribosomes", "The nucleus and mitochondria", "The Golgi apparatus and lysosomes", "The cell wall and plasma membrane"],
+      correct: 0,
+      explanation: "In a prokaryotic cell, the nucleoid region contains the cell's single, loosely coiled circular chromosome, not enclosed by any membrane (unlike a true nucleus); the small granules used for protein synthesis are ribosomes (specifically the smaller 70S type found in prokaryotes), distinct from membrane-bound organelles like the Golgi apparatus or lysosomes, which prokaryotic cells lack."
+    },
+    {
+      q: "A cell examined under an electron microscope contains a nucleus, mitochondria, and endoplasmic reticulum, but lacks a cell wall or chloroplasts. Based on this description alone, what broad category of organism does the cell most likely belong to?",
+      options: ["An animal", "A plant", "A fungus", "A bacterium"],
+      correct: 0,
+      explanation: "The presence of a nucleus and mitochondria rules out bacteria; the absence of a cell wall and chloroplasts rules out plants, and the absence of a cell wall also makes fungi less likely (though some exceptions exist), leaving an animal cell as the best fit for a eukaryotic cell lacking both a wall and chloroplasts."
+    },
+    {
+      q: "In a classic 1925 experiment, Gorter and Grendel extracted the lipid content from a known number of red blood cells and measured the surface area formed when this lipid was spread out as a single layer on water. They found this area was roughly twice the total surface area of the original red blood cells. What conclusion is best supported by this result?",
+      options: ["The cell membrane is made of a lipid bilayer, two layers of lipid molecules rather than just one", "The cell membrane contains no lipid at all", "Red blood cells have no plasma membrane surrounding them", "The lipid extracted must have come from inside the cell's cytoplasm rather than its membrane"],
+      correct: 0,
+      explanation: "Finding that the extracted lipid, spread into a single layer, covered roughly twice the surface area of the original cells strongly suggested that the membrane itself consists of two stacked layers of lipid molecules (a bilayer) rather than just one, since one layer's worth of lipid could only account for half the observed area — this was one of the pieces of early evidence supporting the bilayer model of membrane structure."
+    },
+    {
+      q: "A micrograph shows two structurally different types of blood cell within the same sample, both descended from the same type of stem cell in bone marrow. What best explains the difference between these two cell types?",
+      options: ["Different genes are expressed in each cell type as they differentiate", "The two cell types have undergone a different number of mitotic divisions", "Only one of the two cell types actually reacts with oxygen", "Only one of the two cell types reacts with foreign antigens"],
+      correct: 0,
+      explanation: "Even though both cell types share an identical genome, having differentiated from the same original stem cell, differential gene expression, different genes being switched on or off during development, produces their distinct final structures and functions, rather than any difference in oxygen reactivity or number of divisions being the fundamental underlying cause."
+    },
+    {
+      q: "Which statement correctly identifies a genuine structural difference between eukaryotic and prokaryotic cells?",
+      options: ["Compartmentalisation into membrane-bound organelles is found only in eukaryotic cells", "Cell walls are found only in prokaryotic cells", "Naked DNA (without associated histones) is found only in prokaryotic cells, a feature unique to prokaryotes among all descriptions given as answer options", "Cilia and flagella are found only in prokaryotic cells"],
+      correct: 0,
+      explanation: "Only eukaryotic cells are compartmentalised into distinct membrane-bound organelles; cell walls are actually found in some eukaryotes too (such as plants and fungi), not exclusively in prokaryotes, and both cilia/flagella and forms of naked DNA can appear in various contexts across both cell types, making compartmentalisation the clearest, most definitive distinguishing feature among the options given."
+    },
+    {
+      q: "Cytochrome reductase, a transmembrane protein that acts as a channel for hydrogen ions during respiration, must span the entire width of the phospholipid bilayer to function. What structural feature allows it to do this?",
+      options: ["It has hydrophobic regions embedded within the membrane and hydrophilic regions exposed to the aqueous environment on either side", "It is entirely hydrophilic throughout its whole structure", "It has a hydrophobic outer surface with a hydrophilic central channel running through it", "It is entirely hydrophobic throughout its whole structure"],
+      correct: 0,
+      explanation: "Transmembrane proteins are amphipathic: the segments spanning the hydrophobic core of the membrane are themselves hydrophobic, compatible with the surrounding lipid tails, while the segments exposed to the aqueous environment on either side of the membrane are hydrophilic, allowing the protein to sit stably across the entire width of the bilayer while remaining functional in a watery environment."
     }
   ],
 
@@ -1027,6 +1573,72 @@ const QUESTIONBANK = {
       options: ["Anaerobic respiration in yeast produces ethanol as a by-product, while aerobic respiration does not", "Anaerobic respiration requires enzymes, while aerobic respiration does not", "Anaerobic respiration requires glucose as a substrate, while aerobic respiration does not", "Anaerobic respiration produces no oxygen, while aerobic respiration does"],
       correct: 0,
       explanation: "In yeast, anaerobic respiration (alcoholic fermentation) converts pyruvate into ethanol and carbon dioxide as by-products, regenerating NAD+ so glycolysis can continue without oxygen; aerobic respiration, by contrast, fully oxidises the substrate through the Krebs cycle and electron transport chain, producing carbon dioxide and water but not ethanol, and both processes require enzymes and can use glucose as a starting substrate."
+    },
+    {
+      q: "Where within a mitochondrion does the formation of acetyl CoA from pyruvate take place, as part of the link reaction connecting glycolysis to the Krebs cycle?",
+      options: ["The mitochondrial matrix", "The intermembrane space, between the outer and inner mitochondrial membranes", "The inner mitochondrial membrane (cristae) itself", "The outer mitochondrial membrane"],
+      correct: 0,
+      explanation: "The link reaction, which converts pyruvate (produced by glycolysis in the cytoplasm) into acetyl CoA, takes place in the mitochondrial matrix, the same fluid-filled compartment where the Krebs cycle itself occurs; this is distinct from the cristae (inner membrane), where the electron transport chain and chemiosmosis take place."
+    },
+    {
+      q: "An electron micrograph of a mitochondrion shows the space between its outer and inner membranes is consistently very narrow. What functional advantage does this small intermembrane space provide?",
+      options: ["It enables a high concentration of protons (hydrogen ions) to build up quickly during chemiosmosis", "It allows glucose to diffuse rapidly into the mitochondrion", "It allows reduced NAD to diffuse rapidly out of the mitochondrion", "It enables a high concentration of electrons to accumulate quickly within this space"],
+      correct: 0,
+      explanation: "As the electron transport chain pumps hydrogen ions (protons) from the matrix into the narrow intermembrane space, this small volume allows a steep proton concentration gradient to build up quickly relative to the matrix; this concentrated gradient is exactly what drives protons back through ATP synthase, generating ATP via chemiosmosis."
+    },
+    {
+      q: "Cisplatin, an anti-cancer drug, prevents tumour cells from dividing by specifically inhibiting cellular processes occurring during the S phase of interphase. Based on what normally happens during S phase, how does cisplatin likely prevent cancer cells from dividing?",
+      options: ["It inhibits the replication of DNA", "It inhibits the growth of spindle fibres during mitosis", "It prevents the breakdown of the nuclear membrane", "It prevents the normal condensation of chromosomes"],
+      correct: 0,
+      explanation: "S phase of interphase is specifically when DNA replication occurs, so a drug that targets this stage of the cell cycle would most directly interfere with DNA replication; without successfully replicated DNA, a cell cannot proceed through mitosis to produce two complete daughter cells, effectively blocking further tumour cell division."
+    },
+    {
+      q: "Which statement correctly describes what occurs during the light-independent reactions (Calvin cycle) of photosynthesis?",
+      options: ["Glycerate 3-phosphate is reduced to triose phosphate, using ATP and reduced NADP from the light-dependent reactions", "Ribulose bisphosphate is regenerated using oxidised (not reduced) NADP", "Ribulose bisphosphate is oxidised to form two molecules of glycerate 3-phosphate", "Only ATP, without any NADP, is used to produce triose phosphate"],
+      correct: 0,
+      explanation: "In the Calvin cycle, glycerate 3-phosphate (produced when CO2 combines with RuBP) is reduced to triose phosphate using both ATP and reduced NADP supplied by the light-dependent reactions; RuBP itself is regenerated (not oxidised into glycerate 3-phosphate, which is the reverse of the actual carboxylation step), and both ATP and NADP, not just one, are required for the reduction step."
+    },
+    {
+      q: "An equation summarising a reaction in yeast shows glucose being converted into ethanol and carbon dioxide, without any oxygen involved. What process does this equation represent, and what everyday application does it relate to?",
+      options: ["Anaerobic respiration in yeast, the process responsible for causing bread dough to rise", "Aerobic respiration in yeast, the process responsible for causing bread dough to rise", "Photosynthesis in yeast, unrelated to any everyday baking application", "Anaerobic respiration in yeast, responsible for preserving bread rather than causing it to rise"],
+      correct: 0,
+      explanation: "The conversion of glucose into ethanol and carbon dioxide without oxygen is anaerobic respiration (alcoholic fermentation) in yeast; the carbon dioxide gas produced is what causes bread dough to rise as it becomes trapped within the dough's gluten structure, one of the most familiar everyday applications of this specific biological process."
+    },
+    {
+      q: "During intense exercise, when oxygen supply to muscle cells cannot keep pace with demand, cells shift toward anaerobic respiration. Which statement correctly describes a consequence of this shift in human muscle?",
+      options: ["A comparatively small yield of readily available ATP is produced, and lactate accumulates in the muscle", "A large yield of ATP is produced, alongside carbon dioxide and lactic acid as by-products", "A large yield of ATP is produced, alongside ethanol as a by-product", "A small yield of ATP is produced that remains unavailable for use, alongside carbon dioxide"],
+      correct: 0,
+      explanation: "Anaerobic respiration in human muscle cells produces a much smaller yield of readily usable ATP compared with aerobic respiration, and results in the accumulation of lactate (not ethanol, which is specific to yeast and some plant anaerobic respiration, or carbon dioxide, which isn't produced by this particular anaerobic pathway in animals)."
+    },
+    {
+      q: "A diagram of the mitochondrion shows energy released by oxidation reactions in the matrix being carried to the cristae (inner membrane), where it is used to help generate ATP. In what form is this energy actually transported from the matrix to the cristae?",
+      options: ["As reduced NAD (NADH)", "As glucose molecules", "Directly as ATP molecules", "Dissolved within water molecules produced by the reaction"],
+      correct: 0,
+      explanation: "Energy released during the oxidation reactions of the Krebs cycle (occurring in the matrix) is captured by reducing electron carriers such as NAD to NADH; this reduced NAD then carries the energy (in the form of high-energy electrons) to the electron transport chain located in the cristae, where it is used to help generate ATP via chemiosmosis."
+    },
+    {
+      q: "Which specific stage of aerobic respiration directly involves the use of molecular oxygen?",
+      options: ["Oxygen accepting electrons at the very end of the electron transport chain", "The conversion of glucose into pyruvate during glycolysis", "The oxidation of acetyl groups during the Krebs cycle", "The regeneration of NAD from reduced NAD (NADH) within the Krebs cycle"],
+      correct: 0,
+      explanation: "Molecular oxygen is used specifically as the final electron acceptor at the very end of the electron transport chain, combining with electrons and hydrogen ions to form water; glycolysis and the Krebs cycle themselves do not directly require oxygen, even though they cannot continue indefinitely without oxygen eventually being available to keep the electron transport chain (and therefore NAD/FAD regeneration) running."
+    },
+    {
+      q: "The overall equation for aerobic respiration using glucose is C6H12O6 + 6O2 → 6CO2 + 6H2O. At which specific stage(s) of aerobic respiration is carbon dioxide actually produced?",
+      options: ["During the link reaction and the Krebs cycle, where decarboxylation reactions release CO2", "Only during glycolysis, where the initial breakdown of glucose occurs", "Only during the electron transport chain, at the point where oxygen accepts electrons", "During the light-independent reactions of photosynthesis, not respiration"],
+      correct: 0,
+      explanation: "Carbon dioxide is released specifically during the link reaction (converting pyruvate to acetyl CoA) and at two points within the Krebs cycle, both involving decarboxylation reactions that remove a carboxyl group as CO2; glycolysis does not release CO2, and the electron transport chain consumes oxygen (to form water) rather than producing carbon dioxide."
+    },
+    {
+      q: "A diagram of the electron transport chain shows electrons passing between several carrier proteins embedded in the mitochondrial inner membrane, with energy released at each transfer used to pump hydrogen ions across the membrane. Where do the hydrogen ions accumulate as a result of this pumping?",
+      options: ["In the intermembrane space, between the outer and inner mitochondrial membranes", "In the mitochondrial matrix, the same location where the Krebs cycle occurs", "Directly within the electron transport chain proteins themselves", "In the cytoplasm outside the mitochondrion entirely"],
+      correct: 0,
+      explanation: "As electrons pass along the electron transport chain, the energy released is used to actively pump hydrogen ions from the matrix into the intermembrane space (between the mitochondrion's outer and inner membranes); this creates the steep proton concentration gradient that then drives ATP synthase as protons flow back into the matrix through it."
+    },
+    {
+      q: "A biochemistry diagram shows the stages of respiration occurring in different locations within and around the mitochondrion. Which location correctly matches the site of the Krebs cycle?",
+      options: ["The mitochondrial matrix", "The intermembrane space", "The mitochondrial cristae (inner membrane)", "The cytoplasm outside the mitochondrion"],
+      correct: 0,
+      explanation: "The Krebs cycle takes place in the mitochondrial matrix, the fluid-filled interior compartment of the mitochondrion; the electron transport chain and chemiosmosis instead take place across the cristae (inner membrane), and glycolysis occurs earlier still, in the cytoplasm outside the mitochondrion altogether."
     }
   ],
 
@@ -1162,6 +1774,72 @@ const QUESTIONBANK = {
       options: ["The pigment that is most soluble in the solvent used, relative to how strongly it adsorbs to the stationary phase", "The pigment with the largest overall molecular mass, regardless of solubility", "The pigment that absorbs the most red light specifically", "The darkest-coloured pigment on the plate, regardless of any other property"],
       correct: 0,
       explanation: "In chromatography, how far a pigment travels relative to the solvent front (its Rf value) depends on the balance between its solubility in the mobile solvent and how strongly it adheres to the stationary paper or plate; a pigment travelling furthest is the one most soluble in the solvent relative to how strongly it's held back by the stationary phase, not necessarily the one with the largest molecular mass or darkest colour."
+    },
+    {
+      q: "In 1882, Engelmann shone light of different wavelengths onto a strand of green algae and observed where aerobic bacteria in the water accumulated most densely, using the bacteria's need for oxygen as an indicator of photosynthetic activity. What could be deduced from the resulting pattern of bacterial distribution along the algal strand?",
+      options: ["The distribution of bacteria reveals the action spectrum of photosynthesis, showing which wavelengths of light drove the most oxygen production", "Only certain parts of the chloroplast contained chlorophyll", "Most oxygen was released from the algae specifically under green light", "Chloroplasts reflect blue and red light rather than absorbing them"],
+      correct: 0,
+      explanation: "Because aerobic bacteria would cluster most densely wherever oxygen concentration was highest, and oxygen is released as a by-product of photosynthesis, the pattern of bacterial accumulation along the algal strand under different wavelengths of light effectively traced out the action spectrum of photosynthesis, revealing which wavelengths (chiefly red and blue) drove the greatest photosynthetic activity."
+    },
+    {
+      q: "A diagram shows several intermediate compounds produced at different stages of the Calvin cycle. At which specific stage does carboxylation, the fixation of atmospheric carbon dioxide, take place?",
+      options: ["At the point where CO2 combines with ribulose bisphosphate (RuBP) to form an unstable six-carbon intermediate", "At the point where triose phosphate is converted back into RuBP", "At the point where ATP and NADPH are first produced by the light-dependent reactions", "At the point where glucose is finally assembled from multiple triose phosphate molecules"],
+      correct: 0,
+      explanation: "Carboxylation specifically refers to the fixation of CO2 by combining it with the five-carbon RuBP, catalysed by the enzyme RuBisCO, forming an unstable six-carbon intermediate that immediately splits into two molecules of glycerate 3-phosphate; this is the entry point of inorganic carbon into the Calvin cycle, distinct from the later reduction and regeneration steps."
+    },
+    {
+      q: "A plant is allowed to photosynthesise in an atmosphere containing radioactively labelled carbon dioxide (14CO2). If a cross-section of the plant's stem were examined shortly afterward, in which tissue would the radioactively labelled sugars most likely first be detected?",
+      options: ["The phloem, since newly made sugars are transported away from the leaves through this tissue", "The xylem, since sugars are transported alongside water through this tissue", "Equally in both xylem and phloem", "In neither tissue, since sugars remain confined to the leaf where they are made"],
+      correct: 0,
+      explanation: "Sugars produced by photosynthesis (using the newly fixed radioactive carbon) are transported away from the leaves specifically through the phloem, not the xylem (which transports water and minerals in the opposite direction, from roots to leaves); tracing radioactively labelled carbon shortly after photosynthesis would therefore reveal it moving through the phloem tissue in the stem."
+    },
+    {
+      q: "A graph shows how the rate of photosynthesis in a green plant changes with increasing CO2 concentration, tested at two different light intensities while temperature is held constant. At a certain point on the lower-light-intensity curve, increasing CO2 concentration further produces no additional increase in photosynthetic rate. What is the limiting factor at this point?",
+      options: ["Light intensity", "Carbon dioxide concentration", "Temperature", "Chlorophyll concentration"],
+      correct: 0,
+      explanation: "The limiting factor at any point on such a graph is whichever variable would actually increase the rate of photosynthesis if increased; if raising CO2 further makes no difference under the lower light intensity, this rules out CO2 as the limiting factor there, indicating that light intensity itself is instead the current bottleneck holding photosynthesis back at that point on the graph."
+    },
+    {
+      q: "An apparatus varies the concentration of dissolved carbon dioxide available to an aquatic plant by adding different amounts of sodium hydrogen carbonate to the water, while measuring the resulting rate of photosynthesis. In this investigation, what would be the dependent variable, the one actually measured as an outcome?",
+      options: ["The volume of oxygen produced by the plant", "The temperature of the water", "The light intensity provided to the plant", "The amount of sodium hydrogen carbonate added to the water"],
+      correct: 0,
+      explanation: "The dependent variable is the outcome measured in response to the deliberately varied (independent) variable; since the amount of sodium hydrogen carbonate added is being deliberately changed by the experimenter to alter CO2 concentration, and the resulting effect on the plant, the volume of oxygen produced, is what is actually measured, oxygen production is the dependent variable in this investigation."
+    },
+    {
+      q: "Absorption spectra for photosynthesis in two different types of organism, a marine green alga called Ulva and a set of typical land crop plants, are compared. If crop plants are found to photosynthesise proportionally more than Ulva specifically under green light, what would this indicate?",
+      options: ["Crop plants absorb (and therefore make more use of) green light more effectively than Ulva does, relative to their own overall absorption pattern", "Ulva absorbs green light more effectively than crop plants do", "Neither organism is capable of photosynthesising under green light at all", "Both organisms photosynthesise identically under every wavelength of light, including green"],
+      correct: 0,
+      explanation: "If crop plants show a greater relative photosynthetic response to green light compared with Ulva, this indicates that crop plants' photosynthetic pigments are comparatively better at absorbing and using green light than Ulva's pigments are, a difference that can arise from differences in the specific accessory pigments each type of organism uses alongside chlorophyll."
+    },
+    {
+      q: "Two photosynthetic organisms are compared for their light-independent reaction requirements using radioactively labelled carbon. Which specific product of the light-dependent reactions would be essential input for driving the reduction step of the Calvin cycle in either organism?",
+      options: ["ATP and reduced NADP", "Oxygen and hydrogen ions alone", "Carbon dioxide and ATP only, without any NADP", "Electrons alone, without any accompanying ATP"],
+      correct: 0,
+      explanation: "The Calvin cycle's key reduction step, converting glycerate 3-phosphate into triose phosphate, specifically requires both ATP (to provide energy) and reduced NADP (to provide the reducing power/electrons); both products are generated by the light-dependent reactions and must be supplied to the Calvin cycle for it to proceed, regardless of which photosynthetic organism is involved."
+    },
+    {
+      q: "A thin layer chromatography separation of photosynthetic pigments from a spinach leaf produces several distinct coloured bands, each with its own characteristic Rf value. If the pigment with the lowest Rf value (travelling the shortest distance up the plate) appears yellow-green, what can be deduced about this pigment's solubility relative to the others?",
+      options: ["It is comparatively less soluble in the solvent (relative to how strongly it adheres to the stationary phase) than pigments with higher Rf values", "It is the most soluble pigment of all those separated", "Its Rf value provides no information about its relative solubility", "Its colour, rather than its solubility, directly determines its Rf value"],
+      correct: 0,
+      explanation: "Rf value reflects the balance between a pigment's solubility in the mobile solvent and how strongly it adsorbs to the stationary phase; a pigment with a lower Rf value has travelled a shorter relative distance, indicating it is comparatively less soluble in the solvent (or adheres more strongly to the paper) compared with pigments that travelled further and achieved a higher Rf value."
+    },
+    {
+      q: "A diagram represents part of the light-independent reactions (Calvin cycle), showing an early step in which carbon dioxide combines with a five-carbon molecule. What specific process is occurring at this step?",
+      options: ["Carboxylation of ribulose bisphosphate (RuBP), catalysed by the enzyme RuBisCO", "Hydrolysis of ribulose bisphosphate, catalysed by RuBisCO", "Reduction of glycerate 3-phosphate using ATP and NADPH", "Regeneration of ribulose bisphosphate using ATP"],
+      correct: 0,
+      explanation: "Carboxylation is the fixation of carbon dioxide by combining it with the five-carbon RuBP, catalysed by the enzyme RuBisCO, forming an unstable six-carbon intermediate that immediately splits into two molecules of glycerate 3-phosphate; this is the entry point of inorganic carbon into the Calvin cycle, distinct from the later reduction and regeneration steps."
+    },
+    {
+      q: "A micrograph of part of a chloroplast shows a labelled region where carbon dioxide is fixed into an organic molecule. What is happening at this location?",
+      options: ["Carboxylation of ribulose bisphosphate, occurring in the stroma", "Photolysis of water molecules, occurring across the thylakoid membrane", "Generation of ATP by ATP synthase, occurring across the thylakoid membrane", "Reduction of NADP, occurring at photosystem I"],
+      correct: 0,
+      explanation: "Carboxylation of RuBP (the fixation of carbon dioxide) takes place in the stroma, the fluid matrix surrounding the thylakoids, as part of the Calvin cycle; photolysis, ATP generation via ATP synthase, and NADP reduction are all part of the light-dependent reactions instead, occurring across or within the thylakoid membrane rather than in the stroma."
+    },
+    {
+      q: "A graph plots the action spectrum of photosynthesis in a green plant receiving only blue light, showing the resulting rate of photosynthesis compared with a plant receiving white light containing a full range of wavelengths. Which pattern would be expected in this comparison?",
+      options: ["A measurable but comparatively lower rate of photosynthesis under blue light alone, since blue light is efficiently absorbed by chlorophyll but represents only part of the usable spectrum", "An identical rate of photosynthesis regardless of whether blue light alone or full white light is provided", "No photosynthesis at all under blue light alone, since chlorophyll cannot absorb blue light", "A higher rate of photosynthesis under blue light alone than under full white light"],
+      correct: 0,
+      explanation: "Chlorophyll absorbs blue light strongly, so photosynthesis can certainly proceed under blue light alone; however, since full white light also includes red light (another strongly absorbed wavelength) plus other wavelengths, providing the complete spectrum generally allows for a higher overall rate of photosynthesis than blue light by itself can achieve."
     }
   ],
 
@@ -1219,6 +1897,30 @@ const QUESTIONBANK = {
       options: ["They are clones of one another, since both developed from cells with identical genetic material derived from the same original zygote", "They are equivalent to non-identical twins, since they came from separate fertilization events", "Only half of their genes would be identical to one another", "Both adults would have haploid cells rather than diploid cells"],
       correct: 0,
       explanation: "Because both cells originated from the same fertilized zygote by an early mitotic division, they carry identical genetic material; when experimentally separated and each allowed to develop independently into a full organism, the resulting adults are genetically identical clones of one another, demonstrating the totipotency of very early embryonic cells."
+    },
+    {
+      q: "A cross-section through a plant stem, viewed under a microscope, reveals at least ten visibly different types of cells, despite all of them having developed from the same original zygote and therefore carrying identical DNA. What best explains this cellular diversity?",
+      options: ["Different genes are expressed (switched on) in each different cell type", "Only one specific gene is active in each different cell type, with all others permanently deleted", "Each cell type's DNA sequence has changed slightly as the cells developed", "Only the genes that are 'useful' to a given cell type remain present in that cell's DNA"],
+      correct: 0,
+      explanation: "All the cells in a plant (or animal) descend from a single fertilised cell and carry an identical set of genes, but during development, different combinations of genes are switched on or off (expressed or not expressed) in different cell lineages; this differential gene expression, not any change to the underlying DNA sequence, is what produces such a wide variety of specialised cell types from one shared genome."
+    },
+    {
+      q: "Stem cells are being investigated as a potential treatment for Stargardt's disease, an inherited condition that causes degeneration of light-receptor cells in the eye and loss of vision. Why are stem cells considered a suitable potential treatment for this specific condition?",
+      options: ["They can be induced to develop into functioning receptor cells, potentially replacing the degenerated ones and preventing further vision loss", "They can be used to produce vitamin A directly within newborn babies", "They can be extracted directly from the eye of an adult patient without any prior processing", "They can be used solely to detect the disease early, without any therapeutic potential"],
+      correct: 0,
+      explanation: "Because stem cells are unspecialised and able to differentiate into a range of specific cell types, they hold potential to develop into functioning light-receptor cells that could replace those lost to degeneration in Stargardt's disease, offering a possible way to halt or partially reverse the resulting vision loss, rather than serving purely as a diagnostic tool or vitamin source."
+    },
+    {
+      q: "A cell biologist notes that a fully differentiated red blood cell and a fully differentiated white blood cell, despite arising from the same original bone marrow stem cell, express very different sets of genes. What best explains this observation?",
+      options: ["Differential gene expression during differentiation switches on different combinations of genes in each resulting cell type", "The two cell types actually carry different genomes, despite descending from the same stem cell", "Genes not needed by a particular cell type are physically deleted from that cell's DNA during differentiation", "Both cell types express an identical set of genes, with no meaningful difference between them"],
+      correct: 0,
+      explanation: "Even though red and white blood cells share an identical genome (both descending from the same original stem cell), the process of differentiation switches different combinations of genes on or off in each developing cell lineage; no genes are actually deleted or duplicated in the process, and this differential expression alone accounts for their very different final structures and functions."
+    },
+    {
+      q: "Undifferentiated stem cells in an early embryo are shown becoming specialised into distinct cell types as development proceeds, despite sharing an identical genome throughout. What is responsible for this specialisation?",
+      options: ["Different genes being switched on or off (expressed) in different developing cell lineages", "Random loss of specific chromosomes from certain cells as development proceeds", "The genome itself changing slightly in sequence as cells specialise", "Certain cells developing extra copies of the entire genome compared with others"],
+      correct: 0,
+      explanation: "Cell differentiation results from differential gene expression: as development proceeds, different combinations of genes are switched on or off in different lineages of cells arising from the same original, genetically identical stem cells, rather than from any loss, duplication, or sequence change to the underlying genome itself."
     }
   ],
 
@@ -1240,6 +1942,24 @@ const QUESTIONBANK = {
       options: ["A decrease in gene expression, since methylation typically prevents transcription factors from binding effectively", "An increase in gene expression, since methylation activates the promoter", "No effect on gene expression at all", "A permanent, irreversible change in the DNA base sequence itself"],
       correct: 0,
       explanation: "Methylation of cytosines in a promoter region typically blocks transcription factors and RNA polymerase from binding effectively, silencing or reducing expression of the associated gene; because this modification changes gene activity without altering the DNA sequence, it is classed as an epigenetic (rather than genetic) change, and it can potentially be reversed."
+    },
+    {
+      q: "A cross-section through a plant stem shows at least ten visibly different cell types, all having developed from the same original zygote and therefore carrying identical DNA. What is the best explanation for this cellular diversity?",
+      options: ["Different combinations of genes are switched on (expressed) in each different cell type as they develop and specialise", "Only one specific gene remains functional in each cell type, with all other genes permanently removed", "Each cell type's DNA sequence changes slightly as cells specialise during development", "Only genes considered 'useful' to a particular cell type remain present in that cell's genome"],
+      correct: 0,
+      explanation: "Even though every cell in a plant carries an identical copy of the genome (having descended from the same zygote), cell differentiation arises through differential gene expression: different combinations of genes are switched on or off in different developing cell lineages, producing distinct specialised cell types, rather than any actual change to the underlying DNA sequence itself."
+    },
+    {
+      q: "A diagram of a nucleosome shows DNA wound around a cluster of histone proteins, with one histone's protruding N-terminal tail specifically labelled. What is the functional significance of this protruding histone tail?",
+      options: ["It can be chemically modified (such as by acetylation) to influence how tightly DNA is packaged and how accessible genes are for transcription", "It directly codes for a specific protein once translated", "It serves solely as a structural anchor with no role in gene regulation", "It is the exact location where RNA polymerase always begins transcription"],
+      correct: 0,
+      explanation: "The protruding N-terminal tails of histone proteins are key sites for epigenetic modification, such as acetylation, which can loosen the tight winding of DNA around the histone core and make nearby genes more accessible for transcription; this kind of chemical modification, without altering the DNA sequence itself, is a central mechanism of gene expression regulation."
+    },
+    {
+      q: "In zebrafish, DNA methylation patterns inherited from the sperm and egg are largely erased immediately after fertilization, before being re-established later in development. What is the most likely biological reason for this immediate erasure of methylation marks?",
+      options: ["It allows genes linked to early embryonic development to be expressed, which would otherwise remain silenced by the inherited methylation patterns", "It is needed specifically to allow homologous chromosomes to pair correctly during the earliest cell divisions", "It prevents RNA polymerase from ever binding to any gene promoter throughout the individual's entire life", "Transcription can only ever occur at gene promoters that remain permanently methylated"],
+      correct: 0,
+      explanation: "Because methylation typically silences the genes it's associated with, if the parental methylation patterns were retained unchanged, genes essential for early embryonic development might remain switched off; erasing these inherited marks resets the epigenetic state, allowing the appropriate developmental genes to be expressed as the embryo begins forming its own tissues and cell types."
     }
   ],
 
@@ -1369,6 +2089,36 @@ const QUESTIONBANK = {
       options: ["A silent (synonymous) mutation", "A nonsense mutation, introducing a premature stop codon", "A frameshift mutation, shifting the entire reading frame", "A missense mutation, changing the resulting amino acid"],
       correct: 0,
       explanation: "A silent (or synonymous) mutation changes the DNA base sequence but, due to the redundancy built into the genetic code, still results in the same amino acid being coded for; this contrasts with missense mutations (which change the amino acid), nonsense mutations (which introduce a premature stop codon), and frameshift mutations (caused by insertions or deletions that shift the reading of all subsequent codons)."
+    },
+    {
+      q: "The image comparing a mother, a child, and four candidate men in a DNA profiling test shows band patterns on a gel, with the child's profile sharing some bands with the mother (as expected) and needing to share the remaining bands with the biological father. Which principle underlies using this kind of profile to identify the correct father?",
+      options: ["A child inherits half of their genetic markers from each biological parent, so the true father's profile should share the bands not already explained by the mother", "All humans share identical DNA profiles, making comparison unnecessary", "DNA profiles are unique to an individual but never shared with any biological relative", "The child's DNA profile is inherited entirely from the mother alone"],
+      correct: 0,
+      explanation: "Since a child inherits one set of genetic markers from their mother and one set from their biological father, any bands in the child's DNA profile not accounted for by the mother's profile should match the true father's profile; comparing several candidate men against this expectation is exactly how DNA profiling can be used to identify (or exclude) a likely biological father."
+    },
+    {
+      q: "What is the identical DNA between adult identical (monozygotic) twins expected to still differ in, despite sharing an identical original DNA base sequence?",
+      options: ["Methylation pattern, an epigenetic modification that can change independently in each twin over their separate lifetimes", "The order of genes along their chromosomes", "The sequence of nucleotides in their DNA", "The ratio of complementary base pairs (A-T to G-C) in their genome"],
+      correct: 0,
+      explanation: "Because identical twins arise from the same fertilised egg, their underlying DNA base sequence, gene order, and base pair ratios remain identical throughout life; however, epigenetic modifications such as DNA methylation patterns can change independently in each twin over time, in response to their separate environments and experiences, explaining subtle differences that can emerge between identical twins despite their shared genetic sequence."
+    },
+    {
+      q: "A cell that has undergone several mutations affecting genes controlling normal cell division is found to be dividing uncontrollably, a hallmark feature of cancer. Which combination of processes is required for this uncontrolled growth to actually produce a visible tumour mass?",
+      options: ["Repeated cycles of mitosis and cytokinesis, both needed to actually generate new, additional cells", "Mitosis alone, without any accompanying cytokinesis", "Cytokinesis alone, without any accompanying mitosis", "Meiosis, since tumour cells are typically haploid rather than diploid"],
+      correct: 0,
+      explanation: "Producing new cells requires both mitosis (division of the nucleus, distributing a complete set of chromosomes to each daughter nucleus) and cytokinesis (division of the cytoplasm, physically separating the cell into two); a tumour arises from repeated, uncontrolled cycles of both processes together, not from either process alone, and tumour cells remain diploid, produced by mitotic (not meiotic) division."
+    },
+    {
+      q: "A diagram compares the DNA profiles of two couples and two children, using gel electrophoresis banding patterns to determine the most probable parent-child relationships. What underlying genetic principle allows this kind of analysis to work?",
+      options: ["A child inherits half of their genetic markers from each biological parent, so their DNA profile should share bands with both true biological parents", "All individuals within the same family share an identical DNA profile", "DNA profiles are entirely random and unrelated to biological parentage", "Only the mother's DNA profile is reflected in a child's profile, with no paternal contribution"],
+      correct: 0,
+      explanation: "Since a child inherits one set of genetic markers from their mother and one set from their biological father, their DNA profile should show bands matching both true parents; comparing children's profiles against multiple candidate parent pairs, and looking for this expected pattern of shared bands, is exactly how DNA profiling can determine the most probable biological relationships."
+    },
+    {
+      q: "The overuse of antibiotics in medicine and agriculture has been linked to a decline in how effective these drugs are against certain bacterial infections over time. Which explanation correctly accounts for this decline in effectiveness?",
+      options: ["Overuse increases the proportion of bacteria in the population that are naturally better adapted to survive antibiotic exposure, through natural selection", "Patients themselves develop a physiological resistance to the antibiotic after repeated use", "Antibiotics chemically transform into a less effective compound after repeated widespread use", "Bacteria develop resistance through a process unrelated to natural selection, occurring independently of antibiotic exposure"],
+      correct: 0,
+      explanation: "Antibiotic overuse increases the selective pressure favouring any bacteria that already carry (or acquire through mutation) resistance traits; over repeated rounds of exposure, natural selection increases the proportion of resistant bacteria in the population, since susceptible bacteria are killed while resistant ones survive and reproduce, gradually reducing the antibiotic's overall effectiveness against that bacterial population."
     }
   ],
 
@@ -1516,6 +2266,90 @@ const QUESTIONBANK = {
       options: ["It maintains the corpus luteum, which continues to produce progesterone needed to sustain the pregnancy", "It stimulates milk production by the mammary glands ahead of childbirth", "It directly stimulates contraction of the uterine muscles at the onset of labour", "It stimulates the anterior pituitary gland to increase FSH production"],
       correct: 0,
       explanation: "In early pregnancy, before the placenta is developed enough to produce sufficient hormones on its own, hCG signals the corpus luteum in the ovary to keep producing progesterone; this maintains the uterine lining and prevents menstruation, sustaining the pregnancy during this critical early window."
+    },
+    {
+      q: "In the human female menstrual cycle, luteinizing hormone (LH) reaches a sharp peak roughly midway through the cycle. What is the primary function of this LH surge?",
+      options: ["To trigger ovulation, the release of the mature egg from the ovary", "To promote the development of secondary sexual characteristics at puberty", "To inhibit progesterone secretion from the corpus luteum", "To stimulate the follicle to begin releasing estrogen for the first time"],
+      correct: 0,
+      explanation: "The sharp mid-cycle surge in LH is specifically what triggers ovulation, causing the mature follicle to rupture and release its egg; estrogen secretion by the developing follicle actually begins earlier in the cycle (stimulated by FSH), and LH's role afterward (post-ovulation) shifts to maintaining, rather than inhibiting, progesterone secretion by the resulting corpus luteum."
+    },
+    {
+      q: "Which mechanism specifically prevents polyspermy, the fertilization of a single egg by more than one sperm cell?",
+      options: ["The cortical reaction, which alters the egg's surface to block additional sperm from entering", "Formation of polar bodies during meiosis in the female", "The acrosome reaction, which allows the first sperm cell to penetrate the egg's outer layers", "Spermatogenesis, the general process of sperm cell production"],
+      correct: 0,
+      explanation: "The cortical reaction occurs immediately after the first sperm fuses with the egg: cortical granules release their contents, modifying the egg's surrounding layers to prevent any additional sperm from binding or penetrating; the acrosome reaction, by contrast, is what allows the first sperm to actually penetrate the egg in the first place, rather than preventing further sperm entry."
+    },
+    {
+      q: "Which step occurs in both spermatogenesis and oogenesis, despite the many differences between how sperm and egg cells are ultimately produced in males and females?",
+      options: ["Germinal epithelium cells divide by mitosis to produce the initial cells that will later undergo meiosis", "The first division of meiosis is paused in prophase I until puberty in both processes", "The cytoplasm divides unequally at the end of the first meiotic division in both processes", "Four functional haploid gametes are produced at the end of meiosis II in both processes"],
+      correct: 0,
+      explanation: "Both spermatogenesis and oogenesis begin with mitotic division of germinal epithelium cells to produce the initial diploid cells that will eventually undergo meiosis; the later stages diverge significantly, since oogenesis specifically pauses in prophase I until puberty and divides its cytoplasm unequally (producing only one functional egg plus polar bodies), features not shared by spermatogenesis, which proceeds without this pause and divides evenly to produce four functional sperm."
+    },
+    {
+      q: "What is the specific role of human chorionic gonadotropin (hCG) during early pregnancy?",
+      options: ["It prevents the degeneration of the corpus luteum in the ovary, sustaining progesterone production", "It initiates the initial development of the uterine lining before implantation occurs", "It inhibits the production of estrogen throughout pregnancy", "It directly stimulates uterine contractions at the onset of labour"],
+      correct: 0,
+      explanation: "hCG, produced by the developing embryo shortly after implantation, signals the corpus luteum to continue producing progesterone rather than degenerating as it normally would after an unfertilised cycle; this sustained progesterone production maintains the uterine lining and supports the very early stages of pregnancy, before the placenta takes over hormone production later on."
+    },
+    {
+      q: "Progesterone, together with oxytocin, plays a role at the very end of pregnancy through a specific hormonal mechanism as labour begins. Which statement correctly describes this mechanism?",
+      options: ["Falling progesterone levels near the end of pregnancy remove an inhibitory effect on the uterus, allowing oxytocin's positive feedback mechanism to drive labour contractions", "Progesterone and oxytocin work together to sustain pregnancy throughout its entire duration with no change near labour", "Oxytocin inhibits progesterone secretion throughout pregnancy, preventing premature labour", "Progesterone directly triggers uterine contractions, independent of any role from oxytocin"],
+      correct: 0,
+      explanation: "Progesterone normally suppresses uterine contractions throughout pregnancy; as birth approaches, progesterone levels fall, removing this inhibitory effect and allowing the uterus to become more responsive to oxytocin, whose release then increases through a positive feedback loop (stretching of the cervix stimulating more oxytocin release, and more oxytocin causing stronger contractions) that drives the progression of labour."
+    },
+    {
+      q: "Which statement correctly describes the role of HCG during early pregnancy, considering how it interacts with the corpus luteum and progesterone production?",
+      options: ["HCG is secreted by the developing embryo to stimulate continued progesterone secretion by the corpus luteum", "HCG, together with oxytocin, is involved in a positive feedback mechanism that triggers uterine contractions during labour", "HCG sustains progesterone secretion by the placenta throughout the entire length of pregnancy", "HCG stimulates the ovary to maintain estrogen secretion specifically during the early weeks of pregnancy, with no effect on progesterone"],
+      correct: 0,
+      explanation: "HCG's defining early-pregnancy role is to signal the corpus luteum to continue producing progesterone, preventing the uterine lining from breaking down as it would during a normal menstrual cycle; this role is specific to the early stages of pregnancy, since the placenta itself later takes over progesterone production, at which point hCG's influence on the corpus luteum becomes less critical."
+    },
+    {
+      q: "A pedigree-style diagram traces chromosome numbers across generations of a species and notes that egg cells, sperm cells, and the resulting zygote each contain a specific, predictable number of chromosomes relative to one another. Which statement about human chromosome numbers is accurate?",
+      options: ["An egg cell contains 22 autosomes plus one sex chromosome", "A sperm cell contains 23 autosomes with no sex chromosome present", "An egg cell always contains two X chromosomes", "A zygote contains only two autosomes in total"],
+      correct: 0,
+      explanation: "Human gametes are haploid, containing 23 total chromosomes: 22 autosomes plus one sex chromosome (X in every egg cell, and either X or Y in a given sperm cell); a zygote, formed by the fusion of egg and sperm, is diploid with the full 46 chromosomes (44 autosomes plus two sex chromosomes), not the smaller numbers described in the incorrect options."
+    },
+    {
+      q: "The image of a human sperm cell shows a specific region containing a tightly packed spiral of mitochondria, positioned just behind the head of the sperm. What is the functional significance of this region?",
+      options: ["It is responsible for the greatest production of ATP within the sperm cell, powering the whipping motion of the tail", "It contains the sperm's genetic material, which is stored nowhere else in the cell", "It contains digestive enzymes used to penetrate the egg's outer layers", "It has no specific function and is simply a remnant of earlier development"],
+      correct: 0,
+      explanation: "The midpiece of a sperm cell contains a dense, spiral arrangement of mitochondria, which produce the large amount of ATP needed to power the whip-like beating of the sperm's tail (flagellum) as it swims toward the egg; the genetic material is instead housed in the sperm's head, and digestive enzymes for penetrating the egg are stored in the acrosome, a separate structure at the very tip of the head."
+    },
+    {
+      q: "Which molecule is specifically used in a home pregnancy test kit to detect pregnancy, and how is it produced?",
+      options: ["Monoclonal antibodies produced by hybridoma cells, specifically targeting HCG", "HCG itself, produced by plasma cells fused with tumour cells", "Antibodies against monoclonal hybridoma cells, rather than against HCG", "Monoclonal antibodies produced directly against hybridoma cells"],
+      correct: 0,
+      explanation: "Pregnancy tests use monoclonal antibodies, produced by hybridoma cells (formed by fusing antibody-producing plasma cells with continuously dividing tumour cells), specifically designed to bind HCG; HCG itself is the hormone being detected in the urine sample, not the antibody used to detect it, a common point of confusion worth clarifying."
+    },
+    {
+      q: "During the acrosome reaction, a sperm cell releases digestive enzymes that allow it to penetrate the layers surrounding an egg cell. What specifically occurs during this reaction?",
+      options: ["Enzymes digest the zona pellucida surrounding the egg, allowing a sperm cell to penetrate through to the egg's plasma membrane", "Enzymes digest the binding proteins of the zona pellucida specifically to prevent any further sperm from binding", "The acrosome releases binding proteins that attach directly to the zona pellucida without any digestion occurring", "The acrosome reacts directly with cortical granules within the egg to trigger fertilization"],
+      correct: 0,
+      explanation: "The acrosome reaction releases digestive enzymes from the sperm's acrosome that break down the zona pellucida, the protective glycoprotein layer surrounding the egg, allowing the sperm to penetrate through to reach and fuse with the egg's plasma membrane; preventing further sperm from binding (blocking polyspermy) is instead the role of the separate cortical reaction, which occurs after the first sperm has successfully fertilised the egg."
+    },
+    {
+      q: "At which specific stage of spermatogenesis does the first division of meiosis take place?",
+      options: ["The transition from primary spermatocyte to secondary spermatocyte", "The transition from spermatogonium to primary spermatocyte", "The transition from secondary spermatocyte to spermatid", "The transition from spermatid to mature sperm cell"],
+      correct: 0,
+      explanation: "The first meiotic division (meiosis I) occurs specifically as a primary spermatocyte divides to form two secondary spermatocytes; the earlier transition from spermatogonium to primary spermatocyte is a mitotic division, and the later transitions (secondary spermatocyte to spermatid, and spermatid to mature sperm) involve meiosis II and subsequent differentiation, respectively, not the first meiotic division."
+    },
+    {
+      q: "Which statement correctly applies to the human placenta and its role during pregnancy?",
+      options: ["Carbon dioxide diffuses from the fetal blood supply to the maternal blood supply across the placenta", "Maternal and fetal blood physically mix together within the placenta", "If an egg is not fertilized, the placenta is lost during menstruation", "The umbilical cord connects the placenta directly to the mother's abdominal wall"],
+      correct: 0,
+      explanation: "Waste products like carbon dioxide diffuse from the fetal blood supply, across the placental barrier, into the maternal blood supply for removal, all without the two blood supplies ever actually mixing; the placenta only forms after successful implantation of a fertilized egg (so it isn't lost during a normal, unfertilised menstrual cycle), and the umbilical cord connects the fetus to the placenta, not the placenta to the mother's abdominal wall directly."
+    },
+    {
+      q: "During which specific stage of spermatogenesis do diploid cells first become haploid?",
+      options: ["The transition from primary spermatocyte to secondary spermatocyte, via the first meiotic division", "The transition from spermatogonium to primary spermatocyte, via mitosis", "The transition from secondary spermatocyte to spermatid, via the second meiotic division only", "The transition from spermatid to mature sperm cell, via cellular differentiation"],
+      correct: 0,
+      explanation: "Diploid cells first become haploid specifically during meiosis I, as a diploid primary spermatocyte divides to produce two haploid secondary spermatocytes; the earlier spermatogonium-to-primary-spermatocyte transition is mitotic (remaining diploid), and later stages continue and complete the process without themselves being the point where diploid first becomes haploid."
+    },
+    {
+      q: "A student is asked to identify the location of specific cells within a cross-section of a lily anther. If a labelled group of cells is described as containing haploid nuclei recently produced by meiosis, what process must have occurred to produce these cells?",
+      options: ["Meiosis of a diploid mother cell within the anther", "Mitosis of an already-haploid cell within the anther", "Fertilization between two haploid gametes", "Pollination, transferring pollen from one flower to another"],
+      correct: 0,
+      explanation: "Producing haploid nuclei from an originally diploid starting cell requires meiosis, the only process capable of halving the chromosome number; mitosis of an already-haploid cell would simply produce more haploid cells without a reduction division being necessary, and fertilization or pollination are separate processes involving the combination or transfer, not the reduction, of genetic material."
     }
   ],
 
@@ -1657,6 +2491,108 @@ const QUESTIONBANK = {
       options: ["Inherited as a recessive autosomal allele", "Inherited as a dominant autosomal allele", "Inherited as a recessive sex-linked allele", "Inherited as a dominant sex-linked allele"],
       correct: 0,
       explanation: "A condition capable of skipping a generation (appearing in the children of unaffected parents, who must therefore be carriers) and affecting both sexes at similar frequency is classically consistent with autosomal recessive inheritance; dominant conditions typically appear in every generation where the allele is present, and sex-linked conditions usually show an uneven distribution between males and females."
+    },
+    {
+      q: "Huntington's disease, caused by a dominant autosomal allele, can develop in middle age and leads to progressive loss of brain cells. What can be reliably deduced about a man diagnosed with Huntington's disease?",
+      options: ["At least one of his parents must also have carried the dominant allele, and therefore at least one grandparent must also have had the condition (assuming no new mutation occurred)", "Exactly half of all his children will definitely develop the disease with certainty", "Neither of his parents could have had the disease themselves", "His daughters are more likely to inherit the disease than his sons"],
+      correct: 0,
+      explanation: "Since Huntington's disease is dominant, an affected individual must have inherited the allele from at least one affected parent (barring a new mutation), which in turn means that parent must have inherited it from one of their own parents, tracing back through the family tree; the specific proportion of his own children affected would be an average expectation (50% if he is heterozygous), not a guaranteed outcome for every individual child, and since the gene is autosomal (not sex-linked), sons and daughters are equally likely to inherit it."
+    },
+    {
+      q: "Male pattern baldness in humans is caused by a recessive allele located on the X chromosome. If an unaffected father (who does not carry the allele) and a mother who is a carrier for the allele have a child, what is the probability that this child will develop male pattern baldness in adulthood?",
+      options: ["25%", "0%", "50%", "75%"],
+      correct: 0,
+      explanation: "Since the father is unaffected and doesn't carry the allele, he contributes a normal X allele to any daughters and a Y chromosome to any sons; the carrier mother has a 50% chance of passing the baldness allele to any child. Sons receiving the allele from their mother (and only the Y from their father) would be affected, since they have no second X to mask it, while daughters would at most become carriers (receiving a normal X from their father); averaging across all possible children gives an overall probability of 25% for developing the condition."
+    },
+    {
+      q: "A pedigree chart shows the inheritance of hemochromatosis, a genetic disease causing excessive iron accumulation, appearing in roughly equal numbers of males and females across generations, sometimes skipping a generation entirely. What mode of inheritance is most consistent with this pattern?",
+      options: ["Autosomal recessive", "Sex-linked (X-linked) recessive", "Autosomal dominant", "Sex-linked (X-linked) dominant"],
+      correct: 0,
+      explanation: "A condition affecting males and females in roughly equal numbers, and capable of skipping a generation (appearing in children of unaffected carrier parents), is consistent with autosomal recessive inheritance; sex-linked conditions typically show an uneven distribution between the sexes, and dominant conditions typically don't skip generations in the way this pattern describes."
+    },
+    {
+      q: "Two parents, both heterozygous for the dominant Huntington's disease allele, have children together. What is the probability that any given child of theirs will develop Huntington's disease?",
+      options: ["75%", "25%", "50%", "100%"],
+      correct: 0,
+      explanation: "Crossing two heterozygous individuals (Aa x Aa) for a dominant condition produces offspring in a 1:2:1 ratio of homozygous dominant : heterozygous : homozygous recessive; since both the homozygous dominant and heterozygous genotypes result in the disease being expressed (because the allele is dominant), three out of every four expected offspring (75%) would be affected, with only the homozygous recessive genotype (25%) remaining unaffected."
+    },
+    {
+      q: "A dihybrid cross is performed between two pea plants to test whether the genes for seed shape and seed colour are linked or unlinked. A chi-squared test comparing observed results to the expected 9:3:3:1 ratio (predicted if the genes are unlinked) gives a calculated value of 6.25, below the critical value of 7.82 at the 5% significance level. What conclusion is best supported by this result?",
+      options: ["There is significant evidence that the genes are unlinked, since the calculated value falls below the critical value", "There is significant evidence that the genes are linked", "The results definitively prove the genes are unlinked beyond any doubt", "The results definitively prove the genes are linked beyond any doubt"],
+      correct: 0,
+      explanation: "A calculated chi-squared value below the critical value means the observed results are not significantly different from the expected 9:3:3:1 ratio predicted for unlinked genes, providing evidence consistent with (though not absolute proof of) the genes being unlinked; statistical tests support conclusions with a stated level of confidence rather than offering definitive proof either way."
+    },
+    {
+      q: "Black, short-haired guinea pigs, heterozygous for both coat colour and hair length, are crossed together and produce offspring in the classic 9:3:3:1 ratio expected for two unlinked genes. A different cross between other guinea pigs instead produces offspring in a 1:1:1:1 ratio for the same two traits. What genotypes would most likely explain this second, different cross?",
+      options: ["A heterozygous parent crossed with a parent that is homozygous recessive for both traits (a standard test cross)", "Two heterozygous parents crossed together, just as in the first cross", "Two homozygous dominant parents crossed together", "Two homozygous recessive parents crossed together"],
+      correct: 0,
+      explanation: "A 1:1:1:1 ratio across four phenotype combinations is the expected outcome of a test cross: crossing a heterozygous individual (for two unlinked genes) with an individual that is homozygous recessive for both traits produces offspring in equal proportions reflecting all four possible gamete combinations from the heterozygous parent, a different (and diagnostic) ratio from the 9:3:3:1 seen when two heterozygous individuals are crossed together."
+    },
+    {
+      q: "The karyogram of a human individual shows 47 total chromosomes, including three copies of chromosome 21 and a single X together with a single Y chromosome. What can be deduced from this karyogram?",
+      options: ["The individual is male with Down syndrome (trisomy 21)", "The individual is female with Down syndrome", "The individual is male with a missing chromosome", "The individual is female with a missing chromosome"],
+      correct: 0,
+      explanation: "The presence of both an X and a Y chromosome indicates a genetically male individual, while three copies of chromosome 21 (rather than the usual two) indicates trisomy 21, the chromosomal basis of Down syndrome; together, this karyogram is consistent with a male individual affected by Down syndrome."
+    },
+    {
+      q: "A couple has four children whose blood types include A, B, and AB, but no children with blood type O. What is the most likely combination of the parents' genotypes for the ABO blood group gene?",
+      options: ["One parent is heterozygous for type A (IAi) and the other is heterozygous for type B (IBi)", "One parent is heterozygous for type A (IAi) and the other is homozygous for type B (IBIB)", "One parent has genotype IAIB and the other is homozygous recessive (ii)", "Both parents are homozygous, one IAIA and the other IBIB"],
+      correct: 0,
+      explanation: "A cross between a heterozygous type A parent (IAi) and a heterozygous type B parent (IBi) can produce all of blood types A (IAi), B (IBi), AB (IAIB), and O (ii) among the offspring; since the observed children include A, B, and AB (and, with only four children, it's entirely possible that a fifth, O-type combination simply wasn't observed by chance), this genotype combination correctly accounts for the range of blood types seen."
+    },
+    {
+      q: "A dihybrid cross investigates two genes controlling eye colour and body colour in Drosophila fruit flies, where the alleles for red eyes and brown bodies are each dominant. Which specific cross would be most suitable for determining whether these two genes are linked?",
+      options: ["A fly heterozygous for both red eyes and brown bodies crossed with a fly that is white-eyed and yellow-bodied (homozygous recessive for both traits)", "A fly heterozygous for red eyes only crossed with a fly that is yellow-bodied only", "A white-eyed fly crossed with a fly that is homozygous for brown bodies", "Two flies that are both heterozygous for eye colour but homozygous for body colour"],
+      correct: 0,
+      explanation: "To test for gene linkage, a test cross between a double heterozygote and a double homozygous recessive individual is ideal, since it reveals the actual ratio of gamete types produced by the heterozygous parent directly in the phenotypes of the offspring; if the observed offspring ratio deviates significantly from the 1:1:1:1 ratio expected for unlinked genes, this provides evidence the genes are linked, an outcome that other cross combinations wouldn't reveal as clearly."
+    },
+    {
+      q: "In an individual heterozygous for two linked genes, a test cross is carried out with another individual that is homozygous recessive for both genes, in order to investigate how frequently crossing over occurs between the two linked genes. What kind of offspring, appearing less frequently than the two 'parental' combinations, would reveal that crossing over has taken place?",
+      options: ["Recombinant offspring, showing new combinations of alleles not present together in either original parent", "Offspring showing only the exact same allele combinations as the heterozygous parent", "Offspring that are entirely homozygous dominant for both genes", "Offspring identical to the homozygous recessive parent for both genes"],
+      correct: 0,
+      explanation: "When two genes are linked, most offspring from a test cross will show the two 'parental' allele combinations (matching how the alleles were originally arranged in the heterozygous parent); a smaller proportion, called recombinants, will show new combinations arising specifically from crossing over between the linked genes during meiosis, and the frequency of these recombinants can be used to estimate how far apart the two genes are on the chromosome."
+    },
+    {
+      q: "What is the correct definition of an allele?",
+      options: ["A different form of a gene, with a slightly different base sequence, that can influence a characteristic in a specific way", "An identical form of a gene found at different positions on a chromosome", "A gene that codes for exactly the same protein in every individual of a species", "A different form of a gene that always has an identical effect on a characteristic, regardless of which version is present"],
+      correct: 0,
+      explanation: "An allele is one of the different possible versions of a given gene, differing slightly in base sequence from other alleles of the same gene, and this variation is precisely what can produce different, alternative effects on the characteristic that gene controls; alleles of the same gene are found at the same locus on homologous chromosomes, not at different positions."
+    },
+    {
+      q: "Which event occurs specifically during the first division of meiosis (meiosis I), rather than during the second division (meiosis II)?",
+      options: ["Halving of the chromosome number, as homologous chromosomes are separated", "Synthesis (replication) of DNA", "Separation of sister chromatids from one another", "Division of the centromere joining sister chromatids"],
+      correct: 0,
+      explanation: "Meiosis I is specifically the reduction division, where homologous chromosome pairs separate, halving the chromosome number from diploid to haploid; DNA synthesis occurs earlier, during interphase before meiosis begins, while separation of sister chromatids and division of the centromere occur later, during meiosis II, which mechanically resembles a normal mitotic division."
+    },
+    {
+      q: "A pedigree chart tracks Duane syndrome, a condition caused by a dominant allele affecting eye alignment, across three generations of a family. If both parents in a couple are shown to be heterozygous carriers of the dominant allele (each also being affected, since the allele is dominant), what is the probability that their next child would also have Duane syndrome?",
+      options: ["75%", "50%", "25%", "100%"],
+      correct: 0,
+      explanation: "Crossing two heterozygous individuals for a dominant condition (Aa x Aa) produces offspring in a 1:2:1 ratio of homozygous dominant : heterozygous : homozygous recessive; since both the homozygous dominant and heterozygous genotypes result in the disease being expressed (the allele being dominant), three out of every four expected offspring (75%) would be affected, with only the homozygous recessive genotype remaining unaffected."
+    },
+    {
+      q: "A large study recorded the ABO blood group distribution across a national population, finding that the four blood types (A, B, AB, and O) occur in noticeably different proportions rather than being equally common. What can be concluded from this uneven distribution?",
+      options: ["Allele frequencies are not equal for all of the different blood group alleles within this population", "The majority of this population must show a co-dominant blood group phenotype", "Most individuals in this population could receive a blood transfusion from any other member", "Only a small, fixed percentage of any population can ever be heterozygous for blood group"],
+      correct: 0,
+      explanation: "Because the four ABO phenotypes arise from different combinations of three alleles (IA, IB, and i) at differing frequencies within a population, an uneven distribution of blood types directly indicates that the underlying allele frequencies themselves are not equal; this doesn't by itself indicate anything about compatibility for transfusion, the proportion of co-dominant phenotypes specifically, or place a fixed limit on the proportion who could be heterozygous."
+    },
+    {
+      q: "Mendel crossed pea plants with round, yellow seeds against plants with wrinkled, green seeds, and found that all F1 offspring had round, yellow seeds. Assuming independent assortment of the two genes involved, in the resulting F2 generation of 556 pea plants, approximately how many would be expected to have wrinkled, green seeds (the double recessive phenotype)?",
+      options: ["About 35 (roughly 1/16 of the total)", "About 0 (none at all)", "About 139 (roughly 1/4 of the total)", "All 556 plants"],
+      correct: 0,
+      explanation: "A dihybrid cross between two heterozygous F1 individuals is expected to produce offspring in the classic 9:3:3:1 ratio, with the double recessive phenotype (wrinkled, green) representing just 1/16 of the total; applied to 556 total F2 plants, this predicts approximately 35 plants (556 divided by 16) showing the double recessive combination of wrinkled, green seeds."
+    },
+    {
+      q: "A table shows which antigens and antibodies are present in each of the four ABO blood groups. Based on this information, which statement correctly describes a valid blood transfusion compatibility?",
+      options: ["A person with blood group B can safely receive blood from a group O donor", "A person with blood group O can safely receive blood of any blood type", "A child of parents with blood groups AB and O could show two different blood types depending on inheritance", "A child of two blood-group-A parents can only ever produce anti-B antibodies, regardless of their own genotype"],
+      correct: 0,
+      explanation: "Blood group O red blood cells carry no A or B antigens, meaning they can generally be safely transfused into a recipient of any ABO blood group, including a group B recipient, without triggering an antigen-antibody reaction; group O individuals, by contrast, can only safely receive group O blood themselves, since their plasma contains both anti-A and anti-B antibodies."
+    },
+    {
+      q: "A karyotype study reveals that all chromosomes extracted from both a bacterial cell and a unicellular fungus contain the standard four DNA bases (adenine, thymine, guanine, and cytosine). What does this shared feature demonstrate?",
+      options: ["The genetic code (and the bases used to encode it) is fundamentally shared across highly diverse organisms, from prokaryotes to eukaryotes", "Both organisms' chromosomes must be bound to histone proteins", "Both organisms' chromosomes exist as homologous pairs", "Both organisms' chromosomes must possess a centromere structurally identical to one another"],
+      correct: 0,
+      explanation: "Finding that both a prokaryote (bacterium) and a eukaryote (unicellular fungus) use the same four nitrogenous bases in their DNA reflects the shared, near-universal chemical basis of the genetic code across virtually all known life; it says nothing directly about histone binding (a eukaryotic-specific feature), chromosome pairing, or centromere structure, which can differ significantly between prokaryotes and eukaryotes."
     }
   ],
 
@@ -1756,6 +2692,24 @@ const QUESTIONBANK = {
       options: ["A bryophyte (such as a moss)", "A gymnosperm (such as a conifer)", "An angiosperm (a flowering plant)", "A fern (a vascular seedless plant)"],
       correct: 0,
       explanation: "Bryophytes, such as mosses, are non-vascular plants that lack the specialised water- and sugar-transporting tissue (xylem and phloem) found in ferns, gymnosperms, and angiosperms, so a dichotomous key branch describing 'no vascular tissue' would most likely lead to a bryophyte."
+    },
+    {
+      q: "A photograph of a scorpion shows a hard external covering and jointed, segmented legs. Which combination of features would correctly identify this organism as belonging to the phylum Arthropoda?",
+      options: ["An exoskeleton together with jointed (articulated) legs", "A segmented body together with an internal skeleton (endoskeleton)", "A soft body covered by a calcium-based external shell", "A body divided into three parts with radial symmetry"],
+      correct: 0,
+      explanation: "The combination of a hard external exoskeleton and jointed, articulated legs is a defining recognition feature of the phylum Arthropoda; an internal skeleton, radial symmetry, and a calcium-based shell are instead characteristic of other groups entirely (vertebrates, cnidarians, and molluscs respectively), not arthropods."
+    },
+    {
+      q: "A species of fungus grows in small colonies on damp, rotting wood in a rainforest, breaking down the wood externally with secreted enzymes before absorbing the digested products. What is the correct term for this mode of nutrition?",
+      options: ["Saprotrophic", "Detritivorous", "Holozoic", "Autotrophic"],
+      correct: 0,
+      explanation: "Saprotrophic nutrition specifically involves secreting digestive enzymes onto dead organic matter externally and then absorbing the resulting small molecules; detritivores, by contrast, physically ingest dead organic matter and digest it internally (a form of holozoic nutrition), a key distinction between the two related but different feeding strategies among decomposers."
+    },
+    {
+      q: "Two moss species are both classified within the same taxonomic order, Bryales, despite showing some differences in appearance. What can be reliably concluded about these two species, given that they share this order-level classification?",
+      options: ["They must also be classified within the same class, since class is a broader taxonomic level than order", "They must also be classified within the same genus, since genus is a broader taxonomic level than order", "They must possess vascular tissue for transporting water, since all bryophytes have vascular tissue", "They must reproduce by producing seeds, since all bryophytes reproduce this way"],
+      correct: 0,
+      explanation: "In taxonomic classification, class is a broader (higher) rank than order, so any two species sharing the same order must also share the same class (and higher ranks like phylum and kingdom); genus, however, is a narrower rank than order, so sharing an order doesn't guarantee sharing a genus, and bryophytes (mosses) characteristically lack vascular tissue and don't reproduce by seeds at all."
     }
   ],
 
@@ -1789,6 +2743,18 @@ const QUESTIONBANK = {
       options: ["It is likely adapted to a hot, arid (desert) environment, where minimising daytime water loss is critical for survival", "It is likely adapted to a cold, wet, temperate environment with abundant year-round rainfall", "It is likely an aquatic plant living permanently submerged in water", "This stomatal pattern provides no useful information about the plant's habitat"],
       correct: 0,
       explanation: "Opening stomata at night and closing them during the day is a hallmark adaptation of plants from hot, dry environments (a strategy known as CAM photosynthesis), since it dramatically reduces water loss through transpiration during the hottest, driest part of the day while still allowing the plant to take in carbon dioxide for later use in photosynthesis."
+    },
+    {
+      q: "Merriam's kangaroo rat, a small desert-dwelling mammal, is able to survive with very little access to drinking water. Which physiological adaptation would help this species conserve water and survive high desert temperatures?",
+      options: ["An unusually long loop of Henle, allowing the kidney to produce highly concentrated urine and reabsorb more water", "Increased sweating, to help cool the body during hot desert days", "Decreased secretion of ADH, reducing water reabsorption in the kidney", "Decreased water reabsorption specifically from the collecting duct"],
+      correct: 0,
+      explanation: "A longer loop of Henle allows a steeper solute concentration gradient to be established in the kidney's medulla, enabling much greater water reabsorption from the collecting duct and the production of highly concentrated urine, an important desert adaptation that minimises water loss; increased sweating and decreased ADH secretion or water reabsorption would instead worsen water loss, not conserve it."
+    },
+    {
+      q: "Plants growing in soil that has been irrigated for years with mineral-rich water can accumulate potentially harmful concentrations of salt in their tissues. Which adaptation would help such a plant survive in this saline environment?",
+      options: ["Active uptake and compartmentalisation of excess mineral ions, isolating them away from sensitive cellular processes", "Small, shallow roots, to minimise contact with the saline soil", "Increased transpiration, to rapidly replace water lost from the stem", "Leaves with a very large surface area, to maximise the rate of photosynthesis"],
+      correct: 0,
+      explanation: "Some salt-tolerant plants cope with saline soils by actively taking up excess mineral ions and compartmentalising them (often within cell vacuoles), keeping them away from sensitive metabolic machinery elsewhere in the cell; small shallow roots, increased transpiration, or large leaf surface area would not directly address the specific challenge of managing excess salt uptake, and some could actually worsen water stress in a saline environment."
     }
   ],
 
@@ -1894,6 +2860,72 @@ const QUESTIONBANK = {
       options: ["The evolution of distinct courtship behaviours in geographically separated populations, eventually preventing successful interbreeding between them", "Selective breeding by humans to produce new varieties of a crop plant", "Natural selection increasing the frequency of a darker coat colour within an existing population", "Selective feeding behaviour by an animal on a particular type of food source"],
       correct: 0,
       explanation: "Speciation specifically requires the formation of a new, reproductively isolated species; the evolution of distinct courtship behaviours in separated populations, if it eventually prevents successful interbreeding between them, represents a genuine example of behavioural reproductive isolation leading to speciation, unlike selective breeding, an increase in an existing allele's frequency, or a shift in feeding behaviour, none of which by themselves create a new species."
+    },
+    {
+      q: "Scientists studying finches on a Galapagos island documented significant year-to-year differences in average beak size, closely tracking with changes in food availability during periods of drought and abundant rainfall. Which explanation best accounts for this variation in beak shape between different birds within the same population?",
+      options: ["Individual birds within the population are adapted for slightly different available food sources, and natural selection favours whichever beak shape suits current conditions best", "All finches within the population must belong to genetically distinct species", "Beak size increases directly and immediately whenever competition for food increases, within an individual bird's own lifetime", "The more a beak is used for a particular task, the larger it grows over that individual bird's lifetime"],
+      correct: 0,
+      explanation: "Variation in beak shape and size already exists within the finch population due to genetic differences between individuals; when food conditions change (such as during drought, when only larger, tougher seeds remain available), individuals whose beak shape suits the current conditions survive and reproduce more successfully, shifting the population's average beak characteristics over generations — not because of change within an individual's own lifetime, or because different birds are separate species."
+    },
+    {
+      q: "Which combination of factors would favour evolution occurring through natural selection? I. Long individual lifespans within the species II. Favourable characteristics acquired by individuals during their own lifetime being inherited by offspring III. Existing variation in heritable characteristics within a population",
+      options: ["III only", "I and II only", "I and III only", "II only"],
+      correct: 0,
+      explanation: "Natural selection specifically requires pre-existing heritable variation within a population (statement III) for selection to act upon; statement II describes the discredited idea of inheritance of acquired characteristics, which is not how genetic inheritance works, and long lifespans (statement I) are not themselves a requirement for natural selection to occur, since selection can act effectively across species with short or long lifespans alike."
+    },
+    {
+      q: "How is evolution best described, according to the modern biological understanding of the term?",
+      options: ["A change in the heritable characteristics of a species across successive generations", "A change occurring in the phenotype of a single individual during its own lifetime", "The formation of a new species purely as a direct result of geographic separation, with no other contributing factors", "The idea that only the strongest individuals within a species are able to survive and reproduce"],
+      correct: 0,
+      explanation: "Evolution specifically refers to changes in the heritable, genetically-based characteristics of a population over multiple generations, not changes occurring within a single individual's lifetime; while geographic separation can contribute to speciation (one possible outcome of evolutionary divergence), it isn't itself the definition of evolution, and 'survival of the strongest' is an oversimplified popular phrase rather than the precise biological concept."
+    },
+    {
+      q: "Some strains of the bacterium Staphylococcus aureus have evolved mechanisms that specifically protect them from taking up foreign DNA from their environment (a process called horizontal gene transfer). What effect would this have on the rate at which antibiotic resistance evolves and spreads within these particular strains?",
+      options: ["Slower evolution of resistance, since these bacteria cannot as easily acquire resistance genes directly from other bacteria in their environment", "Faster evolution of resistance, since mutation rates increase specifically as a result of blocking horizontal gene transfer", "No effect on the evolution of resistance either way", "Faster evolution of resistance, since resistance genes could now only be inherited through normal reproduction"],
+      correct: 0,
+      explanation: "Horizontal gene transfer allows bacteria to rapidly acquire useful genes, including antibiotic resistance genes, directly from other bacteria in their environment, without needing new mutations to arise independently; strains that have evolved protection against taking up this foreign DNA lose access to this rapid transfer route, meaning they can only acquire resistance through their own mutations, which occurs more slowly."
+    },
+    {
+      q: "A graph tracks the proportion of a bacterial population resistant to a particular antibiotic over several years of that antibiotic's widespread clinical use, showing a steady rise in the resistant proportion. What conclusion is best supported by this data?",
+      options: ["Bacteria with beneficial resistance adaptations survive antibiotic exposure and pass their genes on to future generations more successfully than non-resistant bacteria", "Bacterial cells develop a form of \"immunity\" to the antibiotic through repeated individual exposure over their own lifetime", "Genetic variation within the bacterial population is necessarily increasing as a direct result of antibiotic use", "The antibiotic itself directly and specifically inhibits the growth of only the resistant bacteria"],
+      correct: 0,
+      explanation: "A rising proportion of resistant bacteria over time in the presence of ongoing antibiotic use is a textbook example of natural selection: individuals already carrying (or acquiring) a resistance adaptation survive treatment and reproduce, passing the resistance trait on to future generations, while susceptible bacteria are killed off, gradually shifting the population's overall makeup toward resistance."
+    },
+    {
+      q: "For a population's genotype frequencies to remain in Hardy-Weinberg equilibrium across generations, several specific conditions need to be met. Which of the following is one of these required conditions?",
+      options: ["Mating within the population occurs randomly, without preference for particular genotypes", "The population is very small in size, allowing genetic drift to act strongly", "Natural selection is actively favouring certain genotypes over others", "Individuals migrate freely into and out of the population"],
+      correct: 0,
+      explanation: "The Hardy-Weinberg model assumes random mating (no preference for particular genotypes when choosing mates), alongside a large population size (to minimise genetic drift), no migration, no new mutation, and no natural selection acting on any genotype; violating any of these conditions, including non-random mating, small population size, active selection, or migration, would be expected to shift genotype frequencies away from Hardy-Weinberg predictions."
+    },
+    {
+      q: "A population of insects shows increasing resistance to a widely used pesticide over several growing seasons. If resistance alleles were already present at low frequency in the population before the pesticide was first introduced, what evolutionary process best explains the population's shift toward greater resistance?",
+      options: ["Natural selection favouring individuals carrying the pre-existing resistance alleles, since they survive pesticide exposure and reproduce more successfully than susceptible individuals", "A sudden, coordinated mutation appearing simultaneously across the entire population in response to the pesticide", "Genetic drift causing a random increase in the resistance allele's frequency, unrelated to the pesticide itself", "The Hardy-Weinberg equation predicting that no change in allele frequency should occur under these conditions"],
+      correct: 0,
+      explanation: "When a resistance allele already exists at low frequency, exposure to a strong selective pressure like a pesticide kills susceptible insects disproportionately, allowing resistant individuals to survive, reproduce, and pass on their resistance alleles at a much higher rate; this differential survival and reproduction, natural selection, is what drives the population's rapid shift toward increased resistance over successive generations."
+    },
+    {
+      q: "Which of the following is a genuine, direct result of natural selection acting on a population over time?",
+      options: ["A decrease in the frequency of certain heritable characteristics within the population", "An increase in the total amount of genetic variation present among individuals", "The occurrence of heritable mutations specifically within gametes", "The simple fact that more offspring are produced than ultimately survive to reproductive age"],
+      correct: 0,
+      explanation: "Natural selection specifically causes changes in the frequency of heritable characteristics within a population, typically decreasing the frequency of less advantageous traits over time as individuals carrying them survive and reproduce less successfully; the other options describe related but distinct concepts — mutation as a source of variation, and overproduction of offspring as one of the preconditions that makes natural selection possible, rather than being results of selection itself."
+    },
+    {
+      q: "A graph tracks how the frequency of a particular trait changes within a population over several generations under a specific type of selection pressure, showing individuals with intermediate trait values becoming increasingly common while both extreme values become rarer. What type of selection does this pattern represent?",
+      options: ["Stabilizing selection", "Directional selection", "Disruptive selection", "No selection is occurring, since frequency is simply drifting randomly"],
+      correct: 0,
+      explanation: "Stabilizing selection favours individuals with intermediate trait values over those at either extreme, reducing overall variation in the trait and increasing the proportion of the population clustered around the average; this differs from directional selection (favouring one extreme) and disruptive selection (favouring both extremes over the intermediate), which produce very different, distinguishable patterns on a similar graph."
+    },
+    {
+      q: "Dogs, descended from grey wolves through thousands of years of human-directed selective breeding, now show tremendous diversity in size, coat type, and behaviour across different breeds. What does this diversity primarily result from?",
+      options: ["Selection by humans for a wide range of different desired traits across many generations", "Independent, unrelated instances of natural selection acting separately on each individual breed", "The formation of many separate species from an originally single wolf species", "Random genetic drift acting independently on each isolated dog breed, without any human involvement"],
+      correct: 0,
+      explanation: "The vast diversity of dog breeds results from selective breeding, humans deliberately choosing which individuals to breed based on desired traits, repeated over many generations; despite this dramatic phenotypic diversity, dogs remain a single species (fully capable of interbreeding), the result of directed artificial selection rather than natural selection, speciation, or unguided genetic drift."
+    },
+    {
+      q: "Overuse of a particular antibiotic in treating bacterial infections has been observed to make that antibiotic progressively less effective over time in a hospital setting. Which explanation correctly accounts for this decline in effectiveness, in terms of natural selection?",
+      options: ["Antibiotic exposure increases the number of bacteria in the population that are better adapted to survive it, since resistant individuals are favoured while susceptible ones are killed", "The antibiotic itself gradually and spontaneously changes into a chemically less effective compound with continued clinical use", "Patients treated with the antibiotic repeatedly develop their own personal, physiological resistance to it over time", "Overuse directly causes new resistance mutations to appear specifically and only in bacteria exposed to that antibiotic"],
+      correct: 0,
+      explanation: "Repeated antibiotic exposure creates strong selective pressure favouring any bacteria that already carry, or randomly acquire through mutation, a resistance trait; over successive rounds of treatment, natural selection increases the proportion of resistant bacteria in the population (since susceptible ones are killed while resistant ones survive and reproduce), which is the correct mechanistic explanation, distinct from any change in the antibiotic itself, any physiological change in the patient, or mutations being somehow directly caused by the antibiotic's presence."
     }
   ],
 
@@ -2005,6 +3037,54 @@ const QUESTIONBANK = {
       options: ["Both limbs are homologous at the level of pentadactyl limb structure (both descend from the same ancestral vertebrate limb plan), even though their specific digging adaptation evolved independently through convergent evolution", "The two species must share an unusually recent common ancestor after all", "One species' forelimb evolved directly from the other's", "The similarity is a coincidence with no evolutionary explanation available"],
       correct: 0,
       explanation: "All vertebrate limbs share the same underlying pentadactyl bone plan due to descent from a shared distant ancestor (making the basic limb structure homologous across vertebrates), but the specific digging adaptation seen in both moles evolved independently in each lineage in response to similar underground lifestyles, an example of convergent evolution operating within an already homologous starting structure."
+    },
+    {
+      q: "Two species of wolf spider each produce a distinct courtship sound, and females of each species will normally only mate with males producing the matching sound. In laboratory experiments, however, researchers found that crosses between the two species can still produce viable offspring. What can be hypothesised from this observation? I. The two groups show some degree of reproductive isolation under natural conditions. II. They could potentially be considered the same species biologically. III. This illustrates an example of behavioural isolation.",
+      options: ["I, II, and III", "I only", "II only", "I and II only"],
+      correct: 0,
+      explanation: "The fact that females normally reject males with the wrong courtship sound shows a behavioural barrier is normally maintaining reproductive isolation between the two groups (statements I and III); but since viable offspring can still be produced when this barrier is bypassed experimentally, this raises the possibility that the two groups have not yet diverged enough to be biologically incompatible, meaning they could still be considered a single species under the biological species concept (statement II)."
+    },
+    {
+      q: "The pentadactyl limb structure, found across mammals, birds, reptiles, and amphibians despite serving very different functions in each group, is a classic example of which kind of structure?",
+      options: ["Homologous structures, since they share a common evolutionary origin despite differing functions", "Analogous structures, since they share a similar function despite differing origins", "Vestigial structures, since they no longer serve any function", "Structures resulting purely from convergent evolution with no shared ancestry"],
+      correct: 0,
+      explanation: "Homologous structures share the same underlying anatomical origin, inherited from a common ancestor, even though they may now be adapted to very different functions across different lineages; the pentadactyl limb is a textbook example, since the same basic bone arrangement underlies a bat's wing, a whale's flipper, and a human hand, despite their very different present-day functions."
+    },
+    {
+      q: "Which combination of evidence could be used to support the theory of evolution? I. Patterns observed in selective breeding of domesticated animals. II. The fossil record. III. The presence of homologous structures across different species.",
+      options: ["I, II, and III", "I and II only", "I and III only", "II and III only"],
+      correct: 0,
+      explanation: "All three lines of evidence support evolutionary theory: selective breeding demonstrates that heritable traits can be shifted through selection over generations (a small-scale, human-directed analogue of natural selection), the fossil record shows a documented history of species change over deep time, and homologous structures reveal shared ancestry between apparently very different living species."
+    },
+    {
+      q: "During the industrialisation of England, the dark-coloured form of the peppered moth became far more common than the light form in polluted areas, but the light form later became common again as pollution decreased. What best explains this later shift back toward the light form?",
+      options: ["Reduced pollution allowed lichen to regrow on tree bark, giving the light-coloured moths better camouflage from predators again", "The dark-coloured moths became unable to find mates as pollution declined", "The light-coloured moths developed superior feeding abilities compared with dark moths", "Increased pollution continued to favour the dark form even after industrialisation declined"],
+      correct: 0,
+      explanation: "The classic peppered moth example illustrates natural selection driven by predation and camouflage: as pollution declined and lichen recolonised tree bark, light-coloured tree surfaces returned, once again making light-coloured moths better camouflaged and less likely to be eaten by predators than dark moths, reversing the earlier shift that had favoured the dark form during heavy industrial pollution."
+    },
+    {
+      q: "A study exposes a bacterial population to sub-lethal doses of an antibiotic and tracks the proportion of the population showing resistance over many generations. If antibiotic resistance genes are already present at low frequency in the starting population, what pattern would be expected over time?",
+      options: ["Resistant bacteria increasingly dominate the population, since they survive antibiotic exposure and reproduce while non-resistant bacteria are killed", "The proportion of resistant bacteria would be expected to decrease over time regardless of antibiotic exposure", "Antibiotic exposure would have no effect on the relative proportions of resistant and non-resistant bacteria", "Genetic variation in the population would be expected to decrease as a direct result of antibiotic exposure"],
+      correct: 0,
+      explanation: "This is a direct, observable example of natural selection: bacteria carrying a pre-existing resistance allele survive antibiotic exposure and continue reproducing, while susceptible bacteria are killed off, so the proportion of resistant individuals in the population increases with each generation of exposure, a well-documented real-world consequence of antibiotic overuse."
+    },
+    {
+      q: "Scientists compared gene sequences across all the chromosomes of humans and chimpanzees, measuring the average divergence between corresponding genes on each chromosome. If the data show considerable variation in divergence between different chromosomes, but the sex chromosomes show a much larger difference between the species than the autosomes do, what can be deduced?",
+      options: ["Autosomes are more similar between humans and chimpanzees than the sex chromosomes are", "Humans and chimpanzees have exactly the same number of chromosomes", "Humans are more closely related to chimpanzees than to any other primate species", "Smaller chromosomes are always more similar between species than larger chromosomes"],
+      correct: 0,
+      explanation: "If sex chromosomes show a much greater degree of divergence between humans and chimpanzees than the autosomes do, this directly supports the conclusion that autosomes are, on average, more similar between the two species; this pattern doesn't by itself establish anything about total chromosome number, overall closeness of relationship compared with other primates, or a general size-based rule linking chromosome size to similarity."
+    },
+    {
+      q: "Dogs have been selectively bred by humans from grey wolves over thousands of years, producing an enormous variety of breeds differing in size, coat type, and temperament. What is a direct result of this history of selective breeding?",
+      options: ["Dogs display a wide variety of phenotypes as a result of selection for different traits", "Dogs and grey wolves must now be classified as different species entirely", "The tails of different dog breeds are considered analogous structures to one another", "Discrete (rather than continuous) variation is shown in leg length across different dog breeds"],
+      correct: 0,
+      explanation: "Selective breeding for different desired traits over many generations has produced the enormous diversity of phenotypes seen across modern dog breeds; dogs remain the same species as grey wolves (capable of interbreeding), features like tail shape across breeds remain homologous (not analogous, since they share a common ancestral structure), and traits like leg length typically show continuous, not discrete, variation."
+    },
+    {
+      q: "Studies of lactase persistence (the ability to digest lactose into adulthood) show the allele responsible was present at very low frequency in prehistoric European populations, but has become common in modern-day European populations. What is the most likely explanation for this substantial change in allele frequency?",
+      options: ["Strong positive natural selection favoured the lactase persistence allele, likely linked to the cultural adoption of dairy farming", "Drinking milk directly caused the mutation to occur in the population", "The lactase persistence allele was horizontally transferred to humans from cattle", "Prehistoric milk did not contain lactose, so there was previously no selective pressure at all"],
+      correct: 0,
+      explanation: "The dramatic rise in frequency of the lactase persistence allele is best explained by strong positive natural selection: as dairy farming became culturally established, individuals able to digest lactose into adulthood likely gained a significant nutritional advantage, causing the allele to spread rapidly through the population over relatively few generations, a well-documented example of gene-culture co-evolution."
     }
   ],
 
@@ -2032,6 +3112,12 @@ const QUESTIONBANK = {
       options: ["Interspecific competition has restricted each species to a narrower realized niche within its broader fundamental niche", "Their fundamental and realized niches are identical", "The species have no niche overlap of any kind", "Competition has expanded both species' realized niches beyond their fundamental niche"],
       correct: 0,
       explanation: "A fundamental niche describes the full range of conditions a species could occupy in the absence of competitors, while the realized niche is the narrower range it actually occupies once competition is taken into account; observing two competitors partitioning the habitat is a sign that competitive exclusion has squeezed each species into a smaller realized niche."
+    },
+    {
+      q: "A hummingbird feeds on nectar from a particular species of flower and, in doing so, transfers pollen between flowers of that same species. What ecological term describes this kind of mutually beneficial interaction between two different species?",
+      options: ["Mutualism", "Parasitism", "Commensalism", "Predation"],
+      correct: 0,
+      explanation: "Mutualism describes an interspecific relationship in which both participating species benefit; here, the hummingbird gains food (nectar) while the plant gains a means of pollen transfer for reproduction, a mutual exchange distinguishing this relationship from parasitism (one species benefits at the other's expense) or commensalism (one species benefits with no effect on the other)."
     }
   ],
 
@@ -2107,6 +3193,42 @@ const QUESTIONBANK = {
       options: ["Comparisons of DNA or RNA sequences (such as ribosomal RNA) across the different groups", "Direct observation of interbreeding between the groups shown", "Measurements of each organism's physical size and body shape alone", "Fossil dating alone, without reference to any molecular data"],
       correct: 0,
       explanation: "Modern cladograms, especially those used to define the three-domain system, rely heavily on molecular evidence, particularly comparisons of highly conserved sequences like ribosomal RNA, which can reveal evolutionary relationships that aren't always obvious from physical appearance or fossil evidence alone."
+    },
+    {
+      q: "A plant species previously classified in a large family based on general appearance has since been moved into a different, smaller family following further scientific investigation. What is the most likely reason for this kind of reclassification?",
+      options: ["DNA sequence data revealed the species actually shares a more recent common ancestor with members of a different family", "The plant's overall appearance had changed since it was first classified", "The plant had recently been discovered growing in a new geographic location", "The genus name of the plant was changed for naming convention reasons only"],
+      correct: 0,
+      explanation: "Modern classification increasingly relies on DNA sequence comparisons rather than surface appearance alone; when molecular evidence reveals that a species shares a more recent common ancestor with a different group than previously assumed based on physical resemblance, taxonomists reclassify it to better reflect its true evolutionary relationships, even if this means moving it out of a family it superficially resembles."
+    },
+    {
+      q: "A table records the presence or absence of five different physical traits across several species, and this data is then used to construct several possible cladograms. Which cladogram would be considered the best representation of the evolutionary relationships between these species?",
+      options: ["The cladogram requiring the fewest total evolutionary changes to explain the pattern of shared and different traits", "The cladogram that places the species in alphabetical order regardless of their shared traits", "Any cladogram is equally valid regardless of how many changes it requires", "The cladogram with the greatest number of branching points, regardless of trait data"],
+      correct: 0,
+      explanation: "When multiple cladograms could technically fit a given set of trait data, the principle of parsimony favours the simplest explanation: the cladogram requiring the fewest independent evolutionary changes (gains or losses of traits) to account for the observed pattern is generally considered the most likely true representation of the species' evolutionary relationships."
+    },
+    {
+      q: "A cladogram is constructed using data on which of five species possess or lack five particular anatomical traits. What kind of traits are most appropriate to use as the basis for building a reliable cladogram?",
+      options: ["Homologous traits, since these reflect shared ancestry rather than independent evolution", "Analogous traits, since these are easier to observe than homologous ones", "Any observable trait, regardless of whether it is homologous or analogous", "Traits that vary the most in overall size between species"],
+      correct: 0,
+      explanation: "Cladograms are meant to reflect true evolutionary relationships based on shared ancestry, so they should be built using homologous traits (structures inherited from a common ancestor); analogous traits, which arise independently through convergent evolution rather than shared ancestry, can mislead a cladogram's construction if mistakenly included, since they don't reflect genuine relatedness."
+    },
+    {
+      q: "A cladogram of part of the animal kingdom shows several branch points, with one particular grouping of species defined by an ancestor and only some, but not all, of its descendants. Would this grouping be considered a valid clade?",
+      options: ["No, since a valid clade must include a common ancestor and all of its descendants, not just a partial selection", "Yes, any grouping of species drawn from a cladogram is automatically a valid clade", "Yes, as long as the grouping includes at least two species", "No, since a clade can never include more than three species"],
+      correct: 0,
+      explanation: "A true clade consists of a common ancestor and every one of its descendants, with none excluded; a grouping that includes an ancestor but leaves out some of its descendant branches doesn't meet this definition and isn't considered a valid clade, even though it might look like a reasonable-seeming cluster on the diagram."
+    },
+    {
+      q: "A table compares ribosomal RNA (rRNA) sequence similarity between several organisms representing all three domains of life, using an association coefficient where higher values indicate greater similarity. If two organisms show a notably higher association coefficient with each other than either does with organisms from a third domain, what can be concluded?",
+      options: ["The two organisms with the higher coefficient likely belong to the same domain", "The two organisms must belong to the same genus", "All organisms compared must belong to the same domain regardless of their coefficient values", "The association coefficient reveals nothing about domain-level classification"],
+      correct: 0,
+      explanation: "Since rRNA sequence similarity is used specifically as evidence for domain-level classification, two organisms sharing a notably higher association coefficient with each other than with organisms from other domains provides evidence that they belong to the same domain; this coefficient reflects broad evolutionary relatedness at the domain level, not necessarily a much finer-grained relationship like shared genus."
+    },
+    {
+      q: "The wings of bats and the wings of insects both evolved to enable flight, but bat wings are supported by bones while insect wings are supported by veins, reflecting entirely different underlying structures. What is the best description of this relationship?",
+      options: ["They are analogous structures, since both serve the same function (flight) but arose independently from very different ancestral structures", "They are homologous structures, since both evolved from a shared ancestor with wings", "They are homologous structures, formed through the process of adaptive radiation from one ancestral wing type", "They are neither analogous nor homologous, since flight isn't considered an evolutionary adaptation"],
+      correct: 0,
+      explanation: "Because bats (mammals) and insects are only very distantly related and their most recent common ancestor did not have wings, their flight structures evolved independently to serve the same function; this is the hallmark of analogous structures (similar function, different origin), arising through convergent evolution rather than shared, homologous ancestry."
     }
   ],
 
@@ -2227,6 +3349,60 @@ const QUESTIONBANK = {
       options: ["Corals deposit less calcium carbonate to build their skeletons, since increased dissolved CO2 makes ocean water more acidic", "Heterotrophic marine organisms consume significantly more phytoplankton as a direct result", "Phytoplankton show increased rates of photosynthesis as a direct benefit of the extra dissolved CO2", "Rising ocean pH directly reduces enzyme activity in marine organisms"],
       correct: 0,
       explanation: "Dissolved CO2 reacts with seawater to form carbonic acid, lowering ocean pH (ocean acidification, not a rise in pH); this makes it more difficult for corals and other calcifying organisms to deposit and maintain calcium carbonate structures such as skeletons and shells, threatening coral reefs and shelled marine life more broadly."
+    },
+    {
+      q: "Which mechanism correctly explains how greenhouse gases contribute to global warming?",
+      options: ["They absorb and re-radiate long-wave radiation emitted from Earth's surface, preventing it from escaping directly into space", "They destroy the ozone layer, allowing more harmful radiation to reach Earth's surface", "They trap short-wavelength radiation from the sun within the atmosphere before it can reach the surface", "They are themselves a direct product of combustion and generate heat through that chemical reaction alone"],
+      correct: 0,
+      explanation: "Greenhouse gases work by absorbing long-wave (infrared) radiation that Earth's surface re-emits after being warmed by incoming short-wave solar radiation; by absorbing and re-radiating this energy back toward the surface rather than letting it escape directly into space, greenhouse gases trap heat within the atmosphere, the mechanism underlying the enhanced greenhouse effect and global warming, distinct from ozone depletion, which is a separate atmospheric issue."
+    },
+    {
+      q: "A table compares several greenhouse gases based on their relative abundance in the atmosphere and their capacity to absorb long-wave radiation per molecule. Based on typical data of this kind, which gas is generally considered to contribute the most overall to observed climate change?",
+      options: ["Carbon dioxide, because despite absorbing less radiation per molecule than some other gases, its sheer abundance in the atmosphere gives it the largest overall warming effect", "Methane, because it has the shortest atmospheric lifespan of the major greenhouse gases", "Nitrous oxide, because it absorbs the greatest amount of short-wave radiation specifically", "CFCs, because their main atmospheric effect is destroying the ozone layer rather than trapping heat"],
+      correct: 0,
+      explanation: "Although some greenhouse gases (like methane) are considerably more potent per molecule at trapping heat, carbon dioxide's much greater overall abundance in the atmosphere, driven largely by fossil fuel combustion, gives it the largest total contribution to the enhanced greenhouse effect and observed climate change, illustrating why total atmospheric contribution depends on both potency per molecule and overall concentration."
+    },
+    {
+      q: "Which human activity contributes most directly to recent increases in atmospheric carbon dioxide concentration?",
+      options: ["Burning of fossil fuels", "Planting trees on previously cleared land", "Cattle rearing", "Waste disposal in landfills"],
+      correct: 0,
+      explanation: "While cattle rearing and landfills do contribute to atmospheric greenhouse gases (primarily as sources of methane rather than CO2), and planting trees actually removes CO2 from the atmosphere rather than adding it, burning fossil fuels remains the single most significant direct contributor to the recent, rapid rise in atmospheric carbon dioxide concentration."
+    },
+    {
+      q: "A diagram of part of the carbon cycle specifically involving methane shows certain conditions (labelled W, X, and Y) that favour methane production at each point. What general combination of conditions would be expected at these points?",
+      options: ["The presence of archaeans together with waterlogged, oxygen-poor soil conditions", "The presence of eubacteria together with well-oxygenated, dry soil conditions", "The presence of eubacteria together with waterlogged soil conditions, but no involvement of archaeans", "The presence of archaeans together with well-oxygenated soil conditions"],
+      correct: 0,
+      explanation: "Methane production is specifically carried out by methanogenic archaeans (not eubacteria) under anaerobic, waterlogged conditions such as those found in wetlands, flooded soils, and rice paddies; oxygen-rich or dry conditions do not favour this type of anaerobic archaeal metabolism, making the combination of archaeans and waterlogged, low-oxygen soil the correct general description."
+    },
+    {
+      q: "A carbon flux diagram represents the estimated amount of carbon moving each year between major global reservoirs, such as the atmosphere, oceans, and land vegetation. Which conclusion could be validly drawn from this kind of diagram if the arrows into and out of the ocean are not perfectly balanced?",
+      options: ["Photosynthesis by marine organisms can be a component contributing to more than one arrow (or flux) shown in the diagram", "Every unit of carbon entering the ocean must eventually be permanently stored as calcium carbonate", "More carbon must be removed from the ocean each day than is added to it, based purely on visual inspection", "The oceans are incapable of storing carbon in a dissolved chemical form"],
+      correct: 0,
+      explanation: "A single biological process like photosynthesis by marine phytoplankton can feed carbon into multiple different pathways represented by separate arrows on such a diagram (for example, contributing both to the marine food web and eventually to the formation of calcium carbonate through subsequent processes); drawing more specific quantitative conclusions (like which direction the net flow goes) would require more precise numerical data than a simple diagram alone typically provides."
+    },
+    {
+      q: "Rising ocean carbon dioxide concentrations, driven by increased fossil fuel combustion, have a documented adverse effect on certain marine organisms. What specific problem does this increase in dissolved CO2 cause for organisms like corals and shelled molluscs?",
+      options: ["Corals and shelled organisms deposit less calcium carbonate to build their skeletons and shells, since increased dissolved CO2 lowers ocean pH (ocean acidification)", "Heterotrophic marine organisms begin consuming significantly more phytoplankton as a direct consequence", "Phytoplankton show a marked increase in their rate of photosynthesis due to the extra dissolved CO2", "Rising ocean pH (rather than falling pH) is what directly reduces enzyme activity in these organisms"],
+      correct: 0,
+      explanation: "Dissolved CO2 reacts with seawater to form carbonic acid, lowering ocean pH (a process called ocean acidification, not a rise in pH); this makes it more chemically difficult for corals and shelled molluscs to deposit and maintain calcium carbonate structures, directly threatening coral reefs and shell-forming marine life as atmospheric and dissolved CO2 continue to rise."
+    },
+    {
+      q: "A carbon sink is defined as any reservoir that absorbs and stores more carbon dioxide from the atmosphere than it releases. Which biological process specifically increases the size of the ocean's carbon sink?",
+      options: ["Photosynthesis by marine phytoplankton and algae, fixing dissolved CO2 into organic carbon compounds", "Respiration by marine organisms, releasing CO2 back into the water", "Ocean acidification, a chemical rather than biological process", "Decomposition of dead marine organic matter, releasing stored carbon back into circulation"],
+      correct: 0,
+      explanation: "Photosynthesis by marine phytoplankton and algae removes dissolved CO2 from ocean water and fixes it into organic carbon compounds, some of which eventually sinks and becomes buried in ocean sediment, increasing the overall size of the ocean's carbon sink; respiration and decomposition, by contrast, work in the opposite direction, releasing stored carbon back into circulation rather than increasing the sink."
+    },
+    {
+      q: "Which mechanism correctly explains the main way in which greenhouse gases contribute to global warming?",
+      options: ["They absorb long-wave radiation emitted from Earth's surface, retaining heat that would otherwise escape into space", "They convert long-wave radiation into short-wave radiation as it passes through the atmosphere", "They create a hole in the ozone layer, allowing more heat to reach Earth's surface directly", "They reflect short-wave solar radiation, increasing the total amount of energy reaching the surface"],
+      correct: 0,
+      explanation: "Greenhouse gases work specifically by absorbing long-wave (infrared) radiation that Earth's surface emits after being warmed by incoming short-wave solar radiation; by absorbing and re-radiating this energy back toward the surface rather than allowing it to escape directly into space, greenhouse gases trap heat within the atmosphere, the mechanism underlying the enhanced greenhouse effect, distinct from ozone depletion, a separate atmospheric issue."
+    },
+    {
+      q: "A graph shows the worldwide increase in fossil fuel combustion from 1800 to the present day, closely tracking with a corresponding rise in atmospheric CO2 concentration and global average temperature. How does the increased combustion of fossil fuels contribute significantly to this observed warming?",
+      options: ["The carbon dioxide produced by combustion absorbs long-wave radiation, trapping additional heat within the atmosphere", "The direct heat released by the combustion process itself is the primary driver of global-scale warming", "Combustion of fossil fuels causes significant depletion of the ozone layer, which is the main driver of the observed warming", "The products of combustion reflect incoming short-wave solar radiation, increasing total energy input to the atmosphere"],
+      correct: 0,
+      explanation: "The main way fossil fuel combustion drives global warming is by releasing carbon dioxide, a greenhouse gas that absorbs outgoing long-wave radiation from Earth's surface and re-radiates it back, enhancing the natural greenhouse effect; the direct heat released by burning fuel is comparatively negligible at a global scale, and ozone depletion, while a related atmospheric concern, is a distinct issue from CO2-driven warming."
     }
   ],
 
@@ -2302,6 +3478,42 @@ const QUESTIONBANK = {
       options: ["Testing whether two species tend to be found living together more often than would be expected by chance", "Testing whether the mean height of one plant population is greater than another", "Testing the specific effect of a single named abiotic factor on one particular plant species", "Testing whether one population of plants shows greater tolerance to heavy metal contamination than another"],
       correct: 0,
       explanation: "A chi-squared test compares observed frequencies of categorical data against expected frequencies, making it well suited to questions like whether two species are found together (or apart) more often than chance would predict; comparing mean values between groups (like height or tolerance) instead calls for a different statistical test, such as a t-test."
+    },
+    {
+      q: "A sealed, transparent terrestrial mesocosm containing soil, plants, and small invertebrates is set up to demonstrate a self-sustaining ecosystem. What is exchanged between this sealed mesocosm and the surrounding external environment, if the system is otherwise completely closed off?",
+      options: ["Energy (in the form of light entering and heat leaving), but no matter", "Water, entering and leaving freely through the sealed container", "Air, freely exchanged between the mesocosm and its surroundings", "Nothing at all can pass between the mesocosm and its surroundings"],
+      correct: 0,
+      explanation: "A sealed mesocosm is closed to matter (no gases, water, or nutrients enter or leave), but it cannot be closed to energy, since light must enter to power photosynthesis and heat generated by respiration must be able to escape; this reflects the broader ecological principle that matter can be recycled within a closed system, but energy must continually flow through from an external source."
+    },
+    {
+      q: "A group of students uses quadrat sampling to record the presence or absence of two plant species across an area of grassland, then applies a chi-squared test to assess whether the two species' distributions are associated with one another. If the calculated chi-squared value comes out below the critical value, what can be concluded?",
+      options: ["The distribution of one species appears to be independent of the other, with no significant association detected", "The alternative hypothesis (that the species are associated) should be accepted", "Both species must be evenly distributed throughout the entire grassland", "The distribution of both species must be correlated with a specific abiotic factor"],
+      correct: 0,
+      explanation: "A calculated chi-squared value below the critical value means there is insufficient evidence to reject the null hypothesis (that the two species' distributions are independent of one another); this supports the conclusion that no significant association was detected between the two species' distributions, not that they are necessarily evenly distributed or influenced by a specific abiotic factor, which the test alone cannot determine."
+    },
+    {
+      q: "Ecologists studying wild wolf spider populations use capture-mark-recapture techniques to estimate population size across several study plots. Which underlying assumption is essential for the Lincoln index formula to give an accurate estimate from this kind of data?",
+      options: ["Marked individuals must redistribute randomly throughout the population and be equally likely to be recaptured as unmarked individuals", "Every single individual in the population must be captured during the first sampling event", "The population must be increasing rapidly between the two sampling events", "Marking individuals must have no possibility of affecting their survival or behaviour"],
+      correct: 0,
+      explanation: "The Lincoln index calculation relies on marked individuals mixing randomly back into the population and being neither more nor less likely to be recaptured than unmarked individuals; if marking affects behaviour or survival, or if marked individuals don't redistribute evenly, the resulting population estimate would be biased and inaccurate."
+    },
+    {
+      q: "Two wolf spider populations, previously assumed to be separate species based on distinct courtship behaviours, are found through experimentation to produce viable offspring when crossed under laboratory conditions. What ecological or evolutionary concept does this finding raise questions about?",
+      options: ["Whether behavioural (courtship) differences alone are sufficient to classify the two populations as fully separate species under the biological species concept", "Whether either population belongs to the same ecological community", "Whether either population occupies a distinct ecological niche", "Whether population size estimates for either group would be affected"],
+      correct: 0,
+      explanation: "The biological species concept defines species partly by reproductive isolation; if two populations normally kept apart by behavioural barriers (like courtship rituals) can still produce viable offspring when that barrier is experimentally bypassed, this raises the question of whether they have genuinely diverged enough to be considered fully separate species, or whether they remain capable of interbreeding and should be considered a single species instead."
+    },
+    {
+      q: "Which factor(s) would be expected to genuinely vary over time within a sealed (closed) terrestrial mesocosm, given that no matter can enter or leave the system? I. Total carbon content II. Temperature III. Total biomass",
+      options: ["II and III only", "I only", "I and II only", "I, II, and III"],
+      correct: 0,
+      explanation: "Because a sealed mesocosm is closed to matter, its total carbon content should remain essentially constant over time (carbon is recycled internally rather than lost or gained); temperature can vary in response to external conditions (like changes in ambient light or surrounding air temperature), and total biomass can genuinely change as organisms grow, reproduce, or die within the closed system."
+    },
+    {
+      q: "A study uses quadrat sampling and a chi-squared test to investigate whether the presence of two plant species in a grassland is associated. Which statistical value would need to be calculated before the chi-squared statistic itself can be determined?",
+      options: ["The expected values, calculated assuming the two species are distributed independently of each other", "The mean height of each plant species across all sampled quadrats", "The total area of the grassland being studied", "The exact geographic coordinates of each sampled quadrat"],
+      correct: 0,
+      explanation: "A chi-squared test compares observed data against expected values calculated under a null hypothesis, here, that the two species are distributed independently of one another; these expected values must be calculated first, based on the overall frequencies observed, before the chi-squared statistic itself (comparing observed to expected) can be computed."
     }
   ],
 
@@ -2395,6 +3607,48 @@ const QUESTIONBANK = {
       options: ["It reduces the rate at which carbon is taken up and cycled through photosynthesis, while also potentially releasing previously stored soil carbon back into the atmosphere", "It has no measurable effect on either nutrient cycling or energy flow in the ecosystem", "It only affects the flow of energy through the ecosystem, without altering nutrient cycling at all", "It increases the total amount of carbon stored within the remaining ecosystem"],
       correct: 0,
       explanation: "Removing large areas of vegetation reduces the ecosystem's capacity to take up atmospheric carbon through photosynthesis, disrupting the normal cycling of carbon as a nutrient; disturbed soil can also release previously stored carbon (built up over long periods through decomposition) back into the atmosphere, compounding the disruption to the ecosystem's carbon balance."
+    },
+    {
+      q: "A simplified diagram of a carbon cycle shows two labelled processes, X and Y, connecting the atmosphere to living organisms and back again. If X represents carbon moving from the atmosphere into producers, and Y represents carbon moving from organisms back into the atmosphere, what processes do X and Y most likely represent?",
+      options: ["X is photosynthesis, and Y is cellular respiration", "X is cellular respiration, and Y is photosynthesis", "X is decomposition, and Y is combustion", "X is combustion, and Y is decomposition"],
+      correct: 0,
+      explanation: "Photosynthesis is the process that removes carbon dioxide from the atmosphere and fixes it into organic carbon compounds within producers, while cellular respiration is the process that returns carbon dioxide from living organisms (including producers themselves) back into the atmosphere, making these the two most fundamental, opposing carbon-cycle processes connecting the atmosphere and living organisms."
+    },
+    {
+      q: "A diagram showing global carbon flux between reservoirs (such as the atmosphere, oceans, and land) includes an arrow representing the movement of carbon from the ocean's surface waters into deep ocean storage, largely as dissolved calcium carbonate. What can be deduced about this specific arrow if photosynthesis is a component of both this arrow and another arrow leading in a different direction?",
+      options: ["Photosynthesis by marine organisms contributes carbon to more than one pathway within the overall ocean carbon cycle", "This arrow represents only respiration by marine organisms, unrelated to photosynthesis", "Every unit of carbon removed from the ocean surface must be entirely due to physical dissolution, with no biological component", "The ocean cannot be a net carbon sink if photosynthesis is involved in multiple pathways"],
+      correct: 0,
+      explanation: "If photosynthesis by marine phytoplankton and algae is shown as a component contributing to more than one arrow in a carbon flux diagram, this indicates that biological carbon fixation feeds into multiple downstream pathways (such as both the food web and eventual burial as calcium carbonate), reflecting the interconnected nature of biological and physical processes within the broader ocean carbon cycle."
+    },
+    {
+      q: "In a stable ecosystem, both energy and nutrients are essential for sustaining life, but they behave very differently as they move through the system. Which statement correctly captures this key distinction?",
+      options: ["Nutrients are recycled repeatedly within the ecosystem, while energy flows through in one direction and must be continually resupplied", "Both energy and nutrients are recycled repeatedly within the ecosystem with no need for external input", "Energy is recycled repeatedly, while nutrients flow through in one direction and are lost permanently", "Neither energy nor nutrients need to be replenished once an ecosystem reaches a stable state"],
+      correct: 0,
+      explanation: "A defining feature of ecosystem ecology is that nutrients (such as carbon, nitrogen, and phosphorus) can be recycled indefinitely through feeding, respiration, and decomposition, while energy instead flows through the system in a single direction (usually entering as sunlight and being progressively lost as heat), meaning a continual external supply of energy, unlike nutrients, is always required to sustain the ecosystem."
+    },
+    {
+      q: "Methane is produced in specific environments by particular groups of microorganisms as part of the broader carbon cycle. Which combination of conditions and organisms is most closely associated with significant methane production?",
+      options: ["Archaeans living in waterlogged, oxygen-free soils, such as those found in wetlands or rice paddies", "Eubacteria living in well-oxygenated, dry soils", "Eubacteria requiring the presence of oxygen and organic matter together", "Archaeans requiring the presence of oxygen for methane production"],
+      correct: 0,
+      explanation: "Methane is produced by methanogenic archaeans carrying out anaerobic metabolism specifically in oxygen-free, waterlogged environments such as wetland soils, flooded rice paddies, and the digestive tracts of certain animals; the combination of anaerobic (not oxygen-rich) conditions and archaeans (not eubacteria) is what characterises significant biological methane production."
+    },
+    {
+      q: "Which statement correctly applies to how energy and matter (such as carbon and other nutrients) are transferred within an ecosystem?",
+      options: ["Production of carbon dioxide by cellular respiration results in a loss of usable carbon compounds (as chemical energy) from an organism, even though the carbon atoms themselves re-enter the wider carbon cycle", "Green plants transfer heat energy directly from the sun into chemical energy stored in carbon compounds", "The greatest proportional loss of energy in a food chain occurs specifically at the very end of the chain, among top predators", "Both energy and nutrients are infinite resources that never need to be recycled or resupplied"],
+      correct: 0,
+      explanation: "When an organism respires, it releases carbon dioxide, which represents a loss of usable chemical energy from that organism (energy that is dissipated, largely as heat) even though the carbon atoms themselves remain available to be recycled elsewhere in the carbon cycle; this distinction between the fate of energy (lost as heat, not recycled) and matter (recycled) is a key underlying principle of ecosystem ecology."
+    },
+    {
+      q: "Which statement correctly describes energy and nutrient transfers within an ecosystem?",
+      options: ["Carbon dioxide production during cellular respiration represents a loss of chemical energy from the respiring organism", "Green plants convert heat energy directly from sunlight into chemical energy stored in carbon compounds", "The greatest proportional loss of energy in a food chain occurs specifically among the very last consumers in the chain", "Both energy and nutrients are finite resources that must be recycled within an ecosystem to sustain it"],
+      correct: 0,
+      explanation: "When an organism respires, releasing carbon dioxide, this represents a loss of usable chemical energy from that organism (dissipated mostly as heat), even though the carbon atoms themselves remain available for recycling elsewhere in the carbon cycle; plants convert light energy (not heat) into chemical energy through photosynthesis, and while nutrients genuinely are recycled within ecosystems, energy specifically flows through in one direction and cannot be recycled the way matter can."
+    },
+    {
+      q: "The graph of worldwide fossil fuel use from 1800 to the present shows a dramatic, ongoing increase. How has this increased combustion of fossil fuels contributed significantly to global warming?",
+      options: ["The carbon dioxide produced by combustion absorbs long-wave radiation, trapping heat within the atmosphere", "The heat directly released by the combustion process itself is what raises atmospheric temperature", "Combustion causes depletion of the ozone layer, which enhances the greenhouse effect", "Combustion products directly reflect short-wave radiation, increasing the total amount of solar energy reaching Earth's surface"],
+      correct: 0,
+      explanation: "The primary mechanism by which fossil fuel combustion drives global warming is the release of carbon dioxide, a greenhouse gas that absorbs long-wave (infrared) radiation re-emitted from Earth's surface and re-radiates it back, trapping heat within the atmosphere (the enhanced greenhouse effect); the direct heat released by combustion itself is comparatively negligible on a global scale, and ozone depletion is a related but distinct atmospheric issue."
     }
   ],
 
@@ -2434,6 +3688,12 @@ const QUESTIONBANK = {
       options: ["Urban expansion and clearing land for agriculture", "Restoring degraded habitats and reducing urban sprawl", "Establishing more protected wildlife reserves", "Reducing the human population size"],
       correct: 0,
       explanation: "Habitat loss from expanding cities and converting natural land to farmland is one of the largest direct drivers of global biodiversity loss, since it destroys or fragments the habitats that species depend on, unlike restoration or protection efforts, which work in the opposite direction."
+    },
+    {
+      q: "A hummingbird visits a large, brightly coloured flower repeatedly, feeding on its nectar while incidentally transferring pollen from one flower to another as it moves between them. What makes this a mutualistic, rather than a one-sided, relationship?",
+      options: ["The bird obtains a food source (nectar), while the plant benefits from having its pollen transferred, aiding reproduction", "The bird obtains nutrients, but the plant receives no benefit at all from the interaction", "The plant provides shelter for the bird, with no benefit exchanged in the other direction", "The bird transfers pollen exclusively to flowers of a completely different, unrelated species"],
+      correct: 0,
+      explanation: "A mutualistic relationship benefits both species involved: the hummingbird gains a reliable food source in the form of nectar, while the plant benefits from pollen being carried to other flowers of the same species, aiding cross-pollination and successful reproduction, a mutual exchange of benefit that distinguishes mutualism from one-sided relationships like parasitism or commensalism."
     }
   ],
 
@@ -2569,6 +3829,90 @@ const QUESTIONBANK = {
       options: ["The phospholipid bilayer alone (for small non-polar molecules), plus channel and carrier proteins (for larger or polar molecules, or against a gradient)", "Only the phospholipid bilayer can transport any substance across the membrane", "Only channel proteins are capable of transporting substances across the membrane", "Only carrier proteins are capable of transporting substances across the membrane"],
       correct: 0,
       explanation: "Different substances cross the membrane by different routes depending on their size, polarity, and the direction of movement required: small non-polar molecules can diffuse directly through the phospholipid bilayer, while larger or polar/charged molecules require specific channel proteins (facilitated diffusion) or carrier proteins (facilitated diffusion or active transport, depending on whether ATP is used)."
+    },
+    {
+      q: "More than 90% of the cholesterol found in mammalian cells is located within the plasma membrane itself. What is the main functional role of this cholesterol?",
+      options: ["It regulates the fluidity of the membrane across a range of temperatures", "It increases the overall solubility of the membrane in water", "It increases the membrane's general permeability to all substances equally", "It regulates the temperature of the membrane directly"],
+      correct: 0,
+      explanation: "Cholesterol embedded within the phospholipid bilayer helps regulate membrane fluidity: it restrains excessive fluidity at higher temperatures and prevents the membrane from becoming too rigid at lower temperatures, helping the membrane maintain appropriate physical properties across a range of conditions rather than affecting the membrane's overall solubility or directly regulating temperature itself."
+    },
+    {
+      q: "A comparison of several plasma membrane samples with differing lipid compositions asks which one would remain least fluid when exposed to high temperatures. Which composition would be expected to answer this?",
+      options: ["A membrane with a higher proportion of saturated fatty acid tails and more cholesterol, both of which restrict fluidity", "A membrane with a higher proportion of unsaturated fatty acid tails, which increases fluidity", "A membrane entirely lacking cholesterol, since cholesterol always increases fluidity", "A membrane composition has no measurable effect on fluidity at high temperature"],
+      correct: 0,
+      explanation: "Saturated fatty acid tails pack together more tightly than the kinked tails of unsaturated fatty acids, reducing membrane fluidity; cholesterol, at higher temperatures, also helps restrain excessive fluidity by filling gaps between phospholipids, so a membrane rich in saturated fatty acids and cholesterol would be expected to remain comparatively less fluid even under high-temperature conditions."
+    },
+    {
+      q: "Facilitated diffusion allows certain substances to cross a membrane down their concentration gradient without requiring energy from ATP. What combination of factors is genuinely required for facilitated diffusion to occur? I. A concentration gradient across the membrane II. ATP to actively power the transport III. A specific channel or carrier protein embedded in the membrane",
+      options: ["I and III only", "I only", "II and III only", "I, II, and III"],
+      correct: 0,
+      explanation: "Facilitated diffusion requires a concentration gradient (to provide the driving force for net movement) and a specific channel or carrier protein (since the molecule cannot cross the lipid bilayer unaided); it specifically does not require ATP, which is the defining feature that distinguishes facilitated diffusion (passive) from active transport (which does use ATP to move substances, often against their gradient)."
+    },
+    {
+      q: "Facilitated diffusion of ions across an axon membrane and active transport by the sodium-potassium pump share a structural similarity, despite differing in their energy requirements and the direction of transport relative to the concentration gradient. What is this shared similarity?",
+      options: ["Both processes are carried out by specific proteins embedded in the membrane", "Both processes require ATP to proceed", "Both processes move substances against their concentration gradient", "Both processes use exactly the same type of transport protein"],
+      correct: 0,
+      explanation: "Both facilitated diffusion and active transport rely on specific membrane proteins to move their target substances across the membrane, distinguishing both from simple diffusion (which requires no protein); they differ in that facilitated diffusion moves substances down their concentration gradient without ATP, while active transport (like the sodium-potassium pump) moves substances against their gradient using ATP."
+    },
+    {
+      q: "Red blood cells from a small mammal are placed into a series of increasingly concentrated salt solutions, and the percentage of cells that rupture (haemolyse) is measured after two hours. At the lowest tested salt concentration, water is observed moving into the red blood cells by osmosis. What can be deduced about the relationship between this low-concentration solution and the cell's cytoplasm?",
+      options: ["The solution is hypotonic relative to the cytoplasm, so water moves into the cell down its water potential gradient", "The solution is hypertonic relative to the cytoplasm, so water moves out of the cell", "The solution is isotonic relative to the cytoplasm, so there is no net water movement", "The solution's tonicity cannot be determined from this observation alone"],
+      correct: 0,
+      explanation: "Water moving into a cell by osmosis indicates that the surrounding solution has a higher water potential (a lower solute concentration) than the cell's cytoplasm, meaning the solution is hypotonic relative to the cell; this causes the cell to take up water and, if the imbalance is severe enough, to swell and eventually burst (haemolyse), consistent with the low-concentration end of the tested range."
+    },
+    {
+      q: "Micrographs show red blood cells before and after immersion in a particular salt solution, with the cells appearing visibly shrunken and shrivelled (crenated) afterward. What best explains this observed change?",
+      options: ["The salt solution was hypertonic relative to the cell's cytoplasm, so water moved out of the cells by osmosis", "The salt solution was hypotonic relative to the cell's cytoplasm, disrupting the cell membranes and causing shrinkage", "The salt solution was isotonic, causing no change in cell shape", "Mineral salts were actively pumped into the cells, causing them to shrink"],
+      correct: 0,
+      explanation: "Shrinking and shrivelling of red blood cells (crenation) indicates that water has moved out of the cells by osmosis, which occurs when the surrounding solution is hypertonic (has a lower water potential) relative to the cell's cytoplasm, drawing water outward until the cell shrinks; this is the opposite tonicity situation to a hypotonic solution, which would cause cells to swell instead."
+    },
+    {
+      q: "A diagram of a replication fork shows single-stranded DNA-binding proteins attached to the exposed single strands just behind the point where helicase has unwound the double helix. What is the specific role of these binding proteins?",
+      options: ["They stabilise the separated single strands, preventing them from re-forming the double helix before replication enzymes can act", "They actively unwind the double helix themselves, ahead of helicase", "They add new nucleotides to the growing DNA strand", "They remove RNA primers and replace them with DNA"],
+      correct: 0,
+      explanation: "Once helicase has unwound and separated the two DNA strands, single-stranded DNA-binding proteins attach to the exposed single strands to keep them apart and stable, preventing the strands from spontaneously re-annealing (re-forming the double helix) before DNA polymerase and other replication enzymes have had a chance to act on them."
+    },
+    {
+      q: "The internal structure of an alveolus wall is examined and found to consist of extremely thin cells arranged in a way that minimises the diffusion distance between air and blood. What kind of membrane transport mechanism is primarily responsible for gas exchange occurring at this structure?",
+      options: ["Simple diffusion, since oxygen and carbon dioxide are small, non-polar molecules that cross directly through the phospholipid bilayer", "Active transport, requiring ATP to move gases into and out of the blood", "Facilitated diffusion through specific gas transport proteins", "Osmosis, since gases move as part of a bulk water flow"],
+      correct: 0,
+      explanation: "Oxygen and carbon dioxide are small, non-polar gas molecules capable of diffusing directly through the phospholipid bilayer of alveolar cells without needing a channel, carrier, or energy input; this simple diffusion, aided by the alveoli's thin walls and large surface area, is what allows efficient gas exchange between air and blood."
+    },
+    {
+      q: "A diagram shows several protein channels embedded in a cell membrane, allowing the passive movement of a specific substance down its concentration gradient without requiring ATP. Which statement correctly describes this kind of transport?",
+      options: ["Net movement of the substance continues until concentrations inside and outside the cell become equal", "ATP is required to move the substance into the cell against its concentration gradient", "The channel proteins ensure movement can only occur in one direction, regardless of concentration", "Substances move from areas of low concentration to areas of high concentration"],
+      correct: 0,
+      explanation: "Facilitated diffusion, movement through a channel protein down a concentration gradient without requiring ATP, continues (like any diffusion process) until the concentration on both sides of the membrane reaches equilibrium; it does not require energy, doesn't inherently restrict direction (movement follows whichever way the concentration gradient points), and does not move substances against their gradient, which would instead require active transport."
+    },
+    {
+      q: "Onion epidermal cells placed in pure water are then transferred into a hypertonic solution and observed under a light microscope. What change would be expected in these cells as a result of this transfer?",
+      options: ["The cell membrane would detach from the cell wall at some points, as the cytoplasm shrinks", "The cells would take in water by osmosis and swell", "The cells would gain overall mass as water enters", "The cells would burst open, releasing their contents"],
+      correct: 0,
+      explanation: "A hypertonic solution has a lower water potential than the cell's cytoplasm, so water moves out of the cell by osmosis; as the cytoplasm shrinks away from the rigid cell wall (which doesn't shrink with it), the cell membrane pulls away from the wall at various points, a process called plasmolysis, rather than the cell swelling, bursting, or gaining mass, which would instead occur in a hypotonic solution."
+    },
+    {
+      q: "Five potato cylinders of equal size are placed into five different sucrose solutions of varying concentration, and their mass is measured before and after the experiment. If the isotonic concentration (where no net mass change occurs) is later calculated to be 0.30 M, in how many of the solutions with a concentration higher than 0.30 M would the potato cylinders be expected to lose mass?",
+      options: ["All of the solutions with a concentration above 0.30 M", "None of the solutions, since mass loss only occurs below the isotonic point", "Only the single solution with the highest tested concentration", "All five solutions, regardless of their concentration relative to 0.30 M"],
+      correct: 0,
+      explanation: "Any solution more concentrated than the isotonic point (0.30 M) is hypertonic relative to the potato cells, meaning water moves out of the cells by osmosis, causing mass loss; solutions below 0.30 M are hypotonic, causing mass gain instead, so mass loss would be expected specifically and consistently in every solution above the isotonic concentration, not below it."
+    },
+    {
+      q: "A diagram of a chloroplast shows a specific membrane protein that acts as a transmembrane channel, allowing hydrogen ions to move down their concentration gradient. Which property allows this protein to be embedded stably within the hydrophobic core of the membrane while still functioning in an aqueous environment?",
+      options: ["It has hydrophobic regions embedded in the membrane and hydrophilic regions exposed to the surrounding water", "It is entirely hydrophilic, dissolving freely within the lipid bilayer", "It is entirely hydrophobic, including the parts exposed to the surrounding cytoplasm", "It contains no exposed regions of any kind outside the membrane itself"],
+      correct: 0,
+      explanation: "Like other transmembrane proteins, this channel protein is amphipathic: portions spanning the hydrophobic interior of the membrane are themselves hydrophobic, compatible with the surrounding lipid tails, while portions exposed to the aqueous environment on either side of the membrane are hydrophilic, allowing the protein to remain stably embedded while still functioning correctly in a watery surrounding environment."
+    },
+    {
+      q: "Cholesterol is embedded within the phospholipid bilayer of many cell membranes. What is its primary functional role there?",
+      options: ["To regulate membrane fluidity across a range of temperatures", "To store chemical energy for later use by the cell", "To act as a channel allowing specific substances to cross the membrane", "To physically hold adjacent cells together at junctions"],
+      correct: 0,
+      explanation: "Cholesterol's main role within the membrane is to regulate fluidity: it restrains excessive fluidity at higher temperatures and helps prevent the membrane from becoming too rigid at lower temperatures; it does not itself function as an energy store, a transport channel, or a cell-adhesion structure, roles carried out by other specific membrane components."
+    },
+    {
+      q: "A diagram compares blood cell types visible in a single micrograph, both descended from the same original stem cell in bone marrow. What best explains the structural and functional differences between these two blood cell types?",
+      options: ["Different genes are expressed in each cell type as they mature and differentiate", "The two cell types have undergone different numbers of mitotic divisions overall", "Only one of the two cell types is capable of any oxygen-related reaction", "Only one of the two cell types is capable of reacting to foreign antigens at all"],
+      correct: 0,
+      explanation: "Even though both blood cell types derive from the same original stem cell and share an identical genome, differential gene expression during their maturation and differentiation produces their distinct final structures and specialised functions, rather than differences in overall division count or a strict one-cell-type-only capability for oxygen or antigen reactions."
     }
   ],
 
@@ -2608,6 +3952,42 @@ const QUESTIONBANK = {
       options: ["It changes the permeability of the collecting duct's walls to water, increasing water reabsorption and producing more concentrated urine", "It increases ultrafiltration of solutes at the glomerulus, diluting the blood directly", "It increases reabsorption of sodium ions specifically in the loop of Henle, reducing water excretion indirectly", "It causes selective reabsorption of specific solutes in the distal convoluted tubule"],
       correct: 0,
       explanation: "ADH acts specifically on the collecting duct, increasing its permeability to water by inserting more aquaporin channels into its walls; this allows more water to be reabsorbed from the filtrate back into the blood as it passes through, producing a smaller volume of more concentrated urine and reducing the blood's overall solute concentration back toward normal."
+    },
+    {
+      q: "A diagram shows structures involved in the human body's regulation of internal water balance, including a section of nephron where selective reabsorption of glucose occurs. What best facilitates the formation of the initial filtrate at the very start of this process, in the glomerulus?",
+      options: ["Numerous small pores (fenestrations) in the walls of the glomerulus's capillaries, allowing small molecules to pass through easily under pressure", "High pressure specifically inside Bowman's capsule, pushing fluid back into the capillaries", "ADH, secreted by the pituitary gland, controlling how much fluid is filtered", "Osmosis driven by a high concentration of urea specifically within the blood"],
+      correct: 0,
+      explanation: "Ultrafiltration at the glomerulus is facilitated by numerous small pores (fenestrations) in the capillary walls, which allow water, ions, and small molecules like glucose to be forced out of the blood and into Bowman's capsule under the high pressure generated by the narrow efferent arteriole; ADH acts much later in the nephron (at the collecting duct), not at the glomerulus itself."
+    },
+    {
+      q: "A daily rhythm in human body temperature, typically lowest during sleep and highest during waking hours, is observed across a 24-hour cycle. Which hormone plays a central role in controlling this circadian pattern?",
+      options: ["Thyroxin", "Insulin", "Glucagon", "Progesterone"],
+      correct: 0,
+      explanation: "Thyroxin, secreted by the thyroid gland, helps regulate metabolic rate, which directly influences body temperature; its secretion follows a daily rhythm that helps produce the characteristic daily fluctuation in core body temperature, distinct from insulin and glucagon (blood glucose regulation) or progesterone (primarily reproductive functions)."
+    },
+    {
+      q: "The formation of glomerular filtrate depends on specific structural features of the kidney's blood supply at that point. Considering the balance of pressures involved, what specifically drives fluid out of the glomerular capillaries and into Bowman's capsule?",
+      options: ["High hydrostatic pressure within the glomerular capillaries, created partly by the narrow efferent arteriole restricting outflow", "Low pressure specifically within Bowman's capsule pulling fluid inward", "Active transport of water molecules using ATP", "A hypertonic solution actively drawing fluid into Bowman's capsule by osmosis"],
+      correct: 0,
+      explanation: "The efferent arteriole leaving the glomerulus is narrower than the afferent arteriole entering it, which helps maintain unusually high hydrostatic pressure within the glomerular capillaries; combined with the presence of fenestrations (pores) in the capillary walls, this high pressure forces water and small solutes out of the blood and into Bowman's capsule, forming the initial filtrate."
+    },
+    {
+      q: "Which combination of hormonal and thermoregulatory mechanisms would be triggered if a person's body temperature dropped below its normal set point?",
+      options: ["Increased thyroxin secretion to raise metabolic rate, alongside vasoconstriction and shivering to conserve and generate heat", "Decreased thyroxin secretion, alongside vasodilation to lose heat more rapidly", "Increased sweating to help regulate the drop in temperature", "No hormonal involvement at all, since temperature regulation relies purely on behavioural responses"],
+      correct: 0,
+      explanation: "A drop in body temperature triggers several coordinated responses: increased thyroxin secretion raises metabolic rate (generating more heat as a by-product), vasoconstriction of skin blood vessels reduces heat loss from the body surface, and shivering (rapid, repeated muscle contraction) generates additional heat directly, all working together as a negative feedback response to restore normal body temperature."
+    },
+    {
+      q: "A study measures the concentration of a hormone that varies in a clear daily rhythm across a 24-hour period, closely tracking with core body temperature changes. If this hormone's secretion is disrupted (for example, by shift work or jet lag), what physiological consequence would be expected based on its normal role?",
+      options: ["Disrupted daily body temperature and metabolic rhythms, since this hormone helps regulate the body's circadian pattern of metabolism", "No physiological consequence at all, since this hormone plays no role in daily rhythms", "An immediate and permanent change in the body's core temperature set point", "A permanent loss of the ability to regulate body temperature altogether"],
+      correct: 0,
+      explanation: "Since this hormone (thyroxin) normally follows a daily rhythm that helps drive the body's circadian pattern of metabolic rate and temperature, disrupting its normal secretion pattern (such as through shift work or crossing time zones) would be expected to disrupt the usual daily rhythm of body temperature and metabolism, though this disruption is generally temporary and adjusts as the body's rhythms gradually resynchronise."
+    },
+    {
+      q: "Which region of a mammalian nephron is responsible for reabsorbing the largest overall quantity of water from the filtrate?",
+      options: ["The proximal convoluted tubule", "Bowman's capsule", "The loop of Henle", "The collecting duct"],
+      correct: 0,
+      explanation: "Although the loop of Henle and collecting duct both play crucial roles in fine-tuning water reabsorption and concentrating urine, the proximal convoluted tubule is responsible for reabsorbing the largest overall proportion of filtered water (and other useful substances like glucose) as filtrate first passes through the nephron, well before more selective adjustments occur further along."
     }
   ],
 
@@ -2692,6 +4072,36 @@ const QUESTIONBANK = {
       options: ["The thick, centrally-positioned filament with visible projecting heads", "The thin filament anchored to the Z-line at either end of the sarcomere", "The entire sarcomere, from one Z-line to the next", "The whole myofibril, made up of many repeating sarcomeres"],
       correct: 0,
       explanation: "Myosin forms the thick filaments of a sarcomere, positioned centrally and recognisable by their distinctive projecting heads that reach out toward the neighbouring thin actin filaments; the actin filaments themselves are thinner and anchored to the Z-lines at either end of the sarcomere, while the whole repeating unit between two Z-lines is the sarcomere, and a chain of many sarcomeres makes up a myofibril."
+    },
+    {
+      q: "An insect leg diagram labels two antagonistic muscles, X and Y, that work in opposition to bend and straighten a leg joint. If muscle X contracting corresponds to muscle Y relaxing, and this combination causes the joint to extend, what would be the equivalent pair of actions in a human arm at the elbow?",
+      options: ["Triceps contracts, biceps relaxes, and the arm extends", "Biceps contracts, triceps relaxes, and the arm flexes", "Triceps contracts, biceps relaxes, and the arm flexes", "Biceps contracts, triceps relaxes, and the arm extends"],
+      correct: 0,
+      explanation: "Extension of a limb joint (straightening it) is produced by the extensor muscle contracting while its antagonistic flexor relaxes; at the human elbow, the triceps is the extensor, so triceps contracting while the biceps relaxes produces extension, the equivalent action to muscle X contracting and muscle Y relaxing in the insect leg example."
+    },
+    {
+      q: "An electron micrograph shows sarcomeres in a myofibril of striated muscle, with two labelled regions, P-Q and R-S, marking different sections of a single sarcomere. As this muscle relaxes from a contracted state, which sarcomere regions would be expected to lengthen, and which would stay the same length?",
+      options: ["The region containing only thin (actin) filaments lengthens, while the region occupied by thick (myosin) filaments stays the same length", "The region containing thick filaments lengthens, while the region containing thin filaments stays the same", "Both labelled regions lengthen equally as the muscle relaxes", "Neither labelled region changes length as the muscle relaxes"],
+      correct: 0,
+      explanation: "As a muscle relaxes, actin and myosin filaments slide apart rather than physically shortening or lengthening themselves; this means the I-band (which contains only thin actin filaments) lengthens as the overlap between actin and myosin decreases, while the A-band (defined by the fixed length of the thick myosin filaments) stays the same length throughout both contraction and relaxation."
+    },
+    {
+      q: "Sarcomeres shorten during muscle contraction as thick and thin filaments slide past one another, driven by the myosin heads binding and pulling on actin in a repeated cycle. What role does calcium play at the start of this process?",
+      options: ["It binds to a regulatory protein, exposing the myosin-binding sites on actin that were previously blocked", "It directly supplies the chemical energy myosin heads use to bend", "It physically shortens the actin filaments", "It prevents cross-bridges from forming between actin and myosin"],
+      correct: 0,
+      explanation: "In a relaxed muscle, the myosin-binding sites on actin are blocked by a regulatory protein; when calcium ions are released and bind to this regulatory protein, it shifts out of the way, exposing the binding sites and allowing myosin heads to attach to actin and begin the cross-bridge cycle that drives the sliding filament mechanism of contraction."
+    },
+    {
+      q: "A description of skeletal muscle mentions that its fibres are unusually large, contractile, and contain repeating structural units called sarcomeres. Which additional feature is also characteristic of skeletal muscle fibres?",
+      options: ["They are multinucleate cells, containing many nuclei within one continuous fibre", "They contain cross bridges formed directly between neighbouring muscle fibres", "Their myosin filaments form cross bridges directly with troponin and tropomyosin", "Each fibre contains only a single nucleus, like most other cell types"],
+      correct: 0,
+      explanation: "Skeletal muscle fibres are unusual in being multinucleate (coenocytic), containing many nuclei within a single, continuous fibre rather than the single nucleus typical of most cell types; cross bridges form specifically between myosin heads and actin filaments (not directly with troponin/tropomyosin, which instead regulate access to actin's binding sites), and certainly not between separate neighbouring fibres."
+    },
+    {
+      q: "During skeletal muscle contraction, several molecular events occur in a specific sequence to allow the sliding filament mechanism to proceed. Which of the following correctly describes one of these events?",
+      options: ["Calcium ions bind to troponin, causing tropomyosin to shift and expose the myosin-binding sites on actin", "Myosin and actin filaments themselves decrease in physical length as the muscle contracts", "ATP binds directly to actin's myosin-binding sites, blocking cross-bridge formation", "The light band (I-band) of the sarcomere gets shorter due to shortening of the actin filaments themselves"],
+      correct: 0,
+      explanation: "Calcium ions released during muscle stimulation bind to troponin, causing a shape change that shifts the associated tropomyosin protein and exposes the previously blocked myosin-binding sites on actin, allowing the cross-bridge cycle to proceed; the filaments themselves don't shorten (they slide past one another instead), and ATP's role is to power the myosin head's movement, not to block actin's binding sites."
     }
   ],
 
@@ -2773,6 +4183,54 @@ const QUESTIONBANK = {
       options: ["Simple diffusion, since these are small, non-polar gas molecules moving directly across the membrane down their concentration gradients", "Active transport, requiring ATP to move gases against their concentration gradient", "Facilitated diffusion through specific gas channel proteins", "Mass flow driven by differences in hydrostatic pressure"],
       correct: 0,
       explanation: "Oxygen and carbon dioxide are both small, non-polar molecules that can diffuse directly through the phospholipid bilayer of pneumocytes without requiring a channel or carrier protein; because both gases move down their own concentration gradients (oxygen into the blood, carbon dioxide out), this exchange occurs by simple diffusion rather than any energy-requiring or protein-mediated process."
+    },
+    {
+      q: "A graph tracks the concentration of a lipid called lecithin in the amniotic fluid surrounding a fetus over the course of gestation; this lipid is produced in the developing fetal lungs and acts as a surfactant. What complication might a baby born significantly before this surfactant reaches adequate levels (for instance, before 34 weeks) experience?",
+      options: ["The alveolar walls may stick together due to insufficient surfactant, making it difficult to keep the alveoli open", "The baby's alveoli would be abnormally large due to excess surfactant", "Type II pneumocytes would be entirely absent from the baby's lungs", "Type I pneumocytes would fail to produce sufficient surfactant, since they are the cells responsible"],
+      correct: 0,
+      explanation: "Surfactant, produced by type II pneumocytes (not type I), reduces surface tension within the alveoli, preventing them from collapsing and sticking together; a baby born before adequate surfactant production has begun is at risk of respiratory distress, since insufficiently lubricated alveoli tend to collapse and stick together, making it much harder to keep the lungs properly inflated."
+    },
+    {
+      q: "An apparatus measures the rate of transpiration in a leafy shoot by tracking the movement of an air bubble along a capillary tube as water is drawn through the system. If researchers want to compare transpiration rates across several different plant species fairly, which variables would need to be kept controlled? I. Total leaf surface area II. Volume of water in the apparatus's reservoir III. Room temperature",
+      options: ["I and III only", "I only", "III only", "I, II, and III"],
+      correct: 0,
+      explanation: "To make a fair comparison of transpiration rate between species, factors that could independently affect the rate need to be controlled: total leaf surface area (since more leaf area naturally increases transpiration regardless of species) and room temperature (which affects the rate of evaporation) both need to be kept constant; the volume of water in the reservoir, however, doesn't directly affect the measured rate of transpiration itself, so it doesn't need to be controlled in the same way."
+    },
+    {
+      q: "What occurs specifically during inspiration (breathing in) in humans?",
+      options: ["External intercostal muscles contract, increasing thoracic volume and decreasing pressure inside the lungs", "Internal intercostal muscles contract, increasing pressure inside the lungs", "External intercostal muscles contract, decreasing thoracic volume", "Internal intercostal muscles contract, decreasing pressure inside the lungs"],
+      correct: 0,
+      explanation: "During inspiration, the external intercostal muscles (along with the diaphragm) contract, lifting the ribcage and increasing the volume of the thoracic cavity; by Boyle's law, this increase in volume decreases the pressure inside the lungs below atmospheric pressure, causing air to flow in — internal intercostal muscles, by contrast, are involved in forced expiration, not normal inspiration."
+    },
+    {
+      q: "A diagram shows a section through an alveolus with several labelled structures, including a thin-walled pneumocyte and a nearby capillary. What structural features of the alveolus wall allow for efficient gas exchange with the surrounding blood?",
+      options: ["Extremely thin walls (often a single cell thick) combined with a dense network of surrounding capillaries", "Thick, multilayered walls that provide structural protection during gas exchange", "A dry internal surface that prevents gases from dissolving before diffusing", "Muscular walls capable of actively pumping gases across the membrane"],
+      correct: 0,
+      explanation: "Efficient gas exchange at the alveolus depends on an extremely short diffusion distance, provided by the thin (often one-cell-thick) walls of type I pneumocytes, combined with a dense surrounding capillary network that continuously maintains a steep concentration gradient by carrying blood past the exchange surface; a dry surface or muscular walls would actually work against efficient gas exchange, not support it."
+    },
+    {
+      q: "A diagram tracks changes in blood pressure inside lung alveoli relative to atmospheric pressure throughout a full breathing cycle. At the point where alveolar pressure exceeds atmospheric pressure, what is occurring?",
+      options: ["Air is being forced out of the lungs during expiration", "Air is being drawn into the lungs during inspiration", "No air movement is occurring at this specific point in the cycle", "The diaphragm is contracting to increase thoracic volume"],
+      correct: 0,
+      explanation: "Air flows from a region of higher pressure to lower pressure; when alveolar pressure rises above atmospheric pressure (which happens as the thoracic cavity's volume decreases during expiration), air is forced out of the lungs down this pressure gradient, the opposite situation to inspiration, when alveolar pressure drops below atmospheric pressure as the thoracic cavity expands."
+    },
+    {
+      q: "An experimental apparatus uses germinating seeds sealed in a container with potassium hydroxide (which absorbs CO2) connected to a tube of coloured water; the water level in the tube is observed to move over time, initially starting level with a control tube containing no seeds. What does this experimental result demonstrate?",
+      options: ["Oxygen has been absorbed by the seeds during aerobic respiration", "Potassium hydroxide has directly absorbed oxygen released by the seeds", "The seeds are undergoing anaerobic respiration rather than aerobic respiration", "Heat produced by the germinating seeds is what caused the water level to move"],
+      correct: 0,
+      explanation: "Since potassium hydroxide absorbs any CO2 produced by the respiring seeds, the change in water level instead reflects a net decrease in gas volume within the sealed container caused specifically by oxygen being absorbed by the germinating seeds during aerobic respiration, not by any direct effect of the potassium hydroxide on oxygen itself, nor by heat production, which wouldn't account for a net gas volume change in this setup."
+    },
+    {
+      q: "A spirometer trace records lung volume changes during normal, resting breathing over one minute, showing a repeating pattern of small volume increases and decreases. What two specific measurements can be obtained directly from this kind of trace?",
+      options: ["Tidal volume (the volume of air moved per breath) and ventilation rate (the number of breaths per minute)", "Vital capacity and residual volume, both requiring a forced maximal breath rather than normal breathing", "Only ventilation rate, since tidal volume cannot be measured from a spirometer trace", "Only tidal volume, since ventilation rate requires a completely separate measurement device"],
+      correct: 0,
+      explanation: "A spirometer trace of normal, resting breathing directly shows the small, repeating volume changes corresponding to each breath (tidal volume) and how many of these breathing cycles occur per minute (ventilation rate); measurements like vital capacity and residual volume require a different testing protocol involving a forced maximal inhalation and exhalation, not normal resting breathing."
+    },
+    {
+      q: "A comparison of two types of alveolar cell, type I and type II pneumocytes, is used to test understanding of their distinct roles. Which statement correctly matches each cell type to its function?",
+      options: ["Type I pneumocytes carry out gas exchange, while type II pneumocytes produce surfactant", "Type I pneumocytes produce surfactant, while type II pneumocytes carry out gas exchange", "Both pneumocyte types are equally responsible for producing surfactant", "Both pneumocyte types are equally responsible for phagocytosis of pathogens"],
+      correct: 0,
+      explanation: "Type I pneumocytes are extremely thin cells specialised for efficient gas exchange across the alveolar wall, while type II pneumocytes are fewer in number but specialise in secreting pulmonary surfactant, which reduces surface tension and prevents the alveoli from collapsing; correctly matching each cell type to its distinct role is a common point of confusion worth practising carefully."
     }
   ],
 
@@ -2944,6 +4402,114 @@ const QUESTIONBANK = {
       options: ["It is adapted to a hot, dry environment, opening its stomata at night to minimise water loss while still taking up CO2 for later use in photosynthesis", "It performs no photosynthesis at all during either the day or night", "It only respires during daylight hours and not at night", "It has no stomata capable of closing at any point during the cycle"],
       correct: 0,
       explanation: "Opening stomata at night rather than during the day is characteristic of CAM (Crassulacean Acid Metabolism) photosynthesis, an adaptation common in plants from hot, arid environments; by taking in and temporarily storing CO2 at night when temperatures are cooler and evaporation is lower, these plants minimise water loss through their stomata while still being able to carry out photosynthesis using stored CO2 during the day."
+    },
+    {
+      q: "A graph plots transpiration rate against relative humidity of the surrounding air. Which pattern would correctly represent how humidity affects transpiration rate?",
+      options: ["Transpiration rate decreases as humidity increases, since a smaller water potential gradient exists between the leaf's air spaces and the surrounding air", "Transpiration rate increases as humidity increases, since more water vapour is available to enter the leaf", "Transpiration rate is completely unaffected by humidity", "Transpiration rate increases sharply only above 90% humidity, with no effect below that threshold"],
+      correct: 0,
+      explanation: "Higher humidity reduces the water potential gradient between the humid air inside a leaf's internal air spaces and the surrounding atmosphere, slowing the rate at which water vapour diffuses out through the stomata; as humidity decreases (drier air), this gradient steepens, increasing the rate of transpiration."
+    },
+    {
+      q: "Cross-sections through a plant stem and root each show a specific arrangement of vascular tissue. Which tissue type would be responsible for transporting water in both the stem and the root?",
+      options: ["Xylem", "Phloem", "Both xylem and phloem equally", "Neither tissue transports water; only mineral ions are transported"],
+      correct: 0,
+      explanation: "Xylem is the tissue responsible for transporting water (along with dissolved mineral ions) throughout the plant, from the roots, through the stem, to the leaves; phloem instead transports the sugars produced by photosynthesis, moving them from source tissues (usually leaves) to sink tissues (such as roots or developing fruit) rather than transporting water."
+    },
+    {
+      q: "Glucose filtered out of the blood at the kidney's glomerulus is normally almost entirely reabsorbed back into the bloodstream before the filtrate becomes urine. In which specific part of the nephron does most of this glucose reabsorption occur, and by what method?",
+      options: ["In the proximal convoluted tubule, largely by active transport (often co-transported with sodium ions)", "In the loop of Henle, by simple diffusion", "In the collecting duct, by facilitated diffusion", "In the glomerulus itself, by osmosis"],
+      correct: 0,
+      explanation: "Nearly all filtered glucose is reabsorbed in the proximal convoluted tubule, using active transport (often coupled with sodium ion co-transport) to move glucose out of the filtrate and back into the surrounding capillaries, even against a concentration gradient if necessary, ensuring the body doesn't lose this valuable nutrient in urine under normal conditions."
+    },
+    {
+      q: "The wall of a capillary and the wall of a vein share at least one structural feature in common, despite the many differences between these two types of blood vessel. Which of the following features would be found in the walls of both capillaries and veins? I. Living cells II. Pores allowing substances to pass through III. Elastic fibres providing significant recoil",
+      options: ["I only", "I and II only", "I and III only", "I, II, and III"],
+      correct: 0,
+      explanation: "Both capillary and vein walls are made of living cells, but pores that allow leakage of fluid and substances are a specific feature of capillary walls (to enable exchange with surrounding tissue) rather than veins, and substantial elastic fibres are a feature of artery walls (to withstand and smooth high pressure) rather than the much lower-pressure veins, so only the presence of living cells is genuinely shared between capillaries and veins."
+    },
+    {
+      q: "A comparison of an artery and a vein of similar overall diameter shows the vein has a noticeably larger lumen relative to its wall thickness. What best explains this structural difference?",
+      options: ["Veins carry blood at much lower pressure, so they don't need thick, muscular, elastic walls to withstand pressure surges the way arteries do", "Arteries always have a smaller overall diameter than veins", "Veins contain more muscle tissue in their walls than arteries", "Arteries have more elastic fibres in their walls than veins, explaining the difference in lumen size"],
+      correct: 0,
+      explanation: "Because blood in veins is at much lower pressure than in arteries, veins can have a larger lumen relative to a thinner wall without the same risk of bursting or excessive stretching that a similarly-built artery would face; arteries instead need thicker, more muscular and elastic walls specifically to withstand and smooth out the high pressure of blood pumped directly from the heart."
+    },
+    {
+      q: "A graph shows an athlete's heart rate rising sharply at the start of exercise and falling gradually after exercise stops, rather than changing instantaneously. What is most likely occurring during the periods immediately before and after the main bout of exercise (roughly the first and last few minutes shown)?",
+      options: ["A warm-up period causing an anticipatory rise in heart rate before exercise, and a recovery period with elevated heart rate continuing briefly after exercise stops", "No physiological change occurs in either of these periods", "Heart rate would be expected to be at its lowest point during the recovery period immediately after exercise", "The athlete's heart rate would return to resting value instantly the moment exercise stops"],
+      correct: 0,
+      explanation: "Heart rate typically begins rising even before intense exercise starts, in anticipation, driven partly by epinephrine release, and remains elevated for some time after exercise stops (a recovery period) as the body continues repaying its oxygen debt and returning gradually to resting levels, rather than jumping or dropping instantly at the exact start or end of the exercise itself."
+    },
+    {
+      q: "The blood-clotting cascade involves several proteins and enzymes acting in a specific sequence following a cut in the skin. Which sequence of events correctly describes part of this cascade?",
+      options: ["Clotting factors trigger the conversion of inactive prothrombin into active thrombin, which then converts soluble fibrinogen into insoluble fibrin", "Red blood cells release clotting factors that convert fibrin into fibrinogen", "Insoluble fibrinogen is converted directly into soluble fibrin", "Fibrin is converted into platelets, which then trap red blood cells"],
+      correct: 0,
+      explanation: "The clotting cascade proceeds as follows: platelets and damaged tissue release clotting factors, which trigger the conversion of the inactive precursor prothrombin into active thrombin; thrombin then catalyses the conversion of soluble fibrinogen into insoluble fibrin strands, which form a mesh trapping blood cells and platelets to seal the wound — not the reverse conversions or cell types described in the incorrect options."
+    },
+    {
+      q: "A female mosquito injects an anticoagulant called anophelin into a host as she feeds, and this anticoagulant is known to specifically inhibit the enzyme thrombin. Based on this, how would anophelin be expected to prevent the host's blood from clotting?",
+      options: ["By preventing prothrombin from being converted into active thrombin, blocking a key step needed to convert fibrinogen into fibrin", "By preventing platelets from being produced at the site of the bite", "By directly converting fibrinogen into fibrin before it can form a clot", "By preventing platelets from producing fibrin directly"],
+      correct: 0,
+      explanation: "Since anophelin specifically inhibits thrombin, and thrombin's normal role is to convert soluble fibrinogen into insoluble fibrin, blocking thrombin activity (or preventing its formation from prothrombin) would prevent this crucial conversion step, stopping the clotting cascade from progressing and keeping the host's blood at the bite site from clotting while the mosquito feeds."
+    },
+    {
+      q: "A young plant's stem is cut and the cut end placed in water containing a red dye, while the plant continues transpiring normally. Shortly afterward, a cross-section through the stem is examined to see where the red dye has travelled. In which tissue would the dye be visible soon after immersion?",
+      options: ["The xylem, since the dye is carried upward along with the transpiration stream", "The phloem, since the dye moves toward growing sinks", "Both xylem and phloem equally", "Neither tissue, since dyes cannot enter plant vascular tissue"],
+      correct: 0,
+      explanation: "Since the plant continues transpiring normally, water (and any dissolved dye) drawn up from the cut stem end travels through the xylem as part of the ongoing transpiration stream; the dye would not be expected in the phloem, since phloem transport moves sugars from source to sink tissues and isn't driven by the transpiration pull that carries water and dye through the xylem."
+    },
+    {
+      q: "In many plant stems, xylem vessels are positioned very close to phloem sieve tubes, often within the same vascular bundle. What is one functional benefit of this close arrangement?",
+      options: ["Water can be supplied more easily from the xylem to support the osmotic movement of water needed for phloem transport", "Sugars can flow freely between the xylem and phloem in both directions", "It allows hydrostatic pressure built up in the xylem to move sugars directly to the phloem's sink end", "It allows a high solute concentration to be more easily established in the xylem at the source"],
+      correct: 0,
+      explanation: "Phloem transport relies on water entering the sieve tubes by osmosis at the source (following active loading of sugars, which lowers the phloem's water potential); having the water-transporting xylem positioned nearby makes it easier for this water to be readily supplied to the phloem, supporting the pressure-driven mass flow of sugary sap without requiring water to travel a long distance from elsewhere in the plant."
+    },
+    {
+      q: "The longitudinal section of phloem tissue near a plant's photosynthesising source tissue shows small pores connecting each sieve tube element to an adjacent companion cell. What is the function of these connecting pores?",
+      options: ["They allow movement of actively loaded sucrose from the companion cell into the sieve tube", "They allow carbon dioxide to move from the companion cell into the sieve tube", "They allow starch to move directly into the sieve tube for storage", "They allow water to move from the sieve tube into the companion cell, reversing the normal direction of osmotic flow"],
+      correct: 0,
+      explanation: "Companion cells actively load sucrose into the adjoining sieve tube elements, often using energy-dependent co-transport mechanisms; the small connecting pores (plasmodesmata) between companion cells and sieve tubes allow this actively transported sucrose to move into the sieve tube, raising its solute concentration and driving the osmotic water uptake that powers phloem mass flow."
+    },
+    {
+      q: "In the human circulatory system, arteries divide into progressively smaller vessels before finally forming capillaries at the tissue level. What structural change occurs to the vessel wall during this transition that is essential for the capillaries' exchange function?",
+      options: ["The wall becomes extremely thin, often just one cell thick, minimising the diffusion distance for exchange with surrounding tissue", "The wall becomes thicker to withstand the increasing pressure as vessels narrow", "The wall develops additional elastic fibres not present in the original artery", "The wall develops one-way valves not present in the original artery"],
+      correct: 0,
+      explanation: "As arteries branch into smaller arterioles and finally capillaries, the vessel wall becomes progressively thinner, culminating in capillary walls that are typically only a single cell thick; this minimal wall thickness is essential for capillaries' role in exchanging substances (like oxygen, glucose, and waste products) with the surrounding tissue fluid, a function arteries and larger vessels are not adapted for."
+    },
+    {
+      q: "A section through the stem of a young plant shows the xylem positioned toward the centre of each vascular bundle, with phloem positioned toward the outside. What functional reason might explain the xylem's more central position?",
+      options: ["Positioning the water-conducting xylem centrally can provide structural support, helping the stem resist bending, in addition to its transport role", "Water transport in xylem is only possible if it is positioned at the very centre of the stem", "Phloem cannot function unless positioned on the outer edge of the vascular bundle", "The central position of xylem has no functional significance whatsoever"],
+      correct: 0,
+      explanation: "Beyond its role in water transport, the lignified xylem tissue also contributes significantly to a stem's mechanical strength; positioning it centrally within the vascular bundle (sometimes described as a supportive 'core') can help the stem resist bending forces, an additional structural benefit alongside its primary function of conducting water and minerals."
+    },
+    {
+      q: "A cross-section through a plant stem shows a tissue type where no nucleus is visible within many of the individual cells, even though the tissue is clearly still functioning as part of the living plant. Which tissue is most likely being observed, and why does it lack a visible nucleus?",
+      options: ["Xylem, since xylem vessels are formed from dead, lignified cells that lose their nucleus and other contents as they mature", "Phloem companion cells, since these cells never contain a nucleus at any stage", "Phloem sieve tube elements, since sieve tubes always retain a full, functioning nucleus", "Palisade mesophyll cells, since these cells lose their nucleus once photosynthesis begins"],
+      correct: 0,
+      explanation: "Xylem vessels are formed from cells that die and lose their nuclei and other cellular contents as part of their normal maturation, leaving behind hollow, lignified tubes suited to transporting water; phloem sieve tube elements also lack a full nucleus but remain living, relying on adjacent companion cells (which do retain a nucleus) to support their metabolic needs."
+    },
+    {
+      q: "The subclavian vein and subclavian artery run alongside each other in the upper chest, but a specific structural feature reliably distinguishes the vein from the artery. Which feature is this?",
+      options: ["A larger lumen relative to overall vessel diameter", "The presence of small pores in its wall for exchange with surrounding tissue", "A wall built from two distinct layers of muscle", "The complete absence of any valves"],
+      correct: 0,
+      explanation: "Because veins carry blood at much lower pressure than arteries, they can have a comparatively larger lumen relative to a thinner overall wall; veins also characteristically contain valves (unlike most arteries), and pores for tissue exchange are instead a feature of capillaries, not larger vessels like the subclavian vein or artery."
+    },
+    {
+      q: "A pyramid of energy for a well-studied natural ecosystem shows the annual gross productivity at each trophic level, with far more energy captured by autotrophs (producers) than passed on to any single consumer level above them. What does this pyramid demonstrate?",
+      options: ["Most of the energy captured by the ecosystem is ultimately lost at the level of the autotrophs themselves, through their own respiration and other losses, well before it can be passed on", "There are always more herbivores present than carnivores in any similar ecosystem", "The greatest single loss of energy occurs specifically when sunlight reflects off plant leaves", "Energy transfer between trophic levels remains constant regardless of the season"],
+      correct: 0,
+      explanation: "A large proportion of the energy autotrophs capture is used by the autotrophs themselves for their own respiration and other life processes, rather than being available to pass on to the next trophic level; this substantial loss at the base of the pyramid (well before reaching consumers) is why energy pyramids typically show such a dramatic decrease in available energy moving up from producers to consumers."
+    },
+    {
+      q: "A blood vessel is examined under a light microscope and shows a relatively thick, muscular wall with a comparatively small lumen. Based on these features, what type of vessel is most likely being viewed?",
+      options: ["An artery", "A vein", "A capillary", "A venule"],
+      correct: 0,
+      explanation: "Arteries are characterised by thick, muscular, elastic walls (to withstand and smooth the high pressure of blood pumped from the heart) combined with a relatively narrow lumen compared with veins of similar overall diameter; veins, by contrast, have thinner walls and a proportionally larger lumen, since they carry blood at much lower pressure."
+    },
+    {
+      q: "In a food web involving coyotes, foxes, rodents, and lagomorphs (such as rabbits), coyotes prey on both foxes and lagomorphs, while foxes also prey on lagomorphs and rodents. If coyote numbers are deliberately reduced through culling, what is a plausible outcome for the lagomorph population, considering the web of interactions involved?",
+      options: ["Lagomorphs could increase in number, since although fox numbers may rise (removing one source of predation on foxes), rodent numbers may also rise, providing foxes with an alternative food source and somewhat easing predation pressure on lagomorphs", "Lagomorphs would definitely decrease, since removing any predator always increases predation pressure on prey further down the food web", "Lagomorphs would be completely unaffected by any change in coyote numbers", "Lagomorphs would decrease because coyotes provide protection to lagomorphs against other predators"],
+      correct: 0,
+      explanation: "Reducing coyote numbers removes a predator of both foxes and lagomorphs; while this could allow the fox population to grow (potentially increasing predation on lagomorphs), it may also allow rodent numbers to grow, providing foxes with an alternative, more accessible prey source and somewhat reducing the pressure foxes place specifically on lagomorphs, illustrating how food web effects can be genuinely complex rather than simply direct."
     }
   ],
 
@@ -3067,6 +4633,54 @@ const QUESTIONBANK = {
       options: ["Around the peak of the action potential, just as depolarization is ending", "At the very beginning of the trace, before sodium channels have opened", "Only after the membrane has returned all the way to resting potential", "Potassium channels open simultaneously with sodium channels from the very start"],
       correct: 0,
       explanation: "Voltage-gated sodium channels open first, in response to initial depolarization, driving the rapid rise toward the peak of the action potential; voltage-gated potassium channels open with a slight delay relative to sodium channels, roughly around the peak of depolarization, and it is their subsequent opening that drives repolarization back toward resting potential."
+    },
+    {
+      q: "A graph shows how membrane potential changes during a single action potential along an axon, with the resting potential at approximately -70 mV and the peak reaching around +40 mV. At approximately what membrane potential does the threshold, the point beyond which an action potential is triggered, typically occur?",
+      options: ["Around -50 mV", "Around -88 mV", "Around -70 mV", "Around +45 mV"],
+      correct: 0,
+      explanation: "The threshold potential, the level of depolarization that must be reached to trigger a full action potential, is typically around -50 mV in a neuron, somewhat less negative than the resting potential (-70 mV) but well below the peak of the action potential itself (around +40 mV); reaching this threshold causes voltage-gated sodium channels to open in large numbers, triggering the rapid, all-or-nothing rise characteristic of an action potential."
+    },
+    {
+      q: "In cholinergic synapses, acetylcholine is broken down almost immediately after binding to its receptor on the postsynaptic membrane. What happens to acetylcholine right after it has bound and triggered a response?",
+      options: ["It is broken down by the enzyme acetylcholinesterase within the synaptic cleft", "It is actively pumped into the postsynaptic neuron for reuse", "It diffuses backward into the presynaptic neuron unchanged", "It binds to a second receptor on the postsynaptic membrane before being broken down"],
+      correct: 0,
+      explanation: "Immediately after binding its receptor and triggering a response, acetylcholine is broken down by the enzyme acetylcholinesterase within the synaptic cleft; this rapid breakdown prevents the neurotransmitter from continuously stimulating the postsynaptic membrane, ensuring each nerve impulse produces a brief, discrete signal rather than a prolonged one."
+    },
+    {
+      q: "Atropine, used by opticians to dilate the pupil for eye examinations, works by binding to acetylcholine receptors at certain synapses. What effect does this binding have on synaptic transmission at these synapses?",
+      options: ["It prevents acetylcholine from binding at the postsynaptic membrane, blocking the normal signal", "It inhibits the release of acetylcholine from the presynaptic neuron", "It inhibits acetylcholine from binding at the presynaptic membrane", "It prevents transport of acetylcholine through the postsynaptic neuron after binding"],
+      correct: 0,
+      explanation: "Atropine acts as a competitive antagonist at acetylcholine receptors on the postsynaptic membrane: by occupying these receptors without activating them the way acetylcholine normally would, it physically blocks acetylcholine from binding and triggering its usual effect, which in the case of certain eye muscles results in pupil dilation rather than the constriction that acetylcholine would normally stimulate."
+    },
+    {
+      q: "Melatonin, secreted by the pineal gland, is inhibited by exposure to light and plays a central role in regulating the sleep-wake cycle. If a person is exposed to bright screen light from a phone or laptop right before their normal bedtime, which effects on melatonin would be expected, based on melatonin's known light sensitivity? I. A delay in melatonin production II. A lower peak concentration of melatonin III. The peak of melatonin occurring earlier in the evening than normal",
+      options: ["I and II only", "III only", "II and III only", "I, II, and III"],
+      correct: 0,
+      explanation: "Since light exposure inhibits melatonin secretion, bright screen light before bedtime would be expected to delay the onset of melatonin production and reduce its peak concentration (statements I and II); the peak would not be expected to occur earlier than normal, since light exposure delays rather than accelerates melatonin release, making statement III inconsistent with melatonin's known light sensitivity."
+    },
+    {
+      q: "A diagram compares nerve transmission before and after RNA processing has removed non-coding sections. Independent of that comparison, in the process of transcription, which enzyme performs a role most similar to that of helicase in DNA replication?",
+      options: ["RNA polymerase, since it also separates the two DNA strands (locally) to access the template strand", "DNA polymerase III, since it also unwinds DNA ahead of the replication fork", "DNA ligase, since it also breaks hydrogen bonds between DNA strands", "DNA polymerase I, since it also separates DNA strands to allow primer removal"],
+      correct: 0,
+      explanation: "Just as helicase unwinds the DNA double helix ahead of the replication fork during DNA replication, RNA polymerase performs an analogous local unwinding of the double helix immediately ahead of itself during transcription, breaking hydrogen bonds to expose the template strand needed for synthesising a new mRNA molecule."
+    },
+    {
+      q: "A drug that binds to acetylcholine receptors at a neuromuscular junction, without itself being broken down by acetylcholinesterase, causes prolonged muscle contraction rather than the normal brief twitch. What best explains this effect?",
+      options: ["The drug continuously activates the receptor since it cannot be cleared from the synaptic cleft the way acetylcholine normally would be", "The drug blocks the receptor entirely, preventing any muscle contraction from occurring", "The drug has no effect on receptor activation and acts elsewhere in the muscle fibre", "The drug speeds up the normal breakdown of acetylcholine, shortening rather than prolonging contraction"],
+      correct: 0,
+      explanation: "Because this drug binds and activates the acetylcholine receptor but is not broken down by acetylcholinesterase (unlike acetylcholine itself), it remains bound and continues stimulating the receptor for an extended period, producing prolonged depolarization and sustained muscle contraction rather than the brief, discrete contraction normally triggered by rapidly-cleared acetylcholine."
+    },
+    {
+      q: "Which sequence of events correctly describes the establishment of a resting membrane potential in a neuron?",
+      options: ["Sodium ions are actively pumped out of the neuron while potassium ions are pumped in, maintaining an unequal distribution of charge across the membrane", "Both sodium and potassium ions are actively pumped out of the neuron simultaneously", "Sodium ions diffuse passively out of the neuron while potassium ions diffuse passively in, requiring no active transport at all", "Both sodium and potassium ions remain evenly distributed on both sides of the membrane at rest"],
+      correct: 0,
+      explanation: "The resting membrane potential is established and maintained by the sodium-potassium pump, which actively transports sodium ions out of the neuron and potassium ions into it (against their concentration gradients, using ATP); this active process, not passive diffusion alone, is essential for keeping the characteristic uneven distribution of these ions across the resting membrane."
+    },
+    {
+      q: "A diagram shows a cholinergic synapse, with the neurotransmitter acetylcholine being released, diffusing across the cleft, and binding to a receptor on the postsynaptic membrane. If a neonicotinoid pesticide is applied to this system, at which specific point would it act to disrupt normal synaptic transmission?",
+      options: ["At the postsynaptic receptor, where it binds and mimics (but is not broken down like) acetylcholine, causing continuous overstimulation", "At the presynaptic membrane, by physically blocking vesicle release entirely", "Within the mitochondria of the presynaptic neuron, by halting ATP production", "At the enzyme acetylcholinesterase, by directly destroying the enzyme's structure"],
+      correct: 0,
+      explanation: "Neonicotinoid pesticides act at the postsynaptic receptor, binding to it in a manner similar to acetylcholine; unlike acetylcholine, however, they are not broken down by acetylcholinesterase, so they remain bound and continue stimulating the receptor, causing prolonged overstimulation that disrupts normal synaptic transmission and, at sufficient doses, is fatal to insects."
     }
   ],
 
@@ -3184,6 +4798,36 @@ const QUESTIONBANK = {
       options: ["A coach shouting instructions to begin an intense physical activity immediately", "The gradual onset of darkness at sunset", "Viewing an image of a close, trusted friend", "The routine intake of glucose during an ordinary meal"],
       correct: 0,
       explanation: "Epinephrine release is characteristically triggered by acute stress or the need for a rapid physical response, such as a sudden demand for intense activity; the other options describe stimuli more closely associated with different hormonal responses (melatonin for darkness, oxytocin-related bonding responses for a close friend, or insulin for routine glucose intake) rather than an epinephrine-driven fight-or-flight response."
+    },
+    {
+      q: "Lentil sprouts grown near a single light source are photographed bending noticeably toward that light. Which explanation correctly accounts for this bending response?",
+      options: ["A higher concentration of auxin accumulated on the shaded side of the shoot, causing faster cell elongation there than on the illuminated side", "A higher concentration of auxin accumulated on the illuminated side of the shoot, causing faster cell elongation there", "A higher concentration of chloroplasts on the illuminated side allowed faster growth there", "Auxin has no measurable role in this bending response"],
+      correct: 0,
+      explanation: "When light is uneven across a shoot, auxin becomes redistributed toward the shaded side; because auxin promotes cell elongation, this higher concentration causes cells on the shaded side to elongate faster than cells on the illuminated side, bending the shoot toward the light source — the underlying mechanism of positive phototropism."
+    },
+    {
+      q: "A diagram tracks changes in blood glucose and liver glycogen concentration following meals of varying glucose content, showing that liver glycogen levels track closely with blood glucose levels. Which hormone-mediated process explains this relationship?",
+      options: ["Insulin, released in response to rising blood glucose, stimulates liver cells to convert excess glucose into glycogen for storage", "Glucagon, released in response to rising blood glucose, stimulates the breakdown of liver glycogen", "Insulin decreases the rate of glycogen synthesis in liver cells", "Blood glucose and liver glycogen levels are entirely unrelated to each other"],
+      correct: 0,
+      explanation: "Rising blood glucose after a meal triggers insulin release, and insulin's key effect on the liver is to stimulate the conversion of excess glucose into glycogen for storage; this is why liver glycogen levels track upward alongside blood glucose levels after larger glucose meals, an effect specifically driven by insulin rather than glucagon, which instead promotes glycogen breakdown when blood glucose is low."
+    },
+    {
+      q: "Two structures involved in chemical signalling, the sinoatrial node of the heart and the medulla of the brainstem, interact during changes in heart rate associated with exercise. Which statement correctly describes the relationship between these two structures?",
+      options: ["The medulla sends signals to the sinoatrial node, adjusting heart rate to match the body's changing demands during and after exercise", "The sinoatrial node sends signals to the medulla, which has no independent role in regulating heart rate", "The two structures function completely independently of one another with no communication", "The sinoatrial node is located within the medulla itself"],
+      correct: 0,
+      explanation: "The medulla, part of the brainstem, monitors physiological signals (such as changing CO2 levels or physical demand during exercise) and sends nervous signals to the sinoatrial node, the heart's natural pacemaker, adjusting its firing rate and therefore heart rate to match the body's current needs, rather than the sinoatrial node independently controlling this process."
+    },
+    {
+      q: "Human body temperature shows a consistent daily (circadian) rhythm, typically dipping to its lowest point during sleep and rising during waking hours. Which hormone plays a central role in controlling this daily rhythm?",
+      options: ["Thyroxin", "Insulin", "Glucagon", "Progesterone"],
+      correct: 0,
+      explanation: "Thyroxin, secreted by the thyroid gland, helps regulate metabolic rate, which in turn influences body temperature; its secretion follows a daily rhythm that contributes to the characteristic daily fluctuation in core body temperature, distinct from insulin and glucagon (which regulate blood glucose) or progesterone (primarily involved in the menstrual cycle and pregnancy)."
+    },
+    {
+      q: "Which hormone, and which specific gland or cell type, is primarily responsible for regulating blood glucose levels when they rise too high after a meal?",
+      options: ["Insulin, secreted by the beta cells of the pancreas", "Insulin, secreted by liver cells directly", "Glucagon, secreted by the alpha cells of the pancreas", "Thyroxin, secreted by the thyroid gland"],
+      correct: 0,
+      explanation: "Insulin, specifically secreted by the beta cells of the pancreas, is released when blood glucose rises and stimulates cells (especially liver and muscle cells) to take up glucose and convert it into glycogen for storage; glucagon (from the alpha cells) has the opposite effect, raising blood glucose, and thyroxin regulates metabolic rate rather than blood glucose directly."
     }
   ],
 
@@ -3289,6 +4933,42 @@ const QUESTIONBANK = {
       options: ["The generation of memory B- and T-cells that allow a faster, stronger response if the real pathogen is encountered later", "Permanent, pre-formed antibodies that circulate in the blood indefinitely without any need for later activation", "Complete and permanent destruction of the pathogen's genetic material before it can ever be encountered", "Immediate and total immunity that requires no time at all to develop"],
       correct: 0,
       explanation: "Vaccination works by exposing the immune system to antigens (or genetic material coding for antigens) from a pathogen, prompting the body's B- and T-lymphocytes to respond and, crucially, to generate memory cells; these memory cells persist long after the initial exposure, allowing a much faster and stronger response if the real pathogen is encountered in the future."
+    },
+    {
+      q: "Some vaccinations, such as the smallpox vaccine, provide lifelong immunity, while others, such as the tetanus vaccine, require booster doses roughly every ten years to maintain protection. What is the most likely reason a tetanus booster is recommended periodically?",
+      options: ["Memory cells generated by the original vaccination gradually decline in number over time, reducing the strength of long-term protection", "No memory cells are produced at all following the first tetanus vaccination", "Only non-specific (innate) immunity is stimulated by the initial tetanus vaccination", "Antibodies formed after the first vaccination persist unchanged in the blood indefinitely, requiring no booster"],
+      correct: 0,
+      explanation: "For some pathogens or vaccines, the memory B- and T-cells generated after initial exposure gradually decline in number over years; once their numbers fall too low to guarantee a sufficiently fast and strong secondary response, protection weakens, which is why periodic booster doses are recommended to refresh the memory cell population and maintain strong immunity."
+    },
+    {
+      q: "A graph tracks the antibody concentration in a person's blood following two separate infections by the same pathogen, occurring years apart. The second infection triggers a noticeably faster and larger rise in antibody concentration than the first. What is the most direct explanation for this difference?",
+      options: ["Memory B-cells generated during the first infection allow a much faster and stronger response upon a second exposure to the same antigen", "The two infections must have involved two different, unrelated pathogens", "No clonal selection of lymphocytes occurred during either infection", "The second exposure to the pathogen must have been more infectious than the first"],
+      correct: 0,
+      explanation: "Memory B-cells generated following a first exposure to a specific antigen persist long afterward, and upon a second exposure to that same antigen, they can differentiate rapidly into large numbers of antibody-secreting plasma cells much faster than the initial (primary) response was able to, producing the characteristic faster, larger secondary response seen on such a graph."
+    },
+    {
+      q: "Bacteria feeding on damp organic matter can be prevented from entering the human body through several distinct innate barriers before an infection ever has the chance to establish. Which of the following correctly describes one such barrier?",
+      options: ["Mucous membranes lining the airways trap incoming bacteria in mucus before they can penetrate deeper tissue", "Antibodies present on intact skin directly destroy any bacteria on contact", "Phagocytes patrol only within blood vessels and cannot act at the skin's surface", "T-lymphocytes provide the first line of defence against bacteria attempting to enter through the skin"],
+      correct: 0,
+      explanation: "Mucous membranes lining airways and other body openings physically trap incoming bacteria within a layer of mucus, preventing them from penetrating further into the body; this is a non-specific, physical barrier that acts before any adaptive immune response (involving antibodies or T-lymphocytes) would even be triggered."
+    },
+    {
+      q: "Despite decades of scientific research and the development of numerous antibiotics, some infectious pathogens continue to prove very difficult to eliminate entirely. Which factor(s) contribute to this persistent difficulty? I. Development of antibiotic resistance in viruses II. Development of antibiotic resistance in bacteria III. Ongoing mutation of pathogens over time",
+      options: ["II and III only", "I only", "I and II only", "I, II, and III"],
+      correct: 0,
+      explanation: "Antibiotic resistance can genuinely develop in bacteria (statement II), since bacteria are susceptible to antibiotics in the first place, and ongoing mutation in pathogens generally (statement III) continually generates new variants that can evade existing treatments or immunity; however, antibiotics don't act on viruses at all (they lack the bacterial-specific targets antibiotics work against), so viruses cannot develop 'antibiotic resistance' in the way bacteria can, making statement I incorrect."
+    },
+    {
+      q: "A patient's blood is tested and found to contain a high concentration of a specific antibody type shortly after being infected for the first time with a novel pathogen. Which cells would be directly responsible for producing this antibody?",
+      options: ["Plasma cells, differentiated from activated B-lymphocytes specific to the pathogen's antigens", "Phagocytes, which engulf and digest the pathogen directly", "Helper T-cells, which coordinate but do not themselves produce antibodies", "Memory cells, which remain dormant until a second exposure occurs"],
+      correct: 0,
+      explanation: "Antibodies are produced specifically by plasma cells, which differentiate from B-lymphocytes once those B-lymphocytes have been activated (often with help from helper T-cells) by recognising a matching antigen; phagocytes engulf pathogens directly rather than producing antibodies, and memory cells persist for future responses rather than actively secreting large amounts of antibody during the current infection."
+    },
+    {
+      q: "The body defends itself against infectious disease using several distinct mechanisms, some non-specific and some highly specific to a particular pathogen. Considering the following: I. Fibrinogen converting to fibrin to help seal wounds and block pathogen entry. II. Phagocytic white blood cells engulfing and destroying pathogens. III. Lymphocytes producing antibodies specific to a particular pathogen. Which of these provides specific immunity against disease?",
+      options: ["III only", "I and II only", "II and III only", "I, II, and III"],
+      correct: 0,
+      explanation: "Only the production of antibodies by lymphocytes (statement III) constitutes specific immunity, since antibodies are tailored to recognise one particular antigen; blood clotting (statement I) and phagocytosis (statement II) are both non-specific (innate) defence mechanisms that act broadly against many different pathogens, rather than targeting one specific antigen."
     }
   ],
 
@@ -3316,6 +4996,18 @@ const QUESTIONBANK = {
       options: ["Viruses possess their own genetic material, just as living cells do", "Viruses reproduce independently by a process resembling binary fission", "Viruses carry out anaerobic respiration to generate their own energy", "Viruses contain 70S ribosomes identical to those found in bacteria"],
       correct: 0,
       explanation: "Despite lacking independent metabolism, an ability to reproduce without a host, and (in most cases) ribosomes of their own, viruses do possess genetic material (DNA or RNA) enclosed within a protein capsid, a feature they share with all living cells, even though the rest of their 'lifestyle' is fundamentally non-living and entirely dependent on hijacking a host cell's machinery."
+    },
+    {
+      q: "A patient with influenza is told that antibiotics will not help treat their infection. What is the correct biological reason for this?",
+      options: ["Viruses lack an independent metabolism for antibiotics to disrupt", "Influenza viruses have already evolved widespread resistance to antibiotics", "Influenza is caused by too many different bacterial strains for antibiotics to target effectively", "The antigens on influenza viruses mutate too quickly for antibiotics to bind them"],
+      correct: 0,
+      explanation: "Antibiotics work by disrupting bacterial-specific structures or metabolic processes, such as cell wall synthesis or bacterial ribosomes; because viruses lack any independent metabolism of their own (they hijack the host cell's machinery entirely to replicate), there is no equivalent bacterial-style target for antibiotics to act on, making them ineffective against viral infections like influenza regardless of strain diversity or mutation rate."
+    },
+    {
+      q: "Which statement correctly describes how antibiotics interact with viruses?",
+      options: ["Antibiotics have no direct effect on viruses", "Antibiotics disrupt the metabolism of viruses in the same way they disrupt bacterial metabolism", "Antibiotics directly prevent viral reproduction inside a host cell", "Viruses evolve specific antibiotic-resistance mechanisms in the same way that bacteria do"],
+      correct: 0,
+      explanation: "Since viruses lack the bacterial-specific structures and metabolic pathways that antibiotics are designed to target, antibiotics have no direct effect on viruses at all; while bacteria can evolve genuine antibiotic resistance through mutation and selection, this concept doesn't meaningfully apply to viruses in the same way, since antibiotics were never effective against them to begin with."
     }
   ],
 

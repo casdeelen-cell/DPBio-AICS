@@ -961,6 +961,228 @@ strong.term.tooltip-active::after, strong.term.tooltip-active::before {
   background: transparent;
 }
 
+/* ---------- mock exam page ---------- */
+
+.mock-section-label {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.mock-section-label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 30px;
+}
+.mock-note {
+  font-size: 13px;
+  color: var(--ink-soft);
+  font-style: italic;
+  font-family: var(--serif);
+  margin-top: 8px;
+}
+
+.mock-level-picker { margin-bottom: 10px; }
+.mock-level-options { display: flex; gap: 14px; flex-wrap: wrap; }
+.mock-level-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 14px;
+  background: var(--paper-raised);
+}
+.mock-level-option input { accent-color: var(--forest); width: 16px; height: 16px; }
+.mock-level-option:has(input:checked) {
+  border-color: var(--forest);
+  background: rgba(58, 90, 64, 0.06);
+}
+
+.mock-topic-buttons { display: flex; gap: 8px; }
+
+.mock-unit-block { margin-bottom: 20px; }
+.mock-unit-heading {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--forest-deep);
+  margin-bottom: 8px;
+}
+.mock-topic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 8px;
+}
+.mock-topic-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  font-size: 13px;
+  cursor: pointer;
+  background: var(--paper-raised);
+}
+.mock-topic-chip:has(input:checked) {
+  border-color: var(--forest);
+  background: rgba(58, 90, 64, 0.08);
+}
+.mock-topic-chip.disabled { opacity: 0.4; cursor: not-allowed; }
+.mock-topic-chip input { accent-color: var(--forest); width: 14px; height: 14px; }
+
+.mock-start-row { margin: 28px 0; }
+.mock-start-btn {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 15px;
+  padding: 12px 28px;
+  border-radius: 30px;
+  border: none;
+  background: var(--forest);
+  color: #fff;
+  cursor: pointer;
+}
+.mock-start-btn:hover { background: var(--forest-deep); }
+
+.mock-history-list { margin-top: 8px; }
+.mock-history-row {
+  display: flex;
+  gap: 16px;
+  padding: 8px 4px;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+  flex-wrap: wrap;
+}
+.mock-history-date { color: var(--ink-soft); min-width: 90px; }
+.mock-history-level { font-weight: 600; min-width: 30px; }
+.mock-history-topics { color: var(--ink-soft); flex: 1; }
+.mock-history-score { font-weight: 600; }
+
+/* exam screen */
+
+.mock-timer-bar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--forest);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: var(--radius);
+  margin-bottom: 24px;
+}
+.mock-timer-bar.mock-timer-low { background: var(--rust); }
+.mock-timer-bar.mock-timer-up { background: #8a3a3a; }
+.mock-timer-label { font-size: 12px; opacity: 0.85; }
+.mock-timer-clock { font-family: var(--serif); font-size: 22px; font-weight: 600; }
+
+.mock-paper-heading { margin: 36px 0 16px; }
+
+.mock-mcq-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  margin-bottom: 14px;
+  background: var(--paper-raised);
+}
+.mock-mcq-question { font-size: 15px; margin-bottom: 12px; line-height: 1.5; }
+.mock-mcq-options { display: flex; flex-direction: column; gap: 8px; }
+.mock-mcq-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 14px;
+}
+.mock-mcq-option:has(input:checked) { border-color: var(--forest); background: rgba(58, 90, 64, 0.06); }
+.mock-mcq-option input { margin-top: 3px; accent-color: var(--forest); }
+
+.mock-answer-box {
+  width: 100%;
+  font-family: var(--sans);
+  font-size: 13.5px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  resize: vertical;
+  margin-top: 6px;
+  background: #fff;
+}
+
+.mock-finish-row { margin: 32px 0 10px; text-align: center; }
+
+/* results screen */
+
+.mock-results-summary {
+  background: var(--paper-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 20px 26px;
+  margin-bottom: 30px;
+}
+.mock-results-headline {
+  font-family: var(--serif);
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--forest-deep);
+}
+.mock-results-pct { font-size: 18px; color: var(--ink-soft); font-weight: 500; }
+.mock-results-breakdown {
+  display: flex;
+  gap: 24px;
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--ink-soft);
+  flex-wrap: wrap;
+}
+
+.mock-mcq-review.mock-correct { border-left: 3px solid var(--forest); }
+.mock-mcq-review.mock-incorrect { border-left: 3px solid var(--rust); }
+.mock-review-mark { font-weight: 700; }
+.mock-correct .mock-review-mark { color: var(--forest); }
+.mock-incorrect .mock-review-mark { color: var(--rust); }
+
+.mock-mcq-option-review {
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  font-size: 14px;
+}
+.mock-option-correct { border-color: var(--forest); background: rgba(58, 90, 64, 0.08); font-weight: 600; }
+.mock-option-wrong { border-color: var(--rust); background: rgba(179, 90, 56, 0.08); }
+
+.mock-your-answer {
+  background: #F3F4EE;
+  border-radius: var(--radius);
+  padding: 10px 14px;
+  font-size: 13.5px;
+  margin-bottom: 8px;
+  white-space: pre-wrap;
+}
+
+.mock-self-mark-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  font-size: 13px;
+}
+.mock-self-mark-label { color: var(--ink-soft); white-space: nowrap; }
+.mock-self-mark-slider { accent-color: var(--moss); flex: 1; max-width: 200px; }
+.mock-self-mark-value { font-weight: 600; min-width: 50px; }
+
 /* ---------- responsive: topic layout ---------- */
 
 @media (max-width: 860px) {

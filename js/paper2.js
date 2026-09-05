@@ -207,6 +207,29 @@ const PAPER2 = {
           guidance: "Autotrophs (producers) convert atmospheric or dissolved carbon dioxide into carbohydrates and other carbon compounds through photosynthesis; this carbon is then transferred through food chains as consumers feed on producers and on each other. Cellular respiration, carried out by producers, consumers, and decomposers alike, releases carbon dioxide back into the atmosphere or water as organic compounds are broken down; some carbon is stored for long periods in fossil fuels, limestone, or forest biomass, while combustion of fossil fuels and decomposition of dead organic matter both return stored carbon back into circulation, completing the cycle."
         }
       ]
+    },
+    {
+      context: "Mammals store fat while plants store oil, and both are types of triglyceride, yet they differ in one important physical property: their solubility in water.",
+      parts: [
+        {
+          label: "a",
+          prompt: "Outline how plants make oils using carbon originally obtained from the atmosphere.",
+          marks: 4,
+          guidance: "Photosynthesis uses atmospheric carbon dioxide as a raw material, ultimately producing glucose and other carbon compounds; fatty acids (and the oils built from them) are derived from these carbon compounds. Oils are formed by linking three fatty acid molecules to a single glycerol molecule through condensation reactions, with the carboxyl group of each fatty acid bonding to a hydroxyl group on the glycerol, building up the triglyceride structure using carbon that ultimately originated from atmospheric CO2."
+        },
+        {
+          label: "b",
+          prompt: "Explain why oils are insoluble in water, while sugars such as glucose are soluble.",
+          marks: 4,
+          guidance: "Glucose is a polar molecule and readily forms hydrogen bonds with surrounding water molecules, making it hydrophilic and therefore soluble; oil molecules, by contrast, are largely made of non-polar hydrocarbon chains that cannot form hydrogen bonds with water, making them hydrophobic. Because oil molecules are more strongly attracted to each other than to water molecules, they tend to clump together and separate out from water rather than dissolving into it."
+        },
+        {
+          label: "c",
+          prompt: "Explain how a diet rich in fat might contribute to the development of poor cardiovascular health.",
+          marks: 7,
+          guidance: "A fat-rich diet, particularly one high in saturated or trans fats and cholesterol, can lead to excess fat being deposited within the walls of arteries, forming atheroma (fatty plaque); this plaque narrows the artery and creates a rough surface, which can trigger the formation of a blood clot (thrombus) at that site. If such a clot forms in a coronary artery supplying the heart, it can block blood flow and cause a heart attack; narrowed, less elastic arteries generally also increase blood pressure over time, further raising the risk of cardiovascular disease."
+        }
+      ]
     }
   ],
 
@@ -225,6 +248,17 @@ const PAPER2 = {
           prompt: "Suggest why a hypothesis about the 'optimum' concentration or exposure time for a chemical's effect can rarely be confirmed from a single experiment with only a few tested conditions.",
           marks: 2,
           guidance: "If only a limited number of discrete concentrations or exposure times were tested, it's possible that an even more effective condition exists somewhere between the tested values that simply wasn't measured; a hypothesis about a true optimum can only be properly supported by testing a much finer range of conditions around the apparent best-performing one."
+        }
+      ]
+    },
+    {
+      context: "Enzyme inhibitors can act in different ways depending on where and how they bind to their target enzyme, with important consequences for how their effect can (or cannot) be reversed.",
+      parts: [
+        {
+          label: "c",
+          prompt: "Distinguish between competitive and non-competitive enzyme inhibition.",
+          marks: 4,
+          guidance: "A competitive inhibitor closely resembles the enzyme's natural substrate and binds directly to the active site, physically blocking the substrate from binding; because it's competing for the same site, its inhibitory effect can be reduced or overcome by increasing substrate concentration. A non-competitive inhibitor, by contrast, binds to a different site on the enzyme (not the active site itself), causing a change in the enzyme's overall shape that distorts the active site indirectly; because it doesn't compete directly with the substrate for the same site, increasing substrate concentration cannot overcome a non-competitive inhibitor's effect in the same way."
         }
       ]
     }
@@ -349,6 +383,51 @@ const PAPER2 = {
           guidance: "Down syndrome results from trisomy 21, an extra copy of chromosome 21; this arises from non-disjunction, the failure of chromosomes to separate correctly during meiosis. If a pair of homologous chromosome 21s fails to separate during anaphase I (or if sister chromatids fail to separate during anaphase II), one resulting gamete ends up with an extra copy of chromosome 21 while the other lacks one entirely. If the gamete with the extra copy is fertilized by a normal gamete, the resulting zygote has three copies of chromosome 21 instead of the usual two, a chromosomal abnormality that most often arises during egg (rather than sperm) formation, and whose likelihood increases with maternal age."
         }
       ]
+    },
+    {
+      context: "Sexual reproduction depends on a specific reduction in chromosome number occurring at a precise point in the life cycle, without which chromosome numbers would double indefinitely across generations.",
+      parts: [
+        {
+          label: "b",
+          prompt: "Explain the need for halving the chromosome number during a sexual life cycle, and how this is achieved.",
+          marks: 7,
+          guidance: "If gametes were diploid like ordinary body cells, fertilization would double the chromosome number every generation; halving the chromosome number in gametes ensures the resulting zygote has the same chromosome number as each parent, rather than double. This halving is achieved through meiosis: DNA first replicates so each chromosome consists of two sister chromatids, then homologous chromosomes pair up during prophase I and separate during anaphase I, halving the chromosome number; a second division (meiosis II), mechanically similar to mitosis, then separates the sister chromatids, ultimately producing four haploid cells from one original diploid cell."
+        }
+      ]
+    },
+    {
+      context: "The nucleus of a eukaryotic cell undergoes a series of carefully ordered events during both interphase and mitosis, ensuring genetic material is accurately copied and then distributed to daughter cells.",
+      parts: [
+        {
+          label: "a",
+          prompt: "Outline the sequence of events that occurs during mitosis.",
+          marks: 5,
+          guidance: "Mitosis begins with the supercoiling (condensation) of chromosomes, making them visible under a microscope, followed by breakdown of the nuclear membrane; spindle fibres (microtubules) then grow and attach to the centromere of each chromosome. Chromosomes line up along the equator of the cell (metaphase), after which each chromosome's centromere divides and sister chromatids separate, pulled to opposite poles by the shortening spindle fibres (anaphase); finally, the chromosomes decondense, nuclear membranes reform around each set of chromosomes, and the cytoplasm divides (cytokinesis), producing two genetically identical daughter cells."
+        },
+        {
+          label: "b",
+          prompt: "Describe the processes that occur in the nucleus of a cell during interphase.",
+          marks: 7,
+          guidance: "During interphase, DNA is replicated ahead of the coming division: the double helix is unwound (by helicase, with gyrase relaxing supercoiling ahead of it), hydrogen bonds between the two strands are broken, and new complementary strands are synthesised by DNA polymerase using each original strand as a template, a semi-conservative process producing two identical DNA molecules from each original chromosome. Alongside DNA replication, interphase also involves transcription of genes into mRNA, translation of that mRNA into proteins, and general growth of the cell along with replication of organelles such as mitochondria, all in preparation for eventual cell division."
+        },
+        {
+          label: "c",
+          prompt: "Explain how the presence of a Y chromosome in the cells of a human embryo causes it to develop as male.",
+          marks: 3,
+          guidance: "A gene located on the Y chromosome (the SRY gene) triggers the developing embryonic gonads to become testes rather than ovaries; once formed, these developing testes begin secreting testosterone, and this testosterone is what drives the development of male genitalia and other male reproductive structures in the embryo, a cascade of events triggered by the initial presence of the Y chromosome and its SRY gene."
+        }
+      ]
+    },
+    {
+      context: "Genetic information ultimately directs the production of every protein a body needs, and the process by which this genetic information is reshuffled between generations is central to explaining biological variation.",
+      parts: [
+        {
+          label: "c",
+          prompt: "Explain the stages and processes of meiosis that lead to genetic variation.",
+          marks: 7,
+          guidance: "Meiosis divides one diploid nucleus to produce four haploid nuclei, halving the chromosome number in the process; at the start of meiosis, each chromosome consists of two sister chromatids, produced by earlier DNA replication. During prophase I, homologous chromosomes pair up, and crossing over occurs between non-sister chromatids of these paired homologues, exchanging genetic material and producing new combinations of alleles not present in either original chromosome. During metaphase I, homologous pairs align randomly along the equator (independent assortment), meaning the specific combination of maternal and paternal chromosomes distributed to each resulting cell varies randomly between different meiotic divisions; together, crossing over and independent assortment generate substantial genetic variation among the haploid gametes ultimately produced."
+        }
+      ]
     }
   ],
 
@@ -421,6 +500,34 @@ const PAPER2 = {
           guidance: "Proteins function as enzymes, catalysing and controlling the rate of metabolic reactions; some act as hormones, serving as chemical messengers between cells. Membrane transport proteins (channels, carriers, and pumps) regulate what substances enter or leave a cell, while structural proteins (such as collagen) provide mechanical support to tissues. Other proteins, like haemoglobin, are specialised for transport (in this case, of oxygen in the blood), and antibodies are proteins with a defence role, illustrating just how broad a range of cellular functions proteins are capable of performing."
         }
       ]
+    },
+    {
+      context: "Proteins carry out an enormous range of essential functions in cells and organisms, but their function depends entirely on maintaining a precise three-dimensional shape.",
+      parts: [
+        {
+          label: "a",
+          prompt: "Outline the process of protein denaturation.",
+          marks: 4,
+          guidance: "Denaturation involves a change to a protein's conformation (its overall three-dimensional shape, specifically its tertiary structure), caused by the breaking or disruption of the intramolecular bonds holding that shape together. This typically occurs when a protein is exposed to conditions outside its tolerated range, such as extreme pH or high temperature; excessive heat causes molecular vibrations that break these bonds, while extreme pH disrupts the ionic and hydrogen bonds that depend on a stable balance of charge, in both cases irreversibly distorting the protein's shape and, usually, destroying its normal function."
+        }
+      ]
+    },
+    {
+      context: "Cellulose gives plant cell walls their characteristic strength, and this strength must be temporarily and precisely relaxed whenever a plant cell needs to grow.",
+      parts: [
+        {
+          label: "a",
+          prompt: "Describe the structure of cellulose molecules.",
+          marks: 3,
+          guidance: "Cellulose is built from beta-glucose monomers, linked together by glycosidic bonds forming specifically between carbon 1 of one glucose and carbon 4 of the next, through condensation reactions; because of the particular orientation of beta-glucose subunits, the resulting chain is unbranched and straight (rather than helical or branched, as seen in starch or glycogen). Many of these straight cellulose chains bundle together, cross-linked by hydrogen bonds, forming strong microfibrils responsible for cellulose's structural strength."
+        },
+        {
+          label: "c",
+          prompt: "When a plant cell grows, its cell wall must expand to accommodate the increase in size. Explain the role of auxin in this process.",
+          marks: 2,
+          guidance: "Auxin stimulates the transcription and expression of specific genes within the target cell; among its effects, it stimulates proton pumps in the plasma membrane, actively moving hydrogen ions out into the cell wall. This lowers the pH within the cell wall, which loosens the connections between cellulose microfibrils (partly by activating enzymes that break some of the cross-linking bonds), allowing the wall to expand and stretch as the cell grows, before new cellulose is laid down to reinforce the enlarged wall."
+        }
+      ]
     }
   ],
 
@@ -445,6 +552,28 @@ const PAPER2 = {
           prompt: "Suggest why the accumulation of oxygen in Earth's early atmosphere, produced by photosynthetic prokaryotes, was significant for the subsequent evolution of life.",
           marks: 3,
           guidance: "Rising atmospheric oxygen allowed the evolution of aerobic respiration, a far more efficient way of releasing energy from organic molecules than anaerobic pathways, which could have supported the evolution of larger, more complex, energy-demanding organisms. It also led to the formation of the ozone layer, which absorbs harmful ultraviolet radiation and made it possible for life to survive on land rather than being confined to water."
+        }
+      ]
+    },
+    {
+      context: "Organisms have evolved a remarkable diversity of cell types, and one influential theory explains how the complex, compartmentalised eukaryotic cell itself first arose.",
+      parts: [
+        {
+          label: "a",
+          prompt: "Describe the endosymbiotic theory.",
+          marks: 4,
+          guidance: "The endosymbiotic theory proposes that eukaryotic cells evolved from prokaryotes, specifically that a larger prokaryotic cell engulfed a smaller prokaryote (such as an aerobic bacterium or a photosynthetic cyanobacterium) without digesting it. Rather than being destroyed, the engulfed cell survived and formed a stable, mutually beneficial relationship with its host, eventually becoming a permanent organelle, mitochondria in the case of an engulfed aerobic bacterium, or chloroplasts in the case of an engulfed photosynthetic bacterium. Evidence supporting this theory includes both organelles having their own circular DNA, their own smaller 70S ribosomes (matching bacteria rather than the surrounding 80S eukaryotic ribosomes), and being bounded by a double membrane, consistent with an origin as an engulfed cell."
+        }
+      ]
+    },
+    {
+      context: "Chloroplasts, the organelles responsible for photosynthesis in plant cells, are believed to have originated through a specific evolutionary process involving one cell engulfing another.",
+      parts: [
+        {
+          label: "b",
+          prompt: "Explain how plant cells' chloroplasts are thought to have originated by endosymbiosis.",
+          marks: 5,
+          guidance: "According to the endosymbiotic theory, a larger host cell (an early eukaryotic or eukaryote-like cell) engulfed a smaller, free-living photosynthetic prokaryote, likely through a process resembling endocytosis or phagocytosis, taking it into an internal vesicle rather than fully digesting it. Rather than being destroyed, this engulfed cell survived and the two cells developed a mutualistic relationship, with the host providing protection and raw materials while the engulfed photosynthetic cell provided organic compounds produced by its own photosynthesis; over evolutionary time, this partnership became permanent, with the engulfed cell becoming the modern chloroplast, still carrying its own circular DNA and double membrane as a legacy of this origin."
         }
       ]
     }
@@ -481,6 +610,40 @@ const PAPER2 = {
           prompt: "Outline the process of transcription.",
           marks: 4,
           guidance: "Transcription is the synthesis of mRNA copied from a DNA template, using complementary base pairing against the antisense (template) strand; mRNA is built from the bases A, U, C, and G, with uracil replacing DNA's thymine. RNA polymerase catalyses the formation of covalent (phosphodiester) bonds between adjacent RNA nucleotides as it moves along the template strand, synthesising the new mRNA strand in a 5' to 3' direction."
+        }
+      ]
+    },
+    {
+      context: "RNA molecules take on several different roles within the cell, from carrying genetic information as mRNA to helping build the amino acid sequence of a protein.",
+      parts: [
+        {
+          label: "b",
+          prompt: "Explain the process of transcription.",
+          marks: 7,
+          guidance: "Transcription is the synthesis of an mRNA molecule using a DNA template. RNA polymerase binds to DNA and unwinds a section of the double helix, exposing the template (antisense) strand; free RNA nucleotides then pair with their complementary bases on this template strand (following A-U and G-C pairing rules), and RNA polymerase joins these nucleotides together to form a continuous mRNA strand as it moves along the template in a 5' to 3' direction. Once the relevant gene has been fully transcribed, the newly formed mRNA strand detaches, and the original DNA double helix reforms behind the moving RNA polymerase."
+        }
+      ]
+    },
+    {
+      context: "A tRNA molecule carrying the amino acid aspartic acid must reliably deliver that specific amino acid to the ribosome during translation, a process that depends on molecular recognition at several stages.",
+      parts: [
+        {
+          label: "a",
+          prompt: "A tRNA molecule has an anticodon reading CUG. Deduce the function of this base triplet.",
+          marks: 1,
+          guidance: "CUG is the anticodon; it functions to bind, through complementary base pairing, to the matching codon on an mRNA molecule during translation."
+        },
+        {
+          label: "b",
+          prompt: "Explain how living organisms ensure that the amino acid attached to a particular tRNA molecule is always the correct one, in this case aspartic acid.",
+          marks: 2,
+          guidance: "A specific enzyme, an aminoacyl-tRNA synthetase (tRNA-activating enzyme), recognises the particular shape of a given tRNA molecule and ensures that only the correct, matching amino acid (in this case aspartic acid) is attached to it; there is a different, specific activating enzyme for each of the different tRNA molecules, which is what guarantees the reliable, correct pairing between tRNA and amino acid every time."
+        },
+        {
+          label: "c",
+          prompt: "During translation, three binding sites for tRNA molecules are used on the ribosome. Outline the role of each of these three sites.",
+          marks: 3,
+          guidance: "The A site (aminoacyl site) is where a new tRNA carrying its amino acid first binds, matching its anticodon to the current mRNA codon; the P site (peptidyl site) is where a peptide bond is formed, linking the new amino acid to the growing polypeptide chain held by the tRNA there; and the E site (exit site) is where the now-empty tRNA, having already delivered its amino acid, is released from the ribosome after the ribosome shifts along the mRNA by one codon."
         }
       ]
     }
@@ -599,6 +762,17 @@ const PAPER2 = {
           guidance: "Cellular respiration is the controlled release of energy from organic compounds (such as glucose) to produce ATP; anaerobic respiration specifically does not require oxygen and occurs entirely in the cytoplasm rather than the mitochondrion, via glycolysis. Glucose is converted to pyruvate through a series of enzyme-catalysed steps, producing a small net yield of ATP (2 ATP per glucose) directly from glycolysis; without oxygen to continue the process further, pyruvate is instead converted into lactate (in animal cells) or ethanol and CO2 (in yeast and plant cells), regenerating the NAD+ needed to keep glycolysis running."
         }
       ]
+    },
+    {
+      context: "The electron transport chain is the final stage of aerobic respiration, and it is where the vast majority of ATP produced during cellular respiration is actually generated.",
+      parts: [
+        {
+          label: "c",
+          prompt: "Explain the role of the electron transport chain in the generation of ATP by cell respiration.",
+          marks: 7,
+          guidance: "The electron transport chain carries out chemiosmosis, the process that generates ATP using energy released as electrons pass along a series of carrier proteins; these electrons are supplied by reduced NAD and FAD, produced earlier by glycolysis and the Krebs cycle. As electrons pass from one carrier to the next, energy is released and used to actively pump hydrogen ions from the mitochondrial matrix into the intermembrane space, building up a steep proton concentration gradient. These hydrogen ions then flow back into the matrix through ATP synthase, and this flow provides the energy that drives ATP synthase to phosphorylate ADP into ATP; oxygen acts as the final electron acceptor at the end of the chain, combining with electrons and hydrogen ions to form water, which is why oxygen is essential for this final, ATP-generating stage of aerobic respiration to continue."
+        }
+      ]
     }
   ],
 
@@ -653,6 +827,17 @@ const PAPER2 = {
           guidance: "The light-independent reactions (Calvin cycle) take place in the stroma of the chloroplast, using ATP and NADPH supplied by the light-dependent reactions. The cycle begins with a five-carbon compound, ribulose bisphosphate (RuBP); atmospheric CO2 is fixed by combining with RuBP in a reaction catalysed by the enzyme RuBisCO, forming an unstable six-carbon intermediate that immediately splits into two molecules of a three-carbon compound (glycerate 3-phosphate). ATP and NADPH are then used to reduce this three-carbon compound into triose phosphate (G3P); most of the triose phosphate is used to regenerate RuBP (using more ATP), keeping the cycle running, while some is exported to build glucose and other organic molecules the plant needs."
         }
       ]
+    },
+    {
+      context: "The two stages of photosynthesis, the light-dependent and light-independent reactions, are physically separate but chemically interdependent, with one stage supplying essential products the other cannot function without.",
+      parts: [
+        {
+          label: "c",
+          prompt: "Explain how the light-independent reactions of photosynthesis rely on the light-dependent reactions.",
+          marks: 7,
+          guidance: "The light-dependent reactions produce ATP (via chemiosmosis/photophosphorylation) and reduced NADP (using electrons ultimately derived from photosystem I); both products are essential inputs for the Calvin cycle. In the light-independent reactions, carbon dioxide combines with RuBP to form glycerate 3-phosphate; this glycerate 3-phosphate is then reduced to triose phosphate specifically using the ATP and reduced NADP supplied by the light-dependent reactions. Without a continuous supply of these two products, the Calvin cycle cannot proceed, since RuBP could not be regenerated (using ATP) and glycerate 3-phosphate could not be reduced (using NADPH), illustrating why the light-independent reactions cannot occur in true darkness, despite not directly requiring light themselves."
+        }
+      ]
     }
   ],
 
@@ -671,6 +856,17 @@ const PAPER2 = {
           prompt: "A gene therapy approach for a genetic muscle disorder proposes editing a patient's stem cells before they differentiate. Suggest why pluripotent stem cells might be preferred over multipotent stem cells for this purpose.",
           marks: 2,
           guidance: "Pluripotent stem cells can differentiate into a much wider range of cell types than multipotent stem cells, which are more limited (committed) in what they can become; if the corrected cells need to develop into a specific tissue type not accessible from a readily available multipotent source, starting from pluripotent cells gives more flexibility to produce exactly the required cell type."
+        }
+      ]
+    },
+    {
+      context: "Stem cells hold considerable promise in medicine because of a specific property that distinguishes them from most other cells in the body.",
+      parts: [
+        {
+          label: "a",
+          prompt: "Outline reasons for the therapeutic use of stem cells.",
+          marks: 3,
+          guidance: "Stem cells are unspecialised (undifferentiated) and retain the ability to divide and differentiate along different developmental pathways into a variety of specialised cell types; they can be obtained from several accessible sources, including embryos, umbilical cord blood, bone marrow, and some adult tissues. Because of their capacity to develop into needed cell types, stem cells can potentially be used to regenerate, repair, or replace diseased or damaged tissue in patients, offering therapeutic potential for a range of conditions that currently have limited treatment options."
         }
       ]
     }
@@ -704,6 +900,29 @@ const PAPER2 = {
           guidance: "Insulin production is determined by a specific gene, present in every cell of the body since all cells (with rare exceptions) contain a full copy of the genome; however, this gene is only switched on (expressed) in the beta cells of the pancreas. This selectivity arises through cell differentiation: stem cells develop into specialised cell types, and during this process, different genes are switched on or off in different cell lineages depending on which transcription factors and regulatory signals are present. In pancreatic beta cells specifically, the regulatory conditions allow the insulin gene to be transcribed and translated, while in other cell types the same gene remains switched off, illustrating how differential gene expression rather than differences in DNA content explains why only certain cells produce certain proteins."
         }
       ]
+    },
+    {
+      context: "Nucleosomes package DNA tightly around histone proteins, and this packaging can itself be used by the cell to regulate whether particular genes are transcribed, alongside more direct forms of regulation involving specific proteins that respond to the presence of a signalling molecule.",
+      parts: [
+        {
+          label: "b",
+          prompt: "Outline how nucleosomes can affect the transcription of DNA.",
+          marks: 1,
+          guidance: "Nucleosomes can both promote and inhibit gene transcription depending on how tightly they are packed: tight condensation (supercoiling) of DNA around histones can physically block RNA polymerase and transcription factors from accessing a gene's promoter, preventing transcription, while a more loosely packed, open chromatin structure allows these proteins to bind and transcription to proceed."
+        },
+        {
+          label: "d",
+          prompt: "Explain the role of lactose in regulating expression of the gene for lactase production.",
+          marks: 3,
+          guidance: "In the absence of lactose, a repressor protein binds to the promoter region of the lactase gene, physically blocking RNA polymerase from transcribing it. When lactose is present, it binds to this repressor protein, changing its shape so that it can no longer bind the promoter; with the repressor removed, RNA polymerase is free to bind the promoter and transcribe the gene, producing lactase, so lactase is only produced when its substrate, lactose, is actually present, an efficient example of gene expression regulated by an environmental signal."
+        },
+        {
+          label: "e",
+          prompt: "State one reason that identical twins might show different DNA methylation patterns as they grow older, despite having identical DNA sequences.",
+          marks: 1,
+          guidance: "Differences in environment, diet, or illness experienced separately by each twin over their lifetime can lead to different epigenetic (methylation) changes accumulating in each twin's DNA, even though their underlying base sequence remains identical."
+        }
+      ]
     }
   ],
 
@@ -733,6 +952,40 @@ const PAPER2 = {
           prompt: "Describe the polymerase chain reaction (PCR).",
           marks: 4,
           guidance: "A DNA sample is first heated to a high temperature, which breaks the hydrogen bonds between the two strands of the double helix and separates them (denaturation); the mixture is then cooled to allow short, specific primers to bind to the target sequence on each separated strand. A heat-stable DNA polymerase, commonly Taq polymerase (which, unlike most enzymes, doesn't denature at the high temperatures used earlier in the cycle), then extends new complementary strands from each primer, doubling the amount of the target DNA sequence with each full cycle; repeating this heat-cool-extend cycle many times rapidly amplifies even a tiny initial sample into millions of copies."
+        }
+      ]
+    },
+    {
+      context: "Some genetic changes affect not just a single gene but an organism's entire set of chromosomes, occasionally producing effects significant enough to influence the process of speciation.",
+      parts: [
+        {
+          label: "b",
+          prompt: "Describe polyploidy and explain how it can lead to speciation.",
+          marks: 5,
+          guidance: "Polyploidy is the condition of having more than the usual two complete sets of chromosomes (such as three or four sets, rather than the normal diploid two); it can arise through errors in meiosis producing diploid gametes, or through DNA replication occurring without a following mitotic division. A polyploid individual often cannot successfully interbreed with the original diploid population, since their differing chromosome numbers prevent normal pairing during meiosis in any hybrid offspring; this reproductive isolation can allow a polyploid population to become a new, separate species relatively quickly, a mechanism particularly important in the evolutionary history of many plant species."
+        }
+      ]
+    },
+    {
+      context: "The polymerase chain reaction (PCR) amplifies a small starting quantity of DNA into millions of copies through repeated temperature cycles, each step of the cycle serving a distinct chemical purpose.",
+      parts: [
+        {
+          label: "b",
+          prompt: "In a PCR reaction, would the primers used be smaller or larger than the DNA fragment being amplified? Deduce your answer with a reason.",
+          marks: 1,
+          guidance: "Primers are smaller than the amplified DNA fragment; on a gel, this is reflected in primers migrating further from the loading well than the larger, amplified DNA product, since smaller fragments move more easily through the gel matrix."
+        },
+        {
+          label: "c",
+          prompt: "Explain the reason for changing the temperature at each stage of a PCR cycle.",
+          marks: 2,
+          guidance: "A high temperature (around 94°C) separates (denatures) the two DNA strands by breaking the hydrogen bonds between them; a lower temperature (around 55°C) then allows the short primers to bind (anneal) to their complementary sequences on each separated strand. A subsequent increase in temperature (around 72°C) allows the heat-stable Taq polymerase to synthesise new complementary DNA strands, extending from each primer; repeating this three-temperature cycle doubles the amount of target DNA with each cycle."
+        },
+        {
+          label: "d",
+          prompt: "Predict the result that would be obtained if fewer PCR cycles were used than intended.",
+          marks: 1,
+          guidance: "Using fewer cycles would produce far fewer copies of the target DNA overall, resulting in a much fainter or thinner band (or no visible band at all) when the product is run on a gel, since each cycle is what doubles the quantity of amplified DNA."
         }
       ]
     }
@@ -840,6 +1093,17 @@ const PAPER2 = {
           prompt: "Outline the inheritance of blood types in the ABO blood group system.",
           marks: 4,
           guidance: "The ABO blood group gene has three alleles: IA, IB, and i. Both IA and IB are dominant to i, so genotype ii produces blood group O, while IAi or IAIA produces group A, and IBi or IBIB produces group B. IA and IB are codominant with each other, meaning a person with genotype IAIB expresses both simultaneously, producing blood group AB rather than a blended phenotype."
+        }
+      ]
+    },
+    {
+      context: "Human characteristics vary in very different patterns, some falling into a small number of sharply distinct categories, and others varying smoothly and continuously across a population.",
+      parts: [
+        {
+          label: "c",
+          prompt: "Distinguish between continuous and discrete (discontinuous) variation, using examples.",
+          marks: 4,
+          guidance: "Discrete variation describes characteristics that fall into a small number of distinct, non-overlapping categories, typically controlled by one or two genes, such as human ABO blood group (only four possible phenotypes: A, B, AB, or O). Continuous variation, by contrast, describes characteristics that vary smoothly across a wide, overlapping range with no sharp category boundaries, typically because they are polygenic (influenced by many genes each with a small additive effect) and often also affected by environmental factors; human height is a classic example, showing a smooth, bell-shaped distribution rather than a small number of distinct height categories."
         }
       ]
     }
@@ -976,6 +1240,40 @@ const PAPER2 = {
           guidance: "Mutation, a change to the base sequence of DNA, can create new alleles that didn't previously exist in the population; base substitutions (changing a single nucleotide) are one common type, and exposure to radiation or mutagenic chemicals can increase the rate at which mutations occur. Beyond mutation, sexual reproduction also generates variation without creating new alleles: crossing over during meiosis exchanges genetic material between homologous chromosomes, independent assortment randomly distributes maternal and paternal chromosomes into gametes, and random fertilization combines gametes from two different individuals, together producing offspring with new combinations of existing alleles."
         }
       ]
+    },
+    {
+      context: "Evolution proceeds through several distinct mechanisms that cause gene pools to change over time, sometimes leading to the formation of entirely new species.",
+      parts: [
+        {
+          label: "a",
+          prompt: "Outline how adaptive radiation provides evidence for evolution.",
+          marks: 3,
+          guidance: "Adaptive radiation describes the diversification of species from a shared common ancestor, adapting to a variety of different environments and ecological niches; the resulting species often show homologous structures with underlying structural similarities despite very different present-day functions, reflecting descent from that shared ancestor. Classic examples, such as Darwin's finches or the pentadactyl limb across vertebrates, are commonly cited as evidence supporting evolution, since the pattern of shared structure combined with differing adaptations is difficult to explain except through evolutionary divergence from a common ancestor."
+        }
+      ]
+    },
+    {
+      context: "Living organisms cause change in their environment and also respond to environmental change themselves, whether through ecological damage, evolutionary adaptation, or physiological illness.",
+      parts: [
+        {
+          label: "a",
+          prompt: "Outline changes to Earth's atmosphere that have been caused by living organisms over its history.",
+          marks: 4,
+          guidance: "Photosynthetic bacteria (cyanobacteria), active billions of years ago, gradually increased atmospheric oxygen concentration as a by-product of photosynthesis; aerobic respiration across the living world continually adds carbon dioxide to the atmosphere, while methanogenic archaea (as well as ruminant animals like cows) release methane, particularly under anaerobic conditions such as in swamps or animal digestive systems. More recently, large-scale human combustion of fossil fuels has substantially raised atmospheric CO2 concentration well beyond levels seen for hundreds of thousands of years."
+        },
+        {
+          label: "b",
+          prompt: "Explain how a population changes as a result of natural selection.",
+          marks: 7,
+          guidance: "Variation already exists within a population, arising from mutation and, in sexually reproducing species, from the reshuffling of alleles during meiosis; more offspring are typically produced than the environment can support, leading to competition for limited resources. When environmental conditions favour certain heritable characteristics (for example, during a change in food supply, climate, or the arrival of a new predator), individuals with advantageous variations survive and reproduce more successfully than others; because these advantageous traits are heritable, they become more common in the next generation, and this differential reproductive success, repeated over many generations, gradually shifts the population's overall characteristics."
+        },
+        {
+          label: "c",
+          prompt: "Explain the changes in lung function experienced by a person with emphysema.",
+          marks: 4,
+          guidance: "Emphysema results in the destruction of the walls separating individual alveoli, producing fewer, larger air sacs rather than many small ones; this substantially reduces the total surface area available for gas exchange, making the entry of oxygen into the blood and the release of carbon dioxide from it much less efficient. The alveolar walls also lose elasticity, making it harder for the lungs to stretch and recoil normally during breathing, contributing to the characteristic breathlessness experienced by people with this condition."
+        }
+      ]
     }
   ],
 
@@ -1028,6 +1326,23 @@ const PAPER2 = {
           prompt: "Explain how bonobos could have evolved from a shared ancestral population with chimpanzees through the process of speciation.",
           marks: 3,
           guidance: "A rise in water level is thought to have created a geographic barrier (the Congo River) that separated the ancestral population into two isolated groups; once separated, the two populations experienced no gene flow between them, meaning genetic differences arising through mutation in each population could no longer be shared or homogenised across the whole group. Each population also faced somewhat different environments and selective pressures on either side of the river, so natural selection favoured different traits in each population over many generations, and enough genetic divergence eventually built up that the two populations became reproductively isolated, distinct species — chimpanzees and bonobos."
+        }
+      ]
+    },
+    {
+      context: "Species are defined as groups of organisms capable of interbreeding to produce fertile offspring, but new species can arise from existing ones through more than one evolutionary route.",
+      parts: [
+        {
+          label: "a",
+          prompt: "Outline how new heritable traits can develop within a species over time.",
+          marks: 7,
+          guidance: "Mutations, changes to the base sequence of DNA, generate genetic variation by forming new alleles that did not previously exist in the population; sexual reproduction and meiosis further generate new combinations of existing alleles through independent assortment and crossing over. Natural selection then acts on this variation: individuals whose traits make them better adapted to their environment tend to survive and reproduce more successfully than others, so advantageous heritable traits become more common in the population over successive generations, gradually shifting the population's overall characteristics."
+        },
+        {
+          label: "b",
+          prompt: "Explain how a new species can be formed abruptly through polyploidy.",
+          marks: 5,
+          guidance: "Polyploidy is the condition of possessing more than the usual two complete sets of homologous chromosomes, for example three sets (triploid) or four sets (tetraploid); this can arise from errors during meiosis producing diploid, rather than haploid, gametes, or from DNA replication occurring without a following mitotic division. A polyploid individual typically cannot produce fertile offspring by crossing with the original diploid population, since mismatched chromosome numbers disrupt normal pairing during meiosis in any hybrid; this reproductive isolation can allow the polyploid population to become a new, separate species within a single generation, a mechanism especially significant in the evolutionary history of many plant species."
         }
       ]
     }
@@ -1116,6 +1431,17 @@ const PAPER2 = {
           guidance: "Analogous traits arise in organisms with different evolutionary origins that do not share a recent common ancestor, despite showing a similar function; they arise through convergent evolution, and classifying organisms based on analogous traits alone produces an artificial grouping that misrepresents true evolutionary relationships. Homologous traits, by contrast, are structures with similar internal anatomy inherited from a shared common ancestor, even if they now serve very different functions in each descendant lineage; classification based on homologous traits produces a natural grouping that accurately reflects evolutionary relationships, which is why cladistics and modern natural classification systems rely on homologous, not analogous, similarities."
         }
       ]
+    },
+    {
+      context: "Naming and organising the enormous diversity of living organisms requires an internationally agreed, consistent system.",
+      parts: [
+        {
+          label: "c",
+          prompt: "Outline the binomial system of classification.",
+          marks: 4,
+          guidance: "The binomial system assigns every species a two-part scientific name, universally recognised among biologists regardless of language or country, avoiding the confusion of using different common names in different regions. The first part of the name identifies the genus (capitalised) and the second identifies the species (lowercase), and the whole name is conventionally italicised or underlined; organisms are grouped into these classifications based on shared characteristics and evolutionary relationships, allowing scientists worldwide to communicate about a specific organism unambiguously."
+        }
+      ]
     }
   ],
 
@@ -1190,6 +1516,29 @@ const PAPER2 = {
           guidance: "Rising atmospheric CO2 and other greenhouse gases enhance the greenhouse effect, increasing global temperatures, including ocean temperatures. When water temperature rises too far, corals expel their symbiotic zooxanthellae algae (coral bleaching), losing both their colour and a major source of nutrients normally supplied by the algae's photosynthesis. This reduced nutrient supply slows coral growth and, if the stress persists, can kill the coral outright; rising CO2 also dissolves into the ocean and lowers its pH (ocean acidification), making it harder for corals to deposit the calcium carbonate they need to build their skeletons, compounding the threat to reef survival."
         }
       ]
+    },
+    {
+      context: "Global mean surface temperature and the amount of solar energy reaching Earth have both been tracked over recent decades, and scientists have compared these two datasets when investigating the causes of recent warming.",
+      parts: [
+        {
+          label: "a",
+          prompt: "It has been argued that variation in global mean surface temperature has mainly been caused by variation in energy received from the Sun. Discuss whether this argument is well supported by the available evidence.",
+          marks: 2,
+          guidance: "The evidence generally does not support this argument: while global surface temperature has shown a clear overall upward trend over recent decades, solar irradiance (energy from the sun) has shown no comparable overall increase, and in some measurements has even slightly decreased; furthermore, the peaks and troughs in solar irradiance data do not closely correspond with the fluctuations seen in surface temperature, which would be expected if solar variation were the primary driver of the observed warming."
+        },
+        {
+          label: "b",
+          prompt: "Explain how increased levels of atmospheric carbon dioxide contribute to global warming.",
+          marks: 3,
+          guidance: "Carbon dioxide absorbs long-wavelength (infrared) radiation; as its atmospheric concentration increases, more of this radiation is trapped within the atmosphere rather than escaping to space. Short-wave radiation from the sun passes through the atmosphere relatively easily and warms Earth's surface, which then re-emits this energy as long-wave radiation; it is specifically this outgoing long-wave radiation that increased CO2 absorbs and re-radiates back toward the surface, raising the average global temperature, the mechanism of the enhanced greenhouse effect."
+        },
+        {
+          label: "c",
+          prompt: "State one other gas, besides carbon dioxide, that contributes to global warming.",
+          marks: 1,
+          guidance: "Suitable answers include methane, nitrous oxide, water vapour, ozone, or CFCs and other halogenated gases, all of which also absorb long-wave radiation and contribute to the greenhouse effect."
+        }
+      ]
     }
   ],
 
@@ -1257,6 +1606,28 @@ const PAPER2 = {
           prompt: "Explain the impact of human activity on climate change.",
           marks: 7,
           guidance: "The greenhouse effect describes how greenhouse gases absorb long-wave radiation re-emitted from Earth's surface, trapping heat within the atmosphere; burning fossil fuels, peat, and natural gas releases additional CO2 beyond what natural cycles can absorb, while deforestation reduces the amount of CO2 that can be taken up by photosynthesis, and agriculture (particularly livestock and rice cultivation) adds methane, another potent greenhouse gas. Together, these anthropogenic sources have raised atmospheric greenhouse gas concentrations well above pre-industrial levels, enhancing the natural greenhouse effect and driving a sustained rise in global average temperature, with knock-on effects including ice melt, sea level rise, and shifting climate patterns."
+        }
+      ]
+    },
+    {
+      context: "Carbon moves continuously between the atmosphere and living organisms, both being removed by some biological processes and released back into the atmosphere by others.",
+      parts: [
+        {
+          label: "c",
+          prompt: "Describe processes in the carbon cycle that either produce or use carbon dioxide.",
+          marks: 7,
+          guidance: "Photosynthesis uses carbon dioxide, reducing its concentration in the atmosphere as autotrophs (plants, algae, and cyanobacteria) fix it into organic carbon compounds; this fixed carbon then passes along food chains as consumers feed on producers and on each other. Cellular respiration, carried out by producers, consumers, and decomposers alike, releases carbon dioxide back into the atmosphere as organic compounds are broken down for energy; combustion of fossil fuels and of biomass (such as forest fires) also releases stored carbon as CO2, while decomposition of dead organic matter by decomposers returns yet more carbon to the atmosphere and soil, completing the cycle."
+        }
+      ]
+    },
+    {
+      context: "Every population within an ecological community depends on other populations, directly or indirectly, for its supply of energy, ultimately traceable back to a single common source.",
+      parts: [
+        {
+          label: "a",
+          prompt: "Describe how populations within a community rely on each other for supplies of energy.",
+          marks: 7,
+          guidance: "Autotrophs (producers), such as plants and photosynthetic bacteria, convert light energy into chemical energy through photosynthesis, providing the initial energy input for the entire community; this energy then flows along food chains and through interconnected food webs as consumers feed on producers and, in turn, on each other. Energy transfer is never perfectly efficient, since a substantial proportion is lost as heat through respiration and other life processes at every trophic level, meaning each successive trophic level has less available energy than the one before it, illustrating how deeply every population in a community, whether producer, consumer, or decomposer, ultimately depends on this single flow of energy originating with the autotrophs."
         }
       ]
     }
@@ -1339,6 +1710,23 @@ const PAPER2 = {
           guidance: "The sodium-potassium pump uses active transport, hydrolysing ATP to provide the energy needed to move ions against their concentration gradients; each cycle pumps sodium ions out of the axon and potassium ions into it. By continuously maintaining these ion gradients, the pump helps establish and maintain the resting membrane potential, the foundation upon which action potentials and nerve impulse transmission depend."
         }
       ]
+    },
+    {
+      context: "Cell size cannot increase indefinitely, and one key limiting factor relates directly to the relationship between a cell's surface area and its volume.",
+      parts: [
+        {
+          label: "a",
+          prompt: "Outline the significance of surface area to volume ratio in limiting cell size.",
+          marks: 4,
+          guidance: "A cell's surface area determines the maximum rate at which materials (nutrients, gases, waste products) can be exchanged with its surroundings; as a cell increases in size, its overall metabolic activity also increases, meaning it needs to take in more substances and excrete more waste. However, volume increases faster than surface area as a cell grows larger (surface area increases with the square of linear dimensions, while volume increases with the cube), so the surface area to volume ratio falls as cells get bigger; beyond a certain size, the available surface area becomes insufficient to support the cell's growing metabolic demands, which is why cells tend to divide rather than simply continuing to grow indefinitely."
+        },
+        {
+          label: "b",
+          prompt: "Describe transport across cell membranes by osmosis.",
+          marks: 4,
+          guidance: "Osmosis is a specific form of diffusion involving the movement of water molecules (rather than solute molecules) across a partially permeable membrane; water moves from a region of lower solute concentration to a region of higher solute concentration, or equivalently, from higher to lower water potential, until equilibrium is reached (or until a counteracting pressure, such as turgor pressure in a plant cell, opposes further net movement). This passive process requires no energy input from the cell, since it is driven entirely by the random movement of water molecules down their concentration gradient."
+        }
+      ]
     }
   ],
 
@@ -1379,6 +1767,63 @@ const PAPER2 = {
           prompt: "Explain the role of the kidney in osmoregulation.",
           marks: 8,
           guidance: "Osmoregulation is the regulation of the body's water and solute (salt) balance. The nephron is the kidney's functional unit: ultrafiltration in the glomerulus forces small molecules (including water, salts, and waste) out of the blood and into Bowman's capsule, forming filtrate; useful substances are then selectively reabsorbed back into the blood as filtrate travels through the nephron. The loop of Henle establishes and maintains a region of high solute concentration deep in the medulla (through active transport of ions in the ascending limb, while the descending limb remains permeable to water); this concentration gradient allows water to be drawn out of the collecting duct by osmosis. ADH, released when the blood is too concentrated, increases the collecting duct's permeability to water, increasing reabsorption and producing a smaller volume of more concentrated urine, restoring the blood's water balance."
+        }
+      ]
+    },
+    {
+      context: "When the body becomes dehydrated, several coordinated physiological responses work together to restore normal water balance.",
+      parts: [
+        {
+          label: "c",
+          prompt: "Explain how water balance is restored in mammals when they are dehydrated.",
+          marks: 7,
+          guidance: "Dehydration triggers the sensation of thirst, prompting increased water intake, and can also increase water reabsorption from the large intestine (colon). Internally, osmoreceptors in the hypothalamus detect the resulting rise in blood solute concentration; this triggers secretion of ADH from the posterior pituitary gland, which travels in the blood to the kidney and increases the permeability of the collecting duct (and distal convoluted tubule) to water by inserting more aquaporin channels. This allows more water to be reabsorbed from the filtrate back into the blood, producing a smaller volume of more concentrated urine and helping restore blood water potential back toward normal, completing a negative feedback loop."
+        }
+      ]
+    },
+    {
+      context: "Excretion, the removal of metabolic waste products, is one of the defining functions of life, and different organisms have evolved very different structures to achieve it.",
+      parts: [
+        {
+          label: "a",
+          prompt: "Outline how carbon dioxide, carried to the lungs in the blood, is moved out to the air outside the body.",
+          marks: 7,
+          guidance: "Carbon dioxide is excreted at the alveoli, which are surrounded by a dense network of capillaries; the gas diffuses from the blood into the alveolar air space, moving from an area of higher concentration in the blood to lower concentration in the alveolus, following its concentration gradient. This diffusion is aided by the alveolus and capillary walls both being thin (often just a single layer of cells), minimising the diffusion distance, and by continuous fresh airflow into and out of the lungs during breathing, which maintains a steep concentration gradient for CO2 to diffuse down."
+        },
+        {
+          label: "b",
+          prompt: "Explain how the kidney produces urine with a higher concentration of urea than is found in blood plasma.",
+          marks: 5,
+          guidance: "Urea is filtered out of the blood plasma at the glomerulus during ultrafiltration, entering Bowman's capsule as part of the filtrate along with water and other small molecules. As this filtrate passes through the nephron, particularly the proximal convoluted tubule and later the collecting duct, water is selectively reabsorbed back into the blood, especially in the presence of ADH, since the surrounding medulla tissue is hypertonic relative to the filtrate; because urea itself is not significantly reabsorbed along with this water, its concentration within the remaining filtrate steadily rises, resulting in urine that is considerably more concentrated in urea than the original blood plasma."
+        },
+        {
+          label: "c",
+          prompt: "Compare and contrast excretion in humans with excretion in unicellular organisms such as Paramecium.",
+          marks: 3,
+          guidance: "As a similarity, both humans and Paramecium excrete carbon dioxide and other waste products of metabolism. As differences: humans possess specialised excretory organs (such as the kidneys and lungs), while Paramecium, being unicellular, has no such dedicated organs and instead excretes waste directly across its cell surface (or via a contractile vacuole, in the specific case of excess water); this reflects the greater structural complexity and specialisation possible in a multicellular organism compared with a single cell."
+        }
+      ]
+    },
+    {
+      context: "Antidiuretic hormone (ADH), a peptide hormone synthesised in the hypothalamus and released from the posterior pituitary gland, regulates the body's water balance in response to changes in blood osmolarity.",
+      parts: [
+        {
+          label: "a",
+          prompt: "State the relationship between blood plasma osmolarity and ADH concentration.",
+          marks: 1,
+          guidance: "There is a direct (positive) relationship: the higher the osmolarity of the blood plasma, the higher the concentration of ADH released."
+        },
+        {
+          label: "b",
+          prompt: "Explain how a peptide hormone such as ADH produces its effect on a target cell.",
+          marks: 3,
+          guidance: "Peptide hormones like ADH bind to specific receptors on the plasma membrane of the target cell, since they cannot pass directly through the hydrophobic bilayer themselves; this binding activates a second-messenger cascade inside the cell, which then triggers changes such as the synthesis or activation of specific proteins (for example, increasing the number of aquaporin channels in a kidney collecting duct cell). Peptide hormones do not enter the target cell directly, unlike steroid hormones, which can diffuse across the membrane."
+        },
+        {
+          label: "c",
+          prompt: "State the reason the posterior pituitary gland is classified as an endocrine gland.",
+          marks: 1,
+          guidance: "It secretes hormones (such as ADH) directly into the bloodstream, the defining feature of an endocrine gland, as opposed to exocrine glands, which release their products through a duct rather than directly into the blood."
         }
       ]
     }
@@ -1540,6 +1985,68 @@ const PAPER2 = {
           guidance: "At the source (such as a photosynthesising leaf), sugars are actively loaded into the phloem sieve tubes, using energy to move them against their concentration gradient; this raises the solute concentration inside the phloem at the source, causing water to enter by osmosis and raising the hydrostatic pressure there. At the sink (such as a growing root or fruit), sugars are removed and used or stored, lowering pressure at that end; the resulting pressure difference along the phloem drives a mass flow of sugary sap from the high-pressure source toward the low-pressure sink."
         }
       ]
+    },
+    {
+      context: "Water's unusual physical properties are central to how plants move it efficiently over long distances, from the roots all the way up to the leaves.",
+      parts: [
+        {
+          label: "a",
+          prompt: "Outline how the properties of water make it an ideal transport medium in plants.",
+          marks: 4,
+          guidance: "Water is a polar molecule, and hydrogen bonds form between neighbouring water molecules as a result; these hydrogen bonds give water strong cohesion, meaning water molecules stick together, which allows tension (low, negative pressure) generated by transpiration at the leaves to be transmitted all the way down a continuous, unbroken column of water in the xylem. Adhesion between water and the cellulose of the xylem cell walls further assists this movement, helping to counteract gravity and maintain the water column as it's drawn upward through the plant."
+        },
+        {
+          label: "b",
+          prompt: "Distinguish between the xylem and phloem of plants.",
+          marks: 4,
+          guidance: "Xylem is made of dead cells, forming hollow, lignified vessels that transport water and dissolved mineral ions in one direction only, upward from the roots. Phloem, by contrast, is made of living cells (sieve tube elements, supported by companion cells), and transports sugars produced by photosynthesis; unlike xylem's exclusively upward, root-to-leaf transport, phloem transport can occur in either direction depending on where sugar sources and sinks are located within the plant at a given time."
+        }
+      ]
+    },
+    {
+      context: "The four chambers of the human heart each play a specific role in ensuring blood circulates efficiently around the body and lungs.",
+      parts: [
+        {
+          label: "c",
+          prompt: "Explain the function of the left ventricle in the cardiac cycle.",
+          marks: 2,
+          guidance: "The left ventricle receives oxygenated blood from the left atrium and contracts forcefully, generating high pressure to pump this blood out through the aorta to the rest of the body (excluding the lungs); its contraction is triggered by an electrical signal originating at the sinoatrial node and passing through the atrioventricular node, and its muscular wall is notably thicker than the right ventricle's, reflecting the greater pressure needed to push blood all the way around the systemic circulation rather than just to the nearby lungs."
+        }
+      ]
+    },
+    {
+      context: "Cardiovascular diseases, which include diseases of the heart and blood vessels, remain one of the leading causes of death worldwide, and their risk is influenced by a combination of genetic, lifestyle, and physiological factors.",
+      parts: [
+        {
+          label: "a",
+          prompt: "Suggest one reason for a difference in the incidence of coronary heart disease (CHD) between males and females.",
+          marks: 1,
+          guidance: "Suitable reasons include genetic differences between the sexes, differences in sex hormone levels (which can affect cardiovascular risk), differences in typical diet (for example, differing average saturated fat intake), or differences in lifestyle factors such as smoking, activity level, or stress."
+        },
+        {
+          label: "b",
+          prompt: "Outline the causes of hypertension (high blood pressure).",
+          marks: 2,
+          guidance: "Hypertension can result from excessive salt or fat intake in the diet, reduced flexibility (elasticity) in the arteries, or the build-up of arterial plaque (atheroma) that narrows blood vessels; lifestyle factors such as smoking, obesity, low physical activity, and chronic stress, along with age and genetic predisposition, also contribute to increased risk of hypertension."
+        },
+        {
+          label: "c",
+          prompt: "Describe how an electrocardiogram (ECG) can be used to demonstrate that a person's heart is beating normally.",
+          marks: 3,
+          guidance: "An ECG measures the electrical activity generated by the heart as it beats; a regular, evenly spaced pattern of peaks (an even R-R interval, representing the time between successive heartbeats) indicates a normal, rhythmic heart rate. A regular P-wave preceding each main peak indicates normal electrical activity originating from the sinoatrial node, and consistent, expected wave shapes and timings throughout the trace together confirm the heart is beating in a coordinated, healthy pattern."
+        }
+      ]
+    },
+    {
+      context: "Hormones travel through the bloodstream to reach distant target tissues, entering and leaving the circulation through the smallest blood vessels in the body.",
+      parts: [
+        {
+          label: "b",
+          prompt: "Outline two adaptations of capillaries that allow efficient exchange of substances, such as hormones, with the surrounding tissue.",
+          marks: 2,
+          guidance: "Capillary walls are extremely thin, often just one cell thick, minimising the diffusion distance for substances moving between blood and tissue; many capillaries also have small pores or fenestrations in their walls, increasing permeability and allowing faster exchange, and their narrow diameter allows a dense network of capillaries to run close to almost every cell in the body, further shortening the distance any substance needs to travel by diffusion."
+        }
+      ]
     }
   ],
 
@@ -1598,6 +2105,23 @@ const PAPER2 = {
           prompt: "Explain how acetylcholine initiates an action potential at a postsynaptic membrane.",
           marks: 2,
           guidance: "Acetylcholine released from the presynaptic neuron diffuses across the synaptic cleft and binds to a specific receptor protein on the postsynaptic membrane; this binding causes a change in the receptor protein's conformation (tertiary structure), opening an associated channel that allows sodium ions to diffuse into the postsynaptic cell, depolarising the membrane and, if strong enough, triggering a new action potential."
+        }
+      ]
+    },
+    {
+      context: "Synaptic transmission relies on a precise sequence of events triggered by an arriving nerve impulse, and this same synaptic machinery can be disrupted by certain insecticides.",
+      parts: [
+        {
+          label: "b",
+          prompt: "Outline how a neuron is stimulated to release neurotransmitter at a synapse.",
+          marks: 2,
+          guidance: "The arrival of a nerve impulse (action potential) at the presynaptic terminal causes depolarization, which stimulates voltage-gated calcium channels to open; calcium ions then enter the presynaptic knob, and this calcium influx causes neurotransmitter-containing vesicles to move toward and fuse with the presynaptic membrane, releasing their neurotransmitter contents into the synaptic cleft by exocytosis."
+        },
+        {
+          label: "c",
+          prompt: "Explain the action of neonicotinoid pesticides on the nervous system of insects.",
+          marks: 3,
+          guidance: "Neonicotinoid pesticides are structurally similar to the neurotransmitter acetylcholine and bind to acetylcholine receptors on the postsynaptic membrane; unlike acetylcholine, however, neonicotinoids are not broken down by the enzyme acetylcholinesterase, so they remain bound and continue to stimulate the receptor. This prevents normal synaptic transmission, since the receptor is left in a continuously activated, overstimulated state, disrupting normal nerve signalling and ultimately proving fatal to the insect at sufficient doses."
         }
       ]
     }
@@ -1660,6 +2184,23 @@ const PAPER2 = {
           guidance: "As similarities, both hormonal and nervous communication allow signalling between cells, tissues, or organs, both produce a response in specific target cells, and both rely on chemical messengers (hormones or neurotransmitters) that bind to specific receptors, and both can either stimulate or inhibit a target's activity. As differences, nervous signals travel electrically along neurons and are extremely fast but short-lived, reaching a precise target, while hormonal signals travel more slowly through the bloodstream, are longer-lasting, and typically reach a broader range of target tissues (any cell with the matching receptor) rather than a single specific destination."
         }
       ]
+    },
+    {
+      context: "Hormones such as testosterone and epinephrine coordinate very different processes in the body, but both must travel from the gland that secretes them to distant target tissues via the bloodstream.",
+      parts: [
+        {
+          label: "a",
+          prompt: "State one effect on the body of testosterone, and one effect of epinephrine.",
+          marks: 2,
+          guidance: "Testosterone stimulates the development of male genitalia, sperm production, and male secondary sexual characteristics; epinephrine (adrenaline) increases heart rate, among other effects associated with the 'fight or flight' response, such as increased breathing rate or blood glucose release."
+        },
+        {
+          label: "b",
+          prompt: "Hormones must be pumped twice by the heart to reach the tissues where they have an effect. Explain why this is the case.",
+          marks: 2,
+          guidance: "Humans have a double circulatory system, consisting of a pulmonary circuit and a separate systemic circuit; blood returning from a gland (carrying its secreted hormone) first travels to the right side of the heart, from where it is pumped to the lungs to be oxygenated, before returning to the left side of the heart. Only then is it pumped a second time, out through the systemic circuit, to reach the target tissue where the hormone can actually have its effect."
+        }
+      ]
     }
   ],
 
@@ -1701,6 +2242,17 @@ const PAPER2 = {
           prompt: "Explain how the body develops immunity against pathogenic bacteria that have entered the body.",
           marks: 8,
           guidance: "Antigens found on the surface of invading bacteria are recognised as foreign; phagocytes engulf the bacteria and display fragments of these antigens on their own surface. This antigen presentation activates specific helper T-lymphocytes matching that antigen, which in turn activate matching B-lymphocytes. Activated B-lymphocytes proliferate and differentiate into plasma cells, which secrete large quantities of antibodies specific to the bacterial antigen; these antibodies help neutralise the bacteria and mark them for destruction by phagocytes. Some activated B- and T-lymphocytes persist afterward as memory cells, allowing a much faster and stronger response if the same bacterial species is encountered again in future."
+        }
+      ]
+    },
+    {
+      context: "Producing an antibody that targets one specific molecule of interest, useful in both medical diagnostics and treatment, relies on a laboratory technique combining two different cell types.",
+      parts: [
+        {
+          label: "b",
+          prompt: "Describe how monoclonal antibodies are produced.",
+          marks: 5,
+          guidance: "A mouse (or other small mammal) is injected with the specific antigen of interest, stimulating an immune response; antibody-producing cells (plasma cells) are then removed from the animal's spleen. Since these plasma cells cannot divide indefinitely on their own, they are fused with myeloma (tumour) cells, which are capable of continuous division, to create hybrid cells called hybridomas; these hybridomas combine the plasma cell's ability to produce a specific antibody with the myeloma cell's ability to divide indefinitely, and can be cultured to produce large quantities of a single, identical (monoclonal) antibody specific to the original antigen."
         }
       ]
     }

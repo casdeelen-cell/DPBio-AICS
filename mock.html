@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mock Exam | DP Biology Notes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-row">
+    <div class="header-title-group">
+      <img src="images/aics-logo.png" alt="Amsterdam International Community School" class="school-logo">
+      <div>
+        <div class="site-title"><a href="index.html">DP Biology</a></div>
+        <a href="index.html" class="back-link">&larr; back to all topics</a>
+      </div>
+    </div>
+    <nav class="header-nav">
+      <a href="terms.html" class="back-link">Command terms &rarr;</a>
+      <a href="search.html" class="back-link">Search &rarr;</a>
+      <a href="checklist.html" class="back-link">Checklist &rarr;</a>
+      <a href="formulas.html" class="back-link">Formulas &amp; stats &rarr;</a>
+    </nav>
+  </div>
+</header>
+
+<div class="shell">
+
+  <div class="topic-header">
+    <div class="eyebrow">Practice</div>
+    <h1>Mock exam</h1>
+    <p class="page-intro">A randomly generated mock exam, modelled on the real IB Biology structure: 30 multiple-choice questions at SL (40 at HL), each worth 1 mark, plus a set of Paper 2 style extended-response questions worth an equal number of marks in total. Pick specific topics if you just want to drill a few areas, or leave everything selected for a full mock. Nothing here is saved or sent anywhere except your own past-score history, kept on this device.</p>
+  </div>
+
+  <!-- ============ SETUP SCREEN ============ -->
+  <div id="setup-screen">
+
+    <div class="mock-level-picker">
+      <div class="mock-section-label">Level</div>
+      <div class="mock-level-options">
+        <label class="mock-level-option">
+          <input type="radio" name="mock-level" value="SL" checked>
+          <span><strong>SL</strong> &middot; 30 MCQ + 30 marks of Paper 2 &middot; ~90 min</span>
+        </label>
+        <label class="mock-level-option">
+          <input type="radio" name="mock-level" value="HL">
+          <span><strong>HL</strong> &middot; 40 MCQ + 40 marks of Paper 2 &middot; ~120 min</span>
+        </label>
+      </div>
+      <p class="mock-note" id="hl-only-note">Topics that are HL-only are greyed out until you switch to HL.</p>
+    </div>
+
+    <div class="mock-topic-picker">
+      <div class="mock-section-label-row">
+        <div class="mock-section-label">Topics to draw questions from</div>
+        <div class="mock-topic-buttons">
+          <button type="button" class="p2-nav-btn" id="select-all-btn">Select all</button>
+          <button type="button" class="p2-nav-btn" id="select-none-btn">Clear all</button>
+        </div>
+      </div>
+      <div id="topic-picker-container"></div>
+    </div>
+
+    <div class="mock-start-row">
+      <button type="button" class="mock-start-btn" id="start-mock-btn">Start mock exam</button>
+      <p class="mock-note" id="availability-note"></p>
+    </div>
+
+    <div id="history-container"></div>
+
+  </div>
+
+  <!-- ============ EXAM SCREEN ============ -->
+  <div id="exam-screen" hidden>
+
+    <div class="mock-timer-bar" id="timer-bar">
+      <div class="mock-timer-label">Time remaining</div>
+      <div class="mock-timer-clock" id="timer-clock">--:--</div>
+    </div>
+
+    <div class="mock-paper-heading">
+      <h2 id="exam-title">Paper 1 &mdash; Multiple choice</h2>
+      <p class="page-intro">Answer every question. There's no penalty for guessing.</p>
+    </div>
+    <div id="mcq-container"></div>
+
+    <div class="mock-paper-heading">
+      <h2>Paper 2 &mdash; Extended response</h2>
+      <p class="page-intro">Jot your answer to each part (optional, just for your own reference), then reveal the guidance at the end to self-mark.</p>
+    </div>
+    <div id="p2exam-container"></div>
+
+    <div class="mock-finish-row">
+      <button type="button" class="mock-start-btn" id="finish-mock-btn">Finish &amp; see results</button>
+    </div>
+
+  </div>
+
+  <!-- ============ RESULTS SCREEN ============ -->
+  <div id="results-screen" hidden>
+    <div class="mock-results-summary" id="results-summary"></div>
+
+    <div class="mock-paper-heading">
+      <h2>Paper 1 review</h2>
+    </div>
+    <div id="mcq-review-container"></div>
+
+    <div class="mock-paper-heading">
+      <h2>Paper 2 self-marking</h2>
+      <p class="page-intro">Compare what you wrote against the guidance for each part, then drag the slider to record how many of the marks you think you earned.</p>
+    </div>
+    <div id="p2-review-container"></div>
+
+    <div class="mock-finish-row">
+      <button type="button" class="mock-start-btn" id="new-mock-btn">New mock exam</button>
+    </div>
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  Built for personal revision. Notes, links and quizzes update by editing files in /js, see the README.
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/questionbank.js"></script>
+<script src="js/paper2.js"></script>
+<script src="js/app.js"></script>
+<script>
+
+/* ---------- config, modelled on the real IB Biology exam ---------- */
+const MOCK_CONFIG = {
+  SL: { mcqCount: 30, p2MarksTarget: 30, minutes: 90 },
+  HL: { mcqCount: 40, p2MarksTarget: 40, minutes: 120 }
+};
+const HISTORY_KEY = "bioMockHistoryV1";
+
+let selectedTopics = new Set();
+let currentLevel = "SL";
+let examState = null; // { mcqs: [...], p2Sets: [...], level, topics, secondsRemaining, timerHandle }
+
+/* ---------- setup screen: topic picker ---------- */
+
+function renderTopicPicker() {
+  const container = document.getElementById("topic-picker-container");
+  container.innerHTML = "";
+  UNITS.forEach(unit => {
+    const block = document.createElement("div");
+    block.className = "mock-unit-block";
+    const heading = document.createElement("div");
+    heading.className = "mock-unit-heading";
+    heading.textContent = unit.name;
+    block.appendChild(heading);
+
+    const grid = document.createElement("div");
+    grid.className = "mock-topic-grid";
+    unit.topics.forEach(code => {
+      const isHL = isHLTopic(code);
+      const label = document.createElement("label");
+      label.className = "mock-topic-chip" + (isHL && currentLevel === "SL" ? " disabled" : "");
+      const cb = document.createElement("input");
+      cb.type = "checkbox";
+      cb.value = code;
+      cb.checked = selectedTopics.has(code);
+      cb.disabled = isHL && currentLevel === "SL";
+      cb.addEventListener("change", () => {
+        if (cb.checked) selectedTopics.add(code); else selectedTopics.delete(code);
+        updateAvailabilityNote();
+      });
+      label.appendChild(cb);
+      const span = document.createElement("span");
+      span.textContent = code + " " + topicTitle(code);
+      label.appendChild(span);
+      if (isHL) {
+        const badge = document.createElement("span");
+        badge.className = "hl-badge small";
+        badge.textContent = "HL";
+        label.appendChild(badge);
+      }
+      grid.appendChild(label);
+    });
+    block.appendChild(grid);
+    container.appendChild(block);
+  });
+}
+
+function selectAllTopics() {
+  UNITS.forEach(unit => unit.topics.forEach(code => {
+    if (!(isHLTopic(code) && currentLevel === "SL")) selectedTopics.add(code);
+  }));
+  renderTopicPicker();
+  updateAvailabilityNote();
+}
+function selectNoTopics() {
+  selectedTopics.clear();
+  renderTopicPicker();
+  updateAvailabilityNote();
+}
+
+function countAvailable() {
+  let mcqCount = 0;
+  let p2SetCount = 0;
+  let p2MarkCount = 0;
+  selectedTopics.forEach(code => {
+    const qs = (typeof QUESTIONBANK !== "undefined" && QUESTIONBANK[code]) || [];
+    mcqCount += qs.length;
+    const sets = (typeof PAPER2 !== "undefined" && PAPER2[code]) || [];
+    p2SetCount += sets.length;
+    sets.forEach(s => { p2MarkCount += s.parts.reduce((sum, p) => sum + (p.marks || 0), 0); });
+  });
+  return { mcqCount, p2SetCount, p2MarkCount };
+}
+
+function updateAvailabilityNote() {
+  const note = document.getElementById("availability-note");
+  const cfg = MOCK_CONFIG[currentLevel];
+  const avail = countAvailable();
+  if (selectedTopics.size === 0) {
+    note.textContent = "Select at least one topic to begin.";
+    return;
+  }
+  const parts = [];
+  parts.push(avail.mcqCount + " MCQ available" + (avail.mcqCount < cfg.mcqCount ? " (fewer than the usual " + cfg.mcqCount + " for this level, will use all available)" : ""));
+  parts.push(avail.p2MarkCount + " Paper 2 marks available" + (avail.p2MarkCount < cfg.p2MarksTarget ? " (fewer than the usual " + cfg.p2MarksTarget + ", will use all available)" : ""));
+  note.textContent = parts.join(" \u00b7 ");
+}
+
+document.querySelectorAll('input[name="mock-level"]').forEach(radio => {
+  radio.addEventListener("change", () => {
+    currentLevel = document.querySelector('input[name="mock-level"]:checked').value;
+    // deselect any HL-only topics if switching to SL
+    if (currentLevel === "SL") {
+      Array.from(selectedTopics).forEach(code => { if (isHLTopic(code)) selectedTopics.delete(code); });
+    }
+    renderTopicPicker();
+    updateAvailabilityNote();
+  });
+});
+document.getElementById("select-all-btn").addEventListener("click", selectAllTopics);
+document.getElementById("select-none-btn").addEventListener("click", selectNoTopics);
+
+/* ---------- history (localStorage) ---------- */
+
+function loadHistory() {
+  try { return JSON.parse(localStorage.getItem(HISTORY_KEY)) || []; } catch (e) { return []; }
+}
+function saveHistoryEntry(entry) {
+  const hist = loadHistory();
+  hist.unshift(entry);
+  localStorage.setItem(HISTORY_KEY, JSON.stringify(hist.slice(0, 20)));
+}
+function renderHistory() {
+  const container = document.getElementById("history-container");
+  const hist = loadHistory();
+  if (!hist.length) { container.innerHTML = ""; return; }
+  let html = '<div class="mock-section-label">Your past mock exams</div><div class="mock-history-list">';
+  hist.forEach(h => {
+    const total = h.mcqTotal + h.p2Total;
+    const scored = h.mcqScore + h.p2Score;
+    const pct = total ? Math.round((scored / total) * 100) : 0;
+    html += `<div class="mock-history-row">
+      <span class="mock-history-date">${h.date}</span>
+      <span class="mock-history-level">${h.level}</span>
+      <span class="mock-history-topics">${h.topicCount} topic${h.topicCount === 1 ? "" : "s"}</span>
+      <span class="mock-history-score">${scored}/${total} (${pct}%)</span>
+    </div>`;
+  });
+  html += "</div>";
+  container.innerHTML = html;
+}
+
+/* ---------- random selection helpers ---------- */
+
+function shuffle(arr) {
+  const a = arr.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function pickMCQs(topics, count) {
+  let pool = [];
+  topics.forEach(code => {
+    const qs = (typeof QUESTIONBANK !== "undefined" && QUESTIONBANK[code]) || [];
+    qs.forEach(q => pool.push({ ...q, topic: code }));
+  });
+  return shuffle(pool).slice(0, count);
+}
+
+function pickP2Sets(topics, marksTarget) {
+  let pool = [];
+  topics.forEach(code => {
+    const sets = (typeof PAPER2 !== "undefined" && PAPER2[code]) || [];
+    sets.forEach(s => pool.push({ ...s, topic: code, totalMarks: s.parts.reduce((sum, p) => sum + (p.marks || 0), 0) }));
+  });
+  pool = shuffle(pool);
+  const chosen = [];
+  let sum = 0;
+  for (const set of pool) {
+    if (sum >= marksTarget) break;
+    chosen.push(set);
+    sum += set.totalMarks;
+  }
+  return chosen;
+}
+
+/* ---------- exam rendering ---------- */
+
+function startMockExam() {
+  if (selectedTopics.size === 0) return;
+  const cfg = MOCK_CONFIG[currentLevel];
+  const topics = Array.from(selectedTopics);
+  const mcqs = pickMCQs(topics, cfg.mcqCount);
+  const p2Sets = pickP2Sets(topics, cfg.p2MarksTarget);
+
+  examState = {
+    level: currentLevel,
+    topics: topics,
+    mcqs: mcqs,
+    p2Sets: p2Sets,
+    secondsRemaining: cfg.minutes * 60,
+    timerHandle: null
+  };
+
+  document.getElementById("setup-screen").hidden = true;
+  document.getElementById("exam-screen").hidden = false;
+  document.getElementById("results-screen").hidden = true;
+  document.getElementById("exam-title").textContent = "Paper 1 \u2014 Multiple choice (" + currentLevel + ")";
+
+  renderExamMCQs();
+  renderExamP2();
+  startTimer();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function renderExamMCQs() {
+  const container = document.getElementById("mcq-container");
+  container.innerHTML = "";
+  examState.mcqs.forEach((q, i) => {
+    const card = document.createElement("div");
+    card.className = "mock-mcq-card";
+    const qEl = document.createElement("div");
+    qEl.className = "mock-mcq-question";
+    qEl.textContent = (i + 1) + ". " + q.q;
+    card.appendChild(qEl);
+    const optsEl = document.createElement("div");
+    optsEl.className = "mock-mcq-options";
+    q.options.forEach((opt, oi) => {
+      const optLabel = document.createElement("label");
+      optLabel.className = "mock-mcq-option";
+      const radio = document.createElement("input");
+      radio.type = "radio";
+      radio.name = "mock-mcq-" + i;
+      radio.value = oi;
+      optLabel.appendChild(radio);
+      const span = document.createElement("span");
+      span.textContent = opt;
+      optLabel.appendChild(span);
+      optsEl.appendChild(optLabel);
+    });
+    card.appendChild(optsEl);
+    container.appendChild(card);
+  });
+}
+
+function renderExamP2() {
+  const container = document.getElementById("p2exam-container");
+  container.innerHTML = "";
+  examState.p2Sets.forEach((set, si) => {
+    const card = document.createElement("div");
+    card.className = "p2-card mock-p2-exam-card";
+    if (set.context) {
+      const context = document.createElement("div");
+      context.className = "p2-context";
+      context.textContent = set.context;
+      card.appendChild(context);
+    }
+    const totalEl = document.createElement("div");
+    totalEl.className = "p2-total-marks";
+    totalEl.textContent = "[" + set.totalMarks + " marks total]";
+    card.appendChild(totalEl);
+
+    set.parts.forEach((part, pi) => {
+      const partEl = document.createElement("div");
+      partEl.className = "p2-part";
+      const promptRow = document.createElement("div");
+      promptRow.className = "p2-prompt-row";
+      promptRow.innerHTML = `<span class="p2-part-label">(${part.label})</span><span class="p2-prompt">${part.prompt}</span><span class="p2-marks">[${part.marks}]</span>`;
+      partEl.appendChild(promptRow);
+      const textarea = document.createElement("textarea");
+      textarea.className = "mock-answer-box";
+      textarea.placeholder = "Jot your answer here (optional)...";
+      textarea.id = "answer-" + si + "-" + pi;
+      textarea.rows = 3;
+      partEl.appendChild(textarea);
+      card.appendChild(partEl);
+    });
+    container.appendChild(card);
+  });
+}
+
+/* ---------- timer ---------- */
+
+function startTimer() {
+  updateTimerDisplay();
+  examState.timerHandle = setInterval(() => {
+    examState.secondsRemaining--;
+    updateTimerDisplay();
+    if (examState.secondsRemaining <= 0) {
+      clearInterval(examState.timerHandle);
+    }
+  }, 1000);
+}
+
+function updateTimerDisplay() {
+  const bar = document.getElementById("timer-bar");
+  const clock = document.getElementById("timer-clock");
+  const s = Math.max(0, examState.secondsRemaining);
+  const mm = Math.floor(s / 60);
+  const ss = s % 60;
+  clock.textContent = mm + ":" + (ss < 10 ? "0" : "") + ss;
+  bar.classList.toggle("mock-timer-low", s <= 300 && s > 0);
+  bar.classList.toggle("mock-timer-up", s === 0);
+  if (s === 0) clock.textContent = "Time's up";
+}
+
+/* ---------- finishing and results ---------- */
+
+function finishMockExam() {
+  if (examState.timerHandle) clearInterval(examState.timerHandle);
+
+  document.getElementById("exam-screen").hidden = true;
+  document.getElementById("results-screen").hidden = false;
+
+  // grade MCQs
+  let mcqScore = 0;
+  const mcqAnswers = examState.mcqs.map((q, i) => {
+    const checked = document.querySelector(`input[name="mock-mcq-${i}"]:checked`);
+    const chosen = checked ? parseInt(checked.value, 10) : null;
+    const correct = chosen === q.correct;
+    if (correct) mcqScore++;
+    return { chosen, correct };
+  });
+
+  renderMCQReview(mcqAnswers);
+  renderP2Review();
+
+  const p2Total = examState.p2Sets.reduce((sum, s) => sum + s.totalMarks, 0);
+
+  renderResultsSummary(mcqScore, examState.mcqs.length, p2Total);
+
+  // store partial history now (mcq known, p2 self-score defaults to 0 until user adjusts sliders,
+  // update on slider change instead)
+  window._mockMcqScore = mcqScore;
+  window._mockMcqTotal = examState.mcqs.length;
+  window._mockP2Total = p2Total;
+  window._mockP2Score = 0;
+  saveOrUpdateHistory();
+
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function renderResultsSummary(mcqScore, mcqTotal, p2Total) {
+  const container = document.getElementById("results-summary");
+  const p2Score = window._mockP2Score || 0;
+  const total = mcqTotal + p2Total;
+  const scored = mcqScore + p2Score;
+  const pct = total ? Math.round((scored / total) * 100) : 0;
+  container.innerHTML = `
+    <div class="mock-results-headline">${scored} / ${total} <span class="mock-results-pct">(${pct}%)</span></div>
+    <div class="mock-results-breakdown">
+      <span>Paper 1: ${mcqScore}/${mcqTotal}</span>
+      <span>Paper 2 (self-marked): <span id="p2-score-live">${p2Score}</span>/${p2Total}</span>
+    </div>
+  `;
+}
+
+function refreshResultsSummary() {
+  const mcqScore = window._mockMcqScore || 0;
+  const mcqTotal = window._mockMcqTotal || 0;
+  const p2Total = window._mockP2Total || 0;
+  renderResultsSummary(mcqScore, mcqTotal, p2Total);
+  saveOrUpdateHistory();
+}
+
+function saveOrUpdateHistory() {
+  if (!window._mockHistoryId) {
+    window._mockHistoryId = Date.now();
+    saveHistoryEntry({
+      id: window._mockHistoryId,
+      date: new Date().toLocaleDateString(),
+      level: examState.level,
+      topicCount: examState.topics.length,
+      mcqScore: window._mockMcqScore,
+      mcqTotal: window._mockMcqTotal,
+      p2Score: window._mockP2Score,
+      p2Total: window._mockP2Total
+    });
+  } else {
+    const hist = loadHistory();
+    const idx = hist.findIndex(h => h.id === window._mockHistoryId);
+    if (idx !== -1) {
+      hist[idx].p2Score = window._mockP2Score;
+      localStorage.setItem(HISTORY_KEY, JSON.stringify(hist));
+    }
+  }
+}
+
+function renderMCQReview(mcqAnswers) {
+  const container = document.getElementById("mcq-review-container");
+  container.innerHTML = "";
+  examState.mcqs.forEach((q, i) => {
+    const ans = mcqAnswers[i];
+    const card = document.createElement("div");
+    card.className = "mock-mcq-card mock-mcq-review " + (ans.correct ? "mock-correct" : "mock-incorrect");
+    const qEl = document.createElement("div");
+    qEl.className = "mock-mcq-question";
+    qEl.innerHTML = (i + 1) + ". " + q.q + (ans.correct ? ' <span class="mock-review-mark">\u2713</span>' : ' <span class="mock-review-mark">\u2717</span>');
+    card.appendChild(qEl);
+    const optsEl = document.createElement("div");
+    optsEl.className = "mock-mcq-options";
+    q.options.forEach((opt, oi) => {
+      const div = document.createElement("div");
+      let cls = "mock-mcq-option-review";
+      if (oi === q.correct) cls += " mock-option-correct";
+      if (oi === ans.chosen && oi !== q.correct) cls += " mock-option-wrong";
+      div.className = cls;
+      div.textContent = opt;
+      optsEl.appendChild(div);
+    });
+    card.appendChild(optsEl);
+    const explEl = document.createElement("div");
+    explEl.className = "p2-guidance";
+    explEl.style.marginTop = "10px";
+    explEl.textContent = q.explanation;
+    card.appendChild(explEl);
+    container.appendChild(card);
+  });
+}
+
+function renderP2Review() {
+  const container = document.getElementById("p2-review-container");
+  container.innerHTML = "";
+  examState.p2Sets.forEach((set, si) => {
+    const card = document.createElement("div");
+    card.className = "p2-card mock-p2-exam-card";
+    if (set.context) {
+      const context = document.createElement("div");
+      context.className = "p2-context";
+      context.textContent = set.context;
+      card.appendChild(context);
+    }
+    set.parts.forEach((part, pi) => {
+      const partEl = document.createElement("div");
+      partEl.className = "p2-part";
+      const promptRow = document.createElement("div");
+      promptRow.className = "p2-prompt-row";
+      promptRow.innerHTML = `<span class="p2-part-label">(${part.label})</span><span class="p2-prompt">${part.prompt}</span><span class="p2-marks">[${part.marks}]</span>`;
+      partEl.appendChild(promptRow);
+
+      const savedAnswer = document.getElementById("answer-" + si + "-" + pi);
+      const answerText = savedAnswer ? savedAnswer.value.trim() : "";
+      if (answerText) {
+        const yourAnswer = document.createElement("div");
+        yourAnswer.className = "mock-your-answer";
+        yourAnswer.innerHTML = '<span class="term-label">Your answer</span>' + answerText;
+        partEl.appendChild(yourAnswer);
+      }
+
+      const guidance = document.createElement("div");
+      guidance.className = "p2-guidance";
+      guidance.textContent = part.guidance;
+      partEl.appendChild(guidance);
+
+      const sliderRow = document.createElement("div");
+      sliderRow.className = "mock-self-mark-row";
+      const sliderLabel = document.createElement("span");
+      sliderLabel.className = "mock-self-mark-label";
+      sliderLabel.textContent = "Marks earned:";
+      const slider = document.createElement("input");
+      slider.type = "range";
+      slider.min = 0;
+      slider.max = part.marks;
+      slider.value = 0;
+      slider.step = 1;
+      slider.className = "mock-self-mark-slider";
+      const sliderValue = document.createElement("span");
+      sliderValue.className = "mock-self-mark-value";
+      sliderValue.textContent = "0 / " + part.marks;
+      slider.addEventListener("input", () => {
+        sliderValue.textContent = slider.value + " / " + part.marks;
+        recomputeP2Score();
+      });
+      sliderRow.appendChild(sliderLabel);
+      sliderRow.appendChild(slider);
+      sliderRow.appendChild(sliderValue);
+      partEl.appendChild(sliderRow);
+
+      card.appendChild(partEl);
+    });
+    container.appendChild(card);
+  });
+}
+
+function recomputeP2Score() {
+  let sum = 0;
+  document.querySelectorAll(".mock-self-mark-slider").forEach(s => { sum += parseInt(s.value, 10) || 0; });
+  window._mockP2Score = sum;
+  refreshResultsSummary();
+}
+
+function newMockExam() {
+  examState = null;
+  window._mockHistoryId = null;
+  document.getElementById("results-screen").hidden = true;
+  document.getElementById("exam-screen").hidden = true;
+  document.getElementById("setup-screen").hidden = false;
+  renderHistory();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+document.getElementById("start-mock-btn").addEventListener("click", startMockExam);
+document.getElementById("finish-mock-btn").addEventListener("click", finishMockExam);
+document.getElementById("new-mock-btn").addEventListener("click", newMockExam);
+
+/* ---------- init ---------- */
+
+selectAllTopics();
+renderHistory();
+
+</script>
+</body>
+</html>
