@@ -225,7 +225,7 @@ Paper 1B/2 material that doesn't fit the MCQ format: 41 question sets
 (106 sub-parts total) across all 40 topics, self-marked with a
 "Show guidance" reveal per part rather than multiple-choice options.
 
-**This session (reference pages):** built three new cross-cutting
+**Two sessions ago (reference pages):** built three new cross-cutting
 pages — `terms.html` (command term glossary with official IB
 definitions + plain-English translations + commonly-confused-pairs
 callouts), `search.html` (cross-topic search across notes, word bank,
@@ -238,15 +238,80 @@ Added anchor IDs to each notes section (`block.id = section.label` in
 with a brief highlight-fade animation on arrival. See "Reference
 pages" section above for full details on each.
 
+**This session (docx batch 2 of ~6, everything_7/8/9):** the user is
+sending IB Questionbank docx exports in batches, aiming for 18 files
+total. This was the second batch: `everything_7.docx` and
+`everything_8.docx` processed successfully (90 questions each, 180
+total: 125 Paper 1A MCQ, 55 Paper 2). **`everything_9.docx` uploaded
+as an empty 0-byte file and could not be read** — flagged to the user,
+needs re-uploading in a future session. After deduplicating repeated
+questions across SL/HL/timezone variants, got 114 unique MCQs and 21
+usable open-ended items from the two working files. Added 111 new MCQs
+to `questionbank.js` (one very minor addition, an RNA-vs-DNA codon
+question, was written by Claude to fill a gap left by a dropped
+duplicate-source item, not sourced from the docx) and 23 new Paper 2
+question sets (39 sub-parts) to `paper2.js`, spread across most of the
+40 topics to deepen existing coverage rather than filling brand-new
+gaps (batch 1 already reached every topic). Running totals after this
+session: **363 MCQs** in `questionbank.js`, **64 question sets / 145
+sub-parts** in `paper2.js`, both across all 40 topics. Same dedup and
+classification approach as documented under "The IB Questionbank
+content" and "Paper 2 practice" above: parse docx to markdown with
+pandoc, extract questions by their `**N.**  CODE` marker, split by
+paper type using the code (`.1A.` = MCQ, `.1B.`/`.2.` = open-ended),
+dedupe near-identical repeats, classify by topic using the question's
+content, paraphrase into original wording. A handful of MCQs whose
+answer options were only shown as an image (rather than text) were
+again rewritten as new questions testing the same concept, same
+approach as batch 1.
+
+**Long-term plan (stated by user):** once all ~18 docx files have been
+processed this way, build a timed mixed mock-exam mode drawing randomly
+from the now-large `questionbank.js` and `paper2.js` pools. Don't start
+that build until the user confirms all batches are in, since the mock
+mode's design (how many questions, how the timer works, whether Paper
+2 sets are included) will be easier to get right once the final
+question count per topic is known.
+
+**This session (docx batch 3 of ~6, everything_9/10/11):** the
+`everything_9` file the user re-sent this time was a **PDF, not a
+docx** (the earlier docx upload had come through empty, see above);
+processed successfully using `pdftotext` instead of pandoc, since a
+PDF needs a different extraction tool, but the same question-marker
+and paper-type parsing logic once the text was extracted (90 questions:
+51 Paper 1A MCQ, 39 Paper 2). `everything_10.docx` (78 questions: 38
+MCQ, 5 Paper 1B, 35 Paper 2) and `everything_11.docx` (90 questions:
+83 MCQ, 7 Paper 2) processed normally via pandoc. Combined total this
+batch: 258 questions (172 MCQ, 5 Paper 1B, 81 Paper 2), deduplicated
+down to 171 unique MCQs, classified across 33 of the 40 topics, and
+paraphrased into `questionbank.js`. For Paper 2, selected 28 of the
+strongest, least data/image-dependent candidates from the 81 available
+open-ended items and paraphrased them into `paper2.js`, again
+prioritising depth on already-covered topics over exhaustive use of
+every source item (a good number of the remaining unused open-ended
+items are heavily graph- or table-dependent and would need image
+inspection to adapt faithfully; worth a future pass if the site's
+Paper 2 section is felt to need more volume specifically in the topics
+that got fewer additions here). Running totals after this session:
+**530 MCQs** in `questionbank.js`, **92 question sets / 188 sub-parts**
+in `paper2.js`, both across all 40 topics. Full headless-browser
+regression test passed across every topic page and all three reference
+pages, zero console errors.
+
+**Note on file counts:** as of this session, 9 of the ~18 planned
+source files have been processed (everything_4 through everything_11,
+skipping the empty everything_9.docx but including its PDF
+replacement). Halfway point reached. The user has been told they can
+start the mock-exam mode build once all batches are confirmed in, per
+the long-term plan noted above.
+
 **Ideas raised but not yet built, worth considering for a future
-session:** a timed mixed mock-exam mode (random MCQs and/or a couple
-of Paper 2 sets back-to-back, single visible timer, closer to real
-exam conditions than the current topic-by-topic drilling); a distinct
-"common mistakes" callout box type on topic pages (separate from the
-existing exam-tip box) for well-known IB gotchas at the content level,
-not just the command-term level; an HL/SL filter toggle on the
-homepage topic list itself (the checklist page already has one, the
-homepage doesn't).
+session:** the timed mock-exam mode described above (once all docx
+batches are in); a distinct "common mistakes" callout box type on
+topic pages (separate from the existing exam-tip box) for well-known
+IB gotchas at the content level, not just the command-term level; an
+HL/SL filter toggle on the homepage topic list itself (the checklist
+page already has one, the homepage doesn't).
 
 Open items carried over: the Miller-Urey diagram in Unit 1 is a
 German-labelled Wikimedia image (visually clear either way, but worth
