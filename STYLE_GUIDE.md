@@ -133,6 +133,33 @@ against the current notes for full alignment; Units 2 and 4 have none
 yet. All still waiting on further PDF exports from the user's
 Questionbank subscription where needed.
 
-Open items carried over: the induced-fit and Miller-Urey diagrams in
-Unit 1 are German-labelled Wikimedia images (visually clear either way,
-but worth swapping for English versions if a cleaner one turns up).
+Open items carried over: the Miller-Urey diagram in Unit 1 is a
+German-labelled Wikimedia image (visually clear either way, but worth
+swapping for an English version if a cleaner one turns up). The
+induced-fit enzyme diagram was fixed this session (now English).
+
+## Images and diagrams
+
+As of the last two sessions, added targeted diagrams for the most
+complex, multi-step pathways and structures across the site:
+cross-bridge cycling in muscle contraction (B3.3), glycolysis, the
+Krebs cycle, and chemiosmosis/ATP synthase (C1.2), meiosis stages
+(D2.1), the action potential, synaptic transmission, and saltatory
+conduction (C2.2), phagocytosis and antibody structure (C3.2), the
+lytic/lysogenic cycle and virus structure (A2.3), the sodium-potassium
+pump (B2.1), alveolus gas exchange (B3.1), the heart (B3.2), insulin
+signal transduction (C2.1), the reflex arc (C3.1), endosymbiosis
+(A2.2), a dihybrid cross Punnett square (D3.2), the nephron (D3.3),
+primary succession (D4.2), the greenhouse effect (D4.3), a cladogram
+example (A3.2), and a predator-prey population cycle graph (C4.1).
+Also fixed the known German-labelled induced-fit enzyme diagram in
+C1.1 (now English).
+
+Image coverage went from 27 to 50 of ~332 total sections across these
+two sessions. Every "hard pathway" topic flagged by the user has now
+been illustrated. Remaining gaps are mostly definitional/comparison
+sections that don't need a diagram, plus a handful of lower-priority
+structural images (e.g. blood clotting cascade — the real coagulation
+cascade is more complex than IB requires and no clean simple diagram
+was found; a future pass could look for or build a simplified
+platelet → fibrin version instead).

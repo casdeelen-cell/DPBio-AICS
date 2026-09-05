@@ -120,7 +120,9 @@ const CONTENT = {
       label: "B2.1.7",
       heading: "Pump proteins and active transport",
       level: "SL",
-      text: "**Active transport** moves a substance across a membrane against its concentration gradient, from a region of lower concentration to a region of higher concentration, which is thermodynamically unfavourable and therefore requires an input of energy, usually supplied directly by ATP hydrolysis. This is carried out by **pump proteins**, which bind a specific substance on one side of the membrane, undergo an energy-driven change in shape, and release that substance on the other side. Because each pump protein transfers one particular substance, active transport gives a cell precise control over the movement of specific ions or molecules, even against a concentration gradient that would otherwise drive them the opposite way."
+      text: "**Active transport** moves a substance across a membrane against its concentration gradient, from a region of lower concentration to a region of higher concentration, which is thermodynamically unfavourable and therefore requires an input of energy, usually supplied directly by ATP hydrolysis. This is carried out by **pump proteins**, which bind a specific substance on one side of the membrane, undergo an energy-driven change in shape, and release that substance on the other side. Because each pump protein transfers one particular substance, active transport gives a cell precise control over the movement of specific ions or molecules, even against a concentration gradient that would otherwise drive them the opposite way.",
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Scheme sodium-potassium pump-en.svg",
+      imageCaption: "The sodium-potassium pump: ATP hydrolysis drives a conformational change that actively transports Na+ out and K+ into the cell against their concentration gradients."
     },
     {
       label: "B2.1.8",
@@ -260,7 +262,9 @@ const CONTENT = {
       label: "C4.1.20 / C4.1.21",
       heading: "Predator-prey dynamics and top-down versus bottom-up control",
       level: "SL",
-      text: "Predator and prey populations frequently show cyclical fluctuations over time, since a rise in prey numbers provides more food for predators, allowing the predator population to grow, which in turn increases predation pressure and drives prey numbers back down, followed by a corresponding decline in predators once prey become scarce; the long-term Canada lynx and snowshoe hare population data is a well-documented real-world case study of this pattern.\n\nCommunities can be regulated by **top-down control**, in which predators limit the abundance of species lower in the food chain (as famously seen with sea otters controlling sea urchin populations in kelp forests), or by **bottom-up control**, in which the availability of resources such as nutrients or primary producers limits the abundance of species higher up the food chain; real communities are often shaped by some combination of both forms of control operating together."
+      text: "Predator and prey populations frequently show cyclical fluctuations over time, since a rise in prey numbers provides more food for predators, allowing the predator population to grow, which in turn increases predation pressure and drives prey numbers back down, followed by a corresponding decline in predators once prey become scarce; the long-term Canada lynx and snowshoe hare population data is a well-documented real-world case study of this pattern.\n\nCommunities can be regulated by **top-down control**, in which predators limit the abundance of species lower in the food chain (as famously seen with sea otters controlling sea urchin populations in kelp forests), or by **bottom-up control**, in which the availability of resources such as nutrients or primary producers limits the abundance of species higher up the food chain; real communities are often shaped by some combination of both forms of control operating together.",
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Predator prey curve.png",
+      imageCaption: "A classic predator-prey population cycle: the predator population rises and falls with a short time lag behind the prey population."
     },
     {
       label: "C4.1.22",
@@ -412,7 +416,7 @@ const CONTENT = {
       label: "C1.1.4-7",
       heading: "Enzyme structure and the active site",
       level: "SL",
-      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Induced_fit_diagram_de.svg",
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Induced fit model en.svg",
       imageCaption: "The induced fit model: the active site subtly changes shape as the substrate binds.",
       text: "An enzyme is a globular protein whose folded three-dimensional structure creates an **active site**, a pocket shaped and chemically suited to bind a specific substrate. Substrate molecules collide with the enzyme through normal random molecular motion, and when a collision brings a substrate into the active site with the correct orientation, it binds. The active site is not a rigid lock, it subtly changes shape as the substrate binds, known as induced fit, improving the fit and helping to strain particular bonds in the substrate to drive the reaction forward. This close structural relationship between active site shape and substrate shape is exactly why an enzyme's specificity depends on its precise three-dimensional structure."
     },
@@ -597,7 +601,9 @@ const CONTENT = {
       label: "D2.1.8 / D2.1.9",
       heading: "Meiosis as a reduction division",
       level: "SL",
-      text: "Meiosis is described as a reduction division because it halves the chromosome number, taking a diploid cell through two successive divisions (meiosis I and meiosis II) to produce four haploid cells. In meiosis I, homologous chromosome pairs separate from each other, in meiosis II, sister chromatids separate, similarly to mitosis, this two-step process is what achieves the reduction from diploid to haploid."
+      text: "Meiosis is described as a reduction division because it halves the chromosome number, taking a diploid cell through two successive divisions (meiosis I and meiosis II) to produce four haploid cells. In meiosis I, homologous chromosome pairs separate from each other, in meiosis II, sister chromatids separate, similarly to mitosis, this two-step process is what achieves the reduction from diploid to haploid.",
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Meiosis Stages.svg",
+      imageCaption: "The stages of meiosis I and II: one diploid cell divides twice to produce four genetically varied haploid gametes."
     },
     {
       label: "D2.1.10 / D2.1.11",
@@ -839,7 +845,9 @@ const CONTENT = {
       label: "A2.2.12",
       heading: "Origin of eukaryotic cells by endosymbiosis",
       level: "HL",
-      text: "Mitochondria and chloroplasts are thought to have originated as free-living prokaryotic cells engulfed by a larger host cell, and instead of being digested, survived inside it as an internal symbiont, a relationship that became permanent over evolutionary time. This **endosymbiotic theory** explains otherwise puzzling features of these organelles: both have their own circular DNA and prokaryote-sized ribosomes, and both are enclosed by a double membrane, one layer from the original engulfed prokaryote, one from the host cell's engulfing vesicle."
+      text: "Mitochondria and chloroplasts are thought to have originated as free-living prokaryotic cells engulfed by a larger host cell, and instead of being digested, survived inside it as an internal symbiont, a relationship that became permanent over evolutionary time. This **endosymbiotic theory** explains otherwise puzzling features of these organelles: both have their own circular DNA and prokaryote-sized ribosomes, and both are enclosed by a double membrane, one layer from the original engulfed prokaryote, one from the host cell's engulfing vesicle.",
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Endosymbiosis evolution diagram.svg",
+      imageCaption: "Endosymbiotic theory: an ancestral host cell engulfs a free-living prokaryote, which survives internally and evolves into a mitochondrion or chloroplast."
     },
     {
       label: "A2.2.13",
@@ -915,19 +923,25 @@ const CONTENT = {
       label: "C1.2.7-9",
       heading: "NAD, glycolysis, and regenerating NAD anaerobically",
       level: "HL",
-      text: "**NAD** acts as a hydrogen carrier during respiration, becoming reduced NAD when it accepts hydrogen (with its electron) removed from a substrate during oxidation. In **glycolysis**, glucose is broken down, through a series of enzyme-catalysed steps in the cytoplasm, into two molecules of pyruvate, with a net yield of ATP and reduced NAD, this stage occurs whether or not oxygen is present.\n\nWhen oxygen is unavailable, reduced NAD cannot be reoxidised by the electron transport chain, so cells regenerate NAD another way: in humans, by converting pyruvate to lactate, which reoxidises reduced NAD back to NAD, allowing glycolysis, and its small ATP yield, to keep running anaerobically."
+      text: "**NAD** acts as a hydrogen carrier during respiration, becoming reduced NAD when it accepts hydrogen (with its electron) removed from a substrate during oxidation. In **glycolysis**, glucose is broken down, through a series of enzyme-catalysed steps in the cytoplasm, into two molecules of pyruvate, with a net yield of ATP and reduced NAD, this stage occurs whether or not oxygen is present.\n\nWhen oxygen is unavailable, reduced NAD cannot be reoxidised by the electron transport chain, so cells regenerate NAD another way: in humans, by converting pyruvate to lactate, which reoxidises reduced NAD back to NAD, allowing glycolysis, and its small ATP yield, to keep running anaerobically.",
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Glycolysis overview.svg",
+      imageCaption: "An overview of glycolysis: glucose is progressively broken down into two molecules of pyruvate, with a net yield of ATP and reduced NAD."
     },
     {
       label: "C1.2.11 / C1.2.12",
       heading: "The link reaction and the Krebs cycle",
       level: "HL",
-      text: "In the **link reaction**, pyruvate is transported into the mitochondrial matrix, oxidised, and decarboxylated (losing a carbon dioxide molecule), producing reduced NAD and a two-carbon acetyl group, which combines with coenzyme A to form acetyl-CoA.\n\nIn the **Krebs cycle**, the acetyl group is fully oxidised and decarboxylated across a cycle of reactions, releasing the remaining carbon as carbon dioxide, while generating a further yield of ATP, reduced NAD, and reduced FAD, molecules that carry the bulk of glucose's original energy forward to the electron transport chain."
+      text: "In the **link reaction**, pyruvate is transported into the mitochondrial matrix, oxidised, and decarboxylated (losing a carbon dioxide molecule), producing reduced NAD and a two-carbon acetyl group, which combines with coenzyme A to form acetyl-CoA.\n\nIn the **Krebs cycle**, the acetyl group is fully oxidised and decarboxylated across a cycle of reactions, releasing the remaining carbon as carbon dioxide, while generating a further yield of ATP, reduced NAD, and reduced FAD, molecules that carry the bulk of glucose's original energy forward to the electron transport chain.",
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Citric acid cycle with aconitate 2.svg",
+      imageCaption: "The Krebs (citric acid) cycle: each turn fully oxidises an acetyl group, releasing CO2 and generating ATP, reduced NAD, and reduced FAD."
     },
     {
       label: "C1.2.16",
       heading: "Oxygen as the terminal electron acceptor",
       level: "HL",
-      text: "At the end of the electron transport chain, oxygen accepts the electrons (and hydrogen ions) that have passed along the chain, forming water. This is why aerobic respiration depends absolutely on oxygen, without a terminal acceptor to remove electrons at the end of the chain, the whole chain backs up and stops, which halts oxidative phosphorylation and the large ATP yield that depends on it."
+      text: "At the end of the electron transport chain, oxygen accepts the electrons (and hydrogen ions) that have passed along the chain, forming water. This is why aerobic respiration depends absolutely on oxygen, without a terminal acceptor to remove electrons at the end of the chain, the whole chain backs up and stops, which halts oxidative phosphorylation and the large ATP yield that depends on it.",
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/ATP synthase chemiosmosis and oxidative phosphorylation.gif",
+      imageCaption: "Chemiosmosis: the electron transport chain pumps H+ ions across the inner mitochondrial membrane, and their flow back through ATP synthase drives ATP production."
     }
   ],
 
@@ -1258,7 +1272,9 @@ const CONTENT = {
       label: "D3.2.17",
       heading: "Dihybrid crosses",
       level: "HL",
-      text: "A **dihybrid cross** tracks the inheritance of two unlinked genes simultaneously. Because each gene has two alleles and the genes assort independently, a heterozygote for both genes can produce four different combinations of gametes in equal proportions. Laying these out in a Punnett grid for a cross between two double heterozygotes produces the classic 9:3:3:1 ratio of phenotypes among the offspring, a signature pattern that confirms two genes are unlinked and each showing straightforward dominant-recessive inheritance."
+      text: "A **dihybrid cross** tracks the inheritance of two unlinked genes simultaneously. Because each gene has two alleles and the genes assort independently, a heterozygote for both genes can produce four different combinations of gametes in equal proportions. Laying these out in a Punnett grid for a cross between two double heterozygotes produces the classic 9:3:3:1 ratio of phenotypes among the offspring, a signature pattern that confirms two genes are unlinked and each showing straightforward dominant-recessive inheritance.",
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Dihybrid cross.svg",
+      imageCaption: "A dihybrid cross Punnett square: crossing two double heterozygotes produces the classic 9:3:3:1 phenotypic ratio."
     },
     {
       label: "D3.2.18",
@@ -1546,7 +1562,9 @@ const CONTENT = {
       label: "A3.2.6 / A3.2.7",
       heading: "Constructing and interpreting cladograms",
       level: "HL",
-      text: "A **cladogram** is a branching diagram representing the evolutionary relationships between a group of organisms, constructed by comparing base sequences of genes or amino acid sequences of proteins across the species involved: species with more similar sequences are placed closer together on the diagram. Each branch point, or **node**, represents a hypothetical common ancestor at which two lineages diverged, and the point furthest back is the **root**, representing the most recent common ancestor of every organism included in the diagram.\n\nReading a cladogram allows evolutionary relationships to be deduced directly: any two species sharing a more recent node are more closely related than either is to a species sharing only an earlier, more distant node."
+      text: "A **cladogram** is a branching diagram representing the evolutionary relationships between a group of organisms, constructed by comparing base sequences of genes or amino acid sequences of proteins across the species involved: species with more similar sequences are placed closer together on the diagram. Each branch point, or **node**, represents a hypothetical common ancestor at which two lineages diverged, and the point furthest back is the **root**, representing the most recent common ancestor of every organism included in the diagram.\n\nReading a cladogram allows evolutionary relationships to be deduced directly: any two species sharing a more recent node are more closely related than either is to a species sharing only an earlier, more distant node.",
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Cladogram-example1.svg",
+      imageCaption: "A simple cladogram: each node marks a common ancestor, and species sharing a more recent node are more closely related."
     },
     {
       label: "A3.2.8",
@@ -1614,7 +1632,9 @@ const CONTENT = {
       label: "D4.2.11 / D4.2.12",
       heading: "Ecological succession and primary succession",
       level: "SL",
-      text: "**Ecological succession** is the gradual, directional change in the species composition of a community over time, typically driven by the way earlier colonising species alter the local environment, making conditions more favourable for a different set of species to establish. **Primary succession** begins on newly formed, previously lifeless substrate, such as bare rock exposed after a volcanic eruption or the retreat of a glacier, with no pre-existing soil. It starts with hardy pioneer species, often lichens and mosses, that can tolerate the harsh initial conditions and gradually break down rock and accumulate organic matter, slowly building the soil needed to support the more complex plant and animal communities that follow."
+      text: "**Ecological succession** is the gradual, directional change in the species composition of a community over time, typically driven by the way earlier colonising species alter the local environment, making conditions more favourable for a different set of species to establish. **Primary succession** begins on newly formed, previously lifeless substrate, such as bare rock exposed after a volcanic eruption or the retreat of a glacier, with no pre-existing soil. It starts with hardy pioneer species, often lichens and mosses, that can tolerate the harsh initial conditions and gradually break down rock and accumulate organic matter, slowly building the soil needed to support the more complex plant and animal communities that follow.",
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Primary Succession Diagram.svg",
+      imageCaption: "Primary succession: pioneer species colonise bare rock, gradually building soil and enabling progressively more complex communities to establish."
     },
     {
       label: "D4.2.13 / D4.2.14",
@@ -1629,7 +1649,9 @@ const CONTENT = {
       label: "D4.3.1",
       heading: "Anthropogenic causes of climate change",
       level: "SL",
-      text: "**Anthropogenic climate change** refers to long-term shifts in global climate patterns driven by human activity, principally through the release of greenhouse gases such as carbon dioxide and methane. Major sources include the combustion of fossil fuels for energy and transport, deforestation (which both releases stored carbon and reduces the capacity for future carbon absorption), and agricultural practices, including livestock farming, which is a substantial source of methane."
+      text: "**Anthropogenic climate change** refers to long-term shifts in global climate patterns driven by human activity, principally through the release of greenhouse gases such as carbon dioxide and methane. Major sources include the combustion of fossil fuels for energy and transport, deforestation (which both releases stored carbon and reduces the capacity for future carbon absorption), and agricultural practices, including livestock farming, which is a substantial source of methane.",
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/The Greenhouse Effect.svg",
+      imageCaption: "The greenhouse effect: greenhouse gases trap outgoing infrared radiation, warming the atmosphere and Earth's surface."
     },
     {
       label: "D4.3.2",
@@ -1830,7 +1852,9 @@ const CONTENT = {
       label: "D3.3.7 / D3.3.8",
       heading: "Osmoregulation and the kidney",
       level: "SL",
-      text: "**Excretion** is the removal of metabolic waste products from the body, while **osmoregulation** is the regulation of the water and solute balance of body fluids, keeping their osmotic concentration within a stable range; these are related but distinct processes that both occur largely in the kidney.\n\nEach **nephron**, the functional unit of the kidney, begins at the **glomerulus**, a knot of capillaries where blood pressure forces water, ions, glucose, and urea (but not blood cells or large proteins) out of the blood and into the surrounding **Bowman's capsule**, a process called ultrafiltration. The resulting filtrate then passes into the **proximal convoluted tubule**, where useful substances, including all of the filtered glucose and much of the water and ions, are selectively reabsorbed back into the blood, leaving mostly water, urea, and excess ions in the tubule to continue toward excretion."
+      text: "**Excretion** is the removal of metabolic waste products from the body, while **osmoregulation** is the regulation of the water and solute balance of body fluids, keeping their osmotic concentration within a stable range; these are related but distinct processes that both occur largely in the kidney.\n\nEach **nephron**, the functional unit of the kidney, begins at the **glomerulus**, a knot of capillaries where blood pressure forces water, ions, glucose, and urea (but not blood cells or large proteins) out of the blood and into the surrounding **Bowman's capsule**, a process called ultrafiltration. The resulting filtrate then passes into the **proximal convoluted tubule**, where useful substances, including all of the filtered glucose and much of the water and ions, are selectively reabsorbed back into the blood, leaving mostly water, urea, and excess ions in the tubule to continue toward excretion.",
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Kidney nephron molar transport diagram.svg",
+      imageCaption: "The nephron: filtrate is produced at the glomerulus and Bowman's capsule, then substances are selectively reabsorbed or secreted along the tubule."
     },
     {
       label: "D3.3.9 / D3.3.10",
@@ -1863,7 +1887,9 @@ const CONTENT = {
       label: "B3.1.4 / B3.1.5 / B3.1.6",
       heading: "Mammalian lungs and ventilation",
       level: "SL",
-      text: "The mammalian lung is adapted for efficient gas exchange through **alveoli**, millions of tiny air sacs that together provide an enormous surface area, each surrounded by a dense capillary network and lined by an extremely thin epithelium just one cell thick, keeping the diffusion distance between air and blood minimal, further reduced by a moist surfactant layer that also prevents the alveoli from collapsing.\n\n**Ventilation**, the physical movement of air into and out of the lungs, is driven by the diaphragm and intercostal muscles: during inspiration, the diaphragm contracts and flattens while the external intercostal muscles pull the ribcage up and outward, increasing thoracic volume and drawing air in; during expiration, these muscles relax (or, during forced exhalation, the internal intercostal and abdominal muscles actively contract) reducing thoracic volume and pushing air out. Lung function can be assessed by measuring **lung volumes**, including tidal volume (the amount of air moved in a normal breath) and vital capacity (the maximum volume that can be exhaled after a maximum inhalation)."
+      text: "The mammalian lung is adapted for efficient gas exchange through **alveoli**, millions of tiny air sacs that together provide an enormous surface area, each surrounded by a dense capillary network and lined by an extremely thin epithelium just one cell thick, keeping the diffusion distance between air and blood minimal, further reduced by a moist surfactant layer that also prevents the alveoli from collapsing.\n\n**Ventilation**, the physical movement of air into and out of the lungs, is driven by the diaphragm and intercostal muscles: during inspiration, the diaphragm contracts and flattens while the external intercostal muscles pull the ribcage up and outward, increasing thoracic volume and drawing air in; during expiration, these muscles relax (or, during forced exhalation, the internal intercostal and abdominal muscles actively contract) reducing thoracic volume and pushing air out. Lung function can be assessed by measuring **lung volumes**, including tidal volume (the amount of air moved in a normal breath) and vital capacity (the maximum volume that can be exhaled after a maximum inhalation).",
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Cross section of an alveolus and capillaries showing diffusion of gases.svg",
+      imageCaption: "A cross-section of an alveolus and surrounding capillaries, showing oxygen and carbon dioxide diffusing across the thin epithelial and capillary walls."
     },
     {
       label: "B3.1.7 / B3.1.8",
@@ -1926,7 +1952,9 @@ const CONTENT = {
       label: "B3.2.10 / B3.2.11",
       heading: "Single versus double circulation and the mammalian heart",
       level: "SL",
-      text: "Bony fish have a **single circulation**: blood passes through the heart once per full circuit of the body, travelling from heart to gills to body tissues and back to the heart, meaning blood pressure has already dropped considerably by the time it reaches the body tissues after passing through the narrow capillaries of the gills. Mammals instead have a **double circulation**: blood passes through the heart twice per circuit, once to be pumped to the lungs and back (the pulmonary circulation), and once to be pumped to the rest of the body and back (the systemic circulation), which allows blood to be re-pressurised between the two circuits and delivers oxygenated blood to body tissues at a considerably higher, more effective pressure.\n\nThe mammalian heart's structure supports this: the muscular wall of the left ventricle, which must generate the high pressure needed to pump blood around the entire systemic circuit, is considerably thicker than that of the right ventricle, which only needs to pump blood the shorter distance to the lungs. One-way valves within the heart prevent backflow between chambers, ensuring blood moves in only one direction through the double circulation."
+      text: "Bony fish have a **single circulation**: blood passes through the heart once per full circuit of the body, travelling from heart to gills to body tissues and back to the heart, meaning blood pressure has already dropped considerably by the time it reaches the body tissues after passing through the narrow capillaries of the gills. Mammals instead have a **double circulation**: blood passes through the heart twice per circuit, once to be pumped to the lungs and back (the pulmonary circulation), and once to be pumped to the rest of the body and back (the systemic circulation), which allows blood to be re-pressurised between the two circuits and delivers oxygenated blood to body tissues at a considerably higher, more effective pressure.\n\nThe mammalian heart's structure supports this: the muscular wall of the left ventricle, which must generate the high pressure needed to pump blood around the entire systemic circuit, is considerably thicker than that of the right ventricle, which only needs to pump blood the shorter distance to the lungs. One-way valves within the heart prevent backflow between chambers, ensuring blood moves in only one direction through the double circulation.",
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Diagram of the human heart.svg",
+      imageCaption: "The mammalian heart: note the thicker-walled left ventricle, the four chambers, and the valves that keep blood flowing in one direction."
     }
   ],
 
@@ -1942,8 +1970,8 @@ const CONTENT = {
       heading: "Sarcomere structure and the sliding filament model",
       level: "HL",
       text: "Skeletal muscle fibres are packed with parallel protein filaments organised into repeating contractile units called **sarcomeres**, arranged end to end along each myofibril. A sarcomere contains thin **actin** filaments and thick **myosin** filaments, whose overlapping, alternating arrangement produces the characteristic banded appearance of skeletal muscle under the microscope.\n\nContraction occurs according to the **sliding filament model**: myosin heads, powered by ATP hydrolysis, attach to exposed binding sites on the actin filaments, forming cross-bridges, and each cross-bridge then bends, pulling the actin filament inward toward the centre of the sarcomere before detaching (a step that itself requires ATP) and repeating the cycle. Critically, neither the actin nor the myosin filaments themselves shorten, the sarcomere shortens because the two sets of filaments slide past one another, pulling the ends of the sarcomere closer together.",
-      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Sarcomere.gif",
-      imageCaption: "A sarcomere: the repeating contractile unit of a myofibril, containing overlapping actin and myosin filaments."
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Muscle Contraction.svg",
+      imageCaption: "The cross-bridge cycle: myosin heads bind actin, pivot in a power stroke powered by ATP hydrolysis, then release and reset, repeating to slide the filaments and shorten the sarcomere."
     },
     {
       label: "B3.3.4",
@@ -1987,13 +2015,17 @@ const CONTENT = {
       label: "C2.2.5 / C2.2.6 / C2.2.7",
       heading: "Synapses and neurotransmitter release",
       level: "SL",
-      text: "A **synapse** is a junction between two neurons, or between a neuron and an effector cell such as a muscle fibre, across which a signal can pass in only one direction. When an action potential reaches the end of the presynaptic neuron, it triggers the opening of voltage-gated calcium channels; the resulting influx of calcium ions causes vesicles containing **neurotransmitter** to fuse with the presynaptic membrane and release their contents into the narrow synaptic cleft by exocytosis.\n\nThe released neurotransmitter (such as acetylcholine) diffuses across the cleft and binds to specific transmembrane receptors on the postsynaptic membrane, causing ion channels to open. If this produces a net influx of positive ions, the postsynaptic membrane becomes less negative, an **excitatory postsynaptic potential**, which, if large enough, can trigger a new action potential in the postsynaptic cell."
+      text: "A **synapse** is a junction between two neurons, or between a neuron and an effector cell such as a muscle fibre, across which a signal can pass in only one direction. When an action potential reaches the end of the presynaptic neuron, it triggers the opening of voltage-gated calcium channels; the resulting influx of calcium ions causes vesicles containing **neurotransmitter** to fuse with the presynaptic membrane and release their contents into the narrow synaptic cleft by exocytosis.\n\nThe released neurotransmitter (such as acetylcholine) diffuses across the cleft and binds to specific transmembrane receptors on the postsynaptic membrane, causing ion channels to open. If this produces a net influx of positive ions, the postsynaptic membrane becomes less negative, an **excitatory postsynaptic potential**, which, if large enough, can trigger a new action potential in the postsynaptic cell.",
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/SynapseSchematic en.svg",
+      imageCaption: "A chemical synapse: calcium influx triggers neurotransmitter release from the presynaptic neuron, which diffuses across the cleft and binds receptors on the postsynaptic membrane."
     },
     {
       label: "C2.2.8 / C2.2.9 / C2.2.10",
       heading: "Depolarisation, repolarisation, and propagation",
       level: "SL",
-      text: "During an action potential, voltage-gated sodium channels open in response to an initial stimulus, allowing sodium ions to rush into the cell and rapidly reversing the membrane potential from negative to positive, called **depolarisation**. Sodium channels then close and voltage-gated potassium channels open, allowing potassium ions to flow out of the cell and restoring the negative resting potential, called **repolarisation** (often briefly overshooting to a slightly more negative level before settling back to rest).\n\nThis local depolarisation triggers depolarisation in the immediately adjacent section of membrane, propagating the action potential as a travelling wave along the length of the axon, moving in only one direction because the section of membrane just behind the impulse remains temporarily unable to fire again (its refractory period)."
+      text: "During an action potential, voltage-gated sodium channels open in response to an initial stimulus, allowing sodium ions to rush into the cell and rapidly reversing the membrane potential from negative to positive, called **depolarisation**. Sodium channels then close and voltage-gated potassium channels open, allowing potassium ions to flow out of the cell and restoring the negative resting potential, called **repolarisation** (often briefly overshooting to a slightly more negative level before settling back to rest).\n\nThis local depolarisation triggers depolarisation in the immediately adjacent section of membrane, propagating the action potential as a travelling wave along the length of the axon, moving in only one direction because the section of membrane just behind the impulse remains temporarily unable to fire again (its refractory period).",
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Action potential.svg",
+      imageCaption: "The action potential: rapid depolarisation as sodium channels open, followed by repolarisation as potassium channels open, before the membrane returns to its resting potential."
     },
     {
       label: "C2.2.11 / C2.2.12 / C2.2.13",
@@ -2005,7 +2037,9 @@ const CONTENT = {
       label: "C2.2.14",
       heading: "Saltatory conduction",
       level: "SL",
-      text: "In myelinated axons, the fatty **myelin sheath** electrically insulates most of the axon's length, so depolarisation only occurs at the small, exposed gaps between adjacent myelinated sections, called nodes of Ranvier. Rather than propagating continuously along the entire membrane, the action potential effectively jumps from node to node, a process called **saltatory conduction**, which is considerably faster and more energy-efficient than continuous conduction along an equivalent unmyelinated fibre, since far fewer ion channels need to open along the way."
+      text: "In myelinated axons, the fatty **myelin sheath** electrically insulates most of the axon's length, so depolarisation only occurs at the small, exposed gaps between adjacent myelinated sections, called nodes of Ranvier. Rather than propagating continuously along the entire membrane, the action potential effectively jumps from node to node, a process called **saltatory conduction**, which is considerably faster and more energy-efficient than continuous conduction along an equivalent unmyelinated fibre, since far fewer ion channels need to open along the way.",
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Propagation of action potential along myelinated nerve fiber en.svg",
+      imageCaption: "Saltatory conduction: the action potential jumps between exposed nodes of Ranvier along a myelinated axon, greatly increasing conduction speed."
     },
     {
       label: "C2.2.18 / C2.2.19",
@@ -2056,7 +2090,9 @@ const CONTENT = {
       label: "C2.1.11 / C2.1.12",
       heading: "Transmembrane receptors and signal initiation",
       level: "HL",
-      text: "Many signalling molecules, particularly larger or more polar ones that cannot cross the plasma membrane, bind to **transmembrane receptors** on the cell surface. Insulin is a well-studied example: it binds to a receptor spanning the plasma membrane, triggering the receptor's own tyrosine kinase activity, which phosphorylates target proteins inside the cell, initiating a signalling cascade that ultimately causes vesicles containing glucose transporter proteins to move to and fuse with the plasma membrane, increasing the cell's capacity to take up glucose."
+      text: "Many signalling molecules, particularly larger or more polar ones that cannot cross the plasma membrane, bind to **transmembrane receptors** on the cell surface. Insulin is a well-studied example: it binds to a receptor spanning the plasma membrane, triggering the receptor's own tyrosine kinase activity, which phosphorylates target proteins inside the cell, initiating a signalling cascade that ultimately causes vesicles containing glucose transporter proteins to move to and fuse with the plasma membrane, increasing the cell's capacity to take up glucose.",
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Signal Transduction Diagram- Insulin.svg",
+      imageCaption: "Insulin signal transduction: binding activates the receptor's tyrosine kinase activity, triggering a cascade that moves GLUT4 transporters to the membrane."
     },
     {
       label: "C2.1.13",
@@ -2094,13 +2130,17 @@ const CONTENT = {
       label: "C3.2.5",
       heading: "Phagocytes",
       level: "SL",
-      text: "**Phagocytes**, a category of white blood cell including macrophages and neutrophils, are a key component of innate immunity. They move through tissues toward sites of infection, recognise pathogens using receptors that detect general, non-self molecular patterns, and engulf them by phagocytosis, drawing the pathogen into an internal vacuole that then fuses with a lysosome, whose digestive enzymes destroy the pathogen. Because this recognition is based on broad, shared pathogen features rather than a pathogen-specific match, phagocytes can respond immediately to a wide range of pathogens without any prior exposure."
+      text: "**Phagocytes**, a category of white blood cell including macrophages and neutrophils, are a key component of innate immunity. They move through tissues toward sites of infection, recognise pathogens using receptors that detect general, non-self molecular patterns, and engulf them by phagocytosis, drawing the pathogen into an internal vacuole that then fuses with a lysosome, whose digestive enzymes destroy the pathogen. Because this recognition is based on broad, shared pathogen features rather than a pathogen-specific match, phagocytes can respond immediately to a wide range of pathogens without any prior exposure.",
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Phagocytosis.svg",
+      imageCaption: "Phagocytosis: a pathogen is engulfed into a phagosome, which fuses with a lysosome to form a phagolysosome where the pathogen is broken down."
     },
     {
       label: "C3.2.6 / C3.2.7",
       heading: "Lymphocytes, antigens, and antibodies",
       level: "SL",
-      text: "**Lymphocytes**, a category of white blood cell that includes both B-lymphocytes and T-lymphocytes, drive the adaptive immune response, which is specific to particular pathogens and improves with repeated exposure. Each lymphocyte recognises one specific **antigen**, a molecule, usually a protein on a pathogen's surface, that the immune system identifies as foreign.\n\nWhen an antigen is recognised, it triggers the production of **antibodies**, proteins that bind specifically to that antigen, marking the pathogen for destruction or directly neutralising it (for instance by blocking it from entering host cells)."
+      text: "**Lymphocytes**, a category of white blood cell that includes both B-lymphocytes and T-lymphocytes, drive the adaptive immune response, which is specific to particular pathogens and improves with repeated exposure. Each lymphocyte recognises one specific **antigen**, a molecule, usually a protein on a pathogen's surface, that the immune system identifies as foreign.\n\nWhen an antigen is recognised, it triggers the production of **antibodies**, proteins that bind specifically to that antigen, marking the pathogen for destruction or directly neutralising it (for instance by blocking it from entering host cells).",
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Antibody basic unit.svg",
+      imageCaption: "The basic Y-shaped structure of an antibody: two heavy chains and two light chains, with variable regions that bind specifically to one antigen."
     },
     {
       label: "C3.2.8 / C3.2.9",
@@ -2145,7 +2185,9 @@ const CONTENT = {
       label: "A2.3.1",
       heading: "Structural features common to viruses",
       level: "HL",
-      text: "Despite their diversity, viruses share several defining structural features. They are extremely small, generally between about 20 and 300 nanometres, small enough to enter the host cells they depend on, and they do not grow, remaining a fixed size throughout their existence rather than increasing gradually the way a cell does. Every virus carries genetic material in the form of nucleic acid, following the same universal genetic code used by cellular life, enclosed within a protective protein shell called a **capsid**. Critically, viruses lack cytoplasm and possess few or no enzymes of their own, relying almost entirely on a host cell's metabolic machinery to replicate, which is one of the central reasons viruses are not classified as living cells."
+      text: "Despite their diversity, viruses share several defining structural features. They are extremely small, generally between about 20 and 300 nanometres, small enough to enter the host cells they depend on, and they do not grow, remaining a fixed size throughout their existence rather than increasing gradually the way a cell does. Every virus carries genetic material in the form of nucleic acid, following the same universal genetic code used by cellular life, enclosed within a protective protein shell called a **capsid**. Critically, viruses lack cytoplasm and possess few or no enzymes of their own, relying almost entirely on a host cell's metabolic machinery to replicate, which is one of the central reasons viruses are not classified as living cells.",
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Simple diagram of virus (en).svg",
+      imageCaption: "The basic structure of a virus: nucleic acid enclosed within a protective protein capsid, with no cytoplasm or independent metabolic machinery."
     },
     {
       label: "A2.3.2",
@@ -2157,7 +2199,9 @@ const CONTENT = {
       label: "A2.3.3",
       heading: "The lytic cycle",
       level: "HL",
-      text: "In the **lytic cycle**, a virus attaches to a susceptible host cell and injects, or is taken up along with, its genetic material. The host cell's own machinery is then hijacked to replicate the viral genome and manufacture viral proteins, which self-assemble into large numbers of new virus particles. Once enough new viruses have been produced, the host cell typically ruptures (lyses), releasing the new viral particles to go on and infect further host cells, a cycle that can proceed rapidly and destructively through a population of susceptible cells."
+      text: "In the **lytic cycle**, a virus attaches to a susceptible host cell and injects, or is taken up along with, its genetic material. The host cell's own machinery is then hijacked to replicate the viral genome and manufacture viral proteins, which self-assemble into large numbers of new virus particles. Once enough new viruses have been produced, the host cell typically ruptures (lyses), releasing the new viral particles to go on and infect further host cells, a cycle that can proceed rapidly and destructively through a population of susceptible cells.",
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Lysogenic and lytic cycle.svg",
+      imageCaption: "The lytic and lysogenic cycles compared: the lytic cycle rapidly destroys the host cell, while the lysogenic cycle integrates viral DNA into the host genome as a dormant prophage."
     },
     {
       label: "A2.3.4",
@@ -2201,7 +2245,9 @@ const CONTENT = {
       label: "C3.1.6 / C3.1.7 / C3.1.8",
       heading: "Sensory and motor neurons, and the pain reflex arc",
       level: "HL",
-      text: "**Sensory neurons** carry information from receptors toward the central nervous system (the spinal cord and brain), while **motor neurons** carry signals in the opposite direction, from the central nervous system out to effectors such as muscles or glands. **Nerves** are simply bundles of many individual nerve fibres, from both sensory and motor neurons, running together within a shared protective sheath.\n\nThe **pain reflex arc** is a well-studied example of an involuntary response: a painful stimulus activates a sensory neuron, which synapses directly with a motor neuron within the spinal cord (often via a small connecting relay neuron), and that motor neuron activates a skeletal muscle as the effector, producing a rapid, protective muscular withdrawal response before the sensation of pain has even fully registered at a conscious level in the brain."
+      text: "**Sensory neurons** carry information from receptors toward the central nervous system (the spinal cord and brain), while **motor neurons** carry signals in the opposite direction, from the central nervous system out to effectors such as muscles or glands. **Nerves** are simply bundles of many individual nerve fibres, from both sensory and motor neurons, running together within a shared protective sheath.\n\nThe **pain reflex arc** is a well-studied example of an involuntary response: a painful stimulus activates a sensory neuron, which synapses directly with a motor neuron within the spinal cord (often via a small connecting relay neuron), and that motor neuron activates a skeletal muscle as the effector, producing a rapid, protective muscular withdrawal response before the sensation of pain has even fully registered at a conscious level in the brain.",
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Reflex Arc.svg",
+      imageCaption: "The pain reflex arc: a sensory neuron relays the stimulus via the spinal cord to a motor neuron, triggering a rapid muscular response without needing to wait for the brain."
     },
     {
       label: "C3.1.9",
