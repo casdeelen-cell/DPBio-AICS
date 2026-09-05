@@ -77,23 +77,76 @@ question in original wording, same concept/difficulty/correct answer,
 into `questionbank.js`, sorted into the correct topic. The site
 automatically labels this section "Adapted from IB Questionbank", don't
 add that label manually. Only Paper 1 (multiple choice) style questions
-fit this format, extended-response Paper 1B/2 questions need a
-different, not-yet-built feature, don't force them into the MCQ format.
+fit this format. Extended-response Paper 1B/2 questions have their own
+section now (see "Paper 2 practice" below) — don't force them into the
+MCQ format.
 
-Send PDFs in small batches (2-3 at a time, or fewer if large) to avoid
-hitting the chat's image limit, since the web UI converts PDF pages to
-images internally.
+Send PDFs/docx in small batches (2-3 at a time, or fewer if large) to
+avoid hitting the chat's image limit, since the web UI converts PDF
+pages to images internally.
+
+## Paper 2 practice ("extended response" section, `js/paper2.js`)
+
+As of this session, the site has a second, separate practice section
+alongside the multiple-choice Questionbank: longer, multi-part
+extended-response questions adapted from real IB Paper 1B (data-based
+short answer) and Paper 2 (extended response) papers. Same copyright
+principle as the Questionbank: rewritten in original wording, never
+verbatim IB text.
+
+**File:** `js/paper2.js`, keyed by topic code, same as the other
+content files:
+```js
+PAPER2["A1.1"] = [
+  {
+    context: "short scenario shared by all parts, or \"\" if none",
+    parts: [
+      { label: "a", prompt: "command-term question text", marks: 4,
+        guidance: "teaching-style explanation of what a strong answer covers" }
+    ]
+  }
+]
+```
+A topic can have more than one question set; the site adds
+previous/next navigation automatically when it does.
+
+**Rendering:** `buildPaper2()` in `app.js`, called from `topic.html`
+alongside `buildQuiz()` and `buildQuestionBank()`. Unlike the MCQ
+sections, these are self-marked — the student reads the prompt, works
+out their own answer, then clicks "Show guidance" per part to reveal
+the model answer rather than picking from options. Styled with the
+site's `--moss` accent (previously only used for tip boxes) to keep it
+visually distinct from the green Quick quiz and the rust Practice
+questions sections. Section heading: "Paper 2 & extended response".
+
+**Source material used this session:** three Word docx exports from
+the user's IB Questionbank subscription (`everything_4.docx`,
+`everything_5.docx`, `Everything_6.docx`), containing 270 real exam
+questions in total (210 Paper 1A multiple choice, 24 Paper 1B, 36
+Paper 2). After deduplicating near-identical questions repeated across
+different SL/HL/timezone variants of the same exam sitting, this gave
+158 unique MCQs (added to `questionbank.js`, now 252 questions across
+all 40 topics, up from 94 across 37) and enough Paper 1B/2 material for
+41 extended-response sets (106 sub-parts) across all 40 topics in the
+new `paper2.js`. A few MCQs relied on an image for the answer options
+that couldn't be reliably transcribed; those were rewritten as new
+original questions testing the same underlying concept rather than
+skipped, consistent with the "adapted, not reproduced" approach used
+throughout this project. Three Paper 2 sets (A2.1, D3.1, D4.2) are
+original questions written in the same style, since the source docx
+didn't cover those topics in extended-response format.
 
 ## Design and tone
 
 - Visual style: warm paper background, forest green as primary accent,
-  rust/ochre for HL badges and the Questionbank section, Fraunces
-  (serif) for headings, Inter (sans) for body text. Lab-notebook feel,
-  not generic SaaS.
+  rust/ochre for HL badges and the Questionbank section, moss green for
+  the Paper 2 practice section, Fraunces (serif) for headings, Inter
+  (sans) for body text. Lab-notebook feel, not generic SaaS.
 - **No emoji anywhere on the site.** This was explicitly requested,
   don't reintroduce them (streak counter, buttons, anything).
-- Quick quiz (`quizzes.js`) and Practice questions (`questionbank.js`)
-  are two separate, visually distinct sections. Don't merge them.
+- Quick quiz (`quizzes.js`), Practice questions (`questionbank.js`),
+  and Paper 2 practice (`paper2.js`)
+  are three separate, visually distinct sections. Don't merge them.
 
 ## Progress tracking
 
@@ -126,17 +179,39 @@ and **filled in every remaining quick quiz gap across the whole site**
 (13 Unit 1 topics had none, plus all of Units 3-4's new topics).
 
 Slides and formatives are still blank across most of Units 2-4, still
-waiting on links from the user. Questionbank entries: Unit 1 complete;
-Unit 3 has some pre-existing adapted questions for
-A3.2/D4.2/D4.3/C4.2/A4.2 from an earlier session, not yet checked
-against the current notes for full alignment; Units 2 and 4 have none
-yet. All still waiting on further PDF exports from the user's
-Questionbank subscription where needed.
+waiting on links from the user.
+
+**This session (Word docx import, Paper 2 feature build):** processed
+three Word docx exports (270 real exam questions total: 210 Paper 1A
+MCQ, 24 Paper 1B, 36 Paper 2) into the site. Questionbank (`js/
+questionbank.js`) is now complete and non-empty for **every one of the
+40 topics** — the three that had zero questions before this session
+(B4.2, C3.1, D2.2) are now covered — for a total of 252 questions, up
+from 94. Built a brand-new **Paper 2 practice section**
+(`js/paper2.js` + `buildPaper2()` in `app.js` + a new section in
+`topic.html`, styled with the `--moss` accent) for the extended-response
+Paper 1B/2 material that doesn't fit the MCQ format: 41 question sets
+(106 sub-parts total) across all 40 topics, self-marked with a
+"Show guidance" reveal per part rather than multiple-choice options.
+See the "Paper 2 practice" section above for the full file format and
+rendering details.
 
 Open items carried over: the Miller-Urey diagram in Unit 1 is a
 German-labelled Wikimedia image (visually clear either way, but worth
 swapping for an English version if a cleaner one turns up). The
 induced-fit enzyme diagram was fixed this session (now English).
+
+Open items from this session: a handful of source MCQs presented their
+answer options only as an image (a table or diagram) rather than as
+text; since the image content couldn't be reliably transcribed, these
+were replaced with newly written questions testing the same concept
+rather than attempting to guess the original options — worth a spot
+check against the original PDFs if perfect fidelity to those specific
+questions matters. The Paper 2 section currently shows one straight
+list of parts per question set with no partial-credit tracking or
+score total; a future pass could add a lightweight self-assessment
+(e.g. "did you get this part roughly right?" per part) if that would
+be useful.
 
 ## Images and diagrams
 

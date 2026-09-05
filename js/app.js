@@ -456,3 +456,121 @@ function buildQuestionBank(container, code) {
   container.appendChild(quizArea);
   buildQuizFromList(quizArea, questions);
 }
+
+/* Paper 2 / extended-response practice: longer, multi-part questions
+   adapted from IB Paper 1B and Paper 2 style exams, from paper2.js.
+   Unlike the multiple choice sections, these are self-marked: the
+   student reads the prompt, works out their own answer, then reveals
+   a teaching-style guidance note per part rather than a single
+   right/wrong option. Renders its own attribution line, same
+   convention as the question bank. */
+function buildPaper2(container, code) {
+  const sets = (typeof PAPER2 !== "undefined" && PAPER2[code]) || [];
+  if (!sets.length) {
+    container.innerHTML = '<p class="no-resources">No Paper 2 style questions for this topic yet.</p>';
+    return;
+  }
+
+  const attribution = document.createElement("div");
+  attribution.className = "qb-attribution";
+  attribution.textContent = "Adapted from IB Paper 1B / Paper 2 style questions";
+  container.appendChild(attribution);
+
+  let index = 0;
+
+  const nav = document.createElement("div");
+  nav.className = "p2-nav";
+  container.appendChild(nav);
+
+  const setArea = document.createElement("div");
+  container.appendChild(setArea);
+
+  function renderNav() {
+    nav.innerHTML = "";
+    if (sets.length <= 1) return;
+    const label = document.createElement("div");
+    label.className = "p2-nav-label";
+    label.textContent = "Question " + (index + 1) + " of " + sets.length;
+    nav.appendChild(label);
+    const btnRow = document.createElement("div");
+    btnRow.className = "p2-nav-buttons";
+    const prevBtn = document.createElement("button");
+    prevBtn.type = "button";
+    prevBtn.className = "p2-nav-btn";
+    prevBtn.textContent = "Previous";
+    prevBtn.disabled = index === 0;
+    prevBtn.addEventListener("click", function () { index--; renderSet(); });
+    const nextBtn = document.createElement("button");
+    nextBtn.type = "button";
+    nextBtn.className = "p2-nav-btn";
+    nextBtn.textContent = "Next";
+    nextBtn.disabled = index === sets.length - 1;
+    nextBtn.addEventListener("click", function () { index++; renderSet(); });
+    btnRow.appendChild(prevBtn);
+    btnRow.appendChild(nextBtn);
+    nav.appendChild(btnRow);
+  }
+
+  function renderSet() {
+    renderNav();
+    setArea.innerHTML = "";
+    const set = sets[index];
+    const card = document.createElement("div");
+    card.className = "p2-card";
+
+    if (set.context) {
+      const context = document.createElement("div");
+      context.className = "p2-context";
+      context.textContent = set.context;
+      card.appendChild(context);
+    }
+
+    const totalMarks = set.parts.reduce(function (sum, p) { return sum + (p.marks || 0); }, 0);
+    const totalEl = document.createElement("div");
+    totalEl.className = "p2-total-marks";
+    totalEl.textContent = "[" + totalMarks + " marks total]";
+    card.appendChild(totalEl);
+
+    set.parts.forEach(function (part) {
+      const partEl = document.createElement("div");
+      partEl.className = "p2-part";
+
+      const promptRow = document.createElement("div");
+      promptRow.className = "p2-prompt-row";
+      const labelEl = document.createElement("span");
+      labelEl.className = "p2-part-label";
+      labelEl.textContent = "(" + part.label + ")";
+      const promptEl = document.createElement("span");
+      promptEl.className = "p2-prompt";
+      promptEl.textContent = part.prompt;
+      const marksEl = document.createElement("span");
+      marksEl.className = "p2-marks";
+      marksEl.textContent = "[" + part.marks + "]";
+      promptRow.appendChild(labelEl);
+      promptRow.appendChild(promptEl);
+      promptRow.appendChild(marksEl);
+      partEl.appendChild(promptRow);
+
+      const toggle = document.createElement("button");
+      toggle.type = "button";
+      toggle.className = "p2-toggle";
+      toggle.textContent = "Show guidance";
+      const guidance = document.createElement("div");
+      guidance.className = "p2-guidance";
+      guidance.textContent = part.guidance;
+      guidance.hidden = true;
+      toggle.addEventListener("click", function () {
+        guidance.hidden = !guidance.hidden;
+        toggle.textContent = guidance.hidden ? "Show guidance" : "Hide guidance";
+      });
+      partEl.appendChild(toggle);
+      partEl.appendChild(guidance);
+
+      card.appendChild(partEl);
+    });
+
+    setArea.appendChild(card);
+  }
+
+  renderSet();
+}

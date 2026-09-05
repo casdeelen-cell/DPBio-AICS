@@ -36,6 +36,7 @@
 <script src="js/links.js"></script>
 <script src="js/quizzes.js"></script>
 <script src="js/questionbank.js"></script>
+<script src="js/paper2.js"></script>
 <script src="js/wordbank.js"></script>
 <script src="js/app.js"></script>
 <script>
@@ -244,10 +245,17 @@ function renderTopicPage() {
 
   const qbSection = document.createElement("div");
   qbSection.className = "quiz-section theme-qb";
-  qbSection.innerHTML = "<h2>Practice questions</h2>";
+  qbSection.innerHTML = "<h2>Practice questions</h2><p class=\"section-subnote\">Multiple choice, Paper 1 style.</p>";
   const qbContainer = document.createElement("div");
   qbSection.appendChild(qbContainer);
   main.appendChild(qbSection);
+
+  const p2Section = document.createElement("div");
+  p2Section.className = "quiz-section theme-p2";
+  p2Section.innerHTML = "<h2>Paper 2 &amp; extended response</h2><p class=\"section-subnote\">Longer, data-based and free-response questions. Write your own answer, then reveal the guidance.</p>";
+  const p2Container = document.createElement("div");
+  p2Section.appendChild(p2Container);
+  main.appendChild(p2Section);
 
   const sidebar = document.createElement("div");
   sidebar.className = "topic-sidebar";
@@ -269,6 +277,7 @@ function renderTopicPage() {
 
   buildQuiz(quizContainer, code);
   buildQuestionBank(qbContainer, code);
+  buildPaper2(p2Container, code);
 }
 
 renderTopicPage();

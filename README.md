@@ -15,6 +15,8 @@ biosite/
   js/content.js       YOUR NOTES, one entry per topic, broken into sections
   js/links.js         slides / video / formative links per topic
   js/quizzes.js       quiz questions per topic
+  js/questionbank.js  multiple choice practice questions per topic
+  js/paper2.js        Paper 2 / extended-response practice per topic
   js/app.js           shared logic (progress tracker, quiz engine, embeds)
 ```
 
