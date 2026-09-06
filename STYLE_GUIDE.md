@@ -136,12 +136,11 @@ throughout this project. Three Paper 2 sets (A2.1, D3.1, D4.2) are
 original questions written in the same style, since the source docx
 didn't cover those topics in extended-response format.
 
-## Reference pages: command terms, search, checklist
+## Reference pages: command terms, search
 
-Three cross-cutting pages, separate from the per-topic content, added
-in the session after the Paper 2 build. Each is linked from a
-`.header-nav` row in the header, present on every page (index, topic,
-formulas, and the three pages themselves).
+Two cross-cutting pages, separate from the per-topic content, added in
+the session after the Paper 2 build. Each is linked from a
+`.header-nav` row in the header, present on every page.
 
 **`terms.html` + `js/commandterms.js`** — the full IB command term
 glossary (official definitions, sourced from the IB's own command
@@ -172,18 +171,11 @@ and Paper 2 results link to the relevant section on the topic page
 specific question, since both of those render one question at a time
 rather than a scrollable list.
 
-**`checklist.html`** — a flat tick-list of all 332 individual syllabus
-statements (`CONTENT[code][i].label` + `.heading`) across all four
-units, deliberately separate from the existing per-topic
-understanding tracker (`STORAGE_KEY = "bioProgressV1"` in `app.js`).
-The distinction matters: the existing tracker is about how well a
-topic is understood; this one is a basic coverage checklist, "have I
-even been through this specific statement". Uses its own localStorage
-key (`bioChecklistV1`) so the two never collide. Has filters to hide
-already-checked items and/or HL-only content, plus a reset button.
-If a topic has no `CONTENT` entry yet, its statements simply don't
-appear here (same "not yet written" convention as the rest of the
-site) rather than showing a placeholder row.
+**`checklist.html` was removed in a later session** (see "Dashboard"
+below for why) — if you see references to it in an old summary or
+transcript, it no longer exists. Don't recreate it; the per-statement
+granularity it offered was explicitly judged too overwhelming by the
+user, in favour of the topic-level view described below.
 
 ## Mock exam (`mock.html`)
 
@@ -205,8 +197,8 @@ smaller/rebalanced mock, not copied from the real exam's actual
 durations.
 
 **Topic selection (the main feature the user wanted):** a checkbox
-grid of all 40 topics, grouped by unit like `checklist.html`, with
-"Select all" / "Clear all" shortcuts. Selecting SL disables (greys
+grid of all 40 topics, grouped by unit, with "Select all" / "Clear
+all" shortcuts. Selecting SL disables (greys
 out, doesn't just hide) the 7 `HL_ONLY_TOPICS`, since those topics
 aren't in the SL syllabus at all; switching back to HL re-enables
 them. A live availability note shows how many MCQs/Paper 2 marks
@@ -235,19 +227,161 @@ self-score each part; sliders sum live into the Paper 2 total shown in
 the results summary at the top of the page.
 
 **History:** every finished mock is saved to `localStorage` under
-`bioMockHistoryV1` (separate key from the progress tracker and
-checklist, same pattern) — date, level, topic count, and both scores.
-The Paper 2 score in a saved entry updates live as the student moves
-self-mark sliders after finishing, so the history reflects their final
-self-assessment, not just the MCQ score at the moment they clicked
-finish. Shown as a simple table on the setup screen when history
-exists. No cap beyond keeping the most recent 20 attempts.
+`bioMockHistoryV1` (separate key from the progress tracker, same
+pattern) — date, level, topic count, and both scores. The Paper 2
+score in a saved entry updates live as the student moves self-mark
+sliders after finishing, so the history reflects their final self-
+assessment, not just the MCQ score at the moment they clicked finish.
+Shown as a simple table on the setup screen when history exists. No
+cap beyond keeping the most recent 20 attempts.
 
 Tested end to end with Playwright: topic filtering, SL/HL switching
 and the resulting HL-only topic gating, the full answer → finish →
 review → self-mark → live score update loop, and a full site
 regression sweep (all 40 topic pages plus every reference page) — zero
 console errors throughout.
+
+## Quick practice, per-topic mock breakdown, and flashcard spaced
+   repetition
+
+Three smaller features added in the same session, all in response to
+one piece of user feedback: keep adding capability, but don't turn the
+header into a growing list of nav links for every new feature. All
+three live inside pages/flows that already existed.
+
+**Per-topic score breakdown on the mock results screen itself.** The
+dashboard (see below) already aggregated `topicStats` across mock
+history, but only showed the result later, on the homepage. This adds
+the same breakdown directly to the results screen the moment a mock is
+finished — `renderTopicBreakdown()` in `mock.html`, a simple sorted bar
+list (weakest first) reusing the same `topicStats`/`topicStatsMerged`
+data already being tracked. Recalculates live as Paper 2 self-mark
+sliders move, same as the overall score summary above it.
+
+**Quick practice mode**, reusing `mock.html` rather than becoming a
+new page: `mock.html?quick=1` (linked from a plain button next to
+"Quiz me on something" on `index.html`, no header link) skips the
+setup screen entirely, picks 10 random MCQs from every topic
+regardless of SL/HL restrictions, hides the timer bar and the entire
+Paper 2 section, and drops straight into the exam. `startMockExam()`
+now takes a `quickMode` boolean to branch between the two flows;
+`examState.quick` carries this through to `finishMockExam()` so the
+results screen also hides the Paper 2 review section. Quick attempts
+still save to `bioMockHistoryV1` (with `level: "Quick"`) and still
+feed the homepage dashboard's weak-topic detection, since the
+per-question performance data is just as real as a full mock's — the
+history list shows "quick practice" instead of a topic count for
+these entries so they're not confused with a filtered full mock.
+
+One CSS gotcha hit and fixed here worth remembering: toggling
+`.hidden` on an element that has its own `display: flex`/`block` rule
+doesn't work unless that rule is beaten by a `[hidden] { display:
+none }` override — equal-specificity, source-order-wins is why the
+timer bar kept showing in quick mode until `.mock-timer-bar[hidden]`
+was added. Check for this pattern before assuming `el.hidden = true`
+will "just work" on any element with its own explicit `display` rule.
+
+**Flashcard self-assessment / lightweight spaced repetition.**
+Flashcard mode for the word bank already existed (a simple flip-
+through, `buildWordbankPanel()` in `app.js`) from before this round of
+work. Extended it with two buttons under each card, "Still learning"
+and "Got it": clicking either persists a flag per term per topic to a
+new `bioFlashcardV1` localStorage key
+(`{ [topicCode]: { [term]: "again" | "known" } }`). Cards flagged
+"again" are moved a few slots ahead in the current session's deck
+(not immediately next — that felt tedious in testing — three slots
+ahead) so they resurface sooner without feeling repetitive, and on
+every future visit to flashcard mode for that topic, the whole deck is
+re-sorted "again" first, unflagged next, "known" last, so a session
+naturally opens with whatever the student struggled with previously.
+A small "N still learning" counter sits above the card. This is
+deliberately lightweight — not a full spaced-repetition scheduling
+algorithm (no actual dates/intervals), just enough reordering to make
+repeated practice sessions converge on what a student actually
+struggles with.
+
+Tested end to end: topic breakdown renders and updates live with
+slider changes; quick practice launches directly from the homepage
+button with the correct question count, no timer, no Paper 2 section,
+and correctly hides the Paper 2 review on its results screen; flag
+persistence and deck reordering confirmed by marking a card "still
+learning," leaving flashcard mode, and re-entering to see it resurface
+first. Full site regression swept afterward, zero console errors.
+
+## Dashboard (index.html) and the retirement of checklist.html
+
+Added in the session right after the mock exam build, in response to
+direct user feedback. Two changes, tightly linked:
+
+**`checklist.html` was removed.** It offered a tick-list at the level
+of individual syllabus statements (332 of them). The user found this
+too granular and overwhelming, and pointed out — correctly — that the
+site already had a topic-level checklist: the existing per-topic
+understanding tracker (`STORAGE_KEY = "bioProgressV1"`, the
+notstarted/learning/help/understood buttons on every topic card and
+topic page) already answers "have I covered this topic" at exactly
+the granularity the user wanted. Rather than maintaining two
+overlapping tracking systems, the statement-level one was deleted
+outright, along with every nav link to it. `bioChecklistV1` data (if
+any user had some saved) is simply orphaned in localStorage now —
+harmless, not read by anything, fine to ignore.
+
+**A new dashboard panel was added directly to `index.html`** (the
+user was explicit: not a new page, something visible on the main
+screen). It sits between the existing streak/quiz-me row and the
+existing summary bar, and does two things:
+
+1. Aggregates `topicStats` (see below) across every saved entry in
+   `bioMockHistoryV1` and shows the topics with the lowest accuracy —
+   real, measured performance from mock exams, not self-reported
+   status. Topics need at least `MIN_POINTS = 2` attempted marks/
+   questions before they're eligible, so a single lucky-or-unlucky
+   guess doesn't misrepresent a topic. Each weak topic links straight
+   to that topic page.
+2. A "Smart mock: drill these topics" button/link that jumps to
+   `mock.html?topics=<weak topic codes>&level=<most recent mock's
+   level>`, pre-filling (not auto-starting — the user still reviews
+   and clicks "Start mock exam" themselves) the setup screen with
+   exactly those topics.
+
+Empty states are handled explicitly: zero mock attempts ever → a
+prompt to take one; some attempts but no topic clears the
+`MIN_POINTS` threshold → a "keep going" message. Both link to
+`mock.html` with no pre-filled topics.
+
+**To make weak-topic detection possible, `mock.html` was extended to
+track per-topic performance, not just an overall score.** Every MCQ
+already carried a `.topic` field (used for selection); at grading
+time this is now also used to build a `topicStats` object
+(`{ code: { correct, total } }`, points-based — 1 point per MCQ, mark-
+weighted for Paper 2 parts) attached to the saved history entry.
+Paper 2 self-mark sliders now carry `data-topic` and `data-max-marks`
+attributes so `recomputeP2Score()` can rebuild the Paper 2 portion of
+`topicStats` from scratch on every slider move (sliders can move up
+and down after the fact, unlike locked-in MCQ answers, so this portion
+of the stats has to be recomputed each time rather than accumulated).
+The merged stats are written to `bioMockHistoryV1` both immediately on
+"Finish exam" (MCQ-only at that point) and again on every subsequent
+slider adjustment, so a student who finishes a mock but never touches
+the Paper 2 sliders still contributes valid (if partial) MCQ-only data
+to the dashboard.
+
+**`mock.html` also gained URL param support** (`?topics=A,B,C&level=SL`)
+specifically to support the dashboard's smart-mock link, but it's
+generic — any link built in that shape will pre-fill the setup screen
+the same way, which could be reused elsewhere later (e.g. a per-topic
+"practice this on a mock" link from a topic page, not built yet).
+Invalid or HL-only-at-SL codes in the param are silently dropped
+rather than erroring; if every requested code turns out invalid the
+page falls back to selecting all topics rather than showing an empty,
+confusing setup screen.
+
+Tested end to end: dashboard empty state, weak-topic ranking and
+sorting from real (deliberately-wrong-answer) mock data, the smart
+-mock link correctly pre-filling both topics and level on arrival,
+and a full site regression sweep confirming no `checklist.html`
+references remain anywhere and all 40 topic pages plus every other
+reference page still load cleanly. Zero console errors throughout.
 
 ## Progress tracking
 
@@ -434,8 +568,10 @@ sitting in the ideas list since the docx-import sessions.
 session:** a distinct "common mistakes" callout box type on topic
 pages (separate from the existing exam-tip box) for well-known IB
 gotchas at the content level, not just the command-term level; an
-HL/SL filter toggle on the homepage topic list itself (the checklist
-page and now the mock exam page both have one, the homepage doesn't).
+HL/SL filter toggle on the homepage topic list itself (the mock exam
+page has one, the homepage doesn't); a clean print/export view per
+topic (notes + word bank only,
+interactive elements stripped) for students who prefer paper.
 
 Open items carried over: the Miller-Urey diagram in Unit 1 is a
 German-labelled Wikimedia image (visually clear either way, but worth

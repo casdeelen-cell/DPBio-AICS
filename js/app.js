@@ -135,7 +135,10 @@ function enableTermTooltipTaps(root) {
 }
 
 /* Renders the word bank sidebar panel for a topic, with a toggle into
-   a simple flip-through flashcard mode. */
+   a flip-through flashcard mode that includes simple self-assessment
+   ("still learning" / "got it") for lightweight spaced repetition:
+   cards marked "still learning" resurface sooner, both within the
+   current session and the next time flashcard mode is opened. */
 function buildWordbankPanel(container, code) {
   const bank = (typeof WORDBANK !== "undefined" && WORDBANK[code]) || [];
   if (!bank.length) {
@@ -176,6 +179,17 @@ function buildWordbankPanel(container, code) {
   function renderFlashcards() {
     flashBtn.textContent = "Back to list";
     body.innerHTML = "";
+
+    const flags = loadFlashcardFlags(code); // { term: "again" | "known" }
+    // Stable sort: "again" cards first, then unflagged, then "known" last.
+    const rank = function (entry) {
+      const f = flags[entry.term];
+      return f === "again" ? 0 : f === "known" ? 2 : 1;
+    };
+    let deck = bank.map(function (entry, idx) { return { entry: entry, idx: idx }; });
+    deck.sort(function (a, b) { return rank(a.entry) - rank(b.entry) || a.idx - b.idx; });
+    deck = deck.map(function (d) { return d.entry; });
+
     let i = 0;
     let flipped = false;
 
@@ -186,9 +200,27 @@ function buildWordbankPanel(container, code) {
     counter.className = "flashcard-counter";
     wrap.appendChild(counter);
 
+    const stillLearningCount = document.createElement("div");
+    stillLearningCount.className = "flashcard-still-learning";
+    wrap.appendChild(stillLearningCount);
+
     const faceCard = document.createElement("div");
     faceCard.className = "flashcard";
     wrap.appendChild(faceCard);
+
+    const assessRow = document.createElement("div");
+    assessRow.className = "flashcard-assess-row";
+    const stillBtn = document.createElement("button");
+    stillBtn.type = "button";
+    stillBtn.className = "flashcard-assess-btn flashcard-assess-again";
+    stillBtn.textContent = "Still learning";
+    const knownBtn = document.createElement("button");
+    knownBtn.type = "button";
+    knownBtn.className = "flashcard-assess-btn flashcard-assess-known";
+    knownBtn.textContent = "Got it";
+    assessRow.appendChild(stillBtn);
+    assessRow.appendChild(knownBtn);
+    wrap.appendChild(assessRow);
 
     const nav = document.createElement("div");
     nav.className = "flashcard-nav";
@@ -202,11 +234,18 @@ function buildWordbankPanel(container, code) {
     nav.appendChild(nextBtn);
     wrap.appendChild(nav);
 
+    function updateStillLearningCount() {
+      const n = deck.filter(function (e) { return flags[e.term] === "again"; }).length;
+      stillLearningCount.textContent = n > 0 ? n + " still learning" : "";
+    }
+
     function render() {
-      const entry = bank[i];
-      counter.textContent = (i + 1) + " / " + bank.length;
+      const entry = deck[i];
+      counter.textContent = (i + 1) + " / " + deck.length;
       faceCard.textContent = flipped ? entry.definition : entry.term;
       faceCard.classList.toggle("flipped", flipped);
+      faceCard.classList.toggle("flashcard-flagged-again", flags[entry.term] === "again");
+      updateStillLearningCount();
     }
 
     faceCard.addEventListener("click", function () {
@@ -214,15 +253,34 @@ function buildWordbankPanel(container, code) {
       render();
     });
     prevBtn.addEventListener("click", function () {
-      i = (i - 1 + bank.length) % bank.length;
+      i = (i - 1 + deck.length) % deck.length;
       flipped = false;
       render();
     });
     nextBtn.addEventListener("click", function () {
-      i = (i + 1) % bank.length;
+      i = (i + 1) % deck.length;
       flipped = false;
       render();
     });
+
+    function assess(status) {
+      const entry = deck[i];
+      flags[entry.term] = status;
+      saveFlashcardFlags(code, flags);
+      if (status === "again" && deck.length > 1) {
+        // Move this card a few slots ahead so it resurfaces sooner
+        // this session, rather than immediately (which feels tedious).
+        deck.splice(i, 1);
+        const reinsertAt = Math.min(deck.length, i + 3);
+        deck.splice(reinsertAt, 0, entry);
+      } else {
+        i = (i + 1) % deck.length;
+      }
+      flipped = false;
+      render();
+    }
+    stillBtn.addEventListener("click", function () { assess("again"); });
+    knownBtn.addEventListener("click", function () { assess("known"); });
 
     render();
     body.appendChild(wrap);
@@ -237,6 +295,29 @@ function buildWordbankPanel(container, code) {
 
   renderList();
   container.appendChild(card);
+}
+
+/* ---------- flashcard self-assessment flags (spaced-repetition-lite) ---------- */
+
+const FLASHCARD_KEY = "bioFlashcardV1";
+
+function loadFlashcardFlags(code) {
+  try {
+    const all = JSON.parse(localStorage.getItem(FLASHCARD_KEY)) || {};
+    return all[code] || {};
+  } catch (e) {
+    return {};
+  }
+}
+
+function saveFlashcardFlags(code, flags) {
+  try {
+    const all = JSON.parse(localStorage.getItem(FLASHCARD_KEY)) || {};
+    all[code] = flags;
+    localStorage.setItem(FLASHCARD_KEY, JSON.stringify(all));
+  } catch (e) {
+    // storage unavailable, fail quietly
+  }
 }
 
 /* Renders the "did you know" sidebar card, if a fact exists for this topic. */

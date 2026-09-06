@@ -22,7 +22,6 @@
     <nav class="header-nav">
       <a href="terms.html" class="back-link">Command terms &rarr;</a>
       <a href="search.html" class="back-link">Search &rarr;</a>
-      <a href="checklist.html" class="back-link">Checklist &rarr;</a>
       <a href="formulas.html" class="back-link">Formulas &amp; stats &rarr;</a>
     </nav>
   </div>
@@ -62,6 +61,7 @@
           <button type="button" class="p2-nav-btn" id="select-none-btn">Clear all</button>
         </div>
       </div>
+      <p class="mock-prefill-note" id="prefill-note" hidden>Pre-filled with your weakest topics from past mock exams &mdash; adjust as you like, then start.</p>
       <div id="topic-picker-container"></div>
     </div>
 
@@ -104,12 +104,14 @@
   <div id="results-screen" hidden>
     <div class="mock-results-summary" id="results-summary"></div>
 
+    <div class="mock-topic-breakdown" id="topic-breakdown-container"></div>
+
     <div class="mock-paper-heading">
       <h2>Paper 1 review</h2>
     </div>
     <div id="mcq-review-container"></div>
 
-    <div class="mock-paper-heading">
+    <div class="mock-paper-heading" id="p2-review-heading">
       <h2>Paper 2 self-marking</h2>
       <p class="page-intro">Compare what you wrote against the guidance for each part, then drag the slider to record how many of the marks you think you earned.</p>
     </div>
@@ -262,10 +264,11 @@ function renderHistory() {
     const total = h.mcqTotal + h.p2Total;
     const scored = h.mcqScore + h.p2Score;
     const pct = total ? Math.round((scored / total) * 100) : 0;
+    const topicsLabel = h.level === "Quick" ? "quick practice" : (h.topicCount + " topic" + (h.topicCount === 1 ? "" : "s"));
     html += `<div class="mock-history-row">
       <span class="mock-history-date">${h.date}</span>
       <span class="mock-history-level">${h.level}</span>
-      <span class="mock-history-topics">${h.topicCount} topic${h.topicCount === 1 ? "" : "s"}</span>
+      <span class="mock-history-topics">${topicsLabel}</span>
       <span class="mock-history-score">${scored}/${total} (${pct}%)</span>
     </div>`;
   });
@@ -312,30 +315,42 @@ function pickP2Sets(topics, marksTarget) {
 
 /* ---------- exam rendering ---------- */
 
-function startMockExam() {
-  if (selectedTopics.size === 0) return;
-  const cfg = MOCK_CONFIG[currentLevel];
-  const topics = Array.from(selectedTopics);
-  const mcqs = pickMCQs(topics, cfg.mcqCount);
-  const p2Sets = pickP2Sets(topics, cfg.p2MarksTarget);
+function startMockExam(quickMode) {
+  if (!quickMode && selectedTopics.size === 0) return;
+  const isQuick = !!quickMode;
+  const topics = isQuick ? Object.keys(TOPIC_TITLES) : Array.from(selectedTopics);
+  const mcqCount = isQuick ? 10 : MOCK_CONFIG[currentLevel].mcqCount;
+  const p2Target = isQuick ? 0 : MOCK_CONFIG[currentLevel].p2MarksTarget;
+  const minutes = isQuick ? 0 : MOCK_CONFIG[currentLevel].minutes;
+
+  const mcqs = pickMCQs(topics, mcqCount);
+  const p2Sets = isQuick ? [] : pickP2Sets(topics, p2Target);
 
   examState = {
-    level: currentLevel,
+    level: isQuick ? "Quick" : currentLevel,
     topics: topics,
     mcqs: mcqs,
     p2Sets: p2Sets,
-    secondsRemaining: cfg.minutes * 60,
-    timerHandle: null
+    secondsRemaining: minutes * 60,
+    timerHandle: null,
+    quick: isQuick
   };
 
   document.getElementById("setup-screen").hidden = true;
   document.getElementById("exam-screen").hidden = false;
   document.getElementById("results-screen").hidden = true;
-  document.getElementById("exam-title").textContent = "Paper 1 \u2014 Multiple choice (" + currentLevel + ")";
+  document.getElementById("exam-title").textContent = isQuick
+    ? "Quick practice \u2014 10 random MCQs"
+    : "Paper 1 \u2014 Multiple choice (" + currentLevel + ")";
+
+  document.getElementById("timer-bar").hidden = isQuick;
+  document.querySelectorAll(".mock-paper-heading")[1].hidden = isQuick;
+  document.getElementById("p2exam-container").hidden = isQuick;
 
   renderExamMCQs();
-  renderExamP2();
-  startTimer();
+  if (!isQuick) renderExamP2();
+  else document.getElementById("p2exam-container").innerHTML = "";
+  if (!isQuick) startTimer();
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
@@ -437,16 +452,29 @@ function finishMockExam() {
 
   document.getElementById("exam-screen").hidden = true;
   document.getElementById("results-screen").hidden = false;
+  document.getElementById("p2-review-heading").hidden = !!examState.quick;
+  document.getElementById("p2-review-container").hidden = !!examState.quick;
 
-  // grade MCQs
+  // grade MCQs, tracking per-topic performance as we go
   let mcqScore = 0;
+  const topicStats = {}; // { code: { correct, total } }, "total" counted in points (1 per MCQ, marks per Paper 2 part)
+  function bumpTopic(code, correct, points) {
+    if (!topicStats[code]) topicStats[code] = { correct: 0, total: 0 };
+    topicStats[code].total += points;
+    if (correct) topicStats[code].correct += points;
+  }
+
   const mcqAnswers = examState.mcqs.map((q, i) => {
     const checked = document.querySelector(`input[name="mock-mcq-${i}"]:checked`);
     const chosen = checked ? parseInt(checked.value, 10) : null;
     const correct = chosen === q.correct;
     if (correct) mcqScore++;
+    bumpTopic(q.topic, correct, 1);
     return { chosen, correct };
   });
+
+  window._mockTopicStats = topicStats; // Paper 2 self-marks added to this as sliders move
+  window._mockTopicStatsMerged = JSON.parse(JSON.stringify(topicStats));
 
   renderMCQReview(mcqAnswers);
   renderP2Review();
@@ -454,9 +482,8 @@ function finishMockExam() {
   const p2Total = examState.p2Sets.reduce((sum, s) => sum + s.totalMarks, 0);
 
   renderResultsSummary(mcqScore, examState.mcqs.length, p2Total);
+  renderTopicBreakdown();
 
-  // store partial history now (mcq known, p2 self-score defaults to 0 until user adjusts sliders,
-  // update on slider change instead)
   window._mockMcqScore = mcqScore;
   window._mockMcqTotal = examState.mcqs.length;
   window._mockP2Total = p2Total;
@@ -486,10 +513,38 @@ function refreshResultsSummary() {
   const mcqTotal = window._mockMcqTotal || 0;
   const p2Total = window._mockP2Total || 0;
   renderResultsSummary(mcqScore, mcqTotal, p2Total);
+  renderTopicBreakdown();
   saveOrUpdateHistory();
 }
 
+function renderTopicBreakdown() {
+  const container = document.getElementById("topic-breakdown-container");
+  const stats = window._mockTopicStatsMerged || window._mockTopicStats || {};
+  const codes = Object.keys(stats).filter(c => stats[c].total > 0);
+  if (!codes.length) { container.innerHTML = ""; return; }
+
+  codes.sort((a, b) => (stats[a].correct / stats[a].total) - (stats[b].correct / stats[b].total));
+
+  let rows = "";
+  codes.forEach(code => {
+    const s = stats[code];
+    const pct = Math.round((s.correct / s.total) * 100);
+    let cls = "mock-topic-bar-good";
+    if (pct < 50) cls = "mock-topic-bar-weak";
+    else if (pct < 75) cls = "mock-topic-bar-mid";
+    rows += `
+      <a class="mock-topic-breakdown-row" href="topic.html?code=${code}">
+        <span class="mock-topic-breakdown-name">${code} &middot; ${topicTitle(code)}</span>
+        <span class="mock-topic-breakdown-bar-track"><span class="mock-topic-breakdown-bar ${cls}" style="width:${pct}%"></span></span>
+        <span class="mock-topic-breakdown-pct">${pct}%</span>
+      </a>`;
+  });
+
+  container.innerHTML = `<div class="mock-section-label">Score by topic</div>${rows}`;
+}
+
 function saveOrUpdateHistory() {
+  const topicStats = window._mockTopicStatsMerged || window._mockTopicStats || {};
   if (!window._mockHistoryId) {
     window._mockHistoryId = Date.now();
     saveHistoryEntry({
@@ -500,13 +555,15 @@ function saveOrUpdateHistory() {
       mcqScore: window._mockMcqScore,
       mcqTotal: window._mockMcqTotal,
       p2Score: window._mockP2Score,
-      p2Total: window._mockP2Total
+      p2Total: window._mockP2Total,
+      topicStats: topicStats
     });
   } else {
     const hist = loadHistory();
     const idx = hist.findIndex(h => h.id === window._mockHistoryId);
     if (idx !== -1) {
       hist[idx].p2Score = window._mockP2Score;
+      hist[idx].topicStats = topicStats;
       localStorage.setItem(HISTORY_KEY, JSON.stringify(hist));
     }
   }
@@ -590,6 +647,8 @@ function renderP2Review() {
       slider.value = 0;
       slider.step = 1;
       slider.className = "mock-self-mark-slider";
+      slider.dataset.topic = set.topic;
+      slider.dataset.maxMarks = part.marks;
       const sliderValue = document.createElement("span");
       sliderValue.className = "mock-self-mark-value";
       sliderValue.textContent = "0 / " + part.marks;
@@ -610,29 +669,100 @@ function renderP2Review() {
 
 function recomputeP2Score() {
   let sum = 0;
-  document.querySelectorAll(".mock-self-mark-slider").forEach(s => { sum += parseInt(s.value, 10) || 0; });
+  // Rebuild the Paper 2 portion of topicStats from scratch each time,
+  // since sliders can move up and down (unlike MCQ answers, which are locked in).
+  const p2TopicPoints = {}; // { code: { correct, total } }
+  document.querySelectorAll(".mock-self-mark-slider").forEach(s => {
+    const val = parseInt(s.value, 10) || 0;
+    const max = parseInt(s.dataset.maxMarks, 10) || 0;
+    const topic = s.dataset.topic;
+    sum += val;
+    if (!p2TopicPoints[topic]) p2TopicPoints[topic] = { correct: 0, total: 0 };
+    p2TopicPoints[topic].correct += val;
+    p2TopicPoints[topic].total += max;
+  });
   window._mockP2Score = sum;
+
+  // merge MCQ-only stats (captured once at finish time) with the live Paper 2 stats
+  const merged = {};
+  const mcqStats = window._mockTopicStats || {};
+  Object.keys(mcqStats).forEach(code => {
+    merged[code] = { correct: mcqStats[code].correct, total: mcqStats[code].total };
+  });
+  Object.keys(p2TopicPoints).forEach(code => {
+    if (!merged[code]) merged[code] = { correct: 0, total: 0 };
+    merged[code].correct += p2TopicPoints[code].correct;
+    merged[code].total += p2TopicPoints[code].total;
+  });
+  window._mockTopicStatsMerged = merged;
+
   refreshResultsSummary();
 }
 
 function newMockExam() {
   examState = null;
   window._mockHistoryId = null;
+  window._mockTopicStats = null;
+  window._mockTopicStatsMerged = null;
   document.getElementById("results-screen").hidden = true;
   document.getElementById("exam-screen").hidden = true;
   document.getElementById("setup-screen").hidden = false;
+  document.getElementById("timer-bar").hidden = false;
+  document.querySelectorAll(".mock-paper-heading")[1].hidden = false;
+  document.getElementById("p2exam-container").hidden = false;
+  document.getElementById("p2-review-heading").hidden = false;
+  document.getElementById("p2-review-container").hidden = false;
   renderHistory();
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-document.getElementById("start-mock-btn").addEventListener("click", startMockExam);
+document.getElementById("start-mock-btn").addEventListener("click", function () { startMockExam(false); });
 document.getElementById("finish-mock-btn").addEventListener("click", finishMockExam);
 document.getElementById("new-mock-btn").addEventListener("click", newMockExam);
 
 /* ---------- init ---------- */
 
-selectAllTopics();
+function applyUrlParams() {
+  const params = new URLSearchParams(window.location.search);
+  const topicsParam = params.get("topics");
+  const levelParam = params.get("level");
+
+  if (levelParam === "SL" || levelParam === "HL") {
+    currentLevel = levelParam;
+    document.querySelector(`input[name="mock-level"][value="${levelParam}"]`).checked = true;
+  }
+
+  if (topicsParam) {
+    const requested = topicsParam.split(",").map(s => s.trim()).filter(Boolean);
+    selectedTopics.clear();
+    requested.forEach(code => {
+      if (TOPIC_TITLES[code] && !(isHLTopic(code) && currentLevel === "SL")) {
+        selectedTopics.add(code);
+      }
+    });
+    if (selectedTopics.size === 0) {
+      selectAllTopics(); // fallback if params were junk
+    } else {
+      document.getElementById("prefill-note").hidden = false;
+    }
+  } else {
+    selectAllTopics();
+  }
+}
+
+applyUrlParams();
+renderTopicPicker();
+updateAvailabilityNote();
 renderHistory();
+
+if (new URLSearchParams(window.location.search).get("topics")) {
+  document.querySelector(".mock-topic-picker").scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+if (new URLSearchParams(window.location.search).get("quick") === "1") {
+  startMockExam(true);
+}
+
 
 </script>
 </body>

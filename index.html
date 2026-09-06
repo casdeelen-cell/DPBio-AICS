@@ -23,7 +23,6 @@
       <a href="terms.html" class="back-link">Command terms &rarr;</a>
       <a href="search.html" class="back-link">Search &rarr;</a>
       <a href="mock.html" class="back-link">Mock exam &rarr;</a>
-      <a href="checklist.html" class="back-link">Checklist &rarr;</a>
       <a href="formulas.html" class="back-link">Formulas &amp; stats &rarr;</a>
     </nav>
   </div>
@@ -34,8 +33,11 @@
   <div class="top-actions-row">
     <div class="streak-chip" id="streak-chip"></div>
     <a href="#" class="continue-chip" id="continue-chip" style="display:none;"></a>
+    <a href="mock.html?quick=1" class="quick-practice-btn">Quick practice (10 MCQs)</a>
     <button type="button" class="spin-btn" id="spin-btn">Quiz me on something</button>
   </div>
+
+  <div class="dashboard-panel" id="dashboard-panel"></div>
 
   <div class="needs-help-panel" id="needs-help-panel"></div>
 
@@ -59,6 +61,84 @@
 <script src="js/wordbank.js"></script>
 <script src="js/app.js"></script>
 <script>
+
+function loadMockHistory() {
+  try { return JSON.parse(localStorage.getItem("bioMockHistoryV1")) || []; } catch (e) { return []; }
+}
+
+/* Aggregates topicStats across every saved mock exam attempt, then
+   returns the topics with the lowest overall accuracy. Topics with
+   too few attempted points (less than MIN_POINTS) are excluded, since
+   getting 0/1 right on a single question isn't a meaningful signal. */
+function computeWeakTopics(maxCount) {
+  const MIN_POINTS = 2;
+  const history = loadMockHistory();
+  const totals = {}; // { code: { correct, total } }
+  history.forEach(entry => {
+    const stats = entry.topicStats || {};
+    Object.keys(stats).forEach(code => {
+      if (!totals[code]) totals[code] = { correct: 0, total: 0 };
+      totals[code].correct += stats[code].correct;
+      totals[code].total += stats[code].total;
+    });
+  });
+  const ranked = Object.keys(totals)
+    .filter(code => totals[code].total >= MIN_POINTS)
+    .map(code => ({ code: code, accuracy: totals[code].correct / totals[code].total, ...totals[code] }))
+    .sort((a, b) => a.accuracy - b.accuracy);
+  return { ranked: ranked.slice(0, maxCount), attemptCount: history.length };
+}
+
+function mostRecentMockLevel() {
+  const history = loadMockHistory();
+  return (history[0] && history[0].level) || "SL";
+}
+
+function renderDashboard() {
+  const panel = document.getElementById("dashboard-panel");
+  const { ranked, attemptCount } = computeWeakTopics(5);
+
+  if (attemptCount === 0) {
+    panel.innerHTML = `
+      <div class="dashboard-empty">
+        <div class="dashboard-empty-text">Take a mock exam to see your weak spots show up here, with a one-click way to drill just those topics.</div>
+        <a href="mock.html" class="dashboard-cta">Take a mock exam &rarr;</a>
+      </div>
+    `;
+    return;
+  }
+
+  if (!ranked.length) {
+    panel.innerHTML = `
+      <div class="dashboard-empty">
+        <div class="dashboard-empty-text">Not enough mock exam data yet to identify weak spots (each topic needs at least a couple of attempted questions). Keep taking mocks and this will fill in.</div>
+        <a href="mock.html" class="dashboard-cta">Take another mock exam &rarr;</a>
+      </div>
+    `;
+    return;
+  }
+
+  const level = mostRecentMockLevel();
+  const topicParam = ranked.map(r => r.code).join(",");
+
+  let rows = "";
+  ranked.forEach(r => {
+    const pct = Math.round(r.accuracy * 100);
+    rows += `
+      <a class="dashboard-weak-row" href="topic.html?code=${r.code}">
+        <span class="dashboard-weak-topic">${r.code} &middot; ${topicTitle(r.code)}</span>
+        <span class="dashboard-weak-pct">${pct}%</span>
+      </a>`;
+  });
+
+  panel.innerHTML = `
+    <div class="dashboard-header">
+      <div class="dashboard-title">Your weak spots, from ${attemptCount} mock exam${attemptCount === 1 ? "" : "s"}</div>
+      <a href="mock.html?topics=${encodeURIComponent(topicParam)}&level=${level}" class="dashboard-cta">Smart mock: drill these topics &rarr;</a>
+    </div>
+    <div class="dashboard-weak-list">${rows}</div>
+  `;
+}
 
 function renderSummary() {
   const bar = document.getElementById("summary-bar");
@@ -192,6 +272,7 @@ function renderNeedsHelp() {
 
 renderStreak();
 renderContinueChip();
+renderDashboard();
 renderNeedsHelp();
 renderSummary();
 renderUnits();
