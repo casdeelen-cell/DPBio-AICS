@@ -10,6 +10,77 @@ A personal DP Biology revision site, hosted on GitHub Pages, built as a
 plain HTML/CSS/JS static site (no build step, no framework). One page per
 topic (`topic.html?code=X`), driven by data files in `/js`.
 
+## CRITICAL: source material policy for questionbank.js and paper2.js
+
+**Read this before touching either file.** For a long stretch of this
+project's history, `questionbank.js` and `paper2.js` were built by
+adapting/paraphrasing real questions from IB Questionbank docx/PDF
+exports the user had access to (see the old changelog entries further
+down for that whole saga — everything_4 through everything_17). That
+approach was retired **for exam-security reasons**, not just
+copyright: the user learned that the specific Questionbank export
+being used is a source pool that gets drawn from to write official IB
+exams. A paraphrased-but-structurally-identical question is too close
+to that source for comfort, in a way plain copyright paraphrasing
+rules don't fully capture.
+
+**Every question in both files has since been rewritten from scratch,
+with no reference back to the old adapted content or any exam-prep
+source.** Going forward:
+
+- **Never adapt, paraphrase, or "reword" a question from any external
+  IB exam-prep source, official or otherwise** — Questionbank exports,
+  past papers, revision guides, anything. If the user ever shares
+  another such source, treat it the same way as before: fine to use as
+  general "intel" on what topics/command terms/difficulty typically
+  look like, never as a starting point to reword from.
+- **Write new questions directly from syllabus knowledge.** By this
+  point in the project, the syllabus content for every topic has been
+  written and rewritten many times over (see `content.js` and the unit
+  summaries below) — that's the actual source new questions should
+  come from, not any external question bank.
+- **Make new questions genuinely different in surface detail from
+  whatever might already be "out there"**: different named organisms,
+  different specific numbers, different experimental setups, different
+  distractor wording — while keeping the same underlying concept,
+  difficulty, and IB-style command-term phrasing.
+- This same policy applies to any future full or partial rewrite of
+  either file — check this section is still accurate before assuming
+  the "adapt from a source doc" workflow described further down is
+  still the right approach; as of the session that added this note, it
+  isn't, for these two files specifically. The workflow notes lower in
+  this document describing the docx-import process are kept as
+  historical record of how the (now-replaced) content originally got
+  there, not as instructions to repeat.
+
+**Status: the full rewrite is complete.** As of the session that
+finished it, **every single topic across all 4 units (all 40 topics)
+has been fully replaced** — every MCQ and every Paper 2 set on the
+entire site is now original content, written from scratch, with zero
+remaining questions adapted from the old Questionbank source. This was
+done in two sessions: Unit 1 (14 topics) first, then Units 2–4 (26
+topics: B2.3, D2.2, D1.3, D3.1, D3.2, A3.1, B4.1, D4.1, A4.1, B4.2,
+A3.2, D4.2, D4.3, C4.1, C4.2, A4.2, B2.1, D3.3, C3.1, B3.3, B3.1, B3.2,
+C2.2, C2.1, C3.2, A2.3) in a follow-up session. There is no longer any
+topic on the site still carrying the old, compromised content — the
+whole site is safe to treat as fully resolved on this front.
+
+**Before/after volumes:** `questionbank.js` went from 812 questions
+(adapted from Questionbank) to 154 questions (100% original) across
+all 40 topics. `paper2.js` went from 128 sets (adapted) to 40 sets
+(100% original) across all 40 topics. This is a significant volume
+drop, and it was a deliberate trade-off, not an oversight: the
+priority across both rewrite sessions was getting every trace of the
+compromised content off the site as quickly as possible, not matching
+the old per-topic question counts. Every topic still has a real,
+usable set of practice questions (at least 1 MCQ set and 1 Paper 2 set
+per topic, most topics have 3-8 MCQs), but building the volume back up
+closer to where it was before is a legitimate, worthwhile thing to do
+in a future session — always as new original writing from syllabus
+knowledge, per the policy above, never by reaching back into the old
+adapted content (which should be considered gone, not a reference
+source) for "inspiration."
+
 ## Content rules — read this before writing any topic's notes
 
 1. **Never write notes from general knowledge alone.** Before writing a
