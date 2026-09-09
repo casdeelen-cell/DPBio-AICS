@@ -530,7 +530,7 @@ function buildQuestionBank(container, code) {
   }
   const attribution = document.createElement("div");
   attribution.className = "qb-attribution";
-  attribution.textContent = "Adapted from IB Questionbank";
+  attribution.textContent = "Original practice questions";
   container.appendChild(attribution);
 
   const quizArea = document.createElement("div");
@@ -554,7 +554,7 @@ function buildPaper2(container, code) {
 
   const attribution = document.createElement("div");
   attribution.className = "qb-attribution";
-  attribution.textContent = "Adapted from IB Paper 1B / Paper 2 style questions";
+  attribution.textContent = "Original Paper 2 style questions";
   container.appendChild(attribution);
 
   let index = 0;

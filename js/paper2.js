@@ -15,11 +15,6 @@
   Each topic maps to an array of question SETS. A set has:
   - context: a short scenario/intro shared by all parts (can be "")
   - parts: an array of { label, prompt, marks, guidance }
-    - label: "a", "b", "c"... matching typical exam sub-part lettering
-    - prompt: the command-term question text for that part
-    - marks: the mark allocation for that part
-    - guidance: a teaching-style explanation of what a strong answer
-      covers (not a mark scheme, written in the site's own voice)
 
   PAPER2["A1.1"] = [
     { context: "...", parts: [ { label: "a", prompt: "...", marks: 4, guidance: "..." } ] }
@@ -43,6 +38,23 @@ const PAPER2 = {
           prompt: "Explain how the high specific heat capacity of water helps desert animals cope with large daily temperature swings.",
           marks: 3,
           guidance: "Water requires a comparatively large amount of thermal energy to change its temperature, due to the extensive hydrogen bonding between its molecules; because a large proportion of an animal's body is water, this property helps buffer the animal's internal temperature against the sometimes extreme swings between hot desert days and cold desert nights, preventing body temperature from changing as rapidly as the surrounding air does."
+        }
+      ]
+    },
+    {
+      context: "Antarctic icefish survive in sub-zero ocean water thanks to natural antifreeze glycoproteins circulating in their blood, which prevent ice crystals from forming within their tissues.",
+      parts: [
+        {
+          label: "a",
+          prompt: "Outline how hydrogen bonding between water molecules contributes to the formation of ice crystals at low temperatures.",
+          marks: 3,
+          guidance: "As water cools, the kinetic energy of its molecules decreases, allowing hydrogen bonds between neighbouring molecules to persist for longer rather than constantly breaking and reforming as they do in liquid water; below freezing point, these hydrogen bonds organise water molecules into a fixed, repeating lattice structure, which is the ice crystal, holding the molecules further apart on average than in the liquid state."
+        },
+        {
+          label: "b",
+          prompt: "Suggest how an antifreeze glycoprotein might prevent ice crystals from forming or growing within the icefish's blood.",
+          marks: 2,
+          guidance: "Antifreeze glycoproteins likely bind to the surface of any tiny ice crystals that begin to form, physically blocking additional water molecules from joining the growing crystal lattice; by interfering with this process, the protein prevents small ice crystals from growing into larger, tissue-damaging structures, even though the surrounding water remains at a temperature that would otherwise cause freezing."
         }
       ]
     }
@@ -85,6 +97,23 @@ const PAPER2 = {
           guidance: "Starch is a suitable example; unlike cellulose, starch is built from alpha-glucose monomers, and its chains are typically coiled or branched rather than straight, making it more compact and better suited to energy storage rather than the structural role played by cellulose."
         }
       ]
+    },
+    {
+      context: "Camels store large fat deposits in their humps rather than distributing fat evenly across their body, an adaptation long assumed to be primarily about energy storage for their desert environment.",
+      parts: [
+        {
+          label: "a",
+          prompt: "Outline why lipids are particularly well suited to long-term energy storage compared with carbohydrates.",
+          marks: 3,
+          guidance: "Lipids contain a higher proportion of energy-rich carbon-hydrogen bonds relative to oxygen than carbohydrates, meaning more energy can be released per gram when oxidised during respiration; lipids are also non-polar and insoluble in water, so they can be stored compactly without affecting a cell's water potential the way an equivalent mass of stored soluble carbohydrate would."
+        },
+        {
+          label: "b",
+          prompt: "Suggest an additional advantage, beyond energy storage, that concentrating fat in a hump rather than distributing it evenly might provide a camel living in a hot desert.",
+          marks: 2,
+          guidance: "Concentrating fat in one location, rather than as an insulating layer spread across the whole body, may help the camel avoid the additional insulation that a more evenly distributed fat layer would provide; since insulation would trap metabolic heat and make it harder to lose heat to the environment, keeping fat concentrated in the hump could help the rest of the body more effectively release excess heat in hot desert conditions."
+        }
+      ]
     }
   ],
 
@@ -103,6 +132,23 @@ const PAPER2 = {
           prompt: "Suggest why using an inhibitor to slow enzyme activity might be preferable to simply heating the beverage to denature the enzyme completely.",
           marks: 2,
           guidance: "Heating a beverage to denature its enzymes could also negatively affect its flavour, aroma, or other delicate compounds, and may not be practical or desirable for a product like wine that is meant to be consumed largely unprocessed; a targeted inhibitor can reduce unwanted enzyme activity (like browning) while leaving other aspects of the beverage's chemistry and sensory qualities largely unaffected."
+        }
+      ]
+    },
+    {
+      context: "Industrial biotechnology companies often use enzymes extracted from thermophilic bacteria, which naturally live in extremely hot environments such as hot springs, for high-temperature manufacturing processes.",
+      parts: [
+        {
+          label: "a",
+          prompt: "Explain why an enzyme extracted from a thermophilic bacterium would be expected to remain active at temperatures that would denature most other enzymes.",
+          marks: 4,
+          guidance: "Enzymes from thermophilic organisms have evolved additional stabilising bonds and interactions (such as extra ionic bonds, disulfide bridges, or more tightly packed hydrophobic cores) within their tertiary structure, allowing them to maintain their functional shape at much higher temperatures than typical enzymes; this structural resilience means their optimum temperature, and the point at which they begin to denature, is shifted considerably higher than for enzymes from organisms living in more moderate environments."
+        },
+        {
+          label: "b",
+          prompt: "Suggest one advantage to a biotechnology company of using a heat-stable enzyme in an industrial process, compared with a typical enzyme.",
+          marks: 2,
+          guidance: "A heat-stable enzyme can be used at higher process temperatures without denaturing, which can increase reaction rates and reduce the risk of microbial contamination in the reaction vessel (since fewer other organisms can survive at such high temperatures), potentially making the industrial process both faster and easier to keep sterile."
         }
       ]
     }
@@ -165,6 +211,23 @@ const PAPER2 = {
           guidance: "Donor stem cells must divide repeatedly by mitosis to produce enough new blood cells to repopulate the patient's blood supply; because mitosis produces genetically identical daughter cells, each new cell retains the full, correct genetic instructions needed to develop into a functioning blood cell. Errors during mitosis (such as incomplete or uneven chromosome distribution) could produce faulty daughter cells incapable of functioning correctly, undermining the whole purpose of the transplant."
         }
       ]
+    },
+    {
+      context: "Skin wound healing depends on rapid, controlled cell division at the wound site to replace damaged tissue, a process that can go wrong if cell division becomes uncontrolled.",
+      parts: [
+        {
+          label: "a",
+          prompt: "Outline the main stages of the cell cycle, in order.",
+          marks: 3,
+          guidance: "The cell cycle consists of interphase (itself divided into G1, where the cell grows and carries out normal functions; S phase, where DNA is replicated; and G2, where the cell prepares for division), followed by mitosis (nuclear division, producing two genetically identical nuclei) and cytokinesis (division of the cytoplasm, producing two separate daughter cells)."
+        },
+        {
+          label: "b",
+          prompt: "Explain how a fault in the control of the cell cycle could lead to the formation of a tumour at a wound site.",
+          marks: 4,
+          guidance: "The cell cycle is normally regulated by checkpoints that ensure cells only divide when appropriate conditions are met and any DNA damage has been repaired; if mutations disable these checkpoints (for example, in genes that would normally halt division in response to DNA damage), cells can continue dividing uncontrollably even when they shouldn't, potentially forming a mass of abnormally dividing cells (a tumour) at the site rather than the controlled, appropriate cell division needed for normal wound repair."
+        }
+      ]
     }
   ],
 
@@ -183,6 +246,23 @@ const PAPER2 = {
           prompt: "Suggest how the specific combination of secondary and tertiary structure in spider silk protein could account for both its strength and its elasticity.",
           marks: 3,
           guidance: "Regions of extensive beta-pleated sheet (secondary structure), held together by many hydrogen bonds, likely contribute to silk's high tensile strength, resisting being pulled apart; alongside these strong, ordered regions, more flexible, less ordered sections of the protein's tertiary structure could allow some stretching and recoil, contributing to elasticity. This combination of rigid, strong regions and flexible, stretchable regions within the same protein could explain how silk achieves both properties simultaneously."
+        }
+      ]
+    },
+    {
+      context: "Sickle cell disease is caused by a single amino acid substitution in the beta-globin chain of haemoglobin, illustrating how a very small change at the primary structure level can have dramatic consequences for protein function.",
+      parts: [
+        {
+          label: "a",
+          prompt: "Outline how a single base substitution in DNA could lead to the amino acid substitution responsible for sickle cell haemoglobin.",
+          marks: 3,
+          guidance: "A substitution mutation changes a single base within the DNA triplet coding for one particular amino acid position in the beta-globin chain; because this changes the corresponding mRNA codon, the ribosome delivers a different amino acid to that position during translation than would normally be inserted, resulting in a beta-globin protein with one amino acid substituted for another compared with the normal sequence."
+        },
+        {
+          label: "b",
+          prompt: "Explain how this single amino acid change can affect the overall structure and function of the haemoglobin molecule.",
+          marks: 4,
+          guidance: "The substituted amino acid has different chemical properties from the one it replaces, altering the local folding pattern of the beta-globin chain and, in low-oxygen conditions, causing haemoglobin molecules to stick together and form long, rigid fibres; this distorts red blood cells into a rigid, sickle shape rather than their normal flexible disc shape, impairing their ability to carry oxygen efficiently and to pass smoothly through narrow capillaries, illustrating how a change at the level of primary structure can disrupt tertiary and quaternary structure and, ultimately, whole-organism function."
         }
       ]
     }
@@ -225,6 +305,23 @@ const PAPER2 = {
           guidance: "Because the genetic code is degenerate, several different codons can specify the same amino acid; if a substitution mutation changes a codon into a different codon that still happens to code for the identical amino acid, this is called a silent mutation, and the resulting protein sequence remains completely unchanged despite the underlying change in the DNA sequence."
         }
       ]
+    },
+    {
+      context: "Cystic fibrosis is caused by mutations affecting a specific membrane transport protein, and understanding how the corresponding gene is expressed is central to explaining the disease's symptoms.",
+      parts: [
+        {
+          label: "a",
+          prompt: "Outline the process by which a gene's information is used to produce a protein.",
+          marks: 4,
+          guidance: "The gene's DNA sequence is first transcribed into a complementary mRNA molecule within the nucleus, using RNA polymerase and complementary base pairing against the DNA template strand; this mRNA is then processed (in eukaryotes, including splicing to remove introns) and exported to the cytoplasm, where it is translated at a ribosome, with tRNA molecules delivering amino acids in the order specified by the mRNA's codon sequence, ultimately producing the specific polypeptide chain that gene encodes."
+        },
+        {
+          label: "b",
+          prompt: "Suggest how a mutation affecting the gene coding for this membrane transport protein could ultimately affect the properties of mucus produced in the lungs of a person with cystic fibrosis.",
+          marks: 3,
+          guidance: "If the mutation disrupts the structure or function of the resulting transport protein, this could impair the normal movement of chloride ions (and, indirectly, water) across the membrane of cells lining the airways; this altered ion and water balance can result in the production of unusually thick, sticky mucus, which is more difficult to clear from the lungs and airways than normal, contributing to the respiratory symptoms characteristic of cystic fibrosis."
+        }
+      ]
     }
   ],
 
@@ -243,6 +340,23 @@ const PAPER2 = {
           prompt: "Explain why a light microscope is generally insufficient to observe the internal organelles of either cell type in fine detail, and how an electron microscope overcomes this limitation.",
           marks: 4,
           guidance: "Resolution (the ability to distinguish two close points as separate) is limited by the wavelength of the radiation used to form an image; visible light has a relatively long wavelength compared with the very small size of internal cell structures like ribosomes or the internal membranes of chloroplasts, limiting how much fine detail a light microscope can resolve regardless of magnification. Electron microscopes use a beam of electrons, which have a much shorter wavelength than visible light, achieving far higher resolution and revealing structural detail that light microscopy cannot, at the cost of usually requiring the sample to be non-living and placed in a vacuum."
+        }
+      ]
+    },
+    {
+      context: "A newly discovered single-celled marine organism is examined under both a light microscope and an electron microscope, revealing very different levels of structural detail.",
+      parts: [
+        {
+          label: "a",
+          prompt: "Distinguish between magnification and resolution.",
+          marks: 2,
+          guidance: "Magnification refers to how much larger an image appears compared with the actual size of the object being viewed; resolution refers to the ability to distinguish two objects (or two points) that are very close together as separate, rather than blurring into one. An image can be highly magnified but still have poor resolution if fine detail cannot be distinguished."
+        },
+        {
+          label: "b",
+          prompt: "Explain why an electron microscope can reveal much finer detail of this organism's internal structure than a light microscope, even at the same magnification.",
+          marks: 4,
+          guidance: "Resolution is fundamentally limited by the wavelength of the radiation used to form an image; visible light has a relatively long wavelength compared with the very small internal structures of a cell, limiting how much detail a light microscope can resolve no matter how much the image is magnified further. Electron microscopes use a beam of electrons, which have a much shorter wavelength than visible light, allowing far higher resolution and revealing structural detail (such as the internal membranes of organelles) that light microscopy simply cannot distinguish, regardless of magnification."
         }
       ]
     }
@@ -285,6 +399,23 @@ const PAPER2 = {
           guidance: "As yeast cells within the dough consume the surrounding sugar, they initially have some access to oxygen trapped within the dough and respire aerobically; but as this oxygen is used up, and diffusion of new oxygen into the dense dough is limited, the yeast increasingly shifts toward anaerobic respiration. The carbon dioxide gas produced by this anaerobic respiration becomes trapped within the dough's elastic gluten network, forming bubbles that cause the dough to expand and rise over time."
         }
       ]
+    },
+    {
+      context: "Certain poisons, such as cyanide, are known to be lethal specifically because they block a key step in aerobic respiration, causing rapid cell death throughout the body.",
+      parts: [
+        {
+          label: "a",
+          prompt: "Outline the role of oxygen in aerobic respiration.",
+          marks: 2,
+          guidance: "Oxygen acts as the final electron acceptor at the end of the electron transport chain, combining with electrons that have passed along the chain and with hydrogen ions to form water; this final step is essential for keeping the electron transport chain running, which in turn drives the chemiosmotic production of the vast majority of a cell's ATP during aerobic respiration."
+        },
+        {
+          label: "b",
+          prompt: "Explain why blocking the final step of the electron transport chain, as cyanide does, is so rapidly lethal to cells throughout the body.",
+          marks: 5,
+          guidance: "If oxygen (or the enzyme that allows it to accept electrons) is blocked, electrons can no longer be passed to the end of the electron transport chain; this causes the whole chain to back up and stop functioning, since each carrier protein needs to pass its electrons onward to continue accepting more. Without a functioning electron transport chain, the proton gradient needed to drive ATP synthase collapses, and cells rapidly lose their ability to produce ATP via aerobic respiration; because most cells (especially highly active ones like heart and brain cells) depend heavily on this ATP supply for their basic functioning, this disruption can cause rapid, widespread cell dysfunction and death throughout the body."
+        }
+      ]
     }
   ],
 
@@ -303,6 +434,23 @@ const PAPER2 = {
           prompt: "Outline how the light-dependent reactions convert light energy into a form usable by the light-independent reactions (Calvin cycle).",
           marks: 4,
           guidance: "Light energy absorbed by chlorophyll excites electrons, which pass along an electron transport chain, releasing energy used to pump hydrogen ions across the thylakoid membrane and build up a concentration gradient; this gradient drives ATP synthase, producing ATP. Some of these energised electrons are also used, together with hydrogen ions, to reduce NADP to NADPH. Both ATP and NADPH produced this way are then used in the Calvin cycle to convert fixed carbon dioxide into organic sugars."
+        }
+      ]
+    },
+    {
+      context: "Farmers growing crops in greenhouses sometimes artificially raise CO2 concentration and use supplementary lighting to boost yields, but must carefully balance several environmental factors together to avoid wasting resources.",
+      parts: [
+        {
+          label: "a",
+          prompt: "Explain the concept of a limiting factor in the context of photosynthesis.",
+          marks: 2,
+          guidance: "A limiting factor is whichever environmental variable (such as light intensity, CO2 concentration, or temperature) is, at a given moment, present in the lowest relative supply compared with what the plant could otherwise use; the rate of photosynthesis is constrained by this factor specifically, and increasing any other factor will not increase the rate further until the limiting factor itself is increased."
+        },
+        {
+          label: "b",
+          prompt: "Suggest why simply maximising all three factors (light, CO2, and temperature) simultaneously might not be the most cost-effective strategy for a commercial greenhouse.",
+          marks: 4,
+          guidance: "Increasing light intensity, CO2 concentration, and temperature all typically involve real costs (electricity for lighting, purchasing and distributing CO2 gas, and heating); because only one factor is ever truly limiting at a given moment, increasing factors that are not currently limiting wastes resources without producing any corresponding increase in photosynthetic rate or yield. A more cost-effective strategy would involve monitoring which factor is actually limiting under current conditions and directing resources specifically toward addressing that limiting factor, rather than maximising every variable at once regardless of whether doing so is currently useful."
         }
       ]
     }
@@ -365,6 +513,23 @@ const PAPER2 = {
           guidance: "Suitable strategies include planting a proportion of non-modified 'refuge' crops nearby, allowing susceptible insects to survive and interbreed with any resistant ones (diluting the resistance allele's spread), or rotating between crops using different insecticidal mechanisms so that resistance to any one mechanism doesn't provide a lasting survival advantage."
         }
       ]
+    },
+    {
+      context: "Certain workplaces, such as nuclear facilities and X-ray departments, require strict radiation safety protocols to protect workers from an elevated risk of mutation-related illness.",
+      parts: [
+        {
+          label: "a",
+          prompt: "Outline how ionising radiation can cause mutations in DNA.",
+          marks: 3,
+          guidance: "Ionising radiation carries enough energy to knock electrons out of atoms and molecules it passes through, including DNA; this can directly break chemical bonds within the DNA strand, or generate highly reactive free radicals nearby that go on to chemically damage DNA bases or the sugar-phosphate backbone, potentially causing base changes, breaks in the DNA strand, or other structural damage that leads to mutation if not correctly repaired."
+        },
+        {
+          label: "b",
+          prompt: "Explain why cells that divide frequently (such as bone marrow cells) are often more severely affected by radiation exposure than slowly-dividing cells (such as muscle cells).",
+          marks: 4,
+          guidance: "Rapidly dividing cells spend proportionally more time in S phase, replicating their DNA, and in mitosis, both processes during which DNA is especially vulnerable to damage and where existing damage is more likely to be copied and passed on to daughter cells before repair mechanisms can act; additionally, any mutations that do occur in frequently dividing cells are propagated to a larger number of descendant cells more quickly than in slowly-dividing tissue, compounding the potential harm from a given level of radiation exposure."
+        }
+      ]
     }
   ],
 
@@ -385,6 +550,23 @@ const PAPER2 = {
           guidance: "Administering higher-than-natural doses of FSH overrides the normal negative feedback mechanism that would otherwise limit follicle development to just one or two per cycle, stimulating multiple follicles to mature simultaneously; this increases the number of eggs available for collection and fertilization, improving the overall chances of successful IVF, since not every fertilized egg will necessarily develop into a viable embryo."
         }
       ]
+    },
+    {
+      context: "A couple struggling to conceive naturally undergoes fertility testing, which reveals the male partner has a very low sperm count, prompting doctors to investigate possible causes within the process of spermatogenesis.",
+      parts: [
+        {
+          label: "a",
+          prompt: "Outline the process of spermatogenesis, from germline stem cell to mature sperm.",
+          marks: 4,
+          guidance: "Germline stem cells (spermatogonia) divide by mitosis to produce primary spermatocytes; each primary spermatocyte undergoes the first meiotic division to form two secondary spermatocytes, which then undergo the second meiotic division to form four haploid spermatids. These spermatids then undergo further differentiation (developing a tail, condensing their nucleus, and losing most of their cytoplasm) to become mature, motile sperm cells."
+        },
+        {
+          label: "b",
+          prompt: "Suggest one stage in this process at which a fault could occur that would result in a reduced sperm count.",
+          marks: 2,
+          guidance: "Suitable answers include a fault during the mitotic divisions of spermatogonia (reducing the initial number of cells entering the pathway), a fault during either meiotic division (which could cause cell death rather than successful production of secondary spermatocytes or spermatids), or a fault during the final differentiation stage (producing non-functional or immotile sperm that would not be counted as viable in a sperm count test)."
+        }
+      ]
     }
   ],
 
@@ -403,6 +585,23 @@ const PAPER2 = {
           prompt: "State the term for the phenomenon where one gene's alleles mask the phenotypic expression of a different, unlinked gene.",
           marks: 1,
           guidance: "Epistasis."
+        }
+      ]
+    },
+    {
+      context: "Haemophilia, a blood clotting disorder, is caused by a recessive allele carried on the X chromosome, and its inheritance pattern has historically been studied in royal European families with a documented family history of the condition.",
+      parts: [
+        {
+          label: "a",
+          prompt: "Using a Punnett grid, deduce the possible genotypes and phenotypes of children born to a haemophiliac father and a mother who is not a carrier.",
+          marks: 3,
+          guidance: "Representing the haemophilia allele as Xh and the normal allele as XH, the father's genotype is XhY and the mother's is XHXH; the Punnett grid gives daughters genotype XHXh (unaffected carriers) and sons genotype XHY (unaffected, non-carriers), meaning none of the children would actually have haemophilia themselves, though all daughters would be carriers."
+        },
+        {
+          label: "b",
+          prompt: "Explain why haemophilia is much more commonly observed in males than in females.",
+          marks: 3,
+          guidance: "Because the haemophilia allele is recessive and located on the X chromosome, a male (who has only one X chromosome) needs just a single copy of the allele to be affected, while a female (with two X chromosomes) would need to inherit the recessive allele from both parents to be affected, since a single normal, dominant allele on her other X chromosome would otherwise mask the effect; this difference in the number of X chromosomes between the sexes explains why X-linked recessive conditions like haemophilia appear far more frequently in males."
         }
       ]
     }
@@ -565,6 +764,23 @@ const PAPER2 = {
           guidance: "Ice core data shows that atmospheric CO2 concentration remained within a relatively stable range for hundreds of thousands of years prior to industrialisation, fluctuating gradually in line with natural climate cycles; the sharp, rapid rise in CO2 concentration seen since the mid-1800s, coinciding closely with the timing of large-scale fossil fuel combustion, stands out as a dramatic departure from this long-term natural pattern, supporting the conclusion that human activity, rather than natural variation alone, is the primary driver of the recent increase."
         }
       ]
+    },
+    {
+      context: "International climate agreements often set targets for limiting global average temperature rise to well below 2°C above pre-industrial levels, based on projections of the consequences if this threshold is exceeded.",
+      parts: [
+        {
+          label: "a",
+          prompt: "Outline two consequences of continued global warming beyond current levels.",
+          marks: 2,
+          guidance: "Suitable consequences include rising sea levels (due to thermal expansion of seawater and melting ice sheets and glaciers), more frequent and severe extreme weather events (such as heatwaves, droughts, or intense storms), or continued loss of biodiversity as species struggle to adapt to changing climate conditions quickly enough."
+        },
+        {
+          label: "b",
+          prompt: "Explain how a positive feedback mechanism could cause global warming to accelerate beyond what would be predicted from greenhouse gas emissions alone.",
+          marks: 4,
+          guidance: "A positive feedback mechanism amplifies an initial change rather than counteracting it; for example, as rising temperatures melt Arctic sea ice, this exposes darker ocean water that absorbs more solar energy than the reflective ice did, causing further warming and further ice melt. This kind of self-reinforcing cycle means that once a certain amount of warming has occurred, additional warming can be triggered independently of any further increase in direct human greenhouse gas emissions, potentially causing warming to accelerate beyond initial projections based on emissions alone."
+        }
+      ]
     }
   ],
 
@@ -603,6 +819,23 @@ const PAPER2 = {
           prompt: "Suggest how the removal of a top predator through overfishing could affect the rest of the food web.",
           marks: 3,
           guidance: "Removing a top predator can allow populations of its usual prey species to grow largely unchecked, since one of their main sources of mortality has been reduced; this increased prey population could then place greater pressure on the organisms further down the food web that the prey themselves feed on, potentially causing a cascading series of changes throughout the ecosystem, a pattern known as a trophic cascade."
+        }
+      ]
+    },
+    {
+      context: "A large-scale study tracks the movement of carbon through a temperate forest ecosystem over several years, measuring how much is stored in living biomass, dead organic matter, and released back into the atmosphere.",
+      parts: [
+        {
+          label: "a",
+          prompt: "Outline the main processes by which carbon enters and leaves a forest ecosystem.",
+          marks: 4,
+          guidance: "Carbon enters the ecosystem primarily through photosynthesis, as trees and other producers fix atmospheric CO2 into organic compounds; it then passes through the ecosystem via feeding relationships as consumers eat producers and each other. Carbon leaves the ecosystem mainly through cellular respiration (releasing CO2 back into the atmosphere) carried out by producers, consumers, and decomposers, and can also be lost through processes like combustion (in the case of wildfire) or export if organic material is removed from the site."
+        },
+        {
+          label: "b",
+          prompt: "Explain why an old-growth forest with a large amount of carbon stored in living trees might still be considered roughly carbon-neutral over the long term, despite ongoing photosynthesis.",
+          marks: 3,
+          guidance: "In a mature, stable forest, the rate of carbon uptake through photosynthesis is roughly balanced by the rate of carbon release through respiration and decomposition, since the forest is no longer rapidly accumulating new biomass the way a young, actively growing forest would be; while a large amount of carbon remains stored within the existing trees and soil, the net annual exchange of carbon with the atmosphere can be close to balanced, making the mature forest roughly carbon-neutral on an ongoing basis even though it holds substantial stored carbon."
         }
       ]
     }
@@ -745,6 +978,23 @@ const PAPER2 = {
           guidance: "Without a functioning vascular connection, the scion would be unable to receive water and minerals from the rootstock's root system, quickly leading to water stress and wilting; at the same time, the rootstock would be cut off from the sugars produced by the scion's photosynthesising leaves, eventually depleting its own energy reserves, so a failed vascular reconnection would be expected to cause the death of one or both parts of the graft."
         }
       ]
+    },
+    {
+      context: "Long-haul commercial pilots and cabin crew have a slightly elevated risk of developing blood clots in their legs during very long flights, a condition linked to prolonged sitting and reduced circulation.",
+      parts: [
+        {
+          label: "a",
+          prompt: "Outline how skeletal muscle contraction normally assists the return of blood through veins toward the heart.",
+          marks: 3,
+          guidance: "Many veins, particularly in the legs, contain one-way valves that prevent backward blood flow; as surrounding skeletal muscles contract during normal movement (such as walking), they squeeze against these veins, helping to push blood forward toward the heart, with the valves preventing it from flowing back down due to gravity between contractions, together forming what is often called the skeletal muscle pump."
+        },
+        {
+          label: "b",
+          prompt: "Explain why prolonged immobility during a long flight increases the risk of blood clot formation in the legs.",
+          marks: 4,
+          guidance: "Without regular muscle contraction from movement, the normal skeletal muscle pump mechanism that assists venous return is largely inactive, allowing blood to pool and flow more sluggishly through the leg veins; this slower blood flow increases the likelihood that clotting factors and platelets remain in prolonged contact with the vessel wall, raising the risk that a blood clot will begin to form, which is why passengers are often advised to move their legs periodically during long flights."
+        }
+      ]
     }
   ],
 
@@ -785,6 +1035,23 @@ const PAPER2 = {
           guidance: "Ethylene is a gas, and its production is self-amplifying: as one fruit begins to ripen, it produces increasing amounts of ethylene, which diffuses through the air and can trigger ripening in nearby fruit as well. Once several fruits begin ripening and releasing their own ethylene, this creates a positive feedback effect within an enclosed space, causing ripening to accelerate and spread rapidly throughout the sealed room."
         }
       ]
+    },
+    {
+      context: "Commercial growers of certain flowering plants control the timing of flowering by carefully manipulating day length and applying specific plant hormones at particular stages of growth.",
+      parts: [
+        {
+          label: "a",
+          prompt: "Distinguish between the mode of action of a plant hormone and an animal hormone such as insulin, in terms of how each typically travels to its target.",
+          marks: 2,
+          guidance: "Both plant and animal hormones are chemical messengers that travel from where they are produced to a distant target where they exert an effect; plant hormones can move through the plant via diffusion, active transport between cells, or transport within the phloem or xylem, while animal hormones like insulin are typically secreted directly into the bloodstream, where they circulate throughout the body to reach any tissue with the appropriate receptor."
+        },
+        {
+          label: "b",
+          prompt: "Explain how auxin contributes to a plant's overall growth and development beyond simply controlling directional growth responses like phototropism.",
+          marks: 4,
+          guidance: "Beyond phototropism, auxin plays several other roles in plant development, including stimulating cell elongation more generally (contributing to overall stem growth), promoting the initiation of new root growth (a property exploited commercially in rooting hormone products used for plant cuttings), and inhibiting the growth of lateral (side) buds when produced by an actively growing shoot tip, a phenomenon called apical dominance, which helps direct the plant's growth resources toward upward growth rather than excessive branching."
+        }
+      ]
     }
   ],
 
@@ -803,6 +1070,23 @@ const PAPER2 = {
           prompt: "Suggest why milder flu strains still sometimes cause severe illness in people who have never previously encountered any similar flu strain.",
           marks: 3,
           guidance: "Without any prior exposure or existing memory cells specific to that strain (or a sufficiently similar one), a person's adaptive immune response must be built from scratch, a process that takes several days to reach full effectiveness; during this delay, the virus has more time to replicate and spread within the body largely unchecked by a targeted adaptive response, which can allow even a comparatively mild strain to cause more severe illness in a first-time, non-immune individual than in someone with relevant prior immunity."
+        }
+      ]
+    },
+    {
+      context: "Organ transplant recipients are typically prescribed immunosuppressant drugs for the rest of their lives to prevent their immune system from attacking the transplanted organ as if it were foreign tissue.",
+      parts: [
+        {
+          label: "a",
+          prompt: "Explain why a transplanted organ from a donor is at risk of being attacked by the recipient's own immune system.",
+          marks: 3,
+          guidance: "Cells within the transplanted organ carry surface antigens characteristic of the donor, which differ from the recipient's own antigens unless the donor is a very close genetic match (such as an identical twin); the recipient's immune system can recognise these donor antigens as foreign, triggering an immune response (rejection) against the transplanted tissue in much the same way it would respond to a genuine pathogen."
+        },
+        {
+          label: "b",
+          prompt: "Suggest a possible drawback of long-term immunosuppressant use for a transplant recipient, beyond its intended effect of preventing organ rejection.",
+          marks: 2,
+          guidance: "Because immunosuppressant drugs work by reducing the overall activity of the immune system, a significant drawback is that the recipient becomes considerably more vulnerable to infections from pathogens that a fully functioning immune system would normally be able to fight off effectively, requiring careful lifelong management to balance the risk of organ rejection against the risk of serious infection."
         }
       ]
     }
