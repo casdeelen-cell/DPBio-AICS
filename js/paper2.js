@@ -1,21 +1,12 @@
 /*
   paper2.js
   ---------
-  Extended-response practice questions ("Paper 2 style"), as distinct
-  from the multiple-choice practice in questionbank.js. All questions
-  in this file are ORIGINAL, written from scratch for this site --
-  NOT adapted from any IB Questionbank export or other secure exam
-  source (an earlier version was adapted from such material; that
-  approach was retired for exam-security reasons, see the note at
-  the top of questionbank.js for the full story).
+  Extended-response practice questions ("Paper 2 style"). All content
+  in this file is ORIGINAL, written from scratch for this site.
 
   Each topic maps to an array of question SETS. A set has:
   - context: a short scenario/intro shared by all parts (can be "")
   - parts: an array of { label, prompt, marks, guidance }
-
-  PAPER2["A1.1"] = [
-    { context: "...", parts: [ { label: "a", prompt: "...", marks: 4, guidance: "..." } ] }
-  ]
 */
 
 const PAPER2 = {
@@ -340,19 +331,19 @@ const PAPER2 = {
       ]
     },
     {
-      context: "Forensic laboratories rely on the reliable, predictable chemistry of DNA to identify individuals from small biological samples left at a crime scene, such as a single hair follicle or a trace of saliva.",
+      context: "Comparative genomics researchers studying a newly discovered deep-sea microorganism find that its genetic code, the rules mapping codons to amino acids, is almost identical to that used by humans, despite the two organisms having diverged from any shared ancestor billions of years ago.",
       parts: [
         {
           label: "a",
-          prompt: "Outline the basic structure of a DNA nucleotide.",
+          prompt: "Outline what is meant by the genetic code being described as 'near-universal' across living organisms.",
           marks: 2,
-          guidance: "A DNA nucleotide consists of a phosphate group, a deoxyribose sugar, and one of four nitrogenous bases (adenine, thymine, guanine, or cytosine), joined together to form the basic repeating unit of the DNA molecule."
+          guidance: "A near-universal genetic code means that, with only a small number of documented exceptions, virtually all known organisms use the same specific set of rules mapping each three-base codon to the same corresponding amino acid, regardless of how distantly related those organisms are to one another."
         },
         {
           label: "b",
-          prompt: "Explain how the polymerase chain reaction (PCR) allows forensic scientists to analyse DNA from an extremely small starting sample, such as a single hair follicle.",
+          prompt: "Explain why this shared genetic code is considered strong evidence for a last universal common ancestor of all life.",
           marks: 4,
-          guidance: "PCR amplifies a specific, targeted region of DNA exponentially, using repeated cycles of heating (to separate the DNA strands) and cooling (to allow primers to bind and a heat-stable polymerase to extend new strands), doubling the amount of the target DNA region with each cycle; starting from even a tiny initial sample, this exponential amplification can rapidly generate millions of copies of the target region, providing more than enough material for reliable further analysis, such as comparing specific variable regions between the sample and a suspect's DNA."
+          guidance: "Because the specific set of codon-to-amino-acid assignments making up the genetic code is arbitrary, in the sense that there is no obvious chemical reason a particular codon must specify one particular amino acid rather than another, it seems highly improbable that such a specific, complex coding system would have arisen independently on multiple separate occasions; the fact that this same code is shared so broadly across the tree of life instead suggests it was already established in a single ancestral population, the last universal common ancestor, from which all currently known life is ultimately descended."
         }
       ]
     }
@@ -398,9 +389,9 @@ const PAPER2 = {
       parts: [
         {
           label: "a",
-          prompt: "Outline the roles of helicase and DNA polymerase during DNA replication.",
+          prompt: "Outline the roles of DNA primase and DNA ligase during DNA replication.",
           marks: 3,
-          guidance: "Helicase unwinds the DNA double helix by breaking hydrogen bonds between the two strands, exposing single-stranded template for the rest of the replication machinery to act on; DNA polymerase then adds new, complementary nucleotides to a growing strand, reading the exposed template and synthesising the new strand in a 5' to 3' direction using complementary base pairing."
+          guidance: "DNA primase synthesises a short RNA primer, providing the free 3' end that DNA polymerase requires before it can begin adding new nucleotides to a strand, since DNA polymerase itself cannot start synthesis from nothing; DNA ligase joins together adjacent fragments of newly synthesised DNA, such as the Okazaki fragments produced on the lagging strand, sealing the remaining gaps to form one continuous new strand."
         },
         {
           label: "b",
@@ -519,19 +510,19 @@ const PAPER2 = {
       ]
     },
     {
-      context: "Spider silk combines remarkable tensile strength with elasticity, properties that emerge directly from the specific structure of the silk protein at multiple levels of organisation.",
+      context: "Human hair and fingernails are both built primarily from a fibrous protein called keratin, valued for its mechanical toughness despite being produced by living cells that are, by the time keratin accumulates, already dead.",
       parts: [
         {
           label: "a",
-          prompt: "Outline the four levels of protein structure.",
-          marks: 4,
-          guidance: "Primary structure is the specific sequence of amino acids joined by peptide bonds. Secondary structure describes local, repeating folding patterns (such as alpha helices or beta-pleated sheets) stabilised by hydrogen bonds along the backbone. Tertiary structure is the overall three-dimensional shape of a single folded polypeptide chain, stabilised by interactions between R-groups. Quaternary structure describes the arrangement of two or more separate polypeptide chains assembled into one functional protein."
+          prompt: "Distinguish between fibrous and globular proteins in terms of their general shape and function.",
+          marks: 3,
+          guidance: "Fibrous proteins, such as keratin, form long, extended, often strongly cross-linked strands well suited to providing mechanical strength and structural support; globular proteins instead fold into a compact, roughly spherical shape, typically suited to functions such as catalysis or transport that depend on a precisely shaped binding site rather than tensile strength."
         },
         {
           label: "b",
-          prompt: "Suggest how a combination of secondary and tertiary structural features could account for both silk's strength and its elasticity.",
+          prompt: "Suggest why keratin's structure, rich in the amino acid cysteine, makes it particularly resistant to being pulled apart.",
           marks: 3,
-          guidance: "Regions of extensive beta-pleated sheet, held together by many hydrogen bonds, likely contribute to silk's high tensile strength by resisting being pulled apart; alongside these ordered, strong regions, more flexible, less structured sections of the protein's tertiary fold could allow some stretching and recoil, contributing to elasticity, so that this combination of rigid and flexible regions within the same protein molecule could explain how silk achieves both properties simultaneously."
+          guidance: "Cysteine amino acids can form strong covalent disulfide bonds with other cysteines positioned nearby once the protein folds; keratin contains many cysteine residues, allowing extensive disulfide cross-linking between adjacent protein strands, and it is this dense network of strong covalent cross-links, in addition to hydrogen bonding within the protein's secondary structure, that gives keratin its considerable resistance to mechanical stress."
         }
       ]
     }
@@ -631,9 +622,9 @@ const PAPER2 = {
       parts: [
         {
           label: "a",
-          prompt: "Outline the process of translation, from mRNA binding at the ribosome to the release of a completed polypeptide.",
-          marks: 5,
-          guidance: "Translation begins when the small ribosomal subunit binds to mRNA near its start codon, and an initiator tRNA (carrying methionine) binds via complementary base pairing between its anticodon and the start codon; the large ribosomal subunit then joins, and translation proceeds through repeated cycles in which a new tRNA delivers its amino acid to the ribosome's A site (matching the next codon), a peptide bond forms between this amino acid and the growing chain, and the ribosome shifts along by one codon, continuing until a stop codon is reached, at which point the completed polypeptide is released."
+          prompt: "Outline how a primary mRNA transcript is processed into a mature mRNA molecule in a eukaryotic cell, before it is translated.",
+          marks: 3,
+          guidance: "The primary transcript undergoes splicing, in which non-coding intron sequences are removed and the remaining coding exon sequences are joined together; a protective 5' cap is added to the beginning of the molecule, and a poly-A tail is added to its end, both helping stabilise the mRNA and protect it from degradation before it is exported from the nucleus to the cytoplasm for translation."
         },
         {
           label: "b",
@@ -702,9 +693,9 @@ const PAPER2 = {
       parts: [
         {
           label: "a",
-          prompt: "Outline the difference between magnification and resolution.",
+          prompt: "Outline why an electron microscope typically requires a specimen to be non-living, unlike a light microscope.",
           marks: 2,
-          guidance: "Magnification refers to how much larger an image appears compared with the actual size of the object being viewed; resolution refers to the ability to distinguish two objects, or two points, that are very close together as separate rather than blurring into one. An image can be highly magnified but still show poor resolution if fine detail cannot be distinguished."
+          guidance: "Electron microscopy requires the specimen to be placed within a vacuum, since air molecules would otherwise scatter the electron beam before it reaches the sample, and living tissue cannot survive in a vacuum; specimens usually also need to be chemically fixed, dehydrated, and sometimes coated in a thin layer of metal to be imaged, all of which further prevents the specimen from remaining alive, unlike the comparatively minimal preparation usually needed for light microscopy."
         },
         {
           label: "b",
@@ -752,19 +743,19 @@ const PAPER2 = {
       ]
     },
     {
-      context: "Antibody-producing plasma cells secrete very large quantities of protein continuously, relying on close cooperation between several organelles to keep pace with this high demand.",
+      context: "Pancreatic acinar cells produce and secrete large quantities of digestive enzymes into the small intestine each day, a demand reflected clearly in their distinctive internal structure when viewed under an electron microscope.",
       parts: [
         {
           label: "a",
-          prompt: "Outline the roles of the rough endoplasmic reticulum and the Golgi apparatus in producing a secreted protein such as an antibody.",
+          prompt: "Outline the pathway a digestive enzyme follows from its site of synthesis to its release from a pancreatic acinar cell.",
           marks: 4,
-          guidance: "The rough endoplasmic reticulum is studded with ribosomes and is where the antibody's polypeptide chains are synthesised and undergo initial folding and modification; the resulting protein is then transported, typically via vesicles, to the Golgi apparatus, which further modifies, sorts, and packages the protein into vesicles appropriate for its final destination, in this case secretion out of the cell."
+          guidance: "The enzyme is synthesised by ribosomes attached to the rough endoplasmic reticulum, where the growing polypeptide is threaded into the internal space for initial folding; it is then transported, typically enclosed within a vesicle, to the Golgi apparatus, which further modifies and packages the protein into secretory vesicles that migrate to and fuse with the plasma membrane, releasing the enzyme outside the cell by exocytosis."
         },
         {
           label: "b",
-          prompt: "Suggest why a plasma cell would be expected to contain an unusually extensive rough endoplasmic reticulum compared with a typical, less secretory cell type.",
+          prompt: "Suggest why pancreatic acinar cells would be expected to contain an unusually large number of secretory vesicles compared with a typical, non-secretory cell.",
           marks: 2,
-          guidance: "Since the rough endoplasmic reticulum is the site of protein synthesis for molecules destined for secretion, a cell that needs to produce and secrete very large quantities of a specific protein, such as antibodies, would benefit from having a greater surface area of ribosome-studded membrane, increasing its overall capacity for simultaneous protein synthesis to meet this high demand."
+          guidance: "Because secretory vesicles are responsible for storing newly packaged enzyme molecules until they are needed and then releasing them via exocytosis, a cell with a high ongoing demand for enzyme secretion, such as a pancreatic acinar cell producing digestive enzymes continuously, would benefit from having a large reserve of these vesicles ready for release, allowing it to respond rapidly to signals (such as the arrival of food in the gut) without waiting for enzymes to be freshly synthesised and packaged on demand."
         }
       ]
     }
@@ -1292,19 +1283,19 @@ const PAPER2 = {
       ]
     },
     {
-      context: "Overuse of a common antibiotic in livestock farming has been linked to a documented rise in antibiotic-resistant bacteria found both on farms and in nearby communities.",
+      context: "A population of aphids on a commercial crop has shown a marked increase in resistance to a widely used insecticide over just a few growing seasons, despite the insecticide having been highly effective when first introduced.",
       parts: [
         {
           label: "a",
-          prompt: "Explain how repeated antibiotic use in livestock could lead to an increase in antibiotic-resistant bacteria over time.",
+          prompt: "Explain how the aphid population could have evolved insecticide resistance so rapidly, in terms of natural selection.",
           marks: 4,
-          guidance: "Random mutations occasionally produce bacteria with some degree of resistance to a given antibiotic, even before the antibiotic is first used; when antibiotics are used repeatedly and widely, susceptible bacteria are killed while resistant individuals survive and continue reproducing, increasing their proportion in the overall population with each round of treatment, a direct example of natural selection acting on existing genetic variation."
+          guidance: "Random mutation would have generated some variation in insecticide susceptibility within the original aphid population, entirely independent of insecticide exposure; when the insecticide was first applied, individuals carrying a resistance-conferring allele would have survived and reproduced at a much higher rate than susceptible individuals, and because aphids can reproduce very rapidly with short generation times, this strong selective advantage could increase the resistance allele's frequency substantially within just a few growing seasons."
         },
         {
           label: "b",
-          prompt: "Outline one measure that could help reduce the spread of antibiotic resistance in this farming context.",
+          prompt: "Suggest one strategy that could help slow the future evolution of insecticide resistance in this aphid population.",
           marks: 2,
-          guidance: "Suitable measures include reducing unnecessary or routine antibiotic use in livestock (reserving antibiotics for treating diagnosed infections rather than as standard preventative practice), improving farm hygiene and animal welfare to reduce disease incidence in the first place, or rotating between different classes of antibiotic to reduce sustained selective pressure favouring resistance to any single drug."
+          guidance: "Suitable strategies include rotating between different classes of insecticide with different modes of action, reducing the consistent selective pressure favouring resistance to any single compound, or combining chemical control with non-chemical methods (such as biological control using natural predators), reducing overall reliance on the insecticide and the resulting selective pressure driving resistance evolution."
         }
       ]
     },
@@ -1650,19 +1641,19 @@ const PAPER2 = {
       ]
     },
     {
-      context: "A population of red squirrels in a nature reserve is monitored annually using capture-mark-recapture surveys to track how the population changes in relation to the site's estimated carrying capacity.",
+      context: "Marine biologists studying a population of a slow-moving sea star species on a rocky shore use random quadrat sampling, rather than mark-release-recapture, to estimate its population density across the site.",
       parts: [
         {
           label: "a",
-          prompt: "Outline how the size of the squirrel population could be estimated using the Lincoln index.",
+          prompt: "Explain why quadrat sampling is more appropriate than mark-release-recapture for estimating the population of this sea star species.",
           marks: 3,
-          guidance: "A sample of squirrels is captured, marked in a way that won't harm them, and released back into the population; after allowing time for the marked individuals to redistribute randomly, a second sample is captured, and the proportion of marked individuals within it is used to estimate total population size, using the Lincoln index formula: total population estimate = (number marked in first sample × total number in second sample) ÷ number of marked individuals recaptured in the second sample."
+          guidance: "Quadrat sampling is well suited to relatively immobile or slow-moving organisms like sea stars, since it doesn't rely on the assumption, central to mark-release-recapture, that marked individuals will move and redistribute randomly back into the wider population between sampling events; because sea stars move very little, this assumption would be unreliable, making random quadrat sampling a more appropriate method for this particular species."
         },
         {
           label: "b",
-          prompt: "Explain what would be expected to happen to this squirrel population's growth rate as its size approaches the reserve's carrying capacity.",
-          marks: 4,
-          guidance: "As the population approaches carrying capacity, increasing competition for limited resources such as food, nesting sites, and territory would be expected to reduce the population's overall growth rate, since resource scarcity typically increases mortality and/or reduces reproductive success; this density-dependent regulation causes population growth to slow and eventually stabilise once the population reaches a size the reserve's resources can sustainably support, rather than continuing to grow indefinitely."
+          prompt: "Outline how the results from multiple quadrats could be used to estimate the total sea star population across the entire rocky shore habitat.",
+          marks: 3,
+          guidance: "The mean number of sea stars counted per quadrat is calculated from a suitably large number of randomly placed quadrats of known area; this mean density per unit area is then multiplied by the total area of the habitat being studied to produce an estimate of the total population size across the whole site, with the standard deviation of the counts per quadrat providing a measure of how evenly the sea stars are distributed."
         }
       ]
     }
@@ -2119,19 +2110,19 @@ const PAPER2 = {
       ]
     },
     {
-      context: "Certain nerve agents and pesticides work by permanently disabling the enzyme acetylcholinesterase, causing severe and potentially fatal disruption to normal nervous system function.",
+      context: "Certain local anaesthetics used in minor surgical procedures work by temporarily blocking voltage-gated sodium channels in the sensory neurons of the treated area, preventing pain signals from reaching the brain.",
       parts: [
         {
           label: "a",
-          prompt: "Outline the normal role of acetylcholinesterase at a cholinergic synapse.",
-          marks: 2,
-          guidance: "Acetylcholinesterase is an enzyme located within the synaptic cleft that rapidly breaks down acetylcholine shortly after it has bound to and stimulated its receptor on the postsynaptic membrane; this rapid breakdown ensures that each nerve impulse produces only a brief, discrete signal, allowing the synapse to reset and respond appropriately to any subsequent impulses."
+          prompt: "Outline how voltage-gated sodium channels normally contribute to the generation of an action potential.",
+          marks: 3,
+          guidance: "Voltage-gated sodium channels open in response to a sufficiently strong initial stimulus, allowing sodium ions to rapidly enter the neuron and reverse the membrane potential from negative to positive (depolarisation); this rapid, self-reinforcing opening of sodium channels along the membrane is what allows an action potential to be generated and then propagated along the length of the axon."
         },
         {
           label: "b",
-          prompt: "Explain why disabling acetylcholinesterase can be life-threatening, with reference to its effect at the neuromuscular junction controlling breathing muscles.",
-          marks: 5,
-          guidance: "Without functional acetylcholinesterase, acetylcholine released at affected synapses cannot be broken down and remains bound to its receptors, continuously stimulating the postsynaptic membrane rather than producing the normal, brief signal; at neuromuscular junctions, including those controlling the muscles responsible for breathing, this uncontrolled, prolonged overstimulation can cause sustained, uncoordinated muscle contraction (or eventual paralysis as the muscle fatigues), severely disrupting the coordinated muscle movements needed for normal breathing, which can rapidly become life-threatening without prompt medical intervention."
+          prompt: "Explain why a local anaesthetic blocking sodium channels prevents pain signals from reaching the brain, without permanently damaging the affected neurons.",
+          marks: 4,
+          guidance: "By reversibly blocking voltage-gated sodium channels in the treated area, a local anaesthetic prevents the depolarisation needed to generate an action potential in the affected sensory neurons, meaning no pain signal can be initiated or transmitted toward the brain from that specific area while the anaesthetic remains bound; because the blockage is temporary and reversible rather than causing any structural damage to the channels or neurons themselves, normal sensation returns once the anaesthetic has been metabolised and cleared from the site."
         }
       ]
     },
@@ -2281,19 +2272,19 @@ const PAPER2 = {
       ]
     },
     {
-      context: "Bacteriophage therapy, using viruses that specifically infect and destroy bacteria, is being investigated as a potential treatment for bacterial infections resistant to conventional antibiotics.",
+      context: "Gene therapy researchers sometimes use modified viruses as vectors to deliver a corrected copy of a gene into a patient's cells, exploiting the virus's natural ability to enter host cells and insert genetic material.",
       parts: [
         {
           label: "a",
-          prompt: "Outline the basic structure of a typical bacteriophage.",
-          marks: 2,
-          guidance: "A typical bacteriophage consists of genetic material (either DNA or RNA) enclosed within a protective protein coat called a capsid; many bacteriophages also possess additional structures such as a tail and tail fibres, which allow specific attachment to receptor molecules on the surface of their target bacterial host."
+          prompt: "Outline why a virus's natural mode of infection makes it a useful tool for delivering genetic material into human cells.",
+          marks: 3,
+          guidance: "Because viruses naturally evolved to inject or introduce their own genetic material into a host cell as part of their normal infection cycle, this same mechanism can be exploited by researchers to deliver a different, therapeutically useful piece of genetic material (such as a corrected gene) into a patient's cells instead of the virus's own genome, using the virus purely as a delivery vehicle rather than allowing it to cause a genuine infection."
         },
         {
           label: "b",
-          prompt: "Explain why bacteriophages are generally considered safe to use in humans, unlike many conventional antibiotics which can also harm beneficial bacteria.",
-          marks: 4,
-          guidance: "Bacteriophages are typically highly specific, usually infecting only one particular bacterial species or even a specific strain, since they rely on recognising and binding a very specific receptor molecule on their target's surface; this high specificity means a bacteriophage chosen to treat a particular bacterial infection is unlikely to significantly harm the many other, beneficial bacterial species that make up a person's normal microbiome, unlike many broad-spectrum antibiotics, which can indiscriminately affect a wide range of both harmful and beneficial bacteria."
+          prompt: "Suggest one safety modification that would need to be made to a virus before it could be used safely as a gene therapy vector.",
+          marks: 2,
+          guidance: "Suitable modifications include removing or disabling the genes a virus would normally need to replicate itself and cause disease, ensuring it can deliver its genetic cargo into a target cell without being able to reproduce further or spread to other cells, since an uncontrolled, still-infectious virus would pose a serious safety risk if used directly in gene therapy."
         }
       ]
     },

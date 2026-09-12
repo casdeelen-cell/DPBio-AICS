@@ -1,29 +1,3 @@
-/*
-  content.js
-  ----------
-  This is where your actual notes live. One entry per topic code.
-  Each topic is an array of sections, and each section is one syllabus
-  statement with your notes on it.
-
-  Format for a section:
-  {
-    label: "1",              // short label, usually a number
-    heading: "Short heading",
-    level: "SL",              // "SL" or "HL" - shows a small badge, optional
-    text: "Notes go here. Use **word** to bold a key term. Use \n\n between paragraphs.",
-    image: "https://...",     // optional
-    imageCaption: "...",      // optional, small caption under the image
-    tip: { label: "Exam tip", text: "..." }   // optional highlighted side note
-  }
-
-  If a bolded **word** matches a term in wordbank.js for this topic
-  (case-insensitive), it automatically gets a dotted underline and a
-  hover/tap tooltip with the definition, no extra work needed.
-
-  Topics with no entry here yet just show "notes coming soon" on the
-  site, so it's safe to leave them out until you get to them.
-*/
-
 const CONTENT = {
 
   "A1.1": [
@@ -33,8 +7,7 @@ const CONTENT = {
       level: "SL",
       text: "Water's biological importance starts with its shape and its chemistry. A water molecule is bent at an angle of roughly 104.5 degrees, with two hydrogen atoms covalently bonded to a central oxygen. Oxygen has a higher **electronegativity** than hydrogen, so it pulls the shared electrons in each O-H bond closer to itself. This produces an uneven distribution of charge across the molecule: the oxygen end carries a partial negative charge and each hydrogen carries a partial positive charge.\n\nA molecule with this kind of unequal charge distribution is described as a **polar molecule**. It is worth being precise with terminology here: water is not ionic and does not carry a full charge, the polarity arises purely from unequal sharing of electrons within covalent bonds. Almost every property of water covered in this topic, its role as a solvent, its cohesion, its thermal behaviour, traces back to this single structural feature.",
       image: "https://commons.wikimedia.org/wiki/Special:FilePath/Hydrogen-bonding-in-water-2D.svg",
-      imageCaption: "Hydrogen bonding between adjacent water molecules, arising from the polarity of each O-H bond.",
-      tip: { label: "Exam tip", text: "Examiners distinguish between a covalent bond (within a water molecule, between O and H) and a hydrogen bond (between separate water molecules). Mixing these up is one of the most common errors on this topic." }
+      imageCaption: "Hydrogen bonding between adjacent water molecules, arising from the polarity of each O-H bond."
     },
     {
       label: "A1.1.2",
@@ -54,8 +27,7 @@ const CONTENT = {
       label: "A1.1.4",
       heading: "Adhesion",
       level: "SL",
-      text: "**Adhesion** is the attraction between water molecules and a different polar or charged surface, rather than between water molecules themselves. Inside a xylem vessel, water adheres to the cellulose and lignin of the vessel walls, which helps counteract the downward pull of gravity on the water column.\n\nCohesion and adhesion act together to produce **capillary action**, the tendency of water to rise up narrow tubes. This is a measurable contributor to water movement in short plants and in the initial uptake of water from soil into root hairs, though for tall trees, transpiration pull dominates.",
-      tip: { label: "Common mistake", text: "Cohesion is water sticking to water. Adhesion is water sticking to something else. Students frequently swap these two definitions under exam pressure, so it helps to have a fixed example memorised for each." }
+      text: "**Adhesion** is the attraction between water molecules and a different polar or charged surface, rather than between water molecules themselves. Inside a xylem vessel, water adheres to the cellulose and lignin of the vessel walls, which helps counteract the downward pull of gravity on the water column.\n\nCohesion and adhesion act together to produce **capillary action**, the tendency of water to rise up narrow tubes. This is a measurable contributor to water movement in short plants and in the initial uptake of water from soil into root hairs, though for tall trees, transpiration pull dominates."
     },
     {
       label: "A1.1.5",
@@ -83,198 +55,6 @@ const CONTENT = {
     }
   ],
 
-  "B2.1": [
-    {
-      label: "B2.1.1",
-      heading: "Lipid bilayers as the basis of membranes",
-      level: "SL",
-      text: "Every biological membrane is built around a **phospholipid bilayer**, two layers of phospholipid molecules arranged tail to tail. A phospholipid has a polar, hydrophilic phosphate head and two non-polar, hydrophobic fatty acid tails. When phospholipids are placed in an aqueous environment, they spontaneously arrange themselves so the polar heads face outward, in contact with the water on either side of the membrane, while the non-polar tails cluster together, shielded from water in the interior of the bilayer.\n\nThis arrangement is thermodynamically favourable and requires no cellular machinery to assemble, it is a direct consequence of the amphipathic structure of phospholipids and their interaction with water. The result is a continuous, self-sealing barrier that separates the inside of a cell, or an organelle, from its surroundings, and forms the structural foundation on which every other membrane function depends.",
-      image: "https://commons.wikimedia.org/wiki/Special:FilePath/0302_Phospholipid_Bilayer.jpg",
-      imageCaption: "A phospholipid bilayer: polar heads face the aqueous environment on both sides, non-polar tails face inward."
-    },
-    {
-      label: "B2.1.2 / B2.1.3",
-      heading: "Lipid bilayers as barriers, and simple diffusion",
-      level: "SL",
-      text: "The hydrophobic core of the bilayer gives membranes their selective, barrier-like permeability. Small, non-polar molecules, notably oxygen and carbon dioxide, can cross this hydrophobic core directly by **simple diffusion**, net movement from a region of higher concentration to a region of lower concentration, requiring no protein and no energy input, since it is driven entirely by the concentration gradient.\n\nLarger or more polar molecules, and especially ions, cannot cross the hydrophobic interior of the bilayer at any meaningful rate on their own, since their charge or size makes passage through the non-polar tails energetically unfavourable. This selective barrier property is exactly what allows a membrane to separate an internal chemical environment from the outside, and it is why almost all polar or charged substances require specific transport proteins to cross a membrane at all."
-    },
-    {
-      label: "B2.1.4",
-      heading: "Integral and peripheral proteins",
-      level: "SL",
-      text: "**Integral proteins** are embedded within the bilayer, often spanning it completely, with hydrophobic regions of the protein sitting alongside the hydrophobic fatty acid tails and hydrophilic regions projecting into the aqueous environment on either side. **Peripheral proteins** are attached only loosely to one face of the membrane, either bound to an integral protein, anchored by a short hydrocarbon chain, or held in place by the cytoskeleton, and can be removed more easily than integral proteins. Together, membrane proteins carry out much of the functional work of a membrane, including transport, enzymatic catalysis, receptor binding for cell signalling, and cell-to-cell recognition."
-    },
-    {
-      label: "B2.1.5",
-      heading: "Osmosis and aquaporins",
-      level: "SL",
-      text: "**Osmosis** is the diffusion of water specifically, across a partially permeable membrane, from a region of lower solute concentration to a region of higher solute concentration. Although water is a polar molecule, a small amount can cross the hydrophobic core of the bilayer directly, and this is substantially assisted in most cells by **aquaporins**, channel proteins specialised for rapid water transport, which are especially abundant in tissues, such as the kidney tubules, where large volumes of water need to cross membranes quickly."
-    },
-    {
-      label: "B2.1.6",
-      heading: "Channel proteins and facilitated diffusion",
-      level: "SL",
-      text: "**Facilitated diffusion** allows polar molecules and ions to cross a membrane despite the hydrophobic barrier of the bilayer, using specific **channel proteins** that form a hydrophilic pore across the membrane. Like simple diffusion, facilitated diffusion moves a substance down its concentration gradient and requires no direct energy input from the cell, the energy for movement comes entirely from the concentration gradient itself, but unlike simple diffusion, it depends on the presence of a specific channel protein, so it only occurs for substances that have a matching channel, and only at the rate that the available channels allow."
-    },
-    {
-      label: "B2.1.7",
-      heading: "Pump proteins and active transport",
-      level: "SL",
-      text: "**Active transport** moves a substance across a membrane against its concentration gradient, from a region of lower concentration to a region of higher concentration, which is thermodynamically unfavourable and therefore requires an input of energy, usually supplied directly by ATP hydrolysis. This is carried out by **pump proteins**, which bind a specific substance on one side of the membrane, undergo an energy-driven change in shape, and release that substance on the other side. Because each pump protein transfers one particular substance, active transport gives a cell precise control over the movement of specific ions or molecules, even against a concentration gradient that would otherwise drive them the opposite way.",
-      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Scheme sodium-potassium pump-en.svg",
-      imageCaption: "The sodium-potassium pump: ATP hydrolysis drives a conformational change that actively transports Na+ out and K+ into the cell against their concentration gradients."
-    },
-    {
-      label: "B2.1.8",
-      heading: "Selectivity in membrane permeability",
-      level: "SL",
-      text: "A membrane's overall permeability is described as **selective**, meaning it allows some substances to cross far more readily than others, rather than being either completely impermeable or freely permeable to everything. This selectivity arises from the combined effect of the hydrophobic bilayer core (which favours small, non-polar molecules) and the specific set of channel and pump proteins a particular membrane happens to contain (which determines which polar molecules and ions can cross, and at what rate, and in which direction). Because different cell types express different combinations of membrane proteins, membrane selectivity, and therefore what a cell can take up or exclude, varies considerably between tissues."
-    },
-    {
-      label: "B2.1.9",
-      heading: "Glycoproteins and glycolipids",
-      level: "SL",
-      text: "**Glycoproteins** and **glycolipids** are proteins and lipids, respectively, with short carbohydrate chains attached, found exclusively on the outer surface of the plasma membrane. These carbohydrate chains project outward into the extracellular environment and act as identifying markers, allowing cells to recognise one another, a function important in processes ranging from tissue formation and immune recognition of self versus non-self cells, to the specific docking of hormones, antibodies, and (in some cases) pathogens onto the surface of a target cell."
-    },
-    {
-      label: "B2.1.10",
-      heading: "The fluid mosaic model",
-      level: "SL",
-      text: "The **fluid mosaic model**, proposed by Singer and Nicolson in 1972, describes the overall arrangement and behaviour of membrane components. It is described as a mosaic because proteins, cholesterol, and glycolipids are embedded at different points and depths throughout the bilayer, producing a patchy, varied composition rather than a uniform sheet. It is described as fluid because individual phospholipids and proteins are not fixed rigidly in place, they can diffuse laterally within their own layer of the membrane, giving the membrane flexibility, self-sealing behaviour after minor damage, and the capacity to change shape as a cell moves or divides."
-    },
-    {
-      label: "B2.1.11",
-      heading: "Fatty acid composition and membrane fluidity",
-      level: "HL",
-      text: "The degree of membrane fluidity is influenced by the fatty acid composition of its phospholipids. Fatty acid tails containing one or more carbon-carbon double bonds are described as **unsaturated**, and these kinks in the tail prevent phospholipid molecules from packing tightly together, keeping the membrane more fluid, particularly at lower temperatures. **Saturated** fatty acid tails, with no double bonds, pack together more closely and produce a less fluid, more rigid membrane. Cholesterol, embedded within the bilayer alongside the phospholipids, has a moderating effect on fluidity, restraining excessive fluidity at higher temperatures while helping prevent the membrane from becoming too rigid at lower ones, keeping overall membrane fluidity within a functional range across a range of temperatures."
-    }
-  ],
-
-
-  "D3.2": [
-    {
-      label: "1",
-      heading: "Genes, alleles, and loci",
-      level: "SL",
-      text: "Every gene occupies a fixed position on a chromosome, called its **locus**. Because diploid organisms inherit one copy of each chromosome from each parent, they carry two copies of every gene, sitting at the same locus on a pair of homologous chromosomes. Different versions of a gene, arising historically from mutation, are called **alleles**.\n\nAn individual's **genotype** is the specific combination of alleles it carries for a gene, while its **phenotype** is the observable trait that results, which may also be influenced by the environment. If the two alleles at a locus are identical, the organism is described as **homozygous**; if they differ, it is **heterozygous**."
-    },
-    {
-      label: "2",
-      heading: "Dominant and recessive alleles",
-      level: "SL",
-      text: "A **dominant allele** produces its associated phenotype whenever it is present in the genotype, whether the organism is homozygous or heterozygous for it. A **recessive allele** only produces its phenotype when no dominant allele is present, that is, only in the homozygous recessive genotype.\n\nBy convention, a dominant allele is represented with an uppercase letter and its recessive counterpart with the corresponding lowercase letter, for example A and a."
-    },
-    {
-      label: "3",
-      heading: "Monohybrid crosses and Punnett grids",
-      level: "SL",
-      text: "A **monohybrid cross** tracks the inheritance of a single gene between two parents. The possible gametes each parent can produce, and the possible genotype combinations in the offspring, can be predicted systematically using a Punnett grid.\n\nCrossing two heterozygotes for a gene with simple dominant/recessive inheritance produces the classic 3:1 phenotypic ratio in the offspring, three individuals showing the dominant phenotype for every one showing the recessive phenotype. This ratio is a probability, describing the expected outcome across a large number of offspring, not a guaranteed outcome for any small sample.",
-      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Punnett_Square.svg",
-      imageCaption: "A Punnett grid for a monohybrid cross between two heterozygotes, giving the expected 3:1 phenotypic ratio."
-    },
-    {
-      label: "4",
-      heading: "Test crosses",
-      level: "SL",
-      text: "An organism showing a dominant phenotype could be either homozygous dominant or heterozygous, its genotype cannot be determined from appearance alone. A **test cross** resolves this ambiguity: the individual of unknown genotype is crossed with a homozygous recessive individual.\n\nIf any offspring display the recessive phenotype, the unknown parent must have carried a recessive allele and was therefore heterozygous, since a homozygous dominant parent could never pass on a recessive allele to any offspring."
-    },
-    {
-      label: "5",
-      heading: "Codominance and multiple alleles",
-      level: "SL",
-      text: "Not all genes follow simple dominant/recessive inheritance. In **codominance**, both alleles present in a heterozygote are fully and simultaneously expressed in the phenotype, rather than one masking the other.\n\nThe ABO blood group system illustrates both codominance and multiple alleles at once. Three alleles exist for this gene: IA and IB, which are codominant with one another, and i, which is recessive to both. This produces four phenotypes (A, B, AB and O) from six possible genotypes, since both IAIA and IAi produce blood type A, and both IBIB and IBi produce blood type B.",
-      image: "https://commons.wikimedia.org/wiki/Special:FilePath/ABO_Blood_Group_Phenotypes.jpg",
-      imageCaption: "The four ABO blood group phenotypes and the genotypes that produce each of them."
-    },
-    {
-      label: "6",
-      heading: "Sex linkage",
-      level: "HL",
-      text: "Genes located on the X chromosome show a distinct inheritance pattern because of the difference between the sex chromosomes: females carry two X chromosomes, while males carry one X and one much smaller Y chromosome, which carries very few genes.\n\nAs a consequence, a male needs only a single copy of a recessive X-linked allele to display the associated recessive phenotype, since there is no second X chromosome present to carry a masking dominant allele. This explains why conditions such as red-green colour blindness and haemophilia occur substantially more often in males than in females, and why they characteristically appear to skip a generation when carried, unexpressed, by a heterozygous ('carrier') female.",
-      tip: { label: "Exam tip", text: "For sex-linked crosses, always write the alleles as superscripts on the X chromosome itself, not as free-floating letters. This notation is expected at DP level and makes it far easier to track inheritance correctly." }
-    }
-  ],
-
-  "C4.1": [
-    {
-      label: "C4.1.1",
-      heading: "Defining a population",
-      level: "SL",
-      text: "A **population** is a group of interacting organisms of the same species living in the same area at the same time. Members of a population normally interbreed with one another, and it is this reproductive connection, rather than simple geographic proximity, that is used to distinguish one population of a species from a separate, reproductively isolated population of the same species living elsewhere."
-    },
-    {
-      label: "C4.1.2 / C4.1.3",
-      heading: "Estimating population size by random sampling",
-      level: "SL",
-      text: "Counting every individual in a population is rarely practical, so ecologists instead estimate population size using **random sampling**, examining a representative subset of a habitat and using it to infer the population as a whole. Randomness in where samples are taken is essential to avoid bias, if sampling locations are chosen non-randomly (for instance, always in the most convenient or most visibly populated spots), the resulting estimate will systematically over- or under-represent the true population.\n\nEven with proper randomisation, some **sampling error**, the difference between the estimate obtained and the true population size, is unavoidable, since a sample is never a perfect miniature of the whole population. For **quadrat sampling**, used to estimate the population size of sessile (non-moving) organisms such as most plants, a number of randomly placed quadrats of known area are used to count individuals, and the standard deviation of the counts per quadrat gives a measure of how evenly the population is distributed across the habitat."
-    },
-    {
-      label: "C4.1.4",
-      heading: "Capture-mark-release-recapture and the Lincoln index",
-      level: "SL",
-      text: "For motile (mobile) species, population size is instead commonly estimated using **capture-mark-release-recapture**: a sample of individuals is captured, marked in some harmless way, and released back into the population; after allowing time for the marked individuals to redistribute themselves randomly among the rest of the population, a second sample is captured and the proportion of marked individuals within it is recorded.\n\nThe **Lincoln index** uses this data to estimate total population size: population size = (number initially marked × total number recaptured) ÷ number of marked individuals recaptured. This method assumes, among other things, that the marked individuals mix fully and randomly back into the population, and that the marking itself does not affect an individual's survival or behaviour."
-    },
-    {
-      label: "C4.1.5 / C4.1.6",
-      heading: "Carrying capacity and negative feedback",
-      level: "SL",
-      text: "**Carrying capacity** is the maximum population size that a given environment can sustainably support over the long term, determined by the availability of limited resources such as food, water, space, and shelter. As a population approaches its carrying capacity, competition for these limited resources intensifies.\n\nPopulation size is regulated around the carrying capacity through **negative feedback**: as population density rises, density-dependent factors such as competition, predation, and disease transmission become more intense, reducing the population's growth rate and pushing it back down toward a sustainable level; conversely, if the population falls well below carrying capacity, reduced competition allows growth to accelerate again."
-    },
-    {
-      label: "C4.1.7 / C4.1.8",
-      heading: "Limiting factors and population growth models",
-      level: "SL",
-      text: "Factors that restrict population growth are classified as either **density-dependent**, having a proportionally larger effect as population density increases (such as food availability, disease, and predation), or **density-independent**, affecting a population by roughly the same degree regardless of its size (such as a sudden extreme weather event).\n\nPopulation growth can be modelled in two idealised forms. **Exponential growth** describes unrestricted growth under conditions of abundant resources and low competition, producing an ever-steepening curve. **Sigmoidal (logistic) growth** instead accounts for density-dependent limiting factors, producing an S-shaped curve that rises steeply while resources remain abundant, then levels off as the population approaches carrying capacity. Both are simplified models of real population dynamics, useful for understanding general patterns but rarely capturing the full complexity of a real ecosystem.",
-      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Logistic_Carrying_Capacity.svg",
-      imageCaption: "A sigmoid (S-shaped) population growth curve levelling off at the carrying capacity, K."
-    },
-    {
-      label: "C4.1.9",
-      heading: "Intraspecific competition and cooperation",
-      level: "SL",
-      text: "Members of the same population compete with one another for the same limited resources, since they share identical needs, this **intraspecific competition** is generally more intense than competition between different species, and it is the primary density-dependent mechanism that limits a population's growth as it approaches carrying capacity. Some species also show **intraspecific cooperation**, such as cooperative hunting or communal defence against predators, which can improve the survival and reproductive success of individuals within a group beyond what they could achieve alone, even while those same individuals continue to compete with one another for other resources."
-    },
-    {
-      label: "C4.1.10",
-      heading: "Communities",
-      level: "SL",
-      text: "A **community** consists of all the populations of different species that live and interact within a given area, encompassing every layer of interaction, from competition and predation to mutualism, that connects species to one another and, collectively, drives how the ecosystem as a whole functions."
-    },
-    {
-      label: "C4.1.11 / C4.1.12 / C4.1.13",
-      heading: "Categories of interspecific interaction",
-      level: "SL",
-      text: "Species within a community interact in several distinct, classifiable ways, each with different ecological significance. In **competition**, two species require the same limited resource, and both are disadvantaged. In **predation**, one species (the predator) kills and consumes another (the prey), benefiting at the prey's expense. In **herbivory**, an animal consumes a plant, benefiting at the plant's expense without necessarily killing it outright. In **parasitism**, one species benefits at the sustained expense of a host, typically without killing it, distinguishing it from predation; **pathogenicity** is a related case in which a microorganism causes disease in a host. In **mutualism**, both interacting species benefit, as in the relationship between a flowering plant and its pollinator.\n\nThese interactions matter ecologically because they shape which species can coexist in a community, how energy and resources flow through it, and how stable the community is overall, removing or introducing a single strongly interacting species can have consequences that cascade through many others."
-    },
-    {
-      label: "C4.1.14 / C4.1.15",
-      heading: "Invasive species",
-      level: "SL",
-      text: "An **invasive species** is one introduced, whether deliberately or accidentally, to an area outside its native range, where it establishes itself and causes ecological or economic harm, often by outcompeting, preying on, or otherwise disrupting native (endemic) species that have no prior evolutionary experience of it. Human activity is the principal driver behind the introduction and spread of most invasive species, through routes including global trade and transport, the deliberate introduction of species for agriculture or pest control, and the accidental release of pets or garden species into the wild."
-    },
-    {
-      label: "C4.1.16 / C4.1.17 / C4.1.18 / C4.1.19",
-      heading: "Testing for interspecific competition using chi-squared",
-      level: "SL",
-      text: "Whether two species are actually competing for the same resources in a habitat can be tested statistically, for instance by comparing how often the two species are found together in the same sampling location against how often that would be expected purely by chance if they were distributed independently of one another.\n\nThe **chi-squared test** is commonly used for this purpose: it compares observed frequencies (from field sampling) against the frequencies expected under a null hypothesis of no association between the two species, producing a test statistic that can be compared against a critical value to determine whether any observed association is statistically significant, or better explained by random chance. As with any statistical test, the chi-squared test has limitations, including the general requirement for reasonably large sample and expected-frequency sizes to give a reliable result, so its conclusions should be evaluated critically rather than accepted automatically."
-    },
-    {
-      label: "C4.1.20 / C4.1.21",
-      heading: "Predator-prey dynamics and top-down versus bottom-up control",
-      level: "SL",
-      text: "Predator and prey populations frequently show cyclical fluctuations over time, since a rise in prey numbers provides more food for predators, allowing the predator population to grow, which in turn increases predation pressure and drives prey numbers back down, followed by a corresponding decline in predators once prey become scarce; the long-term Canada lynx and snowshoe hare population data is a well-documented real-world case study of this pattern.\n\nCommunities can be regulated by **top-down control**, in which predators limit the abundance of species lower in the food chain (as famously seen with sea otters controlling sea urchin populations in kelp forests), or by **bottom-up control**, in which the availability of resources such as nutrients or primary producers limits the abundance of species higher up the food chain; real communities are often shaped by some combination of both forms of control operating together.",
-      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Predator prey curve.png",
-      imageCaption: "A classic predator-prey population cycle: the predator population rises and falls with a short time lag behind the prey population."
-    },
-    {
-      label: "C4.1.22",
-      heading: "Allelopathy and antibiotic secretion as competitive strategies",
-      level: "SL",
-      text: "Some organisms gain a competitive advantage not through direct resource competition but by chemically suppressing their competitors. **Allelopathy**, seen in some plants, involves releasing chemical compounds into the surrounding soil that inhibit the germination or growth of competing plant species nearby, effectively reducing competition for light, water, and nutrients before it can occur. **Antibiotic secretion**, seen in some fungi and bacteria, serves an analogous function in the microbial world, releasing compounds that kill or inhibit competing microorganisms in the immediate vicinity, securing resources and space for the producing organism."
-    }
-  ],
-
-
   "D2.3": [
     {
       label: "D2.3.1",
@@ -292,9 +72,9 @@ const CONTENT = {
       label: "D2.3.4-6",
       heading: "How cells respond to hypotonic and hypertonic solutions",
       level: "SL",
+      text: "A solution with a lower solute concentration than the cell is **hypotonic** to it, water moves in. A solution with a higher solute concentration is **hypertonic**, water moves out. A solution with the same solute concentration is isotonic, there is no net water movement.\n\nAn animal cell, having no cell wall, will swell and can burst in a hypotonic solution, and will shrink in a hypertonic one. A plant cell behaves differently because its cell wall resists expansion: in a hypotonic solution it swells only until **turgor pressure** builds up enough to stop further net water entry, becoming turgid rather than bursting, while in a hypertonic solution it undergoes **plasmolysis**, the protoplast shrinking away from the wall entirely.",
       image: "https://commons.wikimedia.org/wiki/Special:FilePath/Turgor_pressure_on_plant_cells_diagram.svg",
-      imageCaption: "A plant cell in hypotonic, isotonic, and hypertonic solutions, showing turgid, normal, and plasmolysed states.",
-      text: "A solution with a lower solute concentration than the cell is **hypotonic** to it, water moves in. A solution with a higher solute concentration is **hypertonic**, water moves out. A solution with the same solute concentration is isotonic, there is no net water movement.\n\nAn animal cell, having no cell wall, will swell and can burst in a hypotonic solution, and will shrink in a hypertonic one. A plant cell behaves differently because its cell wall resists expansion: in a hypotonic solution it swells only until **turgor pressure** builds up enough to stop further net water entry, becoming turgid rather than bursting, while in a hypertonic solution it undergoes **plasmolysis**, the protoplast shrinking away from the wall entirely."
+      imageCaption: "A plant cell in hypotonic, isotonic, and hypertonic solutions, showing turgid, normal, and plasmolysed states."
     },
     {
       label: "D2.3.7",
@@ -313,6 +93,12 @@ const CONTENT = {
       heading: "Solute potential and pressure potential",
       level: "HL",
       text: "In a walled plant cell, water potential has two contributing components: **solute potential** (&Psi;s), which is always zero or negative and becomes more negative with more dissolved solute, and **pressure potential** (&Psi;p), the physical pressure of the protoplast pushing against the cell wall, usually positive in a turgid cell. The two combine as &Psi;w = &Psi;s + &Psi;p, which makes it possible to calculate any one of the three values given the other two, a common exam calculation."
+    },
+    {
+      label: "D2.3.11",
+      heading: "Explaining water movement in plant tissue using water potential",
+      level: "HL",
+      text: "The solute potential and pressure potential model can be used to explain exactly what happens when plant tissue is placed into solutions of different concentrations. In a strongly hypotonic solution, water enters the cells by osmosis, increasing pressure potential as the protoplast pushes against the cell wall, until pressure potential rises enough to bring the cell's overall water potential into balance with the surrounding solution, at which point net water entry stops.\n\nIn a hypertonic solution, water instead leaves the cells, pressure potential falls (as the protoplast no longer presses firmly against the wall) and can reach zero once **plasmolysis** begins; beyond this point, further water loss lowers the cell's solute potential (since the remaining solutes become more concentrated within a shrinking volume) rather than its pressure potential, which is why measuring the point at which plasmolysis just begins across a range of external solute concentrations allows a plant tissue's own solute potential to be estimated experimentally."
     }
   ],
 
@@ -339,9 +125,9 @@ const CONTENT = {
       label: "B1.1.5",
       heading: "Starch and glycogen as energy storage polysaccharides",
       level: "SL",
+      text: "Starch (in plants) and glycogen (in animals) are both **polysaccharides** built from alpha-glucose monomers joined by 1-4 glycosidic bonds, which naturally makes the chain curl into a coil rather than lying flat. Starch is a mixture of amylose (an unbranched, tightly coiled chain) and amylopectin (branched, with occasional 1-6 glycosidic bonds roughly every 20-25 glucose units). Glycogen follows the same basic pattern as amylopectin but is far more heavily branched.\n\nThat branching is not incidental, more branch points mean more free ends, and each end is a place where glucose can be added or removed, so a highly branched molecule like glycogen can be built up or broken down for energy much faster than a less-branched one, exactly what an animal's fluctuating energy demands require.",
       image: "https://commons.wikimedia.org/wiki/Special:FilePath/219_Three_Important_Polysaccharides-01.jpg",
-      imageCaption: "Amylose, amylopectin, glycogen, and cellulose, showing how alpha and beta glucose linkages give each a different shape.",
-      text: "Starch (in plants) and glycogen (in animals) are both **polysaccharides** built from alpha-glucose monomers joined by 1-4 glycosidic bonds, which naturally makes the chain curl into a coil rather than lying flat. Starch is a mixture of amylose (an unbranched, tightly coiled chain) and amylopectin (branched, with occasional 1-6 glycosidic bonds roughly every 20-25 glucose units). Glycogen follows the same basic pattern as amylopectin but is far more heavily branched.\n\nThat branching is not incidental, more branch points mean more free ends, and each end is a place where glucose can be added or removed, so a highly branched molecule like glycogen can be built up or broken down for energy much faster than a less-branched one, exactly what an animal's fluctuating energy demands require."
+      imageCaption: "Amylose, amylopectin, glycogen, and cellulose, showing how alpha and beta glucose linkages give each a different shape."
     },
     {
       label: "B1.1.6",
@@ -416,9 +202,9 @@ const CONTENT = {
       label: "C1.1.4-7",
       heading: "Enzyme structure and the active site",
       level: "SL",
+      text: "An enzyme is a globular protein whose folded three-dimensional structure creates an **active site**, a pocket shaped and chemically suited to bind a specific substrate. Substrate molecules collide with the enzyme through normal random molecular motion, and when a collision brings a substrate into the active site with the correct orientation, it binds. The active site is not a rigid lock, it subtly changes shape as the substrate binds, known as induced fit, improving the fit and helping to strain particular bonds in the substrate to drive the reaction forward. This close structural relationship between active site shape and substrate shape is exactly why an enzyme's specificity depends on its precise three-dimensional structure.",
       image: "https://commons.wikimedia.org/wiki/Special:FilePath/Induced fit model en.svg",
-      imageCaption: "The induced fit model: the active site subtly changes shape as the substrate binds.",
-      text: "An enzyme is a globular protein whose folded three-dimensional structure creates an **active site**, a pocket shaped and chemically suited to bind a specific substrate. Substrate molecules collide with the enzyme through normal random molecular motion, and when a collision brings a substrate into the active site with the correct orientation, it binds. The active site is not a rigid lock, it subtly changes shape as the substrate binds, known as induced fit, improving the fit and helping to strain particular bonds in the substrate to drive the reaction forward. This close structural relationship between active site shape and substrate shape is exactly why an enzyme's specificity depends on its precise three-dimensional structure."
+      imageCaption: "The induced fit model: the active site subtly changes shape as the substrate binds."
     },
     {
       label: "C1.1.8",
@@ -443,6 +229,36 @@ const CONTENT = {
       heading: "Metabolism generates heat",
       level: "HL",
       text: "No metabolic reaction converts energy with perfect efficiency, some energy is inevitably released as heat at each step of a metabolic pathway. Across the huge number of reactions happening simultaneously in an organism, this heat output adds up to a significant and unavoidable by-product of metabolism, and in endothermic animals this metabolically generated heat is actively used to help maintain a stable body temperature."
+    },
+    {
+      label: "C1.1.13",
+      heading: "Cyclical and linear metabolic pathways",
+      level: "HL",
+      text: "Metabolic pathways can be organised in two distinct patterns. **Linear pathways** proceed through a fixed sequence of steps from a starting substrate to a final product, such as glycolysis, converting glucose to pyruvate through a defined series of enzyme-catalysed reactions.\n\n**Cyclical pathways**, by contrast, regenerate their own starting molecule with each turn, allowing the same set of enzymes to process a continuous supply of new substrate. The **Krebs cycle** regenerates oxaloacetate with each turn, ready to accept another incoming acetyl group, and the **Calvin cycle** similarly regenerates RuBP, ready to fix another molecule of carbon dioxide, illustrating how a cyclical arrangement allows a pathway to keep running indefinitely as long as an ongoing supply of the relevant input is available."
+    },
+    {
+      label: "C1.1.14",
+      heading: "Allosteric sites and non-competitive inhibition",
+      level: "HL",
+      text: "Some enzymes have, in addition to their active site, a separate binding location called an **allosteric site**. When a specific molecule binds to this allosteric site, it causes a conformational change that alters the shape of the active site elsewhere on the enzyme, reducing or eliminating its ability to bind substrate.\n\nBecause this kind of **non-competitive inhibitor** binds at a location entirely separate from the active site, its inhibitory effect cannot be overcome simply by increasing substrate concentration, unlike a competitive inhibitor; once bound, it will continue to distort the active site and block catalysis regardless of how much substrate is present, though the binding itself is reversible."
+    },
+    {
+      label: "C1.1.15",
+      heading: "Competitive inhibition",
+      level: "HL",
+      text: "A **competitive inhibitor** closely resembles an enzyme's normal substrate in shape, allowing it to bind reversibly to the active site itself and physically block the true substrate from binding there instead. Because the inhibitor and substrate are competing directly for the same limited number of active sites, increasing substrate concentration sufficiently can outcompete the inhibitor, restoring normal reaction rate.\n\n**Statins**, a widely used class of cholesterol-lowering drug, work as competitive inhibitors of an enzyme central to cholesterol synthesis, closely resembling the enzyme's natural substrate and thereby reducing the rate at which the body produces new cholesterol."
+    },
+    {
+      label: "C1.1.16",
+      heading: "Feedback inhibition",
+      level: "HL",
+      text: "**Feedback inhibition** regulates a metabolic pathway by having its own end product act as an inhibitor of an earlier enzyme within that same pathway, typically by binding an allosteric site. As the end product accumulates, it increasingly inhibits this earlier enzyme, slowing the pathway's own rate of production and preventing the wasteful overproduction of a substance beyond what the cell currently needs.\n\nThe biosynthesis of the amino acid isoleucine provides a well studied example: as isoleucine accumulates, it binds to and inhibits the first enzyme in its own synthesis pathway, automatically throttling further isoleucine production once a sufficient supply is already available, a self-regulating mechanism that requires no additional signal beyond the pathway's own product."
+    },
+    {
+      label: "C1.1.17",
+      heading: "Mechanism-based inhibition",
+      level: "HL",
+      text: "**Mechanism-based inhibitors** bind irreversibly to an enzyme's active site, permanently changing its chemical structure and destroying its catalytic ability for good, unlike the reversible binding seen in competitive or non-competitive inhibition.\n\n**Penicillin** is a well known example: it irreversibly binds to and inactivates transpeptidase enzymes that bacteria require to build their cell walls, causing the affected bacteria to weaken and die since they can no longer maintain a functional cell wall; because this binding is permanent, some bacteria have evolved resistance by producing enzymes that break down penicillin before it can reach and permanently disable its target."
     }
   ],
 
@@ -457,9 +273,9 @@ const CONTENT = {
       label: "A1.2.2",
       heading: "Components of a nucleotide",
       level: "SL",
+      text: "A **nucleotide** has three parts: a five-carbon (pentose) sugar, a phosphate group attached to one side of the sugar, and a nitrogenous base attached to the other side. The sugar is deoxyribose in DNA and ribose in RNA, and this single difference in the sugar is part of what gives the two molecules their different chemical stability and roles.",
       image: "https://commons.wikimedia.org/wiki/Special:FilePath/DNA_molecular_structure,_showing_individual_nucleotides_and_bonds.jpg",
-      imageCaption: "The molecular structure of DNA, showing individual nucleotides linked into a sugar-phosphate backbone.",
-      text: "A **nucleotide** has three parts: a five-carbon (pentose) sugar, a phosphate group attached to one side of the sugar, and a nitrogenous base attached to the other side. The sugar is deoxyribose in DNA and ribose in RNA, and this single difference in the sugar is part of what gives the two molecules their different chemical stability and roles."
+      imageCaption: "The molecular structure of DNA, showing individual nucleotides linked into a sugar-phosphate backbone."
     },
     {
       label: "A1.2.3",
@@ -486,10 +302,28 @@ const CONTENT = {
       text: "DNA consists of two nucleotide strands wound into a **double helix**, held together by hydrogen bonds between bases on opposite strands, following strict **complementary base pairing**: adenine pairs with thymine, cytosine pairs with guanine. The two strands run in opposite directions to one another, described as antiparallel, which matters directly for how the molecule is copied (see D1.1) and read (see D1.2)."
     },
     {
+      label: "A1.2.7",
+      heading: "Differences between DNA and RNA",
+      level: "SL",
+      text: "DNA and RNA differ in three key structural respects. DNA is normally **double-stranded**, forming a double helix, while RNA is normally **single-stranded**. DNA's sugar is **deoxyribose**, lacking an oxygen atom present in RNA's sugar, **ribose**. And while both nucleic acids share the bases adenine, guanine, and cytosine, DNA uses **thymine** as its fourth base where RNA instead uses **uracil**.\n\nThese structural differences suit each molecule to its distinct role: DNA's stable, double-stranded structure is well suited to long-term storage of genetic information, while RNA's more flexible, single-stranded structure suits its shorter-term roles in gene expression, such as carrying a temporary working copy of a gene's information from the nucleus to the ribosome."
+    },
+    {
+      label: "A1.2.8",
+      heading: "Complementary base pairing in replication and expression",
+      level: "SL",
+      text: "**Complementary base pairing**, adenine with thymine (or uracil in RNA), and guanine with cytosine, is the underlying principle that allows genetic information to be both accurately copied and correctly expressed. Because each base can only pair reliably with one specific partner, the sequence of one strand of DNA fully determines the sequence of its partner strand, or of an RNA molecule transcribed from it.\n\nThis predictable pairing is what allows DNA replication to produce two identical copies of a gene from one original, and what allows the code in a gene to be faithfully copied into mRNA during transcription, and read again by tRNA during translation, all using the same fundamental base-pairing rule."
+    },
+    {
       label: "A1.2.9",
       heading: "The information capacity of DNA",
       level: "HL",
       text: "Because each position along a DNA strand can hold any one of four possible bases, the number of distinct sequences possible even in a short stretch of DNA is astronomically large, and grows exponentially with length. This gives DNA an effectively limitless capacity to store unique genetic information, more than enough to encode the full complexity of any known organism."
+    },
+    {
+      label: "A1.2.10",
+      heading: "Conservation of the genetic code as evidence of universal common ancestry",
+      level: "SL",
+      text: "With only rare exceptions, every living organism uses the same **genetic code**, the same set of rules mapping each three-base codon to the same specific amino acid, regardless of how distantly related that organism is to any other. Bacteria, fungi, plants, and animals all translate the codon for methionine, for example, in exactly the same way.\n\nThis near-universal conservation is difficult to explain except as evidence that all known life shares a single common ancestor: it seems highly unlikely that such a specific, arbitrary set of coding rules would have arisen independently more than once, so its shared presence across all domains of life points to it having already been established in a **last universal common ancestor**, before the major lineages of life diverged from one another."
     },
     {
       label: "A1.2.11",
@@ -508,6 +342,12 @@ const CONTENT = {
       heading: "Nucleosome structure",
       level: "HL",
       text: "In eukaryotes, DNA does not float freely in the nucleus, it is wound around clusters of proteins called histones to form a **nucleosome**, the basic packaging unit of chromatin. This packaging is what allows an enormous length of DNA to be compacted to fit inside a nucleus, and the tightness of that packaging in a given region is also a way of controlling whether the genes in that region are accessible for transcription."
+    },
+    {
+      label: "A1.2.14",
+      heading: "The Hershey-Chase experiment",
+      level: "SL",
+      text: "Before the 1950s, it remained uncertain whether genes were made of DNA or protein, since both are present in cells and both were considered plausible candidates. The **Hershey-Chase experiment** helped resolve this question using bacteriophages, viruses that inject their genetic material into a bacterial cell while leaving their protein coat outside.\n\nBy separately labelling the phage's DNA and its protein coat with different radioactive markers, then allowing the phages to infect bacteria, Hershey and Chase found that the radioactive label from the DNA, but not from the protein, was subsequently found inside the infected bacteria and in the next generation of phages produced, providing strong evidence that DNA, not protein, is the material that carries genetic information from one generation to the next."
     },
     {
       label: "A1.2.15",
@@ -534,9 +374,9 @@ const CONTENT = {
       label: "D1.1.3",
       heading: "Helicase and DNA polymerase",
       level: "SL",
+      text: "**Helicase** unwinds the double helix by breaking the hydrogen bonds between base pairs, exposing two single strands to act as templates. **DNA polymerase** then builds a new complementary strand by adding free nucleotides opposite each template base, following the same base-pairing rules used throughout DNA and RNA.",
       image: "https://commons.wikimedia.org/wiki/Special:FilePath/DNA_replication_en.svg",
-      imageCaption: "The replication fork: helicase unwinds the double helix while DNA polymerase builds new strands.",
-      text: "**Helicase** unwinds the double helix by breaking the hydrogen bonds between base pairs, exposing two single strands to act as templates. **DNA polymerase** then builds a new complementary strand by adding free nucleotides opposite each template base, following the same base-pairing rules used throughout DNA and RNA."
+      imageCaption: "The replication fork: helicase unwinds the double helix while DNA polymerase builds new strands."
     },
     {
       label: "D1.1.4 / D1.1.5",
@@ -593,9 +433,9 @@ const CONTENT = {
       label: "D2.1.6 / D2.1.7",
       heading: "The phases of mitosis",
       level: "SL",
+      text: "In prophase, chromosomes condense and become visible, and the nuclear envelope breaks down. In metaphase, chromosomes line up along the cell's equator, attached to spindle fibres. In anaphase, spindle fibres shorten and pull sister chromatids apart to opposite poles. In telophase, two new nuclear envelopes form around each set of chromosomes. These stages can be identified directly from photomicrographs, based on the visible position and condensation state of the chromosomes.",
       image: "https://commons.wikimedia.org/wiki/Special:FilePath/Mitosis_Stages.svg",
-      imageCaption: "The stages of mitosis, from interphase through prophase, metaphase, anaphase, and telophase.",
-      text: "In prophase, chromosomes condense and become visible, and the nuclear envelope breaks down. In metaphase, chromosomes line up along the cell's equator, attached to spindle fibres. In anaphase, spindle fibres shorten and pull sister chromatids apart to opposite poles. In telophase, two new nuclear envelopes form around each set of chromosomes. These stages can be identified directly from photomicrographs, based on the visible position and condensation state of the chromosomes."
+      imageCaption: "The stages of mitosis, from interphase through prophase, metaphase, anaphase, and telophase."
     },
     {
       label: "D2.1.8 / D2.1.9",
@@ -622,6 +462,18 @@ const CONTENT = {
       heading: "Cyclins and cell cycle control",
       level: "HL",
       text: "Progression through the cell cycle is controlled by proteins called **cyclins**, whose concentrations rise and fall at specific points in the cycle. Cyclins activate enzymes that trigger the next stage of the cycle only once conditions are right, this checkpoint system is what normally prevents a cell from dividing with damaged or incompletely replicated DNA, and its breakdown is a central feature of how cancer develops."
+    },
+    {
+      label: "D2.1.16",
+      heading: "Mutations in cell cycle control genes",
+      level: "HL",
+      text: "Genes that normally regulate the cell cycle can, if mutated, disrupt that control and contribute to cancer. **Proto-oncogenes** normally promote cell division in a controlled way, but a mutation can convert a proto-oncogene into an **oncogene**, a version that promotes division excessively or inappropriately, driving uncontrolled proliferation.\n\n**Tumour suppressor genes** normally act in the opposite direction, restraining cell division or triggering programmed cell death when damage is detected; a mutation that disables a tumour suppressor gene removes this restraint, again permitting uncontrolled cell division. Cancer typically requires the accumulation of several such mutations, affecting both categories of gene, within the same cell lineage."
+    },
+    {
+      label: "D2.1.17",
+      heading: "Tumours and the mitotic index",
+      level: "HL",
+      text: "A **benign tumour** grows in a contained way, without invading surrounding tissue or spreading elsewhere in the body, while a **malignant tumour** grows more aggressively, invading neighbouring tissue and often spreading to form **secondary tumours** at distant sites, a process called metastasis, having originated from a single **primary tumour**. It is this capacity for invasion and metastasis that distinguishes a malignant, cancer-causing tumour from a benign one.\n\nBecause a tumour's cells often divide more rapidly than the surrounding normal tissue, examining the **mitotic index** (the proportion of cells visibly undergoing mitosis in a sample) of a biopsy can provide a useful indicator of how aggressively a tumour is growing, with a higher mitotic index generally reflecting a more rapidly dividing, and often more aggressive, tumour."
     }
   ],
 
@@ -672,26 +524,62 @@ const CONTENT = {
       label: "B1.2.8",
       heading: "Secondary structure: pleating and coiling",
       level: "HL",
+      text: "A polypeptide's **secondary structure** consists of local, repeating folding patterns held together by hydrogen bonds along the backbone, an alpha helix, where the chain coils into a spiral, and a beta pleated sheet, where sections of the chain lie alongside each other in a folded, zig-zag arrangement. Most proteins contain a mix of both, along with less regular regions, distributed across the length of the chain.",
       image: "https://commons.wikimedia.org/wiki/Special:FilePath/Levels_of_structural_organization_of_a_protein.svg",
-      imageCaption: "The four levels of protein structure: primary, secondary, tertiary, and quaternary.",
-      text: "A polypeptide's **secondary structure** consists of local, repeating folding patterns held together by hydrogen bonds along the backbone, an alpha helix, where the chain coils into a spiral, and a beta pleated sheet, where sections of the chain lie alongside each other in a folded, zig-zag arrangement. Most proteins contain a mix of both, along with less regular regions, distributed across the length of the chain."
+      imageCaption: "The four levels of protein structure: primary, secondary, tertiary, and quaternary."
+    },
+    {
+      label: "B1.2.9",
+      heading: "Bonds that stabilise tertiary structure",
+      level: "HL",
+      text: "A protein's **tertiary structure**, its overall three-dimensional folded shape, is held together by several types of interaction between amino acid R-groups scattered throughout the chain. **Hydrogen bonds** and **ionic bonds** can form between appropriately charged or polar R-groups, while **hydrophobic interactions** cause non-polar R-groups to cluster together, away from surrounding water.\n\n**Disulfide bonds**, a specific type of strong covalent bond, can form between two cysteine amino acids that end up positioned close together once the chain folds, providing particularly strong, stable cross-links that help lock the folded structure in place. Together, these varied interactions, arising from the specific sequence and chemical properties of the amino acids present, determine the final three-dimensional shape a protein settles into."
+    },
+    {
+      label: "B1.2.10",
+      heading: "Polar and non-polar amino acids in tertiary structure",
+      level: "HL",
+      text: "In a protein that is soluble in water, **hydrophobic (non-polar) amino acids** tend to cluster together in the interior of the folded structure, away from the surrounding aqueous environment, while **hydrophilic (polar) amino acids** tend to be positioned on the protein's exterior surface, where they can interact favourably with surrounding water molecules.\n\n**Integral membrane proteins** show a related but distinct pattern: regions of the protein that sit within the hydrophobic core of the membrane are rich in non-polar amino acids, helping that section embed stably within the lipid bilayer, while regions exposed to the aqueous environment on either side of the membrane are correspondingly more polar, illustrating how the distribution of polar and non-polar amino acids directly shapes where and how a protein sits within its environment."
+    },
+    {
+      label: "B1.2.11",
+      heading: "Quaternary structure",
+      level: "HL",
+      text: "**Quaternary structure** describes proteins built from two or more separate polypeptide chains assembled together into one functional unit. In a **non-conjugated protein**, made up only of polypeptide chains, insulin is a well studied example, consisting of two separate polypeptide chains linked by disulfide bonds.\n\n**Conjugated proteins** include a non-polypeptide component alongside their polypeptide chains; **haemoglobin** is a classic example, consisting of four polypeptide chains (two alpha and two beta subunits), each associated with a non-protein haem group responsible for binding oxygen, illustrating how quaternary structure can combine multiple protein subunits with an additional functional component to build a considerably more elaborate final structure than any single polypeptide chain alone could form."
+    },
+    {
+      label: "B1.2.12",
+      heading: "Form and function in globular and fibrous proteins",
+      level: "HL",
+      text: "**Globular proteins**, such as insulin, fold into a compact, roughly spherical overall shape, well suited to functions requiring solubility and a precisely shaped active or binding site, such as enzyme catalysis or hormone signalling. **Fibrous proteins**, such as collagen, instead form long, extended, often strongly cross-linked strands, well suited to providing mechanical strength and structural support rather than solubility or precise molecular binding.\n\nThis contrast, insulin's compact, soluble globular structure suited to signalling, against collagen's elongated, cross-linked fibrous structure suited to providing tensile strength in connective tissue, illustrates the more general biological principle that a protein's overall three-dimensional shape is closely matched to the specific function it needs to perform."
     }
   ],
 
   "A2.1": [
     {
       label: "A2.1.1",
-      heading: "Why the origin of the first cell is hard to explain",
+      heading: "Conditions on early Earth",
       level: "HL",
-      text: "Modern cell theory states that new cells only arise from pre-existing cells, which raises an obvious problem: it cannot explain how the very first cell came to exist, since there was no earlier cell for it to have come from. Explaining the origin of life therefore requires a different kind of explanation, one based on non-living chemistry gradually giving rise to something capable of the basic processes of life."
+      text: "Early Earth's atmosphere is thought to have contained little or no free oxygen, along with gases such as methane, ammonia, and water vapour, with volcanic activity and intense ultraviolet radiation providing energy for chemical reactions, since there was no ozone layer to block it. The Miller-Urey experiment showed that passing electrical discharges (simulating lightning) through a comparable gas mixture could generate simple organic molecules, including amino acids, without any living cells involved, demonstrating this kind of chemistry was at least plausible.",
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Miller-Urey_experiment-en.svg",
+      imageCaption: "The Miller-Urey apparatus, used to test whether organic molecules could form under early Earth conditions."
     },
     {
       label: "A2.1.2",
-      heading: "Conditions on early Earth",
+      heading: "Cells as the smallest units of self-sustaining life",
       level: "HL",
-      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Miller-Urey_experiment-en.svg",
-      imageCaption: "The Miller-Urey apparatus, used to test whether organic molecules could form under early Earth conditions.",
-      text: "Early Earth's atmosphere is thought to have contained little or no free oxygen, along with gases such as methane, ammonia, and water vapour, with volcanic activity and intense ultraviolet radiation providing energy for chemical reactions, since there was no ozone layer to block it. The Miller-Urey experiment showed that passing electrical discharges (simulating lightning) through a comparable gas mixture could generate simple organic molecules, including amino acids, without any living cells involved, demonstrating this kind of chemistry was at least plausible."
+      text: "A **cell** is generally considered the smallest unit capable of independently carrying out all the processes of life, including metabolism, growth, and self-directed reproduction, without relying entirely on hijacking another organism's machinery to do so.\n\nThis is precisely why **viruses**, despite containing genetic material, are not considered living: a virus has no independent metabolism of its own and cannot reproduce without entirely commandeering a host cell's ribosomes and other cellular machinery, meaning it fails the basic test of self-sustaining life that even the simplest true cell satisfies."
+    },
+    {
+      label: "A2.1.3",
+      heading: "The challenge of explaining the spontaneous origin of cells",
+      level: "HL",
+      text: "Modern cells are highly complex structures that, as far as we can observe today, only ever arise from the division of an already-existing cell, no cell has ever been seen forming spontaneously from non-living matter under present-day conditions. This makes explaining how the very first cells arose a genuine scientific challenge, since it requires accounting for the origin of several complex features simultaneously.\n\nAmong the requirements scientists believe the first cells must have satisfied are some capacity for **catalysis** (speeding up useful chemical reactions), **self-replication** of key molecules, **self-assembly** of structural components, and **compartmentalisation**, the emergence of a boundary separating an internal chemical environment from the surroundings. Because the exact conditions of early Earth cannot be recreated in full, and because the first protocells left no fossil evidence, testing hypotheses about exactly how this transition occurred remains genuinely difficult."
+    },
+    {
+      label: "A2.1.4",
+      heading: "The Miller-Urey experiment",
+      level: "HL",
+      text: "The **Miller-Urey experiment** tested whether the organic building blocks of life could form spontaneously under conditions thought to resemble early Earth's atmosphere. Miller and Urey combined water, methane, ammonia, and hydrogen gas in a sealed apparatus, then passed an electrical spark through the mixture to simulate lightning, a plausible energy source on the early planet.\n\nAfter running for about a week, the experiment yielded several amino acids and other organic molecules, demonstrating that fairly simple, non-biological chemistry could plausibly generate the basic building blocks needed for life from simple inorganic starting materials, an important piece of evidence supporting hypotheses about the chemical origin of life, even though later research revised ideas about the exact composition of early Earth's atmosphere."
     },
     {
       label: "A2.1.5",
@@ -704,6 +592,12 @@ const CONTENT = {
       heading: "RNA as the presumed first genetic material",
       level: "HL",
       text: "RNA, rather than DNA, is generally presumed to have been the first genetic material, because RNA can both store information (like DNA) and catalyse chemical reactions (like an enzyme), a dual capability DNA does not have. This idea, sometimes called the RNA world hypothesis, offers a way for the very first self-replicating molecules to have functioned before more specialised molecules, DNA for storage and proteins for catalysis, took over those roles separately."
+    },
+    {
+      label: "A2.1.7",
+      heading: "Evidence for a last universal common ancestor",
+      level: "HL",
+      text: "Several independent lines of evidence point to all life on Earth descending from a single ancestral population, known as the **last universal common ancestor (LUCA)**. The near-universal genetic code, shared across every domain of life, and the presence of many genes with clearly related sequences and functions across even very distantly related organisms, would both be difficult to explain unless all life traced back to a shared origin.\n\nBiologists also consider it likely that other, independent lineages of early life may once have existed but have since gone extinct, most plausibly outcompeted by LUCA and its descendants, meaning LUCA itself may not necessarily have been the very first living cell, only the most recent ancestor common to every lineage of life that survives today."
     },
     {
       label: "A2.1.8",
@@ -736,9 +630,9 @@ const CONTENT = {
       label: "D1.2.5-7",
       heading: "Translation: mRNA, ribosomes, and tRNA",
       level: "SL",
+      text: "**Translation** is the synthesis of a polypeptide using the sequence of an mRNA molecule as instructions, and it takes place at a **ribosome**. The mRNA carries the coded message as a sequence of **codons**, the ribosome provides the site where translation happens, and **tRNA** molecules physically deliver amino acids, each tRNA has an **anticodon** that binds to its complementary codon on the mRNA through the same base-pairing rules used elsewhere in molecular biology, which is what ensures the correct amino acid is added at each step.",
       image: "https://commons.wikimedia.org/wiki/Special:FilePath/Ribosome_mRNA_translation_en.svg",
-      imageCaption: "A ribosome moving along mRNA, with tRNA molecules delivering amino acids to build the polypeptide chain.",
-      text: "**Translation** is the synthesis of a polypeptide using the sequence of an mRNA molecule as instructions, and it takes place at a **ribosome**. The mRNA carries the coded message as a sequence of **codons**, the ribosome provides the site where translation happens, and **tRNA** molecules physically deliver amino acids, each tRNA has an **anticodon** that binds to its complementary codon on the mRNA through the same base-pairing rules used elsewhere in molecular biology, which is what ensures the correct amino acid is added at each step."
+      imageCaption: "A ribosome moving along mRNA, with tRNA molecules delivering amino acids to build the polypeptide chain."
     },
     {
       label: "D1.2.8",
@@ -810,6 +704,18 @@ const CONTENT = {
       text: "The **cell** is the smallest structural and functional unit capable of carrying out all the processes of life independently. This is a foundational part of cell theory: every living organism is made of one or more cells, and every life process, metabolism, growth, response, reproduction, happens at the cellular level, even in a large multicellular organism."
     },
     {
+      label: "A2.2.2",
+      heading: "Microscopy skills",
+      level: "SL",
+      text: "Preparing and examining a **temporary mount** for light microscopy typically involves placing a thin sample on a slide, adding a drop of water or stain, and lowering a cover slip carefully at an angle to avoid trapping air bubbles. **Staining** can improve contrast, making otherwise near-transparent cell structures easier to distinguish.\n\nAn **eyepiece graticule**, a small scale visible through the eyepiece, allows the size of a specimen to be measured directly, once calibrated against a stage micrometer of known scale; from this, both the specimen's **actual size** and the microscope's **magnification** can be calculated, and a **scale bar** can be added to any photograph taken through the microscope to indicate size accurately."
+    },
+    {
+      label: "A2.2.3",
+      heading: "Developments in microscopy",
+      level: "SL",
+      text: "Advances in microscopy technique have progressively revealed finer cell detail. **Electron microscopy** achieves far higher resolution than light microscopy by using a beam of electrons rather than visible light, revealing internal organelle structure invisible to a light microscope. **Freeze fracture** prepares samples by rapidly freezing and then physically splitting them, often along natural planes such as the interior of a membrane, exposing internal structural detail for imaging.\n\n**Cryogenic electron microscopy** flash-freezes samples in a near-natural, hydrated state before imaging, avoiding some of the distortion that other preparation methods can introduce, while **fluorescent stains** and **immunofluorescence** (using fluorescently labelled antibodies to bind specific target molecules) allow particular structures or proteins to be highlighted and located precisely, even under a standard light microscope."
+    },
+    {
       label: "A2.2.4",
       heading: "Features common to all cells",
       level: "SL",
@@ -819,9 +725,9 @@ const CONTENT = {
       label: "A2.2.5 / A2.2.6",
       heading: "Prokaryotic and eukaryotic cell structure",
       level: "SL",
+      text: "A **prokaryotic** cell has no nucleus and no membrane-bound organelles, its DNA lies free in the cytoplasm as a single circular chromosome, and the cell is generally small and structurally simple. A **eukaryotic** cell has a true nucleus enclosing its DNA, along with a range of membrane-bound organelles dividing the cell into specialised compartments, and is typically much larger and more structurally complex.",
       image: "https://commons.wikimedia.org/wiki/Special:FilePath/Celltypes.svg",
-      imageCaption: "A eukaryotic cell (left) alongside a prokaryotic cell (right), drawn to comparable scale.",
-      text: "A **prokaryotic** cell has no nucleus and no membrane-bound organelles, its DNA lies free in the cytoplasm as a single circular chromosome, and the cell is generally small and structurally simple. A **eukaryotic** cell has a true nucleus enclosing its DNA, along with a range of membrane-bound organelles dividing the cell into specialised compartments, and is typically much larger and more structurally complex."
+      imageCaption: "A eukaryotic cell (left) alongside a prokaryotic cell (right), drawn to comparable scale."
     },
     {
       label: "A2.2.7",
@@ -854,6 +760,12 @@ const CONTENT = {
       heading: "Cell differentiation",
       level: "SL",
       text: "**Cell differentiation** is the process by which genetically identical cells become structurally and functionally specialised, developing into the many distinct tissue types found in a multicellular organism. Since every cell in an organism carries the same DNA, differentiation happens through differences in which genes are actively expressed in each cell, not through any change to the DNA sequence itself (see D2.2)."
+    },
+    {
+      label: "A2.2.14",
+      heading: "The evolution of multicellularity",
+      level: "HL",
+      text: "**Multicellularity** has evolved independently multiple times across the history of life, arising separately in the lineages leading to plants, animals, fungi, and several groups of algae, rather than evolving just once and being inherited by all multicellular organisms from a single common multicellular ancestor.\n\nThis repeated, independent origin suggests multicellularity offers genuine advantages under a range of circumstances: it allows a much larger overall body size than a single cell could achieve, and it allows **cell specialisation**, different cells within the same organism taking on distinct, specialised roles, an arrangement that can achieve a level of overall functional complexity no single, unspecialised cell could match alone."
     }
   ],
 
@@ -880,9 +792,39 @@ const CONTENT = {
       label: "B2.2.4",
       heading: "Mitochondrial structure and ATP production",
       level: "HL",
+      text: "The mitochondrion's structure closely matches its role in aerobic respiration (see C1.2). Its double membrane encloses a matrix containing the enzymes of the Krebs cycle at a high, useful concentration. Its inner membrane is folded into **cristae**, dramatically increasing the surface area available for the electron transport chain and ATP synthase. And the narrow intermembrane space between the two membranes allows a steep hydrogen ion gradient to build up quickly during chemiosmosis, exactly what's needed to drive efficient ATP synthesis.",
       image: "https://commons.wikimedia.org/wiki/Special:FilePath/Mitochondrion_structure.svg",
-      imageCaption: "The structure of a mitochondrion, showing the folded inner membrane (cristae) and matrix.",
-      text: "The mitochondrion's structure closely matches its role in aerobic respiration (see C1.2). Its double membrane encloses a matrix containing the enzymes of the Krebs cycle at a high, useful concentration. Its inner membrane is folded into **cristae**, dramatically increasing the surface area available for the electron transport chain and ATP synthase. And the narrow intermembrane space between the two membranes allows a steep hydrogen ion gradient to build up quickly during chemiosmosis, exactly what's needed to drive efficient ATP synthesis."
+      imageCaption: "The structure of a mitochondrion, showing the folded inner membrane (cristae) and matrix."
+    },
+    {
+      label: "B2.2.5",
+      heading: "Adaptations of the chloroplast for photosynthesis",
+      level: "HL",
+      text: "The chloroplast's internal structure closely matches the demands of photosynthesis. Its **thylakoid membranes**, folded into stacks called grana, provide a large surface area on which photosystems and the electron transport chain proteins of the light-dependent reactions are embedded, while the small internal volume enclosed by these membranes allows a proton gradient to build up rapidly across a comparatively small space during chemiosmosis.\n\nSurrounding the thylakoids, the fluid-filled **stroma** compartmentalises the enzymes and substrates of the Calvin cycle separately from the light-dependent reactions occurring at the membrane, allowing both sets of reactions to proceed efficiently within their own dedicated environment inside the same organelle."
+    },
+    {
+      label: "B2.2.6",
+      heading: "The functional benefits of the nuclear double membrane",
+      level: "HL",
+      text: "The nucleus is enclosed by a **double membrane**, perforated by **nuclear pores** that allow selective, regulated passage of molecules such as mRNA and proteins between the nucleus and cytoplasm, while still separating the nuclear interior as a distinct compartment.\n\nThis double membrane must also be capable of breaking down into small vesicles during mitosis and meiosis, temporarily dissolving the nuclear boundary so that spindle fibres can access and move the chromosomes, before reassembling around each new set of separated chromosomes once division is complete, restoring a fully functional nuclear envelope in each resulting cell."
+    },
+    {
+      label: "B2.2.7",
+      heading: "Free ribosomes versus the rough endoplasmic reticulum",
+      level: "HL",
+      text: "**Free ribosomes**, suspended directly in the cytoplasm, synthesise proteins that are intended to remain and function within the cell itself, such as enzymes used in the cell's own metabolism. **Membrane-bound ribosomes**, attached to the **rough endoplasmic reticulum**, instead synthesise proteins destined for transport elsewhere within the cell or for secretion out of the cell entirely.\n\nAs these membrane-bound ribosomes synthesise a protein, the growing polypeptide is threaded directly into the interior of the rough endoplasmic reticulum, where it can be folded and modified before being packaged into a vesicle for onward transport, a fundamentally different fate from a protein synthesised by a free ribosome and released straight into the cytoplasm."
+    },
+    {
+      label: "B2.2.8",
+      heading: "The Golgi apparatus",
+      level: "HL",
+      text: "The **Golgi apparatus** receives proteins arriving from the endoplasmic reticulum and further processes them, for example by adding carbohydrate groups, before sorting them into vesicles bound for their correct final destination, whether that is another organelle, the plasma membrane, or secretion outside the cell entirely.\n\nBy acting as this central processing and sorting hub, the Golgi apparatus ensures that proteins produced elsewhere in the cell are correctly finished and routed to exactly where they are needed, rather than simply being released without any further modification or direction."
+    },
+    {
+      label: "B2.2.9",
+      heading: "Vesicles in cells",
+      level: "HL",
+      text: "**Vesicles** are small, membrane-bound sacs used throughout the cell to transport materials between organelles, and between organelles and the plasma membrane, without those materials needing to mix directly with the surrounding cytoplasm during transit.\n\nA protein called **clathrin** plays a key role in forming many vesicles, assembling into a lattice-like coat on the cytoplasmic side of a membrane that helps pull that section of membrane inward and pinch it off into a distinct, enclosed vesicle, illustrating how a specific structural protein can shape and direct a process as fundamental as vesicle formation."
     }
   ],
 
@@ -891,9 +833,9 @@ const CONTENT = {
       label: "C1.2.1",
       heading: "ATP as the energy currency of the cell",
       level: "SL",
+      text: "**ATP** (adenosine triphosphate) is a nucleotide made of an adenine base, a ribose sugar, and three phosphate groups. Its structure makes it ideally suited as a cell's immediate energy currency: the bonds between its phosphate groups release a usable amount of energy when broken, small enough to be released in manageable amounts, but large enough to actually drive a reaction, and ATP can be regenerated and reused repeatedly rather than used up once.",
       image: "https://commons.wikimedia.org/wiki/Special:FilePath/Cellular_respiration_flowchart_(en).svg",
-      imageCaption: "An overview flowchart of cellular respiration, from glycolysis through to the electron transport chain.",
-      text: "**ATP** (adenosine triphosphate) is a nucleotide made of an adenine base, a ribose sugar, and three phosphate groups. Its structure makes it ideally suited as a cell's immediate energy currency: the bonds between its phosphate groups release a usable amount of energy when broken, small enough to be released in manageable amounts, but large enough to actually drive a reaction, and ATP can be regenerated and reused repeatedly rather than used up once."
+      imageCaption: "An overview flowchart of cellular respiration, from glycolysis through to the electron transport chain."
     },
     {
       label: "C1.2.2 / C1.2.3",
@@ -928,6 +870,12 @@ const CONTENT = {
       imageCaption: "An overview of glycolysis: glucose is progressively broken down into two molecules of pyruvate, with a net yield of ATP and reduced NAD."
     },
     {
+      label: "C1.2.10",
+      heading: "Anaerobic respiration in yeast",
+      level: "HL",
+      text: "Yeast, like humans, needs to regenerate NAD to keep glycolysis running when oxygen is unavailable, but it does so differently: rather than converting pyruvate to lactate, yeast converts pyruvate to **ethanol and carbon dioxide**, a process called **alcoholic fermentation**, again reoxidising reduced NAD back to NAD in the process.\n\nThis reaction is exploited directly in two familiar industries. In **brewing**, yeast ferments sugars in solution to produce the ethanol found in beer and wine, while in **baking**, the carbon dioxide released is what causes bread dough to rise, with most of the ethanol produced evaporating away during baking."
+    },
+    {
       label: "C1.2.11 / C1.2.12",
       heading: "The link reaction and the Krebs cycle",
       level: "HL",
@@ -936,12 +884,24 @@ const CONTENT = {
       imageCaption: "The Krebs (citric acid) cycle: each turn fully oxidises an acetyl group, releasing CO2 and generating ATP, reduced NAD, and reduced FAD."
     },
     {
+      label: "C1.2.13 / C1.2.14 / C1.2.15",
+      heading: "The electron transport chain and chemiosmosis",
+      level: "HL",
+      text: "Reduced NAD produced during glycolysis, the link reaction, and the Krebs cycle delivers its high-energy electrons to the **electron transport chain**, a series of protein complexes embedded in the inner mitochondrial membrane. As electrons pass along the chain, from one complex to the next, the energy released is used to actively pump hydrogen ions from the mitochondrial matrix into the intermembrane space, building up a **proton gradient** across the inner membrane.\n\nThis proton gradient represents stored potential energy, and hydrogen ions flow back down this gradient through **ATP synthase**, a membrane-embedded enzyme that uses the energy of this flow to phosphorylate ADP into ATP. This overall process, using a proton gradient generated by electron transport to drive ATP synthesis, is called **chemiosmosis**, and it accounts for the vast majority of the ATP produced during aerobic respiration."
+    },
+    {
       label: "C1.2.16",
       heading: "Oxygen as the terminal electron acceptor",
       level: "HL",
       text: "At the end of the electron transport chain, oxygen accepts the electrons (and hydrogen ions) that have passed along the chain, forming water. This is why aerobic respiration depends absolutely on oxygen, without a terminal acceptor to remove electrons at the end of the chain, the whole chain backs up and stops, which halts oxidative phosphorylation and the large ATP yield that depends on it.",
       image: "https://commons.wikimedia.org/wiki/Special:FilePath/ATP synthase chemiosmosis and oxidative phosphorylation.gif",
       imageCaption: "Chemiosmosis: the electron transport chain pumps H+ ions across the inner mitochondrial membrane, and their flow back through ATP synthase drives ATP production."
+    },
+    {
+      label: "C1.2.17",
+      heading: "Lipids versus carbohydrates as respiratory substrates",
+      level: "HL",
+      text: "Lipids yield considerably more energy per gram than carbohydrates when used as a respiratory substrate, since their long hydrocarbon chains contain a higher proportion of oxidisable carbon and hydrogen relative to oxygen, meaning more electrons can ultimately be delivered to the electron transport chain per gram of substrate consumed.\n\nHowever, only carbohydrate can be broken down by glycolysis and can support anaerobic respiration, fatty acids entering respiration are first converted into two-carbon acetyl groups (via acetyl-CoA) and feed directly into the Krebs cycle rather than passing through glycolysis, meaning that in the complete absence of oxygen, lipids cannot be used as a respiratory substrate at all."
     }
   ],
 
@@ -950,9 +910,9 @@ const CONTENT = {
       label: "C1.3.1",
       heading: "Light energy becomes chemical energy",
       level: "SL",
+      text: "Photosynthesis transforms light energy into the chemical energy stored in the bonds of carbon compounds. This transformation matters far beyond the photosynthesising organism itself, it supplies, directly or indirectly, most of the chemical energy that powers life processes across an entire ecosystem, since nearly every food chain traces back to it (see C4.2).",
       image: "https://commons.wikimedia.org/wiki/Special:FilePath/Simple_photosynthesis_overview.svg",
-      imageCaption: "A simple overview of photosynthesis: light, water, and carbon dioxide in, glucose and oxygen out.",
-      text: "Photosynthesis transforms light energy into the chemical energy stored in the bonds of carbon compounds. This transformation matters far beyond the photosynthesising organism itself, it supplies, directly or indirectly, most of the chemical energy that powers life processes across an entire ecosystem, since nearly every food chain traces back to it (see C4.2)."
+      imageCaption: "A simple overview of photosynthesis: light, water, and carbon dioxide in, glucose and oxygen out."
     },
     {
       label: "C1.3.2 / C1.3.3",
@@ -967,6 +927,12 @@ const CONTENT = {
       text: "Different pigments absorb different wavelengths of light, and **chromatography** can separate a mixture of pigments extracted from a leaf, allowing each one to be identified by how far it travels relative to the solvent, expressed as its Rf value. Pigments such as chlorophyll a, chlorophyll b, and carotenoids absorb strongly in the blue and red parts of the visible spectrum but reflect green light, which is why they appear green and why an absorption spectrum for photosynthetic pigments shows clear peaks in those regions."
     },
     {
+      label: "C1.3.6",
+      heading: "Absorption spectra versus action spectra",
+      level: "SL",
+      text: "An **absorption spectrum** shows how strongly a pigment, or mixture of pigments, absorbs light across a range of wavelengths, typically measured directly using a spectrophotometer. An **action spectrum** instead shows the actual rate of photosynthesis achieved at each wavelength, usually measured indirectly by tracking oxygen production or carbon dioxide consumption.\n\nThe two spectra closely resemble each other, since wavelengths strongly absorbed by photosynthetic pigments generally also support a higher rate of photosynthesis, but they are not identical: the action spectrum reflects the combined effect of all the different pigments present and how efficiently the light they absorb is actually converted into useful chemical energy, rather than simply how much light is absorbed in the first place."
+    },
+    {
       label: "C1.3.7 / C1.3.8",
       heading: "Investigating limiting factors, and predicting future rates",
       level: "SL",
@@ -979,10 +945,22 @@ const CONTENT = {
       text: "Pigments are organised into **photosystems**, structured arrays embedded in the thylakoid membrane. A single pigment molecule absorbing light on its own could not drive photosynthesis, the advantage of arranging many pigment molecules together in a photosystem is that it creates a much larger antenna for capturing light energy, which is then funnelled to a central reaction centre where the energy is actually put to use."
     },
     {
+      label: "C1.3.11",
+      heading: "Photolysis at photosystem II",
+      level: "HL",
+      text: "**Photolysis**, the light-driven splitting of water, occurs specifically at **photosystem II**, replacing the electrons that photosystem II loses when it emits them into the electron transport chain after absorbing light. Splitting each water molecule releases two hydrogen ions, two electrons, and, once two such splitting events have occurred, one molecule of oxygen gas.\n\nThe hydrogen ions released contribute to the proton gradient used for chemiosmosis, the electrons replace those lost from photosystem II's reaction centre, and the oxygen is released as a by-product, of enormous historical consequence for the atmosphere and life on Earth, but not itself used further in photosynthesis."
+    },
+    {
       label: "C1.3.12 / C1.3.14",
       heading: "ATP production by chemiosmosis in the thylakoid",
       level: "HL",
       text: "The electrons released by photolysis pass along an electron transport chain in the thylakoid membrane, and the energy released is used to pump hydrogen ions into the thylakoid space, building a concentration gradient. Those hydrogen ions then flow back out through ATP synthase, driving ATP production by chemiosmosis, closely paralleling how ATP is made during respiration (see C1.2). This entire process, photolysis, electron transport, and chemiosmotic ATP synthesis, together with the reduction of NADP, all take place across the thylakoid membrane system."
+    },
+    {
+      label: "C1.3.13",
+      heading: "Reduction of NADP by photosystem I",
+      level: "HL",
+      text: "**Photosystem I**, after absorbing its own light energy and re-emitting excited electrons, supplies these electrons for the reduction of **NADP** to reduced NADP (NADPH), a reaction that also requires a hydrogen ion taken up from the stroma.\n\nThis reduced NADP, alongside the ATP generated by chemiosmosis, is then supplied to the Calvin cycle, where it provides the reducing power needed to convert fixed carbon dioxide into organic carbon compounds, linking the light-dependent reactions occurring at the thylakoid membrane to the light-independent reactions occurring in the stroma."
     },
     {
       label: "C1.3.15",
@@ -995,15 +973,27 @@ const CONTENT = {
       heading: "Completing the Calvin cycle",
       level: "HL",
       text: "Glycerate-3-phosphate (GP) is converted into triose phosphate (TP) using the ATP and reduced NADP generated by the light-dependent reactions. Most of that triose phosphate is used to regenerate RuBP, also using ATP, so the cycle can continue fixing more carbon dioxide, while the remainder is exported from the cycle to build glucose and other organic molecules the plant needs."
+    },
+    {
+      label: "C1.3.18",
+      heading: "Synthesising other carbon compounds from Calvin cycle products",
+      level: "HL",
+      text: "While the Calvin cycle is often summarised as producing glucose, its direct product is actually triose phosphate, and this molecule serves as the entry point for the synthesis of a wide range of other carbon compounds needed by the plant, not just glucose.\n\nUsing additional metabolic pathways, and mineral nutrients absorbed from the soil, triose phosphate (or intermediates derived from it) can be converted into amino acids, lipids, and other essential carbon-based molecules; every carbon atom found within a photosynthesising organism's own carbon compounds can ultimately be traced back through the Calvin cycle, whether it ends up as part of a carbohydrate, a protein, or any other class of carbon compound."
+    },
+    {
+      label: "C1.3.19",
+      heading: "Interdependence of the light-dependent and light-independent reactions",
+      level: "HL",
+      text: "The light-dependent and light-independent reactions of photosynthesis depend directly on one another to continue functioning. The light-independent reactions (the Calvin cycle) require a continuous supply of ATP and reduced NADP, both of which are produced only by the light-dependent reactions; without light, these light-dependent products quickly run out, and the Calvin cycle stops.\n\nConversely, the light-dependent reactions depend on the Calvin cycle to keep working productively too: if carbon dioxide is unavailable, RuBP cannot be regenerated by the Calvin cycle, and this backlog eventually prevents photosystem II from continuing to function normally, illustrating that neither stage can proceed for long without the other."
     }
   ],
+
   "B2.3": [
     {
       label: "B2.3.1",
       heading: "From zygote to embryo: differentiation and morphogens",
       level: "SL",
-      text: "Fertilisation produces a single, **unspecialised** cell, the zygote, which is totipotent and carries the full set of instructions needed to build an entire organism. As the zygote divides, the resulting cells begin to take on distinct identities through **differentiation**, the process by which a cell becomes structurally and biochemically specialised for a particular role, even though every cell in the embryo still carries an identical copy of the genome.\n\nWhat differs between cells is not their DNA but which genes are switched on. This is controlled in large part by **morphogens**, signalling chemicals released from a particular source within the embryo that diffuse outward, forming a concentration gradient. Cells close to the source receive a high concentration of morphogen and activate one set of genes, while cells further away receive progressively less and activate a different set. In this way, a single chemical gradient can pattern an entire region of the embryo, giving cells positional information about where they sit and, consequently, what they should become.",
-      tip: { label: "Exam tip", text: "Every cell in an embryo has the same genome. Differentiation is entirely about which genes get expressed, not any change to the DNA sequence itself." }
+      text: "Fertilisation produces a single, **unspecialised** cell, the zygote, which is totipotent and carries the full set of instructions needed to build an entire organism. As the zygote divides, the resulting cells begin to take on distinct identities through **differentiation**, the process by which a cell becomes structurally and biochemically specialised for a particular role, even though every cell in the embryo still carries an identical copy of the genome.\n\nWhat differs between cells is not their DNA but which genes are switched on. This is controlled in large part by **morphogens**, signalling chemicals released from a particular source within the embryo that diffuse outward, forming a concentration gradient. Cells close to the source receive a high concentration of morphogen and activate one set of genes, while cells further away receive progressively less and activate a different set. In this way, a single chemical gradient can pattern an entire region of the embryo, giving cells positional information about where they sit and, consequently, what they should become."
     },
     {
       label: "B2.3.2",
@@ -1020,7 +1010,13 @@ const CONTENT = {
       text: "A **stem cell niche** is a specific microenvironment within a tissue where stem cells are maintained in an undifferentiated, self-renewing state, protected from the signals that would otherwise trigger differentiation. The niche typically involves supporting cells, signalling molecules, and physical contact that together keep the stem cell population stable over an organism's lifetime.\n\nBone marrow houses the niche for haematopoietic stem cells, which continuously divide and differentiate to replace the body's blood cells, since red blood cells, white blood cells, and platelets all have limited lifespans and must be constantly renewed. Hair follicles contain a separate niche near the base of the follicle, where stem cells periodically activate to regenerate the hair shaft and, when needed, help repair the surrounding skin."
     },
     {
-      label: "B2.3.4 / B2.3.5",
+      label: "B2.3.4",
+      heading: "Totipotent, pluripotent, and multipotent stem cells",
+      level: "SL",
+      text: "Stem cells differ in how many different cell types they are capable of becoming, described using three terms. **Totipotent** cells, found only in the earliest stages of an embryo, can differentiate into absolutely any cell type, including the extra-embryonic tissues (such as the placenta) needed to support development, as well as every cell type in the body itself.\n\n**Pluripotent** cells, found slightly later in embryonic development, can still differentiate into any of the cell types found in the body itself, but can no longer form the extra-embryonic support tissues. **Multipotent** stem cells, the type typically found in adult tissues such as bone marrow, are more restricted still, able to differentiate only into a limited range of related cell types, such as the various types of blood cell in the case of bone marrow stem cells."
+    },
+    {
+      label: "B2.3.5",
       heading: "Cell size and the surface area to volume ratio",
       level: "SL",
       text: "Specialised human cells vary enormously in size, from red blood cells around 7 micrometres across, to a motor neuron whose cell body might be 20 micrometres wide but whose axon can extend over a metre. This variation is not incidental, it reflects the different physical constraints each cell type must work within.\n\nAs a cell increases in size, its volume grows faster than its surface area (volume scales with the cube of a linear dimension, surface area only with the square). This means that larger cells have a lower **surface area to volume ratio**, which limits how efficiently a cell can exchange materials, oxygen, nutrients, wastes, and signalling molecules, with its surroundings, since all of that exchange happens across the cell's surface but has to keep pace with the demands of its entire volume. Cells that rely heavily on rapid exchange with their environment are therefore under selective pressure to stay small or to adopt shapes that increase their effective surface area."
@@ -1038,6 +1034,24 @@ const CONTENT = {
       heading: "Structural adaptations in lung, heart, muscle, and gonad cells",
       level: "SL",
       text: "The alveoli of the lungs are lined by two distinct cell types. **Type I pneumocytes** are extremely thin and flattened, minimising the diffusion distance for oxygen and carbon dioxide and maximising the surface area available for gas exchange. **Type II pneumocytes** are fewer in number but structurally distinct, packed with the secretory machinery needed to produce **surfactant**, a substance that reduces surface tension inside the alveoli and prevents them from collapsing between breaths.\n\n**Cardiac muscle cells** are adapted for constant, rhythmic contraction: they are packed with mitochondria to meet a very high, continuous energy demand, and are connected to neighbouring cells by intercalated discs, which allow electrical signals to pass rapidly from cell to cell so the heart contracts as a coordinated unit. **Striated skeletal muscle fibres** are unusually long, multinucleated cells, formed by the fusion of many individual cells during development, packed with contractile protein filaments.\n\nThe **gametes** show perhaps the most extreme specialisation of all. A **sperm cell** is streamlined, with a flagellum for propulsion, a high density of mitochondria along its midpiece to power that movement, and an acrosome containing enzymes to penetrate the egg's outer layers. An **egg cell**, by contrast, is one of the largest cells in the body, packed with cytoplasm, organelles, and nutrient reserves to support the earliest stages of development after fertilisation, before the embryo can obtain nutrients any other way."
+    },
+    {
+      label: "B2.3.8",
+      heading: "Adaptations of type I and type II pneumocytes",
+      level: "HL",
+      text: "The alveoli of the lungs contain two functionally distinct types of specialised cell working alongside each other. **Type I pneumocytes** are extremely thin, minimising the diffusion distance for oxygen and carbon dioxide crossing between the air in the alveolus and the blood in an adjacent capillary, making them well suited to their primary role in gas exchange.\n\n**Type II pneumocytes** are a different shape, containing numerous secretory vesicles called lamellar bodies that discharge **pulmonary surfactant** into the alveolar space, a substance that reduces surface tension and prevents the alveolus from collapsing; the presence of two differently adapted cell types within the same alveolar tissue illustrates how a single tissue can require more than one type of specialised cell to fulfil all of its combined functions."
+    },
+    {
+      label: "B2.3.9",
+      heading: "Adaptations of cardiac and striated muscle cells",
+      level: "HL",
+      text: "Cardiac muscle cells and striated (skeletal) muscle fibres both contain contractile myofibrils built from actin and myosin, but differ in several structural respects that suit each to its distinct role. Cardiac muscle cells are typically shorter, **branched**, and each usually has a single nucleus, with the branching allowing the electrical signal driving contraction to spread efficiently in multiple directions across heart tissue.\n\nStriated muscle fibres are instead long and **unbranched**, and are unusual in containing many nuclei within a single fibre, since each fibre forms through the fusion of many individual embryonic muscle cells during development; this raises an interesting definitional question about whether a striated muscle fibre, containing multiple nuclei, should really be considered a single cell in the conventional sense at all."
+    },
+    {
+      label: "B2.3.10",
+      heading: "Adaptations of sperm and egg cells",
+      level: "HL",
+      text: "Sperm and egg cells are adapted for very different roles within human reproduction. A **sperm cell** is small and streamlined, with a flagellum providing motility to actively swim toward the egg, and an acrosome containing enzymes that help it penetrate the egg's outer layers; because its main function is simply to deliver a haploid nucleus, it carries very little cytoplasm.\n\nAn **egg cell** is, by contrast, one of the largest cells in the human body, containing substantial cytoplasmic reserves of nutrients and organelles needed to support the very earliest stages of embryonic development immediately after fertilisation, before the developing embryo has any other way of obtaining nutrition; this considerable size difference between the two gamete types directly reflects their very different specialised roles in reproduction."
     }
   ],
 
@@ -1089,8 +1103,21 @@ const CONTENT = {
       heading: "Reprogramming and imprinting in gametes",
       level: "HL",
       text: "During the formation of sperm and egg cells, most of the epigenetic tags accumulated in the parent's somatic cells are erased and reset, a process called **reprogramming**, which allows the resulting embryo to begin development with the full totipotent potential of a zygote rather than inheriting the restricted, cell-type-specific expression pattern of the parent's own tissues.\n\nHowever, this erasure is not complete. A small number of genes retain their epigenetic tags through this reprogramming process in a phenomenon called **genomic imprinting**, meaning the gene is expressed from only one parental copy, either the maternally or paternally inherited allele, depending on the gene. The genes that escape reprogramming are thought to play particularly important roles in early embryonic and placental development, though the incomplete removal of epigenetic tags from gametes is also one of the mechanisms proposed to underlie the epigenetic inheritance described in D2.2.7."
+    },
+    {
+      label: "D2.2.10",
+      heading: "Monozygotic twin studies",
+      level: "HL",
+      text: "**Monozygotic (identical) twins** develop from the same fertilised egg and share an essentially identical DNA sequence, making them a particularly useful natural experiment for studying the effects of environment on gene expression, since any differences observed between them cannot be attributed to genetic differences.\n\nStudies comparing monozygotic twins raised in different environments, or simply ageing under different lifestyle conditions, often find measurable differences in epigenetic markers such as DNA methylation between the twins, differences that tend to increase the longer the twins have lived apart or under different conditions, providing direct evidence that environmental factors can meaningfully alter gene expression over a lifetime, independent of the underlying DNA sequence itself."
+    },
+    {
+      label: "D2.2.11",
+      heading: "External factors affecting gene expression",
+      level: "HL",
+      text: "A range of external, environmental factors can influence which genes within a cell are switched on or off. Hormones provide one well studied example, such as oestradiol or progesterone binding an intracellular receptor and directly altering the transcription of specific target genes in a responsive cell.\n\nSimple biochemical availability can have the same kind of effect in other organisms: in bacteria, the presence or absence of the sugar lactose regulates whether the genes needed to metabolise it are expressed, while the presence of the amino acid tryptophan can switch off the genes needed for its own synthesis once a sufficient supply is already available, in each case illustrating how a specific external factor can directly determine a cell's own pattern of gene expression."
     }
   ],
+
   "D1.3": [
     {
       label: "D1.3.1",
@@ -1138,8 +1165,7 @@ const CONTENT = {
       label: "D1.3.9",
       heading: "CRISPR-Cas9 gene editing",
       level: "HL",
-      text: "**CRISPR-Cas9** is a gene editing system adapted from a natural bacterial defence mechanism, in which bacteria store short fragments of viral DNA from past infections and use them to recognise and destroy that virus's DNA if it is encountered again. In the laboratory, this system has been repurposed: a guide RNA is designed to match a specific target sequence in a genome, directing the **Cas9** enzyme to that exact location, where it cuts both strands of the DNA.\n\nOnce cut, the cell's own repair machinery can be exploited to disable the gene, correct a faulty sequence, or insert a new one, giving researchers a comparatively precise, efficient, and low-cost way to edit specific genes. Applications range from basic research into gene function to the correction of disease-causing mutations, though the technology also raises ethical questions, particularly around edits made to human germline cells, which would be inherited by future generations.",
-      tip: { label: "Exam tip", text: "Be able to state that CRISPR-Cas9 originally functions as a bacterial immune system against viruses (bacteriophages), before being adapted into a gene editing tool." }
+      text: "**CRISPR-Cas9** is a gene editing system adapted from a natural bacterial defence mechanism, in which bacteria store short fragments of viral DNA from past infections and use them to recognise and destroy that virus's DNA if it is encountered again. In the laboratory, this system has been repurposed: a guide RNA is designed to match a specific target sequence in a genome, directing the **Cas9** enzyme to that exact location, where it cuts both strands of the DNA.\n\nOnce cut, the cell's own repair machinery can be exploited to disable the gene, correct a faulty sequence, or insert a new one, giving researchers a comparatively precise, efficient, and low-cost way to edit specific genes. Applications range from basic research into gene function to the correction of disease-causing mutations, though the technology also raises ethical questions, particularly around edits made to human germline cells, which would be inherited by future generations."
     },
     {
       label: "D1.3.10",
@@ -1163,7 +1189,7 @@ const CONTENT = {
       text: "Meiosis is the process that produces haploid gametes from a diploid parent cell, and in doing so it generates genetic variation in two distinct ways. **Independent assortment** describes how homologous chromosome pairs line up and separate randomly during meiosis I, so that each gamete receives an essentially random mixture of maternal and paternal chromosomes. **Crossing over**, the exchange of segments between homologous chromosomes earlier in meiosis, further shuffles alleles within individual chromosomes, so that even chromosomes inherited together are not exact copies of either parent's original chromosome. Together, these mechanisms mean that, aside from identical twins, no two gametes, and no two offspring of the same parents, are genetically identical."
     },
     {
-      label: "D3.1.3 / D3.1.4 / D3.1.5",
+      label: "D3.1.3 / D3.1.4",
       heading: "The male and female reproductive systems",
       level: "SL",
       text: "The **testes** produce sperm cells and testosterone; sperm mature and are stored in the **epididymis** before travelling through the **vas deferens** during ejaculation, picking up secretions from the seminal vesicles and prostate gland that together form semen, and exit through the **urethra**, which runs through the **penis**.\n\nThe **ovaries** produce egg cells and the hormones oestrogen and progesterone. Roughly monthly, a single egg is released from an ovary during ovulation and enters the **fallopian tube** (oviduct), where fertilisation normally occurs if sperm are present. The fertilised egg then travels to the **uterus**, whose inner lining, the endometrium, thickens each cycle to potentially support a pregnancy; if no pregnancy occurs the lining breaks down and is shed through the **cervix** and **vagina** as menstruation.",
@@ -1171,24 +1197,105 @@ const CONTENT = {
       imageCaption: "The main structures of the human female reproductive system."
     },
     {
-      label: "D3.1.6",
+      label: "D3.1.5",
       heading: "Hormonal regulation of the menstrual cycle",
       level: "HL",
       text: "The **menstrual cycle** is coordinated by four hormones acting in a feedback loop between the pituitary gland and the ovaries. **Follicle-stimulating hormone (FSH)**, released by the pituitary, stimulates several ovarian follicles to begin developing, and one dominant follicle matures fully. As it develops, the follicle secretes rising levels of **oestrogen**, which thickens the endometrium in preparation for a possible pregnancy and, once it reaches a high enough level, triggers a sharp surge in **luteinising hormone (LH)** from the pituitary.\n\nThis LH surge triggers **ovulation**, the release of the egg from the follicle. The ruptured follicle then transforms into the **corpus luteum**, which secretes **progesterone**, maintaining and further thickening the endometrium. If fertilisation does not occur, the corpus luteum degenerates, progesterone levels fall, and the endometrium is shed as menstruation, after which the cycle begins again."
     },
     {
-      label: "D3.1.7",
+      label: "D3.1.6",
       heading: "The sequence of events leading to fertilisation",
       level: "HL",
       text: "Following ejaculation, sperm travel from the vagina, through the cervix and uterus, and into the fallopian tube, aided by their own flagellar movement and by contractions of the female reproductive tract. Only a small fraction of the many millions of sperm released ever reach the vicinity of the egg. When a sperm encounters the egg, enzymes released from its **acrosome** help it digest a path through the egg's outer layers.\n\nOnce a single sperm fuses with the egg's plasma membrane, the egg triggers a rapid change in that membrane that acts as a fast block to prevent additional sperm from entering, ensuring the resulting zygote receives only one set of paternal chromosomes. The nuclei of the sperm and egg then fuse, restoring the diploid chromosome number and completing fertilisation."
     },
     {
-      label: "D3.1.8",
+      label: "D3.1.7",
       heading: "The role of hormones in IVF",
       level: "HL",
       text: "**In vitro fertilisation (IVF)** relies on hormones to precisely control the timing and scale of egg production. First, drugs are used to suspend the woman's normal hormonal cycle, giving doctors full control over its timing. Next, injections of FSH and LH at levels well above those of a natural cycle are given to induce **superovulation**, causing multiple follicles to mature simultaneously rather than the single follicle of a typical cycle.\n\nThe resulting mature eggs are then surgically collected and fertilised with sperm in laboratory conditions, and one or more of the resulting embryos are transferred into the uterus, timed to coincide with the point in the cycle when the endometrium is most receptive to implantation."
+    },
+    {
+      label: "D3.1.8",
+      heading: "Sexual reproduction in flowering plants",
+      level: "SL",
+      text: "Flowering plants reproduce sexually even though many species are **hermaphroditic**, carrying both male and female structures in the same flower. Male gametes are produced inside **pollen grains**, formed within the anther, while female gametes develop inside **ovules**, contained within the ovary at the base of the flower.\n\n**Pollination** is the transfer of pollen from an anther to a stigma, which may occur within the same flower (self-pollination) or between different plants (cross-pollination). Once a pollen grain lands on a compatible stigma, it germinates and grows a pollen tube down through the style to reach an ovule, delivering the male nucleus so fertilisation can occur. The fertilised ovule develops into a seed, containing an embryo, while the surrounding ovary tissue often develops into a fruit."
+    },
+    {
+      label: "D3.1.9",
+      heading: "Features of an insect-pollinated flower",
+      level: "SL",
+      text: "Flowers pollinated by insects typically show a consistent set of adaptations that attract and reward visiting pollinators while positioning them to pick up and deposit pollen. Brightly coloured, often scented **petals** advertise the flower's presence from a distance. **Nectaries** produce a sugary reward that draws insects in, while the insect brushes past the **anthers** (picking up pollen on its body) and the **stigma** (depositing pollen from a previous flower) as it feeds.\n\nThe **filament** positions each anther at a height likely to contact a visiting insect's body, and the sticky or feathery surface of the **stigma** is adapted to catch pollen grains carried on that same body, linking the structure of each floral part directly to its role in the pollination process.",
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Flower poster 2.jpg",
+      imageCaption: "The main structures of a typical insect-pollinated flower."
+    },
+    {
+      label: "D3.1.10",
+      heading: "Methods of promoting cross-pollination",
+      level: "SL",
+      text: "Cross-pollination, transferring pollen between different plants rather than within a single flower, is often favoured because it increases genetic variation among offspring. Plants use several strategies to promote it. **Dichogamy** describes anthers and stigmas maturing at different times within the same flower, so a flower's own pollen is rarely available when its own stigma is receptive. Some species instead produce separate male and female flowers, either on the same plant (monoecious) or on entirely separate plants (dioecious), physically preventing self-pollination.\n\nBeyond timing and separation, plants also rely on external agents to carry pollen between individuals: animals such as insects, birds, or bats moving between flowers of different plants, or wind carrying pollen from one plant to land on another."
+    },
+    {
+      label: "D3.1.11",
+      heading: "Self-incompatibility mechanisms",
+      level: "SL",
+      text: "Even when self-pollination does occur, many plant species have genetic mechanisms that prevent self-fertilisation from actually succeeding, a trait known as **self-incompatibility**. These mechanisms typically work by recognising when pollen carries the same allele at a specific self-incompatibility gene as the plant it has landed on, and then blocking pollen tube growth or fertilisation in that case.\n\nSelf-incompatibility matters because self-pollination, if it succeeded, would lead to **inbreeding**: repeated self-fertilisation over generations reduces genetic diversity and can increase the frequency of harmful recessive alleles being expressed, reducing the overall vigour and adaptability of a population. By ensuring that fertilisation generally only occurs between genetically different individuals, self-incompatibility helps maintain the genetic variation that cross-pollination is valued for."
+    },
+    {
+      label: "D3.1.12",
+      heading: "Dispersal and germination of seeds",
+      level: "SL",
+      text: "**Seed dispersal**, the movement of seeds away from the parent plant, reduces competition between parent and offspring for light, water, and nutrients, and allows a species to colonise new areas. Seeds are dispersed by a range of mechanisms, including wind (using structures like wings or fine hairs), animals (via fruit that is eaten, or hooks that attach to fur), and water.\n\nOnce a seed reaches a suitable location, **germination** can begin, provided conditions such as adequate water, oxygen, and suitable temperature are met. Water uptake triggers the embryo to resume growth, mobilising food reserves stored within the seed to fuel the growth of a root (radicle) and shoot (plumule) until the seedling can support itself through photosynthesis."
+    },
+    {
+      label: "D3.1.13",
+      heading: "Hormonal control of puberty",
+      level: "HL",
+      text: "**Puberty** begins when the hypothalamus increases its release of **gonadotropin-releasing hormone (GnRH)**, having remained largely quiescent throughout childhood. Rising GnRH stimulates the pituitary gland to secrete increasing amounts of **luteinising hormone (LH)** and **follicle-stimulating hormone (FSH)**.\n\nIn turn, these two hormones stimulate the gonads (testes or ovaries) to increase their own production of sex hormones, testosterone in males and oestrogen in females, and it is these sex hormones that ultimately drive the physical and reproductive changes associated with puberty, from the development of secondary sexual characteristics to the onset of sperm production or the menstrual cycle."
+    },
+    {
+      label: "D3.1.14",
+      heading: "Spermatogenesis and oogenesis",
+      level: "HL",
+      text: "**Spermatogenesis** and **oogenesis** both begin with a diploid germline cell dividing by mitosis to produce more diploid cells, some of which then grow and enter meiosis to eventually produce haploid gametes, but the two processes differ substantially in their timing and outcome. Spermatogenesis, occurring continuously from puberty onwards in the testes, produces four functional sperm cells from each cell that enters meiosis, with very little cytoplasm allocated to each.\n\nOogenesis, by contrast, divides its cytoplasm highly unequally: each cell entering meiosis produces just one large, functional egg cell, along with small, non-functional polar bodies that are discarded. This asymmetry ensures the egg retains ample cytoplasm and nutrient reserves to support the very earliest stages of development after fertilisation, a demand sperm cells, whose only job is to deliver their haploid nucleus, don't share."
+    },
+    {
+      label: "D3.1.15",
+      heading: "Preventing polyspermy",
+      level: "HL",
+      text: "Fertilisation by more than one sperm, called **polyspermy**, would leave a zygote with too many chromosomes to develop normally, so eggs have mechanisms to ensure only one sperm succeeds. As a sperm approaches the egg, enzymes released from its **acrosome** (the acrosome reaction) digest a path through the egg's outer protective layer, the zona pellucida, allowing the sperm to reach and fuse with the egg's plasma membrane.\n\nThe moment one sperm fuses with the membrane, the egg triggers the **cortical reaction**: vesicles just beneath the egg's surface release their contents, chemically modifying the zona pellucida so that it can no longer be penetrated by any further sperm, sealing out all additional competitors within moments of the first successful fertilisation."
+    },
+    {
+      label: "D3.1.16",
+      heading: "Blastocyst formation and implantation",
+      level: "HL",
+      text: "After fertilisation, the zygote begins dividing repeatedly as it travels along the fallopian tube toward the uterus, developing over several days into a **blastocyst**: a hollow ball of cells consisting of an outer layer that will go on to form the placenta, and an inner cell mass that will develop into the embryo itself.\n\nOnce it reaches the uterus, the blastocyst undergoes **implantation**, embedding itself into the thickened endometrial lining; successful implantation establishes the physical connection between mother and embryo needed to sustain the pregnancy going forward."
+    },
+    {
+      label: "D3.1.17",
+      heading: "Pregnancy testing using hCG",
+      level: "HL",
+      text: "Shortly after implantation, the developing embryo (and later the placenta) begins secreting **human chorionic gonadotropin (hCG)**, a hormone that maintains the corpus luteum's progesterone output and can be detected in a woman's urine within days of a missed period.\n\nHome pregnancy tests exploit this by using **monoclonal antibodies** specifically designed to bind hCG; a coloured or fluorescent signal appears only where these antibodies have bound their target, providing a simple, rapid, and highly specific way to confirm pregnancy based on hCG's presence."
+    },
+    {
+      label: "D3.1.18",
+      heading: "The role of the placenta",
+      level: "HL",
+      text: "The **placenta** is the organ that connects the developing foetus to the mother's blood supply, allowing the exchange of substances between the two circulations without them ever directly mixing. Its numerous finger-like **placental villi** create an extensive surface area, maximising the rate at which oxygen, nutrients, and waste products can diffuse or be transported between maternal and foetal blood.\n\nBy providing this exchange interface, the placenta allows a mammalian foetus to remain within the protective environment of the uterus and continue developing for a much longer period than would be possible without this direct, ongoing connection to the mother's own respiratory, digestive, and excretory systems."
+    },
+    {
+      label: "D3.1.19",
+      heading: "Hormonal control of pregnancy and childbirth",
+      level: "HL",
+      text: "Throughout pregnancy, **progesterone** maintains the endometrium and suppresses further ovulation and uterine contractions, secreted first by the corpus luteum and later by the placenta itself once it becomes established. As pregnancy nears its end, progesterone levels begin to fall.\n\nThis decline in progesterone removes its inhibitory effect on the uterus, allowing rising levels of **oxytocin** to stimulate increasingly strong uterine contractions. Because oxytocin release is itself stimulated by the stretching of the cervix and uterus during contractions, this creates a **positive feedback loop**: contractions cause more oxytocin release, which causes stronger contractions, escalating rapidly until childbirth is complete."
+    },
+    {
+      label: "D3.1.20",
+      heading: "Hormone replacement therapy and coronary heart disease",
+      level: "HL",
+      text: "Early observational studies suggested that women taking **hormone replacement therapy (HRT)** to manage menopausal symptoms had a lower incidence of coronary heart disease (CHD), leading many at the time to conclude HRT itself was protective. Later, more rigorous randomised controlled trials found that HRT use was actually associated with a small increase in CHD risk, not a decrease.\n\nThe original correlation is now understood to reflect a **confounding variable**: women who took HRT in the earlier studies tended to have higher socioeconomic status on average, and higher socioeconomic status is independently associated with a lower CHD risk. This case is a widely used example of why a correlation observed in epidemiological data does not necessarily indicate a direct cause-and-effect relationship."
     }
   ],
+
   "D3.2": [
     {
       label: "D3.2.1",
@@ -1281,8 +1388,27 @@ const CONTENT = {
       heading: "Gene loci and their polypeptide products",
       level: "HL",
       text: "Each gene occupies a specific, fixed position, or **locus**, on a particular chromosome, and this locus is the same in every individual of a species, even though the specific allele present at that locus can vary between individuals. Modern genome mapping has identified the chromosomal locus of thousands of human genes and linked many of them to the specific polypeptide product they encode, work that underpins the diagnosis of genetic disease, genetic counselling, and ongoing research into gene function."
+    },
+    {
+      label: "D3.2.19",
+      heading: "Autosomal gene linkage",
+      level: "HL",
+      text: "Genes located close together on the same chromosome are described as **linked**, and unlike unlinked genes on separate chromosomes, they do not assort independently during meiosis, since they are physically attached to one another on the same DNA molecule and tend to be inherited together as a unit.\n\nWhen diagramming a cross involving linked genes, the alleles are shown alongside vertical lines representing the pair of homologous chromosomes involved, making clear which alleles started out together on the same chromosome; this linkage is the underlying reason that linked genes fail to produce the same independent assortment ratios seen with unlinked genes."
+    },
+    {
+      label: "D3.2.20",
+      heading: "Recombinants in crosses involving linked genes",
+      level: "HL",
+      text: "Although linked genes are usually inherited together, **crossing over** during meiosis I can occasionally separate them, exchanging alleles between homologous chromosomes and producing **recombinant** offspring, individuals with a new combination of alleles not present on either of the original parental chromosomes.\n\nIn a cross between an individual heterozygous for two linked genes and an individual homozygous recessive for both, most offspring show one of the two original parental combinations, but a smaller proportion, arising from crossing over, show a recombinant combination instead; the proportion of recombinants observed can be identified by comparing the actual offspring genotypes, and phenotypes, against those expected under complete linkage."
+    },
+    {
+      label: "D3.2.21",
+      heading: "Using chi-squared on dihybrid cross data",
+      level: "HL",
+      text: "A **chi-squared test** can be used to assess whether the observed phenotype ratios from a dihybrid cross differ significantly from the ratio expected under independent assortment (such as the standard 9:3:3:1 ratio), or whether any difference could plausibly be attributed to chance alone.\n\nThe **null hypothesis** typically states that there is no significant difference between the observed and expected results; if the calculated chi-squared value exceeds the appropriate critical value at the 0.05 significance level, the null hypothesis is rejected, suggesting some factor other than chance, such as gene linkage disrupting the expected independent assortment ratio, is likely influencing the results."
     }
   ],
+
   "A3.1": [
     {
       label: "A3.1.1",
@@ -1377,9 +1503,9 @@ const CONTENT = {
     },
     {
       label: "B4.1.8",
-      heading: "Convergent evolution across biomes",
+      heading: "Adaptations to hot deserts and tropical rainforest",
       level: "SL",
-      text: "Because widely separated regions of the same biome impose similar selection pressures, unrelated species living in them can independently evolve strikingly similar adaptations, a pattern called **convergent evolution**. A classic example is the similarity between cacti of the Americas and many euphorbias of Africa, both succulent, spine-covered plants adapted to hot desert conditions despite having evolved these traits along entirely separate evolutionary lineages.\n\nConvergent evolution is strong evidence for the power of natural selection: when the same environmental pressures act on different starting material, they tend to produce similar solutions, even in the complete absence of shared ancestry for that particular trait."
+      text: "Species living in hot deserts show adaptations for coping with extreme heat and very limited water availability: thick, water-storing tissue and reduced leaf area (or spines instead of leaves) minimise water loss in desert plants, while nocturnal activity, efficient kidneys producing highly concentrated urine, and pale colouration for heat reflection are common among desert animals.\n\nSpecies in tropical rainforests instead face the opposite challenge, abundant water and warmth but often intense competition for light: many plants grow tall trunks to reach the canopy, or exploit other plants as physical support (as lianas and epiphytes do) rather than investing in their own full structural height, while the constant warm, humid conditions support an exceptionally high diversity of specialised animal species exploiting the many distinct niches within the forest's vertical layers.\n\nBecause widely separated deserts, or widely separated rainforests, impose similar selection pressures on their respective inhabitants, unrelated species living in the same biome type can independently evolve strikingly similar adaptations, a pattern called **convergent evolution**; the similarity between cacti of the Americas and many euphorbias of Africa, both succulent, spine-covered desert plants that evolved these traits along entirely separate lineages, is a widely used example of this pattern."
     }
   ],
 
@@ -1425,6 +1551,54 @@ const CONTENT = {
       heading: "Sexual selection",
       level: "SL",
       text: "**Sexual selection** is a special case of natural selection in which the selective advantage comes specifically from increased mating success rather than increased survival, and it can sometimes favour traits that are actively costly to survival. Brightly coloured plumage or elaborate courtship displays in many bird species are classic examples: these traits can make an individual more visible to predators, reducing its survival value, but if they succeed in attracting more mates, the resulting boost to reproductive success can outweigh that cost, so the trait persists and can even become exaggerated over generations."
+    },
+    {
+      label: "D4.1.8",
+      heading: "Endler's guppy experiments",
+      level: "SL",
+      text: "John Endler's field experiments with Trinidadian guppies provided a controlled demonstration of natural and sexual selection acting in real time. Male guppies in streams with many predators show duller colouration, since bright colours make them easier for predators to spot, while males in predator-free streams evolve much brighter, more colourful patterns, since females prefer to mate with more vividly coloured males.\n\nBy transplanting guppies between high-predation and low-predation streams and tracking how colouration changed over subsequent generations, Endler demonstrated that the relative strength of these two opposing selection pressures, predation risk favouring dullness and female mate choice favouring brightness, could be experimentally manipulated, with guppy populations evolving detectably in the predicted direction within just a handful of generations."
+    },
+    {
+      label: "D4.1.9",
+      heading: "The gene pool",
+      level: "HL",
+      text: "A population's **gene pool** consists of all the genes, and all the different alleles of each gene, present among every individual in that population at a given time. Because most organisms are diploid, an individual carries only two alleles of any given gene, but a large population can collectively harbour many more alleles across all its members.\n\nEvolution can be described, at the genetic level, as a change in the relative frequencies of different alleles within a population's gene pool from one generation to the next; understanding what causes these frequency changes, and being able to calculate them, is the focus of population genetics."
+    },
+    {
+      label: "D4.1.10",
+      heading: "Allele frequencies in geographically isolated populations",
+      level: "HL",
+      text: "Populations of the same species that are geographically separated often show measurably different allele frequencies for a given gene, reflecting the different selective pressures, chance events, and degree of gene flow experienced by each isolated group. Databases of genetic data allow these differences to be directly compared.\n\nA well studied human example is the allele responsible for lactase persistence (the ability to digest lactose into adulthood), which occurs at a much higher frequency in populations with a long history of dairy farming, such as those in Northern Europe, than in populations without that history, illustrating how differing local selective pressures can produce measurably different allele frequencies between geographically separated populations of the same species."
+    },
+    {
+      label: "D4.1.11",
+      heading: "Natural selection as a cause of changing allele frequencies",
+      level: "HL",
+      text: "When individuals carrying a particular allele consistently survive and reproduce more successfully than individuals carrying an alternative allele, natural selection will cause the frequency of that advantageous allele to increase in the population's gene pool over successive generations. This integration of Mendelian genetics with Darwin's theory of natural selection, explaining evolution in terms of changing allele frequencies, is known as the **modern synthesis**, or **neo-Darwinism**.\n\nBecause this process depends on heritable differences in survival and reproductive success actually being passed on, natural selection provides a mechanistic, gene-level explanation for how the population-level changes described by Darwin's original theory actually occur."
+    },
+    {
+      label: "D4.1.12",
+      heading: "Directional, disruptive, and stabilizing selection",
+      level: "HL",
+      text: "Natural selection can shift a population's traits in three distinct patterns, depending on which part of the existing range of variation is favoured. **Directional selection** favours one extreme phenotype over the other, shifting the population's average value in that direction over time, as when a population of insects becomes progressively darker in response to a darkening environment. **Stabilizing selection** favours the intermediate phenotype over both extremes, reducing overall variation, as seen in human birth weight, where babies of an intermediate weight have the highest survival rate.\n\n**Disruptive selection** favours both extreme phenotypes over the intermediate, potentially increasing variation or even splitting a population into two distinct groups over time, as can occur when a population exploits two very different food sources, each favouring a different extreme of a feeding-related trait. All three patterns result in a change in allele frequency, though they differ in whether that change reduces, maintains, or increases the overall variation present."
+    },
+    {
+      label: "D4.1.13",
+      heading: "The Hardy-Weinberg equation",
+      level: "HL",
+      text: "The **Hardy-Weinberg equation** provides a mathematical baseline for allele and genotype frequencies in a population that is not evolving at a particular gene. For a gene with two alleles, with frequencies p and q (where p + q = 1), the expected genotype frequencies in a population at equilibrium are given by **p² + 2pq + q² = 1**, where p² represents the frequency of the homozygous dominant genotype, 2pq the frequency of heterozygotes, and q² the frequency of the homozygous recessive genotype.\n\nIf the frequency of any one genotype is known, for example, if the proportion of homozygous recessive individuals showing a recessive phenotype has been measured directly, the remaining allele and genotype frequencies can be calculated using these same two equations, making Hardy-Weinberg a widely used tool in population genetics."
+    },
+    {
+      label: "D4.1.14",
+      heading: "Conditions for Hardy-Weinberg equilibrium",
+      level: "HL",
+      text: "The Hardy-Weinberg equation only accurately predicts genotype frequencies if a population meets several specific conditions: mating must be random with respect to the gene in question, the population must be very large (to minimise genetic drift), there must be no mutation introducing new alleles, no migration adding or removing alleles (no gene flow), and no natural selection acting on the gene, meaning all genotypes have equal survival and reproductive success.\n\nIn practice, few if any real populations meet every one of these conditions perfectly, which is precisely what makes Hardy-Weinberg useful: if a population's observed genotype frequencies deviate substantially from those predicted by the equation, this deviation indicates that one or more of these conditions is being violated, for example, that natural selection or non-random mating is actively occurring at that gene."
+    },
+    {
+      label: "D4.1.15",
+      heading: "Artificial selection",
+      level: "SL",
+      text: "**Artificial selection** applies the same underlying principle as natural selection, differential reproduction based on trait variation, but with humans, rather than the natural environment, deliberately choosing which individuals breed based on desirable traits. This is how crop varieties with higher yields or disease resistance, and domesticated animal breeds with particular size, temperament, or productivity traits, have been developed over many generations of selective breeding.\n\nIt is worth distinguishing artificial selection from cases where a human activity causes an unintended evolutionary change through what is still natural, not artificial, selection: the evolution of antibiotic resistance in bacteria following antibiotic use, for example, arises because resistant bacteria have a natural survival advantage under drug exposure, not because anyone deliberately selected for resistant individuals to breed."
     }
   ],
 
@@ -1480,6 +1654,7 @@ const CONTENT = {
       text: "While reproductive isolation usually builds up gradually, some new species, particularly in plants, can arise essentially instantly through **hybridisation** combined with **polyploidy**. When two different species interbreed, the resulting hybrid often carries mismatched sets of chromosomes that cannot pair correctly during meiosis, making it sterile. However, if a chromosome-doubling error occurs in that hybrid, producing a cell with two complete matching sets of chromosomes from each parent species, the resulting **polyploid** offspring can undergo meiosis normally and is fertile, but is now reproductively isolated from both original parent species, since crossing back to either produces offspring with an uneven, unpairable chromosome number. This abrupt mechanism has been an important route to new species in the evolutionary history of many crop plants, including bread wheat."
     }
   ],
+
   "B4.2": [
     {
       label: "B4.2.1",
@@ -1494,19 +1669,19 @@ const CONTENT = {
       text: "Organisms differ in their relationship with oxygen. **Obligate aerobes** require oxygen for cell respiration and cannot survive without it. **Obligate anaerobes** cannot tolerate oxygen at all, and in many cases oxygen is directly toxic to them, restricting them to oxygen-free environments such as deep sediment or the gut. **Facultative anaerobes** are more flexible: they can respire aerobically when oxygen is available, generating far more ATP per glucose molecule, but can switch to anaerobic respiration or fermentation when it is not, allowing them to survive in a wider range of habitats than either of the other two groups."
     },
     {
-      label: "B4.2.3 / B4.2.4 / B4.2.5",
+      label: "B4.2.3 / B4.2.4 / B4.2.5 / B4.2.6 / B4.2.7",
       heading: "Modes of nutrition: autotrophs, heterotrophs, and archaea",
       level: "SL",
       text: "**Photosynthesis** is the mode of nutrition in plants, algae, and several groups of photosynthetic prokaryotes (photoautotrophs): carbon dioxide and water are converted into organic molecules using light energy, making these organisms self-sufficient producers rather than consumers of pre-made organic matter.\n\nHeterotrophic organisms instead obtain their organic matter from other organisms, through several distinct strategies. **Holozoic nutrition** involves ingesting solid or liquid food, then digesting, absorbing, and assimilating it internally, the strategy used by most animals. **Mixotrophic nutrition** combines autotrophic and heterotrophic strategies in a single organism, as in Euglena, which can photosynthesise in light but ingest food particles when light is unavailable. **Saprotrophic nutrition**, used by many fungi and some bacteria, involves secreting digestive enzymes onto external organic matter and then absorbing the resulting breakdown products, effectively digesting food outside the body.\n\n**Archaea** show an unusually diverse range of nutritional strategies among prokaryotes, including using light, or the oxidation of a wide variety of inorganic or organic compounds, as an energy source, reflecting the extreme and varied environments many archaea inhabit."
     },
     {
-      label: "B4.2.6 / B4.2.7",
+      label: "B4.2.8",
       heading: "Dentition, diet, and inferring diet from anatomy",
       level: "SL",
       text: "Within the hominid family, dentition reflects diet. Omnivorous species tend to have a mixture of tooth types, sharper incisors and canines alongside flatter molars, suited to a varied diet including both plant and animal material, while more herbivorous species show heavier wear and larger, flatter molars adapted for grinding fibrous plant tissue.\n\nBecause dentition and jaw structure are so closely tied to diet, they can be used to infer the probable diet of extinct hominid species from fossil remains alone, comparing tooth size, shape, and wear patterns to those of living species with known diets."
     },
     {
-      label: "B4.2.8 / B4.2.9",
+      label: "B4.2.9",
       heading: "Herbivore, predator, and prey adaptations",
       level: "SL",
       text: "Herbivores have evolved adaptations for efficiently harvesting and digesting plant material, such as specialised grinding teeth and, in many cases, gut microorganisms capable of breaking down cellulose, which the herbivore's own enzymes cannot digest. Plants, in turn, have evolved defences against herbivory, including physical deterrents like thorns and tough or spiny leaves, and chemical deterrents like toxic or bitter-tasting compounds.\n\nPredators show adaptations for finding, catching, and killing prey, such as acute senses, speed, camouflage for stalking, and specialised killing structures like claws or venom. Prey species show a corresponding set of adaptations for resisting predation, including camouflage, alarm calls, defensive group behaviour, and rapid escape responses.",
@@ -1515,12 +1690,18 @@ const CONTENT = {
     },
     {
       label: "B4.2.10",
+      heading: "Predator and prey adaptations",
+      level: "SL",
+      text: "Predators have evolved a range of adaptations for finding, catching, and killing prey, including acute sensory systems for detecting prey at a distance, physical weapons such as claws or venom, and behavioural strategies such as stalking or pack hunting that improve the chances of a successful kill.\n\nPrey species have evolved a matching range of adaptations for avoiding predation, including camouflage that reduces detection, physical defences such as spines or a hard shell, and behavioural responses such as fleeing, freezing, or forming defensive groups; because predators and prey are locked in an ongoing evolutionary arms race, improvements in predator hunting ability tend to select for improved prey defences, and vice versa, over successive generations."
+    },
+    {
+      label: "B4.2.11",
       heading: "Plant adaptations for harvesting light",
       level: "SL",
       text: "Because light availability is often the limiting factor for photosynthesis, plants show a range of structural adaptations for capturing it efficiently. These include broad, thin leaves that maximise surface area relative to the plant's investment in tissue, leaf arrangements that minimise self-shading between leaves on the same plant, and, in forest species competing for light beneath a closed canopy, rapid vertical growth or climbing habits that let a plant reach brighter conditions higher up."
     },
     {
-      label: "B4.2.11 / B4.2.12",
+      label: "B4.2.12",
       heading: "Fundamental and realised niches",
       level: "SL",
       text: "The **fundamental niche** of a species is the full range of environmental conditions and resources it could theoretically exploit, based purely on its adaptations and physiological tolerance, in the total absence of competitors or predators. The **realised niche** is the narrower portion of that fundamental niche a species actually occupies in practice, once biotic interactions such as competition and predation from other species are taken into account.\n\nThe realised niche is therefore always equal to or smaller than the fundamental niche, since real ecosystems are never free of competing or interacting species."
@@ -1579,6 +1760,7 @@ const CONTENT = {
       text: "Prior to the late twentieth century, prokaryotes were generally treated as a single group. Working with rRNA base sequence data, the microbiologist Carl Woese compared the small ribosomal subunit sequences of typical bacteria against those of methanogens, organisms previously classified simply as unusual bacteria. He found substantial, systematic sequence differences between the two groups, differences at least as large as those separating bacteria from eukaryotes, providing strong evidence that methanogens (and related organisms) actually belong to an entirely separate evolutionary domain. This evidence led to the now widely accepted three-domain system of classification: **Bacteria**, **Archaea**, and **Eukarya**."
     }
   ],
+
   "D4.2": [
     {
       label: "D4.2.1",
@@ -1594,42 +1776,60 @@ const CONTENT = {
     },
     {
       label: "D4.2.3",
+      heading: "Deforestation of the Amazon as a potential tipping point",
+      level: "SL",
+      text: "The Amazon rainforest generates a substantial proportion of its own rainfall: trees draw up groundwater and release it through **transpiration**, forming atmospheric water vapour that cools the surrounding air and contributes to rainfall both locally and further downwind. Because this cycle depends on having a large, continuous area of forest, scientists are concerned that deforestation beyond some critical threshold could disrupt these regional airflow and rainfall patterns badly enough that much of the remaining forest could no longer sustain itself, potentially triggering a shift toward a drier, savanna-like ecosystem.\n\nThis possibility is often discussed as a **tipping point**, since this transition, once triggered, might be difficult or impossible to reverse. Considerable uncertainty remains, however, over exactly how much deforestation the system could tolerate before actually reaching this critical threshold."
+    },
+    {
+      label: "D4.2.4",
       heading: "Using models to study ecosystem stability",
       level: "SL",
       text: "Because manipulating real, large-scale ecosystems experimentally is rarely practical or ethical, ecologists often use **mesocosms**, small-scale, controlled model ecosystems, to investigate how particular variables affect stability. Sealed glass mesocosms are especially useful because they can be arranged so that no matter enters or leaves, isolating the system while still permitting the exchange of energy (for instance as light or heat) with the outside, allowing researchers to observe how internal nutrient cycling and species interactions play out under fully controlled conditions."
     },
     {
-      label: "D4.2.4",
+      label: "D4.2.5",
       heading: "Keystone species",
       level: "SL",
       text: "A **keystone species** is a species whose impact on the structure and stability of its community is disproportionately large relative to its own numerical abundance. Removing a keystone species from an ecosystem, whether through hunting, habitat loss, or disease, can trigger disproportionate knock-on effects throughout the food web, potentially destabilising or collapsing the wider ecosystem even though the keystone species itself made up only a small fraction of the total biomass present."
     },
     {
-      label: "D4.2.5 / D4.2.6",
+      label: "D4.2.6",
       heading: "Sustainable harvesting and sustainable agriculture",
       level: "SL",
       text: "Harvesting a natural resource, whether timber, fish, or wild game, is sustainable only if it is removed no faster than the population or ecosystem can naturally replace it; harvesting beyond this rate causes long-term decline and, potentially, ecosystem collapse.\n\nThe sustainability of agriculture depends on several interacting factors: the rate of soil erosion, the leaching of nutrients out of the soil, the ongoing supply of fertilisers and other inputs needed to maintain yields, pollution caused by agrochemicals, and the overall carbon footprint of agricultural practices, including land clearance, fertiliser production, and machinery use."
     },
     {
-      label: "D4.2.7 / D4.2.8",
+      label: "D4.2.7",
+      heading: "Sustainability of agriculture",
+      level: "SL",
+      text: "The long-term sustainability of agriculture depends on managing several interacting pressures. **Soil erosion**, the loss of topsoil through wind or water action, can be worsened by practices that leave soil exposed, while **leaching** of nutrients from soil, particularly following heavy fertiliser use, reduces soil fertility over time and can pollute nearby water bodies.\n\nA reliable supply of **fertilisers** and other agricultural inputs is needed to maintain soil fertility and crop yield, but their production and application carry their own environmental costs, including **pollution from agrochemicals** and a substantial **carbon footprint** from their manufacture and transport, all of which need to be weighed together when assessing whether a particular agricultural system can be sustained over the long term."
+    },
+    {
+      label: "D4.2.8",
       heading: "Eutrophication and biomagnification",
       level: "SL",
       text: "**Eutrophication** occurs when nitrogen and phosphate fertilisers leach out of agricultural soil into nearby aquatic or marine ecosystems, providing an excess supply of nutrients that triggers explosive algal growth. When the resulting algal bloom eventually dies, its decomposition by bacteria consumes large quantities of dissolved oxygen, sharply raising the **biochemical oxygen demand** of the water and often causing the die-off of fish and other oxygen-dependent organisms.\n\n**Biomagnification** is a separate, though related, problem: certain persistent pollutants, such as the pesticide DDT and the heavy metal mercury, accumulate in the tissues of organisms and become progressively more concentrated at each successive trophic level, since each consumer eats many prey organisms' worth of accumulated toxin without being able to break it down or excrete it efficiently. Top predators in a food chain can therefore end up carrying dangerously high toxin loads even when the toxin's concentration in the environment itself is comparatively low."
     },
     {
       label: "D4.2.9",
+      heading: "Biomagnification of pollutants",
+      level: "SL",
+      text: "**Biomagnification** describes how the concentration of certain persistent pollutants increases at each successive trophic level within a food chain, since these substances are not readily broken down or excreted, and instead accumulate within an organism's tissues over its lifetime.\n\nAs a predator consumes many prey organisms, each carrying some accumulated pollutant, the concentration within the predator's own tissues can end up far higher than in any single prey item, and this effect compounds further at each higher trophic level. **DDT** (a persistent pesticide) and **mercury** are two well documented examples, both reaching concentrations in top predators, such as birds of prey or large fish, that are many times higher than the levels originally present in the wider environment."
+    },
+    {
+      label: "D4.2.10",
       heading: "Microplastic and macroplastic pollution",
       level: "SL",
       text: "Plastics persist for a very long time in the natural environment because they are largely non-biodegradable, resistant to the microbial breakdown that recycles most natural organic matter. **Macroplastic** debris, from fishing gear to packaging, can entangle or be ingested by marine animals, sometimes causing fatal injury or starvation. Over time, larger plastic items also physically break down into **microplastics**, tiny fragments that are now widespread throughout marine and freshwater ecosystems, are ingested across many levels of the food chain, and whose long-term ecological and health effects are still an active area of research."
     },
     {
-      label: "D4.2.10",
+      label: "D4.2.11",
       heading: "Rewilding",
       level: "SL",
       text: "**Rewilding** is a conservation strategy aimed at restoring natural ecological processes and self-regulating ecosystems, rather than managing a habitat toward one fixed, human-defined target state. Rewilding projects often focus on reintroducing keystone species, particularly large carnivores, whose presence can trigger a cascade of beneficial changes throughout the wider food web, alongside re-establishing connected corridors of habitat that allow species to move and recolonise areas naturally."
     },
     {
-      label: "D4.2.11 / D4.2.12",
+      label: "D4.2.12",
       heading: "Ecological succession and primary succession",
       level: "SL",
       text: "**Ecological succession** is the gradual, directional change in the species composition of a community over time, typically driven by the way earlier colonising species alter the local environment, making conditions more favourable for a different set of species to establish. **Primary succession** begins on newly formed, previously lifeless substrate, such as bare rock exposed after a volcanic eruption or the retreat of a glacier, with no pre-existing soil. It starts with hardy pioneer species, often lichens and mosses, that can tolerate the harsh initial conditions and gradually break down rock and accumulate organic matter, slowly building the soil needed to support the more complex plant and animal communities that follow.",
@@ -1637,7 +1837,13 @@ const CONTENT = {
       imageCaption: "Primary succession: pioneer species colonise bare rock, gradually building soil and enabling progressively more complex communities to establish."
     },
     {
-      label: "D4.2.13 / D4.2.14",
+      label: "D4.2.13",
+      heading: "Changes during primary succession",
+      level: "HL",
+      text: "As primary succession proceeds from bare substrate toward a more established community, several general changes typically occur together. Plants tend to increase in average size, from the small mosses and lichens of early pioneer communities to the trees of a much later stage, and overall **primary production** (the rate at which producers generate new biomass) increases correspondingly.\n\n**Species diversity** generally increases as the developing habitat comes to support a wider range of plant and animal species, and the **complexity of food webs** increases alongside it, as more species and feeding relationships become established. The developing community also drives increasing **nutrient cycling**, as accumulating organic matter and an increasingly active community of decomposers build up a progressively richer, more nutrient-retentive soil."
+    },
+    {
+      label: "D4.2.14 / D4.2.15",
       heading: "Cyclical succession, climax communities, and arrested succession",
       level: "SL",
       text: "Not every successional sequence proceeds toward a single stable endpoint. **Cyclical succession** occurs where a community repeatedly cycles through a recurring sequence of stages, often driven by a regular disturbance such as periodic fire or storm damage, rather than settling permanently into one final state.\n\nWhere succession does progress toward a stable, self-sustaining endpoint, that final stage is called the **climax community**, a community that persists indefinitely under the prevailing local conditions unless significantly disturbed. **Arrested succession** occurs when some persistent factor, such as sustained grazing pressure or repeated human disturbance, prevents a community from ever progressing to what would otherwise be its natural climax state, holding it instead at an earlier successional stage."
@@ -1685,29 +1891,115 @@ const CONTENT = {
     },
     {
       label: "D4.3.7",
+      heading: "Threats to coral reefs",
+      level: "SL",
+      text: "Coral reefs are threatened by climate change through two distinct mechanisms acting simultaneously. Rising atmospheric carbon dioxide increases the amount dissolved in seawater, causing **ocean acidification**, which suppresses corals' ability to build their calcium carbonate skeletons.\n\nRising sea temperatures separately cause **coral bleaching**: heat-stressed coral polyps expel the symbiotic algae that normally provide both their colour and much of their nutrition, and if the stress persists, the coral can starve and die. Because coral reefs provide the physical structure supporting an enormous diversity of other marine species, this combination of acidification and bleaching risks a broader collapse of the entire reef ecosystem, not just the loss of the coral itself."
+    },
+    {
+      label: "D4.3.8",
       heading: "Carbon sequestration strategies",
       level: "SL",
       text: "Restoring and expanding vegetation is one of the main approaches to actively removing carbon dioxide from the atmosphere. **Afforestation** (establishing forest on land that was not previously forested) and **forest regeneration** (allowing or assisting degraded forest to regrow) both increase the amount of carbon stored in living biomass over time. **Restoration of peat-forming wetlands** is also significant, since waterlogged, low-oxygen peat conditions slow decomposition dramatically, allowing peatlands to store carbon that has accumulated over thousands of years, carbon that is released rapidly back into the atmosphere if the peatland is drained."
     },
     {
-      label: "D4.3.8",
+      label: "D4.3.9 / D4.3.10",
       heading: "Phenology and climate change",
       level: "SL",
       text: "**Phenology** is the study of the timing of recurring biological events, such as flowering, migration, breeding, and leaf emergence, in relation to seasonal and climatic conditions. Climate change is disrupting many of these long-established phenological patterns, causing events like spring flowering or bird migration to shift earlier or later than in the past. Where interacting species (such as a flowering plant and its pollinator) shift their timing at different rates, this disruption can create a damaging **mismatch**, reducing reproductive success for one or both species involved."
     },
     {
-      label: "D4.3.9",
-      heading: "Climate change and insect life cycles",
-      level: "SL",
-      text: "Many insect species have life cycles whose speed and number of generations per year depend heavily on ambient temperature. As regional climates warm, some insect species are able to complete an additional generation within a single year that would not previously have been possible, effectively increasing their population growth rate. Where the insects concerned are agricultural pests or disease vectors, this increase in the number of life cycles per year can have significant knock-on consequences for crop damage or disease transmission."
+      label: "D4.3.11",
+      heading: "More insect life cycles per year due to climate change",
+      level: "HL",
+      text: "Many insect species complete more generations per year in warmer conditions, since the rate of their development from egg to adult depends heavily on ambient temperature; warmer temperatures generally shorten each generation's development time, allowing additional generations to be squeezed into a single year that would previously only have supported one or two.\n\nThe **spruce bark beetle** illustrates the consequences of this well: warmer conditions in many northern forests have allowed it to complete an additional generation within a single year in some regions, contributing to more rapid, larger-scale population growth and correspondingly greater damage to spruce forests than the beetle's more limited historical reproductive rate would have caused."
     },
     {
-      label: "D4.3.10",
+      label: "D4.3.12",
       heading: "Evolution as a consequence of climate change",
-      level: "SL",
-      text: "Climate change functions as a powerful, ongoing selection pressure, and populations able to draw on sufficient heritable variation may evolve in response to it over successive generations, favouring individuals with traits such as greater heat tolerance, altered breeding timing, or shifted range preferences. However, this evolutionary response depends heavily on how quickly a population can adapt relative to the pace of climate change itself; species with long generation times, small population sizes, or limited genetic variation are at much greater risk of being unable to adapt quickly enough, making extinction a more likely outcome than adaptation for many such species."
+      level: "HL",
+      text: "By altering the relative survival and reproductive success of different phenotypes, climate change can act as a genuine selective pressure, driving detectable evolutionary change within affected populations, not just shifts in behaviour or geographic range.\n\nThe **tawny owl** provides a documented example: this species has both grey and brown colour variants, with the grey form traditionally better camouflaged against a typically snowy woodland floor. As winters in parts of its range have become milder with less persistent snow cover, the brown variant's relative camouflage advantage has increased, and its frequency within affected populations has correspondingly risen, a direct, measurable evolutionary response to a changing climate."
     }
   ],
+
+  "C4.1": [
+    {
+      label: "C4.1.1",
+      heading: "Defining a population",
+      level: "SL",
+      text: "A **population** is a group of interacting organisms of the same species living in the same area at the same time. Members of a population normally interbreed with one another, and it is this reproductive connection, rather than simple geographic proximity, that is used to distinguish one population of a species from a separate, reproductively isolated population of the same species living elsewhere."
+    },
+    {
+      label: "C4.1.2 / C4.1.3",
+      heading: "Estimating population size by random sampling",
+      level: "SL",
+      text: "Counting every individual in a population is rarely practical, so ecologists instead estimate population size using **random sampling**, examining a representative subset of a habitat and using it to infer the population as a whole. Randomness in where samples are taken is essential to avoid bias, if sampling locations are chosen non-randomly (for instance, always in the most convenient or most visibly populated spots), the resulting estimate will systematically over- or under-represent the true population.\n\nEven with proper randomisation, some **sampling error**, the difference between the estimate obtained and the true population size, is unavoidable, since a sample is never a perfect miniature of the whole population. For **quadrat sampling**, used to estimate the population size of sessile (non-moving) organisms such as most plants, a number of randomly placed quadrats of known area are used to count individuals, and the standard deviation of the counts per quadrat gives a measure of how evenly the population is distributed across the habitat."
+    },
+    {
+      label: "C4.1.4",
+      heading: "Capture-mark-release-recapture and the Lincoln index",
+      level: "SL",
+      text: "For motile (mobile) species, population size is instead commonly estimated using **capture-mark-release-recapture**: a sample of individuals is captured, marked in some harmless way, and released back into the population; after allowing time for the marked individuals to redistribute themselves randomly among the rest of the population, a second sample is captured and the proportion of marked individuals within it is recorded.\n\nThe **Lincoln index** uses this data to estimate total population size: population size = (number initially marked × total number recaptured) ÷ number of marked individuals recaptured. This method assumes, among other things, that the marked individuals mix fully and randomly back into the population, and that the marking itself does not affect an individual's survival or behaviour."
+    },
+    {
+      label: "C4.1.5 / C4.1.6",
+      heading: "Carrying capacity and negative feedback",
+      level: "SL",
+      text: "**Carrying capacity** is the maximum population size that a given environment can sustainably support over the long term, determined by the availability of limited resources such as food, water, space, and shelter. As a population approaches its carrying capacity, competition for these limited resources intensifies.\n\nPopulation size is regulated around the carrying capacity through **negative feedback**: as population density rises, density-dependent factors such as competition, predation, and disease transmission become more intense, reducing the population's growth rate and pushing it back down toward a sustainable level; conversely, if the population falls well below carrying capacity, reduced competition allows growth to accelerate again."
+    },
+    {
+      label: "C4.1.7 / C4.1.8",
+      heading: "Limiting factors and population growth models",
+      level: "SL",
+      text: "Factors that restrict population growth are classified as either **density-dependent**, having a proportionally larger effect as population density increases (such as food availability, disease, and predation), or **density-independent**, affecting a population by roughly the same degree regardless of its size (such as a sudden extreme weather event).\n\nPopulation growth can be modelled in two idealised forms. **Exponential growth** describes unrestricted growth under conditions of abundant resources and low competition, producing an ever-steepening curve. **Sigmoidal (logistic) growth** instead accounts for density-dependent limiting factors, producing an S-shaped curve that rises steeply while resources remain abundant, then levels off as the population approaches carrying capacity. Both are simplified models of real population dynamics, useful for understanding general patterns but rarely capturing the full complexity of a real ecosystem.",
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Logistic_Carrying_Capacity.svg",
+      imageCaption: "A sigmoid (S-shaped) population growth curve levelling off at the carrying capacity, K."
+    },
+    {
+      label: "C4.1.9",
+      heading: "Intraspecific competition and cooperation",
+      level: "SL",
+      text: "Members of the same population compete with one another for the same limited resources, since they share identical needs, this **intraspecific competition** is generally more intense than competition between different species, and it is the primary density-dependent mechanism that limits a population's growth as it approaches carrying capacity. Some species also show **intraspecific cooperation**, such as cooperative hunting or communal defence against predators, which can improve the survival and reproductive success of individuals within a group beyond what they could achieve alone, even while those same individuals continue to compete with one another for other resources."
+    },
+    {
+      label: "C4.1.10",
+      heading: "Communities",
+      level: "SL",
+      text: "A **community** consists of all the populations of different species that live and interact within a given area, encompassing every layer of interaction, from competition and predation to mutualism, that connects species to one another and, collectively, drives how the ecosystem as a whole functions."
+    },
+    {
+      label: "C4.1.11 / C4.1.12",
+      heading: "Categories of interspecific interaction",
+      level: "SL",
+      text: "Species within a community interact in several distinct, classifiable ways, each with different ecological significance. In **competition**, two species require the same limited resource, and both are disadvantaged. In **predation**, one species (the predator) kills and consumes another (the prey), benefiting at the prey's expense. In **herbivory**, an animal consumes a plant, benefiting at the plant's expense without necessarily killing it outright. In **parasitism**, one species benefits at the sustained expense of a host, typically without killing it, distinguishing it from predation; **pathogenicity** is a related case in which a microorganism causes disease in a host. In **mutualism**, both interacting species benefit, as in the relationship between a flowering plant and its pollinator.\n\nThese interactions matter ecologically because they shape which species can coexist in a community, how energy and resources flow through it, and how stable the community is overall, removing or introducing a single strongly interacting species can have consequences that cascade through many others."
+    },
+    {
+      label: "C4.1.13",
+      heading: "Invasive species",
+      level: "SL",
+      text: "An **invasive species** is one introduced, whether deliberately or accidentally, to an area outside its native range, where it establishes itself and causes ecological or economic harm, often by outcompeting, preying on, or otherwise disrupting native (endemic) species that have no prior evolutionary experience of it. Human activity is the principal driver behind the introduction and spread of most invasive species, through routes including global trade and transport, the deliberate introduction of species for agriculture or pest control, and the accidental release of pets or garden species into the wild."
+    },
+    {
+      label: "C4.1.14 / C4.1.15",
+      heading: "Testing for interspecific competition using chi-squared",
+      level: "SL",
+      text: "Whether two species are actually competing for the same resources in a habitat can be tested statistically, for instance by comparing how often the two species are found together in the same sampling location against how often that would be expected purely by chance if they were distributed independently of one another.\n\nThe **chi-squared test** is commonly used for this purpose: it compares observed frequencies (from field sampling) against the frequencies expected under a null hypothesis of no association between the two species, producing a test statistic that can be compared against a critical value to determine whether any observed association is statistically significant, or better explained by random chance. As with any statistical test, the chi-squared test has limitations, including the general requirement for reasonably large sample and expected-frequency sizes to give a reliable result, so its conclusions should be evaluated critically rather than accepted automatically."
+    },
+    {
+      label: "C4.1.16 / C4.1.17",
+      heading: "Predator-prey dynamics and top-down versus bottom-up control",
+      level: "SL",
+      text: "Predator and prey populations frequently show cyclical fluctuations over time, since a rise in prey numbers provides more food for predators, allowing the predator population to grow, which in turn increases predation pressure and drives prey numbers back down, followed by a corresponding decline in predators once prey become scarce; the long-term Canada lynx and snowshoe hare population data is a well-documented real-world case study of this pattern.\n\nCommunities can be regulated by **top-down control**, in which predators limit the abundance of species lower in the food chain (as famously seen with sea otters controlling sea urchin populations in kelp forests), or by **bottom-up control**, in which the availability of resources such as nutrients or primary producers limits the abundance of species higher up the food chain; real communities are often shaped by some combination of both forms of control operating together.",
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Predator prey curve.png",
+      imageCaption: "A classic predator-prey population cycle: the predator population rises and falls with a short time lag behind the prey population."
+    },
+    {
+      label: "C4.1.18",
+      heading: "Allelopathy and antibiotic secretion as competitive strategies",
+      level: "SL",
+      text: "Some organisms gain a competitive advantage not through direct resource competition but by chemically suppressing their competitors. **Allelopathy**, seen in some plants, involves releasing chemical compounds into the surrounding soil that inhibit the germination or growth of competing plant species nearby, effectively reducing competition for light, water, and nutrients before it can occur. **Antibiotic secretion**, seen in some fungi and bacteria, serves an analogous function in the microbial world, releasing compounds that kill or inhibit competing microorganisms in the immediate vicinity, securing resources and space for the producing organism."
+    }
+  ],
+
   "C4.2": [
     {
       label: "C4.2.1",
@@ -1752,13 +2044,13 @@ const CONTENT = {
       text: "**Trophic levels** classify organisms according to their position in a food chain. Autotrophs occupy trophic level 1; primary consumers (typically herbivores) occupy trophic level 2; secondary consumers occupy trophic level 3; and tertiary consumers, often top predators, occupy trophic level 4. Some organisms feed at more than one trophic level depending on what they eat at a given time.\n\nAn **energy pyramid** is a diagram representing the amount of energy present at each trophic level of a food chain, typically measured in kilojoules per square metre per year (kJ m-2 yr-1). Because energy is progressively lost at each step (see C4.2.12), energy pyramids are almost always widest at the base and narrow sharply toward the top."
     },
     {
-      label: "C4.2.12 / C4.2.13",
+      label: "C4.2.12 / C4.2.13 / C4.2.14",
       heading: "Energy loss between trophic levels",
       level: "SL",
       text: "The total energy available decreases substantially at each successive trophic level, roughly 90% of the energy present at one level is typically lost before it reaches the next, meaning only about 10% is transferred onward on average. This large loss happens for several reasons: a significant amount of chemical energy is converted to heat and lost to the environment through cell respiration in both autotrophs and heterotrophs, some ingested material (such as bone, fur, or fibrous plant matter) is indigestible and passes through without being absorbed, and not every organism at one trophic level is actually consumed by the next before it dies and decomposes. This substantial, unavoidable heat loss at every stage is the fundamental reason why food chains rarely extend beyond four or five trophic levels, there simply isn't enough energy left to support a further level of consumers."
     },
     {
-      label: "C4.2.14 / C4.2.15",
+      label: "C4.2.15",
       heading: "Primary productivity",
       level: "SL",
       text: "**Primary productivity** is the rate at which producers convert light energy into the chemical energy of new organic matter (biomass) within an ecosystem. **Gross primary productivity** is the total rate of this conversion, while **net primary productivity** is what remains after subtracting the energy producers themselves use up through their own cell respiration, and it is this net figure that represents the energy actually available to be passed on to primary consumers.\n\nPrimary productivity is affected by factors including light intensity and duration, temperature, water and nutrient availability, and carbon dioxide concentration, any of which can act as a limiting factor holding productivity below its maximum potential rate in a given ecosystem.",
@@ -1766,19 +2058,31 @@ const CONTENT = {
       imageCaption: "The carbon cycle: the movement of carbon between the atmosphere, living organisms, and long-term storage in rock, fossil fuels, and the ocean."
     },
     {
-      label: "C4.2.16 / C4.2.17",
+      label: "C4.2.16",
+      heading: "Secondary production",
+      level: "SL",
+      text: "**Secondary production** is the rate at which heterotrophs (consumers) accumulate new biomass, the animal equivalent of the primary production carried out by autotrophs. Just as producers lose some captured energy to their own respiration, consumers lose a substantial proportion of the energy they ingest to their own cell respiration, as well as to undigested waste, meaning secondary production is considerably lower than the primary production available to support it.\n\nThis explains why the total biomass of consumers in an ecosystem is typically far smaller than the biomass of producers supporting them, since only a fraction of the energy captured by producers is ever converted into new consumer biomass, with the remainder lost as heat at each stage of transfer."
+    },
+    {
+      label: "C4.2.17 / C4.2.19",
       heading: "The carbon cycle, deforestation, and combustion",
       level: "SL",
       text: "The **carbon cycle** describes the continuous movement of carbon between the atmosphere (mainly as CO2), living organisms (via photosynthesis and respiration), the ocean, and long-term storage in rock, sediment, and fossil fuels. Forests act as a major carbon sink, storing large quantities of carbon in living biomass and soil; **deforestation** disrupts this cycle in two ways at once, directly releasing stored carbon (often through burning) and permanently reducing the ecosystem's ongoing capacity to absorb further CO2 through photosynthesis.\n\n**Combustion** of fossil fuels and biomass releases carbon that had, in the case of fossil fuels, been locked away in long-term geological storage for millions of years, on a timescale far faster than the natural processes that originally sequestered it, which is the principal reason atmospheric CO2 concentration has risen so sharply since industrialisation began."
     },
     {
       label: "C4.2.18",
+      heading: "Ecosystems as carbon sinks and carbon sources",
+      level: "SL",
+      text: "An ecosystem acts as a **carbon sink** when it absorbs more carbon dioxide through photosynthesis than it releases through respiration and decomposition, resulting in a net accumulation of carbon within the ecosystem over time, mature forests are a widely cited example.\n\nAn ecosystem instead acts as a **carbon source** when respiration, decomposition, or disturbances such as fire release more carbon dioxide than is being absorbed by photosynthesis, resulting in a net release of carbon to the atmosphere; a given ecosystem can switch between acting as a sink and a source over time, depending on factors such as its successional stage, seasonal conditions, or the impact of human disturbance."
+    },
+    {
+      label: "C4.2.20",
       heading: "The Keeling Curve",
       level: "SL",
       text: "The **Keeling Curve**, based on continuous atmospheric CO2 measurements taken at the Mauna Loa Observatory in Hawaii since 1958, shows two overlaid trends. In the short term, atmospheric CO2 concentration oscillates in a regular annual cycle, falling during the northern hemisphere's growing season as increased photosynthesis draws CO2 down, and rising again over its winter as photosynthesis slows while respiration and decomposition continue. Superimposed on this seasonal oscillation is a clear, steady long-term upward trend, providing some of the most direct and continuous evidence available of the rising atmospheric CO2 concentration driven by human activity."
     },
     {
-      label: "C4.2.19 / C4.2.20",
+      label: "C4.2.21 / C4.2.22",
       heading: "Why photosynthesis, respiration, and matter cycling sustain life",
       level: "SL",
       text: "Photosynthesis and aerobic cell respiration together sustain essentially all complex life on Earth: photosynthesis captures light energy and converts it into the chemical energy of organic molecules while releasing oxygen, and aerobic respiration then releases that stored chemical energy using the very oxygen photosynthesis produced, while regenerating the carbon dioxide photosynthesis needs as a raw material. Each process depends on the products of the other, forming a self-sustaining global cycle.\n\nThe cycling of matter, of carbon, nitrogen, water, and other essential elements, is equally fundamental to ecosystem function, since the total quantity of these elements on Earth is essentially fixed. Without continuous recycling by decomposers and other processes, elements would eventually become locked up in dead organic matter or waste products, and life as we know it, dependent on a continuous supply of these elements, could not be sustained indefinitely."
@@ -1799,30 +2103,140 @@ const CONTENT = {
       text: "Although millions of species have been formally discovered, named, and described, taxonomists agree that a great many more remain undiscovered, particularly among insects, fungi, and marine microorganisms. Evidence from the fossil record suggests that, despite five previous mass extinction events in Earth's history, there are currently more species alive today than at any point in the past. Comparisons of this kind depend partly on classification choices, taxonomists who recognise more species within a group ('splitters') will report different diversity figures from those who lump more variation into fewer species ('lumpers'), a reminder that classification itself involves a degree of interpretation."
     },
     {
-      label: "A4.2.3 / A4.2.4",
+      label: "A4.2.3",
       heading: "Causes of anthropogenic species extinction",
       level: "SL",
       text: "The current, ongoing wave of extinctions is overwhelmingly driven by human activity, rather than the natural background rate of extinction seen through most of evolutionary history, and is sometimes referred to as the sixth mass extinction. Habitat destruction, overexploitation (overhunting or overfishing), pollution, the introduction of invasive species, and climate change are among the principal anthropogenic drivers.\n\nCase studies illustrate the range of these causes: the extinction of the North Island giant moa (Dinornis novaezealandiae) in New Zealand exemplifies the loss of large-bodied terrestrial animals (megafauna) through overhunting, while the extinction of the Caribbean monk seal (Neomonachus tropicalis) illustrates the loss of a marine species, driven by a combination of hunting and habitat disturbance."
     },
     {
-      label: "A4.2.5 / A4.2.6",
+      label: "A4.2.4",
       heading: "Causes of ecosystem loss",
       level: "SL",
       text: "Beyond the loss of individual species, entire ecosystems can be lost or severely degraded, again driven predominantly by human activity: land clearance for agriculture or urban development, resource extraction, and pollution are among the major direct and indirect causes. The large-scale clearance of mixed dipterocarp forest in Southeast Asia, much of it converted to agricultural land, including oil palm plantations, is a well-documented case study of ecosystem loss on a substantial regional scale."
     },
     {
-      label: "A4.2.7 / A4.2.8",
+      label: "A4.2.5 / A4.2.6",
       heading: "Evidence for, and causes of, the biodiversity crisis",
       level: "SL",
       text: "Evidence for a global biodiversity crisis is drawn from multiple independent sources: long-term population monitoring data showing widespread declines across many taxonomic groups, the fossil record's comparison of current versus historical extinction rates, and assessments such as the IUCN Red List, which tracks the conservation status of individual species over time. Taken together, this evidence consistently points toward extinction rates far higher than the natural, pre-human background rate.\n\nThe underlying causes of this crisis are broadly the same anthropogenic factors responsible for individual species extinctions and ecosystem loss: habitat destruction and fragmentation, overexploitation, pollution, invasive species, and climate change, often acting in combination rather than in isolation, which makes the crisis considerably harder to address than any single cause would be alone."
     },
     {
-      label: "A4.2.9",
+      label: "A4.2.7",
       heading: "Approaches to conserving biodiversity",
       level: "SL",
       text: "Biodiversity conservation relies on a range of complementary strategies. **In situ conservation** protects species within their natural habitat, for example through protected areas, nature reserves, and habitat corridors that allow populations to move and interbreed; this is generally the preferred approach, since it maintains natural ecological interactions and evolutionary processes. **Ex situ conservation** preserves species outside their natural habitat, for example through captive breeding programmes, zoos, botanical gardens, and seed banks, providing a safeguard for species that are too critically endangered, or whose habitat is too degraded, for in situ measures to be sufficient on their own.\n\n**Rewilding** (see D4.2.10) has also become an increasingly prominent conservation strategy, aiming to restore self-sustaining natural processes rather than actively managing a habitat toward a fixed target state."
+    },
+    {
+      label: "A4.2.8",
+      heading: "The EDGE of Existence programme",
+      level: "SL",
+      text: "The **EDGE of Existence** programme prioritises conservation resources toward species that are both **evolutionarily distinct** (having few or no close living relatives, representing a disproportionately large and irreplaceable share of the tree of life) and **globally endangered**.\n\nThe rationale is that losing a species with many close relatives represents a comparatively smaller loss of unique evolutionary history than losing a species that is the sole survivor of an ancient, otherwise extinct lineage; by combining evolutionary distinctiveness with extinction risk, this approach helps direct limited conservation funding toward the species whose loss would be most irreplaceable in evolutionary terms, rather than relying on extinction risk or public appeal alone."
     }
   ],
+
+  "B2.1": [
+    {
+      label: "B2.1.1",
+      heading: "Lipid bilayers as the basis of membranes",
+      level: "SL",
+      text: "Every biological membrane is built around a **phospholipid bilayer**, two layers of phospholipid molecules arranged tail to tail. A phospholipid has a polar, hydrophilic phosphate head and two non-polar, hydrophobic fatty acid tails. When phospholipids are placed in an aqueous environment, they spontaneously arrange themselves so the polar heads face outward, in contact with the water on either side of the membrane, while the non-polar tails cluster together, shielded from water in the interior of the bilayer.\n\nThis arrangement is thermodynamically favourable and requires no cellular machinery to assemble, it is a direct consequence of the amphipathic structure of phospholipids and their interaction with water. The result is a continuous, self-sealing barrier that separates the inside of a cell, or an organelle, from its surroundings, and forms the structural foundation on which every other membrane function depends.",
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/0302_Phospholipid_Bilayer.jpg",
+      imageCaption: "A phospholipid bilayer: polar heads face the aqueous environment on both sides, non-polar tails face inward."
+    },
+    {
+      label: "B2.1.2 / B2.1.3",
+      heading: "Lipid bilayers as barriers, and simple diffusion",
+      level: "SL",
+      text: "The hydrophobic core of the bilayer gives membranes their selective, barrier-like permeability. Small, non-polar molecules, notably oxygen and carbon dioxide, can cross this hydrophobic core directly by **simple diffusion**, net movement from a region of higher concentration to a region of lower concentration, requiring no protein and no energy input, since it is driven entirely by the concentration gradient.\n\nLarger or more polar molecules, and especially ions, cannot cross the hydrophobic interior of the bilayer at any meaningful rate on their own, since their charge or size makes passage through the non-polar tails energetically unfavourable. This selective barrier property is exactly what allows a membrane to separate an internal chemical environment from the outside, and it is why almost all polar or charged substances require specific transport proteins to cross a membrane at all."
+    },
+    {
+      label: "B2.1.4",
+      heading: "Integral and peripheral proteins",
+      level: "SL",
+      text: "**Integral proteins** are embedded within the bilayer, often spanning it completely, with hydrophobic regions of the protein sitting alongside the hydrophobic fatty acid tails and hydrophilic regions projecting into the aqueous environment on either side. **Peripheral proteins** are attached only loosely to one face of the membrane, either bound to an integral protein, anchored by a short hydrocarbon chain, or held in place by the cytoskeleton, and can be removed more easily than integral proteins. Together, membrane proteins carry out much of the functional work of a membrane, including transport, enzymatic catalysis, receptor binding for cell signalling, and cell-to-cell recognition."
+    },
+    {
+      label: "B2.1.5",
+      heading: "Osmosis and aquaporins",
+      level: "SL",
+      text: "**Osmosis** is the diffusion of water specifically, across a partially permeable membrane, from a region of lower solute concentration to a region of higher solute concentration. Although water is a polar molecule, a small amount can cross the hydrophobic core of the bilayer directly, and this is substantially assisted in most cells by **aquaporins**, channel proteins specialised for rapid water transport, which are especially abundant in tissues, such as the kidney tubules, where large volumes of water need to cross membranes quickly."
+    },
+    {
+      label: "B2.1.6",
+      heading: "Channel proteins and facilitated diffusion",
+      level: "SL",
+      text: "**Facilitated diffusion** allows polar molecules and ions to cross a membrane despite the hydrophobic barrier of the bilayer, using specific **channel proteins** that form a hydrophilic pore across the membrane. Like simple diffusion, facilitated diffusion moves a substance down its concentration gradient and requires no direct energy input from the cell, the energy for movement comes entirely from the concentration gradient itself, but unlike simple diffusion, it depends on the presence of a specific channel protein, so it only occurs for substances that have a matching channel, and only at the rate that the available channels allow."
+    },
+    {
+      label: "B2.1.7",
+      heading: "Pump proteins and active transport",
+      level: "SL",
+      text: "**Active transport** moves a substance across a membrane against its concentration gradient, from a region of lower concentration to a region of higher concentration, which is thermodynamically unfavourable and therefore requires an input of energy, usually supplied directly by ATP hydrolysis. This is carried out by **pump proteins**, which bind a specific substance on one side of the membrane, undergo an energy-driven change in shape, and release that substance on the other side. Because each pump protein transfers one particular substance, active transport gives a cell precise control over the movement of specific ions or molecules, even against a concentration gradient that would otherwise drive them the opposite way.",
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Scheme sodium-potassium pump-en.svg",
+      imageCaption: "The sodium-potassium pump: ATP hydrolysis drives a conformational change that actively transports Na+ out and K+ into the cell against their concentration gradients."
+    },
+    {
+      label: "B2.1.8",
+      heading: "Selectivity in membrane permeability",
+      level: "SL",
+      text: "A membrane's overall permeability is described as **selective**, meaning it allows some substances to cross far more readily than others, rather than being either completely impermeable or freely permeable to everything. This selectivity arises from the combined effect of the hydrophobic bilayer core (which favours small, non-polar molecules) and the specific set of channel and pump proteins a particular membrane happens to contain (which determines which polar molecules and ions can cross, and at what rate, and in which direction). Because different cell types express different combinations of membrane proteins, membrane selectivity, and therefore what a cell can take up or exclude, varies considerably between tissues."
+    },
+    {
+      label: "B2.1.9",
+      heading: "Glycoproteins and glycolipids",
+      level: "SL",
+      text: "**Glycoproteins** and **glycolipids** are proteins and lipids, respectively, with short carbohydrate chains attached, found exclusively on the outer surface of the plasma membrane. These carbohydrate chains project outward into the extracellular environment and act as identifying markers, allowing cells to recognise one another, a function important in processes ranging from tissue formation and immune recognition of self versus non-self cells, to the specific docking of hormones, antibodies, and (in some cases) pathogens onto the surface of a target cell."
+    },
+    {
+      label: "B2.1.10",
+      heading: "The fluid mosaic model",
+      level: "SL",
+      text: "The **fluid mosaic model**, proposed by Singer and Nicolson in 1972, describes the overall arrangement and behaviour of membrane components. It is described as a mosaic because proteins, cholesterol, and glycolipids are embedded at different points and depths throughout the bilayer, producing a patchy, varied composition rather than a uniform sheet. It is described as fluid because individual phospholipids and proteins are not fixed rigidly in place, they can diffuse laterally within their own layer of the membrane, giving the membrane flexibility, self-sealing behaviour after minor damage, and the capacity to change shape as a cell moves or divides."
+    },
+    {
+      label: "B2.1.11",
+      heading: "Fatty acid composition and membrane fluidity",
+      level: "HL",
+      text: "The degree of membrane fluidity is influenced by the fatty acid composition of its phospholipids. Fatty acid tails containing one or more carbon-carbon double bonds are described as **unsaturated**, and these kinks in the tail prevent phospholipid molecules from packing tightly together, keeping the membrane more fluid, particularly at lower temperatures. **Saturated** fatty acid tails, with no double bonds, pack together more closely and produce a less fluid, more rigid membrane. Cholesterol, embedded within the bilayer alongside the phospholipids, has a moderating effect on fluidity, restraining excessive fluidity at higher temperatures while helping prevent the membrane from becoming too rigid at lower ones, keeping overall membrane fluidity within a functional range across a range of temperatures."
+    },
+    {
+      label: "B2.1.12",
+      heading: "Cholesterol and membrane fluidity",
+      level: "HL",
+      text: "**Cholesterol** is embedded within the phospholipid bilayer of animal cell membranes, positioned with its small hydroxyl group near the polar phospholipid heads and its rigid, non-polar ring structure among the fatty acid tails. Rather than simply adding to or stiffening the membrane in one direction, cholesterol acts as a fluidity **modulator**, moderating fluidity in both directions depending on temperature.\n\nAt higher temperatures, cholesterol restrains the excessive movement of phospholipids, preventing the membrane from becoming too fluid, while at lower temperatures, it prevents phospholipids from packing too tightly together, stopping the membrane from becoming excessively rigid; this dual effect helps animal cell membranes maintain appropriate fluidity across a wider range of temperatures than they otherwise could."
+    },
+    {
+      label: "B2.1.13",
+      heading: "Membrane fluidity, endocytosis, and exocytosis",
+      level: "HL",
+      text: "The fluid nature of the phospholipid bilayer allows membranes to bend, pinch off, and fuse with one another, a property essential for moving material into and out of cells in bulk. In **endocytosis**, a section of plasma membrane folds inward around external material, pinching off to form a vesicle that carries that material into the cell.\n\nIn **exocytosis**, the reverse process, an internal vesicle moves to the plasma membrane and fuses with it, releasing its contents to the outside of the cell; because both processes depend entirely on membranes being able to bend and fuse without simply tearing apart, they would not be possible if membranes were rigid rather than fluid structures."
+    },
+    {
+      label: "B2.1.14",
+      heading: "Gated ion channels in neurons",
+      level: "HL",
+      text: "Unlike simple channel proteins that remain permanently open, **gated ion channels** open or close in response to a specific trigger, allowing precise, moment-to-moment control over ion movement across a membrane. **Voltage-gated channels**, such as the sodium and potassium channels responsible for generating action potentials in neurons, open or close in response to changes in membrane potential.\n\n**Ligand-gated channels**, such as the nicotinic acetylcholine receptor found at many synapses, instead open in response to a specific signalling molecule binding to the channel; when acetylcholine binds this receptor, the channel opens, allowing ions to flow through and change the membrane potential of the receiving cell, directly linking chemical signalling to a resulting electrical response."
+    },
+    {
+      label: "B2.1.15",
+      heading: "The sodium-potassium pump",
+      level: "HL",
+      text: "The **sodium-potassium pump** is an example of an exchange transporter, actively moving two different ions in opposite directions across a membrane using energy from ATP. With each cycle, it pumps three sodium ions out of the cell and two potassium ions into the cell, both moving against their respective concentration gradients.\n\nBy continuously maintaining a higher sodium concentration outside the cell and a higher potassium concentration inside, this pump is essential for generating and maintaining the resting membrane potential found in neurons and other cells, providing the underlying ion gradients that other transport and signalling processes, including the generation of nerve impulses, ultimately depend on."
+    },
+    {
+      label: "B2.1.16",
+      heading: "Sodium-dependent glucose cotransport",
+      level: "HL",
+      text: "**Sodium-dependent glucose cotransporters** move glucose across a membrane against its own concentration gradient by coupling that movement to the inward diffusion of sodium ions down their own concentration gradient, a form of **indirect active transport** that doesn't use ATP directly at the transporter itself, but depends on a sodium gradient that was established elsewhere using ATP (typically by the sodium-potassium pump).\n\nThis mechanism is essential in two locations: in the small intestine, it allows glucose to be absorbed from the gut lumen even when the glucose concentration there is lower than inside the absorbing cells, and in the kidney nephron, it allows glucose that has been filtered out of the blood to be reabsorbed from the filtrate before it can be lost in urine."
+    },
+    {
+      label: "B2.1.17",
+      heading: "Cell adhesion",
+      level: "SL",
+      text: "Individual cells are held together to form tissues through **cell-adhesion molecules (CAMs)**, membrane proteins that bind to matching CAMs on the surface of a neighbouring cell, physically linking the two together. Different types of CAM form different kinds of cell-cell junction, suited to different functional needs, from junctions that provide strong mechanical attachment to junctions that allow direct communication between adjacent cells' cytoplasm.\n\nWithout this adhesion between cells, a multicellular organism's tissues would simply fall apart into disconnected individual cells, so this adhesive function, though easy to overlook, is fundamental to maintaining the structural integrity of multicellular life."
+    }
+  ],
+
   "D3.3": [
     {
       label: "D3.3.1",
@@ -1867,6 +2281,156 @@ const CONTENT = {
       heading: "Changes in blood supply during activity",
       level: "HL",
       text: "The distribution of blood flow to different organs changes according to their activity level at any given moment, redirecting the body's limited cardiac output to where it is most needed. During vigorous exercise, blood vessels supplying skeletal muscle dilate, increasing blood flow to meet the muscles' increased demand for oxygen and glucose, while blood vessels supplying organs with temporarily lower priority, such as the digestive system, constrict, reducing blood flow there. This redistribution is coordinated by the nervous system and by local chemical signals released from active tissues, and it reverses once activity levels return to normal."
+    }
+  ],
+
+  "C3.1": [
+    {
+      label: "C3.1.1 / C3.1.2",
+      heading: "Why integration matters, and the hierarchy of organisation",
+      level: "SL",
+      text: "A multicellular organism only functions successfully if its many specialised parts work together in a coordinated way, rather than each acting independently, this coordination between subsystems is what **integration** refers to. This is reflected in the **hierarchy of biological organisation**: individual cells combine to form tissues, tissues combine to form organs, and organs combine to form organ systems (such as the nervous, endocrine, circulatory, and digestive systems), which together make up the whole organism. Each level in this hierarchy can display **emergent properties**, characteristics not present at the lower level alone, that only arise from the coordinated interaction of the parts below it; a cheetah's ability to sprint at high speed, for instance, emerges from the integration of its nervous, skeletal, and muscular systems working together, not from any one of those systems alone."
+    },
+    {
+      label: "C3.1.3",
+      heading: "Nervous versus endocrine signalling",
+      level: "SL",
+      text: "The **nervous system** and **endocrine system** are the two principal means by which an animal body integrates and coordinates its organ systems, and they differ substantially in how they operate. Nervous signalling is electrical and chemical, extremely fast, and delivers a signal to a precise, specific target via a direct physical connection (a nerve fibre) to a synapse, but the resulting effect is typically brief. Endocrine signalling is purely chemical, comparatively slow to take effect since hormones must travel through the bloodstream, and reaches any tissue with the appropriate receptor rather than one single, precisely wired target, but its effects tend to be longer lasting."
+    },
+    {
+      label: "C3.1.4 / C3.1.5",
+      heading: "The brain and spinal cord",
+      level: "SL",
+      text: "The **brain** functions as the body's central information-integration organ, combining input from many different sources, including sensory information from around the body, and coordinating the appropriate voluntary and involuntary responses; its cerebral hemispheres are largely responsible for conscious processing, sensory perception, and voluntary motor control.\n\nThe **spinal cord** serves as an integrating centre in its own right for many unconscious, automatic processes, most notably **reflex arcs**, in which a rapid, protective response (such as withdrawing a hand from a painful stimulus) can be triggered and executed at the level of the spinal cord alone, without needing to wait for signals to travel all the way to the brain and back, considerably speeding up the response to a potentially dangerous stimulus."
+    },
+    {
+      label: "C3.1.6 / C3.1.7 / C3.1.8 / C3.1.9",
+      heading: "Sensory and motor neurons, and the pain reflex arc",
+      level: "SL",
+      text: "**Sensory neurons** carry information from receptors toward the central nervous system (the spinal cord and brain), while **motor neurons** carry signals in the opposite direction, from the central nervous system out to effectors such as muscles or glands. **Nerves** are simply bundles of many individual nerve fibres, from both sensory and motor neurons, running together within a shared protective sheath.\n\nThe **pain reflex arc** is a well-studied example of an involuntary response: a painful stimulus activates a sensory neuron, which synapses directly with a motor neuron within the spinal cord (often via a small connecting relay neuron), and that motor neuron activates a skeletal muscle as the effector, producing a rapid, protective muscular withdrawal response before the sensation of pain has even fully registered at a conscious level in the brain.",
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Reflex Arc.svg",
+      imageCaption: "The pain reflex arc: a sensory neuron relays the stimulus via the spinal cord to a motor neuron, triggering a rapid muscular response without needing to wait for the brain."
+    },
+    {
+      label: "C3.1.10",
+      heading: "The cerebellum",
+      level: "SL",
+      text: "The **cerebellum**, a distinct structure at the rear base of the brain, plays a central role in coordinating skeletal muscle contraction and maintaining balance. It integrates sensory information about the body's current position and movement with the motor commands being issued elsewhere in the brain, fine-tuning those commands to produce smooth, well-coordinated, balanced movement, rather than initiating movement itself."
+    },
+    {
+      label: "C3.1.11 / C3.1.12",
+      heading: "Melatonin, circadian rhythms, and epinephrine",
+      level: "SL",
+      text: "**Melatonin**, secreted by the pineal gland largely in response to darkness, helps regulate **circadian rhythms**, the roughly 24-hour internal cycles that govern sleep-wake patterns and a range of other physiological processes; melatonin secretion rises in the evening as light levels fall, promoting sleep onset, and falls again with morning light exposure.\n\n**Epinephrine (adrenaline)**, secreted by the adrenal glands, coordinates the body's rapid 'fight or flight' response to a perceived threat or stressor, producing widespread, near-simultaneous effects across multiple organ systems at once, including increased heart rate and blood pressure, redirection of blood flow toward skeletal muscle, and release of glucose from liver glycogen stores, illustrating hormonal signalling's capacity to integrate a coordinated, whole-body response very rapidly when the situation demands it."
+    },
+    {
+      label: "C3.1.13",
+      heading: "Hypothalamus and pituitary control of the endocrine system",
+      level: "SL",
+      text: "The **hypothalamus** acts as the primary link between the nervous and endocrine systems, monitoring conditions around the body and responding by directly secreting some hormones and by controlling the nearby **pituitary gland**. The pituitary, often described as the body's 'master gland', in turn releases a range of hormones that regulate the activity of several other endocrine glands, including the thyroid, adrenal glands, and gonads.\n\nBecause so many other glands take their cues from pituitary signals, this hypothalamus-pituitary axis allows the nervous system, via a comparatively small number of central control points, to coordinate hormone secretion across the body's whole endocrine system."
+    },
+    {
+      label: "C3.1.14",
+      heading: "Feedback control of heart rate",
+      level: "SL",
+      text: "Heart rate is continuously adjusted through negative feedback based on sensory input from two types of receptor. **Baroreceptors**, located in the walls of major blood vessels, detect changes in blood pressure, while **chemoreceptors** detect changes in blood pH and the concentrations of oxygen and carbon dioxide.\n\nSignals from both receptor types travel to the **medulla oblongata** in the brainstem, which processes this information and sends nerve impulses to the heart, adjusting stroke volume and heart rate as needed, increasing heart rate if blood pressure falls or if chemoreceptors detect a build-up of carbon dioxide or a fall in oxygen, and decreasing it once conditions return to normal."
+    },
+    {
+      label: "C3.1.15",
+      heading: "Feedback control of ventilation rate",
+      level: "SL",
+      text: "Ventilation rate is regulated by negative feedback based on blood pH, which falls as carbon dioxide concentration rises (carbon dioxide reacting with water to form carbonic acid). **Chemoreceptors** in the brainstem detect this fall in pH and respond by increasing the frequency and depth of nerve impulses sent to the diaphragm and intercostal muscles, increasing ventilation rate to expel more carbon dioxide and restore blood pH toward its normal range.\n\nAs carbon dioxide is removed and pH rises back toward normal, this feedback signal weakens, and ventilation rate falls back toward its resting level, illustrating another example of negative feedback maintaining a stable internal environment."
+    },
+    {
+      label: "C3.1.16",
+      heading: "Control of peristalsis in the digestive system",
+      level: "SL",
+      text: "**Peristalsis**, the wave-like muscular contractions that push food along the digestive tract, is controlled by two distinct parts of the nervous system depending on where it occurs. Swallowing food and the voluntary control of egestion are both under conscious control by the **central nervous system (CNS)**.\n\nBetween these two points, however, the ongoing peristaltic movement of material through the stomach and intestines is instead coordinated involuntarily by the **enteric nervous system (ENS)**, a extensive network of neurons embedded within the wall of the gut itself, which ensures food continues to move through the digestive tract in a coordinated way without requiring any conscious input."
+    },
+    {
+      label: "C3.1.17 / C3.1.18 / C3.1.19",
+      heading: "Auxin and plant tropisms",
+      level: "HL",
+      text: "Plants achieve their own form of system integration using chemical signals called **phytohormones**, of which **auxin** is the best studied. Auxin is synthesised mainly in the growing shoot tip and stimulates cell elongation in the tissue just behind it. When a shoot is illuminated unevenly, auxin is redistributed toward the shaded side, causing cells there to elongate faster than those on the illuminated side, and the shoot bends toward the light, a response called **phototropism**. Auxin similarly mediates **gravitropism**, the directional growth response to gravity, causing roots to grow downward and shoots to grow upward.",
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Heliotropism 1.jpg",
+      imageCaption: "Phototropism: differential auxin distribution causes a shoot to bend toward a light source."
+    },
+    {
+      label: "C3.1.20",
+      heading: "Auxin efflux carriers",
+      level: "HL",
+      text: "The directional movement of auxin through plant tissue, essential for tropic responses to be correctly oriented, is achieved using **auxin efflux carriers (PIN proteins)**, transport proteins embedded asymmetrically in the plasma membrane of cells along the auxin transport pathway. Because these carrier proteins are consistently positioned on one particular side of each cell, auxin is actively pumped out of cells in a single, consistent direction, maintaining a directional flow, and a resulting concentration gradient, of auxin across a tissue rather than the hormone simply diffusing evenly in every direction."
+    },
+    {
+      label: "C3.1.21",
+      heading: "How auxin promotes cell elongation",
+      level: "HL",
+      text: "Auxin promotes cell elongation through a specific biochemical mechanism sometimes called the **acid growth hypothesis**. Auxin stimulates the active secretion of hydrogen ions from the cell into the surrounding cell wall (the apoplast), lowering the pH there.\n\nThis increased acidity activates enzymes that loosen the cross-links between cellulose microfibrils within the cell wall, making the wall more extensible; the cell can then take up water and elongate under its own turgor pressure, stretching the now-loosened wall. Because auxin concentration is higher on the shaded side of a shoot during phototropism, cells on that side elongate more, causing the characteristic bending toward light."
+    },
+    {
+      label: "C3.1.22",
+      heading: "Auxin-cytokinin interactions in root and shoot growth",
+      level: "HL",
+      text: "Root and shoot growth are coordinated through a reciprocal relationship between two phytohormones produced in opposite ends of the plant. **Auxin**, produced mainly in shoot tips, is transported down toward the roots, while **cytokinin**, produced mainly in root tips, is transported up toward the shoots.\n\nBy each influencing growth in the region where the other hormone is produced, this interaction helps keep root and shoot growth in a coordinated balance appropriate to the plant's overall needs, rather than either part of the plant growing independently of what the other is doing."
+    },
+    {
+      label: "C3.1.23",
+      heading: "Ethylene and fruit ripening",
+      level: "HL",
+      text: "**Ethylene** is the phytohormone responsible for triggering the changes associated with fruit ripening, including softening, colour change, and the breakdown of starches into sugars. Uniquely, ripening itself stimulates further ethylene production, which in turn accelerates further ripening, a clear example of a **positive feedback** loop in a biological system.\n\nThis self-reinforcing cycle ensures that once ripening begins, it proceeds rapidly and in a synchronised way throughout the fruit, rather than occurring slowly or unevenly, which is also why placing an ethylene-releasing ripe fruit near unripe fruit can help speed up the ripening of the unripe fruit too."
+    }
+  ],
+
+  "B3.3": [
+    {
+      label: "B3.3.1",
+      heading: "Movement as a feature of life",
+      level: "HL",
+      text: "Movement takes different forms across the diversity of life. **Motile** organisms, from bacteria propelled by flagella to animals using muscular systems, can actively relocate using their own metabolic energy. Even **sessile** organisms, those fixed in one location, such as most plants, typically still show movement in some form, for instance the directional growth of a shoot toward light. Comparing a motile and a sessile species highlights that movement, broadly defined, is close to a universal feature of living organisms, even if locomotion (moving the whole body from place to place) is not."
+    },
+    {
+      label: "B3.3.2",
+      heading: "Sarcomere structure and the sliding filament model",
+      level: "HL",
+      text: "Skeletal muscle fibres are packed with parallel protein filaments organised into repeating contractile units called **sarcomeres**, arranged end to end along each myofibril. A sarcomere contains thin **actin** filaments and thick **myosin** filaments, whose overlapping, alternating arrangement produces the characteristic banded appearance of skeletal muscle under the microscope.\n\nContraction occurs according to the **sliding filament model**: myosin heads, powered by ATP hydrolysis, attach to exposed binding sites on the actin filaments, forming cross-bridges, and each cross-bridge then bends, pulling the actin filament inward toward the centre of the sarcomere before detaching (a step that itself requires ATP) and repeating the cycle. Critically, neither the actin nor the myosin filaments themselves shorten, the sarcomere shortens because the two sets of filaments slide past one another, pulling the ends of the sarcomere closer together.",
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Muscle Contraction.svg",
+      imageCaption: "The cross-bridge cycle: myosin heads bind actin, pivot in a power stroke powered by ATP hydrolysis, then release and reset, repeating to slide the filaments and shorten the sarcomere."
+    },
+    {
+      label: "B3.3.3",
+      heading: "Titin and antagonistic muscles",
+      level: "HL",
+      text: "**Titin**, an enormous elastic protein spanning half of each sarcomere, helps the sarcomere recoil back to its resting length after contraction and prevents it from being stretched beyond its functional limit. Because muscle tissue can only actively generate force by contracting, never by actively extending, movement at a joint requires **antagonistic muscle pairs** working in opposition, one muscle contracts to produce movement in one direction while its antagonist relaxes, and vice versa for the opposite movement, the biceps and triceps at the elbow being the classic example."
+    },
+    {
+      label: "B3.3.4",
+      heading: "Motor units",
+      level: "HL",
+      text: "A **motor unit** consists of a single motor neuron together with every muscle fibre it connects to and controls via neuromuscular junctions. When that motor neuron fires, every muscle fibre within its motor unit contracts together. Motor units vary considerably in size: units controlling fine, precise movements (such as those in the fingers or around the eyes) tend to contain very few muscle fibres per neuron, allowing finely graded control, while units controlling powerful but less precise movements (such as those in the thigh) can contain many hundreds of fibres per neuron."
+    },
+    {
+      label: "B3.3.5 / B3.3.6 / B3.3.7",
+      heading: "Skeletons, joints, and range of motion",
+      level: "HL",
+      text: "Skeletons serve muscles in two related ways: as an anchorage point that muscles pull against, and as a system of rigid levers that translates muscle contraction into movement at a joint. Arthropods have an external **exoskeleton**, while vertebrates have an internal **endoskeleton**, but both provide this same essential anchorage and leverage function.\n\nAt a typical **synovial joint**, such as the human hip, the ends of the bones (the femur and pelvis, in this case) are capped with smooth cartilage and enclosed within a fluid-filled capsule; the **synovial fluid** lubricates the joint and reduces friction, while surrounding **ligaments** connect bone to bone, stabilising the joint, and **tendons** connect muscle to bone, transmitting the muscle's pulling force to produce movement. The **range of motion** of a joint, how far it can move in different directions, can be measured and compared across different planes of movement using image analysis or a goniometer."
+    },
+    {
+      label: "B3.3.8",
+      heading: "Intercostal muscles and breathing",
+      level: "HL",
+      text: "The **internal** and **external intercostal muscles**, layers of muscle running between adjacent ribs in opposite orientations, provide another example of antagonistic muscle action, this time facilitating movement of the ribcage during breathing rather than movement at a limb joint.\n\nContraction of the external intercostal muscles pulls the ribcage upward and outward, increasing chest volume during inhalation, while contraction of the internal intercostal muscles pulls the ribcage downward and inward, assisting forced exhalation; because contracting one muscle layer stretches the other, this also stores potential energy within the stretched layer's titin protein, similar in principle to the antagonistic relationship seen at other joints such as the elbow."
+    },
+    {
+      label: "B3.3.9",
+      heading: "Reasons for locomotion",
+      level: "HL",
+      text: "Animals move for several distinct reasons, each with clear survival or reproductive value. **Foraging** for food requires actively searching out and reaching a resource that, unlike sunlight for a plant, is not simply available wherever the organism happens to be. **Escaping from danger** allows an animal to avoid a predator or other immediate threat that a stationary organism could not evade.\n\n**Searching for a mate** allows individuals to actively find and reach potential reproductive partners, while **migration**, often seasonal, long-distance movement, allows a species to track favourable conditions, such as food availability or climate, across an entire year rather than remaining exposed to unfavourable conditions in just one location."
+    },
+    {
+      label: "B3.3.10",
+      heading: "Adaptations for swimming in marine mammals",
+      level: "HL",
+      text: "Marine mammals such as whales and dolphins, despite having evolved from land-dwelling ancestors, show a suite of adaptations for efficient movement through water. A **streamlined** body shape reduces drag as the animal moves through the denser medium of water compared with air, and their forelimbs have been reshaped into **flippers**, providing steering and stability rather than the walking function of a typical mammalian limb.\n\nTheir tail has developed into a horizontally oriented **fluke**, moved up and down (rather than side to side, as in a fish) to generate powerful forward propulsion, and changes to their airways allow rapid, efficient **periodic breathing** at the surface between prolonged dives, adaptations that together allow a body plan originally suited to life on land to function highly effectively in a fully aquatic environment."
     }
   ],
 
@@ -1916,6 +2480,7 @@ const CONTENT = {
       text: "An **oxygen dissociation curve** plots the percentage saturation of haemoglobin with oxygen against the partial pressure of oxygen, and it has a characteristic S-shape (sigmoidal), reflecting how haemoglobin's affinity for oxygen changes as each of its four binding sites becomes occupied.\n\nThe **Bohr shift** describes how this curve shifts to the right in the presence of higher carbon dioxide concentration (and correspondingly lower pH), meaning haemoglobin's affinity for oxygen decreases under these conditions. This is functionally significant in actively respiring tissue: cells that are respiring rapidly produce more carbon dioxide, which locally shifts the curve rightward and causes haemoglobin passing through that tissue to release its oxygen more readily, delivering more oxygen exactly where cell respiration is creating the greatest demand for it."
     }
   ],
+
   "B3.2": [
     {
       label: "B3.2.1",
@@ -1927,8 +2492,7 @@ const CONTENT = {
       label: "B3.2.2 / B3.2.3 / B3.2.5",
       heading: "Arteries and veins",
       level: "SL",
-      text: "**Arteries** carry blood away from the heart, generally at high pressure, and their walls reflect this: thick layers of muscle and elastic tissue allow arteries to withstand this pressure and to expand and recoil with each heartbeat, smoothing the flow of blood into a steadier stream by the time it reaches the capillaries. **Veins** carry blood back toward the heart, at much lower pressure, so their walls are considerably thinner with less muscle and elastic tissue, and their lumen is proportionally wider; because the pressure driving venous return is so low, veins rely on one-way **valves** to prevent backflow, along with compression from surrounding skeletal muscle activity to help push blood back toward the heart.",
-      tip: { label: "Exam tip", text: "In micrographs, distinguish arteries from veins by relative wall thickness compared to lumen size: arteries have thick walls and a comparatively narrow lumen, veins have thin walls and a wider lumen, sometimes with a visible valve." }
+      text: "**Arteries** carry blood away from the heart, generally at high pressure, and their walls reflect this: thick layers of muscle and elastic tissue allow arteries to withstand this pressure and to expand and recoil with each heartbeat, smoothing the flow of blood into a steadier stream by the time it reaches the capillaries. **Veins** carry blood back toward the heart, at much lower pressure, so their walls are considerably thinner with less muscle and elastic tissue, and their lumen is proportionally wider; because the pressure driving venous return is so low, veins rely on one-way **valves** to prevent backflow, along with compression from surrounding skeletal muscle activity to help push blood back toward the heart."
     },
     {
       label: "B3.2.4 / B3.2.6",
@@ -1937,76 +2501,60 @@ const CONTENT = {
       text: "**Pulse rate** can be measured by feeling an artery, most commonly the carotid or radial pulse, close to the body's surface, or using digital sensors; comparing traditional manual counting with digital heart rate monitors is a useful way to assess the accuracy of different measurement methods.\n\nThe **coronary arteries** supply the heart muscle itself with oxygenated blood. **Occlusion** (blockage) of a coronary artery, most often caused by the build-up of fatty plaques within the artery wall, restricts blood flow to part of the heart muscle, and if severe or sudden enough, can cause a heart attack, the death of the oxygen-starved heart tissue. Epidemiological data linking risk factors such as diet, smoking, and physical inactivity to rates of coronary heart disease are assessed using correlation coefficients, which quantify the strength of a relationship between variables, though correlation alone does not establish causation."
     },
     {
-      label: "B3.2.7 / B3.2.6 (plant transport)",
+      label: "B3.2.7 / B3.2.8 / B3.2.9 / B3.2.10",
       heading: "Water transport in the xylem",
       level: "SL",
       text: "Water moves from the roots to the leaves through the **xylem**, driven ultimately by transpiration: as water evaporates from the mesophyll cells inside a leaf and diffuses out through open stomata, it pulls more water up behind it, since the water column inside the xylem is held together by cohesion between water molecules (hydrogen bonding) and by adhesion to the xylem walls, allowing tension generated at the top of the plant to be transmitted all the way down to the roots.\n\nXylem vessels are adapted for this role: they are formed from dead cells joined end to end into continuous, hollow tubes, with no cytoplasm or cross-walls to obstruct the flow of water, and their walls are strengthened and waterproofed with lignin, which also helps the vessel resist collapsing under the tension generated by transpiration pull. A transverse section of a dicotyledonous stem or root shows the characteristic arrangement of xylem and phloem tissue, in a stem these vascular bundles are typically arranged in a ring nearer the outside, while in a root they are typically found in a central, star-shaped arrangement."
     },
     {
-      label: "B3.2.7 / B3.2.8 / B3.2.9",
+      label: "B3.2.11 / B3.2.12 / B3.2.13",
       heading: "Tissue fluid, plasma, and the lymphatic system",
       level: "SL",
       text: "As blood passes through capillaries, blood pressure forces plasma, minus large proteins and blood cells, out through the capillary walls to form **tissue fluid**, which bathes the body's cells directly and is the medium through which they actually exchange nutrients and wastes with the blood. Most of this tissue fluid is reabsorbed back into the capillaries further along, drawn back in partly by the osmotic effect of proteins remaining in the plasma. **Plasma** therefore differs from tissue fluid mainly in containing a substantially higher concentration of large plasma proteins, which are largely too big to cross the capillary wall.\n\nNot all tissue fluid is reabsorbed directly into capillaries; the remainder is drained into a separate network of **lymph vessels**, forming **lymph**, which is eventually returned to the bloodstream near the heart, providing an essential overflow route that prevents excess fluid from accumulating in tissues."
     },
     {
-      label: "B3.2.10 / B3.2.11",
+      label: "B3.2.14",
       heading: "Single versus double circulation and the mammalian heart",
       level: "SL",
-      text: "Bony fish have a **single circulation**: blood passes through the heart once per full circuit of the body, travelling from heart to gills to body tissues and back to the heart, meaning blood pressure has already dropped considerably by the time it reaches the body tissues after passing through the narrow capillaries of the gills. Mammals instead have a **double circulation**: blood passes through the heart twice per circuit, once to be pumped to the lungs and back (the pulmonary circulation), and once to be pumped to the rest of the body and back (the systemic circulation), which allows blood to be re-pressurised between the two circuits and delivers oxygenated blood to body tissues at a considerably higher, more effective pressure.\n\nThe mammalian heart's structure supports this: the muscular wall of the left ventricle, which must generate the high pressure needed to pump blood around the entire systemic circuit, is considerably thicker than that of the right ventricle, which only needs to pump blood the shorter distance to the lungs. One-way valves within the heart prevent backflow between chambers, ensuring blood moves in only one direction through the double circulation.",
+      text: "Bony fish have a **single circulation**: blood passes through the heart once per full circuit of the body, travelling from heart to gills to body tissues and back to the heart, meaning blood pressure has already dropped considerably by the time it reaches the body tissues after passing through the narrow capillaries of the gills. Mammals instead have a **double circulation**: blood passes through the heart twice per circuit, once to be pumped to the lungs and back (the pulmonary circulation), and once to be pumped to the rest of the body and back (the systemic circulation), which allows blood to be re-pressurised between the two circuits and delivers oxygenated blood to body tissues at a considerably higher, more effective pressure.",
       image: "https://commons.wikimedia.org/wiki/Special:FilePath/Diagram of the human heart.svg",
       imageCaption: "The mammalian heart: note the thicker-walled left ventricle, the four chambers, and the valves that keep blood flowing in one direction."
+    },
+    {
+      label: "B3.2.15",
+      heading: "Adaptations of the mammalian heart",
+      level: "HL",
+      text: "The mammalian heart is structurally adapted to generate and direct pressurised blood flow efficiently. Its walls are built from **cardiac muscle**, capable of sustained, rhythmic contraction throughout life, and its rhythm is set by the **sinoatrial node** (the heart's natural pacemaker), which initiates each heartbeat.\n\nA muscular **septum** separates the left and right sides, keeping oxygenated and deoxygenated blood from mixing, while **atrioventricular** and **semilunar valves** ensure blood flows in one direction only through the heart's **atria** and **ventricles**, and the **coronary vessels** supply the heart's own muscle tissue with the oxygen and nutrients its continuous activity demands."
+    },
+    {
+      label: "B3.2.16",
+      heading: "Stages of the cardiac cycle",
+      level: "HL",
+      text: "The **cardiac cycle** is the repeating sequence of contraction and relaxation that drives each heartbeat, initiated by the sinoatrial node. During **systole**, the atria contract first, pushing blood into the ventricles, followed shortly after by ventricular contraction, which generates the higher pressure needed to push blood out into the arteries. During **diastole**, both atria and ventricles relax, allowing the heart's chambers to passively refill with returning blood before the next cycle begins.\n\nThis alternating pattern of systole and diastole is what produces the measurable **systolic** and **diastolic blood pressure** values recorded during a standard blood pressure reading, corresponding respectively to the higher pressure generated during ventricular contraction and the lower pressure present while the heart briefly rests between beats."
+    },
+    {
+      label: "B3.2.17",
+      heading: "Root pressure",
+      level: "HL",
+      text: "**Root pressure** is a positive pressure that develops within the xylem of roots, generated by the active transport of mineral ions from the soil into the root's vascular tissue, which lowers the water potential there and draws water in by osmosis to follow.\n\nRoot pressure becomes especially important when transpiration from the leaves is insufficient to draw water upward on its own, such as under conditions of high humidity that suppress transpiration, or in spring, before deciduous plants have grown new leaves capable of transpiring at all; in these situations, root pressure alone can still push some water up through the xylem, supplementing the usual transpiration-driven mechanism."
+    },
+    {
+      label: "B3.2.18",
+      heading: "Adaptations of phloem for translocation",
+      level: "HL",
+      text: "**Phloem sieve tube elements** are adapted to allow the efficient bulk flow of sap by minimising internal obstruction: they lack a nucleus and have greatly reduced cytoplasm and organelles, and are connected end to end through perforated **sieve plates**, which still allow sap to flow between adjoining cells.\n\nBecause sieve tube elements lack the organelles needed to sustain their own metabolism, each is closely supported by an adjacent **companion cell**, packed with mitochondria to supply the energy needed for active loading of sugars into the sieve tubes, and connected to its sieve tube element by numerous **plasmodesmata**, channels that allow this support to be delivered directly between the two closely paired cell types."
     }
   ],
 
-  "B3.3": [
-    {
-      label: "B3.3.1",
-      heading: "Movement as a feature of life",
-      level: "HL",
-      text: "Movement takes different forms across the diversity of life. **Motile** organisms, from bacteria propelled by flagella to animals using muscular systems, can actively relocate using their own metabolic energy. Even **sessile** organisms, those fixed in one location, such as most plants, typically still show movement in some form, for instance the directional growth of a shoot toward light. Comparing a motile and a sessile species highlights that movement, broadly defined, is close to a universal feature of living organisms, even if locomotion (moving the whole body from place to place) is not."
-    },
-    {
-      label: "B3.3.2 / B3.3.3",
-      heading: "Sarcomere structure and the sliding filament model",
-      level: "HL",
-      text: "Skeletal muscle fibres are packed with parallel protein filaments organised into repeating contractile units called **sarcomeres**, arranged end to end along each myofibril. A sarcomere contains thin **actin** filaments and thick **myosin** filaments, whose overlapping, alternating arrangement produces the characteristic banded appearance of skeletal muscle under the microscope.\n\nContraction occurs according to the **sliding filament model**: myosin heads, powered by ATP hydrolysis, attach to exposed binding sites on the actin filaments, forming cross-bridges, and each cross-bridge then bends, pulling the actin filament inward toward the centre of the sarcomere before detaching (a step that itself requires ATP) and repeating the cycle. Critically, neither the actin nor the myosin filaments themselves shorten, the sarcomere shortens because the two sets of filaments slide past one another, pulling the ends of the sarcomere closer together.",
-      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Muscle Contraction.svg",
-      imageCaption: "The cross-bridge cycle: myosin heads bind actin, pivot in a power stroke powered by ATP hydrolysis, then release and reset, repeating to slide the filaments and shorten the sarcomere."
-    },
-    {
-      label: "B3.3.4",
-      heading: "Titin and antagonistic muscles",
-      level: "HL",
-      text: "**Titin**, an enormous elastic protein spanning half of each sarcomere, helps the sarcomere recoil back to its resting length after contraction and prevents it from being stretched beyond its functional limit. Because muscle tissue can only actively generate force by contracting, never by actively extending, movement at a joint requires **antagonistic muscle pairs** working in opposition, one muscle contracts to produce movement in one direction while its antagonist relaxes, and vice versa for the opposite movement, the biceps and triceps at the elbow being the classic example."
-    },
-    {
-      label: "B3.3.5",
-      heading: "Motor units",
-      level: "HL",
-      text: "A **motor unit** consists of a single motor neuron together with every muscle fibre it connects to and controls via neuromuscular junctions. When that motor neuron fires, every muscle fibre within its motor unit contracts together. Motor units vary considerably in size: units controlling fine, precise movements (such as those in the fingers or around the eyes) tend to contain very few muscle fibres per neuron, allowing finely graded control, while units controlling powerful but less precise movements (such as those in the thigh) can contain many hundreds of fibres per neuron."
-    },
-    {
-      label: "B3.3.6 / B3.3.7",
-      heading: "Skeletons, joints, and range of motion",
-      level: "HL",
-      text: "Skeletons serve muscles in two related ways: as an anchorage point that muscles pull against, and as a system of rigid levers that translates muscle contraction into movement at a joint. Arthropods have an external **exoskeleton**, while vertebrates have an internal **endoskeleton**, but both provide this same essential anchorage and leverage function.\n\nAt a typical **synovial joint**, such as the human hip, the ends of the bones (the femur and pelvis, in this case) are capped with smooth cartilage and enclosed within a fluid-filled capsule; the **synovial fluid** lubricates the joint and reduces friction, while surrounding **ligaments** connect bone to bone, stabilising the joint, and **tendons** connect muscle to bone, transmitting the muscle's pulling force to produce movement. The **range of motion** of a joint, how far it can move in different directions, can be measured and compared across different planes of movement using image analysis or a goniometer."
-    },
-    {
-      label: "B3.3.8",
-      heading: "Adaptations for swimming in marine mammals",
-      level: "HL",
-      text: "Marine mammals such as dolphins and seals show clear structural adaptations for efficient movement through water. A **streamlined** body shape, smooth and tapered, minimises drag as the animal moves through the denser medium of water compared to air. Limbs are modified into flippers, used primarily for steering and stability rather than propulsion, while a horizontally oriented, powerful fluked tail provides the main thrust, moved up and down (rather than side to side, as in fish) by strong dorsal and ventral muscles."
-    }
-  ],
   "C2.2": [
     {
-      label: "C2.2.1 / C2.2.2",
+      label: "C2.2.1",
       heading: "Neuron structure",
       level: "SL",
       text: "A **neuron** consists of a cell body (containing the nucleus and cytoplasm), from which elongated nerve fibres of varying length project. **Dendrites** are typically multiple, shorter, branched fibres that receive incoming signals from other neurons or from sensory receptors and conduct them toward the cell body. The **axon** is typically a single, much longer fibre that conducts an electrical impulse away from the cell body toward its target, ending in axon terminals that pass the signal on to the next cell."
     },
     {
-      label: "C2.2.3 / C2.2.4",
+      label: "C2.2.2 / C2.2.3 / C2.2.4",
       heading: "Resting potential and the nerve impulse",
       level: "SL",
       text: "A resting neuron maintains a **resting potential** across its plasma membrane, with the inside of the cell around -70 mV relative to the outside, maintained by the sodium-potassium pump, which uses ATP to actively transport three sodium ions out of the cell for every two potassium ions pumped in, alongside large negatively charged organic ions trapped inside the cell.\n\nA **nerve impulse (action potential)** is a temporary, self-propagating reversal of this membrane potential that travels along the length of a nerve fibre. The speed at which it travels varies considerably: impulses travel faster along axons of greater diameter (which offer less internal resistance to current flow), and, in vertebrates, faster along myelinated fibres than unmyelinated ones of the same diameter."
@@ -2020,7 +2568,7 @@ const CONTENT = {
       imageCaption: "A chemical synapse: calcium influx triggers neurotransmitter release from the presynaptic neuron, which diffuses across the cleft and binds receptors on the postsynaptic membrane."
     },
     {
-      label: "C2.2.8 / C2.2.9 / C2.2.10",
+      label: "C2.2.8 / C2.2.9",
       heading: "Depolarisation, repolarisation, and propagation",
       level: "SL",
       text: "During an action potential, voltage-gated sodium channels open in response to an initial stimulus, allowing sodium ions to rush into the cell and rapidly reversing the membrane potential from negative to positive, called **depolarisation**. Sodium channels then close and voltage-gated potassium channels open, allowing potassium ions to flow out of the cell and restoring the negative resting potential, called **repolarisation** (often briefly overshooting to a slightly more negative level before settling back to rest).\n\nThis local depolarisation triggers depolarisation in the immediately adjacent section of membrane, propagating the action potential as a travelling wave along the length of the axon, moving in only one direction because the section of membrane just behind the impulse remains temporarily unable to fire again (its refractory period).",
@@ -2028,13 +2576,13 @@ const CONTENT = {
       imageCaption: "The action potential: rapid depolarisation as sodium channels open, followed by repolarisation as potassium channels open, before the membrane returns to its resting potential."
     },
     {
-      label: "C2.2.11 / C2.2.12 / C2.2.13",
+      label: "C2.2.10",
       heading: "Measuring neural activity with an oscilloscope",
       level: "SL",
       text: "Action potential propagation, moving rapidly and repeatedly along a nerve fibre, is what allows information to be encoded and transmitted through the nervous system; more intense stimuli are generally represented not by larger action potentials (which are all-or-nothing, always the same size), but by a higher frequency of action potentials fired in sequence.\n\nAn **oscilloscope** displays how electrical potential changes over time, and is a standard tool for studying and measuring neural activity, allowing resting potentials and the characteristic rapid depolarisation-repolarisation spike of an action potential to be directly visualised and measured, including the amplitude and duration of the signal."
     },
     {
-      label: "C2.2.14",
+      label: "C2.2.11",
       heading: "Saltatory conduction",
       level: "SL",
       text: "In myelinated axons, the fatty **myelin sheath** electrically insulates most of the axon's length, so depolarisation only occurs at the small, exposed gaps between adjacent myelinated sections, called nodes of Ranvier. Rather than propagating continuously along the entire membrane, the action potential effectively jumps from node to node, a process called **saltatory conduction**, which is considerably faster and more energy-efficient than continuous conduction along an equivalent unmyelinated fibre, since far fewer ion channels need to open along the way.",
@@ -2042,13 +2590,25 @@ const CONTENT = {
       imageCaption: "Saltatory conduction: the action potential jumps between exposed nodes of Ranvier along a myelinated axon, greatly increasing conduction speed."
     },
     {
-      label: "C2.2.18 / C2.2.19",
+      label: "C2.2.12",
+      heading: "Effects of exogenous chemicals on synaptic transmission",
+      level: "HL",
+      text: "Several chemicals disrupt normal synaptic transmission by interfering with specific steps in the process. **Neonicotinoid** pesticides bind to acetylcholine receptors at insect synapses and block them, preventing normal transmission and disrupting the insect's nervous system, which is why they are effective as insecticides.\n\n**Cocaine** instead blocks the reuptake of neurotransmitter (specifically dopamine) from the synaptic cleft back into the presynaptic neuron, causing the neurotransmitter to remain in the cleft and continue stimulating the postsynaptic receptors for longer than normal, prolonging and intensifying its effect."
+    },
+    {
+      label: "C2.2.13",
+      heading: "Inhibitory neurotransmitters and IPSPs",
+      level: "HL",
+      text: "Not all neurotransmitters excite the postsynaptic neuron; **inhibitory neurotransmitters** instead make the postsynaptic membrane less likely to fire an action potential. They typically do this by opening channels that allow negatively charged ions to enter, or positively charged ions to leave, the postsynaptic cell, making the inside of the membrane more negative than its normal resting potential, a change called **hyperpolarisation**.\n\nThis hyperpolarised state is called an **inhibitory postsynaptic potential (IPSP)**, and it moves the membrane further from the threshold needed to trigger an action potential, temporarily reducing the likelihood that the postsynaptic neuron will fire, the functional opposite of an excitatory postsynaptic potential."
+    },
+    {
+      label: "C2.2.14 / C2.2.15",
       heading: "Summation and pain perception",
       level: "HL",
       text: "A single postsynaptic neuron often receives input from many different presynaptic neurons simultaneously, and whether it fires its own action potential depends on the combined, all-or-nothing outcome of all these interacting inputs, a process called **summation**: multiple excitatory inputs arriving close together in time or space can combine to push the postsynaptic membrane over its firing threshold, even if no single input alone would have been sufficient.\n\nPain is detected by free nerve endings in the skin, called nociceptors, which have membrane channels for positively charged ions that open in response to potentially damaging stimuli, including high temperature, acidity, or specific chemicals such as capsaicin, the compound responsible for the sensation of heat in chilli peppers."
     },
     {
-      label: "C2.2.20 / C2.2.21",
+      label: "C2.2.16",
       heading: "From ion channels to consciousness",
       level: "HL",
       text: "When a nociceptor's ion channels open in response to a painful stimulus, the resulting influx of positively charged ions depolarises the nerve ending until it reaches the threshold potential, triggering the propagation of a nerve impulse toward the central nervous system, exactly the same fundamental mechanism that underlies all neural signalling, just triggered by a different type of stimulus.\n\n**Consciousness** itself is understood, at the biological level, as an emergent property arising from the coordinated interaction of enormous numbers of individual neurons across the brain, rather than being a special property of any single neuron or brain region in isolation; no individual neuron is 'conscious', but their interaction, at sufficient scale and complexity, gives rise to what we experience as conscious awareness."
@@ -2064,30 +2624,54 @@ const CONTENT = {
     },
     {
       label: "C2.1.2",
-      heading: "Signal transduction",
-      level: "HL",
-      text: "**Signal transduction** is the sequence of steps, often involving a cascade of intracellular protein interactions, that converts the initial event of a ligand binding to its receptor into a specific cellular response, such as a change in gene transcription or the opening of an ion channel. Because a single receptor-binding event can trigger a multi-step, amplifying cascade inside the cell, a very small quantity of ligand can sometimes produce a large, coordinated cellular response."
-    },
-    {
-      label: "C2.1.3 / C2.1.4",
       heading: "Quorum sensing and bioluminescence in bacteria",
       level: "HL",
       text: "**Quorum sensing** is a form of chemical signalling used by bacteria to detect their own population density: individual bacterial cells continuously release a signalling molecule, and once its concentration in the surrounding environment rises high enough, indicating a sufficiently large local population, the bacteria coordinate a collective behavioural change.\n\nThe marine bacterium Vibrio fischeri provides a well-studied example: individual cells produce very little light, but once quorum sensing detects a high enough population density, typically when the bacteria are living symbiotically within a host organism's light organ, the whole population switches on **bioluminescence** simultaneously, a coordinated response that would be far less effective, and more costly, if attempted by a single isolated cell."
     },
     {
-      label: "C2.1.5 / C2.1.6",
+      label: "C2.1.3 / C2.1.5",
       heading: "Categories and distance-based types of signalling",
       level: "HL",
       text: "Animal signalling chemicals fall into several functional categories: **hormones**, secreted into the blood and carried to distant target cells; **neurotransmitters**, released at synapses to signal directly across a very short gap to an adjacent cell; **cytokines**, small proteins mainly involved in coordinating immune responses; and **calcium ions**, which act as an intracellular signal in many contexts, including muscle contraction and neurotransmitter release.\n\nSignalling can also be categorised by the distance it travels: **autocrine** signalling, where a cell signals to itself; **paracrine** signalling, where a chemical diffuses a short distance to affect nearby cells; and **endocrine** signalling, where a hormone travels a long distance through the bloodstream to reach distant target cells."
     },
     {
-      label: "C2.1.7",
+      label: "C2.1.4",
       heading: "Hormones versus neurotransmitters",
       level: "HL",
       text: "Hormones and neurotransmitters differ in both structure and function despite both being signalling chemicals. Structurally, hormones are chemically diverse, including amine, peptide, and steroid hormones, while neurotransmitters are typically smaller molecules such as amino acid derivatives. Functionally, hormones are secreted into the bloodstream and produce comparatively slow-onset but often longer-lasting effects on distant target cells, while neurotransmitters act almost instantly but only very briefly, over the extremely short distance of a synaptic cleft, before being broken down or reabsorbed."
     },
     {
-      label: "C2.1.11 / C2.1.12",
+      label: "C2.1.6",
+      heading: "Transmembrane versus intracellular receptors",
+      level: "HL",
+      text: "Receptors for cell signalling fall into two broad structural categories, depending on where the ligand binds. **Transmembrane receptors** sit within the plasma membrane, with a binding site exposed on the cell's outer surface, allowing them to detect ligands, such as larger, water-soluble hormones and neurotransmitters, that cannot cross the membrane themselves.\n\n**Intracellular receptors** are instead located inside the cell, in the cytoplasm or nucleus, and can only be reached by ligands small and lipid-soluble enough to diffuse directly across the plasma membrane, such as steroid hormones. This structural distinction directly explains why some hormones trigger a rapid signal transduction cascade from the cell surface, while others act more slowly by diffusing into the cell and interacting with the genome directly."
+    },
+    {
+      label: "C2.1.7",
+      heading: "Signal transduction",
+      level: "HL",
+      text: "**Signal transduction** is the sequence of steps, often involving a cascade of intracellular protein interactions, that converts the initial event of a ligand binding to its receptor into a specific cellular response, such as a change in gene transcription or the opening of an ion channel. Because a single receptor-binding event can trigger a multi-step, amplifying cascade inside the cell, a very small quantity of ligand can sometimes produce a large, coordinated cellular response."
+    },
+    {
+      label: "C2.1.8",
+      heading: "Transmembrane receptors for neurotransmitters",
+      level: "HL",
+      text: "Some transmembrane receptors are themselves **ligand-gated ion channels**: when a neurotransmitter binds, the receptor's own channel opens directly, without needing any intermediate signalling steps, allowing ions to cross the membrane and change the cell's membrane potential almost instantly.\n\nThe **nicotinic acetylcholine receptor** is a widely used example: when acetylcholine binds, the receptor opens a channel permitting positively charged ions to enter the postsynaptic cell, depolarising the membrane; this direct, fast-acting link between ligand binding and a change in membrane potential makes this class of receptor particularly well suited to the rapid signalling demanded at a synapse."
+    },
+    {
+      label: "C2.1.9",
+      heading: "G protein-coupled receptors",
+      level: "HL",
+      text: "**G protein-coupled receptors** are transmembrane receptors that, when activated by a bound ligand, change shape in a way that activates an associated **G protein** on the inside of the cell. This activated G protein then goes on to trigger further steps in a signal transduction pathway inside the cell, rather than directly opening a channel itself.\n\nHumans have a very large number of different G protein-coupled receptors, responding to an enormous range of different ligands, from hormones to sensory stimuli, making this one of the most common and versatile receptor mechanisms used in cell signalling throughout the body."
+    },
+    {
+      label: "C2.1.10",
+      heading: "The mechanism of epinephrine receptors",
+      level: "HL",
+      text: "**Epinephrine (adrenaline)** acts on target cells via a G protein-coupled receptor mechanism. When epinephrine binds its receptor, the associated G protein is activated, which in turn activates an enzyme that produces **cyclic AMP (cAMP)** inside the cell.\n\ncAMP acts as a **second messenger**, relaying and amplifying the original signal by triggering a cascade of further reactions inside the cell, ultimately producing effects such as the breakdown of stored glycogen into glucose; this two-step relay, an external hormone signal converted into an internal second-messenger signal, allows a single hormone molecule binding the cell surface to trigger a substantially amplified response inside the cell."
+    },
+    {
+      label: "C2.1.11",
       heading: "Transmembrane receptors and signal initiation",
       level: "HL",
       text: "Many signalling molecules, particularly larger or more polar ones that cannot cross the plasma membrane, bind to **transmembrane receptors** on the cell surface. Insulin is a well-studied example: it binds to a receptor spanning the plasma membrane, triggering the receptor's own tyrosine kinase activity, which phosphorylates target proteins inside the cell, initiating a signalling cascade that ultimately causes vesicles containing glucose transporter proteins to move to and fuse with the plasma membrane, increasing the cell's capacity to take up glucose.",
@@ -2095,18 +2679,25 @@ const CONTENT = {
       imageCaption: "Insulin signal transduction: binding activates the receptor's tyrosine kinase activity, triggering a cascade that moves GLUT4 transporters to the membrane."
     },
     {
-      label: "C2.1.13",
+      label: "C2.1.12",
       heading: "Intracellular receptors and steroid hormones",
       level: "HL",
       text: "Steroid hormones, such as oestradiol, progesterone, and testosterone, are small and lipid-soluble enough to diffuse directly across the plasma membrane, so they instead bind to **intracellular receptors** inside the target cell. Once activated by the bound hormone, these receptors move into the nucleus and bind directly to specific DNA sequences, promoting (or in some cases repressing) the transcription of particular genes, meaning steroid hormones typically act by directly altering gene expression, rather than through a membrane-based signalling cascade."
     },
     {
-      label: "C2.1.15 / C2.1.16 / C2.1.17",
+      label: "C2.1.13",
+      heading: "Effects of oestradiol and progesterone on target cells",
+      level: "HL",
+      text: "**Oestradiol** and **progesterone** each act on specific, distinct target cells during the menstrual cycle, both working through the intracellular steroid receptor mechanism. Oestradiol acts on cells in the **hypothalamus** that secrete gonadotropin-releasing hormone, forming part of the feedback control of the menstrual cycle.\n\n**Progesterone** acts on cells of the **endometrium**, maintaining and further thickening the uterine lining in preparation for a possible pregnancy; both hormones illustrate how the same general intracellular receptor mechanism can be used to produce very different, tissue-specific effects, depending on which cells express the appropriate receptor and are therefore capable of responding."
+    },
+    {
+      label: "C2.1.14",
       heading: "Feedback in cell signalling",
       level: "HL",
       text: "Cell signalling pathways can be shaped by feedback in either direction. **Positive feedback** amplifies the initial response, useful in situations, such as the LH surge that triggers ovulation, where a rapid, decisive, self-reinforcing change is needed. **Negative feedback** dampens or inhibits the signalling response, useful for keeping a system within a stable, controlled range rather than allowing a response to run away unchecked.\n\nProper cellular function generally depends on an appropriate balance of both: pure positive feedback, unopposed, would drive a response to an extreme and potentially harmful degree, while pure negative feedback alone would be unable to produce the rapid, decisive switches that some biological processes require."
     }
   ],
+
   "C3.2": [
     {
       label: "C3.2.1",
@@ -2222,58 +2813,5 @@ const CONTENT = {
       text: "Viruses, particularly RNA viruses, tend to evolve unusually rapidly, for several compounding reasons: their replication machinery frequently lacks the proofreading and error-correction mechanisms of cellular DNA replication, so mutations accumulate quickly; their replication cycles are often extremely short, allowing many generations, and therefore many opportunities for mutation and selection, to occur in a short span of time; and viral populations within a single infected host can be enormous. This rapid evolutionary capacity is why influenza and other RNA viruses can change so quickly, evading a host's existing immunity and periodically necessitating updated vaccines."
     }
   ],
-  "C3.1": [
-    {
-      label: "C3.1.1 / C3.1.2",
-      heading: "Why integration matters, and the hierarchy of organisation",
-      level: "HL",
-      text: "A multicellular organism only functions successfully if its many specialised parts work together in a coordinated way, rather than each acting independently, this coordination between subsystems is what **integration** refers to. This is reflected in the **hierarchy of biological organisation**: individual cells combine to form tissues, tissues combine to form organs, and organs combine to form organ systems (such as the nervous, endocrine, circulatory, and digestive systems), which together make up the whole organism. Each level in this hierarchy can display **emergent properties**, characteristics not present at the lower level alone, that only arise from the coordinated interaction of the parts below it; a cheetah's ability to sprint at high speed, for instance, emerges from the integration of its nervous, skeletal, and muscular systems working together, not from any one of those systems alone."
-    },
-    {
-      label: "C3.1.3",
-      heading: "Nervous versus endocrine signalling",
-      level: "HL",
-      text: "The **nervous system** and **endocrine system** are the two principal means by which an animal body integrates and coordinates its organ systems, and they differ substantially in how they operate. Nervous signalling is electrical and chemical, extremely fast, and delivers a signal to a precise, specific target via a direct physical connection (a nerve fibre) to a synapse, but the resulting effect is typically brief. Endocrine signalling is purely chemical, comparatively slow to take effect since hormones must travel through the bloodstream, and reaches any tissue with the appropriate receptor rather than one single, precisely wired target, but its effects tend to be longer lasting."
-    },
-    {
-      label: "C3.1.4 / C3.1.5",
-      heading: "The brain and spinal cord",
-      level: "HL",
-      text: "The **brain** functions as the body's central information-integration organ, combining input from many different sources, including sensory information from around the body, and coordinating the appropriate voluntary and involuntary responses; its cerebral hemispheres are largely responsible for conscious processing, sensory perception, and voluntary motor control.\n\nThe **spinal cord** serves as an integrating centre in its own right for many unconscious, automatic processes, most notably **reflex arcs**, in which a rapid, protective response (such as withdrawing a hand from a painful stimulus) can be triggered and executed at the level of the spinal cord alone, without needing to wait for signals to travel all the way to the brain and back, considerably speeding up the response to a potentially dangerous stimulus."
-    },
-    {
-      label: "C3.1.6 / C3.1.7 / C3.1.8",
-      heading: "Sensory and motor neurons, and the pain reflex arc",
-      level: "HL",
-      text: "**Sensory neurons** carry information from receptors toward the central nervous system (the spinal cord and brain), while **motor neurons** carry signals in the opposite direction, from the central nervous system out to effectors such as muscles or glands. **Nerves** are simply bundles of many individual nerve fibres, from both sensory and motor neurons, running together within a shared protective sheath.\n\nThe **pain reflex arc** is a well-studied example of an involuntary response: a painful stimulus activates a sensory neuron, which synapses directly with a motor neuron within the spinal cord (often via a small connecting relay neuron), and that motor neuron activates a skeletal muscle as the effector, producing a rapid, protective muscular withdrawal response before the sensation of pain has even fully registered at a conscious level in the brain.",
-      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Reflex Arc.svg",
-      imageCaption: "The pain reflex arc: a sensory neuron relays the stimulus via the spinal cord to a motor neuron, triggering a rapid muscular response without needing to wait for the brain."
-    },
-    {
-      label: "C3.1.9",
-      heading: "The cerebellum",
-      level: "HL",
-      text: "The **cerebellum**, a distinct structure at the rear base of the brain, plays a central role in coordinating skeletal muscle contraction and maintaining balance. It integrates sensory information about the body's current position and movement with the motor commands being issued elsewhere in the brain, fine-tuning those commands to produce smooth, well-coordinated, balanced movement, rather than initiating movement itself."
-    },
-    {
-      label: "C3.1.10 / C3.1.11",
-      heading: "Melatonin, circadian rhythms, and epinephrine",
-      level: "HL",
-      text: "**Melatonin**, secreted by the pineal gland largely in response to darkness, helps regulate **circadian rhythms**, the roughly 24-hour internal cycles that govern sleep-wake patterns and a range of other physiological processes; melatonin secretion rises in the evening as light levels fall, promoting sleep onset, and falls again with morning light exposure.\n\n**Epinephrine (adrenaline)**, secreted by the adrenal glands, coordinates the body's rapid 'fight or flight' response to a perceived threat or stressor, producing widespread, near-simultaneous effects across multiple organ systems at once, including increased heart rate and blood pressure, redirection of blood flow toward skeletal muscle, and release of glucose from liver glycogen stores, illustrating hormonal signalling's capacity to integrate a coordinated, whole-body response very rapidly when the situation demands it."
-    },
-    {
-      label: "C3.1.12 / C3.1.13",
-      heading: "Auxin and plant tropisms",
-      level: "HL",
-      text: "Plants achieve their own form of system integration using chemical signals called **phytohormones**, of which **auxin** is the best studied. Auxin is synthesised mainly in the growing shoot tip and stimulates cell elongation in the tissue just behind it. When a shoot is illuminated unevenly, auxin is redistributed toward the shaded side, causing cells there to elongate faster than those on the illuminated side, and the shoot bends toward the light, a response called **phototropism**. Auxin similarly mediates **gravitropism**, the directional growth response to gravity, causing roots to grow downward and shoots to grow upward.",
-      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Heliotropism 1.jpg",
-      imageCaption: "Phototropism: differential auxin distribution causes a shoot to bend toward a light source."
-    },
-    {
-      label: "C3.1.14",
-      heading: "Auxin efflux carriers",
-      level: "HL",
-      text: "The directional movement of auxin through plant tissue, essential for tropic responses to be correctly oriented, is achieved using **auxin efflux carriers (PIN proteins)**, transport proteins embedded asymmetrically in the plasma membrane of cells along the auxin transport pathway. Because these carrier proteins are consistently positioned on one particular side of each cell, auxin is actively pumped out of cells in a single, consistent direction, maintaining a directional flow, and a resulting concentration gradient, of auxin across a tissue rather than the hormone simply diffusing evenly in every direction."
-    }
-  ],
+
 };
