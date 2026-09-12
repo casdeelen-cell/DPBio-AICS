@@ -65,21 +65,41 @@ C2.2, C2.1, C3.2, A2.3) in a follow-up session. There is no longer any
 topic on the site still carrying the old, compromised content — the
 whole site is safe to treat as fully resolved on this front.
 
-**Before/after volumes:** `questionbank.js` went from 812 questions
-(adapted from Questionbank) to 154 questions (100% original) across
-all 40 topics. `paper2.js` went from 128 sets (adapted) to 40 sets
-(100% original) across all 40 topics. This is a significant volume
-drop, and it was a deliberate trade-off, not an oversight: the
-priority across both rewrite sessions was getting every trace of the
-compromised content off the site as quickly as possible, not matching
-the old per-topic question counts. Every topic still has a real,
-usable set of practice questions (at least 1 MCQ set and 1 Paper 2 set
-per topic, most topics have 3-8 MCQs), but building the volume back up
-closer to where it was before is a legitimate, worthwhile thing to do
-in a future session — always as new original writing from syllabus
-knowledge, per the policy above, never by reaching back into the old
-adapted content (which should be considered gone, not a reference
-source) for "inspiration."
+**Before/after volumes — REBUILD COMPLETE.** `questionbank.js` was cut
+down to 154 questions (100% original) immediately after the security
+rewrite, from the old 812 adapted-from-Questionbank total, as a
+deliberate trade-off prioritising speed of removing compromised
+content over matching the old per-topic counts. **Volume has since
+been fully rebuilt back to its original size, entirely with original
+content**: `questionbank.js` now stands at exactly 812 questions
+(100% of the original count, matching it exactly) and `paper2.js`
+stands at exactly 128 sets (100% of the original count, also matching
+exactly). Every topic sits at a very even 20-21 MCQs and 3 Paper 2
+sets. This full rebuild took many follow-up sessions of incremental
+batches, each validated with a syntax check, a structural check, and
+a full headless-browser regression sweep before being merged, all
+written directly from syllabus knowledge, never by reaching back into
+the old (deleted) adapted content for "inspiration." There is no
+remaining volume gap to close — if anyone opens a future session and
+sees an outdated "X% of the way back" note anywhere else in this
+project's history or a stale transcript summary, this note (dated to
+the session that finished the rebuild) supersedes it.
+
+**One honest note on quality control during the rebuild:** across the
+sheer volume of individual questions and Paper 2 sets written in
+separate sessions, a handful of near-duplicate scenarios were
+accidentally introduced within the same topic (the same scenario
+premise reused with slightly different wording) before being caught
+and fixed in a dedicated cleanup pass on `paper2.js` (three confirmed
+exact/near-duplicate pairs, in D2.1, A2.2, and A2.1, each replaced
+with a genuinely distinct scenario). `questionbank.js`, being roughly
+6x larger, was not given the same systematic duplicate-detection pass
+before this note was written — if a future session has spare time,
+running the same kind of prefix-matching duplicate check used for
+`paper2.js` (comparing the first ~30-40 characters of each question's
+`q` field within a topic) against `questionbank.js` would be a
+worthwhile quality pass, though it wasn't blocking delivery of the
+completed rebuild.
 
 ## Content rules — read this before writing any topic's notes
 
