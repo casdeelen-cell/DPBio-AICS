@@ -851,19 +851,19 @@ const PAPER2 = {
       ]
     },
     {
-      context: "Indoor vertical farms use precisely controlled LED lighting to maximise crop yield while minimising electricity costs, requiring careful consideration of which wavelengths of light are actually worth providing.",
+      context: "Maize is a C4 plant that maintains high photosynthetic rates in hot, dry conditions where many C3 crop plants, such as wheat, show a marked decline in productivity.",
       parts: [
         {
           label: "a",
-          prompt: "Explain why LED lighting concentrated in the red and blue wavelengths is generally more cost-effective for a vertical farm than lighting that includes a large proportion of green light.",
-          marks: 3,
-          guidance: "Chlorophyll absorbs red and blue light strongly but reflects most green light rather than absorbing it; providing light concentrated in the wavelengths chlorophyll actually absorbs makes more efficient use of the electricity being paid for, since green light would largely be wasted (reflected rather than absorbed and used to drive the light-dependent reactions)."
+          prompt: "Explain why a C3 plant's rate of photosynthesis often declines under hot, dry conditions, even when light intensity remains high.",
+          marks: 4,
+          guidance: "Under hot, dry conditions, a C3 plant's stomata partially close to reduce water loss through transpiration, but this also reduces the diffusion of carbon dioxide into the leaf; as internal CO2 falls relative to oxygen, the enzyme RuBisCO increasingly catalyses a wasteful reaction with oxygen instead of carbon dioxide (photorespiration), consuming energy without producing useful sugars and reducing the overall efficiency of carbon fixation, which lowers the plant's overall rate of photosynthesis despite light remaining abundant."
         },
         {
           label: "b",
-          prompt: "Outline how the light-dependent reactions use absorbed light energy to produce ATP and reduced NADP, both required by the Calvin cycle.",
-          marks: 4,
-          guidance: "Light energy absorbed by chlorophyll excites electrons, which pass along an electron transport chain, releasing energy used to pump hydrogen ions across the thylakoid membrane and build up a concentration gradient; this gradient drives ATP synthase, producing ATP. Some of these energised electrons are also used, together with hydrogen ions, to reduce NADP to NADPH, with both ATP and NADPH then supplied to the Calvin cycle to convert fixed carbon dioxide into organic sugars."
+          prompt: "Outline how a C4 plant's additional carbon-fixation pathway helps it avoid this problem under similar conditions.",
+          marks: 3,
+          guidance: "C4 plants use an additional enzyme, with a much higher affinity for carbon dioxide than RuBisCO, to initially fix carbon dioxide in one type of cell, then transport the resulting four-carbon compound to a separate, internal cell type where it releases the CO2 again at a locally very high concentration around RuBisCO; this CO2-concentrating mechanism keeps RuBisCO's local environment CO2-rich even when stomata are partially closed, greatly reducing the occurrence of photorespiration and helping C4 plants maintain higher photosynthetic rates under hot, dry conditions than an equivalent C3 plant."
         }
       ]
     }
@@ -963,9 +963,9 @@ const PAPER2 = {
       parts: [
         {
           label: "a",
-          prompt: "Outline what is meant by an epigenetic modification, giving one named example.",
+          prompt: "Outline the difference between a genetic change and an epigenetic change to a gene.",
           marks: 2,
-          guidance: "An epigenetic modification alters whether or how much a gene is expressed without changing the underlying DNA base sequence itself; DNA methylation, the addition of methyl groups to specific bases (typically reducing expression of the associated gene when heavily methylated), is one commonly cited example."
+          guidance: "A genetic change (mutation) alters the actual base sequence of the DNA itself, and can be passed on through DNA replication; an epigenetic change alters whether or how much a gene is expressed without changing the underlying DNA base sequence at all, for example through the addition of methyl groups to specific bases, which can silence a gene without altering the sequence itself."
         },
         {
           label: "b",
@@ -1013,19 +1013,19 @@ const PAPER2 = {
       ]
     },
     {
-      context: "Radiation workers, such as those in nuclear medicine departments, follow strict safety protocols to minimise their exposure to ionising radiation, which is known to increase the risk of mutation-related illness including cancer.",
+      context: "A patient undergoing cancer treatment receives targeted radiotherapy, in which a controlled, localised dose of ionising radiation is directed specifically at a tumour to kill the rapidly dividing cancer cells while attempting to spare surrounding healthy tissue.",
       parts: [
         {
           label: "a",
-          prompt: "Outline how ionising radiation can cause mutations in DNA.",
+          prompt: "Explain why cancer cells are generally more vulnerable to radiotherapy than most surrounding healthy tissue.",
           marks: 3,
-          guidance: "Ionising radiation carries enough energy to knock electrons out of atoms and molecules it passes through, including DNA; this can directly break chemical bonds within the DNA strand, or generate highly reactive free radicals nearby that go on to chemically damage DNA bases or the sugar-phosphate backbone, potentially causing base changes, strand breaks, or other structural damage that leads to mutation if not correctly repaired."
+          guidance: "Cancer cells typically divide much more frequently than most healthy body cells, spending proportionally more time in the phases of the cell cycle (such as DNA replication and mitosis) during which cells are most vulnerable to radiation-induced damage; because ionising radiation preferentially harms actively dividing cells, this makes rapidly proliferating cancer cells disproportionately more susceptible to radiotherapy than the generally slower-dividing healthy cells surrounding the tumour."
         },
         {
           label: "b",
-          prompt: "Suggest why radiation workers are advised to minimise both the duration and frequency of their exposure, rather than simply avoiding a single large dose.",
+          prompt: "Suggest why radiotherapy can still cause noticeable side effects in some healthy tissues, despite targeting the tumour specifically.",
           marks: 3,
-          guidance: "Because mutation risk generally increases with cumulative radiation exposure over time, minimising both the duration of each individual exposure and the overall frequency of exposures helps reduce the total cumulative dose received across a worker's career, since repeated smaller exposures can still add up to a significant cumulative risk even if no single exposure event is large enough to cause immediate, obvious harm."
+          guidance: "Some healthy tissues, such as those lining the gut or hair follicles, also contain rapidly dividing cells even though they are not cancerous, making them similarly vulnerable to radiation damage if they fall within or near the treated area; in addition, precisely targeting radiation only at tumour cells is technically difficult, so some radiation exposure to adjacent healthy tissue is often unavoidable, explaining why side effects can still occur even when treatment is intended to specifically target the tumour."
         }
       ]
     }
@@ -1162,9 +1162,9 @@ const PAPER2 = {
       parts: [
         {
           label: "a",
-          prompt: "Outline how a dichotomous key could be used to identify the unfamiliar insect.",
+          prompt: "Suggest why comparing genome size alone would not be a reliable way to estimate how closely related two newly discovered woodland species are to one another.",
           marks: 3,
-          guidance: "A dichotomous key presents a series of paired statements describing contrasting observable features (such as number of legs, presence or absence of wings, or body segmentation); at each step, the ecologist selects whichever statement correctly matches the insect she is examining, which either leads directly to an identification or to the next pair of choices, progressively narrowing down the possibilities until the specific group or species is identified."
+          guidance: "Genome size varies enormously between species for reasons often unrelated to evolutionary relatedness, such as differing amounts of non-coding, repetitive DNA; two closely related species can have very different genome sizes, while two distantly related species can coincidentally have similar genome sizes, meaning genome size alone is a poor and unreliable indicator of how recently two species actually diverged from a common ancestor."
         },
         {
           label: "b",
@@ -1179,9 +1179,9 @@ const PAPER2 = {
       parts: [
         {
           label: "a",
-          prompt: "Outline how a dichotomous key could be used to help classify one of the newly discovered species.",
+          prompt: "Outline how environmental DNA (eDNA) barcoding could be used to help identify species present in the newly accessible cave system, as an alternative or supplement to physically capturing specimens.",
           marks: 3,
-          guidance: "A dichotomous key presents a series of paired statements describing contrasting observable features (such as number of legs, presence or absence of a shell, or body segmentation); at each step, the researcher selects whichever statement correctly matches the specimen being examined, which either leads directly to an identification or to a further pair of choices, progressively narrowing down the possibilities until the specific group or species is identified."
+          guidance: "Environmental DNA sampling involves collecting material such as water or sediment from the habitat and extracting any DNA fragments present, shed by organisms living there through skin cells, waste, or other biological material; comparing short, distinctive DNA sequences (barcodes) recovered from this sample against a reference database allows species present in the cave to be identified rapidly, even for organisms that are rare, elusive, or difficult to physically capture and examine directly."
         },
         {
           label: "b",
@@ -1229,19 +1229,19 @@ const PAPER2 = {
       ]
     },
     {
-      context: "The Arctic ground squirrel undergoes extreme hibernation, during which its body temperature drops below freezing for extended periods, an ability rare among mammals and reliant on multiple coordinated physiological adaptations.",
+      context: "Bar-tailed godwits undertake one of the longest non-stop migratory flights of any bird, flying for over a week without landing, relying on extreme physiological adaptations to survive the journey.",
       parts: [
         {
           label: "a",
-          prompt: "Outline two physiological adaptations that might allow an animal to survive extremely low body temperatures during hibernation.",
+          prompt: "Suggest two physiological adaptations that would help a bird sustain such a long, non-stop flight.",
           marks: 2,
-          guidance: "Suitable adaptations include producing natural antifreeze-like compounds in the blood and tissues that prevent damaging ice crystal formation within cells, and dramatically reducing metabolic rate and heart rate to minimise energy expenditure during the prolonged period of low body temperature."
+          guidance: "Suitable adaptations include storing very large fat reserves before departure, since fat provides a more energy-dense fuel source per gram than carbohydrate, and reducing the size of some internal organs not immediately needed for flight (such as the digestive system) before departure, reducing the overall weight the bird needs to carry and therefore the energetic cost of flight."
         },
         {
           label: "b",
-          prompt: "Explain how natural selection could have produced such an extreme cold-tolerance adaptation in this species over evolutionary time.",
+          prompt: "Explain why natural selection would favour individuals capable of storing unusually large fat reserves before undertaking this migration.",
           marks: 4,
-          guidance: "Ancestral squirrel populations likely showed natural variation in cold tolerance among individuals; in an environment with extremely harsh, prolonged winters, individuals with heritable traits allowing even slightly better survival at very low body temperatures would have been more likely to survive and reproduce than less cold-tolerant individuals. Repeated over many generations, this differential survival and reproduction could gradually shift the population toward the extreme cold tolerance seen in the species today, an example of directional selection acting under a strong, consistent selective pressure."
+          guidance: "Because the bird cannot feed at all during its week-long non-stop flight, individuals with a heritable capacity to store larger fat reserves before departure would be better able to complete the full journey and survive to reach their destination, compared with individuals storing insufficient fuel, who would risk running out of energy before completing the flight; over many generations, this survival advantage would be expected to increase the frequency of alleles supporting greater pre-migration fat storage within the population, an example of directional selection acting on a trait critical to surviving an extreme migratory challenge."
         }
       ]
     }
@@ -1266,36 +1266,36 @@ const PAPER2 = {
       ]
     },
     {
-      context: "Widespread use of a single class of pesticide against a crop-damaging beetle species has, over a decade, resulted in the pesticide becoming far less effective at controlling beetle populations in many farming regions.",
+      context: "A population geneticist surveys a large, randomly mating population of snails and finds that 16% of individuals show a recessive shell-colour phenotype, with the remaining 84% showing the dominant phenotype.",
       parts: [
         {
           label: "a",
-          prompt: "Explain, in terms of natural selection, how repeated pesticide use could lead to a decline in the pesticide's overall effectiveness.",
-          marks: 4,
-          guidance: "If a small number of beetles already carried a heritable resistance allele before the pesticide was introduced, repeated pesticide application would kill susceptible beetles while resistant ones survived and reproduced; because resistance is heritable, the proportion of resistant beetles in the population would increase with each generation of exposure, gradually reducing the pesticide's overall effectiveness at controlling the population as resistant individuals become more common."
+          prompt: "Using the Hardy-Weinberg equation, calculate the frequency of the recessive allele in this population, showing your working.",
+          marks: 3,
+          guidance: "The frequency of the homozygous recessive genotype (q²) equals the frequency of the recessive phenotype, 0.16; taking the square root gives q = 0.4, so the frequency of the recessive allele is 0.4 (40%)."
         },
         {
           label: "b",
-          prompt: "Suggest one strategy farmers could use to slow the development of pesticide resistance in this beetle population.",
+          prompt: "State two conditions that must hold true for this population to remain in Hardy-Weinberg equilibrium at this gene.",
           marks: 2,
-          guidance: "Suitable strategies include rotating between pesticides with different modes of action (so that resistance to one doesn't provide an advantage against the other), using integrated pest management approaches that combine pesticide use with other control methods (reducing overall reliance on the pesticide), or maintaining untreated 'refuge' areas where susceptible beetles can survive and interbreed with any resistant individuals, diluting the spread of resistance alleles."
+          guidance: "Suitable conditions include: mating must be random with respect to shell colour, the population must be sufficiently large to minimise the effects of genetic drift, there must be no significant migration into or out of the population, no new mutations affecting this gene, and no natural selection acting on either allele (equal survival and reproductive success for all genotypes)."
         }
       ]
     },
     {
-      context: "A population of aphids on a commercial crop has shown a marked increase in resistance to a widely used insecticide over just a few growing seasons, despite the insecticide having been highly effective when first introduced.",
+      context: "A small group of finches becomes established on a remote, previously uninhabited island after being blown off course during a storm, founding an entirely new population descended from just a handful of original individuals.",
       parts: [
         {
           label: "a",
-          prompt: "Explain how the aphid population could have evolved insecticide resistance so rapidly, in terms of natural selection.",
+          prompt: "Explain why the allele frequencies in this newly founded island population might differ substantially from the allele frequencies in the original mainland population, even without any natural selection acting.",
           marks: 4,
-          guidance: "Random mutation would have generated some variation in insecticide susceptibility within the original aphid population, entirely independent of insecticide exposure; when the insecticide was first applied, individuals carrying a resistance-conferring allele would have survived and reproduced at a much higher rate than susceptible individuals, and because aphids can reproduce very rapidly with short generation times, this strong selective advantage could increase the resistance allele's frequency substantially within just a few growing seasons."
+          guidance: "Because the founding population consists of only a small number of individuals, it is unlikely to carry a perfectly representative sample of all the alleles and allele frequencies present in the much larger original mainland population, purely by chance; this random, non-representative sampling of the original gene pool, known as the founder effect, can result in some alleles being over-represented, under-represented, or entirely absent in the new population compared with the source population it was drawn from."
         },
         {
           label: "b",
-          prompt: "Suggest one strategy that could help slow the future evolution of insecticide resistance in this aphid population.",
+          prompt: "Suggest why genetic drift might continue to have a particularly strong effect on this island population's allele frequencies for several generations after founding.",
           marks: 2,
-          guidance: "Suitable strategies include rotating between different classes of insecticide with different modes of action, reducing the consistent selective pressure favouring resistance to any single compound, or combining chemical control with non-chemical methods (such as biological control using natural predators), reducing overall reliance on the insecticide and the resulting selective pressure driving resistance evolution."
+          guidance: "Because the population began from such a small number of founding individuals, it would likely remain relatively small for at least several generations while it grows; genetic drift has a proportionally larger effect on smaller populations, since random sampling effects during reproduction have a greater relative impact when fewer individuals are involved, meaning this island population would be expected to continue experiencing more pronounced random fluctuations in allele frequency than a larger, more established population would."
         }
       ]
     },
@@ -1341,9 +1341,9 @@ const PAPER2 = {
       parts: [
         {
           label: "a",
-          prompt: "Outline the process of adaptive radiation, using the cichlid fish as an example.",
+          prompt: "Suggest why a lake environment, rather than an open ocean environment, might be particularly conducive to the rapid diversification seen in cichlid fish.",
           marks: 4,
-          guidance: "Adaptive radiation describes the relatively rapid diversification of a single ancestral species into many descendant species, each adapted to a different ecological niche; an ancestral cichlid species colonising a lake with abundant, varied food resources and relatively few established competitors could diversify over time into distinct species, each specialised for a particular niche (such as scraping algae, crushing snail shells, or hunting other fish), eventually producing the hundreds of ecologically distinct cichlid species seen in some African lakes today."
+          guidance: "A lake is a relatively enclosed, self-contained habitat, meaning cichlid populations in different parts of the lake (such as different depths, rocky versus sandy areas, or open water versus shoreline) can become at least partially isolated from one another, reducing gene flow between them and allowing local adaptations to accumulate; a lake can also contain a wide variety of distinct micro-habitats and food sources within a relatively small, enclosed area, providing many different ecological niches for diversifying populations to specialise into, conditions that are less pronounced in a vast, more uniform, and better-mixed open ocean environment."
         },
         {
           label: "b",
@@ -1591,9 +1591,9 @@ const PAPER2 = {
       parts: [
         {
           label: "a",
-          prompt: "Outline the biological cause of coral bleaching.",
+          prompt: "Outline two separate mechanisms by which climate change threatens coral reefs.",
           marks: 3,
-          guidance: "Coral bleaching occurs when heat-stressed coral polyps expel their symbiotic photosynthetic algae (zooxanthellae), which normally provide the coral with both its colour and a substantial portion of its nutritional needs through photosynthesis; without these algae, the coral appears white (bleached) and, if the stress persists and the algae aren't recolonised, the coral may eventually starve and die."
+          guidance: "Rising ocean temperatures cause coral bleaching, in which heat-stressed coral polyps expel their symbiotic algae, losing both their colour and a major source of nutrition, potentially leading to coral death if the stress persists; separately, rising atmospheric carbon dioxide increases the amount dissolved in seawater, causing ocean acidification, which reduces the availability of the carbonate ions corals need to build and maintain their calcium carbonate skeletons, making both warming and acidification distinct but compounding threats to coral reef health."
         },
         {
           label: "b",
@@ -1699,9 +1699,9 @@ const PAPER2 = {
       parts: [
         {
           label: "a",
-          prompt: "Outline the main processes by which carbon enters and leaves this woodland ecosystem.",
-          marks: 4,
-          guidance: "Carbon enters the ecosystem primarily through photosynthesis, as trees and other producers fix atmospheric CO2 into organic compounds; it then passes through the ecosystem via feeding relationships as consumers eat producers and each other. Carbon leaves the ecosystem mainly through cellular respiration (releasing CO2 back into the atmosphere) carried out by producers, consumers, and decomposers, and can also be lost through processes like combustion during a wildfire."
+          prompt: "Outline the difference between an ecosystem acting as a carbon sink and an ecosystem acting as a carbon source.",
+          marks: 3,
+          guidance: "An ecosystem acts as a carbon sink when it absorbs more carbon dioxide through photosynthesis than it releases through respiration and decomposition, resulting in a net accumulation of carbon within the ecosystem over time; it instead acts as a carbon source when respiration, decomposition, or disturbances such as fire release more carbon dioxide than is currently being absorbed by photosynthesis, resulting in a net release of carbon to the atmosphere rather than a net uptake."
         },
         {
           label: "b",
@@ -1948,19 +1948,19 @@ const PAPER2 = {
       ]
     },
     {
-      context: "Astronauts returning from long-duration space missions often experience significant loss of muscle mass and strength, despite following structured resistance exercise routines while aboard the spacecraft, due to the near-absence of gravitational loading on their muscles.",
+      context: "Dolphins, despite having evolved from land-dwelling mammalian ancestors, are highly efficient swimmers, capable of sustained fast swimming and extended dives.",
       parts: [
         {
           label: "a",
-          prompt: "Outline the sliding filament model of muscle contraction.",
-          marks: 4,
-          guidance: "Calcium ions released within the muscle fibre bind to troponin, causing a shape change that shifts tropomyosin and exposes the myosin-binding sites on the actin filament; myosin heads then bind to these exposed sites, forming cross-bridges, and using energy from ATP hydrolysis, they pivot and pull the actin filament inward toward the centre of the sarcomere. This sliding of actin past myosin, without either filament itself shortening, reduces the overall length of the sarcomere, and the cycle repeats as long as calcium and ATP remain available."
+          prompt: "Outline two structural adaptations that allow dolphins to swim efficiently through water.",
+          marks: 2,
+          guidance: "Suitable adaptations include a streamlined, torpedo-shaped body that reduces drag as the dolphin moves through the denser medium of water, and forelimbs modified into flippers, which provide steering and stability rather than the walking function of a typical mammalian limb, alongside a tail modified into a horizontally oriented fluke moved up and down to generate propulsion."
         },
         {
           label: "b",
-          prompt: "Suggest why muscle wasting occurs in astronauts despite them following a regular exercise routine during their mission.",
+          prompt: "Explain why a dolphin's tail fluke is oriented horizontally and moved up and down, rather than oriented vertically and moved side to side as in a fish.",
           marks: 3,
-          guidance: "Muscle tissue typically adapts to the mechanical load it experiences, and much of the everyday load muscles normally experience on Earth (from supporting body weight against gravity) is almost entirely absent in the near-weightless environment of space; even with a structured exercise routine providing some resistance training, the overall mechanical demand on muscles used for posture and movement is considerably reduced compared with Earth-based activity, and this reduced demand can still trigger a net loss of muscle protein and mass over an extended mission, despite the astronaut's best efforts to counteract it through exercise."
+          guidance: "Dolphins evolved from land-dwelling mammalian ancestors whose spine flexed primarily in a vertical, up-and-down plane during locomotion (as seen in the galloping motion of many land mammals); this ancestral pattern of spinal movement was retained and adapted for aquatic propulsion, resulting in a horizontally oriented fluke moved by up-and-down spinal flexion, in contrast to fish, whose evolutionary history involves side-to-side spinal movement, producing a vertically oriented tail fin instead, illustrating how a structure's specific orientation can reflect evolutionary history rather than being simply the most theoretically efficient design achievable from scratch."
         }
       ]
     },
@@ -2006,9 +2006,9 @@ const PAPER2 = {
       parts: [
         {
           label: "a",
-          prompt: "Outline the structural features of the alveoli that allow efficient gas exchange under normal sea-level conditions.",
+          prompt: "Outline how ventilation (breathing) is achieved by the action of the diaphragm and intercostal muscles.",
           marks: 3,
-          guidance: "Alveoli have an extremely large total surface area, thin walls (often just a single cell thick) that minimise the diffusion distance between air and blood, a moist internal lining that allows gases to dissolve before diffusing, and a dense surrounding network of capillaries that maintains a steep concentration gradient by continuously carrying blood past the exchange surface."
+          guidance: "During inhalation, the diaphragm contracts and flattens while the external intercostal muscles contract, pulling the ribcage upward and outward; both actions increase the volume of the thoracic cavity, lowering the air pressure inside the lungs below atmospheric pressure and drawing air in. During normal exhalation, these muscles relax, the thoracic cavity decreases in volume, and air is passively pushed back out as pressure inside the lungs rises above atmospheric pressure."
         },
         {
           label: "b",

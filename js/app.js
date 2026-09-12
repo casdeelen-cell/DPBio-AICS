@@ -417,9 +417,31 @@ function toSlidesEmbed(url) {
 
 /* ---------- quiz engine ---------- */
 
+/* Returns a new question object with the options array (and the correct
+   index) randomly reordered, so the correct answer's on-screen position
+   varies each time a question is shown rather than always sitting in the
+   same slot in the underlying data. Leaves the original question object
+   untouched. Shared by the quiz engine below and by mock.html's exam
+   question picker. */
+function shuffleQuestionOptions(q) {
+  const order = q.options.map(function (_, i) { return i; });
+  for (let i = order.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const tmp = order[i]; order[i] = order[j]; order[j] = tmp;
+  }
+  const newOptions = order.map(function (origIndex) { return q.options[origIndex]; });
+  const newCorrect = order.indexOf(q.correct);
+  const copy = Object.assign({}, q);
+  copy.options = newOptions;
+  copy.correct = newCorrect;
+  return copy;
+}
+
 /* Renders an interactive multiple choice quiz from a plain array of
    question objects: { q, options, correct, explanation }. Used for
-   both the quick quiz (quizzes.js) and the question bank (questionbank.js). */
+   both the quick quiz (quizzes.js) and the question bank (questionbank.js).
+   Each question's options are freshly shuffled at render time, so revisiting
+   the same quiz later shows the correct answer in a different position. */
 function buildQuizFromList(container, questions, emptyMessage) {
   if (!questions || !questions.length) {
     container.innerHTML = '<p class="no-resources">' + (emptyMessage || "Nothing here yet.") + "</p>";
@@ -430,7 +452,7 @@ function buildQuizFromList(container, questions, emptyMessage) {
   let score = 0;
 
   function renderQuestion() {
-    const q = questions[index];
+    const q = shuffleQuestionOptions(questions[index]);
     const card = document.createElement("div");
     card.className = "quiz-card";
 

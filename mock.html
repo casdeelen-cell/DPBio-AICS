@@ -293,7 +293,10 @@ function pickMCQs(topics, count) {
     const qs = (typeof QUESTIONBANK !== "undefined" && QUESTIONBANK[code]) || [];
     qs.forEach(q => pool.push({ ...q, topic: code }));
   });
-  return shuffle(pool).slice(0, count);
+  // Shuffle which questions are picked, then independently shuffle each
+  // picked question's own answer options (via app.js), so the correct
+  // answer isn't always sitting in the same position within the data.
+  return shuffle(pool).slice(0, count).map(q => Object.assign(shuffleQuestionOptions(q), { topic: q.topic }));
 }
 
 function pickP2Sets(topics, marksTarget) {
